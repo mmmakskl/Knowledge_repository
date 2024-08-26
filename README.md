@@ -18,5 +18,6 @@
 - [Ответы на всё #2 (PolyPhis)](https://polyphis.ru/)
 - [Ответы на всё #3 (PolyVSP)](https://polyvsp.ru/)
 - [PolyHelp](https://vk.com/poly_help_spb)
+- [Что не залезло сюда](https://drive.google.com/drive/folders/1gwvSy9u-cKbPPnoMkK1wXIm272gR1B76?usp=drive_link) *(Здесь 2 тутора от и до по линуксу + еще расписанные билеты по физике)*
 
-> Для сотрудничества писать [Телеграмм](@maksonchigg), [ВКонтакте](https://vk.com/maksonchigg)
+> По вопросам писать: [Телеграмм](https://t.me/maksonchigg), [ВКонтакте](https://vk.com/maksonchigg)
