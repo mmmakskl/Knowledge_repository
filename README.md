@@ -18,3 +18,5 @@
 - [Ответы на всё #2 (PolyPhis)](https://polyphis.ru/)
 - [Ответы на всё #3 (PolyVSP)](https://polyvsp.ru/)
 - [PolyHelp](https://vk.com/poly_help_spb)
+
+> Для сотрудничества писать [Телеграмм](@maksonchigg), [ВКонтакте](https://vk.com/maksonchigg)
