@@ -8,6 +8,8 @@
 
 > Так же, ниже представленны полезные ссылки, которые очень помогли мне в учебе и я думаю помогут вам)
 
+![small-dancing-white-cat-dance-funny](https://github.com/user-attachments/assets/e4eed1a6-fd9c-423d-a371-3df1ac3d5c2f)
+
 ___
 # 1 Курс
 
