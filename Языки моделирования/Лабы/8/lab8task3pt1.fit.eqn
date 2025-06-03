@@ -1,0 +1,806 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--C1L21 is lab8task1:77|13~46 at LC_X41_Y2_N5
+--operation mode is normal
+
+C1L21 = !a2 & !a3;
+
+
+--C7L1 is lab8task3:21|lab8task1:66|11~19 at LC_X52_Y8_N8
+--operation mode is normal
+
+C7L1 = a0 & (a1 # !x17) # !a0 & (!x16 & !a1);
+
+
+--C7L2 is lab8task3:21|lab8task1:66|11~20 at LC_X41_Y4_N6
+--operation mode is normal
+
+C7L2 = C7L1 & (!a1 # !x19) # !C7L1 & (!x18 & a1);
+
+
+--C1L81 is lab8task1:77|14~86 at LC_X41_Y4_N7
+--operation mode is normal
+
+C1L81 = C1L21 & !a5 & a4 & !C7L2;
+
+
+--C1L31 is lab8task1:77|13~47 at LC_X41_Y2_N7
+--operation mode is normal
+
+C1L31 = a2 & !a3;
+
+
+--C1L41 is lab8task1:77|13~48 at LC_X41_Y4_N9
+--operation mode is normal
+
+C1L41 = !a5 & !a4;
+
+
+--C3L1 is lab8task3:2|lab8task1:67|11~19 at LC_X52_Y8_N2
+--operation mode is normal
+
+C3L1 = a0 & (a1) # !a0 & (a1 & (!x6) # !a1 & !x4);
+
+
+--C3L2 is lab8task3:2|lab8task1:67|11~20 at LC_X52_Y8_N3
+--operation mode is normal
+
+C3L2 = C3L1 & (!x7 # !a0) # !C3L1 & !x5 & a0;
+
+
+--C1L2 is lab8task1:77|11~141 at LC_X41_Y4_N8
+--operation mode is normal
+
+C1L2 = C1L81 # !C3L2 & C1L31 & C1L41;
+
+
+--C1L42 is lab8task1:77|15~64 at LC_X52_Y8_N6
+--operation mode is normal
+
+C1L42 = a0 & (x35 # !a1) # !a0 & x34 & (a1);
+
+
+--C1L52 is lab8task1:77|15~65 at LC_X52_Y8_N9
+--operation mode is normal
+
+C1L52 = C1L42 & (x33 # a1) # !C1L42 & x32 & (!a1);
+
+
+--C1L62 is lab8task1:77|15~66 at LC_X41_Y4_N3
+--operation mode is normal
+
+C1L62 = C1L21 & a5 & !a4 & C1L52;
+
+
+--C1L72 is lab8task1:77|15~67 at LC_X41_Y4_N0
+--operation mode is normal
+
+C1L72 = a5 & !a4;
+
+
+--C31L1 is lab8task3:43|lab8task1:67|11~19 at LC_X52_Y8_N0
+--operation mode is normal
+
+C31L1 = a0 & (a1) # !a0 & (a1 & !x38 # !a1 & (!x36));
+
+
+--C31L2 is lab8task3:43|lab8task1:67|11~20 at LC_X52_Y8_N1
+--operation mode is normal
+
+C31L2 = a0 & (C31L1 & !x39 # !C31L1 & (!x37)) # !a0 & (C31L1);
+
+
+--C1L3 is lab8task1:77|11~142 at LC_X41_Y4_N4
+--operation mode is normal
+
+C1L3 = C1L62 # !C31L2 & C1L31 & C1L72;
+
+
+--C2L1 is lab8task3:2|lab8task1:66|11~19 at LC_X52_Y8_N7
+--operation mode is normal
+
+C2L1 = a0 & (a1 # !x1) # !a0 & (!x0 & !a1);
+
+
+--C2L2 is lab8task3:2|lab8task1:66|11~20 at LC_X52_Y20_N2
+--operation mode is normal
+
+C2L2 = C2L1 & (!a1 # !x3) # !C2L1 & (!x2 & a1);
+
+
+--C1L51 is lab8task1:77|13~49 at LC_X41_Y4_N5
+--operation mode is normal
+
+C1L51 = C1L21 & !a5 & !a4 & !C2L2;
+
+
+--C1L61 is lab8task1:77|13~50 at LC_X41_Y2_N3
+--operation mode is normal
+
+C1L61 = !a2 & a3;
+
+
+--C4L1 is lab8task3:2|lab8task1:68|11~19 at LC_X36_Y1_N3
+--operation mode is normal
+
+C4L1 = a0 & (a1 # !x9) # !a0 & !x8 & (!a1);
+
+
+--C4L2 is lab8task3:2|lab8task1:68|11~20 at LC_X36_Y1_N0
+--operation mode is normal
+
+C4L2 = C4L1 & (!a1 # !x11) # !C4L1 & (!x10 & a1);
+
+
+--C1L4 is lab8task1:77|11~143 at LC_X41_Y3_N6
+--operation mode is normal
+
+C1L4 = C1L51 # C1L61 & C1L41 & !C4L2;
+
+
+--C1L82 is lab8task1:77|15~68 at LC_X36_Y1_N5
+--operation mode is normal
+
+C1L82 = a0 & (x43 # !a1) # !a0 & x42 & (a1);
+
+
+--C1L92 is lab8task1:77|15~69 at LC_X36_Y1_N6
+--operation mode is normal
+
+C1L92 = C1L82 & (x41 # a1) # !C1L82 & x40 & (!a1);
+
+
+--C1L03 is lab8task1:77|15~70 at LC_X41_Y4_N1
+--operation mode is normal
+
+C1L03 = C1L61 & a5 & !a4 & C1L92;
+
+
+--C1L71 is lab8task1:77|13~51 at LC_X41_Y2_N9
+--operation mode is normal
+
+C1L71 = a2 & a3;
+
+
+--C51L1 is lab8task3:43|lab8task1:69|11~19 at LC_X36_Y1_N9
+--operation mode is normal
+
+C51L1 = a0 & (a1) # !a0 & (a1 & (!x46) # !a1 & !x44);
+
+
+--C51L2 is lab8task3:43|lab8task1:69|11~20 at LC_X36_Y1_N4
+--operation mode is normal
+
+C51L2 = a0 & (C51L1 & !x47 # !C51L1 & (!x45)) # !a0 & (C51L1);
+
+
+--C1L5 is lab8task1:77|11~144 at LC_X41_Y4_N2
+--operation mode is normal
+
+C1L5 = C1L03 # !C51L2 & C1L72 & C1L71;
+
+
+--C1L6 is lab8task1:77|11~145 at LC_X41_Y3_N3
+--operation mode is normal
+
+C1L6 = C1L5 # C1L3 # C1L2 # C1L4;
+
+
+--C1L91 is lab8task1:77|14~87 at LC_X41_Y2_N0
+--operation mode is normal
+
+C1L91 = !a5 & a2;
+
+
+--C8L1 is lab8task3:21|lab8task1:67|11~19 at LC_X36_Y1_N7
+--operation mode is normal
+
+C8L1 = a0 & (a1) # !a0 & (a1 & !x22 # !a1 & (!x20));
+
+
+--C8L2 is lab8task3:21|lab8task1:67|11~20 at LC_X41_Y2_N8
+--operation mode is normal
+
+C8L2 = a0 & (C8L1 & !x23 # !C8L1 & (!x21)) # !a0 & (C8L1);
+
+
+--C1L02 is lab8task1:77|14~88 at LC_X41_Y2_N1
+--operation mode is normal
+
+C1L02 = !C8L2 & C1L91 & a4 & !a3;
+
+
+--C1L13 is lab8task1:77|16~54 at LC_X41_Y3_N1
+--operation mode is normal
+
+C1L13 = a5 & a4;
+
+
+--C71L1 is lab8task3:60|lab8task1:66|11~19 at LC_X36_Y1_N1
+--operation mode is normal
+
+C71L1 = a0 & (a1 # !x49) # !a0 & !x48 & (!a1);
+
+
+--C71L2 is lab8task3:60|lab8task1:66|11~20 at LC_X36_Y1_N2
+--operation mode is normal
+
+C71L2 = C71L1 & (!a1 # !x51) # !C71L1 & !x50 & (a1);
+
+
+--C1L7 is lab8task1:77|11~146 at LC_X41_Y3_N5
+--operation mode is normal
+
+C1L7 = C1L02 # C1L21 & C1L13 & !C71L2;
+
+
+--C1L12 is lab8task1:77|14~89 at LC_X41_Y2_N2
+--operation mode is normal
+
+C1L12 = a4 & a3;
+
+
+--C02L1 is lab8task3:60|lab8task1:69|11~19 at LC_X36_Y1_N8
+--operation mode is normal
+
+C02L1 = a0 & (a1) # !a0 & (a1 & !x62 # !a1 & (!x60));
+
+
+--C02L2 is lab8task3:60|lab8task1:69|11~20 at LC_X44_Y1_N2
+--operation mode is normal
+
+C02L2 = a0 & (C02L1 & (!x63) # !C02L1 & !x61) # !a0 & (C02L1);
+
+
+--C1L23 is lab8task1:77|16~55 at LC_X41_Y2_N4
+--operation mode is normal
+
+C1L23 = C1L12 & a5 & a2 & !C02L2;
+
+
+--C5L1 is lab8task3:2|lab8task1:69|11~19 at LC_X52_Y20_N6
+--operation mode is normal
+
+C5L1 = a0 & (a1) # !a0 & (a1 & !x14 # !a1 & (!x12));
+
+
+--C5L2 is lab8task3:2|lab8task1:69|11~20 at LC_X52_Y20_N7
+--operation mode is normal
+
+C5L2 = a0 & (C5L1 & !x15 # !C5L1 & (!x13)) # !a0 & (C5L1);
+
+
+--C1L8 is lab8task1:77|11~147 at LC_X41_Y3_N0
+--operation mode is normal
+
+C1L8 = C1L23 # C1L41 & C1L71 & !C5L2;
+
+
+--C01L1 is lab8task3:21|lab8task1:69|11~19 at LC_X52_Y20_N9
+--operation mode is normal
+
+C01L1 = a0 & (a1) # !a0 & (a1 & !x30 # !a1 & (!x28));
+
+
+--C01L2 is lab8task3:21|lab8task1:69|11~20 at LC_X52_Y20_N8
+--operation mode is normal
+
+C01L2 = a0 & (C01L1 & !x31 # !C01L1 & (!x29)) # !a0 & (C01L1);
+
+
+--C81L1 is lab8task3:60|lab8task1:67|11~19 at LC_X52_Y20_N3
+--operation mode is normal
+
+C81L1 = a0 & (a1) # !a0 & (a1 & !x54 # !a1 & (!x52));
+
+
+--C81L2 is lab8task3:60|lab8task1:67|11~20 at LC_X52_Y20_N1
+--operation mode is normal
+
+C81L2 = C81L1 & (!x55 # !a0) # !C81L1 & !x53 & a0;
+
+
+--C1L9 is lab8task1:77|11~148 at LC_X41_Y3_N7
+--operation mode is normal
+
+C1L9 = C1L32 # !C81L2 & C1L13 & C1L31;
+
+
+--C9L1 is lab8task3:21|lab8task1:68|11~19 at LC_X52_Y20_N5
+--operation mode is normal
+
+C9L1 = a0 & (a1 # !x25) # !a0 & !x24 & (!a1);
+
+
+--C9L2 is lab8task3:21|lab8task1:68|11~20 at LC_X52_Y20_N4
+--operation mode is normal
+
+C9L2 = C9L1 & (!a1 # !x27) # !C9L1 & (!x26 & a1);
+
+
+--C1L22 is lab8task1:77|14~90 at LC_X41_Y3_N2
+--operation mode is normal
+
+C1L22 = C1L61 & !a5 & a4 & !C9L2;
+
+
+--C91L1 is lab8task3:60|lab8task1:68|11~19 at LC_X52_Y8_N5
+--operation mode is normal
+
+C91L1 = a0 & (a1 # !x57) # !a0 & (!x56 & !a1);
+
+
+--C91L2 is lab8task3:60|lab8task1:68|11~20 at LC_X52_Y8_N4
+--operation mode is normal
+
+C91L2 = C91L1 & (!a1 # !x59) # !C91L1 & !x58 & (a1);
+
+
+--C1L01 is lab8task1:77|11~149 at LC_X41_Y3_N4
+--operation mode is normal
+
+C1L01 = C1L22 # C1L61 & C1L13 & !C91L2;
+
+
+--C1L11 is lab8task1:77|11~150 at LC_X41_Y3_N8
+--operation mode is normal
+
+C1L11 = C1L01 # C1L8 # C1L7 # C1L9;
+
+
+--C1_9 is lab8task1:77|9 at LC_X41_Y3_N9
+--operation mode is normal
+
+C1_9 = e & (C1L11 # C1L6);
+
+
+--C1L32 is lab8task1:77|14~91 at LC_X41_Y2_N6
+--operation mode is normal
+
+C1L32 = C1L12 & !a5 & a2 & !C01L2;
+
+
+--e is e at PIN_U8
+--operation mode is input
+
+e = INPUT();
+
+
+--a4 is a4 at PIN_W8
+--operation mode is input
+
+a4 = INPUT();
+
+
+--a3 is a3 at PIN_AA6
+--operation mode is input
+
+a3 = INPUT();
+
+
+--a2 is a2 at PIN_V6
+--operation mode is input
+
+a2 = INPUT();
+
+
+--a5 is a5 at PIN_V8
+--operation mode is input
+
+a5 = INPUT();
+
+
+--x18 is x18 at PIN_AA7
+--operation mode is input
+
+x18 = INPUT();
+
+
+--a1 is a1 at PIN_V7
+--operation mode is input
+
+a1 = INPUT();
+
+
+--x17 is x17 at PIN_U1
+--operation mode is input
+
+x17 = INPUT();
+
+
+--a0 is a0 at PIN_AB4
+--operation mode is input
+
+a0 = INPUT();
+
+
+--x16 is x16 at PIN_R4
+--operation mode is input
+
+x16 = INPUT();
+
+
+--x19 is x19 at PIN_AB8
+--operation mode is input
+
+x19 = INPUT();
+
+
+--x5 is x5 at PIN_T2
+--operation mode is input
+
+x5 = INPUT();
+
+
+--x6 is x6 at PIN_T3
+--operation mode is input
+
+x6 = INPUT();
+
+
+--x4 is x4 at PIN_U2
+--operation mode is input
+
+x4 = INPUT();
+
+
+--x7 is x7 at PIN_V1
+--operation mode is input
+
+x7 = INPUT();
+
+
+--x33 is x33 at PIN_P4
+--operation mode is input
+
+x33 = INPUT();
+
+
+--x32 is x32 at PIN_N3
+--operation mode is input
+
+x32 = INPUT();
+
+
+--x34 is x34 at PIN_P3
+--operation mode is input
+
+x34 = INPUT();
+
+
+--x35 is x35 at PIN_P6
+--operation mode is input
+
+x35 = INPUT();
+
+
+--x37 is x37 at PIN_N6
+--operation mode is input
+
+x37 = INPUT();
+
+
+--x38 is x38 at PIN_N2
+--operation mode is input
+
+x38 = INPUT();
+
+
+--x36 is x36 at PIN_T1
+--operation mode is input
+
+x36 = INPUT();
+
+
+--x39 is x39 at PIN_M6
+--operation mode is input
+
+x39 = INPUT();
+
+
+--x2 is x2 at PIN_H3
+--operation mode is input
+
+x2 = INPUT();
+
+
+--x1 is x1 at PIN_R3
+--operation mode is input
+
+x1 = INPUT();
+
+
+--x0 is x0 at PIN_V2
+--operation mode is input
+
+x0 = INPUT();
+
+
+--x3 is x3 at PIN_L1
+--operation mode is input
+
+x3 = INPUT();
+
+
+--x10 is x10 at PIN_AB11
+--operation mode is input
+
+x10 = INPUT();
+
+
+--x9 is x9 at PIN_P8
+--operation mode is input
+
+x9 = INPUT();
+
+
+--x8 is x8 at PIN_T10
+--operation mode is input
+
+x8 = INPUT();
+
+
+--x11 is x11 at PIN_Y9
+--operation mode is input
+
+x11 = INPUT();
+
+
+--x41 is x41 at PIN_P9
+--operation mode is input
+
+x41 = INPUT();
+
+
+--x40 is x40 at PIN_T9
+--operation mode is input
+
+x40 = INPUT();
+
+
+--x42 is x42 at PIN_AA11
+--operation mode is input
+
+x42 = INPUT();
+
+
+--x43 is x43 at PIN_N8
+--operation mode is input
+
+x43 = INPUT();
+
+
+--x45 is x45 at PIN_V5
+--operation mode is input
+
+x45 = INPUT();
+
+
+--x46 is x46 at PIN_M8
+--operation mode is input
+
+x46 = INPUT();
+
+
+--x44 is x44 at PIN_W7
+--operation mode is input
+
+x44 = INPUT();
+
+
+--x47 is x47 at PIN_P10
+--operation mode is input
+
+x47 = INPUT();
+
+
+--x21 is x21 at PIN_Y7
+--operation mode is input
+
+x21 = INPUT();
+
+
+--x22 is x22 at PIN_AA8
+--operation mode is input
+
+x22 = INPUT();
+
+
+--x20 is x20 at PIN_Y6
+--operation mode is input
+
+x20 = INPUT();
+
+
+--x23 is x23 at PIN_M7
+--operation mode is input
+
+x23 = INPUT();
+
+
+--x50 is x50 at PIN_U9
+--operation mode is input
+
+x50 = INPUT();
+
+
+--x49 is x49 at PIN_Y8
+--operation mode is input
+
+x49 = INPUT();
+
+
+--x48 is x48 at PIN_V9
+--operation mode is input
+
+x48 = INPUT();
+
+
+--x51 is x51 at PIN_N10
+--operation mode is input
+
+x51 = INPUT();
+
+
+--x61 is x61 at PIN_U6
+--operation mode is input
+
+x61 = INPUT();
+
+
+--x62 is x62 at PIN_T8
+--operation mode is input
+
+x62 = INPUT();
+
+
+--x60 is x60 at PIN_R8
+--operation mode is input
+
+x60 = INPUT();
+
+
+--x63 is x63 at PIN_AB7
+--operation mode is input
+
+x63 = INPUT();
+
+
+--x13 is x13 at PIN_J2
+--operation mode is input
+
+x13 = INPUT();
+
+
+--x14 is x14 at PIN_L2
+--operation mode is input
+
+x14 = INPUT();
+
+
+--x12 is x12 at PIN_G2
+--operation mode is input
+
+x12 = INPUT();
+
+
+--x15 is x15 at PIN_H4
+--operation mode is input
+
+x15 = INPUT();
+
+
+--x29 is x29 at PIN_K6
+--operation mode is input
+
+x29 = INPUT();
+
+
+--x30 is x30 at PIN_K2
+--operation mode is input
+
+x30 = INPUT();
+
+
+--x28 is x28 at PIN_J4
+--operation mode is input
+
+x28 = INPUT();
+
+
+--x31 is x31 at PIN_K3
+--operation mode is input
+
+x31 = INPUT();
+
+
+--x53 is x53 at PIN_H1
+--operation mode is input
+
+x53 = INPUT();
+
+
+--x54 is x54 at PIN_J3
+--operation mode is input
+
+x54 = INPUT();
+
+
+--x52 is x52 at PIN_F2
+--operation mode is input
+
+x52 = INPUT();
+
+
+--x55 is x55 at PIN_L6
+--operation mode is input
+
+x55 = INPUT();
+
+
+--x26 is x26 at PIN_L3
+--operation mode is input
+
+x26 = INPUT();
+
+
+--x25 is x25 at PIN_F1
+--operation mode is input
+
+x25 = INPUT();
+
+
+--x24 is x24 at PIN_H2
+--operation mode is input
+
+x24 = INPUT();
+
+
+--x27 is x27 at PIN_G1
+--operation mode is input
+
+x27 = INPUT();
+
+
+--x58 is x58 at PIN_T4
+--operation mode is input
+
+x58 = INPUT();
+
+
+--x57 is x57 at PIN_P2
+--operation mode is input
+
+x57 = INPUT();
+
+
+--x56 is x56 at PIN_R1
+--operation mode is input
+
+x56 = INPUT();
+
+
+--x59 is x59 at PIN_R2
+--operation mode is input
+
+x59 = INPUT();
+
+
+--q is q at PIN_W9
+--operation mode is output
+
+q = OUTPUT(C1_9);
+
+
+

@@ -1,0 +1,432 @@
+
+*******************************************************
+
+Cell: mytimer    View: INTERFACE    Library: work
+
+*******************************************************
+
+Total accumulated area : 
+ Number of Core Cells :                139
+ Number of GND :                         2
+ Number of IB33 :                       14
+ Number of OB33PH :                      9
+ Number of PWR :                         1
+ Number of accumulated instances :     165
+ Number of ports :                      23
+ Number of nets :                      112
+ Number of instances :                  90
+ Number of references to this view :     0
+
+
+ Cell       Library  References     Total Area
+
+AO21FTF     apa      5 x      1      5 Core Cells
+AO21TTF     apa      4 x      1      4 Core Cells
+AOI21FTF    apa      2 x      1      2 Core Cells
+AOI21FTT    apa      2 x      1      2 Core Cells
+AOI21TTF    apa      1 x      1      1 Core Cells
+Counter     work     1 x     74     74 Core Cells
+                              2      2 GND
+DFFC        apa      5 x      1      5 Core Cells
+IB33        apa     14 x      1     14 IB33
+INV         apa      1 x      1      1 Core Cells
+LD          apa      3 x      1      3 Core Cells
+NAND2FT     apa      2 x      1      2 Core Cells
+NAND3       apa      4 x      1      4 Core Cells
+NOR2        apa      3 x      1      3 Core Cells
+NOR2FT      apa      6 x      1      6 Core Cells
+NOR3        apa      2 x      1      2 Core Cells
+NOR3FFT     apa      2 x      1      2 Core Cells
+NOR3FTT     apa      2 x      1      2 Core Cells
+OA21TTF     apa      1 x      1      1 Core Cells
+OAI21       apa      2 x      1      2 Core Cells
+OAI21TTF    apa      1 x      1      1 Core Cells
+OB33PH      apa      9 x      1      9 OB33PH
+OR2         apa      3 x      1      3 Core Cells
+OR3         apa      3 x      1      3 Core Cells
+OR3FFT      apa      3 x      1      3 Core Cells
+OR3FTT      apa      8 x      1      8 Core Cells
+PWR         apa      1 x      1      1 PWR
+
+
+*******************************************************
+
+Cell: Counter    View: INTERFACE    Library: work
+
+*******************************************************
+
+Total accumulated area : 
+ Number of Core Cells :                 74
+ Number of GND :                         2
+ Number of accumulated instances :      76
+ Number of ports :                      17
+ Number of nets :                       84
+ Number of instances :                  76
+ Number of references to this view :     1
+
+
+ Cell       Library  References     Total Area
+
+AO21FTF     apa     4 x      1      4 Core Cells
+AO21TTF     apa     3 x      1      3 Core Cells
+AOI21FTF    apa     2 x      1      2 Core Cells
+DFF         apa    18 x      1     18 Core Cells
+GND         apa     2 x      1      2 GND
+MUX2H       apa    16 x      1     16 Core Cells
+NOR2        apa     5 x      1      5 Core Cells
+NOR2FT      apa     1 x      1      1 Core Cells
+NOR3        apa     1 x      1      1 Core Cells
+NOR3FFT     apa     1 x      1      1 Core Cells
+OAI21       apa     2 x      1      2 Core Cells
+OR2         apa     1 x      1      1 Core Cells
+OR3         apa     4 x      1      4 Core Cells
+OR3FFT      apa     7 x      1      7 Core Cells
+OR3FTT      apa     3 x      1      3 Core Cells
+XNOR2       apa     6 x      1      6 Core Cells
+
+***********************************************
+Device Utilization for apa075pqfp208
+***********************************************
+Resource                Used    Avail   Utilization
+-----------------------------------------------
+IOs                     23      158      14.56%
+Core Cells              139     3072      4.52%
+
+-----------------------------------------------
+Using wire table: APA
+
+
+
+                        Clock Frequency Report
+
+	Clock                : Frequency
+      ------------------------------------
+
+	clk                  : 65.3 MHz
+
+                        Slack Table at End Points
+
+
+End points                         Slack       Arrival             Required
+                                             rise     fall      rise     fall
+
+U_1/U_1_reg_zero/D             :    n/a      14.70   14.45         n/a      n/a 
+U_1/U_0_reg_zero/D             :    n/a      14.70   14.45         n/a      n/a 
+U_0_reg_current_state(1)/D     :    n/a      12.96   12.82         n/a      n/a 
+U_1/U_0_reg_count(0)/D         :    n/a      12.79   12.65         n/a      n/a 
+U_1/U_1_reg_count(0)/D         :    n/a      12.79   12.65         n/a      n/a 
+U_1/U_1_reg_int_count(0)/D     :    n/a      12.63   12.49         n/a      n/a 
+U_1/U_0_reg_int_count(0)/D     :    n/a      12.63   12.49         n/a      n/a 
+U_1/U_1_reg_count(1)/D         :    n/a      11.71   11.72         n/a      n/a 
+U_1/U_1_reg_count(2)/D         :    n/a      11.71   11.72         n/a      n/a 
+U_1/U_1_reg_int_count(1)/D     :    n/a      11.55   11.56         n/a      n/a 
+
+
+
+                        Critical Path Report
+
+Critical path #1, (unconstrained path)
+NAME                                                 GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------------------------
+d(0)/                                                            0.00  0.00 dn             0.00
+io_d(0)/Y                                            IB33        1.78  1.78 dn             4.00
+ix444/Y                                              NOR3        1.30  3.08 up             2.00
+ix11/Y                                               OR3FTT      1.26  4.35 dn             4.00
+ix15/Y                                               OR3         1.35  5.69 dn             2.00
+ix29/Y                                               OR2         1.44  7.14 dn             4.00
+ix436/Y                                              OR3FTT      1.19  8.32 dn             1.00
+ix434/Y                                              AOI21FTF    0.72  9.04 dn             1.00
+ix45/Y                                               NAND3       0.95  9.99 up             2.00
+U_1/ix263/Y                                          OR3FFT      0.72  10.71 dn             1.00
+U_1/ix69/Y                                           OAI21       0.95  11.65 up             2.00
+U_1/ix213/Y                                          MUX2H       1.14  12.79 up             2.00
+U_1/ix315/Y                                          NOR2        1.12  13.91 dn             1.00
+U_1/ix217/Y                                          OR3FTT      0.79  14.70 up             1.00
+U_1/U_0_reg_zero/D                                   DFF         0.00  14.70 up             0.00
+data arrival time                                                      14.70
+
+
+data required time                                                  not specified
+------------------------------------------------------------------------------------------------
+data required time                                                  not specified
+data arrival time                                                      14.70
+                                                                    ----------
+                                                                 unconstrained path
+------------------------------------------------------------------------------------------------
+
+
+
+Critical path #2, (unconstrained path)
+NAME                                                 GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------------------------
+d(0)/                                                            0.00  0.00 dn             0.00
+io_d(0)/Y                                            IB33        1.78  1.78 dn             4.00
+ix444/Y                                              NOR3        1.30  3.08 up             2.00
+ix11/Y                                               OR3FTT      1.26  4.35 dn             4.00
+ix15/Y                                               OR3         1.35  5.69 dn             2.00
+ix29/Y                                               OR2         1.44  7.14 dn             4.00
+ix436/Y                                              OR3FTT      1.19  8.32 dn             1.00
+ix434/Y                                              AOI21FTF    0.72  9.04 dn             1.00
+ix45/Y                                               NAND3       0.95  9.99 up             2.00
+U_1/ix243/Y                                          OR3FFT      0.72  10.71 dn             1.00
+U_1/ix239/Y                                          AO21FTF     0.95  11.65 up             2.00
+U_1/ix253/Y                                          MUX2H       1.14  12.79 up             2.00
+U_1/ix322/Y                                          NOR2        1.12  13.91 dn             1.00
+U_1/ix289/Y                                          OR3FTT      0.79  14.70 up             1.00
+U_1/U_1_reg_zero/D                                   DFF         0.00  14.70 up             0.00
+data arrival time                                                      14.70
+
+
+data required time                                                  not specified
+------------------------------------------------------------------------------------------------
+data required time                                                  not specified
+data arrival time                                                      14.70
+                                                                    ----------
+                                                                 unconstrained path
+------------------------------------------------------------------------------------------------
+
+
+
+Critical path #3, (unconstrained path)
+NAME                                                 GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------------------------
+d(2)/                                                            0.00  0.00 dn             0.00
+io_d(2)/Y                                            IB33        1.58  1.58 dn             3.00
+ix444/Y                                              NOR3        1.40  2.98 up             2.00
+ix11/Y                                               OR3FTT      1.26  4.24 dn             4.00
+ix15/Y                                               OR3         1.35  5.59 dn             2.00
+ix29/Y                                               OR2         1.44  7.03 dn             4.00
+ix436/Y                                              OR3FTT      1.19  8.22 dn             1.00
+ix434/Y                                              AOI21FTF    0.72  8.94 dn             1.00
+ix45/Y                                               NAND3       0.95  9.88 up             2.00
+U_1/ix263/Y                                          OR3FFT      0.72  10.60 dn             1.00
+U_1/ix69/Y                                           OAI21       0.95  11.55 up             2.00
+U_1/ix213/Y                                          MUX2H       1.14  12.69 up             2.00
+U_1/ix315/Y                                          NOR2        1.12  13.81 dn             1.00
+U_1/ix217/Y                                          OR3FTT      0.79  14.59 up             1.00
+U_1/U_0_reg_zero/D                                   DFF         0.00  14.59 up             0.00
+data arrival time                                                      14.59
+
+
+data required time                                                  not specified
+------------------------------------------------------------------------------------------------
+data required time                                                  not specified
+data arrival time                                                      14.59
+                                                                    ----------
+                                                                 unconstrained path
+------------------------------------------------------------------------------------------------
+
+
+
+Critical path #4, (unconstrained path)
+NAME                                                 GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------------------------
+d(2)/                                                            0.00  0.00 dn             0.00
+io_d(2)/Y                                            IB33        1.58  1.58 dn             3.00
+ix444/Y                                              NOR3        1.40  2.98 up             2.00
+ix11/Y                                               OR3FTT      1.26  4.24 dn             4.00
+ix15/Y                                               OR3         1.35  5.59 dn             2.00
+ix29/Y                                               OR2         1.44  7.03 dn             4.00
+ix436/Y                                              OR3FTT      1.19  8.22 dn             1.00
+ix434/Y                                              AOI21FTF    0.72  8.94 dn             1.00
+ix45/Y                                               NAND3       0.95  9.88 up             2.00
+U_1/ix243/Y                                          OR3FFT      0.72  10.60 dn             1.00
+U_1/ix239/Y                                          AO21FTF     0.95  11.55 up             2.00
+U_1/ix253/Y                                          MUX2H       1.14  12.69 up             2.00
+U_1/ix322/Y                                          NOR2        1.12  13.81 dn             1.00
+U_1/ix289/Y                                          OR3FTT      0.79  14.59 up             1.00
+U_1/U_1_reg_zero/D                                   DFF         0.00  14.59 up             0.00
+data arrival time                                                      14.59
+
+
+data required time                                                  not specified
+------------------------------------------------------------------------------------------------
+data required time                                                  not specified
+data arrival time                                                      14.59
+                                                                    ----------
+                                                                 unconstrained path
+------------------------------------------------------------------------------------------------
+
+
+
+Critical path #5, (unconstrained path)
+NAME                                                 GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------------------------
+d(1)/                                                            0.00  0.00 dn             0.00
+io_d(1)/Y                                            IB33        1.78  1.78 dn             4.00
+ix444/Y                                              NOR3        1.06  2.83 up             2.00
+ix11/Y                                               OR3FTT      1.26  4.10 dn             4.00
+ix15/Y                                               OR3         1.35  5.44 dn             2.00
+ix29/Y                                               OR2         1.44  6.89 dn             4.00
+ix436/Y                                              OR3FTT      1.19  8.07 dn             1.00
+ix434/Y                                              AOI21FTF    0.72  8.79 dn             1.00
+ix45/Y                                               NAND3       0.95  9.74 up             2.00
+U_1/ix263/Y                                          OR3FFT      0.72  10.46 dn             1.00
+U_1/ix69/Y                                           OAI21       0.95  11.40 up             2.00
+U_1/ix213/Y                                          MUX2H       1.14  12.54 up             2.00
+U_1/ix315/Y                                          NOR2        1.12  13.66 dn             1.00
+U_1/ix217/Y                                          OR3FTT      0.79  14.45 up             1.00
+U_1/U_0_reg_zero/D                                   DFF         0.00  14.45 up             0.00
+data arrival time                                                      14.45
+
+
+data required time                                                  not specified
+------------------------------------------------------------------------------------------------
+data required time                                                  not specified
+data arrival time                                                      14.45
+                                                                    ----------
+                                                                 unconstrained path
+------------------------------------------------------------------------------------------------
+
+
+
+Critical path #6, (unconstrained path)
+NAME                                                 GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------------------------
+d(1)/                                                            0.00  0.00 dn             0.00
+io_d(1)/Y                                            IB33        1.78  1.78 dn             4.00
+ix444/Y                                              NOR3        1.06  2.83 up             2.00
+ix11/Y                                               OR3FTT      1.26  4.10 dn             4.00
+ix15/Y                                               OR3         1.35  5.44 dn             2.00
+ix29/Y                                               OR2         1.44  6.89 dn             4.00
+ix436/Y                                              OR3FTT      1.19  8.07 dn             1.00
+ix434/Y                                              AOI21FTF    0.72  8.79 dn             1.00
+ix45/Y                                               NAND3       0.95  9.74 up             2.00
+U_1/ix243/Y                                          OR3FFT      0.72  10.46 dn             1.00
+U_1/ix239/Y                                          AO21FTF     0.95  11.40 up             2.00
+U_1/ix253/Y                                          MUX2H       1.14  12.54 up             2.00
+U_1/ix322/Y                                          NOR2        1.12  13.66 dn             1.00
+U_1/ix289/Y                                          OR3FTT      0.79  14.45 up             1.00
+U_1/U_1_reg_zero/D                                   DFF         0.00  14.45 up             0.00
+data arrival time                                                      14.45
+
+
+data required time                                                  not specified
+------------------------------------------------------------------------------------------------
+data required time                                                  not specified
+data arrival time                                                      14.45
+                                                                    ----------
+                                                                 unconstrained path
+------------------------------------------------------------------------------------------------
+
+
+
+Critical path #7, (unconstrained path)
+NAME                                                 GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------------------------
+d(3)/                                                            0.00  0.00 dn             0.00
+io_d(3)/Y                                            IB33        1.78  1.78 dn             4.00
+ix11/Y                                               OR3FTT      1.80  3.58 dn             4.00
+ix15/Y                                               OR3         1.35  4.92 dn             2.00
+ix29/Y                                               OR2         1.44  6.37 dn             4.00
+ix436/Y                                              OR3FTT      1.19  7.56 dn             1.00
+ix434/Y                                              AOI21FTF    0.72  8.27 dn             1.00
+ix45/Y                                               NAND3       0.95  9.22 up             2.00
+U_1/ix263/Y                                          OR3FFT      0.72  9.94 dn             1.00
+U_1/ix69/Y                                           OAI21       0.95  10.88 up             2.00
+U_1/ix213/Y                                          MUX2H       1.14  12.02 up             2.00
+U_1/ix315/Y                                          NOR2        1.12  13.14 dn             1.00
+U_1/ix217/Y                                          OR3FTT      0.79  13.93 up             1.00
+U_1/U_0_reg_zero/D                                   DFF         0.00  13.93 up             0.00
+data arrival time                                                      13.93
+
+
+data required time                                                  not specified
+------------------------------------------------------------------------------------------------
+data required time                                                  not specified
+data arrival time                                                      13.93
+                                                                    ----------
+                                                                 unconstrained path
+------------------------------------------------------------------------------------------------
+
+
+
+Critical path #8, (unconstrained path)
+NAME                                                 GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------------------------
+d(3)/                                                            0.00  0.00 dn             0.00
+io_d(3)/Y                                            IB33        1.78  1.78 dn             4.00
+ix11/Y                                               OR3FTT      1.80  3.58 dn             4.00
+ix15/Y                                               OR3         1.35  4.92 dn             2.00
+ix29/Y                                               OR2         1.44  6.37 dn             4.00
+ix436/Y                                              OR3FTT      1.19  7.56 dn             1.00
+ix434/Y                                              AOI21FTF    0.72  8.27 dn             1.00
+ix45/Y                                               NAND3       0.95  9.22 up             2.00
+U_1/ix243/Y                                          OR3FFT      0.72  9.94 dn             1.00
+U_1/ix239/Y                                          AO21FTF     0.95  10.88 up             2.00
+U_1/ix253/Y                                          MUX2H       1.14  12.02 up             2.00
+U_1/ix322/Y                                          NOR2        1.12  13.14 dn             1.00
+U_1/ix289/Y                                          OR3FTT      0.79  13.93 up             1.00
+U_1/U_1_reg_zero/D                                   DFF         0.00  13.93 up             0.00
+data arrival time                                                      13.93
+
+
+data required time                                                  not specified
+------------------------------------------------------------------------------------------------
+data required time                                                  not specified
+data arrival time                                                      13.93
+                                                                    ----------
+                                                                 unconstrained path
+------------------------------------------------------------------------------------------------
+
+
+
+Critical path #9, (unconstrained path)
+NAME                                                 GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------------------------
+d(4)/                                                            0.00  0.00 dn             0.00
+io_d(4)/Y                                            IB33        1.39  1.39 dn             2.00
+ix11/Y                                               OR3FTT      1.73  3.12 dn             4.00
+ix15/Y                                               OR3         1.35  4.47 dn             2.00
+ix29/Y                                               OR2         1.44  5.91 dn             4.00
+ix436/Y                                              OR3FTT      1.19  7.10 dn             1.00
+ix434/Y                                              AOI21FTF    0.72  7.82 dn             1.00
+ix45/Y                                               NAND3       0.95  8.76 up             2.00
+U_1/ix263/Y                                          OR3FFT      0.72  9.48 dn             1.00
+U_1/ix69/Y                                           OAI21       0.95  10.43 up             2.00
+U_1/ix213/Y                                          MUX2H       1.14  11.57 up             2.00
+U_1/ix315/Y                                          NOR2        1.12  12.69 dn             1.00
+U_1/ix217/Y                                          OR3FTT      0.79  13.47 up             1.00
+U_1/U_0_reg_zero/D                                   DFF         0.00  13.47 up             0.00
+data arrival time                                                      13.47
+
+
+data required time                                                  not specified
+------------------------------------------------------------------------------------------------
+data required time                                                  not specified
+data arrival time                                                      13.47
+                                                                    ----------
+                                                                 unconstrained path
+------------------------------------------------------------------------------------------------
+
+
+
+Critical path #10, (unconstrained path)
+NAME                                                 GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------------------------
+d(4)/                                                            0.00  0.00 dn             0.00
+io_d(4)/Y                                            IB33        1.39  1.39 dn             2.00
+ix11/Y                                               OR3FTT      1.73  3.12 dn             4.00
+ix15/Y                                               OR3         1.35  4.47 dn             2.00
+ix29/Y                                               OR2         1.44  5.91 dn             4.00
+ix436/Y                                              OR3FTT      1.19  7.10 dn             1.00
+ix434/Y                                              AOI21FTF    0.72  7.82 dn             1.00
+ix45/Y                                               NAND3       0.95  8.76 up             2.00
+U_1/ix243/Y                                          OR3FFT      0.72  9.48 dn             1.00
+U_1/ix239/Y                                          AO21FTF     0.95  10.43 up             2.00
+U_1/ix253/Y                                          MUX2H       1.14  11.57 up             2.00
+U_1/ix322/Y                                          NOR2        1.12  12.69 dn             1.00
+U_1/ix289/Y                                          OR3FTT      0.79  13.47 up             1.00
+U_1/U_1_reg_zero/D                                   DFF         0.00  13.47 up             0.00
+data arrival time                                                      13.47
+
+
+data required time                                                  not specified
+------------------------------------------------------------------------------------------------
+data required time                                                  not specified
+data arrival time                                                      13.47
+                                                                    ----------
+                                                                 unconstrained path
+------------------------------------------------------------------------------------------------
+
+

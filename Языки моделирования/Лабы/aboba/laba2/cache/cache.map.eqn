@@ -1,0 +1,1325 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--N4_dffs[1] is cache_cell:inst1|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N4_dffs[1]_lut_out = addr[1];
+N4_dffs[1] = DFFEAS(N4_dffs[1]_lut_out, H1_w_anode18w[3], VCC, , , , , , );
+
+
+--N4_dffs[2] is cache_cell:inst1|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N4_dffs[2]_lut_out = addr[2];
+N4_dffs[2] = DFFEAS(N4_dffs[2]_lut_out, H1_w_anode18w[3], VCC, , , , , , );
+
+
+--S01L2 is cache_cell:inst1|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~68
+--operation mode is normal
+
+S01L2 = addr[2] & N4_dffs[2] & (addr[1] $ !N4_dffs[1]) # !addr[2] & !N4_dffs[2] & (addr[1] $ !N4_dffs[1]);
+
+
+--N4_dffs[0] is cache_cell:inst1|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N4_dffs[0]_lut_out = addr[0];
+N4_dffs[0] = DFFEAS(N4_dffs[0]_lut_out, H1_w_anode18w[3], VCC, , , , , , );
+
+
+--S01L1 is cache_cell:inst1|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~0
+--operation mode is normal
+
+S01L1 = S01L2 & (addr[0] $ !N4_dffs[0]);
+
+
+--N41_dffs[0] is cache_cell:inst6|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N41_dffs[0]_lut_out = addr[0];
+N41_dffs[0] = DFFEAS(N41_dffs[0]_lut_out, H1_w_anode68w[3], VCC, , , , , , );
+
+
+--N41_dffs[1] is cache_cell:inst6|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N41_dffs[1]_lut_out = addr[1];
+N41_dffs[1] = DFFEAS(N41_dffs[1]_lut_out, H1_w_anode68w[3], VCC, , , , , , );
+
+
+--N41_dffs[2] is cache_cell:inst6|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N41_dffs[2]_lut_out = addr[2];
+N41_dffs[2] = DFFEAS(N41_dffs[2]_lut_out, H1_w_anode68w[3], VCC, , , , , , );
+
+
+--S53L2 is cache_cell:inst6|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~68
+--operation mode is normal
+
+S53L2 = addr[2] & N41_dffs[2] & (addr[1] $ !N41_dffs[1]) # !addr[2] & !N41_dffs[2] & (addr[1] $ !N41_dffs[1]);
+
+
+--N6_dffs[1] is cache_cell:inst2|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N6_dffs[1]_lut_out = addr[1];
+N6_dffs[1] = DFFEAS(N6_dffs[1]_lut_out, H1_w_anode28w[3], VCC, , , , , , );
+
+
+--N6_dffs[2] is cache_cell:inst2|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N6_dffs[2]_lut_out = addr[2];
+N6_dffs[2] = DFFEAS(N6_dffs[2]_lut_out, H1_w_anode28w[3], VCC, , , , , , );
+
+
+--S51L2 is cache_cell:inst2|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~68
+--operation mode is normal
+
+S51L2 = addr[2] & N6_dffs[2] & (addr[1] $ !N6_dffs[1]) # !addr[2] & !N6_dffs[2] & (addr[1] $ !N6_dffs[1]);
+
+
+--N6_dffs[0] is cache_cell:inst2|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N6_dffs[0]_lut_out = addr[0];
+N6_dffs[0] = DFFEAS(N6_dffs[0]_lut_out, H1_w_anode28w[3], VCC, , , , , , );
+
+
+--S51L1 is cache_cell:inst2|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~0
+--operation mode is normal
+
+S51L1 = S51L2 & (addr[0] $ !N6_dffs[0]);
+
+
+--J1L5 is busmux:159|lpm_mux:$00000|mux_7gc:auto_generated|w_result25w~111
+--operation mode is normal
+
+J1L5 = !S51L1 & (addr[0] $ N41_dffs[0] # !S53L2);
+
+
+--N01_dffs[2] is cache_cell:inst4|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N01_dffs[2]_lut_out = addr[2];
+N01_dffs[2] = DFFEAS(N01_dffs[2]_lut_out, H1_w_anode48w[3], VCC, , , , , , );
+
+
+--N01_dffs[1] is cache_cell:inst4|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N01_dffs[1]_lut_out = addr[1];
+N01_dffs[1] = DFFEAS(N01_dffs[1]_lut_out, H1_w_anode48w[3], VCC, , , , , , );
+
+
+--S52L2 is cache_cell:inst4|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~68
+--operation mode is normal
+
+S52L2 = N01_dffs[2] & addr[2] & (N01_dffs[1] $ !addr[1]) # !N01_dffs[2] & !addr[2] & (N01_dffs[1] $ !addr[1]);
+
+
+--N01_dffs[0] is cache_cell:inst4|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N01_dffs[0]_lut_out = addr[0];
+N01_dffs[0] = DFFEAS(N01_dffs[0]_lut_out, H1_w_anode48w[3], VCC, , , , , , );
+
+
+--S52L1 is cache_cell:inst4|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~0
+--operation mode is normal
+
+S52L1 = S52L2 & (N01_dffs[0] $ !addr[0]);
+
+
+--N21_dffs[1] is cache_cell:inst5|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N21_dffs[1]_lut_out = addr[1];
+N21_dffs[1] = DFFEAS(N21_dffs[1]_lut_out, H1_w_anode58w[3], VCC, , , , , , );
+
+
+--N21_dffs[2] is cache_cell:inst5|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N21_dffs[2]_lut_out = addr[2];
+N21_dffs[2] = DFFEAS(N21_dffs[2]_lut_out, H1_w_anode58w[3], VCC, , , , , , );
+
+
+--S03L2 is cache_cell:inst5|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~68
+--operation mode is normal
+
+S03L2 = addr[2] & N21_dffs[2] & (addr[1] $ !N21_dffs[1]) # !addr[2] & !N21_dffs[2] & (addr[1] $ !N21_dffs[1]);
+
+
+--N21_dffs[0] is cache_cell:inst5|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N21_dffs[0]_lut_out = addr[0];
+N21_dffs[0] = DFFEAS(N21_dffs[0]_lut_out, H1_w_anode58w[3], VCC, , , , , , );
+
+
+--S03L1 is cache_cell:inst5|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~0
+--operation mode is normal
+
+S03L1 = S03L2 & (addr[0] $ !N21_dffs[0]);
+
+
+--N61_dffs[1] is cache_cell:inst7|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N61_dffs[1]_lut_out = addr[1];
+N61_dffs[1] = DFFEAS(N61_dffs[1]_lut_out, H1_w_anode78w[3], VCC, , , , , , );
+
+
+--N61_dffs[2] is cache_cell:inst7|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N61_dffs[2]_lut_out = addr[2];
+N61_dffs[2] = DFFEAS(N61_dffs[2]_lut_out, H1_w_anode78w[3], VCC, , , , , , );
+
+
+--S04L2 is cache_cell:inst7|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~62
+--operation mode is normal
+
+S04L2 = addr[2] & N61_dffs[2] & (addr[1] $ !N61_dffs[1]) # !addr[2] & !N61_dffs[2] & (addr[1] $ !N61_dffs[1]);
+
+
+--N61_dffs[0] is cache_cell:inst7|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N61_dffs[0]_lut_out = addr[0];
+N61_dffs[0] = DFFEAS(N61_dffs[0]_lut_out, H1_w_anode78w[3], VCC, , , , , , );
+
+
+--S04L1 is cache_cell:inst7|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~0
+--operation mode is normal
+
+S04L1 = S04L2 & (addr[0] $ !N61_dffs[0]);
+
+
+--J1L9 is busmux:159|lpm_mux:$00000|mux_7gc:auto_generated|w_result37w~107
+--operation mode is normal
+
+J1L9 = J1L5 & !S52L1 & !S03L1 & !S04L1;
+
+
+--N2_dffs[0] is cache_cell:inst|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N2_dffs[0]_lut_out = addr[0];
+N2_dffs[0] = DFFEAS(N2_dffs[0]_lut_out, H1_w_anode1w[3], VCC, , , , , , );
+
+
+--S3L1 is cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]|_~0
+--operation mode is normal
+
+S3L1 = addr[0] $ N2_dffs[0];
+
+
+--N8_dffs[0] is cache_cell:inst3|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N8_dffs[0]_lut_out = addr[0];
+N8_dffs[0] = DFFEAS(N8_dffs[0]_lut_out, H1_w_anode38w[3], VCC, , , , , , );
+
+
+--S81L1 is cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]|_~0
+--operation mode is normal
+
+S81L1 = addr[0] $ N8_dffs[0];
+
+
+--N8_dffs[1] is cache_cell:inst3|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N8_dffs[1]_lut_out = addr[1];
+N8_dffs[1] = DFFEAS(N8_dffs[1]_lut_out, H1_w_anode38w[3], VCC, , , , , , );
+
+
+--N8_dffs[2] is cache_cell:inst3|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N8_dffs[2]_lut_out = addr[2];
+N8_dffs[2] = DFFEAS(N8_dffs[2]_lut_out, H1_w_anode38w[3], VCC, , , , , , );
+
+
+--S02L2 is cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~68
+--operation mode is normal
+
+S02L2 = addr[2] & N8_dffs[2] & (addr[1] $ !N8_dffs[1]) # !addr[2] & !N8_dffs[2] & (addr[1] $ !N8_dffs[1]);
+
+
+--N2_dffs[1] is cache_cell:inst|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N2_dffs[1]_lut_out = addr[1];
+N2_dffs[1] = DFFEAS(N2_dffs[1]_lut_out, H1_w_anode1w[3], VCC, , , , , , );
+
+
+--N2_dffs[2] is cache_cell:inst|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N2_dffs[2]_lut_out = addr[2];
+N2_dffs[2] = DFFEAS(N2_dffs[2]_lut_out, H1_w_anode1w[3], VCC, , , , , , );
+
+
+--S5L2 is cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~71
+--operation mode is normal
+
+S5L2 = addr[2] & N2_dffs[2] & (addr[1] $ !N2_dffs[1]) # !addr[2] & !N2_dffs[2] & (addr[1] $ !N2_dffs[1]);
+
+
+--F1L2 is coder8_3:inst8|reduce_nor~107
+--operation mode is normal
+
+F1L2 = S3L1 & (S81L1 # !S02L2) # !S3L1 & !S5L2 & (S81L1 # !S02L2);
+
+
+--124 is 124
+--operation mode is normal
+
+124 = S01L1 # !F1L2 # !J1L9;
+
+
+--N51_dffs[7] is cache_cell:inst7|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[7]
+--operation mode is normal
+
+N51_dffs[7]_lut_out = dataIN[7];
+N51_dffs[7] = DFFEAS(N51_dffs[7]_lut_out, H1_w_anode78w[3], VCC, , , , , , );
+
+
+--N7_dffs[7] is cache_cell:inst3|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[7]
+--operation mode is normal
+
+N7_dffs[7]_lut_out = dataIN[7];
+N7_dffs[7] = DFFEAS(N7_dffs[7]_lut_out, H1_w_anode38w[3], VCC, , , , , , );
+
+
+--S02L1 is cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~0
+--operation mode is normal
+
+S02L1 = S02L2 & (addr[0] $ !N8_dffs[0]);
+
+
+--S5L1 is cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~0
+--operation mode is normal
+
+S5L1 = S5L2 & (addr[0] $ !N2_dffs[0]);
+
+
+--J1L01 is busmux:159|lpm_mux:$00000|mux_7gc:auto_generated|w_result37w~108
+--operation mode is normal
+
+J1L01 = J1L9 & !S5L1 & (S01L1 $ S02L1);
+
+
+--S53L1 is cache_cell:inst6|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~0
+--operation mode is normal
+
+S53L1 = S53L2 & (addr[0] $ !N41_dffs[0]);
+
+
+--J1L1 is busmux:159|lpm_mux:$00000|mux_7gc:auto_generated|w_result11w~151
+--operation mode is normal
+
+J1L1 = F1L2 & !S03L1 & !S04L1 & !S01L1;
+
+
+--F1L1 is coder8_3:inst8|reduce_nor~4
+--operation mode is normal
+
+F1L1 = S52L1 # S53L1 # !J1L1 # !S51L1;
+
+
+--F1L3 is coder8_3:inst8|reduce_nor~108
+--operation mode is normal
+
+F1L3 = S3L1 # S02L2 & !S81L1 # !S5L2;
+
+
+--J1L11 is busmux:159|lpm_mux:$00000|mux_7gc:auto_generated|w_result37w~109
+--operation mode is normal
+
+J1L11 = F1L1 & (S01L1 # F1L3 # !J1L9);
+
+
+--J1L21 is busmux:159|lpm_mux:$00000|mux_7gc:auto_generated|w_result37w~110
+--operation mode is normal
+
+J1L21 = 124 & (J1L01 # !J1L11) # !124 & (addr[2]);
+
+
+--G1L34 is lpm_mux:17|mux_kgc:auto_generated|w_result513w~439
+--operation mode is normal
+
+G1L34 = J1L21 & N51_dffs[7] # !J1L21 & (N7_dffs[7]);
+
+
+--N31_dffs[7] is cache_cell:inst6|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[7]
+--operation mode is normal
+
+N31_dffs[7]_lut_out = dataIN[7];
+N31_dffs[7] = DFFEAS(N31_dffs[7]_lut_out, H1_w_anode68w[3], VCC, , , , , , );
+
+
+--N5_dffs[7] is cache_cell:inst2|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[7]
+--operation mode is normal
+
+N5_dffs[7]_lut_out = dataIN[7];
+N5_dffs[7] = DFFEAS(N5_dffs[7]_lut_out, H1_w_anode28w[3], VCC, , , , , , );
+
+
+--G1L44 is lpm_mux:17|mux_kgc:auto_generated|w_result513w~440
+--operation mode is normal
+
+G1L44 = J1L21 & N31_dffs[7] # !J1L21 & (N5_dffs[7]);
+
+
+--J1L6 is busmux:159|lpm_mux:$00000|mux_7gc:auto_generated|w_result25w~112
+--operation mode is normal
+
+J1L6 = J1L9 & !S02L1 & (S01L1 $ S5L1);
+
+
+--J1L2 is busmux:159|lpm_mux:$00000|mux_7gc:auto_generated|w_result11w~152
+--operation mode is normal
+
+J1L2 = F1L2 & (!S04L1 & !S01L1);
+
+
+--J1L7 is busmux:159|lpm_mux:$00000|mux_7gc:auto_generated|w_result25w~113
+--operation mode is normal
+
+J1L7 = J1L5 & J1L2 & (S52L1 $ S03L1);
+
+
+--J1L8 is busmux:159|lpm_mux:$00000|mux_7gc:auto_generated|w_result25w~114
+--operation mode is normal
+
+J1L8 = 124 & (J1L6 # J1L7) # !124 & addr[1];
+
+
+--J1L3 is busmux:159|lpm_mux:$00000|mux_7gc:auto_generated|w_result11w~153
+--operation mode is normal
+
+J1L3 = J1L1 & !S51L1 & (S52L1 $ S53L1);
+
+
+--J1L4 is busmux:159|lpm_mux:$00000|mux_7gc:auto_generated|w_result11w~154
+--operation mode is normal
+
+J1L4 = 124 & (J1L3 # !J1L11) # !124 & (addr[0]);
+
+
+--N11_dffs[7] is cache_cell:inst5|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[7]
+--operation mode is normal
+
+N11_dffs[7]_lut_out = dataIN[7];
+N11_dffs[7] = DFFEAS(N11_dffs[7]_lut_out, H1_w_anode58w[3], VCC, , , , , , );
+
+
+--N3_dffs[7] is cache_cell:inst1|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[7]
+--operation mode is normal
+
+N3_dffs[7]_lut_out = dataIN[7];
+N3_dffs[7] = DFFEAS(N3_dffs[7]_lut_out, H1_w_anode18w[3], VCC, , , , , , );
+
+
+--G1L54 is lpm_mux:17|mux_kgc:auto_generated|w_result513w~441
+--operation mode is normal
+
+G1L54 = J1L21 & N11_dffs[7] # !J1L21 & (N3_dffs[7]);
+
+
+--N9_dffs[7] is cache_cell:inst4|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[7]
+--operation mode is normal
+
+N9_dffs[7]_lut_out = dataIN[7];
+N9_dffs[7] = DFFEAS(N9_dffs[7]_lut_out, H1_w_anode48w[3], VCC, , , , , , );
+
+
+--N1_dffs[7] is cache_cell:inst|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[7]
+--operation mode is normal
+
+N1_dffs[7]_lut_out = dataIN[7];
+N1_dffs[7] = DFFEAS(N1_dffs[7]_lut_out, H1_w_anode1w[3], VCC, , , , , , );
+
+
+--G1L64 is lpm_mux:17|mux_kgc:auto_generated|w_result513w~442
+--operation mode is normal
+
+G1L64 = J1L21 & N9_dffs[7] # !J1L21 & (N1_dffs[7]);
+
+
+--G1L74 is lpm_mux:17|mux_kgc:auto_generated|w_result513w~443
+--operation mode is normal
+
+G1L74 = J1L8 & J1L4 # !J1L8 & (J1L4 & G1L54 # !J1L4 & (G1L64));
+
+
+--G1L84 is lpm_mux:17|mux_kgc:auto_generated|w_result513w~444
+--operation mode is normal
+
+G1L84 = J1L8 & (G1L74 & G1L34 # !G1L74 & (G1L44)) # !J1L8 & (G1L74);
+
+
+--N51_dffs[6] is cache_cell:inst7|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[6]
+--operation mode is normal
+
+N51_dffs[6]_lut_out = dataIN[6];
+N51_dffs[6] = DFFEAS(N51_dffs[6]_lut_out, H1_w_anode78w[3], VCC, , , , , , );
+
+
+--N7_dffs[6] is cache_cell:inst3|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[6]
+--operation mode is normal
+
+N7_dffs[6]_lut_out = dataIN[6];
+N7_dffs[6] = DFFEAS(N7_dffs[6]_lut_out, H1_w_anode38w[3], VCC, , , , , , );
+
+
+--G1L73 is lpm_mux:17|mux_kgc:auto_generated|w_result444w~404
+--operation mode is normal
+
+G1L73 = J1L21 & N51_dffs[6] # !J1L21 & (N7_dffs[6]);
+
+
+--N11_dffs[6] is cache_cell:inst5|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[6]
+--operation mode is normal
+
+N11_dffs[6]_lut_out = dataIN[6];
+N11_dffs[6] = DFFEAS(N11_dffs[6]_lut_out, H1_w_anode58w[3], VCC, , , , , , );
+
+
+--N3_dffs[6] is cache_cell:inst1|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[6]
+--operation mode is normal
+
+N3_dffs[6]_lut_out = dataIN[6];
+N3_dffs[6] = DFFEAS(N3_dffs[6]_lut_out, H1_w_anode18w[3], VCC, , , , , , );
+
+
+--G1L83 is lpm_mux:17|mux_kgc:auto_generated|w_result444w~405
+--operation mode is normal
+
+G1L83 = J1L21 & N11_dffs[6] # !J1L21 & (N3_dffs[6]);
+
+
+--G1L93 is lpm_mux:17|mux_kgc:auto_generated|w_result444w~406
+--operation mode is normal
+
+G1L93 = J1L4 & (J1L8 & G1L73 # !J1L8 & (G1L83));
+
+
+--H1L7 is lpm_decode:30|decode_4mb:auto_generated|w_anode28w[3]~11
+--operation mode is normal
+
+H1L7 = !J1L4 & !J1L21;
+
+
+--N5_dffs[6] is cache_cell:inst2|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[6]
+--operation mode is normal
+
+N5_dffs[6]_lut_out = dataIN[6];
+N5_dffs[6] = DFFEAS(N5_dffs[6]_lut_out, H1_w_anode28w[3], VCC, , , , , , );
+
+
+--N1_dffs[6] is cache_cell:inst|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[6]
+--operation mode is normal
+
+N1_dffs[6]_lut_out = dataIN[6];
+N1_dffs[6] = DFFEAS(N1_dffs[6]_lut_out, H1_w_anode1w[3], VCC, , , , , , );
+
+
+--G1L04 is lpm_mux:17|mux_kgc:auto_generated|w_result444w~407
+--operation mode is normal
+
+G1L04 = H1L7 & (J1L8 & N5_dffs[6] # !J1L8 & (N1_dffs[6]));
+
+
+--N31_dffs[6] is cache_cell:inst6|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[6]
+--operation mode is normal
+
+N31_dffs[6]_lut_out = dataIN[6];
+N31_dffs[6] = DFFEAS(N31_dffs[6]_lut_out, H1_w_anode68w[3], VCC, , , , , , );
+
+
+--N9_dffs[6] is cache_cell:inst4|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[6]
+--operation mode is normal
+
+N9_dffs[6]_lut_out = dataIN[6];
+N9_dffs[6] = DFFEAS(N9_dffs[6]_lut_out, H1_w_anode48w[3], VCC, , , , , , );
+
+
+--G1L14 is lpm_mux:17|mux_kgc:auto_generated|w_result444w~408
+--operation mode is normal
+
+G1L14 = J1L8 & N31_dffs[6] # !J1L8 & (N9_dffs[6]);
+
+
+--H1L61 is lpm_decode:30|decode_4mb:auto_generated|w_anode68w[3]~11
+--operation mode is normal
+
+H1L61 = J1L21 & (!J1L4);
+
+
+--G1L24 is lpm_mux:17|mux_kgc:auto_generated|w_result444w~409
+--operation mode is normal
+
+G1L24 = G1L93 # G1L04 # G1L14 & H1L61;
+
+
+--N51_dffs[5] is cache_cell:inst7|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[5]
+--operation mode is normal
+
+N51_dffs[5]_lut_out = dataIN[5];
+N51_dffs[5] = DFFEAS(N51_dffs[5]_lut_out, H1_w_anode78w[3], VCC, , , , , , );
+
+
+--N7_dffs[5] is cache_cell:inst3|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[5]
+--operation mode is normal
+
+N7_dffs[5]_lut_out = dataIN[5];
+N7_dffs[5] = DFFEAS(N7_dffs[5]_lut_out, H1_w_anode38w[3], VCC, , , , , , );
+
+
+--G1L13 is lpm_mux:17|mux_kgc:auto_generated|w_result375w~404
+--operation mode is normal
+
+G1L13 = J1L21 & N51_dffs[5] # !J1L21 & (N7_dffs[5]);
+
+
+--N11_dffs[5] is cache_cell:inst5|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[5]
+--operation mode is normal
+
+N11_dffs[5]_lut_out = dataIN[5];
+N11_dffs[5] = DFFEAS(N11_dffs[5]_lut_out, H1_w_anode58w[3], VCC, , , , , , );
+
+
+--N3_dffs[5] is cache_cell:inst1|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[5]
+--operation mode is normal
+
+N3_dffs[5]_lut_out = dataIN[5];
+N3_dffs[5] = DFFEAS(N3_dffs[5]_lut_out, H1_w_anode18w[3], VCC, , , , , , );
+
+
+--G1L23 is lpm_mux:17|mux_kgc:auto_generated|w_result375w~405
+--operation mode is normal
+
+G1L23 = J1L21 & N11_dffs[5] # !J1L21 & (N3_dffs[5]);
+
+
+--G1L33 is lpm_mux:17|mux_kgc:auto_generated|w_result375w~406
+--operation mode is normal
+
+G1L33 = J1L4 & (J1L8 & G1L13 # !J1L8 & (G1L23));
+
+
+--N5_dffs[5] is cache_cell:inst2|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[5]
+--operation mode is normal
+
+N5_dffs[5]_lut_out = dataIN[5];
+N5_dffs[5] = DFFEAS(N5_dffs[5]_lut_out, H1_w_anode28w[3], VCC, , , , , , );
+
+
+--N1_dffs[5] is cache_cell:inst|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[5]
+--operation mode is normal
+
+N1_dffs[5]_lut_out = dataIN[5];
+N1_dffs[5] = DFFEAS(N1_dffs[5]_lut_out, H1_w_anode1w[3], VCC, , , , , , );
+
+
+--G1L43 is lpm_mux:17|mux_kgc:auto_generated|w_result375w~407
+--operation mode is normal
+
+G1L43 = H1L7 & (J1L8 & N5_dffs[5] # !J1L8 & (N1_dffs[5]));
+
+
+--N31_dffs[5] is cache_cell:inst6|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[5]
+--operation mode is normal
+
+N31_dffs[5]_lut_out = dataIN[5];
+N31_dffs[5] = DFFEAS(N31_dffs[5]_lut_out, H1_w_anode68w[3], VCC, , , , , , );
+
+
+--N9_dffs[5] is cache_cell:inst4|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[5]
+--operation mode is normal
+
+N9_dffs[5]_lut_out = dataIN[5];
+N9_dffs[5] = DFFEAS(N9_dffs[5]_lut_out, H1_w_anode48w[3], VCC, , , , , , );
+
+
+--G1L53 is lpm_mux:17|mux_kgc:auto_generated|w_result375w~408
+--operation mode is normal
+
+G1L53 = J1L8 & N31_dffs[5] # !J1L8 & (N9_dffs[5]);
+
+
+--G1L63 is lpm_mux:17|mux_kgc:auto_generated|w_result375w~409
+--operation mode is normal
+
+G1L63 = G1L33 # G1L43 # H1L61 & G1L53;
+
+
+--N51_dffs[4] is cache_cell:inst7|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[4]
+--operation mode is normal
+
+N51_dffs[4]_lut_out = dataIN[4];
+N51_dffs[4] = DFFEAS(N51_dffs[4]_lut_out, H1_w_anode78w[3], VCC, , , , , , );
+
+
+--N7_dffs[4] is cache_cell:inst3|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[4]
+--operation mode is normal
+
+N7_dffs[4]_lut_out = dataIN[4];
+N7_dffs[4] = DFFEAS(N7_dffs[4]_lut_out, H1_w_anode38w[3], VCC, , , , , , );
+
+
+--G1L52 is lpm_mux:17|mux_kgc:auto_generated|w_result306w~404
+--operation mode is normal
+
+G1L52 = J1L21 & N51_dffs[4] # !J1L21 & (N7_dffs[4]);
+
+
+--N11_dffs[4] is cache_cell:inst5|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[4]
+--operation mode is normal
+
+N11_dffs[4]_lut_out = dataIN[4];
+N11_dffs[4] = DFFEAS(N11_dffs[4]_lut_out, H1_w_anode58w[3], VCC, , , , , , );
+
+
+--N3_dffs[4] is cache_cell:inst1|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[4]
+--operation mode is normal
+
+N3_dffs[4]_lut_out = dataIN[4];
+N3_dffs[4] = DFFEAS(N3_dffs[4]_lut_out, H1_w_anode18w[3], VCC, , , , , , );
+
+
+--G1L62 is lpm_mux:17|mux_kgc:auto_generated|w_result306w~405
+--operation mode is normal
+
+G1L62 = J1L21 & N11_dffs[4] # !J1L21 & (N3_dffs[4]);
+
+
+--G1L72 is lpm_mux:17|mux_kgc:auto_generated|w_result306w~406
+--operation mode is normal
+
+G1L72 = J1L4 & (J1L8 & G1L52 # !J1L8 & (G1L62));
+
+
+--N5_dffs[4] is cache_cell:inst2|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[4]
+--operation mode is normal
+
+N5_dffs[4]_lut_out = dataIN[4];
+N5_dffs[4] = DFFEAS(N5_dffs[4]_lut_out, H1_w_anode28w[3], VCC, , , , , , );
+
+
+--N1_dffs[4] is cache_cell:inst|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[4]
+--operation mode is normal
+
+N1_dffs[4]_lut_out = dataIN[4];
+N1_dffs[4] = DFFEAS(N1_dffs[4]_lut_out, H1_w_anode1w[3], VCC, , , , , , );
+
+
+--G1L82 is lpm_mux:17|mux_kgc:auto_generated|w_result306w~407
+--operation mode is normal
+
+G1L82 = H1L7 & (J1L8 & N5_dffs[4] # !J1L8 & (N1_dffs[4]));
+
+
+--N31_dffs[4] is cache_cell:inst6|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[4]
+--operation mode is normal
+
+N31_dffs[4]_lut_out = dataIN[4];
+N31_dffs[4] = DFFEAS(N31_dffs[4]_lut_out, H1_w_anode68w[3], VCC, , , , , , );
+
+
+--N9_dffs[4] is cache_cell:inst4|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[4]
+--operation mode is normal
+
+N9_dffs[4]_lut_out = dataIN[4];
+N9_dffs[4] = DFFEAS(N9_dffs[4]_lut_out, H1_w_anode48w[3], VCC, , , , , , );
+
+
+--G1L92 is lpm_mux:17|mux_kgc:auto_generated|w_result306w~408
+--operation mode is normal
+
+G1L92 = J1L8 & N31_dffs[4] # !J1L8 & (N9_dffs[4]);
+
+
+--G1L03 is lpm_mux:17|mux_kgc:auto_generated|w_result306w~409
+--operation mode is normal
+
+G1L03 = G1L72 # G1L82 # H1L61 & G1L92;
+
+
+--N51_dffs[3] is cache_cell:inst7|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[3]
+--operation mode is normal
+
+N51_dffs[3]_lut_out = dataIN[3];
+N51_dffs[3] = DFFEAS(N51_dffs[3]_lut_out, H1_w_anode78w[3], VCC, , , , , , );
+
+
+--N7_dffs[3] is cache_cell:inst3|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[3]
+--operation mode is normal
+
+N7_dffs[3]_lut_out = dataIN[3];
+N7_dffs[3] = DFFEAS(N7_dffs[3]_lut_out, H1_w_anode38w[3], VCC, , , , , , );
+
+
+--G1L91 is lpm_mux:17|mux_kgc:auto_generated|w_result237w~404
+--operation mode is normal
+
+G1L91 = J1L21 & N51_dffs[3] # !J1L21 & (N7_dffs[3]);
+
+
+--N11_dffs[3] is cache_cell:inst5|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[3]
+--operation mode is normal
+
+N11_dffs[3]_lut_out = dataIN[3];
+N11_dffs[3] = DFFEAS(N11_dffs[3]_lut_out, H1_w_anode58w[3], VCC, , , , , , );
+
+
+--N3_dffs[3] is cache_cell:inst1|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[3]
+--operation mode is normal
+
+N3_dffs[3]_lut_out = dataIN[3];
+N3_dffs[3] = DFFEAS(N3_dffs[3]_lut_out, H1_w_anode18w[3], VCC, , , , , , );
+
+
+--G1L02 is lpm_mux:17|mux_kgc:auto_generated|w_result237w~405
+--operation mode is normal
+
+G1L02 = J1L21 & N11_dffs[3] # !J1L21 & (N3_dffs[3]);
+
+
+--G1L12 is lpm_mux:17|mux_kgc:auto_generated|w_result237w~406
+--operation mode is normal
+
+G1L12 = J1L4 & (J1L8 & G1L91 # !J1L8 & (G1L02));
+
+
+--N5_dffs[3] is cache_cell:inst2|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[3]
+--operation mode is normal
+
+N5_dffs[3]_lut_out = dataIN[3];
+N5_dffs[3] = DFFEAS(N5_dffs[3]_lut_out, H1_w_anode28w[3], VCC, , , , , , );
+
+
+--N1_dffs[3] is cache_cell:inst|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[3]
+--operation mode is normal
+
+N1_dffs[3]_lut_out = dataIN[3];
+N1_dffs[3] = DFFEAS(N1_dffs[3]_lut_out, H1_w_anode1w[3], VCC, , , , , , );
+
+
+--G1L22 is lpm_mux:17|mux_kgc:auto_generated|w_result237w~407
+--operation mode is normal
+
+G1L22 = H1L7 & (J1L8 & N5_dffs[3] # !J1L8 & (N1_dffs[3]));
+
+
+--N31_dffs[3] is cache_cell:inst6|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[3]
+--operation mode is normal
+
+N31_dffs[3]_lut_out = dataIN[3];
+N31_dffs[3] = DFFEAS(N31_dffs[3]_lut_out, H1_w_anode68w[3], VCC, , , , , , );
+
+
+--N9_dffs[3] is cache_cell:inst4|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[3]
+--operation mode is normal
+
+N9_dffs[3]_lut_out = dataIN[3];
+N9_dffs[3] = DFFEAS(N9_dffs[3]_lut_out, H1_w_anode48w[3], VCC, , , , , , );
+
+
+--G1L32 is lpm_mux:17|mux_kgc:auto_generated|w_result237w~408
+--operation mode is normal
+
+G1L32 = J1L8 & N31_dffs[3] # !J1L8 & (N9_dffs[3]);
+
+
+--G1L42 is lpm_mux:17|mux_kgc:auto_generated|w_result237w~409
+--operation mode is normal
+
+G1L42 = G1L12 # G1L22 # H1L61 & G1L32;
+
+
+--N51_dffs[2] is cache_cell:inst7|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N51_dffs[2]_lut_out = dataIN[2];
+N51_dffs[2] = DFFEAS(N51_dffs[2]_lut_out, H1_w_anode78w[3], VCC, , , , , , );
+
+
+--N7_dffs[2] is cache_cell:inst3|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N7_dffs[2]_lut_out = dataIN[2];
+N7_dffs[2] = DFFEAS(N7_dffs[2]_lut_out, H1_w_anode38w[3], VCC, , , , , , );
+
+
+--G1L31 is lpm_mux:17|mux_kgc:auto_generated|w_result168w~404
+--operation mode is normal
+
+G1L31 = J1L21 & N51_dffs[2] # !J1L21 & (N7_dffs[2]);
+
+
+--N11_dffs[2] is cache_cell:inst5|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N11_dffs[2]_lut_out = dataIN[2];
+N11_dffs[2] = DFFEAS(N11_dffs[2]_lut_out, H1_w_anode58w[3], VCC, , , , , , );
+
+
+--N3_dffs[2] is cache_cell:inst1|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N3_dffs[2]_lut_out = dataIN[2];
+N3_dffs[2] = DFFEAS(N3_dffs[2]_lut_out, H1_w_anode18w[3], VCC, , , , , , );
+
+
+--G1L41 is lpm_mux:17|mux_kgc:auto_generated|w_result168w~405
+--operation mode is normal
+
+G1L41 = J1L21 & N11_dffs[2] # !J1L21 & (N3_dffs[2]);
+
+
+--G1L51 is lpm_mux:17|mux_kgc:auto_generated|w_result168w~406
+--operation mode is normal
+
+G1L51 = J1L4 & (J1L8 & G1L31 # !J1L8 & (G1L41));
+
+
+--N5_dffs[2] is cache_cell:inst2|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N5_dffs[2]_lut_out = dataIN[2];
+N5_dffs[2] = DFFEAS(N5_dffs[2]_lut_out, H1_w_anode28w[3], VCC, , , , , , );
+
+
+--N1_dffs[2] is cache_cell:inst|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N1_dffs[2]_lut_out = dataIN[2];
+N1_dffs[2] = DFFEAS(N1_dffs[2]_lut_out, H1_w_anode1w[3], VCC, , , , , , );
+
+
+--G1L61 is lpm_mux:17|mux_kgc:auto_generated|w_result168w~407
+--operation mode is normal
+
+G1L61 = H1L7 & (J1L8 & N5_dffs[2] # !J1L8 & (N1_dffs[2]));
+
+
+--N31_dffs[2] is cache_cell:inst6|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N31_dffs[2]_lut_out = dataIN[2];
+N31_dffs[2] = DFFEAS(N31_dffs[2]_lut_out, H1_w_anode68w[3], VCC, , , , , , );
+
+
+--N9_dffs[2] is cache_cell:inst4|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+N9_dffs[2]_lut_out = dataIN[2];
+N9_dffs[2] = DFFEAS(N9_dffs[2]_lut_out, H1_w_anode48w[3], VCC, , , , , , );
+
+
+--G1L71 is lpm_mux:17|mux_kgc:auto_generated|w_result168w~408
+--operation mode is normal
+
+G1L71 = J1L8 & N31_dffs[2] # !J1L8 & (N9_dffs[2]);
+
+
+--G1L81 is lpm_mux:17|mux_kgc:auto_generated|w_result168w~409
+--operation mode is normal
+
+G1L81 = G1L51 # G1L61 # H1L61 & G1L71;
+
+
+--N51_dffs[1] is cache_cell:inst7|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N51_dffs[1]_lut_out = dataIN[1];
+N51_dffs[1] = DFFEAS(N51_dffs[1]_lut_out, H1_w_anode78w[3], VCC, , , , , , );
+
+
+--N7_dffs[1] is cache_cell:inst3|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N7_dffs[1]_lut_out = dataIN[1];
+N7_dffs[1] = DFFEAS(N7_dffs[1]_lut_out, H1_w_anode38w[3], VCC, , , , , , );
+
+
+--G1L7 is lpm_mux:17|mux_kgc:auto_generated|w_result99w~404
+--operation mode is normal
+
+G1L7 = J1L21 & N51_dffs[1] # !J1L21 & (N7_dffs[1]);
+
+
+--N11_dffs[1] is cache_cell:inst5|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N11_dffs[1]_lut_out = dataIN[1];
+N11_dffs[1] = DFFEAS(N11_dffs[1]_lut_out, H1_w_anode58w[3], VCC, , , , , , );
+
+
+--N3_dffs[1] is cache_cell:inst1|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N3_dffs[1]_lut_out = dataIN[1];
+N3_dffs[1] = DFFEAS(N3_dffs[1]_lut_out, H1_w_anode18w[3], VCC, , , , , , );
+
+
+--G1L8 is lpm_mux:17|mux_kgc:auto_generated|w_result99w~405
+--operation mode is normal
+
+G1L8 = J1L21 & N11_dffs[1] # !J1L21 & (N3_dffs[1]);
+
+
+--G1L9 is lpm_mux:17|mux_kgc:auto_generated|w_result99w~406
+--operation mode is normal
+
+G1L9 = J1L4 & (J1L8 & G1L7 # !J1L8 & (G1L8));
+
+
+--N5_dffs[1] is cache_cell:inst2|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N5_dffs[1]_lut_out = dataIN[1];
+N5_dffs[1] = DFFEAS(N5_dffs[1]_lut_out, H1_w_anode28w[3], VCC, , , , , , );
+
+
+--N1_dffs[1] is cache_cell:inst|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N1_dffs[1]_lut_out = dataIN[1];
+N1_dffs[1] = DFFEAS(N1_dffs[1]_lut_out, H1_w_anode1w[3], VCC, , , , , , );
+
+
+--G1L01 is lpm_mux:17|mux_kgc:auto_generated|w_result99w~407
+--operation mode is normal
+
+G1L01 = H1L7 & (J1L8 & N5_dffs[1] # !J1L8 & (N1_dffs[1]));
+
+
+--N31_dffs[1] is cache_cell:inst6|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N31_dffs[1]_lut_out = dataIN[1];
+N31_dffs[1] = DFFEAS(N31_dffs[1]_lut_out, H1_w_anode68w[3], VCC, , , , , , );
+
+
+--N9_dffs[1] is cache_cell:inst4|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+N9_dffs[1]_lut_out = dataIN[1];
+N9_dffs[1] = DFFEAS(N9_dffs[1]_lut_out, H1_w_anode48w[3], VCC, , , , , , );
+
+
+--G1L11 is lpm_mux:17|mux_kgc:auto_generated|w_result99w~408
+--operation mode is normal
+
+G1L11 = J1L8 & N31_dffs[1] # !J1L8 & (N9_dffs[1]);
+
+
+--G1L21 is lpm_mux:17|mux_kgc:auto_generated|w_result99w~409
+--operation mode is normal
+
+G1L21 = G1L9 # G1L01 # H1L61 & G1L11;
+
+
+--N51_dffs[0] is cache_cell:inst7|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N51_dffs[0]_lut_out = dataIN[0];
+N51_dffs[0] = DFFEAS(N51_dffs[0]_lut_out, H1_w_anode78w[3], VCC, , , , , , );
+
+
+--N7_dffs[0] is cache_cell:inst3|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N7_dffs[0]_lut_out = dataIN[0];
+N7_dffs[0] = DFFEAS(N7_dffs[0]_lut_out, H1_w_anode38w[3], VCC, , , , , , );
+
+
+--G1L1 is lpm_mux:17|mux_kgc:auto_generated|w_result28w~406
+--operation mode is normal
+
+G1L1 = J1L21 & N51_dffs[0] # !J1L21 & (N7_dffs[0]);
+
+
+--N11_dffs[0] is cache_cell:inst5|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N11_dffs[0]_lut_out = dataIN[0];
+N11_dffs[0] = DFFEAS(N11_dffs[0]_lut_out, H1_w_anode58w[3], VCC, , , , , , );
+
+
+--N3_dffs[0] is cache_cell:inst1|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N3_dffs[0]_lut_out = dataIN[0];
+N3_dffs[0] = DFFEAS(N3_dffs[0]_lut_out, H1_w_anode18w[3], VCC, , , , , , );
+
+
+--G1L2 is lpm_mux:17|mux_kgc:auto_generated|w_result28w~407
+--operation mode is normal
+
+G1L2 = J1L21 & N11_dffs[0] # !J1L21 & (N3_dffs[0]);
+
+
+--G1L3 is lpm_mux:17|mux_kgc:auto_generated|w_result28w~408
+--operation mode is normal
+
+G1L3 = J1L4 & (J1L8 & G1L1 # !J1L8 & (G1L2));
+
+
+--N5_dffs[0] is cache_cell:inst2|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N5_dffs[0]_lut_out = dataIN[0];
+N5_dffs[0] = DFFEAS(N5_dffs[0]_lut_out, H1_w_anode28w[3], VCC, , , , , , );
+
+
+--N1_dffs[0] is cache_cell:inst|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N1_dffs[0]_lut_out = dataIN[0];
+N1_dffs[0] = DFFEAS(N1_dffs[0]_lut_out, H1_w_anode1w[3], VCC, , , , , , );
+
+
+--G1L4 is lpm_mux:17|mux_kgc:auto_generated|w_result28w~409
+--operation mode is normal
+
+G1L4 = H1L7 & (J1L8 & N5_dffs[0] # !J1L8 & (N1_dffs[0]));
+
+
+--N31_dffs[0] is cache_cell:inst6|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N31_dffs[0]_lut_out = dataIN[0];
+N31_dffs[0] = DFFEAS(N31_dffs[0]_lut_out, H1_w_anode68w[3], VCC, , , , , , );
+
+
+--N9_dffs[0] is cache_cell:inst4|lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+N9_dffs[0]_lut_out = dataIN[0];
+N9_dffs[0] = DFFEAS(N9_dffs[0]_lut_out, H1_w_anode48w[3], VCC, , , , , , );
+
+
+--G1L5 is lpm_mux:17|mux_kgc:auto_generated|w_result28w~410
+--operation mode is normal
+
+G1L5 = J1L8 & N31_dffs[0] # !J1L8 & (N9_dffs[0]);
+
+
+--G1L6 is lpm_mux:17|mux_kgc:auto_generated|w_result28w~411
+--operation mode is normal
+
+G1L6 = G1L3 # G1L4 # H1L61 & G1L5;
+
+
+--H1_w_anode18w[3] is lpm_decode:30|decode_4mb:auto_generated|w_anode18w[3]
+--operation mode is normal
+
+H1_w_anode18w[3] = J1L4 & wr & !J1L8 & !J1L21;
+
+
+--H1_w_anode68w[3] is lpm_decode:30|decode_4mb:auto_generated|w_anode68w[3]
+--operation mode is normal
+
+H1_w_anode68w[3] = J1L8 & J1L21 & wr & !J1L4;
+
+
+--H1_w_anode28w[3] is lpm_decode:30|decode_4mb:auto_generated|w_anode28w[3]
+--operation mode is normal
+
+H1_w_anode28w[3] = J1L8 & wr & !J1L4 & !J1L21;
+
+
+--H1_w_anode48w[3] is lpm_decode:30|decode_4mb:auto_generated|w_anode48w[3]
+--operation mode is normal
+
+H1_w_anode48w[3] = J1L21 & wr & !J1L8 & !J1L4;
+
+
+--H1_w_anode58w[3] is lpm_decode:30|decode_4mb:auto_generated|w_anode58w[3]
+--operation mode is normal
+
+H1_w_anode58w[3] = J1L4 & J1L21 & wr & !J1L8;
+
+
+--H1_w_anode78w[3] is lpm_decode:30|decode_4mb:auto_generated|w_anode78w[3]
+--operation mode is normal
+
+H1_w_anode78w[3] = J1L8 & J1L4 & J1L21 & wr;
+
+
+--H1_w_anode1w[3] is lpm_decode:30|decode_4mb:auto_generated|w_anode1w[3]
+--operation mode is normal
+
+H1_w_anode1w[3] = wr & !J1L8 & !J1L4 & !J1L21;
+
+
+--H1_w_anode38w[3] is lpm_decode:30|decode_4mb:auto_generated|w_anode38w[3]
+--operation mode is normal
+
+H1_w_anode38w[3] = J1L8 & J1L4 & wr & !J1L21;
+
+
+--addr[2] is addr[2]
+--operation mode is input
+
+addr[2] = INPUT();
+
+
+--addr[1] is addr[1]
+--operation mode is input
+
+addr[1] = INPUT();
+
+
+--addr[0] is addr[0]
+--operation mode is input
+
+addr[0] = INPUT();
+
+
+--wr is wr
+--operation mode is input
+
+wr = INPUT();
+
+
+--dataIN[7] is dataIN[7]
+--operation mode is input
+
+dataIN[7] = INPUT();
+
+
+--dataIN[6] is dataIN[6]
+--operation mode is input
+
+dataIN[6] = INPUT();
+
+
+--dataIN[5] is dataIN[5]
+--operation mode is input
+
+dataIN[5] = INPUT();
+
+
+--dataIN[4] is dataIN[4]
+--operation mode is input
+
+dataIN[4] = INPUT();
+
+
+--dataIN[3] is dataIN[3]
+--operation mode is input
+
+dataIN[3] = INPUT();
+
+
+--dataIN[2] is dataIN[2]
+--operation mode is input
+
+dataIN[2] = INPUT();
+
+
+--dataIN[1] is dataIN[1]
+--operation mode is input
+
+dataIN[1] = INPUT();
+
+
+--dataIN[0] is dataIN[0]
+--operation mode is input
+
+dataIN[0] = INPUT();
+
+
+--hit is hit
+--operation mode is output
+
+hit = OUTPUT(124);
+
+
+--Odata[7] is Odata[7]
+--operation mode is output
+
+Odata[7] = OUTPUT(G1L84);
+
+
+--Odata[6] is Odata[6]
+--operation mode is output
+
+Odata[6] = OUTPUT(G1L24);
+
+
+--Odata[5] is Odata[5]
+--operation mode is output
+
+Odata[5] = OUTPUT(G1L63);
+
+
+--Odata[4] is Odata[4]
+--operation mode is output
+
+Odata[4] = OUTPUT(G1L03);
+
+
+--Odata[3] is Odata[3]
+--operation mode is output
+
+Odata[3] = OUTPUT(G1L42);
+
+
+--Odata[2] is Odata[2]
+--operation mode is output
+
+Odata[2] = OUTPUT(G1L81);
+
+
+--Odata[1] is Odata[1]
+--operation mode is output
+
+Odata[1] = OUTPUT(G1L21);
+
+
+--Odata[0] is Odata[0]
+--operation mode is output
+
+Odata[0] = OUTPUT(G1L6);
+
+
+--Otag[2] is Otag[2]
+--operation mode is output
+
+Otag[2] = OUTPUT(J1L21);
+
+
+--Otag[1] is Otag[1]
+--operation mode is output
+
+Otag[1] = OUTPUT(J1L8);
+
+
+--Otag[0] is Otag[0]
+--operation mode is output
+
+Otag[0] = OUTPUT(J1L4);
+
+

@@ -1,0 +1,217 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1L5 is cip8_3l:c|g~76
+--operation mode is normal
+
+B1L5 = r[2] # r[3] # r[0] # r[1];
+
+
+--B1L6 is cip8_3l:c|process0~5
+--operation mode is normal
+
+B1L6 = r[7] # r[6] # r[4] # r[5];
+
+
+--B1L3 is cip8_3l:c|a[1]~290
+--operation mode is normal
+
+B1L3 = !r[4] & !r[5] & (r[2] # r[3]);
+
+
+--B1L4 is cip8_3l:c|a[1]~291
+--operation mode is normal
+
+B1L4 = r[7] # r[6] # B1L3;
+
+
+--B1L1 is cip8_3l:c|a[0]~292
+--operation mode is normal
+
+B1L1 = !r[4] & (r[3] # r[1] & !r[2]);
+
+
+--B1L2 is cip8_3l:c|a[0]~293
+--operation mode is normal
+
+B1L2 = r[7] # !r[6] & (r[5] # B1L1);
+
+
+--A1L31 is q~184
+--operation mode is normal
+
+A1L31 = A1L91 & (!B1L4 & !B1L2 # !ei);
+
+
+--A1L41 is q~185
+--operation mode is normal
+
+A1L41 = ei & A1L91 & B1L2 & !B1L4;
+
+
+--A1L51 is q~186
+--operation mode is normal
+
+A1L51 = ei & r[5] & !r[7] & !r[6];
+
+
+--A1L61 is q~187
+--operation mode is normal
+
+A1L61 = ei & r[6] & (!r[7]);
+
+
+--A1L71 is q~188
+--operation mode is normal
+
+A1L71 = ei & r[7];
+
+
+--A1L81 is q~189
+--operation mode is normal
+
+A1L81 = !B1L4 & !B1L2 & ei & B1L6;
+
+
+--A1L91 is q~190
+--operation mode is normal
+
+A1L91 = ei & B1L5 & (!B1L6);
+
+
+--A1L02 is q~191
+--operation mode is normal
+
+A1L02 = A1L11 & !r[3] & r[2] & ei;
+
+
+--A1L11 is q~160
+--operation mode is normal
+
+A1L11 = !r[5] & !r[4] & !r[6] & !r[7];
+
+
+--A1L12 is q~192
+--operation mode is normal
+
+A1L12 = A1L21 & !r[7] & r[3] & ei;
+
+
+--A1L21 is q~175
+--operation mode is normal
+
+A1L21 = !r[5] & !r[4] & !r[6];
+
+
+--ei is ei
+--operation mode is input
+
+ei = INPUT();
+
+
+--r[2] is r[2]
+--operation mode is input
+
+r[2] = INPUT();
+
+
+--r[3] is r[3]
+--operation mode is input
+
+r[3] = INPUT();
+
+
+--r[0] is r[0]
+--operation mode is input
+
+r[0] = INPUT();
+
+
+--r[1] is r[1]
+--operation mode is input
+
+r[1] = INPUT();
+
+
+--r[7] is r[7]
+--operation mode is input
+
+r[7] = INPUT();
+
+
+--r[6] is r[6]
+--operation mode is input
+
+r[6] = INPUT();
+
+
+--r[4] is r[4]
+--operation mode is input
+
+r[4] = INPUT();
+
+
+--r[5] is r[5]
+--operation mode is input
+
+r[5] = INPUT();
+
+
+--q[0] is q[0]
+--operation mode is output
+
+q[0] = OUTPUT(A1L31);
+
+
+--q[1] is q[1]
+--operation mode is output
+
+q[1] = OUTPUT(A1L41);
+
+
+--q[2] is q[2]
+--operation mode is output
+
+q[2] = OUTPUT(A1L02);
+
+
+--q[3] is q[3]
+--operation mode is output
+
+q[3] = OUTPUT(A1L12);
+
+
+--q[4] is q[4]
+--operation mode is output
+
+q[4] = OUTPUT(A1L81);
+
+
+--q[5] is q[5]
+--operation mode is output
+
+q[5] = OUTPUT(A1L51);
+
+
+--q[6] is q[6]
+--operation mode is output
+
+q[6] = OUTPUT(A1L61);
+
+
+--q[7] is q[7]
+--operation mode is output
+
+q[7] = OUTPUT(A1L71);
+
+

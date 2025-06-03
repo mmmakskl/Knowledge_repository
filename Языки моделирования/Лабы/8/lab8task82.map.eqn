@@ -1,0 +1,49 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1L1 is lab8task1:1|9~86
+--operation mode is normal
+
+B1L1 = e & (Y2 & (!Y1 # !Y3) # !Y2 & Y3);
+
+
+--e is e
+--operation mode is input
+
+e = INPUT();
+
+
+--Y2 is Y2
+--operation mode is input
+
+Y2 = INPUT();
+
+
+--Y3 is Y3
+--operation mode is input
+
+Y3 = INPUT();
+
+
+--Y1 is Y1
+--operation mode is input
+
+Y1 = INPUT();
+
+
+--Q is Q
+--operation mode is output
+
+Q = OUTPUT(B1L1);
+
+

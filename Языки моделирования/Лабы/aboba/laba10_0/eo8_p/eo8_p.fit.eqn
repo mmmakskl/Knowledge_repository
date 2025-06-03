@@ -1,0 +1,98 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L3 is even_v~61 at LC_X9_Y1_N4
+--operation mode is normal
+
+A1L3 = x[2] $ x[6] $ x[1] $ x[0];
+
+
+--A1L4 is even_v~62 at LC_X9_Y1_N2
+--operation mode is normal
+
+A1L4 = x[4] $ x[3] $ d $ x[5];
+
+
+--A1L5 is even_v~63 at LC_X9_Y1_N5
+--operation mode is normal
+
+A1L5 = A1L3 $ x[7] $ (A1L4);
+
+
+--x[0] is x[0] at PIN_AA16
+--operation mode is input
+
+x[0] = INPUT();
+
+
+--x[2] is x[2] at PIN_W16
+--operation mode is input
+
+x[2] = INPUT();
+
+
+--x[6] is x[6] at PIN_U17
+--operation mode is input
+
+x[6] = INPUT();
+
+
+--x[1] is x[1] at PIN_V17
+--operation mode is input
+
+x[1] = INPUT();
+
+
+--x[3] is x[3] at PIN_N13
+--operation mode is input
+
+x[3] = INPUT();
+
+
+--d is d at PIN_N16
+--operation mode is input
+
+d = INPUT();
+
+
+--x[5] is x[5] at PIN_AB16
+--operation mode is input
+
+x[5] = INPUT();
+
+
+--x[4] is x[4] at PIN_Y15
+--operation mode is input
+
+x[4] = INPUT();
+
+
+--x[7] is x[7] at PIN_V16
+--operation mode is input
+
+x[7] = INPUT();
+
+
+--even is even at PIN_AA15
+--operation mode is output
+
+even = OUTPUT(!A1L5);
+
+
+--odd is odd at PIN_V15
+--operation mode is output
+
+odd = OUTPUT(A1L5);
+
+
+

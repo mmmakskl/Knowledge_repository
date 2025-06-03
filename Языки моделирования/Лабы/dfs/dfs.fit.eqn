@@ -1,0 +1,644 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--done_reg is done_reg at LC_X32_Y20_N0
+--operation mode is normal
+
+done_reg_lut_out = done_reg & (state.idle # !start) # !done_reg & state.finish & state.idle;
+done_reg = DFFEAS(done_reg_lut_out, GLOBAL(clk), !GLOBAL(rst), , , , , , );
+
+
+--visited[0] is visited[0] at LC_X33_Y20_N1
+--operation mode is normal
+
+visited[0]_lut_out = GND;
+visited[0] = DFFEAS(visited[0]_lut_out, GLOBAL(clk), !GLOBAL(rst), , A1L94, state.idle, , , VCC);
+
+
+--visited[3] is visited[3] at LC_X34_Y20_N9
+--operation mode is normal
+
+visited[3]_lut_out = state.idle;
+visited[3] = DFFEAS(visited[3]_lut_out, GLOBAL(clk), !GLOBAL(rst), , A1L24, , , , );
+
+
+--state.finish is state.finish at LC_X32_Y20_N9
+--operation mode is normal
+
+state.finish_lut_out = A1L09 & state.pop & !sp[2] # !A1L09 & (sp[2] & A1L97);
+state.finish = DFFEAS(state.finish_lut_out, GLOBAL(clk), !GLOBAL(rst), , , , , , );
+
+
+--A1L43 is Select~1402 at LC_X34_Y20_N6
+--operation mode is normal
+
+A1L43 = start & !state.idle;
+
+
+--state.push is state.push at LC_X33_Y21_N3
+--operation mode is normal
+
+state.push_lut_out = A1L43 # A1L97 & (A1L09 # !sp[2]);
+state.push = DFFEAS(state.push_lut_out, GLOBAL(clk), !GLOBAL(rst), , , , , , );
+
+
+--sp[0] is sp[0] at LC_X32_Y20_N1
+--operation mode is normal
+
+sp[0]_lut_out = A1L95 & (sp[0]) # !A1L95 & (state.pop & (!sp[0]) # !state.pop & A1L25);
+sp[0] = DFFEAS(sp[0]_lut_out, GLOBAL(clk), !GLOBAL(rst), , , , , , );
+
+
+--sp[1] is sp[1] at LC_X32_Y20_N7
+--operation mode is normal
+
+sp[1]_lut_out = A1L95 & (sp[1]) # !A1L95 & (A1L45 # A1L65);
+sp[1] = DFFEAS(sp[1]_lut_out, GLOBAL(clk), !GLOBAL(rst), , , , , , );
+
+
+--sp[2] is sp[2] at LC_X33_Y21_N7
+--operation mode is normal
+
+sp[2]_lut_out = A1L95 & (sp[2]) # !A1L95 & (A1L16 # A1L06);
+sp[2] = DFFEAS(sp[2]_lut_out, GLOBAL(clk), !GLOBAL(rst), , , , , , );
+
+
+--A1L11 is Mux~468 at LC_X33_Y23_N3
+--operation mode is normal
+
+A1L11 = sp[0] & (sp[1] # !sp[2]);
+
+
+--A1L21 is Mux~469 at LC_X33_Y23_N1
+--operation mode is normal
+
+A1L21 = sp[0] & (!sp[1]);
+
+
+--stack[3][2] is stack[3][2] at LC_X32_Y23_N6
+--operation mode is normal
+
+stack[3][2]_lut_out = GND;
+stack[3][2] = DFFEAS(stack[3][2]_lut_out, GLOBAL(clk), VCC, , A1L48, neighbor[2], , , VCC);
+
+
+--A1L31 is Mux~470 at LC_X32_Y23_N8
+--operation mode is normal
+
+stack[4][2]_qfbk = stack[4][2];
+A1L31 = A1L21 & (stack[4][2]_qfbk # A1L11) # !A1L21 & stack[3][2] & (!A1L11);
+
+--stack[4][2] is stack[4][2] at LC_X32_Y23_N8
+--operation mode is normal
+
+stack[4][2] = DFFEAS(A1L31, GLOBAL(clk), VCC, , A1L98, neighbor[2], , , VCC);
+
+
+--stack[0][2] is stack[0][2] at LC_X33_Y21_N2
+--operation mode is normal
+
+stack[0][2]_lut_out = state.check_neighbors & (neighbor[2]) # !state.check_neighbors & start_node[2];
+stack[0][2] = DFFEAS(stack[0][2]_lut_out, GLOBAL(clk), VCC, , A1L86, , , , );
+
+
+--A1L41 is Mux~471 at LC_X33_Y23_N0
+--operation mode is normal
+
+stack[2][2]_qfbk = stack[2][2];
+A1L41 = A1L11 & (A1L31 & stack[0][2] # !A1L31 & (stack[2][2]_qfbk)) # !A1L11 & (A1L31);
+
+--stack[2][2] is stack[2][2] at LC_X33_Y23_N0
+--operation mode is normal
+
+stack[2][2] = DFFEAS(A1L41, GLOBAL(clk), VCC, , A1L87, neighbor[2], , , VCC);
+
+
+--A1L53 is Select~1403 at LC_X33_Y23_N4
+--operation mode is normal
+
+stack[1][2]_qfbk = stack[1][2];
+A1L53 = sp[1] & (sp[0] & A1L41 # !sp[0] & (stack[1][2]_qfbk)) # !sp[1] & A1L41;
+
+--stack[1][2] is stack[1][2] at LC_X33_Y23_N4
+--operation mode is normal
+
+stack[1][2] = DFFEAS(A1L53, GLOBAL(clk), VCC, , A1L37, neighbor[2], , , VCC);
+
+
+--A1L63 is Select~1404 at LC_X33_Y22_N0
+--operation mode is normal
+
+state.idle_qfbk = state.idle;
+A1L63 = !A1L53 & (state.idle_qfbk & state.push);
+
+--state.idle is state.idle at LC_X33_Y22_N0
+--operation mode is normal
+
+state.idle = DFFEAS(A1L63, GLOBAL(clk), !GLOBAL(rst), , , A1L54, , , VCC);
+
+
+--stack[3][0] is stack[3][0] at LC_X32_Y23_N0
+--operation mode is normal
+
+stack[3][0]_lut_out = neighbor[0];
+stack[3][0] = DFFEAS(stack[3][0]_lut_out, GLOBAL(clk), VCC, , A1L48, , , , );
+
+
+--A1L51 is Mux~472 at LC_X32_Y23_N9
+--operation mode is normal
+
+stack[4][0]_qfbk = stack[4][0];
+A1L51 = A1L21 & (stack[4][0]_qfbk # A1L11) # !A1L21 & stack[3][0] & (!A1L11);
+
+--stack[4][0] is stack[4][0] at LC_X32_Y23_N9
+--operation mode is normal
+
+stack[4][0] = DFFEAS(A1L51, GLOBAL(clk), VCC, , A1L98, neighbor[0], , , VCC);
+
+
+--stack[0][0] is stack[0][0] at LC_X33_Y21_N4
+--operation mode is normal
+
+stack[0][0]_lut_out = state.check_neighbors & (neighbor[0]) # !state.check_neighbors & start_node[0];
+stack[0][0] = DFFEAS(stack[0][0]_lut_out, GLOBAL(clk), VCC, , A1L86, , , , );
+
+
+--A1L61 is Mux~473 at LC_X33_Y23_N5
+--operation mode is normal
+
+stack[2][0]_qfbk = stack[2][0];
+A1L61 = A1L11 & (A1L51 & (stack[0][0]) # !A1L51 & stack[2][0]_qfbk) # !A1L11 & A1L51;
+
+--stack[2][0] is stack[2][0] at LC_X33_Y23_N5
+--operation mode is normal
+
+stack[2][0] = DFFEAS(A1L61, GLOBAL(clk), VCC, , A1L87, neighbor[0], , , VCC);
+
+
+--A1L73 is Select~1405 at LC_X33_Y20_N0
+--operation mode is normal
+
+stack[1][0]_qfbk = stack[1][0];
+A1L73 = sp[0] & A1L61 # !sp[0] & (sp[1] & (stack[1][0]_qfbk) # !sp[1] & A1L61);
+
+--stack[1][0] is stack[1][0] at LC_X33_Y20_N0
+--operation mode is normal
+
+stack[1][0] = DFFEAS(A1L73, GLOBAL(clk), VCC, , A1L37, neighbor[0], , , VCC);
+
+
+--stack[3][1] is stack[3][1] at LC_X32_Y23_N1
+--operation mode is normal
+
+stack[3][1]_lut_out = GND;
+stack[3][1] = DFFEAS(stack[3][1]_lut_out, GLOBAL(clk), VCC, , A1L48, neighbor[1], , , VCC);
+
+
+--A1L71 is Mux~474 at LC_X33_Y23_N2
+--operation mode is normal
+
+stack[2][1]_qfbk = stack[2][1];
+A1L71 = A1L11 & (A1L21 # stack[2][1]_qfbk) # !A1L11 & !A1L21 & (stack[3][1]);
+
+--stack[2][1] is stack[2][1] at LC_X33_Y23_N2
+--operation mode is normal
+
+stack[2][1] = DFFEAS(A1L71, GLOBAL(clk), VCC, , A1L87, neighbor[1], , , VCC);
+
+
+--stack[0][1] is stack[0][1] at LC_X33_Y21_N5
+--operation mode is normal
+
+stack[0][1]_lut_out = state.check_neighbors & (neighbor[1]) # !state.check_neighbors & start_node[1];
+stack[0][1] = DFFEAS(stack[0][1]_lut_out, GLOBAL(clk), VCC, , A1L86, , , , );
+
+
+--A1L81 is Mux~475 at LC_X32_Y23_N4
+--operation mode is normal
+
+stack[4][1]_qfbk = stack[4][1];
+A1L81 = A1L21 & (A1L71 & (stack[0][1]) # !A1L71 & stack[4][1]_qfbk) # !A1L21 & A1L71;
+
+--stack[4][1] is stack[4][1] at LC_X32_Y23_N4
+--operation mode is normal
+
+stack[4][1] = DFFEAS(A1L81, GLOBAL(clk), VCC, , A1L98, neighbor[1], , , VCC);
+
+
+--A1L83 is Select~1406 at LC_X33_Y20_N4
+--operation mode is normal
+
+stack[1][1]_qfbk = stack[1][1];
+A1L83 = sp[0] & A1L81 # !sp[0] & (sp[1] & (stack[1][1]_qfbk) # !sp[1] & A1L81);
+
+--stack[1][1] is stack[1][1] at LC_X33_Y20_N4
+--operation mode is normal
+
+stack[1][1] = DFFEAS(A1L83, GLOBAL(clk), VCC, , A1L37, neighbor[1], , , VCC);
+
+
+--A1L93 is Select~1407 at LC_X33_Y20_N3
+--operation mode is normal
+
+A1L93 = !A1L73 & (!A1L83);
+
+
+--A1L04 is Select~1408 at LC_X34_Y20_N0
+--operation mode is normal
+
+A1L04 = A1L43 # A1L73 & !A1L83 & A1L63;
+
+
+--A1L14 is Select~1409 at LC_X33_Y22_N2
+--operation mode is normal
+
+A1L14 = A1L43 # !A1L73 & A1L83 & A1L63;
+
+
+--A1L24 is Select~1410 at LC_X34_Y20_N7
+--operation mode is normal
+
+A1L24 = A1L43 # A1L73 & A1L83 & A1L63;
+
+
+--A1L34 is Select~1411 at LC_X33_Y21_N9
+--operation mode is normal
+
+A1L34 = state.idle & state.push;
+
+
+--A1L44 is Select~1412 at LC_X33_Y20_N9
+--operation mode is normal
+
+A1L44 = A1L43 # A1L53 & A1L93 & A1L34;
+
+
+--A1L54 is Select~1413 at LC_X32_Y20_N6
+--operation mode is normal
+
+A1L54 = !state.finish & (state.idle # start);
+
+
+--state.check_neighbors is state.check_neighbors at LC_X33_Y21_N0
+--operation mode is normal
+
+state.check_neighbors_lut_out = state.push # A1L13 & A1L64 # !A1L85;
+state.check_neighbors = DFFEAS(state.check_neighbors_lut_out, GLOBAL(clk), !GLOBAL(rst), , , , , , );
+
+
+--neighbor[1] is neighbor[1] at LC_X33_Y22_N8
+--operation mode is normal
+
+neighbor[1]_lut_out = A1L92 & (neighbor[1]) # !A1L92 & state.check_neighbors & (A1L1 $ neighbor[1]);
+neighbor[1] = DFFEAS(neighbor[1]_lut_out, GLOBAL(clk), !GLOBAL(rst), , , , , , );
+
+
+--neighbor[0] is neighbor[0] at LC_X33_Y22_N9
+--operation mode is normal
+
+neighbor[0]_lut_out = A1L92 & (neighbor[0]) # !A1L92 & state.check_neighbors & (A1L13 $ neighbor[0]);
+neighbor[0] = DFFEAS(neighbor[0]_lut_out, GLOBAL(clk), !GLOBAL(rst), , , , , , );
+
+
+--neighbor[2] is neighbor[2] at LC_X33_Y22_N6
+--operation mode is normal
+
+neighbor[2]_lut_out = A1L92 & (neighbor[2]) # !A1L92 & state.check_neighbors & (A1L03 $ neighbor[2]);
+neighbor[2] = DFFEAS(neighbor[2]_lut_out, GLOBAL(clk), !GLOBAL(rst), , , , , , );
+
+
+--A1L64 is Select~1414 at LC_X33_Y23_N9
+--operation mode is normal
+
+A1L64 = state.check_neighbors & (!neighbor[1] & !neighbor[0] # !neighbor[2]);
+
+
+--A1L91 is Mux~476 at LC_X32_Y22_N2
+--operation mode is normal
+
+current[1]_qfbk = current[1];
+A1L91 = current[1]_qfbk $ current[0];
+
+--current[1] is current[1] at LC_X32_Y22_N2
+--operation mode is normal
+
+current[1] = DFFEAS(A1L91, GLOBAL(clk), !GLOBAL(rst), , A1L5, A1L83, , , VCC);
+
+
+--A1L02 is Mux~477 at LC_X32_Y22_N5
+--operation mode is normal
+
+current[2]_qfbk = current[2];
+A1L02 = neighbor[1] & (neighbor[0] $ (!A1L91)) # !neighbor[1] & (neighbor[0] & !current[2]_qfbk & !A1L91 # !neighbor[0] & (A1L91));
+
+--current[2] is current[2] at LC_X32_Y22_N5
+--operation mode is normal
+
+current[2] = DFFEAS(A1L02, GLOBAL(clk), !GLOBAL(rst), , A1L5, A1L53, , , VCC);
+
+
+--A1L12 is Mux~478 at LC_X33_Y21_N6
+--operation mode is normal
+
+A1L12 = A1L02 & !neighbor[2];
+
+
+--A1L22 is Mux~479 at LC_X32_Y22_N4
+--operation mode is normal
+
+current[0]_qfbk = current[0];
+A1L22 = current[1] & !current[0]_qfbk & neighbor[2];
+
+--current[0] is current[0] at LC_X32_Y22_N4
+--operation mode is normal
+
+current[0] = DFFEAS(A1L22, GLOBAL(clk), !GLOBAL(rst), , A1L5, A1L73, , , VCC);
+
+
+--A1L32 is Mux~480 at LC_X33_Y22_N7
+--operation mode is normal
+
+visited[2]_qfbk = visited[2];
+A1L32 = neighbor[1] & (neighbor[0] # visited[2]_qfbk) # !neighbor[1] & !neighbor[0] & (visited[0]);
+
+--visited[2] is visited[2] at LC_X33_Y22_N7
+--operation mode is normal
+
+visited[2] = DFFEAS(A1L32, GLOBAL(clk), !GLOBAL(rst), , A1L14, state.idle, , , VCC);
+
+
+--A1L42 is Mux~481 at LC_X34_Y20_N5
+--operation mode is normal
+
+visited[1]_qfbk = visited[1];
+A1L42 = A1L32 & (visited[3] # !neighbor[0]) # !A1L32 & neighbor[0] & visited[1]_qfbk;
+
+--visited[1] is visited[1] at LC_X34_Y20_N5
+--operation mode is normal
+
+visited[1] = DFFEAS(A1L42, GLOBAL(clk), !GLOBAL(rst), , A1L04, state.idle, , , VCC);
+
+
+--A1L23 is process0~132 at LC_X32_Y20_N8
+--operation mode is normal
+
+visited[4]_qfbk = visited[4];
+A1L23 = neighbor[2] & (visited[4]_qfbk) # !neighbor[2] & A1L42;
+
+--visited[4] is visited[4] at LC_X32_Y20_N8
+--operation mode is normal
+
+visited[4] = DFFEAS(A1L23, GLOBAL(clk), !GLOBAL(rst), , A1L44, state.idle, , , VCC);
+
+
+--A1L97 is stack[2][2]~523 at LC_X33_Y23_N6
+--operation mode is normal
+
+A1L97 = A1L64 & !A1L23 & (A1L22 # A1L12);
+
+
+--A1L09 is stack[4][2]~524 at LC_X32_Y20_N3
+--operation mode is normal
+
+A1L09 = !sp[1] & (!sp[0]);
+
+
+--A1L01 is LessThan~122 at LC_X34_Y20_N8
+--operation mode is normal
+
+A1L01 = !neighbor[1] & (!neighbor[0]) # !neighbor[2];
+
+
+--A1L19 is stack[4][2]~525 at LC_X33_Y20_N7
+--operation mode is normal
+
+A1L19 = !rst & !A1L13 & state.check_neighbors & A1L01;
+
+
+--A1L87 is stack[2][2]~18 at LC_X33_Y20_N8
+--operation mode is normal
+
+A1L87 = !sp[0] & !sp[2] & A1L19 & sp[1];
+
+
+--A1L85 is sp[2]~1106 at LC_X32_Y20_N2
+--operation mode is normal
+
+state.pop_qfbk = state.pop;
+A1L85 = !sp[1] & !sp[2] & !sp[0] # !state.pop_qfbk;
+
+--state.pop is state.pop at LC_X32_Y20_N2
+--operation mode is normal
+
+state.pop = DFFEAS(A1L85, GLOBAL(clk), !GLOBAL(rst), , , A1L74, , , VCC);
+
+
+--A1L95 is sp[2]~1107 at LC_X34_Y20_N4
+--operation mode is normal
+
+A1L95 = A1L85 & !A1L43 & (A1L13 # !A1L64);
+
+
+--A1L25 is sp[0]~1108 at LC_X33_Y23_N8
+--operation mode is normal
+
+A1L25 = sp[0] & sp[2] # !sp[0] & (!sp[1] # !sp[2]) # !state.check_neighbors;
+
+
+--A1L45 is sp[1]~1110 at LC_X33_Y21_N8
+--operation mode is normal
+
+A1L45 = state.pop & (sp[0] $ (!sp[1]));
+
+
+--A1L55 is sp[1]~1111 at LC_X32_Y23_N2
+--operation mode is normal
+
+A1L55 = !state.pop & state.check_neighbors;
+
+
+--A1L65 is sp[1]~1112 at LC_X32_Y23_N3
+--operation mode is normal
+
+A1L65 = A1L55 & (sp[1] $ (sp[0] & !sp[2]));
+
+
+--A1L06 is sp[2]~1114 at LC_X33_Y21_N1
+--operation mode is normal
+
+A1L06 = state.pop & (sp[2] $ (!sp[0] & !sp[1]));
+
+
+--A1L16 is sp[2]~1115 at LC_X32_Y23_N5
+--operation mode is normal
+
+A1L16 = A1L55 & (sp[2] # sp[0] & sp[1]);
+
+
+--A1L98 is stack[4][2]~24 at LC_X33_Y23_N7
+--operation mode is normal
+
+A1L98 = A1L09 & A1L97 & sp[2] & !rst;
+
+
+--A1L48 is stack[3][2]~21 at LC_X32_Y23_N7
+--operation mode is normal
+
+A1L48 = sp[0] & A1L19 & !sp[2] & sp[1];
+
+
+--A1L66 is stack[0][2]~526 at LC_X34_Y20_N2
+--operation mode is normal
+
+A1L66 = !sp[2] & !sp[0] & state.check_neighbors & !sp[1];
+
+
+--A1L76 is stack[0][2]~527 at LC_X34_Y20_N3
+--operation mode is normal
+
+A1L76 = !rst & (A1L66 # !state.idle & start);
+
+
+--A1L86 is stack[0][2]~528 at LC_X34_Y20_N1
+--operation mode is normal
+
+A1L86 = A1L76 & (A1L43 # A1L01 & !A1L13);
+
+
+--A1L37 is stack[1][2]~15 at LC_X33_Y20_N2
+--operation mode is normal
+
+A1L37 = sp[0] & !sp[2] & A1L19 & !sp[1];
+
+
+--A1L74 is Select~1420 at LC_X33_Y22_N4
+--operation mode is normal
+
+A1L74 = state.check_neighbors & neighbor[2] & (neighbor[0] # neighbor[1]);
+
+
+--A1L84 is Select~1422 at LC_X32_Y20_N4
+--operation mode is normal
+
+A1L84 = !sp[1] & !sp[2] & !sp[0];
+
+
+--A1L92 is neighbor[2]~309 at LC_X33_Y22_N3
+--operation mode is normal
+
+A1L92 = A1L74 # state.pop & A1L84 # !A1L54;
+
+
+--A1L1 is add~412 at LC_X33_Y22_N5
+--operation mode is normal
+
+A1L1 = neighbor[0] & (A1L23 # !A1L12 & !A1L22);
+
+
+--A1L03 is neighbor[2]~312 at LC_X33_Y22_N1
+--operation mode is normal
+
+A1L03 = A1L13 & neighbor[0] & (neighbor[1]);
+
+
+--A1L5 is current[0]~80 at LC_X32_Y20_N5
+--operation mode is normal
+
+A1L5 = state.pop & (!A1L84) # !state.pop & (state.push);
+
+
+--A1L94 is Select~1423 at LC_X33_Y20_N5
+--operation mode is normal
+
+A1L94 = A1L93 & (A1L63 # !state.idle & start) # !A1L93 & !state.idle & start;
+
+
+--A1L13 is process0~0 at LC_X33_Y20_N6
+--operation mode is normal
+
+A1L13 = A1L23 # !A1L22 & (neighbor[2] # !A1L02);
+
+
+--start is start at PIN_K10
+--operation mode is input
+
+start = INPUT();
+
+
+--clk is clk at PIN_L2
+--operation mode is input
+
+clk = INPUT();
+
+
+--rst is rst at PIN_L3
+--operation mode is input
+
+rst = INPUT();
+
+
+--start_node[2] is start_node[2] at PIN_J8
+--operation mode is input
+
+start_node[2] = INPUT();
+
+
+--start_node[0] is start_node[0] at PIN_H10
+--operation mode is input
+
+start_node[0] = INPUT();
+
+
+--start_node[1] is start_node[1] at PIN_K8
+--operation mode is input
+
+start_node[1] = INPUT();
+
+
+--done is done at PIN_G9
+--operation mode is output
+
+done = OUTPUT(done_reg);
+
+
+--visit[0] is visit[0] at PIN_J9
+--operation mode is output
+
+visit[0] = OUTPUT(visited[0]);
+
+
+--visit[1] is visit[1] at PIN_B8
+--operation mode is output
+
+visit[1] = OUTPUT(visited[1]);
+
+
+--visit[2] is visit[2] at PIN_F10
+--operation mode is output
+
+visit[2] = OUTPUT(visited[2]);
+
+
+--visit[3] is visit[3] at PIN_E9
+--operation mode is output
+
+visit[3] = OUTPUT(visited[3]);
+
+
+--visit[4] is visit[4] at PIN_C12
+--operation mode is output
+
+visit[4] = OUTPUT(visited[4]);
+
+
+

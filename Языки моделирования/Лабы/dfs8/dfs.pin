@@ -1,0 +1,381 @@
+ -- Copyright (C) 1991-2005 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic       
+ -- functions, and any output files any of the foregoing           
+ -- (including device programming or simulation files), and any    
+ -- associated documentation or information are expressly subject  
+ -- to the terms and conditions of the Altera Program License      
+ -- Subscription Agreement, Altera MegaCore Function License       
+ -- Agreement, or other applicable license agreement, including,   
+ -- without limitation, that your use is for the sole purpose of   
+ -- programming logic devices manufactured by Altera and sold by   
+ -- Altera or its authorized distributors.  Please refer to the    
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.5V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 1:		3.3V
+ --					Bank 2:		3.3V
+ --					Bank 3:		3.3V
+ --					Bank 4:		3.3V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin.   This pin can either be left unconnected or
+ --           	    connected to GND.  Connecting this pin to GND will improve the
+ --           	    device's immunity to noise.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ ---------------------------------------------------------------------------------
+
+Quartus II Version 5.0 Build 148 04/26/2005 SJ Full Version
+CHIP  "dfs"  ASSIGNED TO AN: EP1C4F324C6
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+GND                          : A1        : gnd    :                   :         :           :                
+VCCINT                       : A2        : power  :                   : 1.5V    :           :                
+GND                          : A3        : gnd    :                   :         :           :                
+adjacency_matrix[49]         : A4        : input  : LVTTL             :         : 2         : N              
+VCCIO2                       : A5        : power  :                   : 3.3V    : 2         :                
+adjacency_matrix[43]         : A6        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[14]         : A7        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[2]          : A8        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[45]         : A9        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[63]         : A10       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[33]         : A11       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[26]         : A12       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[46]         : A13       : input  : LVTTL             :         : 2         : N              
+VCCIO2                       : A14       : power  :                   : 3.3V    : 2         :                
+GND*                         : A15       :        :                   :         : 2         :                
+GND                          : A16       : gnd    :                   :         :           :                
+VCCINT                       : A17       : power  :                   : 1.5V    :           :                
+GND                          : A18       : gnd    :                   :         :           :                
+VCCINT                       : B1        : power  :                   : 1.5V    :           :                
+GND                          : B2        : gnd    :                   :         :           :                
+adjacency_matrix[4]          : B3        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[9]          : B4        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[72]         : B5        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[80]         : B6        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[71]         : B7        : input  : LVTTL             :         : 2         : N              
+start_node[3]                : B8        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[8]          : B9        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[32]         : B10       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[50]         : B11       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[56]         : B12       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[13]         : B13       : input  : LVTTL             :         : 2         : N              
+GND*                         : B14       :        :                   :         : 2         :                
+GND*                         : B15       :        :                   :         : 2         :                
+GND*                         : B16       :        :                   :         : 2         :                
+GND                          : B17       : gnd    :                   :         :           :                
+VCCINT                       : B18       : power  :                   : 1.5V    :           :                
+GND                          : C1        : gnd    :                   :         :           :                
+adjacency_matrix[55]         : C2        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[84]         : C3        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[6]          : C4        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[47]         : C5        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[62]         : C6        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[97]         : C7        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[10]         : C8        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[23]         : C9        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[66]         : C10       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[36]         : C11       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[28]         : C12       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[41]         : C13       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[64]         : C14       : input  : LVTTL             :         : 2         : N              
+GND*                         : C15       :        :                   :         : 2         :                
+GND*                         : C16       :        :                   :         : 2         :                
+GND*                         : C17       :        :                   :         : 3         :                
+GND                          : C18       : gnd    :                   :         :           :                
+adjacency_matrix[93]         : D1        : input  : LVTTL             :         : 1         : N              
+GND*                         : D2        :        :                   :         : 1         :                
+adjacency_matrix[39]         : D3        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[92]         : D4        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[99]         : D5        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[19]         : D6        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[35]         : D7        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[16]         : D8        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[12]         : D9        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[15]         : D10       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[27]         : D11       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[87]         : D12       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[52]         : D13       : input  : LVTTL             :         : 2         : N              
+GND*                         : D14       :        :                   :         : 2         :                
+GND*                         : D15       :        :                   :         : 3         :                
+GND*                         : D16       :        :                   :         : 3         :                
+GND*                         : D17       :        :                   :         : 3         :                
+GND*                         : D18       :        :                   :         : 3         :                
+VCCIO1                       : E1        : power  :                   : 3.3V    : 1         :                
+adjacency_matrix[98]         : E2        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[3]          : E3        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[94]         : E4        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[1]          : E5        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[82]         : E6        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[83]         : E7        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[60]         : E8        : input  : LVTTL             :         : 2         : N              
+VCCIO2                       : E9        : power  :                   : 3.3V    : 2         :                
+adjacency_matrix[75]         : E10       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[89]         : E11       : input  : LVTTL             :         : 2         : N              
+VCCIO2                       : E12       : power  :                   : 3.3V    : 2         :                
+GND*                         : E13       :        :                   :         : 2         :                
+GND*                         : E14       :        :                   :         : 3         :                
+GND*                         : E15       :        :                   :         : 3         :                
+GND*                         : E16       :        :                   :         : 3         :                
+GND*                         : E17       :        :                   :         : 3         :                
+VCCIO3                       : E18       : power  :                   : 3.3V    : 3         :                
+adjacency_matrix[78]         : F1        : input  : LVTTL             :         : 1         : N              
+result1[0]                   : F2        : output : LVTTL             :         : 1         : N              
+adjacency_matrix[18]         : F3        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[57]         : F4        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[0]          : F5        : input  : LVTTL             :         : 1         : N              
+result1[3]                   : F6        : output : LVTTL             :         : 1         : N              
+adjacency_matrix[20]         : F7        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[65]         : F8        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[90]         : F9        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[53]         : F10       : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[48]         : F11       : input  : LVTTL             :         : 2         : N              
+GND*                         : F12       :        :                   :         : 3         :                
+GND*                         : F13       :        :                   :         : 3         :                
+GND*                         : F14       :        :                   :         : 3         :                
+GND*                         : F15       :        :                   :         : 3         :                
+GND*                         : F16       :        :                   :         : 3         :                
+GND*                         : F17       :        :                   :         : 3         :                
+adjacency_matrix[88]         : F18       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[37]         : G1        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[42]         : G2        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[34]         : G3        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[59]         : G4        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[70]         : G5        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[24]         : G6        : input  : LVTTL             :         : 1         : N              
+VCCIO1                       : G7        : power  :                   : 3.3V    : 1         :                
+adjacency_matrix[22]         : G8        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[95]         : G9        : input  : LVTTL             :         : 2         : N              
+adjacency_matrix[76]         : G10       : input  : LVTTL             :         : 2         : N              
+GND*                         : G11       :        :                   :         : 2         :                
+GND*                         : G12       :        :                   :         : 3         :                
+adjacency_matrix[30]         : G13       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[58]         : G14       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[67]         : G15       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[40]         : G16       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[73]         : G17       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[85]         : G18       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[86]         : H1        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[61]         : H2        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[11]         : H3        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[96]         : H4        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[77]         : H5        : input  : LVTTL             :         : 1         : N              
+adjacency_matrix[5]          : H6        : input  : LVTTL             :         : 1         : N              
+DATA0                        : H7        : input  :                   :         : 1         :                
+GND                          : H8        : gnd    :                   :         :           :                
+GND                          : H9        : gnd    :                   :         :           :                
+VCCINT                       : H10       : power  :                   : 1.5V    :           :                
+GND                          : H11       : gnd    :                   :         :           :                
+VCCIO3                       : H12       : power  :                   : 3.3V    : 3         :                
+adjacency_matrix[25]         : H13       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[51]         : H14       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[79]         : H15       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[31]         : H16       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[74]         : H17       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[68]         : H18       : input  : LVTTL             :         : 3         : N              
+~nCSO/nCSO~ / GND*           : J1        : output : LVTTL             :         : 1         : N              
+nCONFIG                      : J2        :        :                   :         : 1         :                
+reset                        : J3        : input  : LVTTL             :         : 1         : N              
+clk                          : J4        : input  : LVTTL             :         : 1         : N              
+VCCA_PLL1                    : J5        : power  :                   : 1.5V    :           :                
+GNDG_PLL1                    : J6        : gnd    :                   :         :           :                
+nCE                          : J7        :        :                   :         : 1         :                
+GND                          : J8        : gnd    :                   :         :           :                
+VCCINT                       : J9        : power  :                   : 1.5V    :           :                
+GND                          : J10       : gnd    :                   :         :           :                
+GND                          : J11       : gnd    :                   :         :           :                
+VCCA_PLL2                    : J12       : power  :                   : 1.5V    :           :                
+adjacency_matrix[91]         : J13       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[7]          : J14       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[44]         : J15       : input  : LVTTL             :         : 3         : N              
+adjacency_matrix[54]         : J16       : input  : LVTTL             :         : 3         : N              
+TDI                          : J17       : input  :                   :         : 3         :                
+GNDG_PLL2                    : J18       : gnd    :                   :         :           :                
+GNDA_PLL1                    : K1        : gnd    :                   :         :           :                
+nCEO                         : K2        :        :                   :         : 1         :                
+MSEL0                        : K3        :        :                   :         : 1         :                
+result1[2]                   : K4        : output : LVTTL             :         : 1         : N              
+result1[1]                   : K5        : output : LVTTL             :         : 1         : N              
+~ASDO/ASDO~ / GND*           : K6        : output : LVTTL             :         : 1         : N              
+MSEL1                        : K7        :        :                   :         : 1         :                
+GND                          : K8        : gnd    :                   :         :           :                
+GND                          : K9        : gnd    :                   :         :           :                
+VCCINT                       : K10       : power  :                   : 1.5V    :           :                
+GND                          : K11       : gnd    :                   :         :           :                
+GNDA_PLL2                    : K12       : gnd    :                   :         :           :                
+TDO                          : K13       : output :                   :         : 3         :                
+TMS                          : K14       : input  :                   :         : 3         :                
+GND*                         : K15       :        :                   :         : 3         :                
+GND*                         : K16       :        :                   :         : 3         :                
+CONF_DONE                    : K17       :        :                   :         : 3         :                
+TCK                          : K18       : input  :                   :         : 3         :                
+DCLK                         : L1        : bidir  :                   :         : 1         :                
+result0[0]                   : L2        : output : LVTTL             :         : 1         : N              
+result0[1]                   : L3        : output : LVTTL             :         : 1         : N              
+result2[0]                   : L4        : output : LVTTL             :         : 1         : N              
+result3[3]                   : L5        : output : LVTTL             :         : 1         : N              
+result9[1]                   : L6        : output : LVTTL             :         : 1         : N              
+result0[3]                   : L7        : output : LVTTL             :         : 1         : N              
+GND                          : L8        : gnd    :                   :         :           :                
+VCCINT                       : L9        : power  :                   : 1.5V    :           :                
+GND                          : L10       : gnd    :                   :         :           :                
+GND                          : L11       : gnd    :                   :         :           :                
+nSTATUS                      : L12       :        :                   :         : 3         :                
+GND*                         : L13       :        :                   :         : 3         :                
+GND*                         : L14       :        :                   :         : 3         :                
+GND*                         : L15       :        :                   :         : 3         :                
+GND*                         : L16       :        :                   :         : 3         :                
+GND*                         : L17       :        :                   :         : 3         :                
+GND*                         : L18       :        :                   :         : 3         :                
+result8[2]                   : M1        : output : LVTTL             :         : 1         : N              
+result8[0]                   : M2        : output : LVTTL             :         : 1         : N              
+result3[1]                   : M3        : output : LVTTL             :         : 1         : N              
+result3[0]                   : M4        : output : LVTTL             :         : 1         : N              
+result6[3]                   : M5        : output : LVTTL             :         : 1         : N              
+result2[2]                   : M6        : output : LVTTL             :         : 1         : N              
+VCCIO1                       : M7        : power  :                   : 3.3V    : 1         :                
+GND*                         : M8        :        :                   :         : 4         :                
+result_len[0]                : M9        : output : LVTTL             :         : 4         : N              
+GND*                         : M10       :        :                   :         : 4         :                
+GND*                         : M11       :        :                   :         : 4         :                
+VCCIO3                       : M12       : power  :                   : 3.3V    : 3         :                
+GND*                         : M13       :        :                   :         : 3         :                
+GND*                         : M14       :        :                   :         : 3         :                
+GND*                         : M15       :        :                   :         : 3         :                
+GND*                         : M16       :        :                   :         : 3         :                
+GND*                         : M17       :        :                   :         : 3         :                
+GND*                         : M18       :        :                   :         : 3         :                
+result6[1]                   : N1        : output : LVTTL             :         : 1         : N              
+GND*                         : N2        :        :                   :         : 1         :                
+GND*                         : N3        :        :                   :         : 1         :                
+GND*                         : N4        :        :                   :         : 1         :                
+result0[2]                   : N5        : output : LVTTL             :         : 1         : N              
+GND*                         : N6        :        :                   :         : 1         :                
+result9[2]                   : N7        : output : LVTTL             :         : 1         : N              
+result6[0]                   : N8        : output : LVTTL             :         : 4         : N              
+result_len[2]                : N9        : output : LVTTL             :         : 4         : N              
+GND*                         : N10       :        :                   :         : 4         :                
+GND*                         : N11       :        :                   :         : 4         :                
+GND*                         : N12       :        :                   :         : 3         :                
+GND*                         : N13       :        :                   :         : 3         :                
+GND*                         : N14       :        :                   :         : 3         :                
+GND*                         : N15       :        :                   :         : 3         :                
+GND*                         : N16       :        :                   :         : 3         :                
+GND*                         : N17       :        :                   :         : 3         :                
+GND*                         : N18       :        :                   :         : 3         :                
+VCCIO1                       : P1        : power  :                   : 3.3V    : 1         :                
+GND*                         : P2        :        :                   :         : 1         :                
+GND*                         : P3        :        :                   :         : 1         :                
+GND*                         : P4        :        :                   :         : 1         :                
+GND*                         : P5        :        :                   :         : 1         :                
+result9[3]                   : P6        : output : LVTTL             :         : 4         : N              
+result2[3]                   : P7        : output : LVTTL             :         : 4         : N              
+VCCIO4                       : P8        : power  :                   : 3.3V    : 4         :                
+result7[2]                   : P9        : output : LVTTL             :         : 4         : N              
+result5[1]                   : P10       : output : LVTTL             :         : 4         : N              
+VCCIO4                       : P11       : power  :                   : 3.3V    : 4         :                
+GND*                         : P12       :        :                   :         : 4         :                
+GND*                         : P13       :        :                   :         : 4         :                
+GND*                         : P14       :        :                   :         : 3         :                
+GND*                         : P15       :        :                   :         : 3         :                
+GND*                         : P16       :        :                   :         : 3         :                
+GND*                         : P17       :        :                   :         : 3         :                
+VCCIO3                       : P18       : power  :                   : 3.3V    : 3         :                
+GND*                         : R1        :        :                   :         : 1         :                
+GND*                         : R2        :        :                   :         : 1         :                
+GND*                         : R3        :        :                   :         : 1         :                
+result4[2]                   : R4        : output : LVTTL             :         : 4         : N              
+result4[1]                   : R5        : output : LVTTL             :         : 4         : N              
+done                         : R6        : output : LVTTL             :         : 4         : N              
+result6[2]                   : R7        : output : LVTTL             :         : 4         : N              
+result3[2]                   : R8        : output : LVTTL             :         : 4         : N              
+result_len[1]                : R9        : output : LVTTL             :         : 4         : N              
+result7[0]                   : R10       : output : LVTTL             :         : 4         : N              
+adjacency_matrix[29]         : R11       : input  : LVTTL             :         : 4         : N              
+adjacency_matrix[38]         : R12       : input  : LVTTL             :         : 4         : N              
+GND*                         : R13       :        :                   :         : 4         :                
+GND*                         : R14       :        :                   :         : 4         :                
+GND*                         : R15       :        :                   :         : 3         :                
+GND*                         : R16       :        :                   :         : 3         :                
+GND*                         : R17       :        :                   :         : 3         :                
+GND*                         : R18       :        :                   :         : 3         :                
+GND                          : T1        : gnd    :                   :         :           :                
+GND*                         : T2        :        :                   :         : 1         :                
+GND*                         : T3        :        :                   :         : 1         :                
+GND*                         : T4        :        :                   :         : 4         :                
+GND*                         : T5        :        :                   :         : 4         :                
+result7[1]                   : T6        : output : LVTTL             :         : 4         : N              
+start_node[0]                : T7        : input  : LVTTL             :         : 4         : N              
+result8[3]                   : T8        : output : LVTTL             :         : 4         : N              
+result_len[3]                : T9        : output : LVTTL             :         : 4         : N              
+result5[3]                   : T10       : output : LVTTL             :         : 4         : N              
+adjacency_matrix[81]         : T11       : input  : LVTTL             :         : 4         : N              
+GND*                         : T12       :        :                   :         : 4         :                
+GND*                         : T13       :        :                   :         : 4         :                
+GND*                         : T14       :        :                   :         : 4         :                
+GND*                         : T15       :        :                   :         : 4         :                
+GND*                         : T16       :        :                   :         : 3         :                
+GND*                         : T17       :        :                   :         : 3         :                
+GND                          : T18       : gnd    :                   :         :           :                
+VCCINT                       : U1        : power  :                   : 1.5V    :           :                
+GND                          : U2        : gnd    :                   :         :           :                
+GND*                         : U3        :        :                   :         : 4         :                
+GND*                         : U4        :        :                   :         : 4         :                
+GND*                         : U5        :        :                   :         : 4         :                
+GND*                         : U6        :        :                   :         : 4         :                
+result4[3]                   : U7        : output : LVTTL             :         : 4         : N              
+start_node[2]                : U8        : input  : LVTTL             :         : 4         : N              
+result9[0]                   : U9        : output : LVTTL             :         : 4         : N              
+result7[3]                   : U10       : output : LVTTL             :         : 4         : N              
+adjacency_matrix[21]         : U11       : input  : LVTTL             :         : 4         : N              
+adjacency_matrix[69]         : U12       : input  : LVTTL             :         : 4         : N              
+GND*                         : U13       :        :                   :         : 4         :                
+GND*                         : U14       :        :                   :         : 4         :                
+GND*                         : U15       :        :                   :         : 4         :                
+GND*                         : U16       :        :                   :         : 4         :                
+GND                          : U17       : gnd    :                   :         :           :                
+VCCINT                       : U18       : power  :                   : 1.5V    :           :                
+GND                          : V1        : gnd    :                   :         :           :                
+VCCINT                       : V2        : power  :                   : 1.5V    :           :                
+GND                          : V3        : gnd    :                   :         :           :                
+GND*                         : V4        :        :                   :         : 4         :                
+VCCIO4                       : V5        : power  :                   : 3.3V    : 4         :                
+result8[1]                   : V6        : output : LVTTL             :         : 4         : N              
+result4[0]                   : V7        : output : LVTTL             :         : 4         : N              
+start_node[1]                : V8        : input  : LVTTL             :         : 4         : N              
+result2[1]                   : V9        : output : LVTTL             :         : 4         : N              
+result5[2]                   : V10       : output : LVTTL             :         : 4         : N              
+result5[0]                   : V11       : output : LVTTL             :         : 4         : N              
+adjacency_matrix[17]         : V12       : input  : LVTTL             :         : 4         : N              
+GND*                         : V13       :        :                   :         : 4         :                
+VCCIO4                       : V14       : power  :                   : 3.3V    : 4         :                
+GND*                         : V15       :        :                   :         : 4         :                
+GND                          : V16       : gnd    :                   :         :           :                
+VCCINT                       : V17       : power  :                   : 1.5V    :           :                
+GND                          : V18       : gnd    :                   :         :           :                

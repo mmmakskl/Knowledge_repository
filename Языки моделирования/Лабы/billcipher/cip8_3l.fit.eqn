@@ -1,0 +1,164 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L5 is a~305 at LC_X5_Y1_N7
+--operation mode is normal
+
+A1L5 = r[1] & (!r[2]);
+
+
+--A1L6 is a~306 at LC_X5_Y1_N8
+--operation mode is normal
+
+A1L6 = r[5] # !r[4] & (A1L5 # r[3]);
+
+
+--A1L7 is a~307 at LC_X5_Y1_N2
+--operation mode is normal
+
+A1L7 = ei & (r[7] # A1L6 & !r[6]);
+
+
+--A1L61 is process0~0 at LC_X6_Y1_N5
+--operation mode is normal
+
+A1L61 = r[7] # r[6];
+
+
+--A1L71 is process0~8 at LC_X5_Y1_N9
+--operation mode is normal
+
+A1L71 = A1L61 # r[3] # r[5] # r[4];
+
+
+--A1L81 is process0~112 at LC_X5_Y1_N6
+--operation mode is normal
+
+A1L81 = !r[7] & !r[6] & (r[5] # r[4]);
+
+
+--A1L8 is a~308 at LC_X5_Y1_N5
+--operation mode is normal
+
+A1L8 = ei & (A1L71 & (!A1L81) # !A1L71 & r[2]);
+
+
+--A1L9 is a~309 at LC_X5_Y1_N0
+--operation mode is normal
+
+A1L9 = ei & (r[4] # r[5] # A1L61);
+
+
+--A1L21 is eo~29 at LC_X5_Y1_N3
+--operation mode is normal
+
+A1L21 = !r[1] & !r[0] & !r[2] & !A1L71;
+
+
+--A1L51 is g~56 at LC_X5_Y1_N1
+--operation mode is normal
+
+A1L51 = !A1L21 & (ei);
+
+
+--A1L31 is eo~30 at LC_X5_Y1_N4
+--operation mode is normal
+
+A1L31 = !A1L21 # !ei;
+
+
+--ei is ei at PIN_AB17
+--operation mode is input
+
+ei = INPUT();
+
+
+--r[7] is r[7] at PIN_Y16
+--operation mode is input
+
+r[7] = INPUT();
+
+
+--r[5] is r[5] at PIN_Y18
+--operation mode is input
+
+r[5] = INPUT();
+
+
+--r[1] is r[1] at PIN_AA17
+--operation mode is input
+
+r[1] = INPUT();
+
+
+--r[2] is r[2] at PIN_Y19
+--operation mode is input
+
+r[2] = INPUT();
+
+
+--r[3] is r[3] at PIN_AA18
+--operation mode is input
+
+r[3] = INPUT();
+
+
+--r[4] is r[4] at PIN_AA19
+--operation mode is input
+
+r[4] = INPUT();
+
+
+--r[6] is r[6] at PIN_U16
+--operation mode is input
+
+r[6] = INPUT();
+
+
+--r[0] is r[0] at PIN_Y17
+--operation mode is input
+
+r[0] = INPUT();
+
+
+--a[0] is a[0] at PIN_AB19
+--operation mode is output
+
+a[0] = OUTPUT(A1L7);
+
+
+--a[1] is a[1] at PIN_AB18
+--operation mode is output
+
+a[1] = OUTPUT(A1L8);
+
+
+--a[2] is a[2] at PIN_W18
+--operation mode is output
+
+a[2] = OUTPUT(A1L9);
+
+
+--g is g at PIN_W17
+--operation mode is output
+
+g = OUTPUT(A1L51);
+
+
+--eo is eo at PIN_V18
+--operation mode is output
+
+eo = OUTPUT(!A1L31);
+
+
+

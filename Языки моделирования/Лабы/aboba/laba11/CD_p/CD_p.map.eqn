@@ -1,0 +1,109 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L61 is k1~1
+--operation mode is normal
+
+A1L61 = d[0] $ d[3] $ d[1];
+
+
+--A1L71 is k2~1
+--operation mode is normal
+
+A1L71 = d[0] $ d[3] $ d[2];
+
+
+--A1L81 is k3~1
+--operation mode is normal
+
+A1L81 = d[3] $ d[1] $ d[2];
+
+
+--A1L51 is d_o~10
+--operation mode is normal
+
+A1L51 = d[0] $ d[1] $ d[2];
+
+
+--d[0] is d[0]
+--operation mode is input
+
+d[0] = INPUT();
+
+
+--d[3] is d[3]
+--operation mode is input
+
+d[3] = INPUT();
+
+
+--d[1] is d[1]
+--operation mode is input
+
+d[1] = INPUT();
+
+
+--d[2] is d[2]
+--operation mode is input
+
+d[2] = INPUT();
+
+
+--d_o[0] is d_o[0]
+--operation mode is output
+
+d_o[0] = OUTPUT(A1L61);
+
+
+--d_o[1] is d_o[1]
+--operation mode is output
+
+d_o[1] = OUTPUT(A1L71);
+
+
+--d_o[2] is d_o[2]
+--operation mode is output
+
+d_o[2] = OUTPUT(d[0]);
+
+
+--d_o[3] is d_o[3]
+--operation mode is output
+
+d_o[3] = OUTPUT(A1L81);
+
+
+--d_o[4] is d_o[4]
+--operation mode is output
+
+d_o[4] = OUTPUT(d[1]);
+
+
+--d_o[5] is d_o[5]
+--operation mode is output
+
+d_o[5] = OUTPUT(d[2]);
+
+
+--d_o[6] is d_o[6]
+--operation mode is output
+
+d_o[6] = OUTPUT(d[3]);
+
+
+--d_o[7] is d_o[7]
+--operation mode is output
+
+d_o[7] = OUTPUT(A1L51);
+
+

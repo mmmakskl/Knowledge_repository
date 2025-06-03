@@ -1,0 +1,578 @@
+
+simd:     формат файла elf64-x86-64
+
+
+Дизассемблирование раздела .init:
+
+0000000000001000 <_init>:
+    1000:	f3 0f 1e fa          	endbr64
+    1004:	48 83 ec 08          	sub    $0x8,%rsp
+    1008:	48 8b 05 c9 2f 00 00 	mov    0x2fc9(%rip),%rax        # 3fd8 <__gmon_start__@Base>
+    100f:	48 85 c0             	test   %rax,%rax
+    1012:	74 02                	je     1016 <_init+0x16>
+    1014:	ff d0                	call   *%rax
+    1016:	48 83 c4 08          	add    $0x8,%rsp
+    101a:	c3                   	ret
+
+Дизассемблирование раздела .plt:
+
+0000000000001020 <_ZNSolsEf@plt-0x10>:
+    1020:	ff 35 ca 2f 00 00    	push   0x2fca(%rip)        # 3ff0 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	ff 25 cc 2f 00 00    	jmp    *0x2fcc(%rip)        # 3ff8 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000001030 <_ZNSolsEf@plt>:
+    1030:	ff 25 ca 2f 00 00    	jmp    *0x2fca(%rip)        # 4000 <_ZNSolsEf@GLIBCXX_3.4>
+    1036:	68 00 00 00 00       	push   $0x0
+    103b:	e9 e0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001040 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>:
+    1040:	ff 25 c2 2f 00 00    	jmp    *0x2fc2(%rip)        # 4008 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@GLIBCXX_3.4>
+    1046:	68 01 00 00 00       	push   $0x1
+    104b:	e9 d0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001050 <_ZNSolsEPFRSoS_E@plt>:
+    1050:	ff 25 ba 2f 00 00    	jmp    *0x2fba(%rip)        # 4010 <_ZNSolsEPFRSoS_E@GLIBCXX_3.4>
+    1056:	68 02 00 00 00       	push   $0x2
+    105b:	e9 c0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001060 <__stack_chk_fail@plt>:
+    1060:	ff 25 b2 2f 00 00    	jmp    *0x2fb2(%rip)        # 4018 <__stack_chk_fail@GLIBC_2.4>
+    1066:	68 03 00 00 00       	push   $0x3
+    106b:	e9 b0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001070 <_ZNSolsEi@plt>:
+    1070:	ff 25 aa 2f 00 00    	jmp    *0x2faa(%rip)        # 4020 <_ZNSolsEi@GLIBCXX_3.4>
+    1076:	68 04 00 00 00       	push   $0x4
+    107b:	e9 a0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001080 <_ZNSolsEd@plt>:
+    1080:	ff 25 a2 2f 00 00    	jmp    *0x2fa2(%rip)        # 4028 <_ZNSolsEd@GLIBCXX_3.4>
+    1086:	68 05 00 00 00       	push   $0x5
+    108b:	e9 90 ff ff ff       	jmp    1020 <_init+0x20>
+
+Дизассемблирование раздела .text:
+
+0000000000001090 <_start>:
+    1090:	f3 0f 1e fa          	endbr64
+    1094:	31 ed                	xor    %ebp,%ebp
+    1096:	49 89 d1             	mov    %rdx,%r9
+    1099:	5e                   	pop    %rsi
+    109a:	48 89 e2             	mov    %rsp,%rdx
+    109d:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    10a1:	50                   	push   %rax
+    10a2:	54                   	push   %rsp
+    10a3:	45 31 c0             	xor    %r8d,%r8d
+    10a6:	31 c9                	xor    %ecx,%ecx
+    10a8:	48 8d 3d 66 01 00 00 	lea    0x166(%rip),%rdi        # 1215 <main>
+    10af:	ff 15 13 2f 00 00    	call   *0x2f13(%rip)        # 3fc8 <__libc_start_main@GLIBC_2.34>
+    10b5:	f4                   	hlt
+    10b6:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    10bd:	00 00 00 
+    10c0:	48 8d 3d 79 2f 00 00 	lea    0x2f79(%rip),%rdi        # 4040 <_ZSt4cout@GLIBCXX_3.4>
+    10c7:	48 8d 05 72 2f 00 00 	lea    0x2f72(%rip),%rax        # 4040 <_ZSt4cout@GLIBCXX_3.4>
+    10ce:	48 39 f8             	cmp    %rdi,%rax
+    10d1:	74 15                	je     10e8 <_start+0x58>
+    10d3:	48 8b 05 f6 2e 00 00 	mov    0x2ef6(%rip),%rax        # 3fd0 <_ITM_deregisterTMCloneTable@Base>
+    10da:	48 85 c0             	test   %rax,%rax
+    10dd:	74 09                	je     10e8 <_start+0x58>
+    10df:	ff e0                	jmp    *%rax
+    10e1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    10e8:	c3                   	ret
+    10e9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    10f0:	48 8d 3d 49 2f 00 00 	lea    0x2f49(%rip),%rdi        # 4040 <_ZSt4cout@GLIBCXX_3.4>
+    10f7:	48 8d 35 42 2f 00 00 	lea    0x2f42(%rip),%rsi        # 4040 <_ZSt4cout@GLIBCXX_3.4>
+    10fe:	48 29 fe             	sub    %rdi,%rsi
+    1101:	48 89 f0             	mov    %rsi,%rax
+    1104:	48 c1 ee 3f          	shr    $0x3f,%rsi
+    1108:	48 c1 f8 03          	sar    $0x3,%rax
+    110c:	48 01 c6             	add    %rax,%rsi
+    110f:	48 d1 fe             	sar    $1,%rsi
+    1112:	74 14                	je     1128 <_start+0x98>
+    1114:	48 8b 05 c5 2e 00 00 	mov    0x2ec5(%rip),%rax        # 3fe0 <_ITM_registerTMCloneTable@Base>
+    111b:	48 85 c0             	test   %rax,%rax
+    111e:	74 08                	je     1128 <_start+0x98>
+    1120:	ff e0                	jmp    *%rax
+    1122:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    1128:	c3                   	ret
+    1129:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    1130:	f3 0f 1e fa          	endbr64
+    1134:	80 3d 15 30 00 00 00 	cmpb   $0x0,0x3015(%rip)        # 4150 <_ZSt4cout@GLIBCXX_3.4+0x110>
+    113b:	75 33                	jne    1170 <_start+0xe0>
+    113d:	55                   	push   %rbp
+    113e:	48 83 3d 72 2e 00 00 	cmpq   $0x0,0x2e72(%rip)        # 3fb8 <__cxa_finalize@GLIBC_2.2.5>
+    1145:	00 
+    1146:	48 89 e5             	mov    %rsp,%rbp
+    1149:	74 0d                	je     1158 <_start+0xc8>
+    114b:	48 8b 3d e6 2e 00 00 	mov    0x2ee6(%rip),%rdi        # 4038 <__dso_handle>
+    1152:	ff 15 60 2e 00 00    	call   *0x2e60(%rip)        # 3fb8 <__cxa_finalize@GLIBC_2.2.5>
+    1158:	e8 63 ff ff ff       	call   10c0 <_start+0x30>
+    115d:	c6 05 ec 2f 00 00 01 	movb   $0x1,0x2fec(%rip)        # 4150 <_ZSt4cout@GLIBCXX_3.4+0x110>
+    1164:	5d                   	pop    %rbp
+    1165:	c3                   	ret
+    1166:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    116d:	00 00 00 
+    1170:	c3                   	ret
+    1171:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    1178:	00 00 00 00 
+    117c:	0f 1f 40 00          	nopl   0x0(%rax)
+    1180:	f3 0f 1e fa          	endbr64
+    1184:	e9 67 ff ff ff       	jmp    10f0 <_start+0x60>
+
+0000000000001189 <_Z9my_mm_subDv2_iS_>:
+
+using std::cout;
+using std::endl;
+
+// Custom functions for SIMD operations
+__m64 my_mm_sub(__m64 m1, __m64 m2) {
+    1189:	55                   	push   %rbp
+    118a:	48 89 e5             	mov    %rsp,%rbp
+    118d:	c5 f9 d6 45 f8       	vmovq  %xmm0,-0x8(%rbp)
+    1192:	c5 f9 d6 4d f0       	vmovq  %xmm1,-0x10(%rbp)
+    __asm__ volatile (
+    1197:	c5 fa 7e 4d f0       	vmovq  -0x10(%rbp),%xmm1
+    119c:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    11a0:	c4 e1 f9 6e c0       	vmovq  %rax,%xmm0
+    11a5:	66 0f e8 c1          	psubsb %xmm1,%xmm0
+    11a9:	c5 f9 d6 45 f8       	vmovq  %xmm0,-0x8(%rbp)
+        "psubsb %1, %0"
+        : "+x" (m1)
+        : "x" (m2)
+    );
+    return m1;
+    11ae:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+}
+    11b2:	c4 e1 f9 6e c0       	vmovq  %rax,%xmm0
+    11b7:	5d                   	pop    %rbp
+    11b8:	c3                   	ret
+
+00000000000011b9 <_Z9my_mm_mulDv4_fS_>:
+
+__m128 my_mm_mul(__m128 m1, __m128 m2) {
+    11b9:	55                   	push   %rbp
+    11ba:	48 89 e5             	mov    %rsp,%rbp
+    11bd:	c5 f8 29 45 f0       	vmovaps %xmm0,-0x10(%rbp)
+    11c2:	c5 f8 29 4d e0       	vmovaps %xmm1,-0x20(%rbp)
+    __asm__ volatile (
+    11c7:	c5 f8 28 45 f0       	vmovaps -0x10(%rbp),%xmm0
+    11cc:	c5 f8 28 4d e0       	vmovaps -0x20(%rbp),%xmm1
+    11d1:	0f 59 c1             	mulps  %xmm1,%xmm0
+    11d4:	0f 28 c0             	movaps %xmm0,%xmm0
+    11d7:	c5 f8 29 45 f0       	vmovaps %xmm0,-0x10(%rbp)
+        "mulps %2, %1\n\t"
+        "movaps %1, %0"
+        : "=x" (m1)
+        : "x" (m1), "x" (m2)
+    );
+    return m1;
+    11dc:	c5 f8 28 45 f0       	vmovaps -0x10(%rbp),%xmm0
+}
+    11e1:	5d                   	pop    %rbp
+    11e2:	c3                   	ret
+
+00000000000011e3 <_Z9my_mm_mulDv8_fS_>:
+
+__m256 my_mm_mul(__m256 m1, __m256 m2) {
+    11e3:	55                   	push   %rbp
+    11e4:	48 89 e5             	mov    %rsp,%rbp
+    11e7:	48 83 e4 e0          	and    $0xffffffffffffffe0,%rsp
+    11eb:	c5 fc 29 44 24 e0    	vmovaps %ymm0,-0x20(%rsp)
+    11f1:	c5 fc 29 4c 24 c0    	vmovaps %ymm1,-0x40(%rsp)
+    __asm__ volatile (
+    11f7:	c5 fc 28 44 24 e0    	vmovaps -0x20(%rsp),%ymm0
+    11fd:	c5 fc 28 4c 24 c0    	vmovaps -0x40(%rsp),%ymm1
+    1203:	c5 fc 59 c1          	vmulps %ymm1,%ymm0,%ymm0
+    1207:	c5 fc 29 44 24 e0    	vmovaps %ymm0,-0x20(%rsp)
+        "vmulps %2, %1, %0"
+        : "=v" (m1)
+        : "v" (m1), "v" (m2)
+    );
+    return m1;
+    120d:	c5 fc 28 44 24 e0    	vmovaps -0x20(%rsp),%ymm0
+}
+    1213:	c9                   	leave
+    1214:	c3                   	ret
+
+0000000000001215 <main>:
+
+int main() {
+    1215:	4c 8d 54 24 08       	lea    0x8(%rsp),%r10
+    121a:	48 83 e4 e0          	and    $0xffffffffffffffe0,%rsp
+    121e:	41 ff 72 f8          	push   -0x8(%r10)
+    1222:	55                   	push   %rbp
+    1223:	48 89 e5             	mov    %rsp,%rbp
+    1226:	41 52                	push   %r10
+    1228:	48 81 ec 08 02 00 00 	sub    $0x208,%rsp
+    122f:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    1236:	00 00 
+    1238:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+    123c:	31 c0                	xor    %eax,%eax
+    // MMX
+    int qw1[2] = {10, 20};
+    123e:	c7 85 60 ff ff ff 0a 	movl   $0xa,-0xa0(%rbp)
+    1245:	00 00 00 
+    1248:	c7 85 64 ff ff ff 14 	movl   $0x14,-0x9c(%rbp)
+    124f:	00 00 00 
+    int qw2[2] = {3, 7};
+    1252:	c7 85 68 ff ff ff 03 	movl   $0x3,-0x98(%rbp)
+    1259:	00 00 00 
+    125c:	c7 85 6c ff ff ff 07 	movl   $0x7,-0x94(%rbp)
+    1263:	00 00 00 
+    __asm__ volatile (
+    1266:	0f 6f 85 60 ff ff ff 	movq   -0xa0(%rbp),%mm0
+    126d:	0f 6f 8d 68 ff ff ff 	movq   -0x98(%rbp),%mm1
+    1274:	0f fa c1             	psubd  %mm1,%mm0
+    1277:	0f 7f 85 60 ff ff ff 	movq   %mm0,-0xa0(%rbp)
+    127e:	0f 77                	emms
+        "emms"
+        : "=m" (qw1)
+        : "m" (qw1), "m" (qw2)
+        : "%mm0", "%mm1"
+    );
+    cout << "MMX Sub: " << qw1[0] << " " << qw1[1] << endl;
+    1280:	48 8d 05 81 0d 00 00 	lea    0xd81(%rip),%rax        # 2008 <_IO_stdin_used+0x8>
+    1287:	48 89 c6             	mov    %rax,%rsi
+    128a:	48 8d 05 af 2d 00 00 	lea    0x2daf(%rip),%rax        # 4040 <_ZSt4cout@GLIBCXX_3.4>
+    1291:	48 89 c7             	mov    %rax,%rdi
+    1294:	e8 a7 fd ff ff       	call   1040 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    1299:	48 89 c2             	mov    %rax,%rdx
+    129c:	8b 85 60 ff ff ff    	mov    -0xa0(%rbp),%eax
+    12a2:	89 c6                	mov    %eax,%esi
+    12a4:	48 89 d7             	mov    %rdx,%rdi
+    12a7:	e8 c4 fd ff ff       	call   1070 <_ZNSolsEi@plt>
+    12ac:	48 89 c2             	mov    %rax,%rdx
+    12af:	48 8d 05 5c 0d 00 00 	lea    0xd5c(%rip),%rax        # 2012 <_IO_stdin_used+0x12>
+    12b6:	48 89 c6             	mov    %rax,%rsi
+    12b9:	48 89 d7             	mov    %rdx,%rdi
+    12bc:	e8 7f fd ff ff       	call   1040 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    12c1:	48 89 c2             	mov    %rax,%rdx
+    12c4:	8b 85 64 ff ff ff    	mov    -0x9c(%rbp),%eax
+    12ca:	89 c6                	mov    %eax,%esi
+    12cc:	48 89 d7             	mov    %rdx,%rdi
+    12cf:	e8 9c fd ff ff       	call   1070 <_ZNSolsEi@plt>
+    12d4:	48 8b 15 e5 2c 00 00 	mov    0x2ce5(%rip),%rdx        # 3fc0 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@GLIBCXX_3.4>
+    12db:	48 89 d6             	mov    %rdx,%rsi
+    12de:	48 89 c7             	mov    %rax,%rdi
+    12e1:	e8 6a fd ff ff       	call   1050 <_ZNSolsEPFRSoS_E@plt>
+
+    // SSE
+    float c[4] = {9, 16, 25, 36};
+    12e6:	c5 fa 10 05 56 0d 00 	vmovss 0xd56(%rip),%xmm0        # 2044 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x3>
+    12ed:	00 
+    12ee:	c5 fa 11 85 70 ff ff 	vmovss %xmm0,-0x90(%rbp)
+    12f5:	ff 
+    12f6:	c5 fa 10 05 4a 0d 00 	vmovss 0xd4a(%rip),%xmm0        # 2048 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x7>
+    12fd:	00 
+    12fe:	c5 fa 11 85 74 ff ff 	vmovss %xmm0,-0x8c(%rbp)
+    1305:	ff 
+    1306:	c5 fa 10 05 3e 0d 00 	vmovss 0xd3e(%rip),%xmm0        # 204c <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0xb>
+    130d:	00 
+    130e:	c5 fa 11 85 78 ff ff 	vmovss %xmm0,-0x88(%rbp)
+    1315:	ff 
+    1316:	c5 fa 10 05 32 0d 00 	vmovss 0xd32(%rip),%xmm0        # 2050 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0xf>
+    131d:	00 
+    131e:	c5 fa 11 85 7c ff ff 	vmovss %xmm0,-0x84(%rbp)
+    1325:	ff 
+    float d[4] = {3, 4, 5, 6};
+    1326:	c5 fa 10 05 26 0d 00 	vmovss 0xd26(%rip),%xmm0        # 2054 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x13>
+    132d:	00 
+    132e:	c5 fa 11 45 80       	vmovss %xmm0,-0x80(%rbp)
+    1333:	c5 fa 10 05 1d 0d 00 	vmovss 0xd1d(%rip),%xmm0        # 2058 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x17>
+    133a:	00 
+    133b:	c5 fa 11 45 84       	vmovss %xmm0,-0x7c(%rbp)
+    1340:	c5 fa 10 05 14 0d 00 	vmovss 0xd14(%rip),%xmm0        # 205c <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x1b>
+    1347:	00 
+    1348:	c5 fa 11 45 88       	vmovss %xmm0,-0x78(%rbp)
+    134d:	c5 fa 10 05 0b 0d 00 	vmovss 0xd0b(%rip),%xmm0        # 2060 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x1f>
+    1354:	00 
+    1355:	c5 fa 11 45 8c       	vmovss %xmm0,-0x74(%rbp)
+    135a:	48 8d 85 70 ff ff ff 	lea    -0x90(%rbp),%rax
+    1361:	48 89 85 40 fe ff ff 	mov    %rax,-0x1c0(%rbp)
+
+/* Load four SPFP values from P.  The address need not be 16-byte aligned.  */
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_loadu_ps (float const *__P)
+{
+  return *(__m128_u *)__P;
+    1368:	48 8b 85 40 fe ff ff 	mov    -0x1c0(%rbp),%rax
+    136f:	c5 f8 10 00          	vmovups (%rax),%xmm0
+    float res[4];
+    __m128 vec1 = _mm_loadu_ps(c);
+    1373:	c5 f8 29 85 60 fe ff 	vmovaps %xmm0,-0x1a0(%rbp)
+    137a:	ff 
+    137b:	48 8d 45 80          	lea    -0x80(%rbp),%rax
+    137f:	48 89 85 38 fe ff ff 	mov    %rax,-0x1c8(%rbp)
+    1386:	48 8b 85 38 fe ff ff 	mov    -0x1c8(%rbp),%rax
+    138d:	c5 f8 10 00          	vmovups (%rax),%xmm0
+    __m128 vec2 = _mm_loadu_ps(d);
+    1391:	c5 f8 29 85 70 fe ff 	vmovaps %xmm0,-0x190(%rbp)
+    1398:	ff 
+    1399:	c5 f8 28 85 60 fe ff 	vmovaps -0x1a0(%rbp),%xmm0
+    13a0:	ff 
+    13a1:	c5 f8 29 85 90 fe ff 	vmovaps %xmm0,-0x170(%rbp)
+    13a8:	ff 
+    13a9:	c5 f8 28 85 70 fe ff 	vmovaps -0x190(%rbp),%xmm0
+    13b0:	ff 
+    13b1:	c5 f8 29 85 a0 fe ff 	vmovaps %xmm0,-0x160(%rbp)
+    13b8:	ff 
+  return (__m128) ((__v4sf)__A / (__v4sf)__B);
+    13b9:	c5 f8 28 85 90 fe ff 	vmovaps -0x170(%rbp),%xmm0
+    13c0:	ff 
+    13c1:	c5 f8 5e 85 a0 fe ff 	vdivps -0x160(%rbp),%xmm0,%xmm0
+    13c8:	ff 
+    vec1 = _mm_div_ps(vec1, vec2);
+    13c9:	c5 f8 29 85 60 fe ff 	vmovaps %xmm0,-0x1a0(%rbp)
+    13d0:	ff 
+    13d1:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+    13d5:	48 89 85 30 fe ff ff 	mov    %rax,-0x1d0(%rbp)
+    13dc:	c5 f8 28 85 60 fe ff 	vmovaps -0x1a0(%rbp),%xmm0
+    13e3:	ff 
+    13e4:	c5 f8 29 85 80 fe ff 	vmovaps %xmm0,-0x180(%rbp)
+    13eb:	ff 
+
+/* Store four SPFP values.  The address need not be 16-byte aligned.  */
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_storeu_ps (float *__P, __m128 __A)
+{
+  *(__m128_u *)__P = __A;
+    13ec:	c5 f8 28 85 80 fe ff 	vmovaps -0x180(%rbp),%xmm0
+    13f3:	ff 
+    13f4:	48 8b 85 30 fe ff ff 	mov    -0x1d0(%rbp),%rax
+    13fb:	c5 f8 11 00          	vmovups %xmm0,(%rax)
+}
+    13ff:	90                   	nop
+    _mm_storeu_ps(res, vec1);
+    cout << "SSE Div: ";
+    1400:	48 8d 05 0d 0c 00 00 	lea    0xc0d(%rip),%rax        # 2014 <_IO_stdin_used+0x14>
+    1407:	48 89 c6             	mov    %rax,%rsi
+    140a:	48 8d 05 2f 2c 00 00 	lea    0x2c2f(%rip),%rax        # 4040 <_ZSt4cout@GLIBCXX_3.4>
+    1411:	48 89 c7             	mov    %rax,%rdi
+    1414:	e8 27 fc ff ff       	call   1040 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    for (float f : res) cout << f << " ";
+    1419:	48 8d 45 90          	lea    -0x70(%rbp),%rax
+    141d:	48 89 85 20 fe ff ff 	mov    %rax,-0x1e0(%rbp)
+    1424:	48 8b 85 20 fe ff ff 	mov    -0x1e0(%rbp),%rax
+    142b:	48 89 85 18 fe ff ff 	mov    %rax,-0x1e8(%rbp)
+    1432:	48 8b 85 20 fe ff ff 	mov    -0x1e0(%rbp),%rax
+    1439:	48 83 c0 10          	add    $0x10,%rax
+    143d:	48 89 85 28 fe ff ff 	mov    %rax,-0x1d8(%rbp)
+    1444:	eb 49                	jmp    148f <main+0x27a>
+    1446:	48 8b 85 18 fe ff ff 	mov    -0x1e8(%rbp),%rax
+    144d:	c5 fa 10 00          	vmovss (%rax),%xmm0
+    1451:	c5 fa 11 85 14 fe ff 	vmovss %xmm0,-0x1ec(%rbp)
+    1458:	ff 
+    1459:	8b 85 14 fe ff ff    	mov    -0x1ec(%rbp),%eax
+    145f:	c5 f9 6e c0          	vmovd  %eax,%xmm0
+    1463:	48 8d 05 d6 2b 00 00 	lea    0x2bd6(%rip),%rax        # 4040 <_ZSt4cout@GLIBCXX_3.4>
+    146a:	48 89 c7             	mov    %rax,%rdi
+    146d:	e8 be fb ff ff       	call   1030 <_ZNSolsEf@plt>
+    1472:	48 89 c2             	mov    %rax,%rdx
+    1475:	48 8d 05 96 0b 00 00 	lea    0xb96(%rip),%rax        # 2012 <_IO_stdin_used+0x12>
+    147c:	48 89 c6             	mov    %rax,%rsi
+    147f:	48 89 d7             	mov    %rdx,%rdi
+    1482:	e8 b9 fb ff ff       	call   1040 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    1487:	48 83 85 18 fe ff ff 	addq   $0x4,-0x1e8(%rbp)
+    148e:	04 
+    148f:	48 8b 85 18 fe ff ff 	mov    -0x1e8(%rbp),%rax
+    1496:	48 3b 85 28 fe ff ff 	cmp    -0x1d8(%rbp),%rax
+    149d:	75 a7                	jne    1446 <main+0x231>
+    cout << endl;
+    149f:	48 8b 05 1a 2b 00 00 	mov    0x2b1a(%rip),%rax        # 3fc0 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@GLIBCXX_3.4>
+    14a6:	48 89 c6             	mov    %rax,%rsi
+    14a9:	48 8d 05 90 2b 00 00 	lea    0x2b90(%rip),%rax        # 4040 <_ZSt4cout@GLIBCXX_3.4>
+    14b0:	48 89 c7             	mov    %rax,%rdi
+    14b3:	e8 98 fb ff ff       	call   1050 <_ZNSolsEPFRSoS_E@plt>
+
+    // AVX
+    double avx1[4] = {1, 2, 3, 4};
+    14b8:	c5 fb 10 05 a8 0b 00 	vmovsd 0xba8(%rip),%xmm0        # 2068 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x27>
+    14bf:	00 
+    14c0:	c5 fb 11 45 a0       	vmovsd %xmm0,-0x60(%rbp)
+    14c5:	c5 fb 10 05 a3 0b 00 	vmovsd 0xba3(%rip),%xmm0        # 2070 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x2f>
+    14cc:	00 
+    14cd:	c5 fb 11 45 a8       	vmovsd %xmm0,-0x58(%rbp)
+    14d2:	c5 fb 10 05 9e 0b 00 	vmovsd 0xb9e(%rip),%xmm0        # 2078 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x37>
+    14d9:	00 
+    14da:	c5 fb 11 45 b0       	vmovsd %xmm0,-0x50(%rbp)
+    14df:	c5 fb 10 05 99 0b 00 	vmovsd 0xb99(%rip),%xmm0        # 2080 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x3f>
+    14e6:	00 
+    14e7:	c5 fb 11 45 b8       	vmovsd %xmm0,-0x48(%rbp)
+    double avx2[4] = {5, 6, 7, 8};
+    14ec:	c5 fb 10 05 94 0b 00 	vmovsd 0xb94(%rip),%xmm0        # 2088 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x47>
+    14f3:	00 
+    14f4:	c5 fb 11 45 c0       	vmovsd %xmm0,-0x40(%rbp)
+    14f9:	c5 fb 10 05 8f 0b 00 	vmovsd 0xb8f(%rip),%xmm0        # 2090 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x4f>
+    1500:	00 
+    1501:	c5 fb 11 45 c8       	vmovsd %xmm0,-0x38(%rbp)
+    1506:	c5 fb 10 05 8a 0b 00 	vmovsd 0xb8a(%rip),%xmm0        # 2098 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x57>
+    150d:	00 
+    150e:	c5 fb 11 45 d0       	vmovsd %xmm0,-0x30(%rbp)
+    1513:	c5 fb 10 05 85 0b 00 	vmovsd 0xb85(%rip),%xmm0        # 20a0 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x5f>
+    151a:	00 
+    151b:	c5 fb 11 45 d8       	vmovsd %xmm0,-0x28(%rbp)
+    1520:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+    1524:	48 89 85 58 fe ff ff 	mov    %rax,-0x1a8(%rbp)
+}
+
+extern __inline __m256d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm256_loadu_pd (double const *__P)
+{
+  return *(__m256d_u *)__P;
+    152b:	48 8b 85 58 fe ff ff 	mov    -0x1a8(%rbp),%rax
+    1532:	c5 fd 10 00          	vmovupd (%rax),%ymm0
+    __m256d ymm1 = _mm256_loadu_pd(avx1);
+    1536:	c5 fd 29 85 b0 fe ff 	vmovapd %ymm0,-0x150(%rbp)
+    153d:	ff 
+    153e:	48 8d 45 c0          	lea    -0x40(%rbp),%rax
+    1542:	48 89 85 50 fe ff ff 	mov    %rax,-0x1b0(%rbp)
+    1549:	48 8b 85 50 fe ff ff 	mov    -0x1b0(%rbp),%rax
+    1550:	c5 fd 10 00          	vmovupd (%rax),%ymm0
+    __m256d ymm2 = _mm256_loadu_pd(avx2);
+    1554:	c5 fd 29 85 d0 fe ff 	vmovapd %ymm0,-0x130(%rbp)
+    155b:	ff 
+    155c:	c5 fd 28 85 b0 fe ff 	vmovapd -0x150(%rbp),%ymm0
+    1563:	ff 
+    1564:	c5 fd 29 85 10 ff ff 	vmovapd %ymm0,-0xf0(%rbp)
+    156b:	ff 
+    156c:	c5 fd 28 85 d0 fe ff 	vmovapd -0x130(%rbp),%ymm0
+    1573:	ff 
+    1574:	c5 fd 29 85 30 ff ff 	vmovapd %ymm0,-0xd0(%rbp)
+    157b:	ff 
+  return (__m256d) ((__v4df)__A * (__v4df)__B);
+    157c:	c5 fd 28 85 10 ff ff 	vmovapd -0xf0(%rbp),%ymm0
+    1583:	ff 
+    1584:	c5 fd 59 85 30 ff ff 	vmulpd -0xd0(%rbp),%ymm0,%ymm0
+    158b:	ff 
+    ymm1 = _mm256_mul_pd(ymm1, ymm2);
+    158c:	c5 fd 29 85 b0 fe ff 	vmovapd %ymm0,-0x150(%rbp)
+    1593:	ff 
+    1594:	48 8d 45 a0          	lea    -0x60(%rbp),%rax
+    1598:	48 89 85 48 fe ff ff 	mov    %rax,-0x1b8(%rbp)
+    159f:	c5 fd 28 85 b0 fe ff 	vmovapd -0x150(%rbp),%ymm0
+    15a6:	ff 
+    15a7:	c5 fd 29 85 f0 fe ff 	vmovapd %ymm0,-0x110(%rbp)
+    15ae:	ff 
+}
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm256_storeu_pd (double *__P, __m256d __A)
+{
+  *(__m256d_u *)__P = __A;
+    15af:	c5 fd 28 85 f0 fe ff 	vmovapd -0x110(%rbp),%ymm0
+    15b6:	ff 
+    15b7:	48 8b 85 48 fe ff ff 	mov    -0x1b8(%rbp),%rax
+    15be:	c5 fd 11 00          	vmovupd %ymm0,(%rax)
+}
+    15c2:	90                   	nop
+    _mm256_storeu_pd(avx1, ymm1);
+    cout << "AVX Mul: " << avx1[0] << " " << avx1[1] << endl;
+    15c3:	48 8d 05 54 0a 00 00 	lea    0xa54(%rip),%rax        # 201e <_IO_stdin_used+0x1e>
+    15ca:	48 89 c6             	mov    %rax,%rsi
+    15cd:	48 8d 05 6c 2a 00 00 	lea    0x2a6c(%rip),%rax        # 4040 <_ZSt4cout@GLIBCXX_3.4>
+    15d4:	48 89 c7             	mov    %rax,%rdi
+    15d7:	e8 64 fa ff ff       	call   1040 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    15dc:	48 89 c2             	mov    %rax,%rdx
+    15df:	48 8b 45 a0          	mov    -0x60(%rbp),%rax
+    15e3:	c4 e1 f9 6e c0       	vmovq  %rax,%xmm0
+    15e8:	48 89 d7             	mov    %rdx,%rdi
+    15eb:	e8 90 fa ff ff       	call   1080 <_ZNSolsEd@plt>
+    15f0:	48 89 c2             	mov    %rax,%rdx
+    15f3:	48 8d 05 18 0a 00 00 	lea    0xa18(%rip),%rax        # 2012 <_IO_stdin_used+0x12>
+    15fa:	48 89 c6             	mov    %rax,%rsi
+    15fd:	48 89 d7             	mov    %rdx,%rdi
+    1600:	e8 3b fa ff ff       	call   1040 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    1605:	48 89 c2             	mov    %rax,%rdx
+    1608:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+    160c:	c4 e1 f9 6e c0       	vmovq  %rax,%xmm0
+    1611:	48 89 d7             	mov    %rdx,%rdi
+    1614:	e8 67 fa ff ff       	call   1080 <_ZNSolsEd@plt>
+    1619:	48 8b 15 a0 29 00 00 	mov    0x29a0(%rip),%rdx        # 3fc0 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@GLIBCXX_3.4>
+    1620:	48 89 d6             	mov    %rdx,%rsi
+    1623:	48 89 c7             	mov    %rax,%rdi
+    1626:	e8 25 fa ff ff       	call   1050 <_ZNSolsEPFRSoS_E@plt>
+
+    // Inline assembly for square root calculation
+    float sqrt_input = 25.0f;
+    162b:	c5 fa 10 05 19 0a 00 	vmovss 0xa19(%rip),%xmm0        # 204c <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0xb>
+    1632:	00 
+    1633:	c5 fa 11 85 0c fe ff 	vmovss %xmm0,-0x1f4(%rbp)
+    163a:	ff 
+    float sqrt_result;
+    __asm__ volatile (
+    163b:	c5 fa 10 85 0c fe ff 	vmovss -0x1f4(%rbp),%xmm0
+    1642:	ff 
+    1643:	f3 0f 51 c0          	sqrtss %xmm0,%xmm0
+    1647:	c5 fa 11 85 10 fe ff 	vmovss %xmm0,-0x1f0(%rbp)
+    164e:	ff 
+        "sqrtss %1, %0"
+        : "=x" (sqrt_result)
+        : "x" (sqrt_input)
+    );
+    cout << "Square Root: " << sqrt_result << endl;
+    164f:	48 8d 05 d2 09 00 00 	lea    0x9d2(%rip),%rax        # 2028 <_IO_stdin_used+0x28>
+    1656:	48 89 c6             	mov    %rax,%rsi
+    1659:	48 8d 05 e0 29 00 00 	lea    0x29e0(%rip),%rax        # 4040 <_ZSt4cout@GLIBCXX_3.4>
+    1660:	48 89 c7             	mov    %rax,%rdi
+    1663:	e8 d8 f9 ff ff       	call   1040 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    1668:	48 89 c2             	mov    %rax,%rdx
+    166b:	8b 85 10 fe ff ff    	mov    -0x1f0(%rbp),%eax
+    1671:	c5 f9 6e c0          	vmovd  %eax,%xmm0
+    1675:	48 89 d7             	mov    %rdx,%rdi
+    1678:	e8 b3 f9 ff ff       	call   1030 <_ZNSolsEf@plt>
+    167d:	48 8b 15 3c 29 00 00 	mov    0x293c(%rip),%rdx        # 3fc0 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@GLIBCXX_3.4>
+    1684:	48 89 d6             	mov    %rdx,%rsi
+    1687:	48 89 c7             	mov    %rax,%rdi
+    168a:	e8 c1 f9 ff ff       	call   1050 <_ZNSolsEPFRSoS_E@plt>
+
+    // Inline assembly for sine calculation
+    float sin_input = 1.0f; // radians
+    168f:	c5 fa 10 05 11 0a 00 	vmovss 0xa11(%rip),%xmm0        # 20a8 <_ZNSt8__detail30__integer_to_chars_is_unsignedIyEE+0x67>
+    1696:	00 
+    1697:	c5 fa 11 85 04 fe ff 	vmovss %xmm0,-0x1fc(%rbp)
+    169e:	ff 
+    float sin_result;
+    __asm__ volatile (
+    169f:	d9 85 04 fe ff ff    	flds   -0x1fc(%rbp)
+    16a5:	d9 ff                	fcos
+    16a7:	d9 9d 08 fe ff ff    	fstps  -0x1f8(%rbp)
+        "fcos\n\t"
+        "fstps %0"
+        : "=m" (sin_result)
+        : "m" (sin_input)
+    );
+    cout << "Cosine: " << sin_result << endl;
+    16ad:	48 8d 05 82 09 00 00 	lea    0x982(%rip),%rax        # 2036 <_IO_stdin_used+0x36>
+    16b4:	48 89 c6             	mov    %rax,%rsi
+    16b7:	48 8d 05 82 29 00 00 	lea    0x2982(%rip),%rax        # 4040 <_ZSt4cout@GLIBCXX_3.4>
+    16be:	48 89 c7             	mov    %rax,%rdi
+    16c1:	e8 7a f9 ff ff       	call   1040 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    16c6:	48 89 c2             	mov    %rax,%rdx
+    16c9:	8b 85 08 fe ff ff    	mov    -0x1f8(%rbp),%eax
+    16cf:	c5 f9 6e c0          	vmovd  %eax,%xmm0
+    16d3:	48 89 d7             	mov    %rdx,%rdi
+    16d6:	e8 55 f9 ff ff       	call   1030 <_ZNSolsEf@plt>
+    16db:	48 8b 15 de 28 00 00 	mov    0x28de(%rip),%rdx        # 3fc0 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@GLIBCXX_3.4>
+    16e2:	48 89 d6             	mov    %rdx,%rsi
+    16e5:	48 89 c7             	mov    %rax,%rdi
+    16e8:	e8 63 f9 ff ff       	call   1050 <_ZNSolsEPFRSoS_E@plt>
+
+    return 0;
+    16ed:	b8 00 00 00 00       	mov    $0x0,%eax
+    16f2:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
+    16f6:	64 48 2b 14 25 28 00 	sub    %fs:0x28,%rdx
+    16fd:	00 00 
+    16ff:	74 05                	je     1706 <main+0x4f1>
+    1701:	e8 5a f9 ff ff       	call   1060 <__stack_chk_fail@plt>
+    1706:	4c 8b 55 f8          	mov    -0x8(%rbp),%r10
+    170a:	c9                   	leave
+    170b:	49 8d 62 f8          	lea    -0x8(%r10),%rsp
+    170f:	c3                   	ret
+
+Дизассемблирование раздела .fini:
+
+0000000000001710 <_fini>:
+    1710:	f3 0f 1e fa          	endbr64
+    1714:	48 83 ec 08          	sub    $0x8,%rsp
+    1718:	48 83 c4 08          	add    $0x8,%rsp
+    171c:	c3                   	ret

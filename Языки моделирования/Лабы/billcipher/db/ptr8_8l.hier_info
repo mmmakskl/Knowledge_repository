@@ -1,0 +1,77 @@
+|ptr8_8l
+r[0] => cip8_3l:c.r[0]
+r[1] => cip8_3l:c.r[1]
+r[2] => cip8_3l:c.r[2]
+r[3] => cip8_3l:c.r[3]
+r[4] => cip8_3l:c.r[4]
+r[5] => cip8_3l:c.r[5]
+r[6] => cip8_3l:c.r[6]
+r[7] => cip8_3l:c.r[7]
+ei => cip8_3l:c.ei
+q[0] <= q~7.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q~6.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q~5.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q~4.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q~3.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q~2.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q~1.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ptr8_8l|cip8_3l:c
+r[0] => process0~20.IN1
+r[1] => process0~16.IN1
+r[2] => process0~12.IN1
+r[3] => process0~8.IN1
+r[4] => process0~5.IN1
+r[5] => process0~2.IN1
+r[6] => process0~0.IN1
+r[7] => process0~0.IN0
+r[7] => process0~1.DATAB
+ei => a~0.OUTPUTSELECT
+ei => a~1.OUTPUTSELECT
+ei => a~2.OUTPUTSELECT
+ei => g~0.OUTPUTSELECT
+ei => eo~0.OUTPUTSELECT
+a[0] <= a~2.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= a~1.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= a~0.DB_MAX_OUTPUT_PORT_TYPE
+g <= g~0.DB_MAX_OUTPUT_PORT_TYPE
+eo <= eo~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ptr8_8l|dc3s:d
+a[0] => Mux~0.IN10
+a[0] => Mux~1.IN10
+a[0] => Mux~2.IN10
+a[0] => Mux~3.IN10
+a[0] => Mux~4.IN10
+a[0] => Mux~5.IN10
+a[0] => Mux~6.IN10
+a[0] => Mux~7.IN10
+a[1] => Mux~0.IN9
+a[1] => Mux~1.IN9
+a[1] => Mux~2.IN9
+a[1] => Mux~3.IN9
+a[1] => Mux~4.IN9
+a[1] => Mux~5.IN9
+a[1] => Mux~6.IN9
+a[1] => Mux~7.IN9
+a[2] => Mux~0.IN8
+a[2] => Mux~1.IN8
+a[2] => Mux~2.IN8
+a[2] => Mux~3.IN8
+a[2] => Mux~4.IN8
+a[2] => Mux~5.IN8
+a[2] => Mux~6.IN8
+a[2] => Mux~7.IN8
+q[0] <= Mux~7.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= Mux~6.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= Mux~5.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= Mux~4.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= Mux~3.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= Mux~2.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= Mux~1.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= Mux~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

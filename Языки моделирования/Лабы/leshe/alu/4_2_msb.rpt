@@ -1,0 +1,996 @@
+Project Information                                c:\projects\alu\4_2_msb.rpt
+
+MAX+plus II Compiler Report File
+Version 9.01 07/30/98
+Compiled: 12/17/20 15:17:11
+
+Copyright (C) 1988-1998 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input   Output   Bidir         Shareable
+POF       Device          Pins    Pins     Pins     LCs  Expanders  % Utilized
+
+4_2_msb   EPM7064LC44-7    12       6        0      46      15          71 %
+
+User Pins:                 12       6        0  
+
+
+
+Project Information                                c:\projects\alu\4_2_msb.rpt
+
+** FILE HIERARCHY **
+
+
+
+|1digit_summator:49|
+|1digit_summator:62|
+|1digit_summator:61|
+|1digit_summator:59|
+|1digit_summator:58|
+|1digit_summator:57|
+|1digit_summator:56|
+|1digit_summator:55|
+|1digit_summator:54|
+|1digit_summator:53|
+|1digit_summator:52|
+|1digit_summator:51|
+|1digit_summator:50|
+
+
+Device-Specific Information:                       c:\projects\alu\4_2_msb.rpt
+4_2_msb
+
+***** Logic for device '4_2_msb' compiled without errors.
+
+
+
+
+Device: EPM7064LC44-7
+
+Device Options:
+    Turbo Bit                                    = ON
+    Security Bit                                 = OFF
+
+                                         R     
+                                         E     
+                                         S     
+                                         E     
+                                         R     
+                       V  G  G  G  G  G  V     
+              B  A  A  C  N  N  N  N  N  E  A  
+              0  3  2  C  D  D  D  D  D  D  1  
+            -----------------------------------_ 
+          /   6  5  4  3  2  1 44 43 42 41 40   | 
+      B1 |  7                                39 | RESERVED 
+RESERVED |  8                                38 | RESERVED 
+      C1 |  9                                37 | RESERVED 
+     GND | 10                                36 | RESERVED 
+      C3 | 11                                35 | VCC 
+      A0 | 12         EPM7064LC44-7          34 | RESERVED 
+RESERVED | 13                                33 | RESERVED 
+      C0 | 14                                32 | P3 
+     VCC | 15                                31 | P2 
+      P0 | 16                                30 | GND 
+RESERVED | 17                                29 | P1 
+         |_  18 19 20 21 22 23 24 25 26 27 28  _| 
+           ------------------------------------ 
+              D  D  C  R  G  V  P  P  R  R  R  
+              1  0  2  E  N  C  4  5  E  E  E  
+                       S  D  C        S  S  S  
+                       E              E  E  E  
+                       R              R  R  R  
+                       V              V  V  V  
+                       E              E  E  E  
+                       D              D  D  D  
+
+
+N.C. = Not Connected.
+VCC = Dedicated power pin, which MUST be connected to VCC.
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+
+
+Device-Specific Information:                       c:\projects\alu\4_2_msb.rpt
+4_2_msb
+
+** RESOURCE USAGE **
+
+                                                Shareable     External
+Logic Array Block     Logic Cells   I/O Pins    Expanders   Interconnect
+
+A:     LC1 - LC16     0/16(  0%)   7/ 8( 87%)   0/16(  0%)   0/36(  0%) 
+B:    LC17 - LC32    14/16( 87%)   5/ 8( 62%)  14/16( 87%)  21/36( 58%) 
+C:    LC33 - LC48    16/16(100%)   5/ 8( 62%)  14/16( 87%)  31/36( 86%) 
+D:    LC49 - LC64    16/16(100%)   1/ 8( 12%)  16/16(100%)  20/36( 55%) 
+
+
+Total dedicated input pins used:                 0/4      (  0%)
+Total I/O pins used:                            18/32     ( 56%)
+Total logic cells used:                         46/64     ( 71%)
+Total shareable expanders used:                 15/64     ( 23%)
+Total Turbo logic cells used:                   46/64     ( 71%)
+Total shareable expanders not available (n/a):  29/64     ( 45%)
+Average fan-in:                                  8.17
+Total fan-in:                                   376
+
+Total input pins required:                      12
+Total output pins required:                      6
+Total bidirectional pins required:               0
+Total logic cells required:                     46
+Total flipflops required:                        0
+Total product terms required:                  205
+Total logic cells lending parallel expanders:    0
+Total shareable expanders in database:          15
+
+Synthesized logic cells:                        40/  64   ( 62%)
+
+
+
+Device-Specific Information:                       c:\projects\alu\4_2_msb.rpt
+4_2_msb
+
+** INPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  12    (1)  (A)      INPUT               0      0   0    0    0    3   33  A0
+  40   (62)  (D)      INPUT               0      0   0    0    0    0   34  A1
+   4   (16)  (A)      INPUT               0      0   0    0    0    1   31  A2
+   5   (14)  (A)      INPUT               0      0   0    0    0    1   27  A3
+   6   (11)  (A)      INPUT               0      0   0    0    0    4   38  B0
+   7    (8)  (A)      INPUT               0      0   0    0    0    1   38  B1
+  14   (30)  (B)      INPUT               0      0   0    0    0    3   22  C0
+   9    (4)  (A)      INPUT               0      0   0    0    0    0   26  C1
+  20   (19)  (B)      INPUT               0      0   0    0    0    0   20  C2
+  11    (3)  (A)      INPUT               0      0   0    0    0    1   20  C3
+  19   (20)  (B)      INPUT               0      0   0    0    0    3    2  D0
+  18   (21)  (B)      INPUT               0      0   0    0    0    3    4  D1
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                       c:\projects\alu\4_2_msb.rpt
+4_2_msb
+
+** OUTPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  16     25    B     OUTPUT      t        0      0   0    4    0    0    0  P0
+  29     41    C     OUTPUT      t        0      0   0    1    4    0    0  P1
+  31     46    C     OUTPUT      t        1      0   1    5    4    0    0  P2
+  32     48    C     OUTPUT      t        1      0   1    5    7    0    0  P3
+  24     33    C     OUTPUT      t        0      0   0    0    3    0    0  P4
+  25     35    C     OUTPUT      t        5      0   1    5   11    0    0  P5
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                       c:\projects\alu\4_2_msb.rpt
+4_2_msb
+
+** BURIED LOGIC **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+   -     26    B       SOFT    s t        0      0   0    4    0    1    0  |1digit_summator:50|~13~1
+   -     28    B       SOFT    s t        1      0   0    5    0    1    0  |1digit_summator:50|~18~1
+   -     31    B       SOFT    s t        0      0   0    4    0    1    1  |1digit_summator:51|~9~1
+ (20)    19    B       SOFT    s t        0      0   0    4    0    1    0  |1digit_summator:51|~13~1
+   -     44    C       SOFT    s t        0      0   0    6    1    1    0  |1digit_summator:51|~17~1
+   -     43    C       SOFT    s t        1      0   0    6    0    1    0  |1digit_summator:51|~18~1
+   -     29    B       SOFT    s t        0      0   0    2    0    1    0  |1digit_summator:52|~9~1
+   -     47    C       SOFT    s t        0      0   0    6    0    2    0  |1digit_summator:52|~19~1
+ (14)    30    B       SOFT    s t        3      0   1    6    0    3    1  |1digit_summator:54|~17~1
+ (41)    64    D       SOFT    s t        0      0   0    6    0    3    1  |1digit_summator:54|~18~1
+   -     63    D       SOFT    s t        2      0   1   10   10    1    1  |1digit_summator:56|~17~1
+   -     55    D       SOFT    s t        1      0   1   10    0    0    1  |1digit_summator:56|~17~2
+   -     61    D       SOFT    s t        1      0   1   10    0    0    1  |1digit_summator:56|~17~3
+   -     60    D       SOFT    s t        1      0   1   10    0    0    1  |1digit_summator:56|~17~4
+   -     58    D       SOFT    s t        1      0   1   10    0    0    1  |1digit_summator:56|~17~5
+ (33)    49    D       SOFT    s t        1      0   1   10    0    0    1  |1digit_summator:56|~17~6
+ (37)    53    D       SOFT    s t        1      0   1    9    0    0    1  |1digit_summator:56|~17~7
+ (40)    62    D       SOFT    s t        1      0   1    9    0    0    1  |1digit_summator:56|~17~8
+   -     59    D       SOFT    s t        1      0   1    8    0    0    1  |1digit_summator:56|~17~9
+ (39)    57    D       SOFT    s t        1      0   1   10    0    0    1  |1digit_summator:56|~17~10
+ (38)    56    D       SOFT    s t        1      0   1    9    0    0    1  |1digit_summator:56|~17~11
+   -     18    B       SOFT    s t        3      0   0    8    7    2    3  |1digit_summator:56|~18~1
+ (36)    52    D       SOFT    s t        1      0   1    9    0    0    1  |1digit_summator:56|~18~2
+ (34)    51    D       SOFT    s t        1      0   1    9    0    0    1  |1digit_summator:56|~18~3
+   -     50    D       SOFT    s t        1      0   1   10    0    0    1  |1digit_summator:56|~18~4
+ (21)    17    B       SOFT    s t        1      0   1    8    0    0    1  |1digit_summator:56|~18~5
+   -     54    D       SOFT    s t        1      0   1    9    0    0    1  |1digit_summator:56|~18~6
+ (19)    20    B       SOFT    s t        1      0   1    9    0    0    1  |1digit_summator:56|~18~7
+ (17)    24    B       SOFT    s t        1      0   1    8    0    0    1  |1digit_summator:56|~18~8
+   -     42    C       SOFT    s t        1      0   1    6    2    2    0  |1digit_summator:56|~20~1
+ (28)    40    C       SOFT    s t        1      0   1    6    1    0    1  |1digit_summator:56|P~2 (|1digit_summator:56|~20~2)
+   -     23    B       SOFT    s t        0      0   0    4    0    1    0  |1digit_summator:57|~20~1
+   -     38    C       SOFT    s t        1      0   1    7    2    3    1  |1digit_summator:58|~9~1
+ (27)    37    C       SOFT    s t        1      0   1    7    0    0    1  |1digit_summator:58|~9~2
+ (26)    36    C       SOFT    s t        0      0   0    7    0    0    1  |1digit_summator:58|~9~3
+   -     22    B       SOFT    s t        3      0   0    7    3    2    1  |1digit_summator:59|~9~1
+ (18)    21    B       SOFT    s t        1      0   1    8    0    0    1  |1digit_summator:59|~9~2
+   -     39    C       SOFT    s t        1      0   1    7    0    0    1  |1digit_summator:59|~9~3
+   -     34    C       SOFT    s t        1      0   1    7    0    0    1  |1digit_summator:59|~9~4
+   -     45    C       SOFT    s t        0      0   0    5    6    3    0  |1digit_summator:62|~18~1
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                       c:\projects\alu\4_2_msb.rpt
+4_2_msb
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'B':
+
+                                     Logic cells placed in LAB 'B'
+        +--------------------------- LC25 P0
+        | +------------------------- LC26 |1digit_summator:50|~13~1
+        | | +----------------------- LC28 |1digit_summator:50|~18~1
+        | | | +--------------------- LC31 |1digit_summator:51|~9~1
+        | | | | +------------------- LC19 |1digit_summator:51|~13~1
+        | | | | | +----------------- LC29 |1digit_summator:52|~9~1
+        | | | | | | +--------------- LC30 |1digit_summator:54|~17~1
+        | | | | | | | +------------- LC18 |1digit_summator:56|~18~1
+        | | | | | | | | +----------- LC17 |1digit_summator:56|~18~5
+        | | | | | | | | | +--------- LC20 |1digit_summator:56|~18~7
+        | | | | | | | | | | +------- LC24 |1digit_summator:56|~18~8
+        | | | | | | | | | | | +----- LC23 |1digit_summator:57|~20~1
+        | | | | | | | | | | | | +--- LC22 |1digit_summator:59|~9~1
+        | | | | | | | | | | | | | +- LC21 |1digit_summator:59|~9~2
+        | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | |   that feed LAB 'B'
+LC      | | | | | | | | | | | | | | | A B C D |     Logic cells that feed LAB 'B':
+LC17 -> - - - - - - - * - - - - - - | - * - - | <-- |1digit_summator:56|~18~5
+LC20 -> - - - - - - - * - - - - - - | - * - - | <-- |1digit_summator:56|~18~7
+LC24 -> - - - - - - - * - - - - - - | - * - - | <-- |1digit_summator:56|~18~8
+LC21 -> - - - - - - - - - - - - * - | - * - - | <-- |1digit_summator:59|~9~2
+
+Pin
+12   -> * - * - - - * * * * * * * * | - * * * | <-- A0
+40   -> - * * - - - * - * * * - * * | - * * * | <-- A1
+4    -> - * * * * - - - * * * - * * | - * * * | <-- A2
+5    -> - - - * * * - * * * * - - - | - * * * | <-- A3
+6    -> * * * * * - * * * * * * * * | - * * * | <-- B0
+7    -> - * * * * * * * * * * - * * | - * * * | <-- B1
+14   -> * - - - - - * * - * - * - * | - * * * | <-- C0
+9    -> - - - - - - * * - * - - * * | - * * * | <-- C1
+20   -> - - - - - - - * * - * - * * | - * - * | <-- C2
+11   -> - - - - - - - * * * * - - - | - * * * | <-- C3
+19   -> * - - - - - - - - - - * - - | - * * - | <-- D0
+LC52 -> - - - - - - - * - - - - - - | - * - - | <-- |1digit_summator:56|~18~2
+LC51 -> - - - - - - - * - - - - - - | - * - - | <-- |1digit_summator:56|~18~3
+LC50 -> - - - - - - - * - - - - - - | - * - - | <-- |1digit_summator:56|~18~4
+LC54 -> - - - - - - - * - - - - - - | - * - - | <-- |1digit_summator:56|~18~6
+LC39 -> - - - - - - - - - - - - * - | - * - - | <-- |1digit_summator:59|~9~3
+LC34 -> - - - - - - - - - - - - * - | - * - - | <-- |1digit_summator:59|~9~4
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                       c:\projects\alu\4_2_msb.rpt
+4_2_msb
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'C':
+
+                                         Logic cells placed in LAB 'C'
+        +------------------------------- LC41 P1
+        | +----------------------------- LC46 P2
+        | | +--------------------------- LC48 P3
+        | | | +------------------------- LC33 P4
+        | | | | +----------------------- LC35 P5
+        | | | | | +--------------------- LC44 |1digit_summator:51|~17~1
+        | | | | | | +------------------- LC43 |1digit_summator:51|~18~1
+        | | | | | | | +----------------- LC47 |1digit_summator:52|~19~1
+        | | | | | | | | +--------------- LC42 |1digit_summator:56|~20~1
+        | | | | | | | | | +------------- LC40 |1digit_summator:56|P~2
+        | | | | | | | | | | +----------- LC38 |1digit_summator:58|~9~1
+        | | | | | | | | | | | +--------- LC37 |1digit_summator:58|~9~2
+        | | | | | | | | | | | | +------- LC36 |1digit_summator:58|~9~3
+        | | | | | | | | | | | | | +----- LC39 |1digit_summator:59|~9~3
+        | | | | | | | | | | | | | | +--- LC34 |1digit_summator:59|~9~4
+        | | | | | | | | | | | | | | | +- LC45 |1digit_summator:62|~18~1
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'C'
+LC      | | | | | | | | | | | | | | | | | A B C D |     Logic cells that feed LAB 'C':
+LC44 -> - - - - * - - - - - - - - - - - | - - * - | <-- |1digit_summator:51|~17~1
+LC43 -> - - - - * - - - - - - - - - - - | - - * - | <-- |1digit_summator:51|~18~1
+LC47 -> - - - * * - - - - - - - - - - - | - - * - | <-- |1digit_summator:52|~19~1
+LC42 -> - - - * * - - - - - - - - - - - | - - * - | <-- |1digit_summator:56|~20~1
+LC40 -> - - - - - - - - * - - - - - - - | - - * - | <-- |1digit_summator:56|P~2
+LC38 -> * * * - - - - - - - - - - - - * | - - * - | <-- |1digit_summator:58|~9~1
+LC37 -> - - - - - - - - - - * - - - - - | - - * - | <-- |1digit_summator:58|~9~2
+LC36 -> - - - - - - - - - - * - - - - - | - - * - | <-- |1digit_summator:58|~9~3
+LC45 -> - - * * * - - - - - - - - - - - | - - * - | <-- |1digit_summator:62|~18~1
+
+Pin
+12   -> - * * - - * * * * - * * * * * * | - * * * | <-- A0
+40   -> - - - - - * * * * * * * * * * - | - * * * | <-- A1
+4    -> - - - - * * * * * * - - - * * - | - * * * | <-- A2
+5    -> - - - - * * * * * * - - - - - - | - * * * | <-- A3
+6    -> - * * - * * * * * * * * * * * * | - * * * | <-- B0
+7    -> - - - - * * * * * * * * * * * - | - * * * | <-- B1
+14   -> - * * - - - - - - - * * * * * * | - * * * | <-- C0
+9    -> - - - - - - - - - - * * * * * - | - * * * | <-- C1
+11   -> - - - - * - - - - * - - - - - - | - * * * | <-- C3
+19   -> - * * - - - - - - - - - - - - * | - * * - | <-- D0
+18   -> * * * - - - - - - - * * * - - * | - - * - | <-- D1
+LC26 -> - - - - * - - - - - - - - - - - | - - * - | <-- |1digit_summator:50|~13~1
+LC28 -> - - - - * - - - - - - - - - - - | - - * - | <-- |1digit_summator:50|~18~1
+LC31 -> - - - - * * - - - - - - - - - - | - - * - | <-- |1digit_summator:51|~9~1
+LC19 -> - - - - * - - - - - - - - - - - | - - * - | <-- |1digit_summator:51|~13~1
+LC29 -> - - - - * - - - - - - - - - - - | - - * - | <-- |1digit_summator:52|~9~1
+LC30 -> * * * - - - - - - - - - - - - * | - - * - | <-- |1digit_summator:54|~17~1
+LC64 -> * * * - - - - - - - - - - - - * | - - * - | <-- |1digit_summator:54|~18~1
+LC63 -> - - * - - - - - - - - - - - - * | - - * - | <-- |1digit_summator:56|~17~1
+LC18 -> - - * - * - - - * * - - - - - * | - - * - | <-- |1digit_summator:56|~18~1
+LC23 -> * - - - - - - - - - - - - - - - | - - * - | <-- |1digit_summator:57|~20~1
+LC22 -> - * * - - - - - - - - - - - - * | - - * - | <-- |1digit_summator:59|~9~1
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                       c:\projects\alu\4_2_msb.rpt
+4_2_msb
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'D':
+
+                                         Logic cells placed in LAB 'D'
+        +------------------------------- LC64 |1digit_summator:54|~18~1
+        | +----------------------------- LC63 |1digit_summator:56|~17~1
+        | | +--------------------------- LC55 |1digit_summator:56|~17~2
+        | | | +------------------------- LC61 |1digit_summator:56|~17~3
+        | | | | +----------------------- LC60 |1digit_summator:56|~17~4
+        | | | | | +--------------------- LC58 |1digit_summator:56|~17~5
+        | | | | | | +------------------- LC49 |1digit_summator:56|~17~6
+        | | | | | | | +----------------- LC53 |1digit_summator:56|~17~7
+        | | | | | | | | +--------------- LC62 |1digit_summator:56|~17~8
+        | | | | | | | | | +------------- LC59 |1digit_summator:56|~17~9
+        | | | | | | | | | | +----------- LC57 |1digit_summator:56|~17~10
+        | | | | | | | | | | | +--------- LC56 |1digit_summator:56|~17~11
+        | | | | | | | | | | | | +------- LC52 |1digit_summator:56|~18~2
+        | | | | | | | | | | | | | +----- LC51 |1digit_summator:56|~18~3
+        | | | | | | | | | | | | | | +--- LC50 |1digit_summator:56|~18~4
+        | | | | | | | | | | | | | | | +- LC54 |1digit_summator:56|~18~6
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'D'
+LC      | | | | | | | | | | | | | | | | | A B C D |     Logic cells that feed LAB 'D':
+LC55 -> - * - - - - - - - - - - - - - - | - - - * | <-- |1digit_summator:56|~17~2
+LC61 -> - * - - - - - - - - - - - - - - | - - - * | <-- |1digit_summator:56|~17~3
+LC60 -> - * - - - - - - - - - - - - - - | - - - * | <-- |1digit_summator:56|~17~4
+LC58 -> - * - - - - - - - - - - - - - - | - - - * | <-- |1digit_summator:56|~17~5
+LC49 -> - * - - - - - - - - - - - - - - | - - - * | <-- |1digit_summator:56|~17~6
+LC53 -> - * - - - - - - - - - - - - - - | - - - * | <-- |1digit_summator:56|~17~7
+LC62 -> - * - - - - - - - - - - - - - - | - - - * | <-- |1digit_summator:56|~17~8
+LC59 -> - * - - - - - - - - - - - - - - | - - - * | <-- |1digit_summator:56|~17~9
+LC57 -> - * - - - - - - - - - - - - - - | - - - * | <-- |1digit_summator:56|~17~10
+LC56 -> - * - - - - - - - - - - - - - - | - - - * | <-- |1digit_summator:56|~17~11
+
+Pin
+12   -> * * * * * * * * * - * * * * * - | - * * * | <-- A0
+40   -> * * * * * * * * * * * * * * * * | - * * * | <-- A1
+4    -> - * * * * * * * * * * * * * * * | - * * * | <-- A2
+5    -> - * * * * * * * * * * * * * * * | - * * * | <-- A3
+6    -> * * * * * * * * * - * * * * * * | - * * * | <-- B0
+7    -> * * * * * * * * * * * * * * * * | - * * * | <-- B1
+14   -> * * * * * * * - - * * - - - * * | - * * * | <-- C0
+9    -> * * * * * * * * * * * * * * * * | - * * * | <-- C1
+20   -> - * * * * * * * * * * * * * * * | - * - * | <-- C2
+11   -> - * * * * * * * * * * * * * * * | - * * * | <-- C3
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                       c:\projects\alu\4_2_msb.rpt
+4_2_msb
+
+** EQUATIONS **
+
+A0       : INPUT;
+A1       : INPUT;
+A2       : INPUT;
+A3       : INPUT;
+B0       : INPUT;
+B1       : INPUT;
+C0       : INPUT;
+C1       : INPUT;
+C2       : INPUT;
+C3       : INPUT;
+D0       : INPUT;
+D1       : INPUT;
+
+-- Node name is 'P0' 
+-- Equation name is 'P0', location is LC025, type is output.
+ P0      = LCELL( _EQ001 $  C0);
+  _EQ001 =  A0 &  B0 & !D0
+         # !B0 &  D0
+         # !A0 &  D0;
+
+-- Node name is 'P1' 
+-- Equation name is 'P1', location is LC041, type is output.
+ P1      = LCELL( _EQ002 $ !_LC023);
+  _EQ002 =  D1 &  _LC030 &  _LC064
+         # !_LC038;
+
+-- Node name is 'P2' 
+-- Equation name is 'P2', location is LC046, type is output.
+ P2      = LCELL( _EQ003 $  _LC022);
+  _EQ003 =  A0 &  B0 & !C0 &  D0 &  _LC038
+         # !B0 &  C0 &  D0 &  _LC038
+         # !A0 &  C0 &  D0 &  _LC038
+         #  D1 &  _LC030 &  _LC064;
+
+-- Node name is 'P3' 
+-- Equation name is 'P3', location is LC048, type is output.
+ P3      = LCELL( _EQ004 $  GND);
+  _EQ004 =  A0 &  B0 & !C0 &  D0 &  _LC022 &  _LC038 &  _LC045
+         # !B0 &  C0 &  D0 &  _LC022 &  _LC038 &  _LC045
+         # !A0 &  C0 &  D0 &  _LC022 &  _LC038 &  _LC045
+         #  D1 &  _LC022 &  _LC030 &  _LC045 &  _LC064
+         #  _LC018 &  _LC045 &  _LC063;
+
+-- Node name is 'P4' 
+-- Equation name is 'P4', location is LC033, type is output.
+ P4      = LCELL( _EQ005 $  _LC042);
+  _EQ005 =  _LC045 &  _LC047
+         # !_LC045 & !_LC047;
+
+-- Node name is 'P5' 
+-- Equation name is 'P5', location is LC035, type is output.
+ P5      = LCELL( _EQ006 $  GND);
+  _EQ006 =  A2 &  A3 &  B0 &  B1
+         #  C3 &  _LC043 &  _LC044 &  _X001
+         #  A3 &  B1 &  _LC031 &  _X002
+         # !_LC018 &  _X003
+         # !_LC045 &  _X004;
+  _X001  = EXP( _LC019 & !_LC029);
+  _X002  = EXP( _LC026 &  _LC028);
+  _X003  = EXP( _LC019 & !_LC029 &  _LC043);
+  _X004  = EXP(!_LC042 & !_LC047);
+
+-- Node name is '|1digit_summator:50|~13~1' 
+-- Equation name is '_LC026', type is buried 
+-- synthesized logic cell 
+_LC026   = LCELL( _EQ007 $  VCC);
+  _EQ007 =  A1 &  A2 &  B0 &  B1;
+
+-- Node name is '|1digit_summator:50|~18~1' 
+-- Equation name is '_LC028', type is buried 
+-- synthesized logic cell 
+_LC028   = LCELL( _EQ008 $  VCC);
+  _EQ008 =  A0 &  A1 &  B0 &  B1 &  _X005;
+  _X005  = EXP( A1 &  A2 &  B0 &  B1);
+
+-- Node name is '|1digit_summator:51|~9~1' 
+-- Equation name is '_LC031', type is buried 
+-- synthesized logic cell 
+_LC031   = LCELL( _EQ009 $  GND);
+  _EQ009 =  A2 &  B1
+         #  A3 &  B0;
+
+-- Node name is '|1digit_summator:51|~13~1' 
+-- Equation name is '_LC019', type is buried 
+-- synthesized logic cell 
+_LC019   = LCELL( _EQ010 $  VCC);
+  _EQ010 =  A2 &  A3 &  B0 &  B1;
+
+-- Node name is '|1digit_summator:51|~17~1' 
+-- Equation name is '_LC044', type is buried 
+-- synthesized logic cell 
+_LC044   = LCELL( _EQ011 $  _LC031);
+  _EQ011 =  A1 &  A2 &  B0 &  B1 & !_LC031
+         #  A0 &  A1 &  B0 &  B1 & !_LC031
+         # !A1 &  A2 &  A3 &  B0 &  B1;
+
+-- Node name is '|1digit_summator:51|~18~1' 
+-- Equation name is '_LC043', type is buried 
+-- synthesized logic cell 
+_LC043   = LCELL( _EQ012 $  VCC);
+  _EQ012 =  A0 &  A1 &  A3 &  B0 &  B1 &  _X006
+         #  A1 &  A2 &  B0 &  B1 &  _X006;
+  _X006  = EXP( A2 &  A3 &  B0 &  B1);
+
+-- Node name is '|1digit_summator:52|~9~1' 
+-- Equation name is '_LC029', type is buried 
+-- synthesized logic cell 
+_LC029   = LCELL( _EQ013 $  GND);
+  _EQ013 =  A3 &  B1;
+
+-- Node name is '|1digit_summator:52|~19~1' 
+-- Equation name is '_LC047', type is buried 
+-- synthesized logic cell 
+_LC047   = LCELL( _EQ014 $  GND);
+  _EQ014 =  A1 &  A2 & !A3 &  B0 &  B1
+         # !A0 & !A2 &  A3 &  B1
+         # !A1 & !A2 &  A3 &  B1
+         #  A3 & !B0 &  B1;
+
+-- Node name is '|1digit_summator:54|~17~1' 
+-- Equation name is '_LC030', type is buried 
+-- synthesized logic cell 
+_LC030   = LCELL( _EQ015 $  GND);
+  _EQ015 =  A0 &  A1 &  B0 &  B1 &  C1
+         #  A0 &  B1 & !C1 &  _X007
+         #  A1 &  B0 & !C1 &  _X008
+         #  A0 &  B0 &  C0
+         #  C1 &  _X007 &  _X008;
+  _X007  = EXP( A1 &  B0);
+  _X008  = EXP( A0 &  B1);
+
+-- Node name is '|1digit_summator:54|~18~1' 
+-- Equation name is '_LC064', type is buried 
+-- synthesized logic cell 
+_LC064   = LCELL( _EQ016 $  VCC);
+  _EQ016 =  A0 &  A1 &  B0 &  B1 &  C0 &  C1
+         #  A0 &  A1 &  B0 & !B1 &  C0 & !C1
+         #  A0 & !A1 &  B0 &  B1 &  C0 & !C1
+         #  A0 & !A1 &  B0 & !B1 &  C0 &  C1;
+
+-- Node name is '|1digit_summator:56|~20~2' = '|1digit_summator:56|P~2' 
+-- Equation name is '_LC040', type is buried 
+-- synthesized logic cell 
+_LC040   = LCELL( _EQ017 $  GND);
+  _EQ017 = !A1 & !A2 & !A3 &  _LC018
+         # !A3 & !B1 &  _LC018
+         # !A2 & !B0 &  _LC018
+         # !B0 & !B1 &  _LC018
+         # !C3 &  _LC018;
+
+-- Node name is '|1digit_summator:56|~17~1' 
+-- Equation name is '_LC063', type is buried 
+-- synthesized logic cell 
+_LC063   = LCELL( _EQ018 $  _EQ019);
+  _EQ018 = !A1 &  A2 &  A3 &  B0 &  B1 & !C0 & !C1 & !C2 & !C3 & !_LC049 & 
+             !_LC053 & !_LC055 & !_LC056 & !_LC057 & !_LC058 & !_LC059 & 
+             !_LC060 & !_LC061 & !_LC062 &  _X009
+         #  A1 &  A2 &  A3 &  B0 &  B1 & !C0 & !C2 &  C3 & !_LC049 & !_LC053 & 
+             !_LC055 & !_LC056 & !_LC057 & !_LC058 & !_LC059 & !_LC060 & 
+             !_LC061 & !_LC062 &  _X009
+         # !A0 &  A1 &  A2 &  A3 &  B0 &  B1 & !C1 &  C3 & !_LC049 & !_LC053 & 
+             !_LC055 & !_LC056 & !_LC057 & !_LC058 & !_LC059 & !_LC060 & 
+             !_LC061 & !_LC062 &  _X009
+         #  A1 &  A2 &  A3 &  B0 & !C0 & !C1 & !C2 &  C3 & !_LC049 & !_LC053 & 
+             !_LC055 & !_LC056 & !_LC057 & !_LC058 & !_LC059 & !_LC060 & 
+             !_LC061 & !_LC062 &  _X009;
+  _X009  = EXP(!B0 & !B1 & !C3);
+  _EQ019 = !_LC049 & !_LC053 & !_LC055 & !_LC056 & !_LC057 & !_LC058 & 
+             !_LC059 & !_LC060 & !_LC061 & !_LC062 &  _X009;
+  _X009  = EXP(!B0 & !B1 & !C3);
+
+-- Node name is '|1digit_summator:56|~17~2' 
+-- Equation name is '_LC055', type is buried 
+-- synthesized logic cell 
+_LC055   = LCELL( _EQ020 $  GND);
+  _EQ020 =  A0 &  A1 & !A2 & !A3 &  B0 &  B1 & !C2 &  C3
+         #  A0 &  A1 & !A2 & !A3 &  B0 &  B1 & !C1 &  C3
+         #  A0 &  A1 & !A2 & !A3 &  B0 &  B1 & !C0 &  C3
+         #  A0 &  A1 & !A2 &  A3 &  B0 &  B1 & !C2 & !C3
+         #  A0 &  A1 & !A2 &  A3 &  B0 &  B1 & !C1 & !C3;
+
+-- Node name is '|1digit_summator:56|~17~3' 
+-- Equation name is '_LC061', type is buried 
+-- synthesized logic cell 
+_LC061   = LCELL( _EQ021 $  GND);
+  _EQ021 =  A0 &  A1 & !A2 &  A3 &  B0 &  B1 & !C0 & !C3
+         #  A1 &  A2 & !A3 &  B0 &  B1 & !C0 & !C2 & !C3
+         # !A0 &  A1 &  A2 & !A3 &  B0 &  B1 & !C2 & !C3
+         # !A0 &  A1 &  A2 & !A3 &  B0 &  B1 & !C1 & !C3
+         #  A1 &  A2 & !A3 &  B0 &  B1 & !C1 & !C2 & !C3;
+
+-- Node name is '|1digit_summator:56|~17~4' 
+-- Equation name is '_LC060', type is buried 
+-- synthesized logic cell 
+_LC060   = LCELL( _EQ022 $  GND);
+  _EQ022 = !A0 & !A1 &  A2 &  A3 &  B0 &  B1 & !C2 & !C3
+         #  A1 &  A2 & !A3 &  B0 & !C0 & !C1 & !C2 & !C3
+         # !A1 &  A2 & !A3 &  B1 & !C0 & !C1 & !C2 &  C3
+         #  A1 &  A2 &  A3 &  B1 & !C1 & !C2 &  C3
+         # !A0 &  A1 &  A2 &  A3 &  B1 & !C2 &  C3;
+
+-- Node name is '|1digit_summator:56|~17~5' 
+-- Equation name is '_LC058', type is buried 
+-- synthesized logic cell 
+_LC058   = LCELL( _EQ023 $  GND);
+  _EQ023 = !A0 &  A1 &  A3 &  B0 & !C1 & !C2 &  C3
+         # !A0 & !A1 &  A2 & !A3 &  B1 & !C2 &  C3
+         # !A0 & !A2 &  A3 &  B0 & !B1 & !C1 &  C3
+         # !A1 & !A2 &  A3 &  B0 & !B1 & !C1 &  C3
+         # !A1 & !A2 &  A3 &  B0 & !B1 & !C0 &  C3;
+
+-- Node name is '|1digit_summator:56|~17~6' 
+-- Equation name is '_LC049', type is buried 
+-- synthesized logic cell 
+_LC049   = LCELL( _EQ024 $  GND);
+  _EQ024 = !A1 & !A2 &  A3 &  B0 & !C0 & !C1 &  C3
+         # !A1 &  A3 &  B0 & !B1 & !C1 & !C2 &  C3
+         # !A1 &  A3 &  B0 & !B1 & !C0 & !C2 &  C3
+         # !A2 &  A3 &  B0 & !B1 & !C0 & !C1 &  C3
+         # !A0 & !A1 &  A3 &  B0 & !B1 & !C2 &  C3;
+
+-- Node name is '|1digit_summator:56|~17~7' 
+-- Equation name is '_LC053', type is buried 
+-- synthesized logic cell 
+_LC053   = LCELL( _EQ025 $  GND);
+  _EQ025 = !A0 &  A1 & !A3 &  B0 & !C1 & !C2 & !C3
+         # !A0 & !A1 & !A2 &  A3 &  B0 &  C3
+         # !A1 & !A2 &  A3 &  B0 & !C2 &  C3
+         # !A1 &  A2 & !B0 &  B1 & !C2 &  C3
+         # !A0 & !A1 &  A2 & !B0 &  B1 &  C3;
+
+-- Node name is '|1digit_summator:56|~17~8' 
+-- Equation name is '_LC062', type is buried 
+-- synthesized logic cell 
+_LC062   = LCELL( _EQ026 $  GND);
+  _EQ026 = !A0 &  A2 & !B0 &  B1 & !C2 &  C3
+         # !A1 &  A2 & !B0 &  B1 & !C1 &  C3
+         #  A2 & !B0 &  B1 & !C1 & !C2 &  C3
+         # !A2 &  A3 &  B0 & !B1 & !C2 &  C3
+         # !A0 & !A2 & !A3 & !B1 & !C1 & !C3;
+
+-- Node name is '|1digit_summator:56|~17~9' 
+-- Equation name is '_LC059', type is buried 
+-- synthesized logic cell 
+_LC059   = LCELL( _EQ027 $  GND);
+  _EQ027 = !A1 & !A2 & !A3 & !B1 & !C1 & !C3
+         # !A1 & !A2 & !A3 & !B1 & !C0 & !C3
+         # !A1 & !A2 & !A3 & !C0 & !C1 & !C3
+         # !A1 & !A3 & !B1 & !C1 & !C2 & !C3
+         # !A1 & !A3 & !B1 & !C0 & !C2 & !C3;
+
+-- Node name is '|1digit_summator:56|~17~10' 
+-- Equation name is '_LC057', type is buried 
+-- synthesized logic cell 
+_LC057   = LCELL( _EQ028 $  GND);
+  _EQ028 = !A2 & !A3 & !B1 & !C0 & !C1 & !C3
+         # !A0 & !A1 & !A3 & !B1 & !C2 & !C3
+         # !A0 & !A1 & !A2 & !A3 & !C3
+         # !A1 & !A2 & !A3 & !C2 & !C3
+         # !A1 & !A2 & !B0 & !C2 & !C3;
+
+-- Node name is '|1digit_summator:56|~17~11' 
+-- Equation name is '_LC056', type is buried 
+-- synthesized logic cell 
+_LC056   = LCELL( _EQ029 $  GND);
+  _EQ029 = !A0 & !A1 & !A2 & !B0 & !C3
+         # !A0 & !A2 & !B0 & !C2 & !C3
+         # !A1 & !A2 & !B0 & !C1 & !C3
+         # !A2 & !B0 & !C1 & !C2 & !C3
+         # !A2 & !A3 & !B1 & !C2 & !C3;
+
+-- Node name is '|1digit_summator:56|~18~1' 
+-- Equation name is '_LC018', type is buried 
+-- synthesized logic cell 
+_LC018   = LCELL( _EQ030 $  B0);
+  _EQ030 = !_LC017 & !_LC020 & !_LC024 & !_LC050 & !_LC051 & !_LC052 & 
+             !_LC054 &  _X010 &  _X011 &  _X012;
+  _X010  = EXP(!A0 &  B0 & !C1 & !C2);
+  _X011  = EXP( B0 & !C0 & !C1 & !C2);
+  _X012  = EXP(!A3 &  B0 & !B1 & !C3);
+
+-- Node name is '|1digit_summator:56|~18~2' 
+-- Equation name is '_LC052', type is buried 
+-- synthesized logic cell 
+_LC052   = LCELL( _EQ031 $  GND);
+  _EQ031 =  A0 &  A1 & !A2 & !A3 &  B0 &  B1 &  C3
+         #  A0 &  A1 & !A2 &  A3 &  B0 &  B1 & !C3
+         #  A0 & !A2 & !B0 &  B1 &  C1 &  C2 &  C3
+         #  A0 &  A1 & !A2 & !B0 &  B1 &  C1 &  C3
+         #  A0 &  A2 & !B0 &  B1 &  C1 &  C2 & !C3;
+
+-- Node name is '|1digit_summator:56|~18~3' 
+-- Equation name is '_LC051', type is buried 
+-- synthesized logic cell 
+_LC051   = LCELL( _EQ032 $  GND);
+  _EQ032 =  A0 &  A1 &  A2 & !B0 &  B1 &  C1 & !C3
+         #  A1 &  A2 &  A3 &  B0 &  B1 &  C3
+         #  A0 &  A1 & !A2 &  B0 &  B1 & !C2
+         # !A0 &  A1 &  A2 &  B0 &  B1 & !C2
+         #  A0 &  A1 & !A2 &  B0 &  B1 & !C1;
+
+-- Node name is '|1digit_summator:56|~18~4' 
+-- Equation name is '_LC050', type is buried 
+-- synthesized logic cell 
+_LC050   = LCELL( _EQ033 $  GND);
+  _EQ033 =  A0 &  A1 &  B0 &  B1 & !C1 & !C2
+         #  A0 &  A1 & !A2 &  B0 &  B1 & !C0
+         #  A0 &  A1 &  B0 &  B1 & !C0 & !C2
+         # !A0 &  A1 &  A2 &  B0 &  B1 & !C1
+         #  A1 &  A2 & !A3 &  B0 &  B1 & !C3;
+
+-- Node name is '|1digit_summator:56|~18~5' 
+-- Equation name is '_LC017', type is buried 
+-- synthesized logic cell 
+_LC017   = LCELL( _EQ034 $  GND);
+  _EQ034 = !A1 &  A2 &  A3 &  B0 &  B1 & !C3
+         # !A1 &  A2 & !A3 &  B0 &  B1 &  C3
+         #  A1 & !A2 & !B0 &  B1 &  C2 &  C3
+         #  A1 &  A2 & !B0 &  B1 &  C2 & !C3
+         # !A0 & !A2 &  A3 &  B0 &  C3;
+
+-- Node name is '|1digit_summator:56|~18~6' 
+-- Equation name is '_LC054', type is buried 
+-- synthesized logic cell 
+_LC054   = LCELL( _EQ035 $  GND);
+  _EQ035 = !A1 & !A2 &  A3 &  B0 &  C3
+         # !A1 & !A2 &  B0 & !B1 & !C1
+         # !A1 &  B0 & !B1 & !C1 & !C2
+         # !A1 & !A2 &  B0 & !B1 & !C0
+         # !A1 &  B0 & !B1 & !C0 & !C2;
+
+-- Node name is '|1digit_summator:56|~18~7' 
+-- Equation name is '_LC020', type is buried 
+-- synthesized logic cell 
+_LC020   = LCELL( _EQ036 $  GND);
+  _EQ036 = !A0 & !A2 &  B0 & !B1 & !C1
+         # !A2 &  B0 & !B1 & !C0 & !C1
+         # !A1 & !A2 &  B0 & !C0 & !C1
+         # !A0 & !A2 & !A3 &  B0 & !C3
+         # !A1 & !A2 & !A3 &  B0 & !C3;
+
+-- Node name is '|1digit_summator:56|~18~8' 
+-- Equation name is '_LC024', type is buried 
+-- synthesized logic cell 
+_LC024   = LCELL( _EQ037 $  GND);
+  _EQ037 =  A3 &  B0 & !B1 &  C3
+         # !A2 &  B0 & !B1 & !C2
+         # !A1 & !A2 &  B0 & !C2
+         # !A0 & !A1 & !A2 &  B0
+         # !A0 & !A1 &  B0 & !C2;
+
+-- Node name is '|1digit_summator:56|~20~1' 
+-- Equation name is '_LC042', type is buried 
+-- synthesized logic cell 
+_LC042   = LCELL( _EQ038 $ !_LC040);
+  _EQ038 =  A0 &  A1 & !A2 &  A3 &  B1 &  _LC018 & !_LC040
+         # !A1 &  A2 &  A3 &  B0 &  B1 &  _LC018 & !_LC040
+         #  A1 &  A2 & !A3 &  B0 &  _LC018 & !_LC040
+         # !A0 &  A1 & !A3 &  B0 &  _LC018 & !_LC040;
+
+-- Node name is '|1digit_summator:57|~20~1' 
+-- Equation name is '_LC023', type is buried 
+-- synthesized logic cell 
+_LC023   = LCELL( _EQ039 $  GND);
+  _EQ039 =  A0 &  B0 & !C0 &  D0
+         # !B0 &  C0 &  D0
+         # !A0 &  C0 &  D0;
+
+-- Node name is '|1digit_summator:58|~9~1' 
+-- Equation name is '_LC038', type is buried 
+-- synthesized logic cell 
+_LC038   = LCELL( _EQ040 $  _EQ041);
+  _EQ040 =  A0 &  A1 &  B0 &  B1 & !C0 & !C1 & !D1 & !_LC036 & !_LC037
+         #  A0 & !A1 &  B0 & !B1 &  C0 &  C1 & !D1 & !_LC036 & !_LC037
+         #  A1 &  B0 &  B1 &  C0 &  C1 & !D1 & !_LC036 & !_LC037
+         #  A1 &  B0 & !B1 & !C0 &  C1 & !D1 & !_LC036 & !_LC037;
+  _EQ041 = !_LC036 & !_LC037;
+
+-- Node name is '|1digit_summator:58|~9~2' 
+-- Equation name is '_LC037', type is buried 
+-- synthesized logic cell 
+_LC037   = LCELL( _EQ042 $  GND);
+  _EQ042 =  A0 &  A1 & !B1 &  C0 & !C1 & !D1
+         #  A0 & !A1 &  B1 & !C0 &  C1 & !D1
+         # !A1 &  B0 &  B1 &  C0 & !C1 & !D1
+         # !A0 &  A1 &  B0 &  C1 & !D1
+         #  A0 & !B0 &  B1 &  C1 & !D1;
+
+-- Node name is '|1digit_summator:58|~9~3' 
+-- Equation name is '_LC036', type is buried 
+-- synthesized logic cell 
+_LC036   = LCELL( _EQ043 $  GND);
+  _EQ043 = !A1 & !B1 & !C0 & !C1 & !D1
+         # !A0 & !A1 & !C1 & !D1
+         # !B0 & !B1 & !C1 & !D1
+         # !A0 & !B0 & !C1 & !D1;
+
+-- Node name is '|1digit_summator:59|~9~1' 
+-- Equation name is '_LC022', type is buried 
+-- synthesized logic cell 
+_LC022   = LCELL( _EQ044 $ !C2);
+  _EQ044 = !_LC021 & !_LC034 & !_LC039 &  _X013 &  _X014 &  _X015;
+  _X013  = EXP(!A0 & !A1 &  A2 &  B0);
+  _X014  = EXP( A1 & !B0 &  B1 & !C1);
+  _X015  = EXP(!A0 &  A1 & !B0 &  B1);
+
+-- Node name is '|1digit_summator:59|~9~2' 
+-- Equation name is '_LC021', type is buried 
+-- synthesized logic cell 
+_LC021   = LCELL( _EQ045 $  GND);
+  _EQ045 =  A0 &  A1 &  A2 &  B0 &  B1 & !C0 &  C2
+         #  A1 &  A2 &  B0 &  B1 & !C0 &  C1 & !C2
+         #  A0 &  A1 & !A2 &  B0 & !B1 &  C0
+         #  A0 & !A1 & !A2 &  B0 &  B1 &  C0
+         # !A0 &  A2 &  B0 &  B1 &  C1;
+
+-- Node name is '|1digit_summator:59|~9~3' 
+-- Equation name is '_LC039', type is buried 
+-- synthesized logic cell 
+_LC039   = LCELL( _EQ046 $  GND);
+  _EQ046 =  A0 & !A2 &  B0 &  C0 &  C1
+         #  A0 &  A1 &  A2 &  B1 & !C1
+         #  A0 &  A2 &  B0 & !C0 & !C1
+         #  A1 & !A2 &  B0 & !B1 &  C1
+         #  A0 & !A1 & !A2 &  B1 &  C1;
+
+-- Node name is '|1digit_summator:59|~9~4' 
+-- Equation name is '_LC034', type is buried 
+-- synthesized logic cell 
+_LC034   = LCELL( _EQ047 $  GND);
+  _EQ047 =  A0 & !A1 & !B0 &  B1 &  C1
+         # !A1 &  A2 &  B0 & !B1 & !C1
+         # !A1 &  A2 &  B0 & !B1 & !C0
+         # !A0 &  A2 &  B0 & !B1 & !C1
+         # !A0 &  A1 & !A2 &  B1 & !C1;
+
+-- Node name is '|1digit_summator:62|~18~1' 
+-- Equation name is '_LC045', type is buried 
+-- synthesized logic cell 
+_LC045   = LCELL( _EQ048 $  VCC);
+  _EQ048 =  A0 &  B0 & !C0 &  D0 &  _LC018 &  _LC022 &  _LC038 &  _LC063
+         # !B0 &  C0 &  D0 &  _LC018 &  _LC022 &  _LC038 &  _LC063
+         # !A0 &  C0 &  D0 &  _LC018 &  _LC022 &  _LC038 &  _LC063
+         #  D1 &  _LC018 &  _LC022 &  _LC030 &  _LC063 &  _LC064;
+
+
+
+--     Shareable expanders that are duplicated in multiple LABs:
+--     (none)
+
+
+
+
+Project Information                                c:\projects\alu\4_2_msb.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Standard
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'MAX7000' family
+
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      PARALLEL_EXPANDERS                  = off
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SOFT_BUFFER_INSERTION               = on
+      SUBFACTOR_EXTRACTION                = on
+      TURBO_BIT                           = on
+      XOR_SYNTHESIS                       = on
+      IGNORE_SOFT_BUFFERS                 = off
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      One-Hot State Machine Encoding      = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:01
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:01
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 3,063K

@@ -1,0 +1,91 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L2 is AND1~24
+--operation mode is normal
+
+A1L2 = !B4_res & !B3_res & !B2_res & !B1_res;
+
+
+--B2L1 is RStrigger:call2|always0~16
+--operation mode is normal
+
+B2L1 = X # B;
+
+
+--B4_res is RStrigger:call4|res
+--operation mode is normal
+
+B4_res = !B & (B4_res # !B2L1);
+
+
+--B1L1 is RStrigger:call1|always0~16
+--operation mode is normal
+
+B1L1 = X # A;
+
+
+--B3_res is RStrigger:call3|res
+--operation mode is normal
+
+B3_res = !A & (B3_res # !B1L1);
+
+
+--B2L2 is RStrigger:call2|always0~17
+--operation mode is normal
+
+B2L2 = X & B;
+
+
+--B2_res is RStrigger:call2|res
+--operation mode is normal
+
+B2_res = B & (B2_res & B2L2 # !X);
+
+
+--B1L2 is RStrigger:call1|always0~17
+--operation mode is normal
+
+B1L2 = X & A;
+
+
+--B1_res is RStrigger:call1|res
+--operation mode is normal
+
+B1_res = A & (B1_res & B1L2 # !X);
+
+
+--X is X
+--operation mode is input
+
+X = INPUT();
+
+
+--B is B
+--operation mode is input
+
+B = INPUT();
+
+
+--A is A
+--operation mode is input
+
+A = INPUT();
+
+
+--OutResult is OutResult
+--operation mode is output
+
+OutResult = OUTPUT(A1L2);
+
+

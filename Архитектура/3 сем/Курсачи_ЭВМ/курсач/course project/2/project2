@@ -1,0 +1,60 @@
+.MODEL tiny 
+.STACK 100h
+
+.DATA
+txt db 10,13,"Hello there. Here is the key $",10,13
+txt_ascii db 10,13,"ASCII: $",10,13
+txt_scan db 10,13, "Scan: $", 10,13
+
+display_string macro string
+  push ax
+  push dx
+  mov ah, 09h
+  mov dx, offset string
+  int 21h
+  pop dx
+  pop ax
+endm
+
+display_char macro char
+  push ax
+  push dx
+  mov ah, 2
+  mov dl, char
+  int 21h
+  pop dx
+  pop ax
+ENDM
+
+read_key_codes macro
+  xor ax,ax
+  int 16h
+ENDM 
+
+to_decimal
+  push ax
+  push bx
+  push dx
+  
+
+.CODE
+mov ax, @Data
+mov ds,ax   
+
+read_key_codes
+
+mov cx,ax
+
+display_string txt
+
+display_string txt_scan
+
+display_char ch
+
+display_string txt_ascii
+
+display_char cl
+
+mov ah, 4ch
+int 21h
+END

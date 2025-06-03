@@ -1,0 +1,117 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity dfs is
+    Port (
+        clk         : in  STD_LOGIC;
+        rst         : in  STD_LOGIC;
+        start       : in  STD_LOGIC;
+        start_node  : in  STD_LOGIC_VECTOR(2 downto 0);
+        done        : out STD_LOGIC;
+        visit       : out STD_LOGIC_VECTOR(4 downto 0)
+    );
+end dfs;
+
+architecture Behavioral of dfs is
+
+    type state_type is (
+        IDLE,
+        PUSH,            
+        CHECK_NEIGHBORS, 
+        POP,             
+        FINISH           
+    );
+    signal state      : state_type := IDLE;
+
+    type matrix_type is array(0 to 4, 0 to 4) of STD_LOGIC;
+    constant adj_matrix : matrix_type := (
+        -- 0   1   2   3   4
+        ( '0','1','1','0','0' ), -- ??????? 0
+        ( '1','0','0','1','0' ), -- ??????? 1
+        ( '1','0','0','1','1' ), -- ??????? 2
+        ( '0','1','1','0','0' ), -- ??????? 3
+        ( '0','0','1','0','0' )  -- ??????? 4
+    );
+
+    type stack_type is array(0 to 4) of STD_LOGIC_VECTOR(2 downto 0);
+    signal stack    : stack_type;
+    signal sp       : integer range 0 to 5 := 0; -- stack pointer (0..5)
+
+    signal current  : STD_LOGIC_VECTOR(2 downto 0) := (others => '0');
+    signal neighbor : integer range 0 to 5 := 0;
+
+    signal visited  : STD_LOGIC_VECTOR(4 downto 0) := (others => '0');
+    signal done_reg : STD_LOGIC := '0';
+
+begin
+    process(clk, rst)
+    begin
+        if rst = '1' then
+            state      <= IDLE;
+            visited    <= (others => '0');
+            done_reg   <= '0';
+            sp         <= 0;
+            neighbor   <= 0;
+            current    <= (others => '0');
+        elsif rising_edge(clk) then
+            case state is
+                when IDLE =>
+                    if start = '1' then
+                        stack(0) <= start_node;
+                        sp       <= 1;
+                        visited  <= (others => '0');
+                        done_reg <= '0';
+                        neighbor <= 0;
+                        state    <= PUSH;
+                    end if;
+                when PUSH =>
+                    current <= stack(sp - 1);
+                    visited(to_integer(unsigned(stack(sp - 1)))) <= '1';
+                    neighbor <= 0;
+                    state <= CHECK_NEIGHBORS;
+                when CHECK_NEIGHBORS =>
+                    if neighbor < 5 then
+                        if (adj_matrix(to_integer(unsigned(current)), neighbor) = '1') 
+                           and (visited(neighbor) = '0') then
+                            if sp < 5 then
+                                stack(sp) <= std_logic_vector(to_unsigned(neighbor, 3));
+                                sp        <= sp + 1;
+                                state     <= PUSH;
+                            else
+                                state     <= FINISH;
+                            end if;
+
+                        else
+                            neighbor <= neighbor + 1;
+                        end if;
+                    else
+                        state <= POP;
+                    end if;
+                when POP =>
+                    if sp > 0 then
+                        sp <= sp - 1;
+                        if sp = 0 then
+                            state <= FINISH;
+                        else
+                            current  <= stack(sp - 1);
+                            neighbor <= 0;
+                            state    <= CHECK_NEIGHBORS;
+                        end if;
+                    else
+                        state <= FINISH;
+                    end if;
+                when FINISH =>
+                    done_reg <= '1';
+                    state    <= IDLE;
+
+                when others =>
+                    state <= IDLE;
+
+            end case;
+        end if;
+    end process;
+    visit <= visited;
+    done  <= done_reg;
+
+end Behavioral;

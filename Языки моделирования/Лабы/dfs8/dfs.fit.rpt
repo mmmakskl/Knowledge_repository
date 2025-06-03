@@ -1,0 +1,1606 @@
+Fitter report for dfs
+Thu Apr 29 13:45:51 2021
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Fitter Device Options
+  5. Fitter Equations
+  6. Pin-Out File
+  7. Fitter Resource Usage Summary
+  8. Input Pins
+  9. Output Pins
+ 10. I/O Bank Usage
+ 11. All Package Pins
+ 12. Output Pin Default Load For Reported TCO
+ 13. Fitter Resource Utilization by Entity
+ 14. Delay Chain Summary
+ 15. Pad To Core Delay Chain Fanout
+ 16. Control Signals
+ 17. Global & Other Fast Signals
+ 18. Non-Global High Fan-Out Signals
+ 19. Interconnect Usage Summary
+ 20. LAB Logic Elements
+ 21. LAB-wide Signals
+ 22. LAB Signals Sourced
+ 23. LAB Signals Sourced Out
+ 24. LAB Distinct Inputs
+ 25. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------+
+; Fitter Summary                                                   ;
++-----------------------+------------------------------------------+
+; Fitter Status         ; Successful - Thu Apr 29 13:45:51 2021    ;
+; Quartus II Version    ; 5.0 Build 148 04/26/2005 SJ Full Version ;
+; Revision Name         ; dfs                                      ;
+; Top-level Entity Name ; dfs                                      ;
+; Family                ; Cyclone                                  ;
+; Device                ; EP1C4F324C6                              ;
+; Timing Models         ; Final                                    ;
+; Total logic elements  ; 386 / 4,000 ( 9 % )                      ;
+; Total pins            ; 151 / 249 ( 60 % )                       ;
+; Total virtual pins    ; 0                                        ;
+; Total memory bits     ; 0 / 78,336 ( 0 % )                       ;
+; Total PLLs            ; 0 / 2 ( 0 % )                            ;
++-----------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                                      ;
++----------------------------------------------------+--------------------------------+--------------------------------+
+; Option                                             ; Setting                        ; Default Value                  ;
++----------------------------------------------------+--------------------------------+--------------------------------+
+; Device                                             ; AUTO                           ;                                ;
+; Use smart compilation                              ; Off                            ; Off                            ;
+; Placement Effort Multiplier                        ; 1.0                            ; 1.0                            ;
+; Router Effort Multiplier                           ; 1.0                            ; 1.0                            ;
+; Optimize Hold Timing                               ; IO Paths and Minimum TPD Paths ; IO Paths and Minimum TPD Paths ;
+; Optimize Fast-Corner Timing                        ; Off                            ; Off                            ;
+; Optimize Timing                                    ; Normal compilation             ; Normal compilation             ;
+; Optimize IOC Register Placement for Timing         ; On                             ; On                             ;
+; Limit to One Fitting Attempt                       ; Off                            ; Off                            ;
+; Final Placement Optimizations                      ; Automatically                  ; Automatically                  ;
+; Fitter Initial Placement Seed                      ; 1                              ; 1                              ;
+; Slow Slew Rate                                     ; Off                            ; Off                            ;
+; PCI I/O                                            ; Off                            ; Off                            ;
+; Weak Pull-Up Resistor                              ; Off                            ; Off                            ;
+; Enable Bus-Hold Circuitry                          ; Off                            ; Off                            ;
+; Auto Global Memory Control Signals                 ; Off                            ; Off                            ;
+; Auto Packed Registers -- Cyclone                   ; Auto                           ; Auto                           ;
+; Auto Delay Chains                                  ; On                             ; On                             ;
+; Auto Merge PLLs                                    ; On                             ; On                             ;
+; Perform Physical Synthesis for Combinational Logic ; Off                            ; Off                            ;
+; Perform Register Duplication                       ; Off                            ; Off                            ;
+; Perform Register Retiming                          ; Off                            ; Off                            ;
+; Fitter Effort                                      ; Auto Fit                       ; Auto Fit                       ;
+; Physical Synthesis Effort Level                    ; Normal                         ; Normal                         ;
+; Logic Cell Insertion - Logic Duplication           ; Auto                           ; Auto                           ;
+; Auto Register Duplication                          ; Off                            ; Off                            ;
+; Auto Global Clock                                  ; On                             ; On                             ;
+; Auto Global Register Control Signals               ; On                             ; On                             ;
++----------------------------------------------------+--------------------------------+--------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Fitter Device Options                                                   ;
++----------------------------------------------+--------------------------+
+; Option                                       ; Setting                  ;
++----------------------------------------------+--------------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                      ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                      ;
+; Enable device-wide output enable (DEV_OE)    ; Off                      ;
+; Enable INIT_DONE output                      ; Off                      ;
+; Configuration scheme                         ; Active Serial            ;
+; Error detection CRC                          ; Off                      ;
+; Reserve all unused pins                      ; As output driving ground ;
+; Base pin-out file on sameframe device        ; Off                      ;
++----------------------------------------------+--------------------------+
+
+
++------------------+
+; Fitter Equations ;
++------------------+
+The equations can be found in C:/altera/quartus50/dfs8/dfs.fit.eqn.
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in C:/altera/quartus50/dfs8/dfs.pin.
+
+
++-------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                     ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Total logic elements                        ; 386 / 4,000 ( 9 % ) ;
+;     -- Combinational with no register       ; 251                 ;
+;     -- Register only                        ; 56                  ;
+;     -- Combinational with a register        ; 79                  ;
+;                                             ;                     ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 259                 ;
+;     -- 3 input functions                    ; 44                  ;
+;     -- 2 input functions                    ; 17                  ;
+;     -- 1 input functions                    ; 29                  ;
+;     -- 0 input functions                    ; 37                  ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 380                 ;
+;     -- arithmetic mode                      ; 6                   ;
+;     -- qfbk mode                            ; 32                  ;
+;     -- register cascade mode                ; 0                   ;
+;     -- synchronous clear/load mode          ; 77                  ;
+;     -- asynchronous clear/load mode         ; 71                  ;
+;                                             ;                     ;
+; Total LABs                                  ; 43 / 400 ( 10 % )   ;
+; Logic elements in carry chains              ; 8                   ;
+; User inserted logic elements                ; 0                   ;
+; Virtual pins                                ; 0                   ;
+; I/O pins                                    ; 151 / 249 ( 60 % )  ;
+;     -- Clock pins                           ; 2 / 2 ( 100 % )     ;
+; Global signals                              ; 2                   ;
+; M4Ks                                        ; 0 / 17 ( 0 % )      ;
+; Total memory bits                           ; 0 / 78,336 ( 0 % )  ;
+; Total RAM block bits                        ; 0 / 78,336 ( 0 % )  ;
+; Global clocks                               ; 2 / 8 ( 25 % )      ;
+; Maximum fan-out node                        ; clk                 ;
+; Maximum fan-out                             ; 135                 ;
+; Total fan-out                               ; 1657                ;
+; Average fan-out                             ; 3.07                ;
++---------------------------------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                                 ;
++----------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Name                 ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++----------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; adjacency_matrix[0]  ; F5    ; 1        ; 0            ; 15           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[10] ; C8    ; 2        ; 8            ; 18           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[11] ; H3    ; 1        ; 0            ; 13           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[12] ; D9    ; 2        ; 10           ; 18           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[13] ; B13   ; 2        ; 24           ; 18           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[14] ; A7    ; 2        ; 6            ; 18           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[15] ; D10   ; 2        ; 14           ; 18           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[16] ; D8    ; 2        ; 8            ; 18           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[17] ; V12   ; 4        ; 22           ; 0            ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[18] ; F3    ; 1        ; 0            ; 15           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[19] ; D6    ; 2        ; 6            ; 18           ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[1]  ; E5    ; 1        ; 0            ; 16           ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[20] ; F7    ; 1        ; 0            ; 14           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[21] ; U11   ; 4        ; 20           ; 0            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[22] ; G8    ; 2        ; 4            ; 18           ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[23] ; C9    ; 2        ; 10           ; 18           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[24] ; G6    ; 1        ; 0            ; 14           ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[25] ; H13   ; 3        ; 29           ; 12           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[26] ; A12   ; 2        ; 22           ; 18           ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[27] ; D11   ; 2        ; 20           ; 18           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[28] ; C12   ; 2        ; 22           ; 18           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[29] ; R11   ; 4        ; 20           ; 0            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[2]  ; A8    ; 2        ; 8            ; 18           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[30] ; G13   ; 3        ; 29           ; 14           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[31] ; H16   ; 3        ; 29           ; 13           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[32] ; B10   ; 2        ; 14           ; 18           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[33] ; A11   ; 2        ; 20           ; 18           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[34] ; G3    ; 1        ; 0            ; 14           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[35] ; D7    ; 2        ; 6            ; 18           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[36] ; C11   ; 2        ; 20           ; 18           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[37] ; G1    ; 1        ; 0            ; 15           ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[38] ; R12   ; 4        ; 22           ; 0            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[39] ; D3    ; 1        ; 0            ; 17           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[3]  ; E3    ; 1        ; 0            ; 16           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[40] ; G16   ; 3        ; 29           ; 14           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[41] ; C13   ; 2        ; 22           ; 18           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[42] ; G2    ; 1        ; 0            ; 15           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[43] ; A6    ; 2        ; 4            ; 18           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[44] ; J15   ; 3        ; 29           ; 9            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[45] ; A9    ; 2        ; 10           ; 18           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[46] ; A13   ; 2        ; 24           ; 18           ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[47] ; C5    ; 2        ; 2            ; 18           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[48] ; F11   ; 2        ; 26           ; 18           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[49] ; A4    ; 2        ; 2            ; 18           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[4]  ; B3    ; 2        ; 2            ; 18           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[50] ; B11   ; 2        ; 20           ; 18           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[51] ; H14   ; 3        ; 29           ; 13           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[52] ; D13   ; 2        ; 22           ; 18           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[53] ; F10   ; 2        ; 24           ; 18           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[54] ; J16   ; 3        ; 29           ; 8            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[55] ; C2    ; 1        ; 0            ; 17           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[56] ; B12   ; 2        ; 22           ; 18           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[57] ; F4    ; 1        ; 0            ; 15           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[58] ; G14   ; 3        ; 29           ; 14           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[59] ; G4    ; 1        ; 0            ; 14           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[5]  ; H6    ; 1        ; 0            ; 11           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[60] ; E8    ; 2        ; 8            ; 18           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[61] ; H2    ; 1        ; 0            ; 13           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[62] ; C6    ; 2        ; 4            ; 18           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[63] ; A10   ; 2        ; 14           ; 18           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[64] ; C14   ; 2        ; 26           ; 18           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[65] ; F8    ; 2        ; 4            ; 18           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[66] ; C10   ; 2        ; 18           ; 18           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[67] ; G15   ; 3        ; 29           ; 14           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[68] ; H18   ; 3        ; 29           ; 13           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[69] ; U12   ; 4        ; 22           ; 0            ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[6]  ; C4    ; 2        ; 2            ; 18           ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[70] ; G5    ; 1        ; 0            ; 14           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[71] ; B7    ; 2        ; 6            ; 18           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[72] ; B5    ; 2        ; 4            ; 18           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[73] ; G17   ; 3        ; 29           ; 14           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[74] ; H17   ; 3        ; 29           ; 13           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[75] ; E10   ; 2        ; 12           ; 18           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[76] ; G10   ; 2        ; 24           ; 18           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[77] ; H5    ; 1        ; 0            ; 13           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[78] ; F1    ; 1        ; 0            ; 16           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[79] ; H15   ; 3        ; 29           ; 13           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[7]  ; J14   ; 3        ; 29           ; 11           ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[80] ; B6    ; 2        ; 4            ; 18           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[81] ; T11   ; 4        ; 20           ; 0            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[82] ; E6    ; 2        ; 6            ; 18           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[83] ; E7    ; 2        ; 8            ; 18           ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[84] ; C3    ; 1        ; 0            ; 17           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[85] ; G18   ; 3        ; 29           ; 14           ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[86] ; H1    ; 1        ; 0            ; 13           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[87] ; D12   ; 2        ; 22           ; 18           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[88] ; F18   ; 3        ; 29           ; 15           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[89] ; E11   ; 2        ; 18           ; 18           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[8]  ; B9    ; 2        ; 10           ; 18           ; 5           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[90] ; F9    ; 2        ; 12           ; 18           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[91] ; J13   ; 3        ; 29           ; 12           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[92] ; D4    ; 1        ; 0            ; 17           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[93] ; D1    ; 1        ; 0            ; 16           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[94] ; E4    ; 1        ; 0            ; 16           ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[95] ; G9    ; 2        ; 12           ; 18           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[96] ; H4    ; 1        ; 0            ; 13           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[97] ; C7    ; 2        ; 6            ; 18           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[98] ; E2    ; 1        ; 0            ; 16           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[99] ; D5    ; 2        ; 2            ; 18           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; adjacency_matrix[9]  ; B4    ; 2        ; 2            ; 18           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; clk                  ; J4    ; 1        ; 0            ; 8            ; 1           ; 135                   ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; reset                ; J3    ; 1        ; 0            ; 9            ; 1           ; 71                    ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; start_node[0]        ; T7    ; 4        ; 8            ; 0            ; 5           ; 14                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; start_node[1]        ; V8    ; 4        ; 8            ; 0            ; 2           ; 14                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; start_node[2]        ; U8    ; 4        ; 8            ; 0            ; 3           ; 14                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
+; start_node[3]        ; B8    ; 2        ; 8            ; 18           ; 3           ; 14                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; Fitter               ;
++----------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                            ;
++---------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+-------------+
+; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load        ;
++---------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+-------------+
+; done          ; R6    ; 4        ; 6            ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result0[0]    ; L2    ; 1        ; 0            ; 5            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result0[1]    ; L3    ; 1        ; 0            ; 5            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result0[2]    ; N5    ; 1        ; 0            ; 3            ; 4           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result0[3]    ; L7    ; 1        ; 0            ; 6            ; 5           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result1[0]    ; F2    ; 1        ; 0            ; 15           ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result1[1]    ; K5    ; 1        ; 0            ; 7            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result1[2]    ; K4    ; 1        ; 0            ; 7            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result1[3]    ; F6    ; 1        ; 0            ; 14           ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result2[0]    ; L4    ; 1        ; 0            ; 5            ; 3           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result2[1]    ; V9    ; 4        ; 10           ; 0            ; 4           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result2[2]    ; M6    ; 1        ; 0            ; 3            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result2[3]    ; P7    ; 4        ; 6            ; 0            ; 4           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result3[0]    ; M4    ; 1        ; 0            ; 4            ; 5           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result3[1]    ; M3    ; 1        ; 0            ; 4            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result3[2]    ; R8    ; 4        ; 8            ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result3[3]    ; L5    ; 1        ; 0            ; 5            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result4[0]    ; V7    ; 4        ; 6            ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result4[1]    ; R5    ; 4        ; 4            ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result4[2]    ; R4    ; 4        ; 4            ; 0            ; 3           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result4[3]    ; U7    ; 4        ; 6            ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result5[0]    ; V11   ; 4        ; 20           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result5[1]    ; P10   ; 4        ; 18           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result5[2]    ; V10   ; 4        ; 14           ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result5[3]    ; T10   ; 4        ; 14           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result6[0]    ; N8    ; 4        ; 4            ; 0            ; 4           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result6[1]    ; N1    ; 1        ; 0            ; 3            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result6[2]    ; R7    ; 4        ; 8            ; 0            ; 4           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result6[3]    ; M5    ; 1        ; 0            ; 4            ; 4           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result7[0]    ; R10   ; 4        ; 18           ; 0            ; 3           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result7[1]    ; T6    ; 4        ; 6            ; 0            ; 3           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result7[2]    ; P9    ; 4        ; 12           ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result7[3]    ; U10   ; 4        ; 14           ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result8[0]    ; M2    ; 1        ; 0            ; 4            ; 3           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result8[1]    ; V6    ; 4        ; 4            ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result8[2]    ; M1    ; 1        ; 0            ; 5            ; 4           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result8[3]    ; T8    ; 4        ; 8            ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result9[0]    ; U9    ; 4        ; 10           ; 0            ; 5           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result9[1]    ; L6    ; 1        ; 0            ; 6            ; 4           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result9[2]    ; N7    ; 1        ; 0            ; 3            ; 3           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result9[3]    ; P6    ; 4        ; 6            ; 0            ; 5           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result_len[0] ; M9    ; 4        ; 10           ; 0            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result_len[1] ; R9    ; 4        ; 10           ; 0            ; 3           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result_len[2] ; N9    ; 4        ; 10           ; 0            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
+; result_len[3] ; T9    ; 4        ; 10           ; 0            ; 2           ; no              ; no                     ; no            ; no             ; no              ; no         ; no            ; no       ; Off          ; LVTTL        ; 24mA             ; Off         ; Fitter               ; Unspecified ;
++---------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+-------------+
+
+
++------------------------------------------------------------+
+; I/O Bank Usage                                             ;
++----------+------------------+---------------+--------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
++----------+------------------+---------------+--------------+
+; 1        ; 49 / 63 ( 77 % ) ; 3.3V          ; --           ;
+; 2        ; 52 / 61 ( 85 % ) ; 3.3V          ; --           ;
+; 3        ; 17 / 64 ( 26 % ) ; 3.3V          ; --           ;
+; 4        ; 35 / 61 ( 57 % ) ; 3.3V          ; --           ;
++----------+------------------+---------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                                         ;
++----------+------------+----------+----------------------+--------+--------------+---------+------------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage       ; Dir.   ; I/O Standard ; Voltage ; I/O Type   ; User Assignment ;
++----------+------------+----------+----------------------+--------+--------------+---------+------------+-----------------+
+; A1       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; A2       ;            ;          ; VCCINT               ; power  ;              ; 1.5V    ; --         ;                 ;
+; A3       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; A4       ; 310        ; 2        ; adjacency_matrix[49] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; A5       ;            ; 2        ; VCCIO2               ; power  ;              ; 3.3V    ; --         ;                 ;
+; A6       ; 304        ; 2        ; adjacency_matrix[43] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; A7       ; 296        ; 2        ; adjacency_matrix[14] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; A8       ; 292        ; 2        ; adjacency_matrix[2]  ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; A9       ; 288        ; 2        ; adjacency_matrix[45] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; A10      ; 278        ; 2        ; adjacency_matrix[63] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; A11      ; 271        ; 2        ; adjacency_matrix[33] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; A12      ; 267        ; 2        ; adjacency_matrix[26] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; A13      ; 261        ; 2        ; adjacency_matrix[46] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; A14      ;            ; 2        ; VCCIO2               ; power  ;              ; 3.3V    ; --         ;                 ;
+; A15      ; 247        ; 2        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; A16      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; A17      ;            ;          ; VCCINT               ; power  ;              ; 1.5V    ; --         ;                 ;
+; A18      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; B1       ;            ;          ; VCCINT               ; power  ;              ; 1.5V    ; --         ;                 ;
+; B2       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; B3       ; 312        ; 2        ; adjacency_matrix[4]  ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; B4       ; 311        ; 2        ; adjacency_matrix[9]  ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; B5       ; 305        ; 2        ; adjacency_matrix[72] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; B6       ; 302        ; 2        ; adjacency_matrix[80] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; B7       ; 297        ; 2        ; adjacency_matrix[71] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; B8       ; 293        ; 2        ; start_node[3]        ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; B9       ; 289        ; 2        ; adjacency_matrix[8]  ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; B10      ; 277        ; 2        ; adjacency_matrix[32] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; B11      ; 270        ; 2        ; adjacency_matrix[50] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; B12      ; 266        ; 2        ; adjacency_matrix[56] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; B13      ; 260        ; 2        ; adjacency_matrix[13] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; B14      ; 252        ; 2        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; B15      ; 246        ; 2        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; B16      ; 245        ; 2        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; B17      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; B18      ;            ;          ; VCCINT               ; power  ;              ; 1.5V    ; --         ;                 ;
+; C1       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; C2       ; 1          ; 1        ; adjacency_matrix[55] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; C3       ; 0          ; 1        ; adjacency_matrix[84] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; C4       ; 313        ; 2        ; adjacency_matrix[6]  ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; C5       ; 308        ; 2        ; adjacency_matrix[47] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; C6       ; 303        ; 2        ; adjacency_matrix[62] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; C7       ; 299        ; 2        ; adjacency_matrix[97] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; C8       ; 291        ; 2        ; adjacency_matrix[10] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; C9       ; 287        ; 2        ; adjacency_matrix[23] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; C10      ; 275        ; 2        ; adjacency_matrix[66] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; C11      ; 268        ; 2        ; adjacency_matrix[36] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; C12      ; 265        ; 2        ; adjacency_matrix[28] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; C13      ; 263        ; 2        ; adjacency_matrix[41] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; C14      ; 253        ; 2        ; adjacency_matrix[64] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; C15      ; 248        ; 2        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; C16      ; 244        ; 2        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; C17      ; 242        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; C18      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; D1       ; 5          ; 1        ; adjacency_matrix[93] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; D2       ; 3          ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; D3       ; 2          ; 1        ; adjacency_matrix[39] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; D4       ; 4          ; 1        ; adjacency_matrix[92] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; D5       ; 309        ; 2        ; adjacency_matrix[99] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; D6       ; 301        ; 2        ; adjacency_matrix[19] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; D7       ; 298        ; 2        ; adjacency_matrix[35] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; D8       ; 290        ; 2        ; adjacency_matrix[16] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; D9       ; 286        ; 2        ; adjacency_matrix[12] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; D10      ; 276        ; 2        ; adjacency_matrix[15] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; D11      ; 269        ; 2        ; adjacency_matrix[27] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; D12      ; 264        ; 2        ; adjacency_matrix[87] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; D13      ; 262        ; 2        ; adjacency_matrix[52] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; D14      ; 249        ; 2        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; D15      ; 241        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; D16      ; 240        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; D17      ; 243        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; D18      ; 238        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; E1       ;            ; 1        ; VCCIO1               ; power  ;              ; 3.3V    ; --         ;                 ;
+; E2       ; 7          ; 1        ; adjacency_matrix[98] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; E3       ; 6          ; 1        ; adjacency_matrix[3]  ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; E4       ; 9          ; 1        ; adjacency_matrix[94] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; E5       ; 10         ; 1        ; adjacency_matrix[1]  ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; E6       ; 300        ; 2        ; adjacency_matrix[82] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; E7       ; 295        ; 2        ; adjacency_matrix[83] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; E8       ; 294        ; 2        ; adjacency_matrix[60] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; E9       ;            ; 2        ; VCCIO2               ; power  ;              ; 3.3V    ; --         ;                 ;
+; E10      ; 281        ; 2        ; adjacency_matrix[75] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; E11      ; 272        ; 2        ; adjacency_matrix[89] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; E12      ;            ; 2        ; VCCIO2               ; power  ;              ; 3.3V    ; --         ;                 ;
+; E13      ; 254        ; 2        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; E14      ; 239        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; E15      ; 237        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; E16      ; 236        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; E17      ; 235        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; E18      ;            ; 3        ; VCCIO3               ; power  ;              ; 3.3V    ; --         ;                 ;
+; F1       ; 8          ; 1        ; adjacency_matrix[78] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; F2       ; 11         ; 1        ; result1[0]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; F3       ; 12         ; 1        ; adjacency_matrix[18] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; F4       ; 13         ; 1        ; adjacency_matrix[57] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; F5       ; 14         ; 1        ; adjacency_matrix[0]  ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; F6       ; 17         ; 1        ; result1[3]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; F7       ; 18         ; 1        ; adjacency_matrix[20] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; F8       ; 306        ; 2        ; adjacency_matrix[65] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; F9       ; 283        ; 2        ; adjacency_matrix[90] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; F10      ; 257        ; 2        ; adjacency_matrix[53] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; F11      ; 251        ; 2        ; adjacency_matrix[48] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; F12      ; 228        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; F13      ; 232        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; F14      ; 231        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; F15      ; 234        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; F16      ; 233        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; F17      ; 229        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; F18      ; 230        ; 3        ; adjacency_matrix[88] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; G1       ; 16         ; 1        ; adjacency_matrix[37] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; G2       ; 15         ; 1        ; adjacency_matrix[42] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; G3       ; 20         ; 1        ; adjacency_matrix[34] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; G4       ; 19         ; 1        ; adjacency_matrix[59] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; G5       ; 21         ; 1        ; adjacency_matrix[70] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; G6       ; 22         ; 1        ; adjacency_matrix[24] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; G7       ;            ; 1        ; VCCIO1               ; power  ;              ; 3.3V    ; --         ;                 ;
+; G8       ; 307        ; 2        ; adjacency_matrix[22] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; G9       ; 282        ; 2        ; adjacency_matrix[95] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; G10      ; 256        ; 2        ; adjacency_matrix[76] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; G11      ; 250        ; 2        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; G12      ; 227        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; G13      ; 223        ; 3        ; adjacency_matrix[30] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; G14      ; 224        ; 3        ; adjacency_matrix[58] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; G15      ; 225        ; 3        ; adjacency_matrix[67] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; G16      ; 226        ; 3        ; adjacency_matrix[40] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; G17      ; 222        ; 3        ; adjacency_matrix[73] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; G18      ; 221        ; 3        ; adjacency_matrix[85] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; H1       ; 23         ; 1        ; adjacency_matrix[86] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; H2       ; 24         ; 1        ; adjacency_matrix[61] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; H3       ; 25         ; 1        ; adjacency_matrix[11] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; H4       ; 26         ; 1        ; adjacency_matrix[96] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; H5       ; 27         ; 1        ; adjacency_matrix[77] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; H6       ; 37         ; 1        ; adjacency_matrix[5]  ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; H7       ; 39         ; 1        ; ^DATA0               ; input  ;              ;         ; --         ;                 ;
+; H8       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; H9       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; H10      ;            ;          ; VCCINT               ; power  ;              ; 1.5V    ; --         ;                 ;
+; H11      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; H12      ;            ; 3        ; VCCIO3               ; power  ;              ; 3.3V    ; --         ;                 ;
+; H13      ; 215        ; 3        ; adjacency_matrix[25] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; H14      ; 216        ; 3        ; adjacency_matrix[51] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; H15      ; 217        ; 3        ; adjacency_matrix[79] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; H16      ; 218        ; 3        ; adjacency_matrix[31] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; H17      ; 219        ; 3        ; adjacency_matrix[74] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; H18      ; 220        ; 3        ; adjacency_matrix[68] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; J1       ; 38         ; 1        ; *~nCSO/nCSO~ / GND*  ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; J2       ; 40         ; 1        ; ^nCONFIG             ;        ;              ;         ; --         ;                 ;
+; J3       ; 43         ; 1        ; reset                ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; J4       ; 46         ; 1        ; clk                  ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; J5       ;            ;          ; VCCA_PLL1            ; power  ;              ; 1.5V    ; --         ;                 ;
+; J6       ;            ;          ; GNDG_PLL1            ; gnd    ;              ;         ; --         ;                 ;
+; J7       ; 42         ; 1        ; ^nCE                 ;        ;              ;         ; --         ;                 ;
+; J8       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; J9       ;            ;          ; VCCINT               ; power  ;              ; 1.5V    ; --         ;                 ;
+; J10      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; J11      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; J12      ;            ;          ; VCCA_PLL2            ; power  ;              ; 1.5V    ; --         ;                 ;
+; J13      ; 214        ; 3        ; adjacency_matrix[91] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; J14      ; 204        ; 3        ; adjacency_matrix[7]  ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; J15      ; 199        ; 3        ; adjacency_matrix[44] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; J16      ; 196        ; 3        ; adjacency_matrix[54] ; input  ; LVTTL        ;         ; Row I/O    ; N               ;
+; J17      ; 203        ; 3        ; #TDI                 ; input  ;              ;         ; --         ;                 ;
+; J18      ;            ;          ; GNDG_PLL2            ; gnd    ;              ;         ; --         ;                 ;
+; K1       ;            ;          ; GNDA_PLL1            ; gnd    ;              ;         ; --         ;                 ;
+; K2       ; 41         ; 1        ; ^nCEO                ;        ;              ;         ; --         ;                 ;
+; K3       ; 44         ; 1        ; ^MSEL0               ;        ;              ;         ; --         ;                 ;
+; K4       ; 49         ; 1        ; result1[2]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; K5       ; 50         ; 1        ; result1[1]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; K6       ; 48         ; 1        ; *~ASDO/ASDO~ / GND*  ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; K7       ; 45         ; 1        ; ^MSEL1               ;        ;              ;         ; --         ;                 ;
+; K8       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; K9       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; K10      ;            ;          ; VCCINT               ; power  ;              ; 1.5V    ; --         ;                 ;
+; K11      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; K12      ;            ;          ; GNDA_PLL2            ; gnd    ;              ;         ; --         ;                 ;
+; K13      ; 202        ; 3        ; #TDO                 ; output ;              ;         ; --         ;                 ;
+; K14      ; 201        ; 3        ; #TMS                 ; input  ;              ;         ; --         ;                 ;
+; K15      ; 194        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; K16      ; 195        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; K17      ; 197        ; 3        ; ^CONF_DONE           ;        ;              ;         ; --         ;                 ;
+; K18      ; 200        ; 3        ; #TCK                 ; input  ;              ;         ; --         ;                 ;
+; L1       ; 47         ; 1        ; ^DCLK                ; bidir  ;              ;         ; --         ;                 ;
+; L2       ; 59         ; 1        ; result0[0]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; L3       ; 60         ; 1        ; result0[1]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; L4       ; 62         ; 1        ; result2[0]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; L5       ; 61         ; 1        ; result3[3]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; L6       ; 57         ; 1        ; result9[1]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; L7       ; 58         ; 1        ; result0[3]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; L8       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; L9       ;            ;          ; VCCINT               ; power  ;              ; 1.5V    ; --         ;                 ;
+; L10      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; L11      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; L12      ; 198        ; 3        ; ^nSTATUS             ;        ;              ;         ; --         ;                 ;
+; L13      ; 184        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; L14      ; 193        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; L15      ; 185        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; L16      ; 186        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; L17      ; 182        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; L18      ; 181        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; M1       ; 63         ; 1        ; result8[2]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; M2       ; 67         ; 1        ; result8[0]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; M3       ; 66         ; 1        ; result3[1]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; M4       ; 69         ; 1        ; result3[0]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; M5       ; 68         ; 1        ; result6[3]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; M6       ; 72         ; 1        ; result2[2]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; M7       ;            ; 1        ; VCCIO1               ; power  ;              ; 3.3V    ; --         ;                 ;
+; M8       ; 93         ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; M9       ; 115        ; 4        ; result_len[0]        ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; M10      ; 142        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; M11      ; 150        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; M12      ;            ; 3        ; VCCIO3               ; power  ;              ; 3.3V    ; --         ;                 ;
+; M13      ; 183        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; M14      ; 177        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; M15      ; 176        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; M16      ; 180        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; M17      ; 175        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; M18      ; 174        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; N1       ; 70         ; 1        ; result6[1]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; N2       ; 71         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; N3       ; 76         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; N4       ; 77         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; N5       ; 74         ; 1        ; result0[2]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; N6       ; 75         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; N7       ; 73         ; 1        ; result9[2]           ; output ; LVTTL        ;         ; Row I/O    ; N               ;
+; N8       ; 94         ; 4        ; result6[0]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; N9       ; 116        ; 4        ; result_len[2]        ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; N10      ; 141        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; N11      ; 149        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; N12      ; 171        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; N13      ; 170        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; N14      ; 167        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; N15      ; 173        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; N16      ; 172        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; N17      ; 169        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; N18      ; 168        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; P1       ;            ; 1        ; VCCIO1               ; power  ;              ; 3.3V    ; --         ;                 ;
+; P2       ; 79         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; P3       ; 80         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; P4       ; 82         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; P5       ; 78         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; P6       ; 99         ; 4        ; result9[3]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; P7       ; 100        ; 4        ; result2[3]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; P8       ;            ; 4        ; VCCIO4               ; power  ;              ; 3.3V    ; --         ;                 ;
+; P9       ; 119        ; 4        ; result7[2]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; P10      ; 128        ; 4        ; result5[1]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; P11      ;            ; 4        ; VCCIO4               ; power  ;              ; 3.3V    ; --         ;                 ;
+; P12      ; 146        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; P13      ; 147        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; P14      ; 166        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; P15      ; 165        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; P16      ; 163        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; P17      ; 164        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; P18      ;            ; 3        ; VCCIO3               ; power  ;              ; 3.3V    ; --         ;                 ;
+; R1       ; 81         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; R2       ; 83         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; R3       ; 84         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; R4       ; 95         ; 4        ; result4[2]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; R5       ; 96         ; 4        ; result4[1]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; R6       ; 102        ; 4        ; done                 ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; R7       ; 106        ; 4        ; result6[2]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; R8       ; 110        ; 4        ; result3[2]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; R9       ; 113        ; 4        ; result_len[1]        ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; R10      ; 125        ; 4        ; result7[0]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; R11      ; 129        ; 4        ; adjacency_matrix[29] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; R12      ; 136        ; 4        ; adjacency_matrix[38] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; R13      ; 140        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; R14      ; 152        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; R15      ; 161        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; R16      ; 162        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; R17      ; 159        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; R18      ; 160        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; T1       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; T2       ; 85         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; T3       ; 86         ; 1        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; T4       ; 89         ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; T5       ; 91         ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; T6       ; 101        ; 4        ; result7[1]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; T7       ; 105        ; 4        ; start_node[0]        ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; T8       ; 109        ; 4        ; result8[3]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; T9       ; 114        ; 4        ; result_len[3]        ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; T10      ; 124        ; 4        ; result5[3]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; T11      ; 130        ; 4        ; adjacency_matrix[81] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; T12      ; 135        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; T13      ; 139        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; T14      ; 151        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; T15      ; 156        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; T16      ; 157        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; T17      ; 158        ; 3        ; GND*                 ;        ;              ;         ; Row I/O    ;                 ;
+; T18      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; U1       ;            ;          ; VCCINT               ; power  ;              ; 1.5V    ; --         ;                 ;
+; U2       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; U3       ; 87         ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; U4       ; 90         ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; U5       ; 92         ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; U6       ; 98         ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; U7       ; 103        ; 4        ; result4[3]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; U8       ; 107        ; 4        ; start_node[2]        ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; U9       ; 111        ; 4        ; result9[0]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; U10      ; 122        ; 4        ; result7[3]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; U11      ; 131        ; 4        ; adjacency_matrix[21] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; U12      ; 134        ; 4        ; adjacency_matrix[69] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; U13      ; 138        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; U14      ; 148        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; U15      ; 154        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; U16      ; 155        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; U17      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; U18      ;            ;          ; VCCINT               ; power  ;              ; 1.5V    ; --         ;                 ;
+; V1       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; V2       ;            ;          ; VCCINT               ; power  ;              ; 1.5V    ; --         ;                 ;
+; V3       ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; V4       ; 88         ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; V5       ;            ; 4        ; VCCIO4               ; power  ;              ; 3.3V    ; --         ;                 ;
+; V6       ; 97         ; 4        ; result8[1]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; V7       ; 104        ; 4        ; result4[0]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; V8       ; 108        ; 4        ; start_node[1]        ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; V9       ; 112        ; 4        ; result2[1]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; V10      ; 123        ; 4        ; result5[2]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; V11      ; 132        ; 4        ; result5[0]           ; output ; LVTTL        ;         ; Column I/O ; N               ;
+; V12      ; 133        ; 4        ; adjacency_matrix[17] ; input  ; LVTTL        ;         ; Column I/O ; N               ;
+; V13      ; 137        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; V14      ;            ; 4        ; VCCIO4               ; power  ;              ; 3.3V    ; --         ;                 ;
+; V15      ; 153        ; 4        ; GND*                 ;        ;              ;         ; Column I/O ;                 ;
+; V16      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
+; V17      ;            ;          ; VCCINT               ; power  ;              ; 1.5V    ; --         ;                 ;
+; V18      ;            ;          ; GND                  ; gnd    ;              ;         ; --         ;                 ;
++----------+------------+----------+----------------------+--------+--------------+---------+------------+-----------------+
+
+
++------------------------------------------------------------------+
+; Output Pin Default Load For Reported TCO                         ;
++---------------------+-------+------------------------------------+
+; I/O Standard        ; Load  ; Termination Resistance             ;
++---------------------+-------+------------------------------------+
+; LVTTL               ; 10 pF ; Not Available                      ;
+; LVCMOS              ; 10 pF ; Not Available                      ;
+; 2.5 V               ; 10 pF ; Not Available                      ;
+; 1.8 V               ; 10 pF ; Not Available                      ;
+; 1.5 V               ; 10 pF ; Not Available                      ;
+; SSTL-3 Class I      ; 30 pF ; 50 Ohm (Parallel), 25 Ohm (Serial) ;
+; SSTL-3 Class II     ; 30 pF ; 25 Ohm (Parallel), 25 Ohm (Serial) ;
+; SSTL-2 Class I      ; 30 pF ; 50 Ohm (Parallel), 25 Ohm (Serial) ;
+; SSTL-2 Class II     ; 30 pF ; 25 Ohm (Parallel), 25 Ohm (Serial) ;
+; Differential SSTL-2 ; 30 pF ; (See SSTL-2)                       ;
+; 3.3-V PCI           ; 10 pF ; 25 Ohm (Parallel)                  ;
+; LVDS                ; 4 pF  ; 100 Ohm (Differential)             ;
+; RSDS                ; 0 pF  ; 100 Ohm (Differential)             ;
++---------------------+-------+------------------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                     ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------+
+; |dfs                       ; 386 (386)   ; 135          ; 0           ; 151  ; 0            ; 251 (251)    ; 65 (65)           ; 70 (70)          ; 8 (8)           ; |dfs                ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                           ;
++----------------------+----------+---------------+---------------+-----------------------+-----+
+; Name                 ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
++----------------------+----------+---------------+---------------+-----------------------+-----+
+; start_node[0]        ; Input    ; ON            ; ON            ; --                    ; --  ;
+; clk                  ; Input    ; OFF           ; OFF           ; --                    ; --  ;
+; reset                ; Input    ; OFF           ; OFF           ; --                    ; --  ;
+; start_node[3]        ; Input    ; ON            ; ON            ; --                    ; --  ;
+; start_node[2]        ; Input    ; ON            ; ON            ; --                    ; --  ;
+; start_node[1]        ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[9]  ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[59] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[49] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[19] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[29] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[89] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[79] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[69] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[39] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[98] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[99] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[8]  ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[58] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[48] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[18] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[28] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[88] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[78] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[68] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[38] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[34] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[24] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[4]  ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[14] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[94] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[84] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[54] ; Input    ; OFF           ; OFF           ; --                    ; --  ;
+; adjacency_matrix[44] ; Input    ; OFF           ; OFF           ; --                    ; --  ;
+; adjacency_matrix[74] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[64] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[7]  ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[17] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[87] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[27] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[77] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[67] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[47] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[37] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[57] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[97] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[5]  ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[15] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[85] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[25] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[75] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[65] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[45] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[35] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[55] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[95] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[36] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[26] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[6]  ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[16] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[96] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[86] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[56] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[46] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[76] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[66] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[3]  ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[13] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[83] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[23] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[73] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[63] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[43] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[33] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[53] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[93] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[0]  ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[10] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[80] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[20] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[70] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[60] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[40] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[30] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[50] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[90] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[1]  ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[11] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[81] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[21] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[71] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[61] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[41] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[31] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[51] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[91] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[2]  ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[12] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[82] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[22] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[72] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[62] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[42] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[32] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[52] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; adjacency_matrix[92] ; Input    ; ON            ; ON            ; --                    ; --  ;
+; result0[0]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result0[1]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result0[2]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result0[3]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result1[0]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result1[1]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result1[2]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result1[3]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result2[0]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result2[1]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result2[2]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result2[3]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result3[0]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result3[1]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result3[2]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result3[3]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result4[0]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result4[1]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result4[2]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result4[3]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result5[0]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result5[1]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result5[2]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result5[3]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result6[0]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result6[1]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result6[2]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result6[3]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result7[0]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result7[1]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result7[2]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result7[3]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result8[0]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result8[1]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result8[2]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result8[3]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result9[0]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result9[1]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result9[2]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result9[3]           ; Output   ; --            ; --            ; --                    ; --  ;
+; result_len[0]        ; Output   ; --            ; --            ; --                    ; --  ;
+; result_len[1]        ; Output   ; --            ; --            ; --                    ; --  ;
+; result_len[2]        ; Output   ; --            ; --            ; --                    ; --  ;
+; result_len[3]        ; Output   ; --            ; --            ; --                    ; --  ;
+; done                 ; Output   ; --            ; --            ; --                    ; --  ;
++----------------------+----------+---------------+---------------+-----------------------+-----+
+
+
++-------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                        ;
++-------------------------+-------------------+---------+
+; Source Pin / Fanout     ; Pad To Core Index ; Setting ;
++-------------------------+-------------------+---------+
+; start_node[0]           ;                   ;         ;
+;      - result0[0]~reg0  ; 0                 ; ON      ;
+;      - always0~198      ; 0                 ; ON      ;
+;      - current_node[0]  ; 0                 ; ON      ;
+;      - Decoder~520      ; 0                 ; ON      ;
+;      - Decoder~522      ; 0                 ; ON      ;
+;      - Decoder~524      ; 0                 ; ON      ;
+;      - Decoder~526      ; 0                 ; ON      ;
+;      - Decoder~528      ; 0                 ; ON      ;
+;      - Decoder~530      ; 0                 ; ON      ;
+;      - Decoder~532      ; 0                 ; ON      ;
+;      - Decoder~534      ; 0                 ; ON      ;
+;      - Decoder~536      ; 0                 ; ON      ;
+;      - Decoder~538      ; 0                 ; ON      ;
+;      - stack~59         ; 0                 ; ON      ;
+; clk                     ;                   ;         ;
+; reset                   ;                   ;         ;
+; start_node[3]           ;                   ;         ;
+;      - result0[3]~reg0  ; 1                 ; ON      ;
+;      - always0~198      ; 1                 ; ON      ;
+;      - current_node[3]  ; 1                 ; ON      ;
+;      - Decoder~520      ; 1                 ; ON      ;
+;      - Decoder~522      ; 1                 ; ON      ;
+;      - Decoder~524      ; 1                 ; ON      ;
+;      - Decoder~526      ; 1                 ; ON      ;
+;      - Decoder~528      ; 1                 ; ON      ;
+;      - Decoder~530      ; 1                 ; ON      ;
+;      - Decoder~532      ; 1                 ; ON      ;
+;      - Decoder~534      ; 1                 ; ON      ;
+;      - Decoder~536      ; 1                 ; ON      ;
+;      - Decoder~538      ; 1                 ; ON      ;
+;      - stack~54         ; 1                 ; ON      ;
+; start_node[2]           ;                   ;         ;
+;      - result0[2]~reg0  ; 0                 ; ON      ;
+;      - always0~198      ; 0                 ; ON      ;
+;      - current_node[2]  ; 0                 ; ON      ;
+;      - Decoder~520      ; 0                 ; ON      ;
+;      - Decoder~522      ; 0                 ; ON      ;
+;      - Decoder~524      ; 0                 ; ON      ;
+;      - Decoder~526      ; 0                 ; ON      ;
+;      - Decoder~528      ; 0                 ; ON      ;
+;      - Decoder~530      ; 0                 ; ON      ;
+;      - Decoder~532      ; 0                 ; ON      ;
+;      - Decoder~534      ; 0                 ; ON      ;
+;      - Decoder~536      ; 0                 ; ON      ;
+;      - Decoder~538      ; 0                 ; ON      ;
+;      - stack~81         ; 0                 ; ON      ;
+; start_node[1]           ;                   ;         ;
+;      - result0[1]~reg0  ; 1                 ; ON      ;
+;      - always0~198      ; 1                 ; ON      ;
+;      - current_node[1]  ; 1                 ; ON      ;
+;      - Decoder~520      ; 1                 ; ON      ;
+;      - Decoder~522      ; 1                 ; ON      ;
+;      - Decoder~524      ; 1                 ; ON      ;
+;      - Decoder~526      ; 1                 ; ON      ;
+;      - Decoder~528      ; 1                 ; ON      ;
+;      - Decoder~530      ; 1                 ; ON      ;
+;      - Decoder~532      ; 1                 ; ON      ;
+;      - Decoder~534      ; 1                 ; ON      ;
+;      - Decoder~536      ; 1                 ; ON      ;
+;      - Decoder~538      ; 1                 ; ON      ;
+;      - stack~80         ; 1                 ; ON      ;
+; adjacency_matrix[9]     ;                   ;         ;
+;      - adj_row~14198    ; 0                 ; ON      ;
+; adjacency_matrix[59]    ;                   ;         ;
+;      - adj_row~14193    ; 0                 ; ON      ;
+; adjacency_matrix[49]    ;                   ;         ;
+;      - adj_row~14193    ; 0                 ; ON      ;
+; adjacency_matrix[19]    ;                   ;         ;
+;      - adj_row~14195    ; 0                 ; ON      ;
+; adjacency_matrix[29]    ;                   ;         ;
+;      - adj_row~14199    ; 0                 ; ON      ;
+; adjacency_matrix[89]    ;                   ;         ;
+;      - adj_row~14199    ; 0                 ; ON      ;
+; adjacency_matrix[79]    ;                   ;         ;
+;      - adj_row~14201    ; 0                 ; ON      ;
+; adjacency_matrix[69]    ;                   ;         ;
+;      - adj_row~14201    ; 1                 ; ON      ;
+; adjacency_matrix[39]    ;                   ;         ;
+;      - adj_row~14203    ; 0                 ; ON      ;
+; adjacency_matrix[98]    ;                   ;         ;
+;      - Mux~508          ; 0                 ; ON      ;
+; adjacency_matrix[99]    ;                   ;         ;
+;      - Mux~508          ; 0                 ; ON      ;
+; adjacency_matrix[8]     ;                   ;         ;
+;      - adj_row~14211    ; 1                 ; ON      ;
+; adjacency_matrix[58]    ;                   ;         ;
+;      - adj_row~14206    ; 0                 ; ON      ;
+; adjacency_matrix[48]    ;                   ;         ;
+;      - adj_row~14206    ; 0                 ; ON      ;
+; adjacency_matrix[18]    ;                   ;         ;
+;      - adj_row~14208    ; 1                 ; ON      ;
+; adjacency_matrix[28]    ;                   ;         ;
+;      - adj_row~14212    ; 0                 ; ON      ;
+; adjacency_matrix[88]    ;                   ;         ;
+;      - adj_row~14212    ; 0                 ; ON      ;
+; adjacency_matrix[78]    ;                   ;         ;
+;      - adj_row~14214    ; 0                 ; ON      ;
+; adjacency_matrix[68]    ;                   ;         ;
+;      - adj_row~14214    ; 0                 ; ON      ;
+; adjacency_matrix[38]    ;                   ;         ;
+;      - adj_row~14216    ; 1                 ; ON      ;
+; adjacency_matrix[34]    ;                   ;         ;
+;      - adj_row[4]~14303 ; 0                 ; ON      ;
+; adjacency_matrix[24]    ;                   ;         ;
+;      - adj_row[4]~14303 ; 1                 ; ON      ;
+; adjacency_matrix[4]     ;                   ;         ;
+;      - adj_row[4]~14220 ; 0                 ; ON      ;
+; adjacency_matrix[14]    ;                   ;         ;
+;      - adj_row[4]~14220 ; 1                 ; ON      ;
+; adjacency_matrix[94]    ;                   ;         ;
+;      - adj_row[4]~14221 ; 0                 ; ON      ;
+; adjacency_matrix[84]    ;                   ;         ;
+;      - adj_row[4]~14221 ; 0                 ; ON      ;
+; adjacency_matrix[54]    ;                   ;         ;
+; adjacency_matrix[44]    ;                   ;         ;
+; adjacency_matrix[74]    ;                   ;         ;
+;      - adj_row[4]~14227 ; 0                 ; ON      ;
+; adjacency_matrix[64]    ;                   ;         ;
+;      - adj_row[4]~14227 ; 0                 ; ON      ;
+; adjacency_matrix[7]     ;                   ;         ;
+;      - adj_row[7]~14230 ; 1                 ; ON      ;
+; adjacency_matrix[17]    ;                   ;         ;
+;      - adj_row[7]~14230 ; 1                 ; ON      ;
+; adjacency_matrix[87]    ;                   ;         ;
+;      - adj_row[7]~14231 ; 1                 ; ON      ;
+; adjacency_matrix[27]    ;                   ;         ;
+;      - adj_row[7]~14231 ; 0                 ; ON      ;
+; adjacency_matrix[77]    ;                   ;         ;
+;      - adj_row[7]~14233 ; 1                 ; ON      ;
+; adjacency_matrix[67]    ;                   ;         ;
+;      - adj_row[7]~14233 ; 0                 ; ON      ;
+; adjacency_matrix[47]    ;                   ;         ;
+;      - adj_row[7]~14236 ; 1                 ; ON      ;
+; adjacency_matrix[37]    ;                   ;         ;
+;      - adj_row[7]~14237 ; 1                 ; ON      ;
+; adjacency_matrix[57]    ;                   ;         ;
+;      - adj_row[7]~14237 ; 0                 ; ON      ;
+; adjacency_matrix[97]    ;                   ;         ;
+;      - adj_row[7]~14239 ; 0                 ; ON      ;
+; adjacency_matrix[5]     ;                   ;         ;
+;      - adj_row[5]~14240 ; 1                 ; ON      ;
+; adjacency_matrix[15]    ;                   ;         ;
+;      - adj_row[5]~14240 ; 0                 ; ON      ;
+; adjacency_matrix[85]    ;                   ;         ;
+;      - adj_row[5]~14241 ; 1                 ; ON      ;
+; adjacency_matrix[25]    ;                   ;         ;
+;      - adj_row[5]~14241 ; 0                 ; ON      ;
+; adjacency_matrix[75]    ;                   ;         ;
+;      - adj_row[5]~14243 ; 1                 ; ON      ;
+; adjacency_matrix[65]    ;                   ;         ;
+;      - adj_row[5]~14243 ; 1                 ; ON      ;
+; adjacency_matrix[45]    ;                   ;         ;
+;      - adj_row[5]~14246 ; 1                 ; ON      ;
+; adjacency_matrix[35]    ;                   ;         ;
+;      - adj_row[5]~14247 ; 0                 ; ON      ;
+; adjacency_matrix[55]    ;                   ;         ;
+;      - adj_row[5]~14247 ; 1                 ; ON      ;
+; adjacency_matrix[95]    ;                   ;         ;
+;      - adj_row[5]~14249 ; 1                 ; ON      ;
+; adjacency_matrix[36]    ;                   ;         ;
+;      - adj_row[6]~14250 ; 1                 ; ON      ;
+; adjacency_matrix[26]    ;                   ;         ;
+;      - adj_row[6]~14250 ; 1                 ; ON      ;
+; adjacency_matrix[6]     ;                   ;         ;
+;      - adj_row[6]~14254 ; 0                 ; ON      ;
+; adjacency_matrix[16]    ;                   ;         ;
+;      - adj_row[6]~14254 ; 0                 ; ON      ;
+; adjacency_matrix[96]    ;                   ;         ;
+;      - adj_row[6]~14255 ; 0                 ; ON      ;
+; adjacency_matrix[86]    ;                   ;         ;
+;      - adj_row[6]~14255 ; 0                 ; ON      ;
+; adjacency_matrix[56]    ;                   ;         ;
+;      - adj_row[6]~14256 ; 1                 ; ON      ;
+; adjacency_matrix[46]    ;                   ;         ;
+;      - adj_row[6]~14256 ; 0                 ; ON      ;
+; adjacency_matrix[76]    ;                   ;         ;
+;      - adj_row[6]~14259 ; 1                 ; ON      ;
+; adjacency_matrix[66]    ;                   ;         ;
+;      - adj_row[6]~14259 ; 1                 ; ON      ;
+; adjacency_matrix[3]     ;                   ;         ;
+;      - adj_row[3]~14262 ; 0                 ; ON      ;
+; adjacency_matrix[13]    ;                   ;         ;
+;      - adj_row[3]~14262 ; 0                 ; ON      ;
+; adjacency_matrix[83]    ;                   ;         ;
+;      - adj_row[3]~14263 ; 1                 ; ON      ;
+; adjacency_matrix[23]    ;                   ;         ;
+;      - adj_row[3]~14263 ; 1                 ; ON      ;
+; adjacency_matrix[73]    ;                   ;         ;
+;      - adj_row[3]~14265 ; 0                 ; ON      ;
+; adjacency_matrix[63]    ;                   ;         ;
+;      - adj_row[3]~14265 ; 1                 ; ON      ;
+; adjacency_matrix[43]    ;                   ;         ;
+;      - adj_row[3]~14268 ; 0                 ; ON      ;
+; adjacency_matrix[33]    ;                   ;         ;
+;      - adj_row[3]~14269 ; 1                 ; ON      ;
+; adjacency_matrix[53]    ;                   ;         ;
+;      - adj_row[3]~14269 ; 0                 ; ON      ;
+; adjacency_matrix[93]    ;                   ;         ;
+;      - adj_row[3]~14271 ; 0                 ; ON      ;
+; adjacency_matrix[0]     ;                   ;         ;
+;      - adj_row[0]~14272 ; 0                 ; ON      ;
+; adjacency_matrix[10]    ;                   ;         ;
+;      - adj_row[0]~14272 ; 0                 ; ON      ;
+; adjacency_matrix[80]    ;                   ;         ;
+;      - adj_row[0]~14273 ; 0                 ; ON      ;
+; adjacency_matrix[20]    ;                   ;         ;
+;      - adj_row[0]~14273 ; 1                 ; ON      ;
+; adjacency_matrix[70]    ;                   ;         ;
+;      - adj_row[0]~14275 ; 0                 ; ON      ;
+; adjacency_matrix[60]    ;                   ;         ;
+;      - adj_row[0]~14275 ; 1                 ; ON      ;
+; adjacency_matrix[40]    ;                   ;         ;
+;      - adj_row[0]~14278 ; 1                 ; ON      ;
+; adjacency_matrix[30]    ;                   ;         ;
+;      - adj_row[0]~14279 ; 0                 ; ON      ;
+; adjacency_matrix[50]    ;                   ;         ;
+;      - adj_row[0]~14279 ; 1                 ; ON      ;
+; adjacency_matrix[90]    ;                   ;         ;
+;      - adj_row[0]~14281 ; 0                 ; ON      ;
+; adjacency_matrix[1]     ;                   ;         ;
+;      - adj_row[1]~14282 ; 1                 ; ON      ;
+; adjacency_matrix[11]    ;                   ;         ;
+;      - adj_row[1]~14282 ; 0                 ; ON      ;
+; adjacency_matrix[81]    ;                   ;         ;
+;      - adj_row[1]~14283 ; 0                 ; ON      ;
+; adjacency_matrix[21]    ;                   ;         ;
+;      - adj_row[1]~14283 ; 1                 ; ON      ;
+; adjacency_matrix[71]    ;                   ;         ;
+;      - adj_row[1]~14285 ; 1                 ; ON      ;
+; adjacency_matrix[61]    ;                   ;         ;
+;      - adj_row[1]~14285 ; 1                 ; ON      ;
+; adjacency_matrix[41]    ;                   ;         ;
+;      - adj_row[1]~14288 ; 0                 ; ON      ;
+; adjacency_matrix[31]    ;                   ;         ;
+;      - adj_row[1]~14289 ; 0                 ; ON      ;
+; adjacency_matrix[51]    ;                   ;         ;
+;      - adj_row[1]~14289 ; 0                 ; ON      ;
+; adjacency_matrix[91]    ;                   ;         ;
+;      - adj_row[1]~14291 ; 1                 ; ON      ;
+; adjacency_matrix[2]     ;                   ;         ;
+;      - adj_row[2]~14292 ; 1                 ; ON      ;
+; adjacency_matrix[12]    ;                   ;         ;
+;      - adj_row[2]~14292 ; 0                 ; ON      ;
+; adjacency_matrix[82]    ;                   ;         ;
+;      - adj_row[2]~14293 ; 0                 ; ON      ;
+; adjacency_matrix[22]    ;                   ;         ;
+;      - adj_row[2]~14293 ; 0                 ; ON      ;
+; adjacency_matrix[72]    ;                   ;         ;
+;      - adj_row[2]~14295 ; 1                 ; ON      ;
+; adjacency_matrix[62]    ;                   ;         ;
+;      - adj_row[2]~14295 ; 0                 ; ON      ;
+; adjacency_matrix[42]    ;                   ;         ;
+;      - adj_row[2]~14298 ; 0                 ; ON      ;
+; adjacency_matrix[32]    ;                   ;         ;
+;      - adj_row[2]~14299 ; 0                 ; ON      ;
+; adjacency_matrix[52]    ;                   ;         ;
+;      - adj_row[2]~14299 ; 1                 ; ON      ;
+; adjacency_matrix[92]    ;                   ;         ;
+;      - adj_row[2]~14301 ; 0                 ; ON      ;
++-------------------------+-------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                 ;
++---------------------+---------------+---------+--------------+--------+----------------------+------------------+
+; Name                ; Location      ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ;
++---------------------+---------------+---------+--------------+--------+----------------------+------------------+
+; Select~2664         ; LC_X12_Y7_N8  ; 8       ; Clock enable ; no     ; --                   ; --               ;
+; Select~2678         ; LC_X12_Y7_N4  ; 11      ; Clock enable ; no     ; --                   ; --               ;
+; clk                 ; PIN_J4        ; 135     ; Clock        ; yes    ; Global clock         ; GCLK3            ;
+; current_node[3]~421 ; LC_X11_Y11_N4 ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; reset               ; PIN_J3        ; 71      ; Async. clear ; yes    ; Global clock         ; GCLK2            ;
+; result1[3]~241      ; LC_X12_Y7_N3  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; result2[3]~134      ; LC_X10_Y6_N1  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; result3[0]~134      ; LC_X12_Y6_N6  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; result4[3]~134      ; LC_X11_Y6_N9  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; result5[3]~134      ; LC_X12_Y7_N6  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; result6[3]~134      ; LC_X10_Y6_N9  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; result7[3]~134      ; LC_X12_Y6_N9  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; result8[3]~134      ; LC_X11_Y6_N1  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; result9[0]~134      ; LC_X10_Y7_N4  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; result_len[3]~164   ; LC_X11_Y11_N7 ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~0               ; LC_X10_Y7_N6  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~1               ; LC_X8_Y8_N9   ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~10              ; LC_X11_Y7_N1  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~11              ; LC_X8_Y8_N2   ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~12              ; LC_X10_Y9_N3  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~13              ; LC_X9_Y8_N8   ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~14              ; LC_X10_Y8_N2  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~15              ; LC_X9_Y9_N8   ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~2               ; LC_X9_Y7_N9   ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~3               ; LC_X9_Y7_N7   ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~4               ; LC_X11_Y9_N6  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~5               ; LC_X11_Y9_N2  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~6               ; LC_X12_Y9_N0  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~7               ; LC_X10_Y9_N8  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~8               ; LC_X8_Y9_N2   ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; rtl~9               ; LC_X11_Y7_N4  ; 4       ; Clock enable ; no     ; --                   ; --               ;
+; stack_ptr[0]~910    ; LC_X9_Y10_N8  ; 8       ; Clock enable ; no     ; --                   ; --               ;
+; state.PROCESS       ; LC_X11_Y11_N8 ; 48      ; Sync. load   ; no     ; --                   ; --               ;
++---------------------+---------------+---------+--------------+--------+----------------------+------------------+
+
+
++----------------------------------------------------------------------+
+; Global & Other Fast Signals                                          ;
++-------+----------+---------+----------------------+------------------+
+; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
++-------+----------+---------+----------------------+------------------+
+; clk   ; PIN_J4   ; 135     ; Global clock         ; GCLK3            ;
+; reset ; PIN_J3   ; 71      ; Global clock         ; GCLK2            ;
++-------+----------+---------+----------------------+------------------+
+
+
++---------------------------------+
+; Non-Global High Fan-Out Signals ;
++----------------------+----------+
+; Name                 ; Fan-Out  ;
++----------------------+----------+
+; current_node[1]      ; 54       ;
+; current_node[0]      ; 53       ;
+; state.IDLE           ; 50       ;
+; state.PROCESS        ; 48       ;
+; current_node[2]      ; 47       ;
+; current_node[3]      ; 44       ;
+; stack_ptr[0]         ; 36       ;
+; processing_neighbors ; 31       ;
+; always0~198          ; 29       ;
+; stack_ptr[1]         ; 28       ;
+; i[0]                 ; 28       ;
+; i[1]                 ; 27       ;
+; Select~2666          ; 25       ;
+; i[2]                 ; 19       ;
+; always0~200          ; 18       ;
+; i[3]                 ; 18       ;
+; add~475              ; 17       ;
+; Select~2702          ; 15       ;
+; Select~2701          ; 15       ;
+; Select~2700          ; 15       ;
+; Select~2699          ; 15       ;
+; add~473              ; 15       ;
+; start_node[1]        ; 14       ;
+; start_node[2]        ; 14       ;
+; start_node[3]        ; 14       ;
+; start_node[0]        ; 14       ;
+; add~474              ; 12       ;
+; Select~2678          ; 11       ;
+; result_len[3]~reg0   ; 11       ;
+; result_len[2]~reg0   ; 11       ;
+; result_len[1]~reg0   ; 11       ;
+; result_len[0]~reg0   ; 11       ;
+; reduce_nor~0         ; 10       ;
+; stack_ptr[2]         ; 9        ;
+; Select~2665          ; 9        ;
+; stack_ptr[0]~910     ; 8        ;
+; stack_ptr[3]         ; 8        ;
+; Select~2669          ; 8        ;
+; Select~2668          ; 8        ;
+; Select~2667          ; 8        ;
+; adj_row[5]~14226     ; 8        ;
+; reduce_nor~8         ; 8        ;
+; adj_row[5]~14219     ; 8        ;
+; Select~2664          ; 8        ;
+; reduce_nor~9         ; 5        ;
+; LessThan~119         ; 5        ;
+; stack~272            ; 4        ;
+; stack~263            ; 4        ;
+; stack~236            ; 4        ;
+; stack~227            ; 4        ;
++----------------------+----------+
+
+
++----------------------------------------------------+
+; Interconnect Usage Summary                         ;
++----------------------------+-----------------------+
+; Interconnect Resource Type ; Usage                 ;
++----------------------------+-----------------------+
+; C4s                        ; 488 / 11,760 ( 4 % )  ;
+; Direct links               ; 32 / 17,078 ( < 1 % ) ;
+; Global clocks              ; 2 / 8 ( 25 % )        ;
+; LAB clocks                 ; 18 / 204 ( 8 % )      ;
+; LUT chains                 ; 27 / 3,600 ( < 1 % )  ;
+; Local interconnects        ; 698 / 17,078 ( 4 % )  ;
+; M4K buffers                ; 0 / 612 ( 0 % )       ;
+; R4s                        ; 513 / 10,320 ( 4 % )  ;
++----------------------------+-----------------------+
+
+
++---------------------------------------------------------------------------+
+; LAB Logic Elements                                                        ;
++--------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 8.98) ; Number of LABs  (Total = 43) ;
++--------------------------------------------+------------------------------+
+; 1                                          ; 3                            ;
+; 2                                          ; 1                            ;
+; 3                                          ; 0                            ;
+; 4                                          ; 0                            ;
+; 5                                          ; 0                            ;
+; 6                                          ; 1                            ;
+; 7                                          ; 1                            ;
+; 8                                          ; 1                            ;
+; 9                                          ; 0                            ;
+; 10                                         ; 36                           ;
++--------------------------------------------+------------------------------+
+
+
++-------------------------------------------------------------------+
+; LAB-wide Signals                                                  ;
++------------------------------------+------------------------------+
+; LAB-wide Signals  (Average = 1.72) ; Number of LABs  (Total = 43) ;
++------------------------------------+------------------------------+
+; 1 Async. clear                     ; 21                           ;
+; 1 Clock                            ; 31                           ;
+; 1 Clock enable                     ; 16                           ;
+; 1 Sync. load                       ; 4                            ;
+; 2 Clock enables                    ; 2                            ;
++------------------------------------+------------------------------+
+
+
++----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Signals Sourced  (Average = 9.14) ; Number of LABs  (Total = 43) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 3                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 31                           ;
+; 11                                          ; 3                            ;
+; 12                                          ; 2                            ;
++---------------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 5.72) ; Number of LABs  (Total = 43) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 0                            ;
+; 1                                               ; 3                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 3                            ;
+; 4                                               ; 6                            ;
+; 5                                               ; 4                            ;
+; 6                                               ; 4                            ;
+; 7                                               ; 10                           ;
+; 8                                               ; 8                            ;
+; 9                                               ; 2                            ;
+; 10                                              ; 1                            ;
++-------------------------------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 16.00) ; Number of LABs  (Total = 43) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 6                            ;
+; 15                                           ; 3                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 2                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 3                            ;
+; 20                                           ; 11                           ;
+; 21                                           ; 4                            ;
+; 22                                           ; 3                            ;
++----------------------------------------------+------------------------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Thu Apr 29 13:45:49 2021
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off dfs -c dfs
+Info: Auto device selection -- successful I/O standard check for EP1C4F324C6
+Info: Auto device selection -- successful PCI I/O clamp diode check for EP1C4F324C6
+Info: Automatically selected device EP1C4F324C6 for design dfs
+Info: Fitting design with smaller device may be possible, but smaller device must be specified
+Info: Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Info: Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices. 
+    Info: Device EP1C12F324C6 is compatible
+    Info: Device EP1C20F324C6 is compatible
+Info: No exact pin location assignment(s) for 151 pins of 151 total pins
+    Info: Pin result0[0] not assigned to an exact location on the device
+    Info: Pin result0[1] not assigned to an exact location on the device
+    Info: Pin result0[2] not assigned to an exact location on the device
+    Info: Pin result0[3] not assigned to an exact location on the device
+    Info: Pin result1[0] not assigned to an exact location on the device
+    Info: Pin result1[1] not assigned to an exact location on the device
+    Info: Pin result1[2] not assigned to an exact location on the device
+    Info: Pin result1[3] not assigned to an exact location on the device
+    Info: Pin result2[0] not assigned to an exact location on the device
+    Info: Pin result2[1] not assigned to an exact location on the device
+    Info: Pin result2[2] not assigned to an exact location on the device
+    Info: Pin result2[3] not assigned to an exact location on the device
+    Info: Pin result3[0] not assigned to an exact location on the device
+    Info: Pin result3[1] not assigned to an exact location on the device
+    Info: Pin result3[2] not assigned to an exact location on the device
+    Info: Pin result3[3] not assigned to an exact location on the device
+    Info: Pin result4[0] not assigned to an exact location on the device
+    Info: Pin result4[1] not assigned to an exact location on the device
+    Info: Pin result4[2] not assigned to an exact location on the device
+    Info: Pin result4[3] not assigned to an exact location on the device
+    Info: Pin result5[0] not assigned to an exact location on the device
+    Info: Pin result5[1] not assigned to an exact location on the device
+    Info: Pin result5[2] not assigned to an exact location on the device
+    Info: Pin result5[3] not assigned to an exact location on the device
+    Info: Pin result6[0] not assigned to an exact location on the device
+    Info: Pin result6[1] not assigned to an exact location on the device
+    Info: Pin result6[2] not assigned to an exact location on the device
+    Info: Pin result6[3] not assigned to an exact location on the device
+    Info: Pin result7[0] not assigned to an exact location on the device
+    Info: Pin result7[1] not assigned to an exact location on the device
+    Info: Pin result7[2] not assigned to an exact location on the device
+    Info: Pin result7[3] not assigned to an exact location on the device
+    Info: Pin result8[0] not assigned to an exact location on the device
+    Info: Pin result8[1] not assigned to an exact location on the device
+    Info: Pin result8[2] not assigned to an exact location on the device
+    Info: Pin result8[3] not assigned to an exact location on the device
+    Info: Pin result9[0] not assigned to an exact location on the device
+    Info: Pin result9[1] not assigned to an exact location on the device
+    Info: Pin result9[2] not assigned to an exact location on the device
+    Info: Pin result9[3] not assigned to an exact location on the device
+    Info: Pin result_len[0] not assigned to an exact location on the device
+    Info: Pin result_len[1] not assigned to an exact location on the device
+    Info: Pin result_len[2] not assigned to an exact location on the device
+    Info: Pin result_len[3] not assigned to an exact location on the device
+    Info: Pin done not assigned to an exact location on the device
+    Info: Pin start_node[0] not assigned to an exact location on the device
+    Info: Pin clk not assigned to an exact location on the device
+    Info: Pin reset not assigned to an exact location on the device
+    Info: Pin start_node[3] not assigned to an exact location on the device
+    Info: Pin start_node[2] not assigned to an exact location on the device
+    Info: Pin start_node[1] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[9] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[59] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[49] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[19] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[29] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[89] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[79] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[69] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[39] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[98] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[99] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[8] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[58] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[48] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[18] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[28] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[88] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[78] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[68] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[38] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[34] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[24] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[4] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[14] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[94] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[84] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[54] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[44] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[74] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[64] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[7] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[17] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[87] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[27] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[77] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[67] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[47] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[37] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[57] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[97] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[5] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[15] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[85] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[25] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[75] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[65] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[45] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[35] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[55] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[95] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[36] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[26] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[6] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[16] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[96] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[86] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[56] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[46] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[76] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[66] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[3] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[13] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[83] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[23] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[73] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[63] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[43] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[33] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[53] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[93] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[0] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[10] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[80] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[20] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[70] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[60] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[40] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[30] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[50] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[90] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[1] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[11] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[81] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[21] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[71] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[61] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[41] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[31] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[51] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[91] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[2] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[12] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[82] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[22] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[72] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[62] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[42] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[32] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[52] not assigned to an exact location on the device
+    Info: Pin adjacency_matrix[92] not assigned to an exact location on the device
+Info: Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
+    Info: Assuming a global fmax requirement of 1 MHz
+    Info: Not setting a global tsu requirement
+    Info: Not setting a global tco requirement
+    Info: Not setting a global tpd requirement
+Info: Performing register packing on registers with non-logic cell location assignments
+Info: Completed register packing on registers with non-logic cell location assignments
+Info: Completed User Assigned Global Signals Promotion Operation
+Info: DQS I/O pins require 0 global routing resources.
+Info: Automatically promoted signal "clk" to use Global clock in PIN J4
+Info: Automatically promoted signal "reset" to use Global clock in PIN J3
+Info: Completed Auto Global Promotion Operation
+Info: Starting register packing
+Info: Started Fast Input/Output/OE register processing
+Info: Finished Fast Input/Output/OE register processing
+Info: Fitter is using Normal packing mode for logic elements with Auto setting for Auto Packed Registers logic option
+Info: Moving registers into I/O cells, LUTs, and RAM blocks to improve timing and density
+Info: Finished moving registers into I/O cells, LUTs, and RAM blocks
+Info: Finished register packing
+Info: Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
+    Info: Number of I/O pins in group: 149 (unused VREF, 3.30 VCCIO, 104 input, 45 output, 0 bidirectional)
+        Info: I/O standards used: LVTTL.
+Info: I/O bank details before I/O pin placement
+    Info: Statistics of I/O banks
+        Info: I/O bank number 1 does not use VREF pins and has unused VCCIO pins. 4 total pin(s) used --  59 pins available
+        Info: I/O bank number 2 does not use VREF pins and has unused VCCIO pins. 0 total pin(s) used --  61 pins available
+        Info: I/O bank number 3 does not use VREF pins and has unused VCCIO pins. 0 total pin(s) used --  64 pins available
+        Info: I/O bank number 4 does not use VREF pins and has unused VCCIO pins. 0 total pin(s) used --  61 pins available
+Info: Fitter placement preparation operations beginning
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement operations beginning
+Info: Fitter placement was successful
+Info: Estimated most critical path is register to register delay of 9.809 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X10_Y13; Fanout = 44; REG Node = 'current_node[3]'
+    Info: 2: + IC(0.660 ns) + CELL(0.454 ns) = 1.114 ns; Loc. = LAB_X11_Y12; Fanout = 8; COMB Node = 'adj_row[5]~14219'
+    Info: 3: + IC(0.628 ns) + CELL(0.454 ns) = 2.196 ns; Loc. = LAB_X11_Y15; Fanout = 1; COMB Node = 'adj_row[0]~14272'
+    Info: 4: + IC(0.628 ns) + CELL(0.454 ns) = 3.278 ns; Loc. = LAB_X12_Y12; Fanout = 1; COMB Node = 'adj_row[0]~14277'
+    Info: 5: + IC(0.057 ns) + CELL(0.454 ns) = 3.789 ns; Loc. = LAB_X12_Y12; Fanout = 1; COMB Node = 'adj_row[0]~14281'
+    Info: 6: + IC(0.171 ns) + CELL(0.340 ns) = 4.300 ns; Loc. = LAB_X12_Y12; Fanout = 1; COMB Node = 'Mux~514'
+    Info: 7: + IC(0.286 ns) + CELL(0.225 ns) = 4.811 ns; Loc. = LAB_X12_Y12; Fanout = 1; COMB Node = 'Mux~515'
+    Info: 8: + IC(0.057 ns) + CELL(0.454 ns) = 5.322 ns; Loc. = LAB_X12_Y12; Fanout = 1; COMB Node = 'Mux~516'
+    Info: 9: + IC(0.983 ns) + CELL(0.088 ns) = 6.393 ns; Loc. = LAB_X11_Y10; Fanout = 22; COMB Node = 'always0~200'
+    Info: 10: + IC(0.171 ns) + CELL(0.340 ns) = 6.904 ns; Loc. = LAB_X11_Y10; Fanout = 25; COMB Node = 'Select~2666'
+    Info: 11: + IC(0.994 ns) + CELL(0.088 ns) = 7.986 ns; Loc. = LAB_X12_Y7; Fanout = 4; COMB Node = 'result1[3]~241'
+    Info: 12: + IC(1.156 ns) + CELL(0.667 ns) = 9.809 ns; Loc. = LAB_X10_Y10; Fanout = 1; REG Node = 'result1[0]~reg0'
+    Info: Total cell delay = 4.018 ns ( 40.96 % )
+    Info: Total interconnect delay = 5.791 ns ( 59.04 % )
+Info: Fitter placement operations ending: elapsed time is 00:00:00
+Info: Fitter routing operations beginning
+Info: Average interconnect usage is 4% of the available device resources. Peak interconnect usage is 9%.
+Info: Fitter routing operations ending: elapsed time is 00:00:00
+Info: Fitter performed an Auto Fit compilation. Optimizations were skipped to reduce compilation time.
+Info: Completed Fixed Delay Chain Operation
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Completed Auto Delay Chain Operation
+Info: Quartus II Fitter was successful. 0 errors, 0 warnings
+    Info: Processing ended: Thu Apr 29 13:45:51 2021
+    Info: Elapsed time: 00:00:02
+
+

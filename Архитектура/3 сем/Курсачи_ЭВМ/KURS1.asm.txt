@@ -1,0 +1,160 @@
+    DOSSEG
+   .MODEL TINY
+   .STACK 100h
+   .DATA
+   mas db '  ','$'
+   a dw 0,0
+   b dw 0,0
+   c dw 0,0
+   d dw 0,0
+   e dw 0,0
+min  db 13,10,'minuts:',13,10,'$'
+sec  db 13,10,'secunds:',13,10,'$'
+
+   .CODE
+   mov    ax,@Data
+   mov    ds,ax  
+   ;==========минуты=========
+   mov    ah,9                    
+   mov    dx,offset min
+   int    21h 
+   
+   mov ah,01h               
+   int 21h   
+   sub al,30h   
+   mov bl,al
+  
+   mov cx,9  
+   mm3: add bl,al
+   loop mm3
+   
+   mov ah,01h               
+   int 21h   
+   sub al,30h
+   
+   add bl,al
+  
+   mov ax,bx
+   mov cx,59
+ mm1: add bx,ax
+  loop mm1
+  lea di,b  
+  mov [di],bx
+  
+  
+  ;---очистка экрана путем установки нового режима
+   mov  ah,0      ;номер функции установки режима дисплея
+   mov  al,2      ;код режима 80*25 черно-белого
+   int  10H       ;очистка экрана
+   
+   ;==========секунды========
+   mov    ah,9                    
+   mov    dx,offset sec
+   int    21h
+   
+   mov ah,01h               
+   int 21h   
+   sub al,30h   
+   mov bl,al
+  
+   mov cx,9  
+   m3: add bl,al
+   loop m3
+   
+   mov ah,01h               
+   int 21h   
+   sub al,30h
+   
+   add bl,al       
+             
+  lea si,a  
+  mov [si],bx
+  
+  ;---очистка экрана путем установки нового режима
+   mov  ah,0      ;номер функции установки режима дисплея
+   mov  al,2      ;код режима 80*25 черно-белого
+   int  10H       ;очистка экрана
+  
+    mov ax,[di]
+    add [si],ax
+     
+    mov di,0
+    mov ax,[si]
+    mov bx,10
+ n1:
+    mov dx,0
+    div bx
+    push dx
+    add di,1
+    cmp ax,0
+    jnz n1
+    mov ah,2
+ n2:
+    pop dx
+    add dl,'0'
+    int 21h
+    dec di
+    cmp di, 0
+    jnz n2
+    
+    mov  dx, ' '  
+    int  21h
+       
+
+mmm:  
+            mov   ah,0   ;читать часы (счетчик тиков)
+            int   1AH    ;получаем значение счетчика
+            add   dx,18  ;добавляем 1 сек. к младшему слову
+          
+            mov   bx,dx  ;запоминаем требуемое значение в BX
+            
+;---постоянная проверка значения счетчика времени суток BIOS
+REPEAT:     mov   ah,0
+            int   1AH    ;получаем значение счетчика
+
+            cmp   dx,bx  ;сравниваем с искомым
+            jne   REPEAT ;если неравен, то повторяем снова
+                         ;иначе, задержка окончена
+                         
+  sub [si],1
+  
+  ;---очистка экрана путем установки нового режима
+   mov  ah,0      ;номер функции установки режима дисплея
+   mov  al,2      ;код режима 80*25 черно-белого
+   int  10h       ;очистка экрана
+  
+ 
+    mov di,0
+    mov ax,[si]
+    mov bx,10
+ mmm1:
+    mov dx,0
+    div bx
+    push dx
+    add di,1
+    cmp ax,0
+    jnz mmm1
+    mov ah,2
+ mmm2:
+    pop dx
+    add dl,'0'
+    int 21h
+    dec di
+    cmp di, 0
+    jnz mmm2
+    
+    mov  dx, ' '  
+    int  21h
+
+  
+  cmp   [si],0  
+  jne   mmm
+  
+  mov ah,2 	;функция вывода символа на экран
+  mov dl,7 	;посылаем код ASCII 7
+  int 21h 	;динамик гудит 
+                           
+   
+   mov    ah,4ch                                 
+   int    21h                   
+END

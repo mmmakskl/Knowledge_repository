@@ -1,0 +1,98 @@
+-- MAX+plus II Compiler Fit File      
+-- Version 9.01 07/30/98              
+-- Compiled: 12/24/20 15:16:04        
+
+-- Copyright (C) 1988-1998 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+CHIP "memory_4"
+BEGIN
+
+    DEVICE = "EPF10K100BQC208-1";
+
+    "AD0"                          : INPUT_PIN  = 184    ;
+    "AD1"                          : INPUT_PIN  = 78     ;
+    "AD2"                          : INPUT_PIN  = 79     ;
+    "AD3"                          : INPUT_PIN  = 183    ;
+    "AD4"                          : INPUT_PIN  = 182    ;
+    "AD5"                          : INPUT_PIN  = 104    ;
+    "AD6"                          : INPUT_PIN  = 103    ;
+    "AD7"                          : INPUT_PIN  = 157    ;
+    "AD8"                          : INPUT_PIN  = 96     ;
+    "AD9"                          : INPUT_PIN  = 100    ;
+    "D0"                           : INPUT_PIN  = 149    ;
+    "D1"                           : INPUT_PIN  = 7      ;
+    "D2"                           : INPUT_PIN  = 12     ;
+    "D3"                           : INPUT_PIN  = 144    ;
+    "D4"                           : INPUT_PIN  = 15     ;
+    "D5"                           : INPUT_PIN  = 139    ;
+    "D6"                           : INPUT_PIN  = 18     ;
+    "D7"                           : INPUT_PIN  = 17     ;
+    "WE"                           : INPUT_PIN  = 80     ;
+    "Q0"                           : OUTPUT_PIN = 10     ;
+    "Q1"                           : OUTPUT_PIN = 9      ;
+    "Q2"                           : OUTPUT_PIN = 8      ;
+    "Q3"                           : OUTPUT_PIN = 13     ;
+    "Q4"                           : OUTPUT_PIN = 136    ;
+    "Q5"                           : OUTPUT_PIN = 140    ;
+    "Q6"                           : OUTPUT_PIN = 19     ;
+    "Q7"                           : OUTPUT_PIN = 16     ;
+    "|LPM_RAM_DQ:10|altram:sram|segment0_0" : LOCATION   = EC2_A  ;
+    "|LPM_RAM_DQ:10|altram:sram|segment0_1" : LOCATION   = EC1_A  ;
+    "|LPM_RAM_DQ:10|altram:sram|segment0_2" : LOCATION   = EC1_B  ;
+    "|LPM_RAM_DQ:10|altram:sram|segment0_3" : LOCATION   = EC2_B  ;
+    "|LPM_RAM_DQ:10|altram:sram|segment0_4" : LOCATION   = EC2_C  ;
+    "|LPM_RAM_DQ:10|altram:sram|segment0_5" : LOCATION   = EC1_C  ;
+    "|LPM_RAM_DQ:10|altram:sram|segment0_6" : LOCATION   = EC2_D  ;
+    "|LPM_RAM_DQ:10|altram:sram|segment0_7" : LOCATION   = EC1_D  ;
+
+END;
+
+INTERNAL_INFO "memory_4"
+BEGIN
+	DEVICE = EPF10K100BQC208-1;
+    OD0P184 : LORAX = "1:FB0|2:FH0R0,RP25R0->EC2_A,->EC1_A|,2:FH0R1,RP16R1->EC1_B,->EC2_B|,2:FH0R2,RP25R2->EC2_C,->EC1_C|,2:FH0R3,RP25R3->EC2_D,->EC1_D||";
+    OD2P78  : LORAX = "1:FB2|2:FH2R0,RP18R0->EC2_A,->EC1_A|,2:FH2R1,RP14R1->EC1_B,->EC2_B|,2:FH2R2,RP18R2->EC2_C,->EC1_C|,2:FH2R3,RP14R3->EC2_D,->EC1_D||";
+    OD5P79  : LORAX = "1:FB5|2:CH1R0,RP11R0->EC2_A,->EC1_A|,2:CH1R1,RP13R1->EC1_B,->EC2_B|,2:CH1R2,RP13R2->EC2_C,->EC1_C|,2:CH1R3,RP13R3->EC2_D,->EC1_D||";
+    OD4P183 : LORAX = "1:FB4|2:CH0R0,RP20R0->EC2_A,->EC1_A|,2:CH0R1,RP20R1->EC1_B,->EC2_B|,2:CH0R2,RP12R2->EC2_C,->EC1_C|,2:CH0R3,RP12R3->EC2_D,->EC1_D||";
+    OD1P182 : LORAX = "1:FB1|2:FH1R0,RP15R0->EC2_A,->EC1_A|,2:FH1R1,RP15R1->EC1_B,->EC2_B|,2:FH1R2,RP15R2->EC2_C,->EC1_C|,2:FH1R3,RP15R3->EC2_D,->EC1_D||";
+    OV3C0P104 : LORAX = "1:V18C0|2:HHL65R0,RP9R0->EC2_A,->EC1_A|,2:HHL65R1,RP22R1->EC1_B,->EC2_B|,2:HHL65R2,RP10R2->EC2_C,->EC1_C|,2:HHL65R3,RP22R3->EC2_D,->EC1_D||";
+    OV3C1P103 : LORAX = "1:V21C1|2:HHL55R0,RP8R0->EC2_A,->EC1_A|,2:HHL55R1,RP24R1->EC1_B,->EC2_B|,2:HHL55R2,RP24R2->EC2_C,->EC1_C|,2:HHL55R3,RP24R3->EC2_D,->EC1_D||";
+    OV0C8P157 : LORAX = "1:V1C8|2:HHL49R0,RP5R0->EC2_A,->EC1_A|,2:HHL49R1,RP5R1->EC1_B,->EC2_B|,2:HHL49R2,RP5R2->EC2_C,->EC1_C|,2:HHL49R3,RP5R3->EC2_D,->EC1_D||";
+    OV3C7P96 : LORAX = "1:V18C7|2:HHL77R0,RP1R0->EC2_A,->EC1_A|,2:HHL77R1,RP1R1->EC1_B,->EC2_B|,2:HHL77R2,RP1R2->EC2_C,->EC1_C|,2:HHL77R3,RP1R3->EC2_D,->EC1_D||";
+    OV3C4P100 : LORAX = "1:V18C4|2:HHL75R0,RP2R0->EC2_A,->EC1_A|,2:HHL75R1,RP7R1->EC1_B,->EC2_B|,2:HHL75R2,RP7R2->EC2_C,->EC1_C|,2:HHL75R3,RP7R3->EC2_D,->EC1_D||";
+    OH11R0P149 : LORAX = "1:G86R0,RP23R0->EC2_A|";
+    OH0R0P7 : LORAX = "1:G90R0,RP19R0->EC1_A|";
+    OH3R1P12 : LORAX = "1:G89R1,RP0R1->EC1_B|";
+    OH11R1P144 : LORAX = "1:G86R1,RP23R1->EC2_B|";
+    OH6R2P15 : LORAX = "1:G88R2,RP4R2->EC2_C|";
+    OH12R2P139 : LORAX = "1:G187R2,RP23R2->EC1_C|";
+    OH5R3P18 : LORAX = "1:G94R3,RP4R3->EC2_D|";
+    OH3R3P17 : LORAX = "1:G89R3,RP0R3->EC1_D|";
+    EC2_A   : LORAX = "1:RB1R0,G37R0->OH2R0P10|";
+    EC1_A   : LORAX = "1:RB0R0,G50R0->OH3R0P9|";
+    EC1_B   : LORAX = "1:RB0R1,RV3,G73R0->OH1R0P8|";
+    EC2_B   : LORAX = "1:RB1R1,G156R1->OH7R1P13|";
+    EC2_C   : LORAX = "1:RB1R2,G166R2->OH15R2P136|";
+    EC1_C   : LORAX = "1:RB0R2,G42R2->OH9R2P140|";
+    EC2_D   : LORAX = "1:RB1R3,G179R3->OH6R3P19|";
+    EC1_D   : LORAX = "1:RB0R3,G21R3->OH1R3P16|";
+    OD3P80  : LORAX = "1:FB3->EC2_A,->EC1_A,->EC1_B,->EC2_B,->EC2_C,->EC1_C,->EC2_D,->EC1_D|";
+END;

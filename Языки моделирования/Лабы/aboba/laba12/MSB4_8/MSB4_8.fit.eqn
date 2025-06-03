@@ -1,0 +1,710 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--C1L5 is MSB4_4:inst|7483:inst1|42~39 at LC_X18_Y1_N9
+--operation mode is normal
+
+C1L5 = X0 $ Y0 $ (B0 & A0);
+
+
+--C1L4 is MSB4_4:inst|7483:inst1|18~82 at LC_X17_Y1_N1
+--operation mode is normal
+
+C1L4 = X0 & !Y0 & (!A0 # !B0) # !X0 & (!Y0 # !A0 # !B0);
+
+
+--C1L6 is MSB4_4:inst|7483:inst1|43~113 at LC_X17_Y1_N0
+--operation mode is normal
+
+C1L6 = C1L4 $ X1 $ (A1 & B0);
+
+
+--C2_42 is MSB4_4:inst|7483:inst17|42 at LC_X17_Y1_N2
+--operation mode is normal
+
+C2_42 = Y1 $ C1L6 $ (B1 & A0);
+
+
+--B1_inst14 is MSB4_4:inst|inst14 at LC_X18_Y1_N6
+--operation mode is normal
+
+B1_inst14 = B0 & A2;
+
+
+--B1L5 is MSB4_4:inst|inst15~31 at LC_X18_Y1_N3
+--operation mode is normal
+
+B1L5 = !X1 & (!A1 # !B0);
+
+
+--C1L7 is MSB4_4:inst|7483:inst1|44~18 at LC_X18_Y1_N7
+--operation mode is normal
+
+C1L7 = B1_inst14 $ X2 $ (B1L5 # C1L11);
+
+
+--C2L9 is MSB4_4:inst|7483:inst17|51~173 at LC_X17_Y1_N5
+--operation mode is normal
+
+C2L9 = Y1 & C1L6 & (!A0 # !B1) # !Y1 & (C1L6 # !A0 # !B1);
+
+
+--C2L5 is MSB4_4:inst|7483:inst17|43~29 at LC_X17_Y1_N8
+--operation mode is normal
+
+C2L5 = C1L7 $ C2L9 $ (A1 & B1);
+
+
+--C3_42 is MSB4_4:inst|7483:inst18|42 at LC_X17_Y1_N4
+--operation mode is normal
+
+C3_42 = Y2 $ C2L5 $ (A0 & B2);
+
+
+--C1L1 is MSB4_4:inst|7483:inst1|1~265 at LC_X18_Y1_N8
+--operation mode is normal
+
+C1L1 = B1_inst14 & !X2 & (B1L5 # C1L2) # !B1_inst14 & (B1L5 # C1L2 # !X2);
+
+
+--C1L9 is MSB4_4:inst|7483:inst1|45~17 at LC_X18_Y2_N8
+--operation mode is normal
+
+C1L9 = X3 $ C1L1 $ (B0 & A3);
+
+
+--B1_inst2 is MSB4_4:inst|inst2 at LC_X18_Y1_N4
+--operation mode is normal
+
+B1_inst2 = A2 & (B1);
+
+
+--C1L8 is MSB4_4:inst|7483:inst1|44~19 at LC_X17_Y1_N3
+--operation mode is normal
+
+C1L8 = C1L7 & (!B1 # !A1);
+
+
+--C2L1 is MSB4_4:inst|7483:inst17|1~105 at LC_X17_Y1_N6
+--operation mode is normal
+
+C2L1 = C2L9 & (C1L7 # !B1 # !A1);
+
+
+--C2L6 is MSB4_4:inst|7483:inst17|44~20 at LC_X18_Y2_N0
+--operation mode is normal
+
+C2L6 = B1_inst2 $ C1L9 $ (C2L1 # C1L8);
+
+
+--C3L9 is MSB4_4:inst|7483:inst18|51~173 at LC_X17_Y1_N9
+--operation mode is normal
+
+C3L9 = Y2 & !C2L5 & (!B2 # !A0) # !Y2 & (!C2L5 # !B2 # !A0);
+
+
+--C3L5 is MSB4_4:inst|7483:inst18|43~38 at LC_X17_Y2_N1
+--operation mode is normal
+
+C3L5 = C3L9 $ C2L6 $ (A1 & B2);
+
+
+--C4_42 is MSB4_4:inst|7483:inst19|42 at LC_X17_Y2_N4
+--operation mode is normal
+
+C4_42 = Y3 $ C3L5 $ (B3 & A0);
+
+
+--C2L2 is MSB4_4:inst|7483:inst17|1~106 at LC_X18_Y2_N9
+--operation mode is normal
+
+C2L2 = B1_inst2 & C1L9 & (C2L1 # C1L8) # !B1_inst2 & (C2L1 # C1L8 # C1L9);
+
+
+--C1L3 is MSB4_4:inst|7483:inst1|2~85 at LC_X18_Y2_N3
+--operation mode is normal
+
+C1L3 = X3 & C1L1 & (!A3 # !B0) # !X3 & (C1L1 # !A3 # !B0);
+
+
+--C2L8 is MSB4_4:inst|7483:inst17|45~24 at LC_X18_Y2_N1
+--operation mode is normal
+
+C2L8 = C2L2 $ C1L3 $ (!A3 # !B1);
+
+
+--B1_inst6 is MSB4_4:inst|inst6 at LC_X18_Y1_N1
+--operation mode is normal
+
+B1_inst6 = A2 & (B2);
+
+
+--C2L7 is MSB4_4:inst|7483:inst17|44~21 at LC_X18_Y2_N6
+--operation mode is normal
+
+C2L7 = !C2L6 & (!B2 # !A1);
+
+
+--C3L1 is MSB4_4:inst|7483:inst18|1~107 at LC_X17_Y2_N2
+--operation mode is normal
+
+C3L1 = C3L9 & (!C2L6 # !B2 # !A1);
+
+
+--C3L6 is MSB4_4:inst|7483:inst18|44~26 at LC_X18_Y2_N2
+--operation mode is normal
+
+C3L6 = B1_inst6 $ C2L8 $ (C2L7 # C3L1);
+
+
+--C4L8 is MSB4_4:inst|7483:inst19|51~173 at LC_X17_Y2_N0
+--operation mode is normal
+
+C4L8 = Y3 & C3L5 & (!A0 # !B3) # !Y3 & (C3L5 # !A0 # !B3);
+
+
+--C4_43 is MSB4_4:inst|7483:inst19|43 at LC_X17_Y2_N5
+--operation mode is normal
+
+C4_43 = C4L8 $ C3L6 $ (A1 & B3);
+
+
+--C5_42 is MSB4_4:inst1|7483:inst1|42 at LC_X21_Y2_N6
+--operation mode is normal
+
+C5_42 = Y4 $ C4_43 $ (A4 & B0);
+
+
+--B1_inst10 is MSB4_4:inst|inst10 at LC_X17_Y2_N7
+--operation mode is normal
+
+B1_inst10 = A2 & B3;
+
+
+--C3L2 is MSB4_4:inst|7483:inst18|1~108 at LC_X18_Y2_N7
+--operation mode is normal
+
+C3L2 = B1_inst6 & C2L8 & (C2L7 # C3L1) # !B1_inst6 & (C2L7 # C2L8 # C3L1);
+
+
+--C2L3 is MSB4_4:inst|7483:inst17|2~81 at LC_X18_Y2_N4
+--operation mode is normal
+
+C2L3 = C2L2 & (C1L3 # !A3 # !B1) # !C2L2 & C1L3 & (!A3 # !B1);
+
+
+--C3L8 is MSB4_4:inst|7483:inst18|45~31 at LC_X18_Y2_N5
+--operation mode is normal
+
+C3L8 = C3L2 $ C2L3 $ (!B2 # !A3);
+
+
+--C3L7 is MSB4_4:inst|7483:inst18|44~27 at LC_X17_Y2_N6
+--operation mode is normal
+
+C3L7 = !C3L6 & (!B3 # !A1);
+
+
+--C4L1 is MSB4_4:inst|7483:inst19|1~116 at LC_X17_Y2_N8
+--operation mode is normal
+
+C4L1 = C4L8 & (!C3L6 # !B3 # !A1);
+
+
+--C4_44 is MSB4_4:inst|7483:inst19|44 at LC_X17_Y2_N3
+--operation mode is normal
+
+C4_44 = C3L8 $ B1_inst10 $ (C3L7 # C4L1);
+
+
+--C5L9 is MSB4_4:inst1|7483:inst1|51~173 at LC_X21_Y2_N4
+--operation mode is normal
+
+C5L9 = Y4 & C4_43 & (!B0 # !A4) # !Y4 & (C4_43 # !B0 # !A4);
+
+
+--C5L5 is MSB4_4:inst1|7483:inst1|43~40 at LC_X21_Y2_N1
+--operation mode is normal
+
+C5L5 = C4_44 $ C5L9 $ (A5 & B0);
+
+
+--C6_42 is MSB4_4:inst1|7483:inst17|42 at LC_X21_Y2_N9
+--operation mode is normal
+
+C6_42 = C5L5 $ Y5 $ (A4 & B1);
+
+
+--C4L2 is MSB4_4:inst|7483:inst19|1~117 at LC_X17_Y2_N9
+--operation mode is normal
+
+C4L2 = C3L8 & (C3L7 # C4L1 # !B1_inst10) # !C3L8 & !B1_inst10 & (C3L7 # C4L1);
+
+
+--C3L3 is MSB4_4:inst|7483:inst18|2~81 at LC_X19_Y2_N6
+--operation mode is normal
+
+C3L3 = C3L2 & (C2L3 # !B2 # !A3) # !C3L2 & C2L3 & (!B2 # !A3);
+
+
+--C4_45 is MSB4_4:inst|7483:inst19|45 at LC_X19_Y2_N3
+--operation mode is normal
+
+C4_45 = C4L2 $ C3L3 $ (!B3 # !A3);
+
+
+--B2_inst14 is MSB4_4:inst1|inst14 at LC_X19_Y2_N2
+--operation mode is normal
+
+B2_inst14 = A6 & B0;
+
+
+--B2L4 is MSB4_4:inst1|inst15~17 at LC_X19_Y2_N0
+--operation mode is normal
+
+B2L4 = !C4_44 & (!B0 # !A5);
+
+
+--C5L1 is MSB4_4:inst1|7483:inst1|1~43 at LC_X21_Y2_N2
+--operation mode is normal
+
+C5L1 = C5L9 & (!B0 # !A5 # !C4_44);
+
+
+--C5L6 is MSB4_4:inst1|7483:inst1|44~42 at LC_X19_Y2_N9
+--operation mode is normal
+
+C5L6 = B2_inst14 $ C4_45 $ (C5L1 # B2L4);
+
+
+--C6L9 is MSB4_4:inst1|7483:inst17|51~173 at LC_X21_Y2_N7
+--operation mode is normal
+
+C6L9 = C5L5 & (!Y5 # !B1 # !A4) # !C5L5 & !Y5 & (!B1 # !A4);
+
+
+--C6L5 is MSB4_4:inst1|7483:inst17|43~38 at LC_X21_Y2_N8
+--operation mode is normal
+
+C6L5 = C6L9 $ C5L6 $ (A5 & B1);
+
+
+--C7_42 is MSB4_4:inst1|7483:inst18|42 at LC_X21_Y2_N0
+--operation mode is normal
+
+C7_42 = Y6 $ C6L5 $ (B2 & A4);
+
+
+--B2_inst2 is MSB4_4:inst1|inst2 at LC_X19_Y2_N8
+--operation mode is normal
+
+B2_inst2 = A6 & B1;
+
+
+--C5L2 is MSB4_4:inst1|7483:inst1|1~44 at LC_X19_Y2_N1
+--operation mode is normal
+
+C5L2 = B2_inst14 & C4_45 & (C5L1 # B2L4) # !B2_inst14 & (C5L1 # C4_45 # B2L4);
+
+
+--C4L3 is MSB4_4:inst|7483:inst19|2~81 at LC_X19_Y2_N4
+--operation mode is normal
+
+C4L3 = C4L2 & (C3L3 # !B3 # !A3) # !C4L2 & C3L3 & (!B3 # !A3);
+
+
+--C5L8 is MSB4_4:inst1|7483:inst1|45~34 at LC_X19_Y1_N5
+--operation mode is normal
+
+C5L8 = C5L2 $ C4L3 $ (!B0 # !A7);
+
+
+--C5L7 is MSB4_4:inst1|7483:inst1|44~43 at LC_X21_Y2_N3
+--operation mode is normal
+
+C5L7 = !C5L6 & (!B1 # !A5);
+
+
+--C6L1 is MSB4_4:inst1|7483:inst17|1~114 at LC_X21_Y2_N5
+--operation mode is normal
+
+C6L1 = C6L9 & (!C5L6 # !B1 # !A5);
+
+
+--C6L6 is MSB4_4:inst1|7483:inst17|44~36 at LC_X19_Y2_N5
+--operation mode is normal
+
+C6L6 = B2_inst2 $ C5L8 $ (C6L1 # C5L7);
+
+
+--C7L8 is MSB4_4:inst1|7483:inst18|51~173 at LC_X21_Y1_N1
+--operation mode is normal
+
+C7L8 = Y6 & C6L5 & (!A4 # !B2) # !Y6 & (C6L5 # !A4 # !B2);
+
+
+--C7L5 is MSB4_4:inst1|7483:inst18|43~46 at LC_X21_Y1_N9
+--operation mode is normal
+
+C7L5 = C6L6 $ C7L8 $ (B2 & A5);
+
+
+--C8_42 is MSB4_4:inst1|7483:inst19|42 at LC_X21_Y1_N3
+--operation mode is normal
+
+C8_42 = Y7 $ C7L5 $ (A4 & B3);
+
+
+--C6L2 is MSB4_4:inst1|7483:inst17|1~115 at LC_X19_Y2_N7
+--operation mode is normal
+
+C6L2 = B2_inst2 & C5L8 & (C6L1 # C5L7) # !B2_inst2 & (C6L1 # C5L7 # C5L8);
+
+
+--C5L3 is MSB4_4:inst1|7483:inst1|2~81 at LC_X19_Y1_N1
+--operation mode is normal
+
+C5L3 = C5L2 & (C4L3 # !B0 # !A7) # !C5L2 & C4L3 & (!B0 # !A7);
+
+
+--C6L8 is MSB4_4:inst1|7483:inst17|45~33 at LC_X19_Y1_N9
+--operation mode is normal
+
+C6L8 = C5L3 $ C6L2 $ (!B1 # !A7);
+
+
+--B2_inst6 is MSB4_4:inst1|inst6 at LC_X18_Y1_N5
+--operation mode is normal
+
+B2_inst6 = B2 & A6;
+
+
+--C6L7 is MSB4_4:inst1|7483:inst17|44~37 at LC_X21_Y1_N7
+--operation mode is normal
+
+C6L7 = !C6L6 & (!A5 # !B2);
+
+
+--C7L1 is MSB4_4:inst1|7483:inst18|1~105 at LC_X21_Y1_N2
+--operation mode is normal
+
+C7L1 = C7L8 & (!A5 # !B2 # !C6L6);
+
+
+--C7L6 is MSB4_4:inst1|7483:inst18|44~47 at LC_X21_Y1_N8
+--operation mode is normal
+
+C7L6 = B2_inst6 $ C6L8 $ (C6L7 # C7L1);
+
+
+--C8L8 is MSB4_4:inst1|7483:inst19|51~173 at LC_X21_Y1_N4
+--operation mode is normal
+
+C8L8 = Y7 & C7L5 & (!B3 # !A4) # !Y7 & (C7L5 # !B3 # !A4);
+
+
+--C8_43 is MSB4_4:inst1|7483:inst19|43 at LC_X21_Y1_N0
+--operation mode is normal
+
+C8_43 = C7L6 $ C8L8 $ (A5 & B3);
+
+
+--C8L1 is MSB4_4:inst1|7483:inst19|1~97 at LC_X21_Y1_N5
+--operation mode is normal
+
+C8L1 = C7L6 & C8L8 & (!B3 # !A5) # !C7L6 & (C8L8 # !B3 # !A5);
+
+
+--C7L2 is MSB4_4:inst1|7483:inst18|1~106 at LC_X21_Y1_N6
+--operation mode is normal
+
+C7L2 = B2_inst6 & C6L8 & (C6L7 # C7L1) # !B2_inst6 & (C6L7 # C6L8 # C7L1);
+
+
+--C6L3 is MSB4_4:inst1|7483:inst17|2~81 at LC_X19_Y1_N8
+--operation mode is normal
+
+C6L3 = C5L3 & (C6L2 # !B1 # !A7) # !C5L3 & C6L2 & (!B1 # !A7);
+
+
+--C7L7 is MSB4_4:inst1|7483:inst18|45~43 at LC_X19_Y1_N7
+--operation mode is normal
+
+C7L7 = C7L2 $ C6L3 $ (!B2 # !A7);
+
+
+--C8_44 is MSB4_4:inst1|7483:inst19|44 at LC_X19_Y1_N4
+--operation mode is normal
+
+C8_44 = C7L7 $ C8L1 $ (A6 & B3);
+
+
+--C8L2 is MSB4_4:inst1|7483:inst19|1~98 at LC_X19_Y1_N2
+--operation mode is normal
+
+C8L2 = C7L7 & (C8L1 # !B3 # !A6) # !C7L7 & C8L1 & (!B3 # !A6);
+
+
+--C7L3 is MSB4_4:inst1|7483:inst18|2~81 at LC_X19_Y1_N3
+--operation mode is normal
+
+C7L3 = C7L2 & (C6L3 # !B2 # !A7) # !C7L2 & C6L3 & (!B2 # !A7);
+
+
+--C8_45 is MSB4_4:inst1|7483:inst19|45 at LC_X19_Y1_N6
+--operation mode is normal
+
+C8_45 = C7L3 $ C8L2 $ (!B3 # !A7);
+
+
+--C8L3 is MSB4_4:inst1|7483:inst19|2~69 at LC_X19_Y1_N0
+--operation mode is normal
+
+C8L3 = C7L3 & (C8L2 # !B3 # !A7) # !C7L3 & C8L2 & (!B3 # !A7);
+
+
+--C1L2 is MSB4_4:inst|7483:inst1|1~266 at LC_X17_Y1_N7
+--operation mode is normal
+
+C1L2 = C1L4 & (!X1 # !B0 # !A1);
+
+
+--C1L01 is MSB4_4:inst|7483:inst1|51~155 at LC_X18_Y1_N2
+--operation mode is normal
+
+C1L01 = X0 & !Y0 & (!A0 # !B0) # !X0 & (!Y0 # !A0 # !B0);
+
+
+--C1L11 is MSB4_4:inst|7483:inst1|51~156 at LC_X18_Y1_N0
+--operation mode is normal
+
+C1L11 = C1L01 & (!B0 # !A1 # !X1);
+
+
+--A0 is A0 at PIN_V14
+--operation mode is input
+
+A0 = INPUT();
+
+
+--B0 is B0 at PIN_U15
+--operation mode is input
+
+B0 = INPUT();
+
+
+--X0 is X0 at PIN_U14
+--operation mode is input
+
+X0 = INPUT();
+
+
+--Y0 is Y0 at PIN_AA15
+--operation mode is input
+
+Y0 = INPUT();
+
+
+--B1 is B1 at PIN_N14
+--operation mode is input
+
+B1 = INPUT();
+
+
+--A1 is A1 at PIN_W15
+--operation mode is input
+
+A1 = INPUT();
+
+
+--X1 is X1 at PIN_AB15
+--operation mode is input
+
+X1 = INPUT();
+
+
+--Y1 is Y1 at PIN_AA16
+--operation mode is input
+
+Y1 = INPUT();
+
+
+--B2 is B2 at PIN_P14
+--operation mode is input
+
+B2 = INPUT();
+
+
+--A2 is A2 at PIN_W14
+--operation mode is input
+
+A2 = INPUT();
+
+
+--X2 is X2 at PIN_V17
+--operation mode is input
+
+X2 = INPUT();
+
+
+--Y2 is Y2 at PIN_P16
+--operation mode is input
+
+Y2 = INPUT();
+
+
+--B3 is B3 at PIN_Y14
+--operation mode is input
+
+B3 = INPUT();
+
+
+--A3 is A3 at PIN_P15
+--operation mode is input
+
+A3 = INPUT();
+
+
+--X3 is X3 at PIN_AB16
+--operation mode is input
+
+X3 = INPUT();
+
+
+--Y3 is Y3 at PIN_Y15
+--operation mode is input
+
+Y3 = INPUT();
+
+
+--A4 is A4 at PIN_W13
+--operation mode is input
+
+A4 = INPUT();
+
+
+--Y4 is Y4 at PIN_AB11
+--operation mode is input
+
+Y4 = INPUT();
+
+
+--A5 is A5 at PIN_AA14
+--operation mode is input
+
+A5 = INPUT();
+
+
+--Y5 is Y5 at PIN_AA11
+--operation mode is input
+
+Y5 = INPUT();
+
+
+--A6 is A6 at PIN_T14
+--operation mode is input
+
+A6 = INPUT();
+
+
+--Y6 is Y6 at PIN_V13
+--operation mode is input
+
+Y6 = INPUT();
+
+
+--A7 is A7 at PIN_N15
+--operation mode is input
+
+A7 = INPUT();
+
+
+--Y7 is Y7 at PIN_Y12
+--operation mode is input
+
+Y7 = INPUT();
+
+
+--C0 is C0 at PIN_T15
+--operation mode is output
+
+C0 = OUTPUT(C1L5);
+
+
+--C1 is C1 at PIN_R15
+--operation mode is output
+
+C1 = OUTPUT(!C2_42);
+
+
+--C2 is C2 at PIN_N13
+--operation mode is output
+
+C2 = OUTPUT(C3_42);
+
+
+--C3 is C3 at PIN_N16
+--operation mode is output
+
+C3 = OUTPUT(!C4_42);
+
+
+--C4 is C4 at PIN_AA13
+--operation mode is output
+
+C4 = OUTPUT(!C5_42);
+
+
+--C5 is C5 at PIN_AA12
+--operation mode is output
+
+C5 = OUTPUT(!C6_42);
+
+
+--C6 is C6 at PIN_W12
+--operation mode is output
+
+C6 = OUTPUT(!C7_42);
+
+
+--C7 is C7 at PIN_Y13
+--operation mode is output
+
+C7 = OUTPUT(!C8_42);
+
+
+--C8 is C8 at PIN_AB12
+--operation mode is output
+
+C8 = OUTPUT(!C8_43);
+
+
+--C9 is C9 at PIN_P13
+--operation mode is output
+
+C9 = OUTPUT(C8_44);
+
+
+--C10 is C10 at PIN_W16
+--operation mode is output
+
+C10 = OUTPUT(!C8_45);
+
+
+--C11 is C11 at PIN_V15
+--operation mode is output
+
+C11 = OUTPUT(!C8L3);
+
+
+

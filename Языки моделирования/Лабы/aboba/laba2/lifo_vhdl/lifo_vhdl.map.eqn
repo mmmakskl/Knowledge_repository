@@ -1,0 +1,1103 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L921Q is O_DATA[0]~reg0
+--operation mode is normal
+
+A1L921Q_lut_out = A1L821 & memory[0][0] # !A1L821 & (A1L741);
+A1L921Q = DFFEAS(A1L921Q_lut_out, clk, VCC, , A1L521, , , , );
+
+
+--A1L131Q is O_DATA[1]~reg0
+--operation mode is normal
+
+A1L131Q_lut_out = A1L821 & memory[0][1] # !A1L821 & (A1L151);
+A1L131Q = DFFEAS(A1L131Q_lut_out, clk, VCC, , A1L521, , , , );
+
+
+--A1L331Q is O_DATA[2]~reg0
+--operation mode is normal
+
+A1L331Q_lut_out = A1L821 & memory[0][2] # !A1L821 & (A1L551);
+A1L331Q = DFFEAS(A1L331Q_lut_out, clk, VCC, , A1L521, , , , );
+
+
+--A1L531Q is O_DATA[3]~reg0
+--operation mode is normal
+
+A1L531Q_lut_out = A1L821 & memory[0][3] # !A1L821 & (A1L951);
+A1L531Q = DFFEAS(A1L531Q_lut_out, clk, VCC, , A1L521, , , , );
+
+
+--A1L731Q is O_DATA[4]~reg0
+--operation mode is normal
+
+A1L731Q_lut_out = A1L821 & memory[0][4] # !A1L821 & (A1L361);
+A1L731Q = DFFEAS(A1L731Q_lut_out, clk, VCC, , A1L521, , , , );
+
+
+--A1L931Q is O_DATA[5]~reg0
+--operation mode is normal
+
+A1L931Q_lut_out = A1L821 & memory[0][5] # !A1L821 & (A1L761);
+A1L931Q = DFFEAS(A1L931Q_lut_out, clk, VCC, , A1L521, , , , );
+
+
+--A1L141Q is O_DATA[6]~reg0
+--operation mode is normal
+
+A1L141Q_lut_out = A1L821 & memory[0][6] # !A1L821 & (A1L171);
+A1L141Q = DFFEAS(A1L141Q_lut_out, clk, VCC, , A1L521, , , , );
+
+
+--A1L341Q is O_DATA[7]~reg0
+--operation mode is normal
+
+A1L341Q_lut_out = A1L821 & memory[0][7] # !A1L821 & (A1L571);
+A1L341Q = DFFEAS(A1L341Q_lut_out, clk, VCC, , A1L521, , , , );
+
+
+--\main:FULL is \main:FULL
+--operation mode is normal
+
+\main:FULL_lut_out = !A1L71 & !A1L02 & !A1L32 & A1L52;
+\main:FULL = DFFEAS(\main:FULL_lut_out, clk, !rst, , , , , , );
+
+
+--\main:EMPTY is \main:EMPTY
+--operation mode is normal
+
+\main:EMPTY_lut_out = A1L52 # A1L71 # A1L02 # A1L32;
+\main:EMPTY = DFFEAS(\main:EMPTY_lut_out, clk, !rst, , , , , , );
+
+
+--memory[0][0] is memory[0][0]
+--operation mode is normal
+
+memory[0][0]_lut_out = I_DATA[0];
+memory[0][0] = DFFEAS(memory[0][0]_lut_out, clk, !rst, , A1L34, , , , );
+
+
+--memory[5][0] is memory[5][0]
+--operation mode is normal
+
+memory[5][0]_lut_out = I_DATA[0];
+memory[5][0] = DFFEAS(memory[5][0]_lut_out, clk, !rst, , A1L49, , , , );
+
+
+--\main:stack_pointer[2] is \main:stack_pointer[2]
+--operation mode is normal
+
+\main:stack_pointer[2]_lut_out = \main:stack_pointer[2] $ !A1L971;
+\main:stack_pointer[2] = DFFEAS(\main:stack_pointer[2]_lut_out, clk, !rst, , A1L41, , , , );
+
+
+--memory[3][0] is memory[3][0]
+--operation mode is normal
+
+memory[3][0]_lut_out = I_DATA[0];
+memory[3][0] = DFFEAS(memory[3][0]_lut_out, clk, !rst, , A1L47, , , , );
+
+
+--\main:stack_pointer[1] is \main:stack_pointer[1]
+--operation mode is normal
+
+\main:stack_pointer[1]_lut_out = !\main:stack_pointer[1];
+\main:stack_pointer[1] = DFFEAS(\main:stack_pointer[1]_lut_out, clk, !rst, , A1L11, , , , );
+
+
+--memory[1][0] is memory[1][0]
+--operation mode is normal
+
+memory[1][0]_lut_out = I_DATA[0];
+memory[1][0] = DFFEAS(memory[1][0]_lut_out, clk, !rst, , A1L45, , , , );
+
+
+--A1L441 is O_DATA~1028
+--operation mode is normal
+
+A1L441 = \main:stack_pointer[2] & (\main:stack_pointer[1]) # !\main:stack_pointer[2] & (\main:stack_pointer[1] & memory[3][0] # !\main:stack_pointer[1] & (memory[1][0]));
+
+
+--memory[7][0] is memory[7][0]
+--operation mode is normal
+
+memory[7][0]_lut_out = I_DATA[0];
+memory[7][0] = DFFEAS(memory[7][0]_lut_out, clk, !rst, , A1L411, , , , );
+
+
+--A1L541 is O_DATA~1029
+--operation mode is normal
+
+A1L541 = \main:stack_pointer[2] & (A1L441 & (memory[7][0]) # !A1L441 & memory[5][0]) # !\main:stack_pointer[2] & (A1L441);
+
+
+--\main:stack_pointer[0] is \main:stack_pointer[0]
+--operation mode is normal
+
+\main:stack_pointer[0]_lut_out = A1L9 $ (!\main:count_of_elems[1] & !\main:count_of_elems[2] & !\main:count_of_elems[0]);
+\main:stack_pointer[0] = DFFEAS(\main:stack_pointer[0]_lut_out, clk, !rst, , A1L41, A1L9, , , I_RD_WR);
+
+
+--A1L621 is O_DATA[0]~1030
+--operation mode is normal
+
+A1L621 = \main:stack_pointer[0] # \main:stack_pointer[2] & \main:stack_pointer[1];
+
+
+--memory[2][0] is memory[2][0]
+--operation mode is normal
+
+memory[2][0]_lut_out = I_DATA[0];
+memory[2][0] = DFFEAS(memory[2][0]_lut_out, clk, !rst, , A1L46, , , , );
+
+
+--A1L721 is O_DATA[0]~1031
+--operation mode is normal
+
+A1L721 = \main:stack_pointer[1] & (!\main:stack_pointer[0]);
+
+
+--memory[4][0] is memory[4][0]
+--operation mode is normal
+
+memory[4][0]_lut_out = I_DATA[0];
+memory[4][0] = DFFEAS(memory[4][0]_lut_out, clk, !rst, , A1L48, , , , );
+
+
+--A1L641 is O_DATA~1032
+--operation mode is normal
+
+A1L641 = A1L621 & (A1L721) # !A1L621 & (A1L721 & memory[2][0] # !A1L721 & (memory[4][0]));
+
+
+--memory[6][0] is memory[6][0]
+--operation mode is normal
+
+memory[6][0]_lut_out = I_DATA[0];
+memory[6][0] = DFFEAS(memory[6][0]_lut_out, clk, !rst, , A1L401, , , , );
+
+
+--A1L741 is O_DATA~1033
+--operation mode is normal
+
+A1L741 = A1L621 & (A1L641 & (memory[6][0]) # !A1L641 & A1L541) # !A1L621 & (A1L641);
+
+
+--\main:count_of_elems[0] is \main:count_of_elems[0]
+--operation mode is normal
+
+\main:count_of_elems[0]_lut_out = A1L02;
+\main:count_of_elems[0] = DFFEAS(\main:count_of_elems[0]_lut_out, clk, VCC, , !rst, , , , );
+
+
+--\main:count_of_elems[3] is \main:count_of_elems[3]
+--operation mode is normal
+
+\main:count_of_elems[3]_lut_out = A1L52;
+\main:count_of_elems[3] = DFFEAS(\main:count_of_elems[3]_lut_out, clk, VCC, , !rst, , , , );
+
+
+--\main:count_of_elems[2] is \main:count_of_elems[2]
+--operation mode is normal
+
+\main:count_of_elems[2]_lut_out = A1L71;
+\main:count_of_elems[2] = DFFEAS(\main:count_of_elems[2]_lut_out, clk, VCC, , !rst, , , , );
+
+
+--\main:count_of_elems[1] is \main:count_of_elems[1]
+--operation mode is normal
+
+\main:count_of_elems[1]_lut_out = A1L32;
+\main:count_of_elems[1] = DFFEAS(\main:count_of_elems[1]_lut_out, clk, VCC, , !rst, , , , );
+
+
+--A1L31 is \main:stack_pointer[2]~22
+--operation mode is normal
+
+A1L31 = !\main:count_of_elems[3] & !\main:count_of_elems[2] & !\main:count_of_elems[1];
+
+
+--A1L8 is \main:stack_pointer[0]~22
+--operation mode is normal
+
+A1L8 = !\main:stack_pointer[0] & !\main:stack_pointer[1];
+
+
+--A1L821 is O_DATA[0]~1034
+--operation mode is normal
+
+A1L821 = \main:count_of_elems[0] & (A1L31 # A1L8 & !\main:stack_pointer[2]) # !\main:count_of_elems[0] & (A1L8 & !\main:stack_pointer[2]);
+
+
+--A1L521 is O_DATA[0]~23
+--operation mode is normal
+
+A1L521 = I_RD_WR & !rst & (\main:count_of_elems[0] # !A1L31);
+
+
+--memory[0][1] is memory[0][1]
+--operation mode is normal
+
+memory[0][1]_lut_out = I_DATA[1];
+memory[0][1] = DFFEAS(memory[0][1]_lut_out, clk, !rst, , A1L34, , , , );
+
+
+--memory[2][1] is memory[2][1]
+--operation mode is normal
+
+memory[2][1]_lut_out = I_DATA[1];
+memory[2][1] = DFFEAS(memory[2][1]_lut_out, clk, !rst, , A1L46, , , , );
+
+
+--memory[3][1] is memory[3][1]
+--operation mode is normal
+
+memory[3][1]_lut_out = I_DATA[1];
+memory[3][1] = DFFEAS(memory[3][1]_lut_out, clk, !rst, , A1L47, , , , );
+
+
+--memory[5][1] is memory[5][1]
+--operation mode is normal
+
+memory[5][1]_lut_out = I_DATA[1];
+memory[5][1] = DFFEAS(memory[5][1]_lut_out, clk, !rst, , A1L49, , , , );
+
+
+--memory[1][1] is memory[1][1]
+--operation mode is normal
+
+memory[1][1]_lut_out = I_DATA[1];
+memory[1][1] = DFFEAS(memory[1][1]_lut_out, clk, !rst, , A1L45, , , , );
+
+
+--A1L841 is O_DATA~1036
+--operation mode is normal
+
+A1L841 = \main:stack_pointer[1] & (\main:stack_pointer[2]) # !\main:stack_pointer[1] & (\main:stack_pointer[2] & memory[5][1] # !\main:stack_pointer[2] & (memory[1][1]));
+
+
+--memory[7][1] is memory[7][1]
+--operation mode is normal
+
+memory[7][1]_lut_out = I_DATA[1];
+memory[7][1] = DFFEAS(memory[7][1]_lut_out, clk, !rst, , A1L411, , , , );
+
+
+--A1L941 is O_DATA~1037
+--operation mode is normal
+
+A1L941 = \main:stack_pointer[1] & (A1L841 & (memory[7][1]) # !A1L841 & memory[3][1]) # !\main:stack_pointer[1] & (A1L841);
+
+
+--memory[4][1] is memory[4][1]
+--operation mode is normal
+
+memory[4][1]_lut_out = I_DATA[1];
+memory[4][1] = DFFEAS(memory[4][1]_lut_out, clk, !rst, , A1L48, , , , );
+
+
+--A1L051 is O_DATA~1038
+--operation mode is normal
+
+A1L051 = A1L721 & (A1L621) # !A1L721 & (A1L621 & A1L941 # !A1L621 & (memory[4][1]));
+
+
+--memory[6][1] is memory[6][1]
+--operation mode is normal
+
+memory[6][1]_lut_out = I_DATA[1];
+memory[6][1] = DFFEAS(memory[6][1]_lut_out, clk, !rst, , A1L401, , , , );
+
+
+--A1L151 is O_DATA~1039
+--operation mode is normal
+
+A1L151 = A1L721 & (A1L051 & (memory[6][1]) # !A1L051 & memory[2][1]) # !A1L721 & (A1L051);
+
+
+--memory[0][2] is memory[0][2]
+--operation mode is normal
+
+memory[0][2]_lut_out = I_DATA[2];
+memory[0][2] = DFFEAS(memory[0][2]_lut_out, clk, !rst, , A1L34, , , , );
+
+
+--memory[5][2] is memory[5][2]
+--operation mode is normal
+
+memory[5][2]_lut_out = I_DATA[2];
+memory[5][2] = DFFEAS(memory[5][2]_lut_out, clk, !rst, , A1L49, , , , );
+
+
+--memory[3][2] is memory[3][2]
+--operation mode is normal
+
+memory[3][2]_lut_out = I_DATA[2];
+memory[3][2] = DFFEAS(memory[3][2]_lut_out, clk, !rst, , A1L47, , , , );
+
+
+--memory[1][2] is memory[1][2]
+--operation mode is normal
+
+memory[1][2]_lut_out = I_DATA[2];
+memory[1][2] = DFFEAS(memory[1][2]_lut_out, clk, !rst, , A1L45, , , , );
+
+
+--A1L251 is O_DATA~1041
+--operation mode is normal
+
+A1L251 = \main:stack_pointer[2] & (\main:stack_pointer[1]) # !\main:stack_pointer[2] & (\main:stack_pointer[1] & memory[3][2] # !\main:stack_pointer[1] & (memory[1][2]));
+
+
+--memory[7][2] is memory[7][2]
+--operation mode is normal
+
+memory[7][2]_lut_out = I_DATA[2];
+memory[7][2] = DFFEAS(memory[7][2]_lut_out, clk, !rst, , A1L411, , , , );
+
+
+--A1L351 is O_DATA~1042
+--operation mode is normal
+
+A1L351 = \main:stack_pointer[2] & (A1L251 & (memory[7][2]) # !A1L251 & memory[5][2]) # !\main:stack_pointer[2] & (A1L251);
+
+
+--memory[2][2] is memory[2][2]
+--operation mode is normal
+
+memory[2][2]_lut_out = I_DATA[2];
+memory[2][2] = DFFEAS(memory[2][2]_lut_out, clk, !rst, , A1L46, , , , );
+
+
+--memory[4][2] is memory[4][2]
+--operation mode is normal
+
+memory[4][2]_lut_out = I_DATA[2];
+memory[4][2] = DFFEAS(memory[4][2]_lut_out, clk, !rst, , A1L48, , , , );
+
+
+--A1L451 is O_DATA~1043
+--operation mode is normal
+
+A1L451 = A1L621 & (A1L721) # !A1L621 & (A1L721 & memory[2][2] # !A1L721 & (memory[4][2]));
+
+
+--memory[6][2] is memory[6][2]
+--operation mode is normal
+
+memory[6][2]_lut_out = I_DATA[2];
+memory[6][2] = DFFEAS(memory[6][2]_lut_out, clk, !rst, , A1L401, , , , );
+
+
+--A1L551 is O_DATA~1044
+--operation mode is normal
+
+A1L551 = A1L621 & (A1L451 & (memory[6][2]) # !A1L451 & A1L351) # !A1L621 & (A1L451);
+
+
+--memory[0][3] is memory[0][3]
+--operation mode is normal
+
+memory[0][3]_lut_out = I_DATA[3];
+memory[0][3] = DFFEAS(memory[0][3]_lut_out, clk, !rst, , A1L34, , , , );
+
+
+--memory[2][3] is memory[2][3]
+--operation mode is normal
+
+memory[2][3]_lut_out = I_DATA[3];
+memory[2][3] = DFFEAS(memory[2][3]_lut_out, clk, !rst, , A1L46, , , , );
+
+
+--memory[3][3] is memory[3][3]
+--operation mode is normal
+
+memory[3][3]_lut_out = I_DATA[3];
+memory[3][3] = DFFEAS(memory[3][3]_lut_out, clk, !rst, , A1L47, , , , );
+
+
+--memory[5][3] is memory[5][3]
+--operation mode is normal
+
+memory[5][3]_lut_out = I_DATA[3];
+memory[5][3] = DFFEAS(memory[5][3]_lut_out, clk, !rst, , A1L49, , , , );
+
+
+--memory[1][3] is memory[1][3]
+--operation mode is normal
+
+memory[1][3]_lut_out = I_DATA[3];
+memory[1][3] = DFFEAS(memory[1][3]_lut_out, clk, !rst, , A1L45, , , , );
+
+
+--A1L651 is O_DATA~1046
+--operation mode is normal
+
+A1L651 = \main:stack_pointer[1] & (\main:stack_pointer[2]) # !\main:stack_pointer[1] & (\main:stack_pointer[2] & memory[5][3] # !\main:stack_pointer[2] & (memory[1][3]));
+
+
+--memory[7][3] is memory[7][3]
+--operation mode is normal
+
+memory[7][3]_lut_out = I_DATA[3];
+memory[7][3] = DFFEAS(memory[7][3]_lut_out, clk, !rst, , A1L411, , , , );
+
+
+--A1L751 is O_DATA~1047
+--operation mode is normal
+
+A1L751 = \main:stack_pointer[1] & (A1L651 & (memory[7][3]) # !A1L651 & memory[3][3]) # !\main:stack_pointer[1] & (A1L651);
+
+
+--memory[4][3] is memory[4][3]
+--operation mode is normal
+
+memory[4][3]_lut_out = I_DATA[3];
+memory[4][3] = DFFEAS(memory[4][3]_lut_out, clk, !rst, , A1L48, , , , );
+
+
+--A1L851 is O_DATA~1048
+--operation mode is normal
+
+A1L851 = A1L721 & (A1L621) # !A1L721 & (A1L621 & A1L751 # !A1L621 & (memory[4][3]));
+
+
+--memory[6][3] is memory[6][3]
+--operation mode is normal
+
+memory[6][3]_lut_out = I_DATA[3];
+memory[6][3] = DFFEAS(memory[6][3]_lut_out, clk, !rst, , A1L401, , , , );
+
+
+--A1L951 is O_DATA~1049
+--operation mode is normal
+
+A1L951 = A1L721 & (A1L851 & (memory[6][3]) # !A1L851 & memory[2][3]) # !A1L721 & (A1L851);
+
+
+--memory[0][4] is memory[0][4]
+--operation mode is normal
+
+memory[0][4]_lut_out = I_DATA[4];
+memory[0][4] = DFFEAS(memory[0][4]_lut_out, clk, !rst, , A1L34, , , , );
+
+
+--memory[5][4] is memory[5][4]
+--operation mode is normal
+
+memory[5][4]_lut_out = I_DATA[4];
+memory[5][4] = DFFEAS(memory[5][4]_lut_out, clk, !rst, , A1L49, , , , );
+
+
+--memory[3][4] is memory[3][4]
+--operation mode is normal
+
+memory[3][4]_lut_out = I_DATA[4];
+memory[3][4] = DFFEAS(memory[3][4]_lut_out, clk, !rst, , A1L47, , , , );
+
+
+--memory[1][4] is memory[1][4]
+--operation mode is normal
+
+memory[1][4]_lut_out = I_DATA[4];
+memory[1][4] = DFFEAS(memory[1][4]_lut_out, clk, !rst, , A1L45, , , , );
+
+
+--A1L061 is O_DATA~1051
+--operation mode is normal
+
+A1L061 = \main:stack_pointer[2] & (\main:stack_pointer[1]) # !\main:stack_pointer[2] & (\main:stack_pointer[1] & memory[3][4] # !\main:stack_pointer[1] & (memory[1][4]));
+
+
+--memory[7][4] is memory[7][4]
+--operation mode is normal
+
+memory[7][4]_lut_out = I_DATA[4];
+memory[7][4] = DFFEAS(memory[7][4]_lut_out, clk, !rst, , A1L411, , , , );
+
+
+--A1L161 is O_DATA~1052
+--operation mode is normal
+
+A1L161 = \main:stack_pointer[2] & (A1L061 & (memory[7][4]) # !A1L061 & memory[5][4]) # !\main:stack_pointer[2] & (A1L061);
+
+
+--memory[2][4] is memory[2][4]
+--operation mode is normal
+
+memory[2][4]_lut_out = I_DATA[4];
+memory[2][4] = DFFEAS(memory[2][4]_lut_out, clk, !rst, , A1L46, , , , );
+
+
+--memory[4][4] is memory[4][4]
+--operation mode is normal
+
+memory[4][4]_lut_out = I_DATA[4];
+memory[4][4] = DFFEAS(memory[4][4]_lut_out, clk, !rst, , A1L48, , , , );
+
+
+--A1L261 is O_DATA~1053
+--operation mode is normal
+
+A1L261 = A1L621 & (A1L721) # !A1L621 & (A1L721 & memory[2][4] # !A1L721 & (memory[4][4]));
+
+
+--memory[6][4] is memory[6][4]
+--operation mode is normal
+
+memory[6][4]_lut_out = I_DATA[4];
+memory[6][4] = DFFEAS(memory[6][4]_lut_out, clk, !rst, , A1L401, , , , );
+
+
+--A1L361 is O_DATA~1054
+--operation mode is normal
+
+A1L361 = A1L621 & (A1L261 & (memory[6][4]) # !A1L261 & A1L161) # !A1L621 & (A1L261);
+
+
+--memory[0][5] is memory[0][5]
+--operation mode is normal
+
+memory[0][5]_lut_out = I_DATA[5];
+memory[0][5] = DFFEAS(memory[0][5]_lut_out, clk, !rst, , A1L34, , , , );
+
+
+--memory[2][5] is memory[2][5]
+--operation mode is normal
+
+memory[2][5]_lut_out = I_DATA[5];
+memory[2][5] = DFFEAS(memory[2][5]_lut_out, clk, !rst, , A1L46, , , , );
+
+
+--memory[3][5] is memory[3][5]
+--operation mode is normal
+
+memory[3][5]_lut_out = I_DATA[5];
+memory[3][5] = DFFEAS(memory[3][5]_lut_out, clk, !rst, , A1L47, , , , );
+
+
+--memory[5][5] is memory[5][5]
+--operation mode is normal
+
+memory[5][5]_lut_out = I_DATA[5];
+memory[5][5] = DFFEAS(memory[5][5]_lut_out, clk, !rst, , A1L49, , , , );
+
+
+--memory[1][5] is memory[1][5]
+--operation mode is normal
+
+memory[1][5]_lut_out = I_DATA[5];
+memory[1][5] = DFFEAS(memory[1][5]_lut_out, clk, !rst, , A1L45, , , , );
+
+
+--A1L461 is O_DATA~1056
+--operation mode is normal
+
+A1L461 = \main:stack_pointer[1] & (\main:stack_pointer[2]) # !\main:stack_pointer[1] & (\main:stack_pointer[2] & memory[5][5] # !\main:stack_pointer[2] & (memory[1][5]));
+
+
+--memory[7][5] is memory[7][5]
+--operation mode is normal
+
+memory[7][5]_lut_out = I_DATA[5];
+memory[7][5] = DFFEAS(memory[7][5]_lut_out, clk, !rst, , A1L411, , , , );
+
+
+--A1L561 is O_DATA~1057
+--operation mode is normal
+
+A1L561 = \main:stack_pointer[1] & (A1L461 & (memory[7][5]) # !A1L461 & memory[3][5]) # !\main:stack_pointer[1] & (A1L461);
+
+
+--memory[4][5] is memory[4][5]
+--operation mode is normal
+
+memory[4][5]_lut_out = I_DATA[5];
+memory[4][5] = DFFEAS(memory[4][5]_lut_out, clk, !rst, , A1L48, , , , );
+
+
+--A1L661 is O_DATA~1058
+--operation mode is normal
+
+A1L661 = A1L721 & (A1L621) # !A1L721 & (A1L621 & A1L561 # !A1L621 & (memory[4][5]));
+
+
+--memory[6][5] is memory[6][5]
+--operation mode is normal
+
+memory[6][5]_lut_out = I_DATA[5];
+memory[6][5] = DFFEAS(memory[6][5]_lut_out, clk, !rst, , A1L401, , , , );
+
+
+--A1L761 is O_DATA~1059
+--operation mode is normal
+
+A1L761 = A1L721 & (A1L661 & (memory[6][5]) # !A1L661 & memory[2][5]) # !A1L721 & (A1L661);
+
+
+--memory[0][6] is memory[0][6]
+--operation mode is normal
+
+memory[0][6]_lut_out = I_DATA[6];
+memory[0][6] = DFFEAS(memory[0][6]_lut_out, clk, !rst, , A1L34, , , , );
+
+
+--memory[5][6] is memory[5][6]
+--operation mode is normal
+
+memory[5][6]_lut_out = I_DATA[6];
+memory[5][6] = DFFEAS(memory[5][6]_lut_out, clk, !rst, , A1L49, , , , );
+
+
+--memory[3][6] is memory[3][6]
+--operation mode is normal
+
+memory[3][6]_lut_out = I_DATA[6];
+memory[3][6] = DFFEAS(memory[3][6]_lut_out, clk, !rst, , A1L47, , , , );
+
+
+--memory[1][6] is memory[1][6]
+--operation mode is normal
+
+memory[1][6]_lut_out = I_DATA[6];
+memory[1][6] = DFFEAS(memory[1][6]_lut_out, clk, !rst, , A1L45, , , , );
+
+
+--A1L861 is O_DATA~1061
+--operation mode is normal
+
+A1L861 = \main:stack_pointer[2] & (\main:stack_pointer[1]) # !\main:stack_pointer[2] & (\main:stack_pointer[1] & memory[3][6] # !\main:stack_pointer[1] & (memory[1][6]));
+
+
+--memory[7][6] is memory[7][6]
+--operation mode is normal
+
+memory[7][6]_lut_out = I_DATA[6];
+memory[7][6] = DFFEAS(memory[7][6]_lut_out, clk, !rst, , A1L411, , , , );
+
+
+--A1L961 is O_DATA~1062
+--operation mode is normal
+
+A1L961 = \main:stack_pointer[2] & (A1L861 & (memory[7][6]) # !A1L861 & memory[5][6]) # !\main:stack_pointer[2] & (A1L861);
+
+
+--memory[2][6] is memory[2][6]
+--operation mode is normal
+
+memory[2][6]_lut_out = I_DATA[6];
+memory[2][6] = DFFEAS(memory[2][6]_lut_out, clk, !rst, , A1L46, , , , );
+
+
+--memory[4][6] is memory[4][6]
+--operation mode is normal
+
+memory[4][6]_lut_out = I_DATA[6];
+memory[4][6] = DFFEAS(memory[4][6]_lut_out, clk, !rst, , A1L48, , , , );
+
+
+--A1L071 is O_DATA~1063
+--operation mode is normal
+
+A1L071 = A1L621 & (A1L721) # !A1L621 & (A1L721 & memory[2][6] # !A1L721 & (memory[4][6]));
+
+
+--memory[6][6] is memory[6][6]
+--operation mode is normal
+
+memory[6][6]_lut_out = I_DATA[6];
+memory[6][6] = DFFEAS(memory[6][6]_lut_out, clk, !rst, , A1L401, , , , );
+
+
+--A1L171 is O_DATA~1064
+--operation mode is normal
+
+A1L171 = A1L621 & (A1L071 & (memory[6][6]) # !A1L071 & A1L961) # !A1L621 & (A1L071);
+
+
+--memory[0][7] is memory[0][7]
+--operation mode is normal
+
+memory[0][7]_lut_out = I_DATA[7];
+memory[0][7] = DFFEAS(memory[0][7]_lut_out, clk, !rst, , A1L34, , , , );
+
+
+--memory[2][7] is memory[2][7]
+--operation mode is normal
+
+memory[2][7]_lut_out = I_DATA[7];
+memory[2][7] = DFFEAS(memory[2][7]_lut_out, clk, !rst, , A1L46, , , , );
+
+
+--memory[3][7] is memory[3][7]
+--operation mode is normal
+
+memory[3][7]_lut_out = I_DATA[7];
+memory[3][7] = DFFEAS(memory[3][7]_lut_out, clk, !rst, , A1L47, , , , );
+
+
+--memory[5][7] is memory[5][7]
+--operation mode is normal
+
+memory[5][7]_lut_out = I_DATA[7];
+memory[5][7] = DFFEAS(memory[5][7]_lut_out, clk, !rst, , A1L49, , , , );
+
+
+--memory[1][7] is memory[1][7]
+--operation mode is normal
+
+memory[1][7]_lut_out = I_DATA[7];
+memory[1][7] = DFFEAS(memory[1][7]_lut_out, clk, !rst, , A1L45, , , , );
+
+
+--A1L271 is O_DATA~1066
+--operation mode is normal
+
+A1L271 = \main:stack_pointer[1] & (\main:stack_pointer[2]) # !\main:stack_pointer[1] & (\main:stack_pointer[2] & memory[5][7] # !\main:stack_pointer[2] & (memory[1][7]));
+
+
+--memory[7][7] is memory[7][7]
+--operation mode is normal
+
+memory[7][7]_lut_out = I_DATA[7];
+memory[7][7] = DFFEAS(memory[7][7]_lut_out, clk, !rst, , A1L411, , , , );
+
+
+--A1L371 is O_DATA~1067
+--operation mode is normal
+
+A1L371 = \main:stack_pointer[1] & (A1L271 & (memory[7][7]) # !A1L271 & memory[3][7]) # !\main:stack_pointer[1] & (A1L271);
+
+
+--memory[4][7] is memory[4][7]
+--operation mode is normal
+
+memory[4][7]_lut_out = I_DATA[7];
+memory[4][7] = DFFEAS(memory[4][7]_lut_out, clk, !rst, , A1L48, , , , );
+
+
+--A1L471 is O_DATA~1068
+--operation mode is normal
+
+A1L471 = A1L721 & (A1L621) # !A1L721 & (A1L621 & A1L371 # !A1L621 & (memory[4][7]));
+
+
+--memory[6][7] is memory[6][7]
+--operation mode is normal
+
+memory[6][7]_lut_out = I_DATA[7];
+memory[6][7] = DFFEAS(memory[6][7]_lut_out, clk, !rst, , A1L401, , , , );
+
+
+--A1L571 is O_DATA~1069
+--operation mode is normal
+
+A1L571 = A1L721 & (A1L471 & (memory[6][7]) # !A1L471 & memory[2][7]) # !A1L721 & (A1L471);
+
+
+--A1L51 is add~521
+--operation mode is arithmetic
+
+A1L51_carry_eqn = A1L22;
+A1L51 = I_RD_WR $ \main:count_of_elems[2] $ A1L51_carry_eqn;
+
+--A1L61 is add~523
+--operation mode is arithmetic
+
+A1L61 = CARRY(I_RD_WR & !\main:count_of_elems[2] & !A1L22 # !I_RD_WR & (!A1L22 # !\main:count_of_elems[2]));
+
+
+--A1L71 is add~526
+--operation mode is normal
+
+A1L71 = A1L51 & (\main:count_of_elems[0] # !I_RD_WR # !A1L31);
+
+
+--A1L81 is add~527
+--operation mode is arithmetic
+
+A1L81_carry_eqn = A1L82;
+A1L81 = I_RD_WR $ \main:count_of_elems[0] $ !A1L81_carry_eqn;
+
+--A1L91 is add~529
+--operation mode is arithmetic
+
+A1L91 = CARRY(I_RD_WR & (!A1L82 # !\main:count_of_elems[0]) # !I_RD_WR & !\main:count_of_elems[0] & !A1L82);
+
+
+--A1L02 is add~532
+--operation mode is normal
+
+A1L02 = A1L81 & (\main:count_of_elems[0] # !I_RD_WR # !A1L31);
+
+
+--A1L12 is add~533
+--operation mode is arithmetic
+
+A1L12_carry_eqn = A1L91;
+A1L12 = I_RD_WR $ \main:count_of_elems[1] $ !A1L12_carry_eqn;
+
+--A1L22 is add~535
+--operation mode is arithmetic
+
+A1L22 = CARRY(I_RD_WR & (\main:count_of_elems[1] # !A1L91) # !I_RD_WR & \main:count_of_elems[1] & !A1L91);
+
+
+--A1L32 is add~538
+--operation mode is normal
+
+A1L32 = A1L12 & (\main:count_of_elems[0] # !I_RD_WR # !A1L31);
+
+
+--A1L42 is add~539
+--operation mode is normal
+
+A1L42_carry_eqn = A1L61;
+A1L42 = I_RD_WR $ \main:count_of_elems[3] $ !A1L42_carry_eqn;
+
+
+--A1L52 is add~544
+--operation mode is normal
+
+A1L52 = A1L42 & (\main:count_of_elems[0] # !I_RD_WR # !A1L31);
+
+
+--A1L04 is main~4
+--operation mode is normal
+
+A1L04 = !\main:count_of_elems[2] & !\main:count_of_elems[1];
+
+
+--A1L44 is memory[0][0]~530
+--operation mode is normal
+
+A1L44 = !I_RD_WR & (\main:stack_pointer[0] $ (!\main:count_of_elems[0] & A1L04));
+
+
+--A1L62 is add~545
+--operation mode is normal
+
+A1L62 = \main:stack_pointer[0] & (\main:count_of_elems[0] # \main:count_of_elems[2] # \main:count_of_elems[1]);
+
+
+--A1L34 is memory[0][0]~6
+--operation mode is normal
+
+A1L34 = A1L44 & (\main:stack_pointer[2] & \main:stack_pointer[1] & A1L62 # !\main:stack_pointer[2] & !\main:stack_pointer[1] & !A1L62);
+
+
+--A1L511 is memory[7][0]~531
+--operation mode is normal
+
+A1L511 = !I_RD_WR & (\main:stack_pointer[0] $ (\main:count_of_elems[0] # !A1L04));
+
+
+--A1L49 is memory[5][0]~46
+--operation mode is normal
+
+A1L49 = A1L511 & (\main:stack_pointer[1] & A1L62 & !\main:stack_pointer[2] # !\main:stack_pointer[1] & !A1L62 & \main:stack_pointer[2]);
+
+
+--A1L971 is stack_pointer~304
+--operation mode is normal
+
+A1L971 = I_RD_WR & (\main:stack_pointer[0] # \main:stack_pointer[1]) # !I_RD_WR & (!A1L62 # !\main:stack_pointer[1]);
+
+
+--A1L41 is \main:stack_pointer[2]~23
+--operation mode is normal
+
+A1L41 = \main:count_of_elems[3] # \main:count_of_elems[2] # \main:count_of_elems[1] # !I_RD_WR;
+
+
+--A1L47 is memory[3][0]~30
+--operation mode is normal
+
+A1L47 = A1L511 & !\main:stack_pointer[2] & (\main:stack_pointer[1] $ A1L62);
+
+
+--A1L11 is \main:stack_pointer[1]~122
+--operation mode is normal
+
+A1L11 = I_RD_WR & (!\main:stack_pointer[0] & !A1L31) # !I_RD_WR & A1L62;
+
+
+--A1L45 is memory[1][0]~14
+--operation mode is normal
+
+A1L45 = A1L511 & (\main:stack_pointer[2] & \main:stack_pointer[1] & A1L62 # !\main:stack_pointer[2] & !\main:stack_pointer[1] & !A1L62);
+
+
+--A1L411 is memory[7][0]~62
+--operation mode is normal
+
+A1L411 = \main:stack_pointer[2] & A1L511 & (\main:stack_pointer[1] $ A1L62);
+
+
+--A1L46 is memory[2][0]~22
+--operation mode is normal
+
+A1L46 = A1L44 & !\main:stack_pointer[2] & (\main:stack_pointer[1] $ A1L62);
+
+
+--A1L48 is memory[4][0]~38
+--operation mode is normal
+
+A1L48 = A1L44 & (\main:stack_pointer[1] & A1L62 & !\main:stack_pointer[2] # !\main:stack_pointer[1] & !A1L62 & \main:stack_pointer[2]);
+
+
+--A1L401 is memory[6][0]~54
+--operation mode is normal
+
+A1L401 = \main:stack_pointer[2] & A1L44 & (\main:stack_pointer[1] $ A1L62);
+
+
+--A1L82 is add~548
+--operation mode is arithmetic
+
+A1L82 = CARRY(I_RD_WR);
+
+
+--clk is clk
+--operation mode is input
+
+clk = INPUT();
+
+
+--I_RD_WR is I_RD_WR
+--operation mode is input
+
+I_RD_WR = INPUT();
+
+
+--rst is rst
+--operation mode is input
+
+rst = INPUT();
+
+
+--I_DATA[0] is I_DATA[0]
+--operation mode is input
+
+I_DATA[0] = INPUT();
+
+
+--I_DATA[1] is I_DATA[1]
+--operation mode is input
+
+I_DATA[1] = INPUT();
+
+
+--I_DATA[2] is I_DATA[2]
+--operation mode is input
+
+I_DATA[2] = INPUT();
+
+
+--I_DATA[3] is I_DATA[3]
+--operation mode is input
+
+I_DATA[3] = INPUT();
+
+
+--I_DATA[4] is I_DATA[4]
+--operation mode is input
+
+I_DATA[4] = INPUT();
+
+
+--I_DATA[5] is I_DATA[5]
+--operation mode is input
+
+I_DATA[5] = INPUT();
+
+
+--I_DATA[6] is I_DATA[6]
+--operation mode is input
+
+I_DATA[6] = INPUT();
+
+
+--I_DATA[7] is I_DATA[7]
+--operation mode is input
+
+I_DATA[7] = INPUT();
+
+
+--O_DATA[0] is O_DATA[0]
+--operation mode is output
+
+O_DATA[0] = OUTPUT(A1L921Q);
+
+
+--O_DATA[1] is O_DATA[1]
+--operation mode is output
+
+O_DATA[1] = OUTPUT(A1L131Q);
+
+
+--O_DATA[2] is O_DATA[2]
+--operation mode is output
+
+O_DATA[2] = OUTPUT(A1L331Q);
+
+
+--O_DATA[3] is O_DATA[3]
+--operation mode is output
+
+O_DATA[3] = OUTPUT(A1L531Q);
+
+
+--O_DATA[4] is O_DATA[4]
+--operation mode is output
+
+O_DATA[4] = OUTPUT(A1L731Q);
+
+
+--O_DATA[5] is O_DATA[5]
+--operation mode is output
+
+O_DATA[5] = OUTPUT(A1L931Q);
+
+
+--O_DATA[6] is O_DATA[6]
+--operation mode is output
+
+O_DATA[6] = OUTPUT(A1L141Q);
+
+
+--O_DATA[7] is O_DATA[7]
+--operation mode is output
+
+O_DATA[7] = OUTPUT(A1L341Q);
+
+
+--O_FULL is O_FULL
+--operation mode is output
+
+O_FULL = OUTPUT(\main:FULL);
+
+
+--O_EMPTY is O_EMPTY
+--operation mode is output
+
+O_EMPTY = OUTPUT(!\main:EMPTY);
+
+
+--A1L9 is \main:stack_pointer[0]~23
+--operation mode is normal
+
+A1L9 = !\main:stack_pointer[0];
+
+

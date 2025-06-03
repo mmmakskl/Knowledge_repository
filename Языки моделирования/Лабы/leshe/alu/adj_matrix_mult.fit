@@ -1,0 +1,108 @@
+-- MAX+plus II Compiler Fit File      
+-- Version 9.01 07/30/98              
+-- Compiled: 12/17/20 14:36:01        
+
+-- Copyright (C) 1988-1998 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+CHIP "adj_matrix_mult"
+BEGIN
+
+    DEVICE = "EPM7032LC44-6";
+
+    "A0"                           : INPUT_PIN  = 4      ; -- LC1
+    "A1"                           : INPUT_PIN  = 12     ; -- LC8
+    "A2"                           : INPUT_PIN  = 11     ; -- LC7
+    "A3"                           : INPUT_PIN  = 9      ; -- LC6
+    "B0"                           : INPUT_PIN  = 8      ; -- LC5
+    "B1"                           : INPUT_PIN  = 7      ; -- LC4
+    "B2"                           : INPUT_PIN  = 6      ; -- LC3
+    "B3"                           : INPUT_PIN  = 5      ; -- LC2
+    "Q0"                           : OUTPUT_PIN = 13     ; -- LC9
+    "Q1"                           : OUTPUT_PIN = 14     ; -- LC10
+    "Q2"                           : OUTPUT_PIN = 17     ; -- LC12
+    "Q3"                           : OUTPUT_PIN = 16     ; -- LC11
+    "Q4"                           : OUTPUT_PIN = 39     ; -- LC19
+    "Q5"                           : OUTPUT_PIN = 38     ; -- LC20
+    "Q6"                           : OUTPUT_PIN = 37     ; -- LC21
+    "Q7"                           : OUTPUT_PIN = 36     ; -- LC22
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|carry_out_nodes2" : LOCATION   = LC5    ; -- PIN 8
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|carry_out_nodes3" : LOCATION   = LC6    ; -- PIN 9
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|carry_out_nodes4" : LOCATION   = LC8    ; -- PIN 12
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|carry_out_nodes5" : LOCATION   = LC25   ; -- PIN 32
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|csa_cell:adder0|~83~1" : LOCATION   = LC16   ; -- PIN 21
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|csa_cell:adder0|~84~1" : LOCATION   = LC29   ; -- PIN 27
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|csa_cell:adder0|~84~2" : LOCATION   = LC24   ; -- PIN 33
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|csa_cell:adder0|~84~3" : LOCATION   = LC32   ; -- PIN 24
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|csa_cell:adder0|~85~1" : LOCATION   = LC26   ; -- PIN 31
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|csa_cell:adder0|~85~2" : LOCATION   = LC30   ; -- PIN 26
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|csa_cell:adder0|~165~1" : LOCATION   = LC28   ; -- PIN 28
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|csa_cell:adder0|~165~2" : LOCATION   = LC27   ; -- PIN 29
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|csa_cell:adder0|~165~3" : LOCATION   = LC31   ; -- PIN 25
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|csa_cell:adder0|~166~1" : LOCATION   = LC23   ; -- PIN 34
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|sum_out_nodes3" : LOCATION   = LC4    ; -- PIN 7
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|sum_out_nodes4" : LOCATION   = LC1    ; -- PIN 4
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|sum_out_nodes5" : LOCATION   = LC17   ; -- PIN 41
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|csa_add:sub_csa_add|sum_out_nodes6" : LOCATION   = LC18   ; -- PIN 40
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|lpm_add_sub:cpa_adder|addcore:adder|addcore:adder0|gcp2" : LOCATION   = LC2    ; -- PIN 5
+    "|LPM_MULT:1|multcore:mult_core|csa_add:padder|lpm_add_sub:cpa_adder|addcore:adder|addcore:adder0|g4" : LOCATION   = LC3    ; -- PIN 6
+
+END;
+
+INTERNAL_INFO "adj_matrix_mult"
+BEGIN
+	DEVICE = EPM7032LC44-6;
+	LC22    : LORAX = "G31R0";
+	LC21    : LORAX = "G30R0";
+	LC20    : LORAX = "G16R0";
+	LC19    : LORAX = "G15R0";
+	LC11    : LORAX = "G36R0";
+	LC12    : LORAX = "G37R0,PA26R0C0";
+	LC10    : LORAX = "G35R0";
+	LC9     : LORAX = "G34R0";
+	OH5R0P9 : LORAX = "G61R0,PA28R0C1,PA28R0C0";
+	OH6R0P11 : LORAX = "G62R0,PA31R0C1,PA34R0C0";
+	OH1R0P5 : LORAX = "G44R0,PA19R0C1,PA19R0C0";
+	OH2R0P6 : LORAX = "G45R0,PA22R0C1,PA25R0C0";
+	LC1     : LORAX = "G9R0,PA2R0C1";
+	OH7R0P12 : LORAX = "G63R0,PA33R0C1,PA29R0C0";
+	OH3R0P7 : LORAX = "G46R0,PA24R0C1,PA20R0C0";
+	OH4R0P8 : LORAX = "G60R0,PA29R0C1,PA32R0C0";
+	LC6     : LORAX = "G27R0,PA10R0C1";
+	OH0R0P4 : LORAX = "G43R0,PA20R0C1,PA23R0C0";
+	LC18    : LORAX = "G14R0,PA5R0C1";
+	LC25    : LORAX = "G38R0,PA18R0C1";
+	LC17    : LORAX = "G13R0,PA7R0C1";
+	LC8     : LORAX = "G29R0,PA9R0C1";
+	LC3     : LORAX = "G11R0,PA3R0C1";
+	LC4     : LORAX = "G12R0,PA0R0C0";
+	LC5     : LORAX = "G26R0,PA11R0C0";
+	LC2     : LORAX = "G10R0,PA1R0C0";
+	LC29    : LORAX = "G55R0,PA27R0C0";
+	LC28    : LORAX = "G41R0,PA22R0C0";
+	LC24    : LORAX = "G33R0,PA10R0C0";
+	LC27    : LORAX = "G40R0,PA24R0C0";
+	LC26    : LORAX = "G39R0,PA21R0C0";
+	LC32    : LORAX = "G58R0,PA31R0C0";
+	LC23    : LORAX = "G32R0,PA12R0C0";
+	LC16    : LORAX = "G54R0,PA35R0C0";
+	LC31    : LORAX = "G57R0,PA33R0C0";
+	LC30    : LORAX = "G56R0,PA30R0C0";
+END;

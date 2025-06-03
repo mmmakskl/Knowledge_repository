@@ -1,0 +1,19 @@
+|mux4_1p
+x[0] => process0~4.DATAB
+x[1] => process0~2.DATAB
+x[2] => process0~0.DATAB
+x[3] => process0~0.DATAA
+en => process0~6.OUTPUTSELECT
+en => process0~7.IN0
+en => t.ACLR
+a[0] => reduce_nor~0.IN0
+a[0] => reduce_nor~2.IN0
+a[0] => reduce_nor~1.IN0
+a[0] => reduce_nor~3.IN0
+a[1] => reduce_nor~0.IN1
+a[1] => reduce_nor~1.IN1
+a[1] => reduce_nor~2.IN1
+a[1] => reduce_nor~3.IN1
+q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+

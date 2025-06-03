@@ -1,0 +1,51 @@
+|cmp4_s
+x[0] => cmp_p:cmp_1.x[0]
+x[1] => cmp_p:cmp_1.x[1]
+x[2] => cmp_p:cmp_2.x[0]
+x[3] => cmp_p:cmp_2.x[1]
+y[0] => cmp_p:cmp_1.y[0]
+y[1] => cmp_p:cmp_1.y[1]
+y[2] => cmp_p:cmp_2.y[0]
+y[3] => cmp_p:cmp_2.y[1]
+xgy0 => cmp_p:cmp_1.xgy0
+xly0 => cmp_p:cmp_1.xly0
+xey0 => cmp_p:cmp_1.xey0
+xgy <= cmp_p:cmp_2.xgy
+xly <= cmp_p:cmp_2.xly
+xey <= cmp_p:cmp_2.xey
+
+
+|cmp4_s|cmp_p:cmp_1
+x[0] => eq0~0.IN0
+x[0] => gr~1.IN0
+x[1] => eq1~0.IN0
+x[1] => gr~0.IN0
+y[0] => eq0~0.IN1
+y[0] => gr~2.IN1
+y[1] => eq1~0.IN1
+y[1] => gr~0.IN1
+xgy0 => xgy_t~0.IN0
+xly0 => xly_t~0.IN1
+xey0 => xey_t~0.IN1
+xgy <= xgy_t~1.DB_MAX_OUTPUT_PORT_TYPE
+xly <= xly_t~1.DB_MAX_OUTPUT_PORT_TYPE
+xey <= xey_t~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cmp4_s|cmp_p:cmp_2
+x[0] => eq0~0.IN0
+x[0] => gr~1.IN0
+x[1] => eq1~0.IN0
+x[1] => gr~0.IN0
+y[0] => eq0~0.IN1
+y[0] => gr~2.IN1
+y[1] => eq1~0.IN1
+y[1] => gr~0.IN1
+xgy0 => xgy_t~0.IN0
+xly0 => xly_t~0.IN1
+xey0 => xey_t~0.IN1
+xgy <= xgy_t~1.DB_MAX_OUTPUT_PORT_TYPE
+xly <= xly_t~1.DB_MAX_OUTPUT_PORT_TYPE
+xey <= xey_t~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,1761 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--M2_safe_q[1] is lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1]
+--operation mode is arithmetic
+
+M2_safe_q[1]_carry_eqn = M2L2;
+M2_safe_q[1]_lut_out = M2_safe_q[1] $ (M2_safe_q[1]_carry_eqn);
+M2_safe_q[1] = DFFEAS(M2_safe_q[1]_lut_out, RD, !Reset, , , , , , );
+
+--M2L4 is lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|counter_cella1~COUT
+--operation mode is arithmetic
+
+M2L4 = CARRY(!M2L2 # !M2_safe_q[1]);
+
+
+--M2_safe_q[3] is lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3]
+--operation mode is normal
+
+M2_safe_q[3]_carry_eqn = M2L6;
+M2_safe_q[3]_lut_out = M2_safe_q[3] $ (M2_safe_q[3]_carry_eqn);
+M2_safe_q[3] = DFFEAS(M2_safe_q[3]_lut_out, RD, !Reset, , , , , , );
+
+
+--M1_safe_q[3] is lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3]
+--operation mode is normal
+
+M1_safe_q[3]_carry_eqn = M1L6;
+M1_safe_q[3]_lut_out = M1_safe_q[3] $ (M1_safe_q[3]_carry_eqn);
+M1_safe_q[3] = DFFEAS(M1_safe_q[3]_lut_out, WR, !Reset, , , , , , );
+
+
+--M1_safe_q[1] is lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1]
+--operation mode is arithmetic
+
+M1_safe_q[1]_carry_eqn = M1L2;
+M1_safe_q[1]_lut_out = M1_safe_q[1] $ (M1_safe_q[1]_carry_eqn);
+M1_safe_q[1] = DFFEAS(M1_safe_q[1]_lut_out, WR, !Reset, , , , , , );
+
+--M1L4 is lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|counter_cella1~COUT
+--operation mode is arithmetic
+
+M1L4 = CARRY(!M1L2 # !M1_safe_q[1]);
+
+
+--A1L13 is inst8~62
+--operation mode is normal
+
+A1L13 = M2_safe_q[1] & M1_safe_q[1] & (M2_safe_q[3] $ !M1_safe_q[3]) # !M2_safe_q[1] & !M1_safe_q[1] & (M2_safe_q[3] $ !M1_safe_q[3]);
+
+
+--M2_safe_q[0] is lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0]
+--operation mode is arithmetic
+
+M2_safe_q[0]_lut_out = !M2_safe_q[0];
+M2_safe_q[0] = DFFEAS(M2_safe_q[0]_lut_out, RD, !Reset, , , , , , );
+
+--M2L2 is lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|counter_cella0~COUT
+--operation mode is arithmetic
+
+M2L2 = CARRY(M2_safe_q[0]);
+
+
+--M2_safe_q[2] is lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2]
+--operation mode is arithmetic
+
+M2_safe_q[2]_carry_eqn = M2L4;
+M2_safe_q[2]_lut_out = M2_safe_q[2] $ (!M2_safe_q[2]_carry_eqn);
+M2_safe_q[2] = DFFEAS(M2_safe_q[2]_lut_out, RD, !Reset, , , , , , );
+
+--M2L6 is lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|counter_cella2~COUT
+--operation mode is arithmetic
+
+M2L6 = CARRY(M2_safe_q[2] & (!M2L4));
+
+
+--M1_safe_q[2] is lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2]
+--operation mode is arithmetic
+
+M1_safe_q[2]_carry_eqn = M1L4;
+M1_safe_q[2]_lut_out = M1_safe_q[2] $ (!M1_safe_q[2]_carry_eqn);
+M1_safe_q[2] = DFFEAS(M1_safe_q[2]_lut_out, WR, !Reset, , , , , , );
+
+--M1L6 is lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|counter_cella2~COUT
+--operation mode is arithmetic
+
+M1L6 = CARRY(M1_safe_q[2] & (!M1L4));
+
+
+--M1_safe_q[0] is lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0]
+--operation mode is arithmetic
+
+M1_safe_q[0]_lut_out = !M1_safe_q[0];
+M1_safe_q[0] = DFFEAS(M1_safe_q[0]_lut_out, WR, !Reset, , , , , , );
+
+--M1L2 is lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|counter_cella0~COUT
+--operation mode is arithmetic
+
+M1L2 = CARRY(M1_safe_q[0]);
+
+
+--A1L23 is inst8~63
+--operation mode is normal
+
+A1L23 = M2_safe_q[0] & M1_safe_q[0] & (M2_safe_q[2] $ !M1_safe_q[2]) # !M2_safe_q[0] & !M1_safe_q[0] & (M2_safe_q[2] $ !M1_safe_q[2]);
+
+
+--A1L33 is inst8~64
+--operation mode is normal
+
+A1L33 = A1L13 & A1L23 & (!D1_inst2);
+
+
+--A1L03 is inst7~53
+--operation mode is normal
+
+A1L03 = D1_inst2 & A1L13 & A1L23 & !WR;
+
+
+--D1_inst2 is sr_ff_or:inst5|inst2
+--operation mode is normal
+
+D1_inst2 = RD # D1_inst2 & (!WR);
+
+
+--J1L58 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result1056w~44
+--operation mode is normal
+
+J1L58 = M2_safe_q[1] & (M2_safe_q[0]) # !M2_safe_q[1] & (M2_safe_q[0] & F1_cells[13][7] # !M2_safe_q[0] & (F1_cells[12][7]));
+
+
+--J1L68 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result1056w~45
+--operation mode is normal
+
+J1L68 = M2_safe_q[1] & (J1L58 & (F1_cells[15][7]) # !J1L58 & F1_cells[14][7]) # !M2_safe_q[1] & (J1L58);
+
+
+--J1L38 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result1022w~39
+--operation mode is normal
+
+J1L38 = M2_safe_q[0] & (M2_safe_q[1]) # !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[6][7] # !M2_safe_q[1] & (F1_cells[4][7]));
+
+
+--J1L48 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result1022w~40
+--operation mode is normal
+
+J1L48 = M2_safe_q[0] & (J1L38 & (F1_cells[7][7]) # !J1L38 & F1_cells[5][7]) # !M2_safe_q[0] & (J1L38);
+
+
+--J1L87 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result987w~184
+--operation mode is normal
+
+J1L87 = M2_safe_q[3] & J1L68 # !M2_safe_q[3] & (J1L48);
+
+
+--J1L78 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result1073w~402
+--operation mode is normal
+
+J1L78 = M2_safe_q[0] & (M2_safe_q[1]) # !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[2][7] # !M2_safe_q[1] & (F1_cells[0][7]));
+
+
+--J1L88 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result1073w~403
+--operation mode is normal
+
+J1L88 = M2_safe_q[0] & (J1L78 & (F1_cells[3][7]) # !J1L78 & F1_cells[1][7]) # !M2_safe_q[0] & (J1L78);
+
+
+--J1L97 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result987w~185
+--operation mode is normal
+
+J1L97 = !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[10][7] # !M2_safe_q[1] & (F1_cells[8][7]));
+
+
+--J1L08 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result987w~186
+--operation mode is normal
+
+J1L08 = M2_safe_q[0] & (M2_safe_q[1] & F1_cells[11][7] # !M2_safe_q[1] & (F1_cells[9][7]));
+
+
+--J1L18 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result987w~187
+--operation mode is normal
+
+J1L18 = M2_safe_q[3] & (J1L97 # J1L08) # !M2_safe_q[3] & J1L88;
+
+
+--J1L28 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result987w~188
+--operation mode is normal
+
+J1L28 = M2_safe_q[2] & J1L87 # !M2_safe_q[2] & (J1L18);
+
+
+--F1_xql[7] is altdpram0:inst|altdpram:altdpram_component|xql[7]
+--operation mode is normal
+
+F1_xql[7] = RD & J1L28 # !RD & (F1_xql[7]);
+
+
+--J1L47 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result922w~44
+--operation mode is normal
+
+J1L47 = M2_safe_q[0] & (M2_safe_q[1]) # !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[14][6] # !M2_safe_q[1] & (F1_cells[12][6]));
+
+
+--J1L57 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result922w~45
+--operation mode is normal
+
+J1L57 = M2_safe_q[0] & (J1L47 & (F1_cells[15][6]) # !J1L47 & F1_cells[13][6]) # !M2_safe_q[0] & (J1L47);
+
+
+--J1L27 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result888w~39
+--operation mode is normal
+
+J1L27 = M2_safe_q[1] & (M2_safe_q[0]) # !M2_safe_q[1] & (M2_safe_q[0] & F1_cells[5][6] # !M2_safe_q[0] & (F1_cells[4][6]));
+
+
+--J1L37 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result888w~40
+--operation mode is normal
+
+J1L37 = M2_safe_q[1] & (J1L27 & (F1_cells[7][6]) # !J1L27 & F1_cells[6][6]) # !M2_safe_q[1] & (J1L27);
+
+
+--J1L76 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result853w~175
+--operation mode is normal
+
+J1L76 = M2_safe_q[3] & J1L57 # !M2_safe_q[3] & (J1L37);
+
+
+--J1L67 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result939w~402
+--operation mode is normal
+
+J1L67 = M2_safe_q[1] & (M2_safe_q[0]) # !M2_safe_q[1] & (M2_safe_q[0] & F1_cells[1][6] # !M2_safe_q[0] & (F1_cells[0][6]));
+
+
+--J1L77 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result939w~403
+--operation mode is normal
+
+J1L77 = M2_safe_q[1] & (J1L67 & (F1_cells[3][6]) # !J1L67 & F1_cells[2][6]) # !M2_safe_q[1] & (J1L67);
+
+
+--J1L86 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result853w~176
+--operation mode is normal
+
+J1L86 = !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[10][6] # !M2_safe_q[1] & (F1_cells[8][6]));
+
+
+--J1L96 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result853w~177
+--operation mode is normal
+
+J1L96 = M2_safe_q[0] & (M2_safe_q[1] & F1_cells[11][6] # !M2_safe_q[1] & (F1_cells[9][6]));
+
+
+--J1L07 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result853w~178
+--operation mode is normal
+
+J1L07 = M2_safe_q[3] & (J1L86 # J1L96) # !M2_safe_q[3] & J1L77;
+
+
+--J1L17 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result853w~179
+--operation mode is normal
+
+J1L17 = M2_safe_q[2] & J1L76 # !M2_safe_q[2] & (J1L07);
+
+
+--F1_xql[6] is altdpram0:inst|altdpram:altdpram_component|xql[6]
+--operation mode is normal
+
+F1_xql[6] = RD & J1L17 # !RD & (F1_xql[6]);
+
+
+--J1L36 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result788w~44
+--operation mode is normal
+
+J1L36 = M2_safe_q[1] & (M2_safe_q[0]) # !M2_safe_q[1] & (M2_safe_q[0] & F1_cells[13][5] # !M2_safe_q[0] & (F1_cells[12][5]));
+
+
+--J1L46 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result788w~45
+--operation mode is normal
+
+J1L46 = M2_safe_q[1] & (J1L36 & (F1_cells[15][5]) # !J1L36 & F1_cells[14][5]) # !M2_safe_q[1] & (J1L36);
+
+
+--J1L16 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result754w~39
+--operation mode is normal
+
+J1L16 = M2_safe_q[0] & (M2_safe_q[1]) # !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[6][5] # !M2_safe_q[1] & (F1_cells[4][5]));
+
+
+--J1L26 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result754w~40
+--operation mode is normal
+
+J1L26 = M2_safe_q[0] & (J1L16 & (F1_cells[7][5]) # !J1L16 & F1_cells[5][5]) # !M2_safe_q[0] & (J1L16);
+
+
+--J1L65 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result719w~175
+--operation mode is normal
+
+J1L65 = M2_safe_q[3] & J1L46 # !M2_safe_q[3] & (J1L26);
+
+
+--J1L56 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result805w~402
+--operation mode is normal
+
+J1L56 = M2_safe_q[0] & (M2_safe_q[1]) # !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[2][5] # !M2_safe_q[1] & (F1_cells[0][5]));
+
+
+--J1L66 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result805w~403
+--operation mode is normal
+
+J1L66 = M2_safe_q[0] & (J1L56 & (F1_cells[3][5]) # !J1L56 & F1_cells[1][5]) # !M2_safe_q[0] & (J1L56);
+
+
+--J1L75 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result719w~176
+--operation mode is normal
+
+J1L75 = !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[10][5] # !M2_safe_q[1] & (F1_cells[8][5]));
+
+
+--J1L85 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result719w~177
+--operation mode is normal
+
+J1L85 = M2_safe_q[0] & (M2_safe_q[1] & F1_cells[11][5] # !M2_safe_q[1] & (F1_cells[9][5]));
+
+
+--J1L95 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result719w~178
+--operation mode is normal
+
+J1L95 = M2_safe_q[3] & (J1L75 # J1L85) # !M2_safe_q[3] & J1L66;
+
+
+--J1L06 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result719w~179
+--operation mode is normal
+
+J1L06 = M2_safe_q[2] & J1L65 # !M2_safe_q[2] & (J1L95);
+
+
+--F1_xql[5] is altdpram0:inst|altdpram:altdpram_component|xql[5]
+--operation mode is normal
+
+F1_xql[5] = RD & J1L06 # !RD & (F1_xql[5]);
+
+
+--J1L25 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result654w~44
+--operation mode is normal
+
+J1L25 = M2_safe_q[0] & (M2_safe_q[1]) # !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[14][4] # !M2_safe_q[1] & (F1_cells[12][4]));
+
+
+--J1L35 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result654w~45
+--operation mode is normal
+
+J1L35 = M2_safe_q[0] & (J1L25 & (F1_cells[15][4]) # !J1L25 & F1_cells[13][4]) # !M2_safe_q[0] & (J1L25);
+
+
+--J1L05 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result620w~39
+--operation mode is normal
+
+J1L05 = M2_safe_q[1] & (M2_safe_q[0]) # !M2_safe_q[1] & (M2_safe_q[0] & F1_cells[5][4] # !M2_safe_q[0] & (F1_cells[4][4]));
+
+
+--J1L15 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result620w~40
+--operation mode is normal
+
+J1L15 = M2_safe_q[1] & (J1L05 & (F1_cells[7][4]) # !J1L05 & F1_cells[6][4]) # !M2_safe_q[1] & (J1L05);
+
+
+--J1L54 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result585w~175
+--operation mode is normal
+
+J1L54 = M2_safe_q[3] & J1L35 # !M2_safe_q[3] & (J1L15);
+
+
+--J1L45 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result671w~402
+--operation mode is normal
+
+J1L45 = M2_safe_q[1] & (M2_safe_q[0]) # !M2_safe_q[1] & (M2_safe_q[0] & F1_cells[1][4] # !M2_safe_q[0] & (F1_cells[0][4]));
+
+
+--J1L55 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result671w~403
+--operation mode is normal
+
+J1L55 = M2_safe_q[1] & (J1L45 & (F1_cells[3][4]) # !J1L45 & F1_cells[2][4]) # !M2_safe_q[1] & (J1L45);
+
+
+--J1L64 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result585w~176
+--operation mode is normal
+
+J1L64 = !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[10][4] # !M2_safe_q[1] & (F1_cells[8][4]));
+
+
+--J1L74 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result585w~177
+--operation mode is normal
+
+J1L74 = M2_safe_q[0] & (M2_safe_q[1] & F1_cells[11][4] # !M2_safe_q[1] & (F1_cells[9][4]));
+
+
+--J1L84 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result585w~178
+--operation mode is normal
+
+J1L84 = M2_safe_q[3] & (J1L64 # J1L74) # !M2_safe_q[3] & J1L55;
+
+
+--J1L94 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result585w~179
+--operation mode is normal
+
+J1L94 = M2_safe_q[2] & J1L54 # !M2_safe_q[2] & (J1L84);
+
+
+--F1_xql[4] is altdpram0:inst|altdpram:altdpram_component|xql[4]
+--operation mode is normal
+
+F1_xql[4] = RD & J1L94 # !RD & (F1_xql[4]);
+
+
+--J1L14 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result520w~44
+--operation mode is normal
+
+J1L14 = M2_safe_q[1] & (M2_safe_q[0]) # !M2_safe_q[1] & (M2_safe_q[0] & F1_cells[13][3] # !M2_safe_q[0] & (F1_cells[12][3]));
+
+
+--J1L24 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result520w~45
+--operation mode is normal
+
+J1L24 = M2_safe_q[1] & (J1L14 & (F1_cells[15][3]) # !J1L14 & F1_cells[14][3]) # !M2_safe_q[1] & (J1L14);
+
+
+--J1L93 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result486w~39
+--operation mode is normal
+
+J1L93 = M2_safe_q[0] & (M2_safe_q[1]) # !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[6][3] # !M2_safe_q[1] & (F1_cells[4][3]));
+
+
+--J1L04 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result486w~40
+--operation mode is normal
+
+J1L04 = M2_safe_q[0] & (J1L93 & (F1_cells[7][3]) # !J1L93 & F1_cells[5][3]) # !M2_safe_q[0] & (J1L93);
+
+
+--J1L43 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result451w~175
+--operation mode is normal
+
+J1L43 = M2_safe_q[3] & J1L24 # !M2_safe_q[3] & (J1L04);
+
+
+--J1L34 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result537w~402
+--operation mode is normal
+
+J1L34 = M2_safe_q[0] & (M2_safe_q[1]) # !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[2][3] # !M2_safe_q[1] & (F1_cells[0][3]));
+
+
+--J1L44 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result537w~403
+--operation mode is normal
+
+J1L44 = M2_safe_q[0] & (J1L34 & (F1_cells[3][3]) # !J1L34 & F1_cells[1][3]) # !M2_safe_q[0] & (J1L34);
+
+
+--J1L53 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result451w~176
+--operation mode is normal
+
+J1L53 = !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[10][3] # !M2_safe_q[1] & (F1_cells[8][3]));
+
+
+--J1L63 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result451w~177
+--operation mode is normal
+
+J1L63 = M2_safe_q[0] & (M2_safe_q[1] & F1_cells[11][3] # !M2_safe_q[1] & (F1_cells[9][3]));
+
+
+--J1L73 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result451w~178
+--operation mode is normal
+
+J1L73 = M2_safe_q[3] & (J1L53 # J1L63) # !M2_safe_q[3] & J1L44;
+
+
+--J1L83 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result451w~179
+--operation mode is normal
+
+J1L83 = M2_safe_q[2] & J1L43 # !M2_safe_q[2] & (J1L73);
+
+
+--F1_xql[3] is altdpram0:inst|altdpram:altdpram_component|xql[3]
+--operation mode is normal
+
+F1_xql[3] = RD & J1L83 # !RD & (F1_xql[3]);
+
+
+--J1L03 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result386w~44
+--operation mode is normal
+
+J1L03 = M2_safe_q[0] & (M2_safe_q[1]) # !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[14][2] # !M2_safe_q[1] & (F1_cells[12][2]));
+
+
+--J1L13 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result386w~45
+--operation mode is normal
+
+J1L13 = M2_safe_q[0] & (J1L03 & (F1_cells[15][2]) # !J1L03 & F1_cells[13][2]) # !M2_safe_q[0] & (J1L03);
+
+
+--J1L82 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result352w~39
+--operation mode is normal
+
+J1L82 = M2_safe_q[1] & (M2_safe_q[0]) # !M2_safe_q[1] & (M2_safe_q[0] & F1_cells[5][2] # !M2_safe_q[0] & (F1_cells[4][2]));
+
+
+--J1L92 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result352w~40
+--operation mode is normal
+
+J1L92 = M2_safe_q[1] & (J1L82 & (F1_cells[7][2]) # !J1L82 & F1_cells[6][2]) # !M2_safe_q[1] & (J1L82);
+
+
+--J1L32 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result317w~175
+--operation mode is normal
+
+J1L32 = M2_safe_q[3] & J1L13 # !M2_safe_q[3] & (J1L92);
+
+
+--J1L23 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result403w~402
+--operation mode is normal
+
+J1L23 = M2_safe_q[1] & (M2_safe_q[0]) # !M2_safe_q[1] & (M2_safe_q[0] & F1_cells[1][2] # !M2_safe_q[0] & (F1_cells[0][2]));
+
+
+--J1L33 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result403w~403
+--operation mode is normal
+
+J1L33 = M2_safe_q[1] & (J1L23 & (F1_cells[3][2]) # !J1L23 & F1_cells[2][2]) # !M2_safe_q[1] & (J1L23);
+
+
+--J1L42 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result317w~176
+--operation mode is normal
+
+J1L42 = !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[10][2] # !M2_safe_q[1] & (F1_cells[8][2]));
+
+
+--J1L52 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result317w~177
+--operation mode is normal
+
+J1L52 = M2_safe_q[0] & (M2_safe_q[1] & F1_cells[11][2] # !M2_safe_q[1] & (F1_cells[9][2]));
+
+
+--J1L62 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result317w~178
+--operation mode is normal
+
+J1L62 = M2_safe_q[3] & (J1L42 # J1L52) # !M2_safe_q[3] & J1L33;
+
+
+--J1L72 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result317w~179
+--operation mode is normal
+
+J1L72 = M2_safe_q[2] & J1L32 # !M2_safe_q[2] & (J1L62);
+
+
+--F1_xql[2] is altdpram0:inst|altdpram:altdpram_component|xql[2]
+--operation mode is normal
+
+F1_xql[2] = RD & J1L72 # !RD & (F1_xql[2]);
+
+
+--J1L91 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result252w~44
+--operation mode is normal
+
+J1L91 = M2_safe_q[1] & (M2_safe_q[0]) # !M2_safe_q[1] & (M2_safe_q[0] & F1_cells[13][1] # !M2_safe_q[0] & (F1_cells[12][1]));
+
+
+--J1L02 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result252w~45
+--operation mode is normal
+
+J1L02 = M2_safe_q[1] & (J1L91 & (F1_cells[15][1]) # !J1L91 & F1_cells[14][1]) # !M2_safe_q[1] & (J1L91);
+
+
+--J1L71 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result218w~39
+--operation mode is normal
+
+J1L71 = M2_safe_q[0] & (M2_safe_q[1]) # !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[6][1] # !M2_safe_q[1] & (F1_cells[4][1]));
+
+
+--J1L81 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result218w~40
+--operation mode is normal
+
+J1L81 = M2_safe_q[0] & (J1L71 & (F1_cells[7][1]) # !J1L71 & F1_cells[5][1]) # !M2_safe_q[0] & (J1L71);
+
+
+--J1L21 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result183w~175
+--operation mode is normal
+
+J1L21 = M2_safe_q[3] & J1L02 # !M2_safe_q[3] & (J1L81);
+
+
+--J1L12 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result269w~402
+--operation mode is normal
+
+J1L12 = M2_safe_q[0] & (M2_safe_q[1]) # !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[2][1] # !M2_safe_q[1] & (F1_cells[0][1]));
+
+
+--J1L22 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result269w~403
+--operation mode is normal
+
+J1L22 = M2_safe_q[0] & (J1L12 & (F1_cells[3][1]) # !J1L12 & F1_cells[1][1]) # !M2_safe_q[0] & (J1L12);
+
+
+--J1L31 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result183w~176
+--operation mode is normal
+
+J1L31 = !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[10][1] # !M2_safe_q[1] & (F1_cells[8][1]));
+
+
+--J1L41 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result183w~177
+--operation mode is normal
+
+J1L41 = M2_safe_q[0] & (M2_safe_q[1] & F1_cells[11][1] # !M2_safe_q[1] & (F1_cells[9][1]));
+
+
+--J1L51 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result183w~178
+--operation mode is normal
+
+J1L51 = M2_safe_q[3] & (J1L31 # J1L41) # !M2_safe_q[3] & J1L22;
+
+
+--J1L61 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result183w~179
+--operation mode is normal
+
+J1L61 = M2_safe_q[2] & J1L21 # !M2_safe_q[2] & (J1L51);
+
+
+--F1_xql[1] is altdpram0:inst|altdpram:altdpram_component|xql[1]
+--operation mode is normal
+
+F1_xql[1] = RD & J1L61 # !RD & (F1_xql[1]);
+
+
+--J1L8 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result113w~44
+--operation mode is normal
+
+J1L8 = M2_safe_q[0] & (M2_safe_q[1]) # !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[14][0] # !M2_safe_q[1] & (F1_cells[12][0]));
+
+
+--J1L9 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result113w~45
+--operation mode is normal
+
+J1L9 = M2_safe_q[0] & (J1L8 & (F1_cells[15][0]) # !J1L8 & F1_cells[13][0]) # !M2_safe_q[0] & (J1L8);
+
+
+--J1L6 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result79w~39
+--operation mode is normal
+
+J1L6 = M2_safe_q[1] & (M2_safe_q[0]) # !M2_safe_q[1] & (M2_safe_q[0] & F1_cells[5][0] # !M2_safe_q[0] & (F1_cells[4][0]));
+
+
+--J1L7 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result79w~40
+--operation mode is normal
+
+J1L7 = M2_safe_q[1] & (J1L6 & (F1_cells[7][0]) # !J1L6 & F1_cells[6][0]) # !M2_safe_q[1] & (J1L6);
+
+
+--J1L1 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result44w~175
+--operation mode is normal
+
+J1L1 = M2_safe_q[3] & J1L9 # !M2_safe_q[3] & (J1L7);
+
+
+--J1L01 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result130w~402
+--operation mode is normal
+
+J1L01 = M2_safe_q[1] & (M2_safe_q[0]) # !M2_safe_q[1] & (M2_safe_q[0] & F1_cells[1][0] # !M2_safe_q[0] & (F1_cells[0][0]));
+
+
+--J1L11 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result130w~403
+--operation mode is normal
+
+J1L11 = M2_safe_q[1] & (J1L01 & (F1_cells[3][0]) # !J1L01 & F1_cells[2][0]) # !M2_safe_q[1] & (J1L01);
+
+
+--J1L2 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result44w~176
+--operation mode is normal
+
+J1L2 = !M2_safe_q[0] & (M2_safe_q[1] & F1_cells[10][0] # !M2_safe_q[1] & (F1_cells[8][0]));
+
+
+--J1L3 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result44w~177
+--operation mode is normal
+
+J1L3 = M2_safe_q[0] & (M2_safe_q[1] & F1_cells[11][0] # !M2_safe_q[1] & (F1_cells[9][0]));
+
+
+--J1L4 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result44w~178
+--operation mode is normal
+
+J1L4 = M2_safe_q[3] & (J1L2 # J1L3) # !M2_safe_q[3] & J1L11;
+
+
+--J1L5 is altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result44w~179
+--operation mode is normal
+
+J1L5 = M2_safe_q[2] & J1L1 # !M2_safe_q[2] & (J1L4);
+
+
+--F1_xql[0] is altdpram0:inst|altdpram:altdpram_component|xql[0]
+--operation mode is normal
+
+F1_xql[0] = RD & J1L5 # !RD & (F1_xql[0]);
+
+
+--K1_w_anode101w[1] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode101w[1]
+--operation mode is normal
+
+K1_w_anode101w[1] = M1_safe_q[3] & WR;
+
+
+--K1_w_anode169w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode169w[3]
+--operation mode is normal
+
+K1_w_anode169w[3] = M1_safe_q[1] & M1_safe_q[2] & K1_w_anode101w[1] & !M1_safe_q[0];
+
+
+--F1_cells[14][7] is altdpram0:inst|altdpram:altdpram_component|cells[14][7]
+--operation mode is normal
+
+F1_cells[14][7] = K1_w_anode169w[3] & DI[7] # !K1_w_anode169w[3] & (F1_cells[14][7]);
+
+
+--K1_w_anode159w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode159w[3]
+--operation mode is normal
+
+K1_w_anode159w[3] = M1_safe_q[0] & M1_safe_q[2] & K1_w_anode101w[1] & !M1_safe_q[1];
+
+
+--F1_cells[13][7] is altdpram0:inst|altdpram:altdpram_component|cells[13][7]
+--operation mode is normal
+
+F1_cells[13][7] = K1_w_anode159w[3] & DI[7] # !K1_w_anode159w[3] & (F1_cells[13][7]);
+
+
+--K1_w_anode149w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode149w[3]
+--operation mode is normal
+
+K1_w_anode149w[3] = M1_safe_q[2] & K1_w_anode101w[1] & !M1_safe_q[1] & !M1_safe_q[0];
+
+
+--F1_cells[12][7] is altdpram0:inst|altdpram:altdpram_component|cells[12][7]
+--operation mode is normal
+
+F1_cells[12][7] = K1_w_anode149w[3] & DI[7] # !K1_w_anode149w[3] & (F1_cells[12][7]);
+
+
+--K1_w_anode179w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode179w[3]
+--operation mode is normal
+
+K1_w_anode179w[3] = M1_safe_q[1] & M1_safe_q[0] & M1_safe_q[2] & K1_w_anode101w[1];
+
+
+--F1_cells[15][7] is altdpram0:inst|altdpram:altdpram_component|cells[15][7]
+--operation mode is normal
+
+F1_cells[15][7] = K1_w_anode179w[3] & DI[7] # !K1_w_anode179w[3] & (F1_cells[15][7]);
+
+
+--K1_w_anode3w[1] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode3w[1]
+--operation mode is normal
+
+K1_w_anode3w[1] = WR & (!M1_safe_q[3]);
+
+
+--K1_w_anode69w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode69w[3]
+--operation mode is normal
+
+K1_w_anode69w[3] = M1_safe_q[0] & M1_safe_q[2] & K1_w_anode3w[1] & !M1_safe_q[1];
+
+
+--F1_cells[5][7] is altdpram0:inst|altdpram:altdpram_component|cells[5][7]
+--operation mode is normal
+
+F1_cells[5][7] = K1_w_anode69w[3] & DI[7] # !K1_w_anode69w[3] & (F1_cells[5][7]);
+
+
+--K1_w_anode79w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode79w[3]
+--operation mode is normal
+
+K1_w_anode79w[3] = M1_safe_q[1] & M1_safe_q[2] & K1_w_anode3w[1] & !M1_safe_q[0];
+
+
+--F1_cells[6][7] is altdpram0:inst|altdpram:altdpram_component|cells[6][7]
+--operation mode is normal
+
+F1_cells[6][7] = K1_w_anode79w[3] & DI[7] # !K1_w_anode79w[3] & (F1_cells[6][7]);
+
+
+--K1_w_anode59w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode59w[3]
+--operation mode is normal
+
+K1_w_anode59w[3] = M1_safe_q[2] & K1_w_anode3w[1] & !M1_safe_q[1] & !M1_safe_q[0];
+
+
+--F1_cells[4][7] is altdpram0:inst|altdpram:altdpram_component|cells[4][7]
+--operation mode is normal
+
+F1_cells[4][7] = K1_w_anode59w[3] & DI[7] # !K1_w_anode59w[3] & (F1_cells[4][7]);
+
+
+--K1_w_anode89w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode89w[3]
+--operation mode is normal
+
+K1_w_anode89w[3] = M1_safe_q[1] & M1_safe_q[0] & M1_safe_q[2] & K1_w_anode3w[1];
+
+
+--F1_cells[7][7] is altdpram0:inst|altdpram:altdpram_component|cells[7][7]
+--operation mode is normal
+
+F1_cells[7][7] = K1_w_anode89w[3] & DI[7] # !K1_w_anode89w[3] & (F1_cells[7][7]);
+
+
+--K1_w_anode29w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode29w[3]
+--operation mode is normal
+
+K1_w_anode29w[3] = M1_safe_q[0] & K1_w_anode3w[1] & !M1_safe_q[1] & !M1_safe_q[2];
+
+
+--F1_cells[1][7] is altdpram0:inst|altdpram:altdpram_component|cells[1][7]
+--operation mode is normal
+
+F1_cells[1][7] = K1_w_anode29w[3] & DI[7] # !K1_w_anode29w[3] & (F1_cells[1][7]);
+
+
+--K1_w_anode39w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode39w[3]
+--operation mode is normal
+
+K1_w_anode39w[3] = M1_safe_q[1] & K1_w_anode3w[1] & !M1_safe_q[0] & !M1_safe_q[2];
+
+
+--F1_cells[2][7] is altdpram0:inst|altdpram:altdpram_component|cells[2][7]
+--operation mode is normal
+
+F1_cells[2][7] = K1_w_anode39w[3] & DI[7] # !K1_w_anode39w[3] & (F1_cells[2][7]);
+
+
+--K1_w_anode12w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode12w[3]
+--operation mode is normal
+
+K1_w_anode12w[3] = K1_w_anode3w[1] & !M1_safe_q[1] & !M1_safe_q[0] & !M1_safe_q[2];
+
+
+--F1_cells[0][7] is altdpram0:inst|altdpram:altdpram_component|cells[0][7]
+--operation mode is normal
+
+F1_cells[0][7] = K1_w_anode12w[3] & DI[7] # !K1_w_anode12w[3] & (F1_cells[0][7]);
+
+
+--K1_w_anode49w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode49w[3]
+--operation mode is normal
+
+K1_w_anode49w[3] = M1_safe_q[1] & M1_safe_q[0] & K1_w_anode3w[1] & !M1_safe_q[2];
+
+
+--F1_cells[3][7] is altdpram0:inst|altdpram:altdpram_component|cells[3][7]
+--operation mode is normal
+
+F1_cells[3][7] = K1_w_anode49w[3] & DI[7] # !K1_w_anode49w[3] & (F1_cells[3][7]);
+
+
+--K1_w_anode129w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode129w[3]
+--operation mode is normal
+
+K1_w_anode129w[3] = M1_safe_q[1] & K1_w_anode101w[1] & !M1_safe_q[0] & !M1_safe_q[2];
+
+
+--F1_cells[10][7] is altdpram0:inst|altdpram:altdpram_component|cells[10][7]
+--operation mode is normal
+
+F1_cells[10][7] = K1_w_anode129w[3] & DI[7] # !K1_w_anode129w[3] & (F1_cells[10][7]);
+
+
+--K1_w_anode108w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode108w[3]
+--operation mode is normal
+
+K1_w_anode108w[3] = K1_w_anode101w[1] & !M1_safe_q[1] & !M1_safe_q[0] & !M1_safe_q[2];
+
+
+--F1_cells[8][7] is altdpram0:inst|altdpram:altdpram_component|cells[8][7]
+--operation mode is normal
+
+F1_cells[8][7] = K1_w_anode108w[3] & DI[7] # !K1_w_anode108w[3] & (F1_cells[8][7]);
+
+
+--K1_w_anode139w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode139w[3]
+--operation mode is normal
+
+K1_w_anode139w[3] = M1_safe_q[1] & M1_safe_q[0] & K1_w_anode101w[1] & !M1_safe_q[2];
+
+
+--F1_cells[11][7] is altdpram0:inst|altdpram:altdpram_component|cells[11][7]
+--operation mode is normal
+
+F1_cells[11][7] = K1_w_anode139w[3] & DI[7] # !K1_w_anode139w[3] & (F1_cells[11][7]);
+
+
+--K1_w_anode119w[3] is altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode119w[3]
+--operation mode is normal
+
+K1_w_anode119w[3] = M1_safe_q[0] & K1_w_anode101w[1] & !M1_safe_q[1] & !M1_safe_q[2];
+
+
+--F1_cells[9][7] is altdpram0:inst|altdpram:altdpram_component|cells[9][7]
+--operation mode is normal
+
+F1_cells[9][7] = K1_w_anode119w[3] & DI[7] # !K1_w_anode119w[3] & (F1_cells[9][7]);
+
+
+--F1_cells[13][6] is altdpram0:inst|altdpram:altdpram_component|cells[13][6]
+--operation mode is normal
+
+F1_cells[13][6] = K1_w_anode159w[3] & DI[6] # !K1_w_anode159w[3] & (F1_cells[13][6]);
+
+
+--F1_cells[14][6] is altdpram0:inst|altdpram:altdpram_component|cells[14][6]
+--operation mode is normal
+
+F1_cells[14][6] = K1_w_anode169w[3] & DI[6] # !K1_w_anode169w[3] & (F1_cells[14][6]);
+
+
+--F1_cells[12][6] is altdpram0:inst|altdpram:altdpram_component|cells[12][6]
+--operation mode is normal
+
+F1_cells[12][6] = K1_w_anode149w[3] & DI[6] # !K1_w_anode149w[3] & (F1_cells[12][6]);
+
+
+--F1_cells[15][6] is altdpram0:inst|altdpram:altdpram_component|cells[15][6]
+--operation mode is normal
+
+F1_cells[15][6] = K1_w_anode179w[3] & DI[6] # !K1_w_anode179w[3] & (F1_cells[15][6]);
+
+
+--F1_cells[6][6] is altdpram0:inst|altdpram:altdpram_component|cells[6][6]
+--operation mode is normal
+
+F1_cells[6][6] = K1_w_anode79w[3] & DI[6] # !K1_w_anode79w[3] & (F1_cells[6][6]);
+
+
+--F1_cells[5][6] is altdpram0:inst|altdpram:altdpram_component|cells[5][6]
+--operation mode is normal
+
+F1_cells[5][6] = K1_w_anode69w[3] & DI[6] # !K1_w_anode69w[3] & (F1_cells[5][6]);
+
+
+--F1_cells[4][6] is altdpram0:inst|altdpram:altdpram_component|cells[4][6]
+--operation mode is normal
+
+F1_cells[4][6] = K1_w_anode59w[3] & DI[6] # !K1_w_anode59w[3] & (F1_cells[4][6]);
+
+
+--F1_cells[7][6] is altdpram0:inst|altdpram:altdpram_component|cells[7][6]
+--operation mode is normal
+
+F1_cells[7][6] = K1_w_anode89w[3] & DI[6] # !K1_w_anode89w[3] & (F1_cells[7][6]);
+
+
+--F1_cells[2][6] is altdpram0:inst|altdpram:altdpram_component|cells[2][6]
+--operation mode is normal
+
+F1_cells[2][6] = K1_w_anode39w[3] & DI[6] # !K1_w_anode39w[3] & (F1_cells[2][6]);
+
+
+--F1_cells[1][6] is altdpram0:inst|altdpram:altdpram_component|cells[1][6]
+--operation mode is normal
+
+F1_cells[1][6] = K1_w_anode29w[3] & DI[6] # !K1_w_anode29w[3] & (F1_cells[1][6]);
+
+
+--F1_cells[0][6] is altdpram0:inst|altdpram:altdpram_component|cells[0][6]
+--operation mode is normal
+
+F1_cells[0][6] = K1_w_anode12w[3] & DI[6] # !K1_w_anode12w[3] & (F1_cells[0][6]);
+
+
+--F1_cells[3][6] is altdpram0:inst|altdpram:altdpram_component|cells[3][6]
+--operation mode is normal
+
+F1_cells[3][6] = K1_w_anode49w[3] & DI[6] # !K1_w_anode49w[3] & (F1_cells[3][6]);
+
+
+--F1_cells[10][6] is altdpram0:inst|altdpram:altdpram_component|cells[10][6]
+--operation mode is normal
+
+F1_cells[10][6] = K1_w_anode129w[3] & DI[6] # !K1_w_anode129w[3] & (F1_cells[10][6]);
+
+
+--F1_cells[8][6] is altdpram0:inst|altdpram:altdpram_component|cells[8][6]
+--operation mode is normal
+
+F1_cells[8][6] = K1_w_anode108w[3] & DI[6] # !K1_w_anode108w[3] & (F1_cells[8][6]);
+
+
+--F1_cells[11][6] is altdpram0:inst|altdpram:altdpram_component|cells[11][6]
+--operation mode is normal
+
+F1_cells[11][6] = K1_w_anode139w[3] & DI[6] # !K1_w_anode139w[3] & (F1_cells[11][6]);
+
+
+--F1_cells[9][6] is altdpram0:inst|altdpram:altdpram_component|cells[9][6]
+--operation mode is normal
+
+F1_cells[9][6] = K1_w_anode119w[3] & DI[6] # !K1_w_anode119w[3] & (F1_cells[9][6]);
+
+
+--F1_cells[14][5] is altdpram0:inst|altdpram:altdpram_component|cells[14][5]
+--operation mode is normal
+
+F1_cells[14][5] = K1_w_anode169w[3] & DI[5] # !K1_w_anode169w[3] & (F1_cells[14][5]);
+
+
+--F1_cells[13][5] is altdpram0:inst|altdpram:altdpram_component|cells[13][5]
+--operation mode is normal
+
+F1_cells[13][5] = K1_w_anode159w[3] & DI[5] # !K1_w_anode159w[3] & (F1_cells[13][5]);
+
+
+--F1_cells[12][5] is altdpram0:inst|altdpram:altdpram_component|cells[12][5]
+--operation mode is normal
+
+F1_cells[12][5] = K1_w_anode149w[3] & DI[5] # !K1_w_anode149w[3] & (F1_cells[12][5]);
+
+
+--F1_cells[15][5] is altdpram0:inst|altdpram:altdpram_component|cells[15][5]
+--operation mode is normal
+
+F1_cells[15][5] = K1_w_anode179w[3] & DI[5] # !K1_w_anode179w[3] & (F1_cells[15][5]);
+
+
+--F1_cells[5][5] is altdpram0:inst|altdpram:altdpram_component|cells[5][5]
+--operation mode is normal
+
+F1_cells[5][5] = K1_w_anode69w[3] & DI[5] # !K1_w_anode69w[3] & (F1_cells[5][5]);
+
+
+--F1_cells[6][5] is altdpram0:inst|altdpram:altdpram_component|cells[6][5]
+--operation mode is normal
+
+F1_cells[6][5] = K1_w_anode79w[3] & DI[5] # !K1_w_anode79w[3] & (F1_cells[6][5]);
+
+
+--F1_cells[4][5] is altdpram0:inst|altdpram:altdpram_component|cells[4][5]
+--operation mode is normal
+
+F1_cells[4][5] = K1_w_anode59w[3] & DI[5] # !K1_w_anode59w[3] & (F1_cells[4][5]);
+
+
+--F1_cells[7][5] is altdpram0:inst|altdpram:altdpram_component|cells[7][5]
+--operation mode is normal
+
+F1_cells[7][5] = K1_w_anode89w[3] & DI[5] # !K1_w_anode89w[3] & (F1_cells[7][5]);
+
+
+--F1_cells[1][5] is altdpram0:inst|altdpram:altdpram_component|cells[1][5]
+--operation mode is normal
+
+F1_cells[1][5] = K1_w_anode29w[3] & DI[5] # !K1_w_anode29w[3] & (F1_cells[1][5]);
+
+
+--F1_cells[2][5] is altdpram0:inst|altdpram:altdpram_component|cells[2][5]
+--operation mode is normal
+
+F1_cells[2][5] = K1_w_anode39w[3] & DI[5] # !K1_w_anode39w[3] & (F1_cells[2][5]);
+
+
+--F1_cells[0][5] is altdpram0:inst|altdpram:altdpram_component|cells[0][5]
+--operation mode is normal
+
+F1_cells[0][5] = K1_w_anode12w[3] & DI[5] # !K1_w_anode12w[3] & (F1_cells[0][5]);
+
+
+--F1_cells[3][5] is altdpram0:inst|altdpram:altdpram_component|cells[3][5]
+--operation mode is normal
+
+F1_cells[3][5] = K1_w_anode49w[3] & DI[5] # !K1_w_anode49w[3] & (F1_cells[3][5]);
+
+
+--F1_cells[10][5] is altdpram0:inst|altdpram:altdpram_component|cells[10][5]
+--operation mode is normal
+
+F1_cells[10][5] = K1_w_anode129w[3] & DI[5] # !K1_w_anode129w[3] & (F1_cells[10][5]);
+
+
+--F1_cells[8][5] is altdpram0:inst|altdpram:altdpram_component|cells[8][5]
+--operation mode is normal
+
+F1_cells[8][5] = K1_w_anode108w[3] & DI[5] # !K1_w_anode108w[3] & (F1_cells[8][5]);
+
+
+--F1_cells[11][5] is altdpram0:inst|altdpram:altdpram_component|cells[11][5]
+--operation mode is normal
+
+F1_cells[11][5] = K1_w_anode139w[3] & DI[5] # !K1_w_anode139w[3] & (F1_cells[11][5]);
+
+
+--F1_cells[9][5] is altdpram0:inst|altdpram:altdpram_component|cells[9][5]
+--operation mode is normal
+
+F1_cells[9][5] = K1_w_anode119w[3] & DI[5] # !K1_w_anode119w[3] & (F1_cells[9][5]);
+
+
+--F1_cells[13][4] is altdpram0:inst|altdpram:altdpram_component|cells[13][4]
+--operation mode is normal
+
+F1_cells[13][4] = K1_w_anode159w[3] & DI[4] # !K1_w_anode159w[3] & (F1_cells[13][4]);
+
+
+--F1_cells[14][4] is altdpram0:inst|altdpram:altdpram_component|cells[14][4]
+--operation mode is normal
+
+F1_cells[14][4] = K1_w_anode169w[3] & DI[4] # !K1_w_anode169w[3] & (F1_cells[14][4]);
+
+
+--F1_cells[12][4] is altdpram0:inst|altdpram:altdpram_component|cells[12][4]
+--operation mode is normal
+
+F1_cells[12][4] = K1_w_anode149w[3] & DI[4] # !K1_w_anode149w[3] & (F1_cells[12][4]);
+
+
+--F1_cells[15][4] is altdpram0:inst|altdpram:altdpram_component|cells[15][4]
+--operation mode is normal
+
+F1_cells[15][4] = K1_w_anode179w[3] & DI[4] # !K1_w_anode179w[3] & (F1_cells[15][4]);
+
+
+--F1_cells[6][4] is altdpram0:inst|altdpram:altdpram_component|cells[6][4]
+--operation mode is normal
+
+F1_cells[6][4] = K1_w_anode79w[3] & DI[4] # !K1_w_anode79w[3] & (F1_cells[6][4]);
+
+
+--F1_cells[5][4] is altdpram0:inst|altdpram:altdpram_component|cells[5][4]
+--operation mode is normal
+
+F1_cells[5][4] = K1_w_anode69w[3] & DI[4] # !K1_w_anode69w[3] & (F1_cells[5][4]);
+
+
+--F1_cells[4][4] is altdpram0:inst|altdpram:altdpram_component|cells[4][4]
+--operation mode is normal
+
+F1_cells[4][4] = K1_w_anode59w[3] & DI[4] # !K1_w_anode59w[3] & (F1_cells[4][4]);
+
+
+--F1_cells[7][4] is altdpram0:inst|altdpram:altdpram_component|cells[7][4]
+--operation mode is normal
+
+F1_cells[7][4] = K1_w_anode89w[3] & DI[4] # !K1_w_anode89w[3] & (F1_cells[7][4]);
+
+
+--F1_cells[2][4] is altdpram0:inst|altdpram:altdpram_component|cells[2][4]
+--operation mode is normal
+
+F1_cells[2][4] = K1_w_anode39w[3] & DI[4] # !K1_w_anode39w[3] & (F1_cells[2][4]);
+
+
+--F1_cells[1][4] is altdpram0:inst|altdpram:altdpram_component|cells[1][4]
+--operation mode is normal
+
+F1_cells[1][4] = K1_w_anode29w[3] & DI[4] # !K1_w_anode29w[3] & (F1_cells[1][4]);
+
+
+--F1_cells[0][4] is altdpram0:inst|altdpram:altdpram_component|cells[0][4]
+--operation mode is normal
+
+F1_cells[0][4] = K1_w_anode12w[3] & DI[4] # !K1_w_anode12w[3] & (F1_cells[0][4]);
+
+
+--F1_cells[3][4] is altdpram0:inst|altdpram:altdpram_component|cells[3][4]
+--operation mode is normal
+
+F1_cells[3][4] = K1_w_anode49w[3] & DI[4] # !K1_w_anode49w[3] & (F1_cells[3][4]);
+
+
+--F1_cells[10][4] is altdpram0:inst|altdpram:altdpram_component|cells[10][4]
+--operation mode is normal
+
+F1_cells[10][4] = K1_w_anode129w[3] & DI[4] # !K1_w_anode129w[3] & (F1_cells[10][4]);
+
+
+--F1_cells[8][4] is altdpram0:inst|altdpram:altdpram_component|cells[8][4]
+--operation mode is normal
+
+F1_cells[8][4] = K1_w_anode108w[3] & DI[4] # !K1_w_anode108w[3] & (F1_cells[8][4]);
+
+
+--F1_cells[11][4] is altdpram0:inst|altdpram:altdpram_component|cells[11][4]
+--operation mode is normal
+
+F1_cells[11][4] = K1_w_anode139w[3] & DI[4] # !K1_w_anode139w[3] & (F1_cells[11][4]);
+
+
+--F1_cells[9][4] is altdpram0:inst|altdpram:altdpram_component|cells[9][4]
+--operation mode is normal
+
+F1_cells[9][4] = K1_w_anode119w[3] & DI[4] # !K1_w_anode119w[3] & (F1_cells[9][4]);
+
+
+--F1_cells[14][3] is altdpram0:inst|altdpram:altdpram_component|cells[14][3]
+--operation mode is normal
+
+F1_cells[14][3] = K1_w_anode169w[3] & DI[3] # !K1_w_anode169w[3] & (F1_cells[14][3]);
+
+
+--F1_cells[13][3] is altdpram0:inst|altdpram:altdpram_component|cells[13][3]
+--operation mode is normal
+
+F1_cells[13][3] = K1_w_anode159w[3] & DI[3] # !K1_w_anode159w[3] & (F1_cells[13][3]);
+
+
+--F1_cells[12][3] is altdpram0:inst|altdpram:altdpram_component|cells[12][3]
+--operation mode is normal
+
+F1_cells[12][3] = K1_w_anode149w[3] & DI[3] # !K1_w_anode149w[3] & (F1_cells[12][3]);
+
+
+--F1_cells[15][3] is altdpram0:inst|altdpram:altdpram_component|cells[15][3]
+--operation mode is normal
+
+F1_cells[15][3] = K1_w_anode179w[3] & DI[3] # !K1_w_anode179w[3] & (F1_cells[15][3]);
+
+
+--F1_cells[5][3] is altdpram0:inst|altdpram:altdpram_component|cells[5][3]
+--operation mode is normal
+
+F1_cells[5][3] = K1_w_anode69w[3] & DI[3] # !K1_w_anode69w[3] & (F1_cells[5][3]);
+
+
+--F1_cells[6][3] is altdpram0:inst|altdpram:altdpram_component|cells[6][3]
+--operation mode is normal
+
+F1_cells[6][3] = K1_w_anode79w[3] & DI[3] # !K1_w_anode79w[3] & (F1_cells[6][3]);
+
+
+--F1_cells[4][3] is altdpram0:inst|altdpram:altdpram_component|cells[4][3]
+--operation mode is normal
+
+F1_cells[4][3] = K1_w_anode59w[3] & DI[3] # !K1_w_anode59w[3] & (F1_cells[4][3]);
+
+
+--F1_cells[7][3] is altdpram0:inst|altdpram:altdpram_component|cells[7][3]
+--operation mode is normal
+
+F1_cells[7][3] = K1_w_anode89w[3] & DI[3] # !K1_w_anode89w[3] & (F1_cells[7][3]);
+
+
+--F1_cells[1][3] is altdpram0:inst|altdpram:altdpram_component|cells[1][3]
+--operation mode is normal
+
+F1_cells[1][3] = K1_w_anode29w[3] & DI[3] # !K1_w_anode29w[3] & (F1_cells[1][3]);
+
+
+--F1_cells[2][3] is altdpram0:inst|altdpram:altdpram_component|cells[2][3]
+--operation mode is normal
+
+F1_cells[2][3] = K1_w_anode39w[3] & DI[3] # !K1_w_anode39w[3] & (F1_cells[2][3]);
+
+
+--F1_cells[0][3] is altdpram0:inst|altdpram:altdpram_component|cells[0][3]
+--operation mode is normal
+
+F1_cells[0][3] = K1_w_anode12w[3] & DI[3] # !K1_w_anode12w[3] & (F1_cells[0][3]);
+
+
+--F1_cells[3][3] is altdpram0:inst|altdpram:altdpram_component|cells[3][3]
+--operation mode is normal
+
+F1_cells[3][3] = K1_w_anode49w[3] & DI[3] # !K1_w_anode49w[3] & (F1_cells[3][3]);
+
+
+--F1_cells[10][3] is altdpram0:inst|altdpram:altdpram_component|cells[10][3]
+--operation mode is normal
+
+F1_cells[10][3] = K1_w_anode129w[3] & DI[3] # !K1_w_anode129w[3] & (F1_cells[10][3]);
+
+
+--F1_cells[8][3] is altdpram0:inst|altdpram:altdpram_component|cells[8][3]
+--operation mode is normal
+
+F1_cells[8][3] = K1_w_anode108w[3] & DI[3] # !K1_w_anode108w[3] & (F1_cells[8][3]);
+
+
+--F1_cells[11][3] is altdpram0:inst|altdpram:altdpram_component|cells[11][3]
+--operation mode is normal
+
+F1_cells[11][3] = K1_w_anode139w[3] & DI[3] # !K1_w_anode139w[3] & (F1_cells[11][3]);
+
+
+--F1_cells[9][3] is altdpram0:inst|altdpram:altdpram_component|cells[9][3]
+--operation mode is normal
+
+F1_cells[9][3] = K1_w_anode119w[3] & DI[3] # !K1_w_anode119w[3] & (F1_cells[9][3]);
+
+
+--F1_cells[13][2] is altdpram0:inst|altdpram:altdpram_component|cells[13][2]
+--operation mode is normal
+
+F1_cells[13][2] = K1_w_anode159w[3] & DI[2] # !K1_w_anode159w[3] & (F1_cells[13][2]);
+
+
+--F1_cells[14][2] is altdpram0:inst|altdpram:altdpram_component|cells[14][2]
+--operation mode is normal
+
+F1_cells[14][2] = K1_w_anode169w[3] & DI[2] # !K1_w_anode169w[3] & (F1_cells[14][2]);
+
+
+--F1_cells[12][2] is altdpram0:inst|altdpram:altdpram_component|cells[12][2]
+--operation mode is normal
+
+F1_cells[12][2] = K1_w_anode149w[3] & DI[2] # !K1_w_anode149w[3] & (F1_cells[12][2]);
+
+
+--F1_cells[15][2] is altdpram0:inst|altdpram:altdpram_component|cells[15][2]
+--operation mode is normal
+
+F1_cells[15][2] = K1_w_anode179w[3] & DI[2] # !K1_w_anode179w[3] & (F1_cells[15][2]);
+
+
+--F1_cells[6][2] is altdpram0:inst|altdpram:altdpram_component|cells[6][2]
+--operation mode is normal
+
+F1_cells[6][2] = K1_w_anode79w[3] & DI[2] # !K1_w_anode79w[3] & (F1_cells[6][2]);
+
+
+--F1_cells[5][2] is altdpram0:inst|altdpram:altdpram_component|cells[5][2]
+--operation mode is normal
+
+F1_cells[5][2] = K1_w_anode69w[3] & DI[2] # !K1_w_anode69w[3] & (F1_cells[5][2]);
+
+
+--F1_cells[4][2] is altdpram0:inst|altdpram:altdpram_component|cells[4][2]
+--operation mode is normal
+
+F1_cells[4][2] = K1_w_anode59w[3] & DI[2] # !K1_w_anode59w[3] & (F1_cells[4][2]);
+
+
+--F1_cells[7][2] is altdpram0:inst|altdpram:altdpram_component|cells[7][2]
+--operation mode is normal
+
+F1_cells[7][2] = K1_w_anode89w[3] & DI[2] # !K1_w_anode89w[3] & (F1_cells[7][2]);
+
+
+--F1_cells[2][2] is altdpram0:inst|altdpram:altdpram_component|cells[2][2]
+--operation mode is normal
+
+F1_cells[2][2] = K1_w_anode39w[3] & DI[2] # !K1_w_anode39w[3] & (F1_cells[2][2]);
+
+
+--F1_cells[1][2] is altdpram0:inst|altdpram:altdpram_component|cells[1][2]
+--operation mode is normal
+
+F1_cells[1][2] = K1_w_anode29w[3] & DI[2] # !K1_w_anode29w[3] & (F1_cells[1][2]);
+
+
+--F1_cells[0][2] is altdpram0:inst|altdpram:altdpram_component|cells[0][2]
+--operation mode is normal
+
+F1_cells[0][2] = K1_w_anode12w[3] & DI[2] # !K1_w_anode12w[3] & (F1_cells[0][2]);
+
+
+--F1_cells[3][2] is altdpram0:inst|altdpram:altdpram_component|cells[3][2]
+--operation mode is normal
+
+F1_cells[3][2] = K1_w_anode49w[3] & DI[2] # !K1_w_anode49w[3] & (F1_cells[3][2]);
+
+
+--F1_cells[10][2] is altdpram0:inst|altdpram:altdpram_component|cells[10][2]
+--operation mode is normal
+
+F1_cells[10][2] = K1_w_anode129w[3] & DI[2] # !K1_w_anode129w[3] & (F1_cells[10][2]);
+
+
+--F1_cells[8][2] is altdpram0:inst|altdpram:altdpram_component|cells[8][2]
+--operation mode is normal
+
+F1_cells[8][2] = K1_w_anode108w[3] & DI[2] # !K1_w_anode108w[3] & (F1_cells[8][2]);
+
+
+--F1_cells[11][2] is altdpram0:inst|altdpram:altdpram_component|cells[11][2]
+--operation mode is normal
+
+F1_cells[11][2] = K1_w_anode139w[3] & DI[2] # !K1_w_anode139w[3] & (F1_cells[11][2]);
+
+
+--F1_cells[9][2] is altdpram0:inst|altdpram:altdpram_component|cells[9][2]
+--operation mode is normal
+
+F1_cells[9][2] = K1_w_anode119w[3] & DI[2] # !K1_w_anode119w[3] & (F1_cells[9][2]);
+
+
+--F1_cells[14][1] is altdpram0:inst|altdpram:altdpram_component|cells[14][1]
+--operation mode is normal
+
+F1_cells[14][1] = K1_w_anode169w[3] & DI[1] # !K1_w_anode169w[3] & (F1_cells[14][1]);
+
+
+--F1_cells[13][1] is altdpram0:inst|altdpram:altdpram_component|cells[13][1]
+--operation mode is normal
+
+F1_cells[13][1] = K1_w_anode159w[3] & DI[1] # !K1_w_anode159w[3] & (F1_cells[13][1]);
+
+
+--F1_cells[12][1] is altdpram0:inst|altdpram:altdpram_component|cells[12][1]
+--operation mode is normal
+
+F1_cells[12][1] = K1_w_anode149w[3] & DI[1] # !K1_w_anode149w[3] & (F1_cells[12][1]);
+
+
+--F1_cells[15][1] is altdpram0:inst|altdpram:altdpram_component|cells[15][1]
+--operation mode is normal
+
+F1_cells[15][1] = K1_w_anode179w[3] & DI[1] # !K1_w_anode179w[3] & (F1_cells[15][1]);
+
+
+--F1_cells[5][1] is altdpram0:inst|altdpram:altdpram_component|cells[5][1]
+--operation mode is normal
+
+F1_cells[5][1] = K1_w_anode69w[3] & DI[1] # !K1_w_anode69w[3] & (F1_cells[5][1]);
+
+
+--F1_cells[6][1] is altdpram0:inst|altdpram:altdpram_component|cells[6][1]
+--operation mode is normal
+
+F1_cells[6][1] = K1_w_anode79w[3] & DI[1] # !K1_w_anode79w[3] & (F1_cells[6][1]);
+
+
+--F1_cells[4][1] is altdpram0:inst|altdpram:altdpram_component|cells[4][1]
+--operation mode is normal
+
+F1_cells[4][1] = K1_w_anode59w[3] & DI[1] # !K1_w_anode59w[3] & (F1_cells[4][1]);
+
+
+--F1_cells[7][1] is altdpram0:inst|altdpram:altdpram_component|cells[7][1]
+--operation mode is normal
+
+F1_cells[7][1] = K1_w_anode89w[3] & DI[1] # !K1_w_anode89w[3] & (F1_cells[7][1]);
+
+
+--F1_cells[1][1] is altdpram0:inst|altdpram:altdpram_component|cells[1][1]
+--operation mode is normal
+
+F1_cells[1][1] = K1_w_anode29w[3] & DI[1] # !K1_w_anode29w[3] & (F1_cells[1][1]);
+
+
+--F1_cells[2][1] is altdpram0:inst|altdpram:altdpram_component|cells[2][1]
+--operation mode is normal
+
+F1_cells[2][1] = K1_w_anode39w[3] & DI[1] # !K1_w_anode39w[3] & (F1_cells[2][1]);
+
+
+--F1_cells[0][1] is altdpram0:inst|altdpram:altdpram_component|cells[0][1]
+--operation mode is normal
+
+F1_cells[0][1] = K1_w_anode12w[3] & DI[1] # !K1_w_anode12w[3] & (F1_cells[0][1]);
+
+
+--F1_cells[3][1] is altdpram0:inst|altdpram:altdpram_component|cells[3][1]
+--operation mode is normal
+
+F1_cells[3][1] = K1_w_anode49w[3] & DI[1] # !K1_w_anode49w[3] & (F1_cells[3][1]);
+
+
+--F1_cells[10][1] is altdpram0:inst|altdpram:altdpram_component|cells[10][1]
+--operation mode is normal
+
+F1_cells[10][1] = K1_w_anode129w[3] & DI[1] # !K1_w_anode129w[3] & (F1_cells[10][1]);
+
+
+--F1_cells[8][1] is altdpram0:inst|altdpram:altdpram_component|cells[8][1]
+--operation mode is normal
+
+F1_cells[8][1] = K1_w_anode108w[3] & DI[1] # !K1_w_anode108w[3] & (F1_cells[8][1]);
+
+
+--F1_cells[11][1] is altdpram0:inst|altdpram:altdpram_component|cells[11][1]
+--operation mode is normal
+
+F1_cells[11][1] = K1_w_anode139w[3] & DI[1] # !K1_w_anode139w[3] & (F1_cells[11][1]);
+
+
+--F1_cells[9][1] is altdpram0:inst|altdpram:altdpram_component|cells[9][1]
+--operation mode is normal
+
+F1_cells[9][1] = K1_w_anode119w[3] & DI[1] # !K1_w_anode119w[3] & (F1_cells[9][1]);
+
+
+--F1_cells[13][0] is altdpram0:inst|altdpram:altdpram_component|cells[13][0]
+--operation mode is normal
+
+F1_cells[13][0] = K1_w_anode159w[3] & DI[0] # !K1_w_anode159w[3] & (F1_cells[13][0]);
+
+
+--F1_cells[14][0] is altdpram0:inst|altdpram:altdpram_component|cells[14][0]
+--operation mode is normal
+
+F1_cells[14][0] = K1_w_anode169w[3] & DI[0] # !K1_w_anode169w[3] & (F1_cells[14][0]);
+
+
+--F1_cells[12][0] is altdpram0:inst|altdpram:altdpram_component|cells[12][0]
+--operation mode is normal
+
+F1_cells[12][0] = K1_w_anode149w[3] & DI[0] # !K1_w_anode149w[3] & (F1_cells[12][0]);
+
+
+--F1_cells[15][0] is altdpram0:inst|altdpram:altdpram_component|cells[15][0]
+--operation mode is normal
+
+F1_cells[15][0] = K1_w_anode179w[3] & DI[0] # !K1_w_anode179w[3] & (F1_cells[15][0]);
+
+
+--F1_cells[6][0] is altdpram0:inst|altdpram:altdpram_component|cells[6][0]
+--operation mode is normal
+
+F1_cells[6][0] = K1_w_anode79w[3] & DI[0] # !K1_w_anode79w[3] & (F1_cells[6][0]);
+
+
+--F1_cells[5][0] is altdpram0:inst|altdpram:altdpram_component|cells[5][0]
+--operation mode is normal
+
+F1_cells[5][0] = K1_w_anode69w[3] & DI[0] # !K1_w_anode69w[3] & (F1_cells[5][0]);
+
+
+--F1_cells[4][0] is altdpram0:inst|altdpram:altdpram_component|cells[4][0]
+--operation mode is normal
+
+F1_cells[4][0] = K1_w_anode59w[3] & DI[0] # !K1_w_anode59w[3] & (F1_cells[4][0]);
+
+
+--F1_cells[7][0] is altdpram0:inst|altdpram:altdpram_component|cells[7][0]
+--operation mode is normal
+
+F1_cells[7][0] = K1_w_anode89w[3] & DI[0] # !K1_w_anode89w[3] & (F1_cells[7][0]);
+
+
+--F1_cells[2][0] is altdpram0:inst|altdpram:altdpram_component|cells[2][0]
+--operation mode is normal
+
+F1_cells[2][0] = K1_w_anode39w[3] & DI[0] # !K1_w_anode39w[3] & (F1_cells[2][0]);
+
+
+--F1_cells[1][0] is altdpram0:inst|altdpram:altdpram_component|cells[1][0]
+--operation mode is normal
+
+F1_cells[1][0] = K1_w_anode29w[3] & DI[0] # !K1_w_anode29w[3] & (F1_cells[1][0]);
+
+
+--F1_cells[0][0] is altdpram0:inst|altdpram:altdpram_component|cells[0][0]
+--operation mode is normal
+
+F1_cells[0][0] = K1_w_anode12w[3] & DI[0] # !K1_w_anode12w[3] & (F1_cells[0][0]);
+
+
+--F1_cells[3][0] is altdpram0:inst|altdpram:altdpram_component|cells[3][0]
+--operation mode is normal
+
+F1_cells[3][0] = K1_w_anode49w[3] & DI[0] # !K1_w_anode49w[3] & (F1_cells[3][0]);
+
+
+--F1_cells[10][0] is altdpram0:inst|altdpram:altdpram_component|cells[10][0]
+--operation mode is normal
+
+F1_cells[10][0] = K1_w_anode129w[3] & DI[0] # !K1_w_anode129w[3] & (F1_cells[10][0]);
+
+
+--F1_cells[8][0] is altdpram0:inst|altdpram:altdpram_component|cells[8][0]
+--operation mode is normal
+
+F1_cells[8][0] = K1_w_anode108w[3] & DI[0] # !K1_w_anode108w[3] & (F1_cells[8][0]);
+
+
+--F1_cells[11][0] is altdpram0:inst|altdpram:altdpram_component|cells[11][0]
+--operation mode is normal
+
+F1_cells[11][0] = K1_w_anode139w[3] & DI[0] # !K1_w_anode139w[3] & (F1_cells[11][0]);
+
+
+--F1_cells[9][0] is altdpram0:inst|altdpram:altdpram_component|cells[9][0]
+--operation mode is normal
+
+F1_cells[9][0] = K1_w_anode119w[3] & DI[0] # !K1_w_anode119w[3] & (F1_cells[9][0]);
+
+
+--WR is WR
+--operation mode is input
+
+WR = INPUT();
+
+
+--RD is RD
+--operation mode is input
+
+RD = INPUT();
+
+
+--Reset is Reset
+--operation mode is input
+
+Reset = INPUT();
+
+
+--DI[7] is DI[7]
+--operation mode is input
+
+DI[7] = INPUT();
+
+
+--DI[6] is DI[6]
+--operation mode is input
+
+DI[6] = INPUT();
+
+
+--DI[5] is DI[5]
+--operation mode is input
+
+DI[5] = INPUT();
+
+
+--DI[4] is DI[4]
+--operation mode is input
+
+DI[4] = INPUT();
+
+
+--DI[3] is DI[3]
+--operation mode is input
+
+DI[3] = INPUT();
+
+
+--DI[2] is DI[2]
+--operation mode is input
+
+DI[2] = INPUT();
+
+
+--DI[1] is DI[1]
+--operation mode is input
+
+DI[1] = INPUT();
+
+
+--DI[0] is DI[0]
+--operation mode is input
+
+DI[0] = INPUT();
+
+
+--empty is empty
+--operation mode is output
+
+empty = OUTPUT(A1L33);
+
+
+--full is full
+--operation mode is output
+
+full = OUTPUT(A1L03);
+
+
+--D[7] is D[7]
+--operation mode is output
+
+D[7] = OUTPUT(F1_xql[7]);
+
+
+--D[6] is D[6]
+--operation mode is output
+
+D[6] = OUTPUT(F1_xql[6]);
+
+
+--D[5] is D[5]
+--operation mode is output
+
+D[5] = OUTPUT(F1_xql[5]);
+
+
+--D[4] is D[4]
+--operation mode is output
+
+D[4] = OUTPUT(F1_xql[4]);
+
+
+--D[3] is D[3]
+--operation mode is output
+
+D[3] = OUTPUT(F1_xql[3]);
+
+
+--D[2] is D[2]
+--operation mode is output
+
+D[2] = OUTPUT(F1_xql[2]);
+
+
+--D[1] is D[1]
+--operation mode is output
+
+D[1] = OUTPUT(F1_xql[1]);
+
+
+--D[0] is D[0]
+--operation mode is output
+
+D[0] = OUTPUT(F1_xql[0]);
+
+
+--DO[7] is DO[7]
+--operation mode is output
+
+DO[7] = OUTPUT(GND);
+
+
+--DO[6] is DO[6]
+--operation mode is output
+
+DO[6] = OUTPUT(GND);
+
+
+--DO[5] is DO[5]
+--operation mode is output
+
+DO[5] = OUTPUT(GND);
+
+
+--DO[4] is DO[4]
+--operation mode is output
+
+DO[4] = OUTPUT(GND);
+
+
+--DO[3] is DO[3]
+--operation mode is output
+
+DO[3] = OUTPUT(GND);
+
+
+--DO[2] is DO[2]
+--operation mode is output
+
+DO[2] = OUTPUT(GND);
+
+
+--DO[1] is DO[1]
+--operation mode is output
+
+DO[1] = OUTPUT(GND);
+
+
+--DO[0] is DO[0]
+--operation mode is output
+
+DO[0] = OUTPUT(GND);
+
+

@@ -1,0 +1,65 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--rs[0] is rs[0]
+--operation mode is normal
+
+rs[0]_lut_out = rs[1];
+rs[0] = DFFEAS(rs[0]_lut_out, clk, reset, , , , , , );
+
+
+--rs[1] is rs[1]
+--operation mode is normal
+
+rs[1]_lut_out = rs[2];
+rs[1] = DFFEAS(rs[1]_lut_out, clk, reset, , , , , , );
+
+
+--rs[2] is rs[2]
+--operation mode is normal
+
+rs[2]_lut_out = rs[3];
+rs[2] = DFFEAS(rs[2]_lut_out, clk, reset, , , , , , );
+
+
+--rs[3] is rs[3]
+--operation mode is normal
+
+rs[3]_lut_out = data;
+rs[3] = DFFEAS(rs[3]_lut_out, clk, reset, , , , , , );
+
+
+--clk is clk
+--operation mode is input
+
+clk = INPUT();
+
+
+--reset is reset
+--operation mode is input
+
+reset = INPUT();
+
+
+--data is data
+--operation mode is input
+
+data = INPUT();
+
+
+--q is q
+--operation mode is output
+
+q = OUTPUT(rs[0]);
+
+

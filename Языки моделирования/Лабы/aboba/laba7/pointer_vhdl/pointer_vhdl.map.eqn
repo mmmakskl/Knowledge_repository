@@ -1,0 +1,277 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L23 is process0~194
+--operation mode is normal
+
+A1L23 = ei & !r[5] & !r[6] & !r[7];
+
+
+--A1L33 is process0~195
+--operation mode is normal
+
+A1L33 = A1L23 & (!r[3] & !r[4]);
+
+
+--A1L13 is process0~9
+--operation mode is normal
+
+A1L13 = r[0] # r[1] # r[2] # !A1L33;
+
+
+--A1L62 is comb~318
+--operation mode is normal
+
+A1L62 = r[0] & A1L33 & !r[1] & !r[2];
+
+
+--A1L72 is comb~319
+--operation mode is normal
+
+A1L72 = r[1] # r[2] # !A1L33;
+
+
+--a[0]$latch is a[0]$latch
+--operation mode is normal
+
+a[0]$latch = !A1L72 & (A1L62 # a[0]$latch & !A1L13);
+
+
+--A1L43 is process0~196
+--operation mode is normal
+
+A1L43 = r[1] & A1L33 & (!r[2]);
+
+
+--A1L52 is comb~14
+--operation mode is normal
+
+A1L52 = r[2] # r[0] & !r[1] # !A1L33;
+
+
+--a[1]$latch is a[1]$latch
+--operation mode is normal
+
+a[1]$latch = !A1L52 & (a[1]$latch # A1L43);
+
+
+--A1L82 is comb~320
+--operation mode is normal
+
+A1L82 = r[2] & A1L23 & !r[3] & !r[4];
+
+
+--A1L92 is comb~321
+--operation mode is normal
+
+A1L92 = !r[2] & (r[0] # r[1]) # !A1L33;
+
+
+--a[2]$latch is a[2]$latch
+--operation mode is normal
+
+a[2]$latch = !A1L92 & (A1L82 # a[2]$latch & !A1L13);
+
+
+--A1L91 is comb~3
+--operation mode is normal
+
+A1L91 = r[3] & A1L23 & A1L13 & !r[4];
+
+
+--A1L42 is comb~12
+--operation mode is normal
+
+A1L42 = A1L13 & (r[4] # !A1L23 # !r[3]);
+
+
+--a[3]$latch is a[3]$latch
+--operation mode is normal
+
+a[3]$latch = !A1L42 & (A1L91 # a[3]$latch & !A1L13);
+
+
+--A1L81 is comb~2
+--operation mode is normal
+
+A1L81 = r[4] & A1L23 & A1L13;
+
+
+--A1L32 is comb~11
+--operation mode is normal
+
+A1L32 = A1L13 & (!A1L23 # !r[4]);
+
+
+--a[4]$latch is a[4]$latch
+--operation mode is normal
+
+a[4]$latch = !A1L32 & (A1L81 # a[4]$latch & !A1L13);
+
+
+--A1L53 is process0~197
+--operation mode is normal
+
+A1L53 = r[5] & ei & !r[6] & !r[7];
+
+
+--A1L22 is comb~10
+--operation mode is normal
+
+A1L22 = A1L13 & (!A1L53);
+
+
+--a[5]$latch is a[5]$latch
+--operation mode is normal
+
+a[5]$latch = !A1L22 & (a[5]$latch # A1L53);
+
+
+--A1L63 is process0~198
+--operation mode is normal
+
+A1L63 = r[6] & ei & (!r[7]);
+
+
+--A1L12 is comb~9
+--operation mode is normal
+
+A1L12 = A1L13 & (r[7] # !ei # !r[6]);
+
+
+--a[6]$latch is a[6]$latch
+--operation mode is normal
+
+a[6]$latch = !A1L12 & (a[6]$latch # A1L63);
+
+
+--A1L73 is process0~199
+--operation mode is normal
+
+A1L73 = r[7] & ei;
+
+
+--A1L02 is comb~8
+--operation mode is normal
+
+A1L02 = A1L13 & (!ei # !r[7]);
+
+
+--a[7]$latch is a[7]$latch
+--operation mode is normal
+
+a[7]$latch = !A1L02 & (a[7]$latch # A1L73);
+
+
+--r[0] is r[0]
+--operation mode is input
+
+r[0] = INPUT();
+
+
+--r[1] is r[1]
+--operation mode is input
+
+r[1] = INPUT();
+
+
+--r[2] is r[2]
+--operation mode is input
+
+r[2] = INPUT();
+
+
+--ei is ei
+--operation mode is input
+
+ei = INPUT();
+
+
+--r[5] is r[5]
+--operation mode is input
+
+r[5] = INPUT();
+
+
+--r[6] is r[6]
+--operation mode is input
+
+r[6] = INPUT();
+
+
+--r[7] is r[7]
+--operation mode is input
+
+r[7] = INPUT();
+
+
+--r[3] is r[3]
+--operation mode is input
+
+r[3] = INPUT();
+
+
+--r[4] is r[4]
+--operation mode is input
+
+r[4] = INPUT();
+
+
+--a[0] is a[0]
+--operation mode is output
+
+a[0] = OUTPUT(a[0]$latch);
+
+
+--a[1] is a[1]
+--operation mode is output
+
+a[1] = OUTPUT(a[1]$latch);
+
+
+--a[2] is a[2]
+--operation mode is output
+
+a[2] = OUTPUT(a[2]$latch);
+
+
+--a[3] is a[3]
+--operation mode is output
+
+a[3] = OUTPUT(a[3]$latch);
+
+
+--a[4] is a[4]
+--operation mode is output
+
+a[4] = OUTPUT(a[4]$latch);
+
+
+--a[5] is a[5]
+--operation mode is output
+
+a[5] = OUTPUT(a[5]$latch);
+
+
+--a[6] is a[6]
+--operation mode is output
+
+a[6] = OUTPUT(a[6]$latch);
+
+
+--a[7] is a[7]
+--operation mode is output
+
+a[7] = OUTPUT(a[7]$latch);
+
+

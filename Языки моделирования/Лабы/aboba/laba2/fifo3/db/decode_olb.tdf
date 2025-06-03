@@ -1,0 +1,259 @@
+--lpm_decode CASCADE_CHAIN="MANUAL" DEVICE_FAMILY="MAX7000AE" IGNORE_CASCADE_BUFFERS="OFF" LPM_DECODES=16 LPM_WIDTH=4 data enable eq
+--VERSION_BEGIN 5.0 cbx_cycloneii 2004:12:20:14:28:52:SJ cbx_lpm_add_sub 2005:04:12:13:30:42:SJ cbx_lpm_compare 2004:11:30:11:30:40:SJ cbx_lpm_decode 2004:12:13:14:19:12:SJ cbx_mgl 2005:04:13:17:26:48:SJ cbx_stratix 2005:03:14:17:09:02:SJ cbx_stratixii 2004:12:22:13:27:12:SJ  VERSION_END
+
+
+--  Copyright (C) 1988-2005 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+
+--synthesis_resources = lut 64 
+SUBDESIGN decode_olb
+( 
+	data[3..0]	:	input;
+	enable	:	input;
+	eq[15..0]	:	output;
+) 
+VARIABLE
+	cmpr1_aeb_int	:	WIRE;
+	cmpr1_aeb	:	WIRE;
+	cmpr1_dataa[4..0]	:	WIRE;
+	cmpr1_datab[4..0]	:	WIRE;
+	cmpr10_aeb_int	:	WIRE;
+	cmpr10_aeb	:	WIRE;
+	cmpr10_dataa[4..0]	:	WIRE;
+	cmpr10_datab[4..0]	:	WIRE;
+	cmpr11_aeb_int	:	WIRE;
+	cmpr11_aeb	:	WIRE;
+	cmpr11_dataa[4..0]	:	WIRE;
+	cmpr11_datab[4..0]	:	WIRE;
+	cmpr12_aeb_int	:	WIRE;
+	cmpr12_aeb	:	WIRE;
+	cmpr12_dataa[4..0]	:	WIRE;
+	cmpr12_datab[4..0]	:	WIRE;
+	cmpr13_aeb_int	:	WIRE;
+	cmpr13_aeb	:	WIRE;
+	cmpr13_dataa[4..0]	:	WIRE;
+	cmpr13_datab[4..0]	:	WIRE;
+	cmpr14_aeb_int	:	WIRE;
+	cmpr14_aeb	:	WIRE;
+	cmpr14_dataa[4..0]	:	WIRE;
+	cmpr14_datab[4..0]	:	WIRE;
+	cmpr15_aeb_int	:	WIRE;
+	cmpr15_aeb	:	WIRE;
+	cmpr15_dataa[4..0]	:	WIRE;
+	cmpr15_datab[4..0]	:	WIRE;
+	cmpr16_aeb_int	:	WIRE;
+	cmpr16_aeb	:	WIRE;
+	cmpr16_dataa[4..0]	:	WIRE;
+	cmpr16_datab[4..0]	:	WIRE;
+	cmpr2_aeb_int	:	WIRE;
+	cmpr2_aeb	:	WIRE;
+	cmpr2_dataa[4..0]	:	WIRE;
+	cmpr2_datab[4..0]	:	WIRE;
+	cmpr3_aeb_int	:	WIRE;
+	cmpr3_aeb	:	WIRE;
+	cmpr3_dataa[4..0]	:	WIRE;
+	cmpr3_datab[4..0]	:	WIRE;
+	cmpr4_aeb_int	:	WIRE;
+	cmpr4_aeb	:	WIRE;
+	cmpr4_dataa[4..0]	:	WIRE;
+	cmpr4_datab[4..0]	:	WIRE;
+	cmpr5_aeb_int	:	WIRE;
+	cmpr5_aeb	:	WIRE;
+	cmpr5_dataa[4..0]	:	WIRE;
+	cmpr5_datab[4..0]	:	WIRE;
+	cmpr6_aeb_int	:	WIRE;
+	cmpr6_aeb	:	WIRE;
+	cmpr6_dataa[4..0]	:	WIRE;
+	cmpr6_datab[4..0]	:	WIRE;
+	cmpr7_aeb_int	:	WIRE;
+	cmpr7_aeb	:	WIRE;
+	cmpr7_dataa[4..0]	:	WIRE;
+	cmpr7_datab[4..0]	:	WIRE;
+	cmpr8_aeb_int	:	WIRE;
+	cmpr8_aeb	:	WIRE;
+	cmpr8_dataa[4..0]	:	WIRE;
+	cmpr8_datab[4..0]	:	WIRE;
+	cmpr9_aeb_int	:	WIRE;
+	cmpr9_aeb	:	WIRE;
+	cmpr9_dataa[4..0]	:	WIRE;
+	cmpr9_datab[4..0]	:	WIRE;
+	const_data0w[3..0]	: WIRE;
+	const_data10w[3..0]	: WIRE;
+	const_data11w[3..0]	: WIRE;
+	const_data12w[3..0]	: WIRE;
+	const_data13w[3..0]	: WIRE;
+	const_data14w[3..0]	: WIRE;
+	const_data15w[3..0]	: WIRE;
+	const_data1w[3..0]	: WIRE;
+	const_data2w[3..0]	: WIRE;
+	const_data3w[3..0]	: WIRE;
+	const_data4w[3..0]	: WIRE;
+	const_data5w[3..0]	: WIRE;
+	const_data6w[3..0]	: WIRE;
+	const_data7w[3..0]	: WIRE;
+	const_data8w[3..0]	: WIRE;
+	const_data9w[3..0]	: WIRE;
+	eq_node[15..0]	: WIRE;
+
+BEGIN 
+	IF (cmpr1_dataa[] == cmpr1_datab[]) THEN
+		cmpr1_aeb_int = VCC;
+	ELSE
+		cmpr1_aeb_int = GND;
+	END IF;
+	cmpr1_aeb = cmpr1_aeb_int;
+	cmpr1_dataa[] = ( enable, data[]);
+	cmpr1_datab[] = ( B"1", const_data0w[]);
+	IF (cmpr10_dataa[] == cmpr10_datab[]) THEN
+		cmpr10_aeb_int = VCC;
+	ELSE
+		cmpr10_aeb_int = GND;
+	END IF;
+	cmpr10_aeb = cmpr10_aeb_int;
+	cmpr10_dataa[] = ( enable, data[]);
+	cmpr10_datab[] = ( B"1", const_data9w[]);
+	IF (cmpr11_dataa[] == cmpr11_datab[]) THEN
+		cmpr11_aeb_int = VCC;
+	ELSE
+		cmpr11_aeb_int = GND;
+	END IF;
+	cmpr11_aeb = cmpr11_aeb_int;
+	cmpr11_dataa[] = ( enable, data[]);
+	cmpr11_datab[] = ( B"1", const_data10w[]);
+	IF (cmpr12_dataa[] == cmpr12_datab[]) THEN
+		cmpr12_aeb_int = VCC;
+	ELSE
+		cmpr12_aeb_int = GND;
+	END IF;
+	cmpr12_aeb = cmpr12_aeb_int;
+	cmpr12_dataa[] = ( enable, data[]);
+	cmpr12_datab[] = ( B"1", const_data11w[]);
+	IF (cmpr13_dataa[] == cmpr13_datab[]) THEN
+		cmpr13_aeb_int = VCC;
+	ELSE
+		cmpr13_aeb_int = GND;
+	END IF;
+	cmpr13_aeb = cmpr13_aeb_int;
+	cmpr13_dataa[] = ( enable, data[]);
+	cmpr13_datab[] = ( B"1", const_data12w[]);
+	IF (cmpr14_dataa[] == cmpr14_datab[]) THEN
+		cmpr14_aeb_int = VCC;
+	ELSE
+		cmpr14_aeb_int = GND;
+	END IF;
+	cmpr14_aeb = cmpr14_aeb_int;
+	cmpr14_dataa[] = ( enable, data[]);
+	cmpr14_datab[] = ( B"1", const_data13w[]);
+	IF (cmpr15_dataa[] == cmpr15_datab[]) THEN
+		cmpr15_aeb_int = VCC;
+	ELSE
+		cmpr15_aeb_int = GND;
+	END IF;
+	cmpr15_aeb = cmpr15_aeb_int;
+	cmpr15_dataa[] = ( enable, data[]);
+	cmpr15_datab[] = ( B"1", const_data14w[]);
+	IF (cmpr16_dataa[] == cmpr16_datab[]) THEN
+		cmpr16_aeb_int = VCC;
+	ELSE
+		cmpr16_aeb_int = GND;
+	END IF;
+	cmpr16_aeb = cmpr16_aeb_int;
+	cmpr16_dataa[] = ( enable, data[]);
+	cmpr16_datab[] = ( B"1", const_data15w[]);
+	IF (cmpr2_dataa[] == cmpr2_datab[]) THEN
+		cmpr2_aeb_int = VCC;
+	ELSE
+		cmpr2_aeb_int = GND;
+	END IF;
+	cmpr2_aeb = cmpr2_aeb_int;
+	cmpr2_dataa[] = ( enable, data[]);
+	cmpr2_datab[] = ( B"1", const_data1w[]);
+	IF (cmpr3_dataa[] == cmpr3_datab[]) THEN
+		cmpr3_aeb_int = VCC;
+	ELSE
+		cmpr3_aeb_int = GND;
+	END IF;
+	cmpr3_aeb = cmpr3_aeb_int;
+	cmpr3_dataa[] = ( enable, data[]);
+	cmpr3_datab[] = ( B"1", const_data2w[]);
+	IF (cmpr4_dataa[] == cmpr4_datab[]) THEN
+		cmpr4_aeb_int = VCC;
+	ELSE
+		cmpr4_aeb_int = GND;
+	END IF;
+	cmpr4_aeb = cmpr4_aeb_int;
+	cmpr4_dataa[] = ( enable, data[]);
+	cmpr4_datab[] = ( B"1", const_data3w[]);
+	IF (cmpr5_dataa[] == cmpr5_datab[]) THEN
+		cmpr5_aeb_int = VCC;
+	ELSE
+		cmpr5_aeb_int = GND;
+	END IF;
+	cmpr5_aeb = cmpr5_aeb_int;
+	cmpr5_dataa[] = ( enable, data[]);
+	cmpr5_datab[] = ( B"1", const_data4w[]);
+	IF (cmpr6_dataa[] == cmpr6_datab[]) THEN
+		cmpr6_aeb_int = VCC;
+	ELSE
+		cmpr6_aeb_int = GND;
+	END IF;
+	cmpr6_aeb = cmpr6_aeb_int;
+	cmpr6_dataa[] = ( enable, data[]);
+	cmpr6_datab[] = ( B"1", const_data5w[]);
+	IF (cmpr7_dataa[] == cmpr7_datab[]) THEN
+		cmpr7_aeb_int = VCC;
+	ELSE
+		cmpr7_aeb_int = GND;
+	END IF;
+	cmpr7_aeb = cmpr7_aeb_int;
+	cmpr7_dataa[] = ( enable, data[]);
+	cmpr7_datab[] = ( B"1", const_data6w[]);
+	IF (cmpr8_dataa[] == cmpr8_datab[]) THEN
+		cmpr8_aeb_int = VCC;
+	ELSE
+		cmpr8_aeb_int = GND;
+	END IF;
+	cmpr8_aeb = cmpr8_aeb_int;
+	cmpr8_dataa[] = ( enable, data[]);
+	cmpr8_datab[] = ( B"1", const_data7w[]);
+	IF (cmpr9_dataa[] == cmpr9_datab[]) THEN
+		cmpr9_aeb_int = VCC;
+	ELSE
+		cmpr9_aeb_int = GND;
+	END IF;
+	cmpr9_aeb = cmpr9_aeb_int;
+	cmpr9_dataa[] = ( enable, data[]);
+	cmpr9_datab[] = ( B"1", const_data8w[]);
+	const_data0w[] = B"0000";
+	const_data10w[] = B"1010";
+	const_data11w[] = B"1011";
+	const_data12w[] = B"1100";
+	const_data13w[] = B"1101";
+	const_data14w[] = B"1110";
+	const_data15w[] = B"1111";
+	const_data1w[] = B"0001";
+	const_data2w[] = B"0010";
+	const_data3w[] = B"0011";
+	const_data4w[] = B"0100";
+	const_data5w[] = B"0101";
+	const_data6w[] = B"0110";
+	const_data7w[] = B"0111";
+	const_data8w[] = B"1000";
+	const_data9w[] = B"1001";
+	eq[] = eq_node[];
+	eq_node[] = ( cmpr16_aeb, cmpr15_aeb, cmpr14_aeb, cmpr13_aeb, cmpr12_aeb, cmpr11_aeb, cmpr10_aeb, cmpr9_aeb, cmpr8_aeb, cmpr7_aeb, cmpr6_aeb, cmpr5_aeb, cmpr4_aeb, cmpr3_aeb, cmpr2_aeb, cmpr1_aeb);
+END;
+--VALID FILE

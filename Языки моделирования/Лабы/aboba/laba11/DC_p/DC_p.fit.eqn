@@ -1,0 +1,188 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L52 is kp~59 at LC_X17_Y1_N9
+--operation mode is normal
+
+A1L52 = d[6] $ d[5] $ d[4] $ d[3];
+
+
+--A1L62 is kp~60 at LC_X18_Y1_N6
+--operation mode is normal
+
+A1L62 = d[2] $ (d[1]);
+
+
+--A1L42 is kp~6 at LC_X17_Y1_N7
+--operation mode is normal
+
+A1L42 = d[7] $ d[0] $ A1L62 $ A1L52;
+
+
+--A1L13 is p2~73 at LC_X17_Y1_N2
+--operation mode is normal
+
+A1L13 = d[6] $ d[1] $ d[2] $ d[5];
+
+
+--A1L82 is p1~90 at LC_X17_Y1_N1
+--operation mode is normal
+
+A1L82 = d[2] $ d[4] $ d[6] $ d[0];
+
+
+--A1L51 is d_otv~758 at LC_X17_Y1_N0
+--operation mode is normal
+
+A1L51 = A1L82 & !A1L52;
+
+
+--A1L61 is d_otv~759 at LC_X17_Y1_N6
+--operation mode is normal
+
+A1L61 = d[2] $ (A1L51 & A1L42 & A1L13);
+
+
+--A1L71 is d_otv~760 at LC_X18_Y1_N5
+--operation mode is normal
+
+A1L71 = A1L52 & (d[7] $ d[0] $ !A1L62);
+
+
+--A1L81 is d_otv~761 at LC_X17_Y1_N4
+--operation mode is normal
+
+A1L81 = d[4] $ (A1L71 & A1L82 & !A1L13);
+
+
+--A1L91 is d_otv~762 at LC_X17_Y1_N3
+--operation mode is normal
+
+A1L91 = d[6] $ d[1] $ d[2];
+
+
+--A1L02 is d_otv~763 at LC_X17_Y1_N5
+--operation mode is normal
+
+A1L02 = A1L82 & (d[5]) # !A1L82 & (A1L71 & A1L91 # !A1L71 & (d[5]));
+
+
+--A1L03 is p2~1 at LC_X18_Y1_N8
+--operation mode is normal
+
+A1L03 = d[2] $ (d[1] $ d[5]);
+
+
+--A1L92 is p1~91 at LC_X18_Y1_N2
+--operation mode is normal
+
+A1L92 = d[2] $ d[4] $ d[0];
+
+
+--A1L12 is d_otv~764 at LC_X18_Y1_N4
+--operation mode is normal
+
+A1L12 = A1L03 & (d[6] # A1L71 & A1L92) # !A1L03 & d[6] & (A1L92 # !A1L71);
+
+
+--A1L32 is DBL_ERR~37 at LC_X17_Y1_N8
+--operation mode is normal
+
+A1L32 = !A1L42 & (A1L52 # A1L82 # A1L13);
+
+
+--d[2] is d[2] at PIN_P15
+--operation mode is input
+
+d[2] = INPUT();
+
+
+--d[6] is d[6] at PIN_P13
+--operation mode is input
+
+d[6] = INPUT();
+
+
+--d[5] is d[5] at PIN_T14
+--operation mode is input
+
+d[5] = INPUT();
+
+
+--d[3] is d[3] at PIN_P16
+--operation mode is input
+
+d[3] = INPUT();
+
+
+--d[4] is d[4] at PIN_U14
+--operation mode is input
+
+d[4] = INPUT();
+
+
+--d[1] is d[1] at PIN_N15
+--operation mode is input
+
+d[1] = INPUT();
+
+
+--d[0] is d[0] at PIN_P14
+--operation mode is input
+
+d[0] = INPUT();
+
+
+--d[7] is d[7] at PIN_Y14
+--operation mode is input
+
+d[7] = INPUT();
+
+
+--d_o[0] is d_o[0] at PIN_U15
+--operation mode is output
+
+d_o[0] = OUTPUT(A1L61);
+
+
+--d_o[1] is d_o[1] at PIN_N14
+--operation mode is output
+
+d_o[1] = OUTPUT(A1L81);
+
+
+--d_o[2] is d_o[2] at PIN_V14
+--operation mode is output
+
+d_o[2] = OUTPUT(A1L02);
+
+
+--d_o[3] is d_o[3] at PIN_W13
+--operation mode is output
+
+d_o[3] = OUTPUT(A1L12);
+
+
+--ONE_ERR is ONE_ERR at PIN_W15
+--operation mode is output
+
+ONE_ERR = OUTPUT(A1L42);
+
+
+--DBL_ERR is DBL_ERR at PIN_W14
+--operation mode is output
+
+DBL_ERR = OUTPUT(A1L32);
+
+
+

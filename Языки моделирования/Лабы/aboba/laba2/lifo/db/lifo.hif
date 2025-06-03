@@ -1,0 +1,691 @@
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+35
+1901
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+VRSM_ON
+VHSM_ON
+0
+# entity
+lpm_and1
+# case_insensitive
+# source_file
+lpm_and1.tdf
+1552603574
+6
+# storage
+db|lifo.(1).cnf
+db|lifo.(1).cnf
+# used_port {
+data0
+data1
+data2
+data3
+result
+}
+# include_file {
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_and.inc
+1107592432
+}
+# hierarchies {
+lpm_and1:inst3
+}
+# end
+# entity
+lpm_and
+# case_insensitive
+# source_file
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_and.tdf
+1114026848
+6
+# storage
+db|lifo.(2).cnf
+db|lifo.(2).cnf
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+1
+PARAMETER_UNKNOWN
+USR
+LPM_SIZE
+4
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+data0_0
+data1_0
+data2_0
+data3_0
+result0
+}
+# include_file {
+..|..|..|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+}
+# hierarchies {
+lpm_and1:inst3|lpm_and:lpm_and_component
+}
+# end
+# entity
+lpm_counter0
+# case_insensitive
+# source_file
+lpm_counter0.tdf
+1552603913
+6
+# storage
+db|lifo.(3).cnf
+db|lifo.(3).cnf
+# used_port {
+clock
+q0
+q1
+q2
+q3
+sclr
+updown
+}
+# include_file {
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_counter.inc
+1107592548
+}
+# hierarchies {
+lpm_counter0:WR_ADRESS
+lpm_counter0:RD_ADRESS
+}
+# end
+# entity
+lpm_counter
+# case_insensitive
+# source_file
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_counter.tdf
+1114026848
+6
+# storage
+db|lifo.(4).cnf
+db|lifo.(4).cnf
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+4
+PARAMETER_UNKNOWN
+USR
+LPM_DIRECTION
+DEFAULT
+PARAMETER_UNKNOWN
+DEF
+LPM_MODULUS
+15
+PARAMETER_UNKNOWN
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_4m7
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+clock
+updown
+sclr
+q0
+q1
+q2
+q3
+}
+# include_file {
+..|..|..|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_counter.inc
+1107592548
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_constant.inc
+1107592524
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_decode.inc
+1107592570
+..|..|..|altera|quartus50|libraries|megafunctions|cmpconst.inc
+1107591980
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_add_sub.inc
+1107592408
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_compare.inc
+1107592500
+..|..|..|altera|quartus50|libraries|megafunctions|dffeea.inc
+1107592164
+..|..|..|altera|quartus50|libraries|megafunctions|alt_synch_counter.inc
+1107590664
+..|..|..|altera|quartus50|libraries|megafunctions|alt_synch_counter_f.inc
+1107590680
+..|..|..|altera|quartus50|libraries|megafunctions|alt_counter_f10ke.inc
+1107590320
+..|..|..|altera|quartus50|libraries|megafunctions|alt_counter_stratix.inc
+1107590334
+}
+# hierarchies {
+lpm_counter0:WR_ADRESS|lpm_counter:lpm_counter_component
+lpm_counter0:RD_ADRESS|lpm_counter:lpm_counter_component
+}
+# end
+# entity
+cntr_4m7
+# case_insensitive
+# source_file
+db|cntr_4m7.tdf
+1552603940
+6
+# storage
+db|lifo.(5).cnf
+db|lifo.(5).cnf
+# used_port {
+clock
+updown
+sclr
+q0
+q1
+q2
+q3
+}
+# hierarchies {
+lpm_counter0:WR_ADRESS|lpm_counter:lpm_counter_component|cntr_4m7:auto_generated
+lpm_counter0:RD_ADRESS|lpm_counter:lpm_counter_component|cntr_4m7:auto_generated
+}
+# end
+# entity
+altdpram0
+# case_insensitive
+# source_file
+altdpram0.tdf
+1552604072
+6
+# storage
+db|lifo.(6).cnf
+db|lifo.(6).cnf
+# used_port {
+data0
+data1
+data2
+data3
+data4
+data5
+data6
+data7
+rdaddress0
+rdaddress1
+rdaddress2
+rdaddress3
+rdclock
+wraddress0
+wraddress1
+wraddress2
+wraddress3
+wrclock
+wren
+}
+# include_file {
+..|..|..|altera|quartus50|libraries|megafunctions|altsyncram.inc
+1107591506
+}
+# end
+# entity
+altsyncram
+# case_insensitive
+# source_file
+..|..|..|altera|quartus50|libraries|megafunctions|altsyncram.tdf
+1114026838
+6
+# storage
+db|lifo.(7).cnf
+db|lifo.(7).cnf
+# user_parameter {
+BYTE_SIZE_BLOCK
+8
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+OPERATION_MODE
+DUAL_PORT
+PARAMETER_UNKNOWN
+USR
+WIDTH_A
+8
+PARAMETER_UNKNOWN
+USR
+WIDTHAD_A
+4
+PARAMETER_UNKNOWN
+USR
+NUMWORDS_A
+16
+PARAMETER_UNKNOWN
+USR
+OUTDATA_REG_A
+UNREGISTERED
+PARAMETER_UNKNOWN
+DEF
+ADDRESS_ACLR_A
+NONE
+PARAMETER_UNKNOWN
+USR
+OUTDATA_ACLR_A
+NONE
+PARAMETER_UNKNOWN
+DEF
+WRCONTROL_ACLR_A
+NONE
+PARAMETER_UNKNOWN
+USR
+INDATA_ACLR_A
+NONE
+PARAMETER_UNKNOWN
+USR
+BYTEENA_ACLR_A
+NONE
+PARAMETER_UNKNOWN
+DEF
+WIDTH_B
+8
+PARAMETER_UNKNOWN
+USR
+WIDTHAD_B
+4
+PARAMETER_UNKNOWN
+USR
+NUMWORDS_B
+16
+PARAMETER_UNKNOWN
+USR
+INDATA_REG_B
+CLOCK1
+PARAMETER_UNKNOWN
+DEF
+WRCONTROL_WRADDRESS_REG_B
+CLOCK1
+PARAMETER_UNKNOWN
+DEF
+RDCONTROL_REG_B
+CLOCK1
+PARAMETER_UNKNOWN
+DEF
+ADDRESS_REG_B
+CLOCK1
+PARAMETER_UNKNOWN
+USR
+OUTDATA_REG_B
+CLOCK1
+PARAMETER_UNKNOWN
+USR
+BYTEENA_REG_B
+CLOCK1
+PARAMETER_UNKNOWN
+DEF
+INDATA_ACLR_B
+NONE
+PARAMETER_UNKNOWN
+DEF
+WRCONTROL_ACLR_B
+NONE
+PARAMETER_UNKNOWN
+DEF
+ADDRESS_ACLR_B
+NONE
+PARAMETER_UNKNOWN
+USR
+OUTDATA_ACLR_B
+NONE
+PARAMETER_UNKNOWN
+USR
+RDCONTROL_ACLR_B
+NONE
+PARAMETER_UNKNOWN
+DEF
+BYTEENA_ACLR_B
+NONE
+PARAMETER_UNKNOWN
+DEF
+WIDTH_BYTEENA_A
+1
+PARAMETER_UNKNOWN
+USR
+WIDTH_BYTEENA_B
+1
+PARAMETER_UNKNOWN
+DEF
+RAM_BLOCK_TYPE
+AUTO
+PARAMETER_UNKNOWN
+DEF
+BYTE_SIZE
+8
+PARAMETER_UNKNOWN
+DEF
+READ_DURING_WRITE_MODE_MIXED_PORTS
+DONT_CARE
+PARAMETER_UNKNOWN
+DEF
+INIT_FILE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+INIT_FILE_LAYOUT
+PORT_A
+PARAMETER_UNKNOWN
+DEF
+MAXIMUM_DEPTH
+0
+PARAMETER_UNKNOWN
+DEF
+CLOCK_ENABLE_INPUT_A
+NORMAL
+PARAMETER_UNKNOWN
+DEF
+CLOCK_ENABLE_INPUT_B
+NORMAL
+PARAMETER_UNKNOWN
+DEF
+CLOCK_ENABLE_OUTPUT_A
+NORMAL
+PARAMETER_UNKNOWN
+DEF
+CLOCK_ENABLE_OUTPUT_B
+NORMAL
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+altsyncram_4c71
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+wren_a
+data_a0
+data_a1
+data_a2
+data_a3
+data_a4
+data_a5
+data_a6
+data_a7
+address_a0
+address_a1
+address_a2
+address_a3
+address_b0
+address_b1
+address_b2
+address_b3
+clock0
+clock1
+q_b0
+q_b1
+q_b2
+q_b3
+q_b4
+q_b5
+q_b6
+q_b7
+}
+# include_file {
+..|..|..|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_decode.inc
+1107592570
+..|..|..|altera|quartus50|libraries|megafunctions|altsyncram.inc
+1107591506
+..|..|..|altera|quartus50|libraries|megafunctions|stratix_ram_block.inc
+1107593592
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_mux.inc
+1107592776
+..|..|..|altera|quartus50|libraries|megafunctions|a_rdenreg.inc
+1107590148
+..|..|..|altera|quartus50|libraries|megafunctions|altrom.inc
+1107591422
+..|..|..|altera|quartus50|libraries|megafunctions|altram.inc
+1107591384
+..|..|..|altera|quartus50|libraries|megafunctions|altdpram.inc
+1107591082
+..|..|..|altera|quartus50|libraries|megafunctions|altqpram.inc
+1107591362
+}
+# hierarchies {
+altdpram0:inst5|altsyncram:altsyncram_component
+}
+# end
+# entity
+altdpram0
+# case_insensitive
+# source_file
+altdpram0.tdf
+1552604072
+6
+# storage
+db|lifo.(8).cnf
+db|lifo.(8).cnf
+# used_port {
+data0
+data1
+data2
+data3
+data4
+data5
+data6
+data7
+q0
+q1
+q2
+q3
+q4
+q5
+q6
+q7
+rdaddress0
+rdaddress1
+rdaddress2
+rdaddress3
+rdclock
+wraddress0
+wraddress1
+wraddress2
+wraddress3
+wrclock
+wren
+}
+# include_file {
+..|..|..|altera|quartus50|libraries|megafunctions|altsyncram.inc
+1107591506
+}
+# hierarchies {
+altdpram0:inst5
+}
+# end
+# entity
+lifo
+# case_insensitive
+# source_file
+lifo.bdf
+1552607949
+23
+# storage
+db|lifo.(0).cnf
+db|lifo.(0).cnf
+# hierarchies {
+|
+}
+# end
+# entity
+altsyncram_4c71
+# case_insensitive
+# source_file
+db|altsyncram_4c71.tdf
+1552604091
+6
+# storage
+db|lifo.(9).cnf
+db|lifo.(9).cnf
+# user_parameter {
+PORT_A_ADDRESS_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_A_BYTE_ENABLE_MASK_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_A_DATA_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_B_ADDRESS_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_B_BYTE_ENABLE_MASK_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_B_DATA_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+}
+# used_port {
+wren_a
+data_a0
+data_a1
+data_a2
+data_a3
+data_a4
+data_a5
+data_a6
+data_a7
+address_a0
+address_a1
+address_a2
+address_a3
+address_b0
+address_b1
+address_b2
+address_b3
+clock0
+clock1
+q_b0
+q_b1
+q_b2
+q_b3
+q_b4
+q_b5
+q_b6
+q_b7
+}
+# memory_file {
+none
+0
+}
+# hierarchies {
+altdpram0:inst5|altsyncram:altsyncram_component|altsyncram_4c71:auto_generated
+}
+# end
+# complete
+

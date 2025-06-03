@@ -1,0 +1,84 @@
+- **the Digital Age** — цифровая эпоха
+- **is coupled tightly** — тесно связано
+- **the advent of personal computers** — появление персональных компьютеров
+- **trace** — отслеживать, след
+- **information can be quantitatively encoded as a series of ones and zeroes** — информация может быть количественно закодирована в виде последовательности единиц и нулей
+- **all information media** — все информационные носители
+- **telephone signals to radio waves** — от телефонных сигналов до радиоволн
+- **be transmitted** — передаваться
+- **single framework** — единая структура
+- **development of the Internet** — развитие интернета
+- **the United States Department of Defense** — Министерство обороны США
+- **the subsequent adoption of personal computers** — последующее внедрение персональных компьютеров
+- **the Information or Digital Revolution was underway** — информационная или цифровая революция была в разгаре
+- **fiber optic cables** — оптоволоконные кабели
+- **accelerated transmission and processing of information** — ускоренная передача и обработка информации
+- **The World Wide Web** — Всемирная паутина
+- **an electronic billboard for their products and services, morphed into an interactive consumer exchange for goods and information** — электронный билборд для их продукции и услуг превратился в интерактивную потребительскую площадку для обмена товарами и информацией
+- **near-instant exchange of information** — почти мгновенный обмен информацией
+- **primary platform for workplace and personal communications** — основная платформа для рабочих и личных коммуникаций
+- **digitization of information** — оцифровка информации
+- **a profound impact** — глубокое влияние
+- **traditional media businesses** — традиционные медиа-компании
+- **major television and cable networks** — крупные телевизионные и кабельные сети
+- **digital form** — цифровая форма
+- **define** — определять
+- **consumers** — потребители
+- **points out** — указывает
+- **accumulated fortunes** — накопленные состояния
+- **current** — текущий
+- **device** — устройство
+- **artificial intelligence** — искусственный интеллект
+- **cognitive** — когнитивный
+- **disruptors** — разрушители, нарушители (обычно в контексте инноваций)
+- **profit margins** — уровень прибыли
+- **advancements** — достижения, усовершенствования
+- **networks** — сети
+
+### Перевод с русского на английский:
+
+- **Принимать решения** — to make decisions
+- **Вмешательство человека** — human intervention
+- **Негативное воздействие** — negative impact
+- **Замещать рабочих** — to replace workers
+- **Общественные нормы** — social norms
+- **Научная фантастика** — science fiction
+- **Простые машины** — simple machines
+- **Системы хранения данных** — data storage systems
+- **Объем данных** — data volume
+- **Распознавание голоса** — voice recognition
+
+### Дополнительные термины:
+
+- **programmable** — программируемый
+- **progress** — прогресс
+- **testbed** — испытательный стенд
+- **development** — разработка
+- **research** — исследование
+- **network** — сеть
+- **fibre** — волокно
+- **machines** — машины
+- **systems** — системы
+- **deployment** — развертывание
+- **experimentation** — экспериментирование
+- **capability** — способность, возможность
+- **to grasp** — понимать, осознавать
+- **Chief technology officer** — технический директор
+- **Right footing** — правильная основа
+- **Best-of-breed** — лучший в своем классе
+- **Adaptable** — адаптируемый
+- **Software-defined** — программно-определяемый
+- **Heterogeneous infrastructure** — гетерогенная инфраструктура
+- **To adopt** — принимать, внедрять
+- **Trial** — испытание, тестирование
+- **To switch on** — включать
+- **Bluetooth** — блютуз
+- **robotics** — робототехника
+- **appliances** — устройства, приборы
+- **intelligent** — интеллектуальный
+- **interfaces** — интерфейсы
+- **receiver** — приемник
+- **wireless** — беспроводной
+- **WLANs** — беспроводные локальные сети (Wireless Local Area Networks)
+- **PAN** — персональная сеть (Personal Area Network)
+- **initiator** — инициатор

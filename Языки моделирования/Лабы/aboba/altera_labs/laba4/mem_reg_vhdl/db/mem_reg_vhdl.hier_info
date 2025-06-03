@@ -1,0 +1,39 @@
+|mem_reg_vhdl
+x1 => d11~reg0.DATAIN
+x1 => d1.DATAIN
+x2 => d2.DATAIN
+x2 => d22~reg0.DATAIN
+x3 => d3.DATAIN
+x3 => d33~reg0.DATAIN
+x4 => d4.DATAIN
+x4 => d44~reg0.DATAIN
+write => d2.CLK
+write => d3.CLK
+write => d4.CLK
+write => d11~reg0.CLK
+write => d22~reg0.CLK
+write => d33~reg0.CLK
+write => d44~reg0.CLK
+write => d1.CLK
+reset => d2.ENA
+reset => d3.ENA
+reset => d4.ENA
+reset => d11~reg0.ENA
+reset => d22~reg0.ENA
+reset => d33~reg0.ENA
+reset => d44~reg0.ENA
+reset => d1.ENA
+read => q1~0.OUTPUTSELECT
+read => q2~0.OUTPUTSELECT
+read => q3~0.OUTPUTSELECT
+read => q4~0.OUTPUTSELECT
+d11 <= d11~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d22 <= d22~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d33 <= d33~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d44 <= d44~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q1 <= q1~0.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= q2~0.DB_MAX_OUTPUT_PORT_TYPE
+q3 <= q3~0.DB_MAX_OUTPUT_PORT_TYPE
+q4 <= q4~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

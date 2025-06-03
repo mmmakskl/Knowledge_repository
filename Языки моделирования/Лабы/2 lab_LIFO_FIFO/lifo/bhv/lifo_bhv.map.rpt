@@ -1,0 +1,273 @@
+Analysis & Synthesis report for lifo_bhv
+Thu Mar 04 13:25:51 2021
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Inverted Register Statistics
+  9. Analysis & Synthesis Equations
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Mar 04 13:25:51 2021    ;
+; Quartus II Version          ; 5.0 Build 148 04/26/2005 SJ Full Version ;
+; Revision Name               ; lifo_bhv                                 ;
+; Top-level Entity Name       ; lifo_bhv                                 ;
+; Family                      ; Stratix                                  ;
+; Total logic elements        ; 133                                      ;
+; Total pins                  ; 54                                       ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; DSP block 9-bit elements    ; 0                                        ;
+; Total PLLs                  ; 0                                        ;
+; Total DLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                     ;
++--------------------------------------------------------------------+--------------+---------------+
+; Option                                                             ; Setting      ; Default Value ;
++--------------------------------------------------------------------+--------------+---------------+
+; Top-level entity name                                              ; lifo_bhv     ; lifo_bhv      ;
+; Family name                                                        ; Stratix      ; Stratix       ;
+; Use smart compilation                                              ; Off          ; Off           ;
+; Restructure Multiplexers                                           ; Auto         ; Auto          ;
+; Create Debugging Nodes for IP Cores                                ; off          ; off           ;
+; Preserve fewer node names                                          ; On           ; On            ;
+; Disable OpenCore Plus hardware evaluation                          ; Off          ; Off           ;
+; Verilog Version                                                    ; Verilog_2001 ; Verilog_2001  ;
+; VHDL Version                                                       ; VHDL93       ; VHDL93        ;
+; State Machine Processing                                           ; Auto         ; Auto          ;
+; Extract Verilog State Machines                                     ; On           ; On            ;
+; Extract VHDL State Machines                                        ; On           ; On            ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On           ; On            ;
+; DSP Block Balancing                                                ; Auto         ; Auto          ;
+; Maximum DSP Block Usage                                            ; -1           ; -1            ;
+; NOT Gate Push-Back                                                 ; On           ; On            ;
+; Power-Up Don't Care                                                ; On           ; On            ;
+; Remove Redundant Logic Cells                                       ; Off          ; Off           ;
+; Remove Duplicate Registers                                         ; On           ; On            ;
+; Ignore CARRY Buffers                                               ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                             ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                              ; Off          ; Off           ;
+; Ignore ROW GLOBAL Buffers                                          ; Off          ; Off           ;
+; Ignore LCELL Buffers                                               ; Off          ; Off           ;
+; Ignore SOFT Buffers                                                ; On           ; On            ;
+; Limit AHDL Integers to 32 Bits                                     ; Off          ; Off           ;
+; Optimization Technique -- Stratix/Stratix GX                       ; Balanced     ; Balanced      ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70           ; 70            ;
+; Auto Carry Chains                                                  ; On           ; On            ;
+; Auto Open-Drain Pins                                               ; On           ; On            ;
+; Remove Duplicate Logic                                             ; On           ; On            ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off          ; Off           ;
+; Perform gate-level register retiming                               ; Off          ; Off           ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On           ; On            ;
+; Auto ROM Replacement                                               ; On           ; On            ;
+; Auto RAM Replacement                                               ; On           ; On            ;
+; Auto DSP Block Replacement                                         ; On           ; On            ;
+; Auto Shift Register Replacement                                    ; On           ; On            ;
+; Auto Clock Enable Replacement                                      ; On           ; On            ;
+; Allows Synchronous Control Signal Usage in Normal Mode Logic Cells ; On           ; On            ;
+; Auto RAM Block Balancing                                           ; On           ; On            ;
+; Auto Resource Sharing                                              ; Off          ; Off           ;
+; Allow Any RAM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any ROM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any Shift Register Size For Recognition                      ; Off          ; Off           ;
+; Maximum Number of M512 Memory Blocks                               ; -1           ; -1            ;
+; Maximum Number of M4K Memory Blocks                                ; -1           ; -1            ;
+; Maximum Number of M-RAM Memory Blocks                              ; -1           ; -1            ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off          ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On           ; On            ;
++--------------------------------------------------------------------+--------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                          ;
++----------------------------------+-----------------+-----------------+------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path             ;
++----------------------------------+-----------------+-----------------+------------------------------------------+
+; lifo_bhv.vhd                     ; yes             ; User VHDL File  ; C:/2 lab_LIFO_FIFO/lifo/bhv/lifo_bhv.vhd ;
++----------------------------------+-----------------+-----------------+------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++---------------------------------+-----------+
+; Resource                        ; Usage     ;
++---------------------------------+-----------+
+; Total logic elements            ; 133       ;
+; Total combinational functions   ; 65        ;
+;     -- Total 4-input functions  ; 60        ;
+;     -- Total 3-input functions  ; 3         ;
+;     -- Total 2-input functions  ; 2         ;
+;     -- Total 1-input functions  ; 0         ;
+;     -- Total 0-input functions  ; 0         ;
+; Combinational cells for routing ; 0         ;
+; Total registers                 ; 78        ;
+; I/O pins                        ; 54        ;
+; Maximum fan-out node            ; CLK       ;
+; Maximum fan-out                 ; 78        ;
+; Total fan-out                   ; 491       ;
+; Average fan-out                 ; 2.63      ;
++---------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                        ;
++----------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name ;
++----------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------+
+; |lifo_bhv                  ; 133 (133)   ; 78           ; 0           ; 0            ; 0       ; 0         ; 0         ; 54   ; 0            ; 55 (55)      ; 68 (68)           ; 10 (10)          ; 0 (0)           ; |lifo_bhv           ;
++----------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 78    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 6     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 72    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; isEmpty                                ; 1       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in C:/2 lab_LIFO_FIFO/lifo/bhv/lifo_bhv.map.eqn.
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Thu Mar 04 13:25:50 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lifo_bhv -c lifo_bhv
+Info: Found 2 design units, including 1 entities, in source file lifo_bhv.vhd
+    Info: Found design unit 1: lifo_bhv-behav
+    Info: Found entity 1: lifo_bhv
+Warning: Can't analyze file -- file C:/2 lab_LIFO_FIFO/lifo/bhv/lifo_bhv_debug.vhd is missing
+Info: Elaborating entity "lifo_bhv" for the top level hierarchy
+Warning: Reduced register "scount[31]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[30]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[29]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[28]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[27]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[26]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[25]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[24]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[23]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[22]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[21]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[20]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[19]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[18]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[17]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[16]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[15]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[14]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[13]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[12]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[11]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[10]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[9]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[8]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[7]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[6]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[5]" with stuck data_in port to stuck value GND
+Warning: Reduced register "scount[4]" with stuck data_in port to stuck value GND
+Info: Duplicate registers merged to single register
+    Info: Duplicate register "scount[2]" merged to single register "counter[2]"
+    Info: Duplicate register "scount[1]" merged to single register "counter[1]"
+    Info: Duplicate register "scount[0]" merged to single register "counter[0]"
+    Info: Duplicate register "counter[3]" merged to single register "scount[3]"
+Warning: Output pins are stuck at VCC or GND
+    Warning: Pin "COUNT[4]" stuck at GND
+    Warning: Pin "COUNT[5]" stuck at GND
+    Warning: Pin "COUNT[6]" stuck at GND
+    Warning: Pin "COUNT[7]" stuck at GND
+    Warning: Pin "COUNT[8]" stuck at GND
+    Warning: Pin "COUNT[9]" stuck at GND
+    Warning: Pin "COUNT[10]" stuck at GND
+    Warning: Pin "COUNT[11]" stuck at GND
+    Warning: Pin "COUNT[12]" stuck at GND
+    Warning: Pin "COUNT[13]" stuck at GND
+    Warning: Pin "COUNT[14]" stuck at GND
+    Warning: Pin "COUNT[15]" stuck at GND
+    Warning: Pin "COUNT[16]" stuck at GND
+    Warning: Pin "COUNT[17]" stuck at GND
+    Warning: Pin "COUNT[18]" stuck at GND
+    Warning: Pin "COUNT[19]" stuck at GND
+    Warning: Pin "COUNT[20]" stuck at GND
+    Warning: Pin "COUNT[21]" stuck at GND
+    Warning: Pin "COUNT[22]" stuck at GND
+    Warning: Pin "COUNT[23]" stuck at GND
+    Warning: Pin "COUNT[24]" stuck at GND
+    Warning: Pin "COUNT[25]" stuck at GND
+    Warning: Pin "COUNT[26]" stuck at GND
+    Warning: Pin "COUNT[27]" stuck at GND
+    Warning: Pin "COUNT[28]" stuck at GND
+    Warning: Pin "COUNT[29]" stuck at GND
+    Warning: Pin "COUNT[30]" stuck at GND
+    Warning: Pin "COUNT[31]" stuck at GND
+Info: Registers with preset signals will power-up high
+Info: Implemented 187 device resources after synthesis - the final resource count might be different
+    Info: Implemented 12 input pins
+    Info: Implemented 42 output pins
+    Info: Implemented 133 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 58 warnings
+    Info: Processing ended: Thu Mar 04 13:25:51 2021
+    Info: Elapsed time: 00:00:02
+
+

@@ -1,0 +1,104 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L1 is gr~3 at LC_X5_Y1_N6
+--operation mode is normal
+
+A1L1 = y[1] & !y[0] & x[0] & x[1] # !y[1] & (x[1] # !y[0] & x[0]);
+
+
+--A1L7 is xey_t~34 at LC_X5_Y1_N8
+--operation mode is normal
+
+A1L7 = y[1] & x[1] & (y[0] $ !x[0]) # !y[1] & !x[1] & (y[0] $ !x[0]);
+
+
+--A1L11 is xgy_t~1 at LC_X5_Y1_N2
+--operation mode is normal
+
+A1L11 = A1L1 # A1L7 & xgy0;
+
+
+--A1L41 is xly_t~132 at LC_X5_Y1_N5
+--operation mode is normal
+
+A1L41 = A1L7 & (xly0) # !A1L7 & !A1L1;
+
+
+--A1L8 is xey_t~35 at LC_X5_Y1_N4
+--operation mode is normal
+
+A1L8 = xey0 & (A1L7);
+
+
+--x[1] is x[1] at PIN_V18
+--operation mode is input
+
+x[1] = INPUT();
+
+
+--x[0] is x[0] at PIN_AB17
+--operation mode is input
+
+x[0] = INPUT();
+
+
+--y[0] is y[0] at PIN_Y18
+--operation mode is input
+
+y[0] = INPUT();
+
+
+--y[1] is y[1] at PIN_AA19
+--operation mode is input
+
+y[1] = INPUT();
+
+
+--xgy0 is xgy0 at PIN_Y17
+--operation mode is input
+
+xgy0 = INPUT();
+
+
+--xly0 is xly0 at PIN_AB18
+--operation mode is input
+
+xly0 = INPUT();
+
+
+--xey0 is xey0 at PIN_Y16
+--operation mode is input
+
+xey0 = INPUT();
+
+
+--xgy is xgy at PIN_AB19
+--operation mode is output
+
+xgy = OUTPUT(A1L11);
+
+
+--xly is xly at PIN_W17
+--operation mode is output
+
+xly = OUTPUT(A1L41);
+
+
+--xey is xey at PIN_V17
+--operation mode is output
+
+xey = OUTPUT(A1L8);
+
+
+

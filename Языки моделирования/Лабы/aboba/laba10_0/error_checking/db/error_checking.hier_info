@@ -1,0 +1,126 @@
+|error_checking
+IsError <= 8_bit_even_odd:inst3.EVEN
+X[0] => 8_bit_even_odd:inst.X[0]
+X[0] => inst4.IN1
+X[1] => 8_bit_even_odd:inst.X[1]
+X[1] => inst6.IN1
+X[2] => 8_bit_even_odd:inst.X[2]
+X[2] => 8_bit_even_odd:inst3.X[2]
+X[2] => Out[2].DATAIN
+X[3] => 8_bit_even_odd:inst.X[3]
+X[3] => 8_bit_even_odd:inst3.X[3]
+X[3] => Out[3].DATAIN
+X[4] => 8_bit_even_odd:inst.X[4]
+X[4] => 8_bit_even_odd:inst3.X[4]
+X[4] => Out[4].DATAIN
+X[5] => 8_bit_even_odd:inst.X[5]
+X[5] => 8_bit_even_odd:inst3.X[5]
+X[5] => Out[5].DATAIN
+X[6] => 8_bit_even_odd:inst.X[6]
+X[6] => 8_bit_even_odd:inst3.X[6]
+X[6] => Out[6].DATAIN
+X[7] => 8_bit_even_odd:inst.X[7]
+X[7] => 8_bit_even_odd:inst3.X[7]
+X[7] => Out[7].DATAIN
+Out[0] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= X[2].DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= X[3].DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= X[4].DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= X[5].DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= X[6].DB_MAX_OUTPUT_PORT_TYPE
+Out[7] <= X[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|error_checking|8_bit_even_odd:inst3
+EVEN <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => 2_bit_even_odd:inst3.X[0]
+X[1] => 2_bit_even_odd:inst3.X[1]
+X[2] => 2_bit_even_odd:inst2.X[0]
+X[3] => 2_bit_even_odd:inst2.X[1]
+X[4] => 2_bit_even_odd:inst1.X[0]
+X[5] => 2_bit_even_odd:inst1.X[1]
+X[6] => 2_bit_even_odd:inst.X[0]
+X[7] => 2_bit_even_odd:inst.X[1]
+D => 2_bit_even_odd:inst3.D
+ODD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|error_checking|8_bit_even_odd:inst3|2_bit_even_odd:inst
+EVEN <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => inst.IN0
+X[1] => inst.IN1
+D => inst4.IN1
+ODD <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|error_checking|8_bit_even_odd:inst3|2_bit_even_odd:inst1
+EVEN <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => inst.IN0
+X[1] => inst.IN1
+D => inst4.IN1
+ODD <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|error_checking|8_bit_even_odd:inst3|2_bit_even_odd:inst2
+EVEN <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => inst.IN0
+X[1] => inst.IN1
+D => inst4.IN1
+ODD <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|error_checking|8_bit_even_odd:inst3|2_bit_even_odd:inst3
+EVEN <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => inst.IN0
+X[1] => inst.IN1
+D => inst4.IN1
+ODD <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|error_checking|8_bit_even_odd:inst
+EVEN <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => 2_bit_even_odd:inst3.X[0]
+X[1] => 2_bit_even_odd:inst3.X[1]
+X[2] => 2_bit_even_odd:inst2.X[0]
+X[3] => 2_bit_even_odd:inst2.X[1]
+X[4] => 2_bit_even_odd:inst1.X[0]
+X[5] => 2_bit_even_odd:inst1.X[1]
+X[6] => 2_bit_even_odd:inst.X[0]
+X[7] => 2_bit_even_odd:inst.X[1]
+D => 2_bit_even_odd:inst3.D
+ODD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|error_checking|8_bit_even_odd:inst|2_bit_even_odd:inst
+EVEN <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => inst.IN0
+X[1] => inst.IN1
+D => inst4.IN1
+ODD <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|error_checking|8_bit_even_odd:inst|2_bit_even_odd:inst1
+EVEN <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => inst.IN0
+X[1] => inst.IN1
+D => inst4.IN1
+ODD <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|error_checking|8_bit_even_odd:inst|2_bit_even_odd:inst2
+EVEN <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => inst.IN0
+X[1] => inst.IN1
+D => inst4.IN1
+ODD <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|error_checking|8_bit_even_odd:inst|2_bit_even_odd:inst3
+EVEN <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => inst.IN0
+X[1] => inst.IN1
+D => inst4.IN1
+ODD <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+

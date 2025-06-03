@@ -1,0 +1,602 @@
+|lifo_graph
+IS_EMPTY <= lpm_compare0:inst.aeb
+WR => lpm_counter0:inst2.updown
+WR => inst3.IN1
+CLK => lpm_counter0:inst2.clock
+CLK => pause:inst10.IN
+RD => inst5.IN1
+RESET => lpm_counter0:inst2.aclr
+RESET => lpm_ram_dp0:inst8.aclr
+IS_FULL <= lpm_compare1:inst7.aeb
+rd_en <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[0] <= lpm_counter0:inst2.q[0]
+COUNT[1] <= lpm_counter0:inst2.q[1]
+COUNT[2] <= lpm_counter0:inst2.q[2]
+COUNT[3] <= lpm_counter0:inst2.q[3]
+OUT_DATA[0] <= lpm_ram_dp0:inst8.q[0]
+OUT_DATA[1] <= lpm_ram_dp0:inst8.q[1]
+OUT_DATA[2] <= lpm_ram_dp0:inst8.q[2]
+OUT_DATA[3] <= lpm_ram_dp0:inst8.q[3]
+OUT_DATA[4] <= lpm_ram_dp0:inst8.q[4]
+OUT_DATA[5] <= lpm_ram_dp0:inst8.q[5]
+OUT_DATA[6] <= lpm_ram_dp0:inst8.q[6]
+OUT_DATA[7] <= lpm_ram_dp0:inst8.q[7]
+DATA[0] => lpm_ram_dp0:inst8.data[0]
+DATA[1] => lpm_ram_dp0:inst8.data[1]
+DATA[2] => lpm_ram_dp0:inst8.data[2]
+DATA[3] => lpm_ram_dp0:inst8.data[3]
+DATA[4] => lpm_ram_dp0:inst8.data[4]
+DATA[5] => lpm_ram_dp0:inst8.data[5]
+DATA[6] => lpm_ram_dp0:inst8.data[6]
+DATA[7] => lpm_ram_dp0:inst8.data[7]
+
+
+|lifo_graph|lpm_compare0:inst
+dataa[0] => lpm_compare:lpm_compare_component.dataa[0]
+dataa[1] => lpm_compare:lpm_compare_component.dataa[1]
+dataa[2] => lpm_compare:lpm_compare_component.dataa[2]
+dataa[3] => lpm_compare:lpm_compare_component.dataa[3]
+AeB <= lpm_compare:lpm_compare_component.AeB
+
+
+|lifo_graph|lpm_compare0:inst|lpm_compare:lpm_compare_component
+dataa[0] => comptree:comparator.dataa[0]
+dataa[1] => comptree:comparator.dataa[1]
+dataa[2] => comptree:comparator.dataa[2]
+dataa[3] => comptree:comparator.dataa[3]
+datab[0] => comptree:comparator.datab[0]
+datab[1] => comptree:comparator.datab[1]
+datab[2] => comptree:comparator.datab[2]
+datab[3] => comptree:comparator.datab[3]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+dataa[2] => cmpchain:cmp_end.dataa[2]
+dataa[3] => cmpchain:cmp_end.dataa[3]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+datab[2] => cmpchain:cmp_end.datab[2]
+datab[3] => cmpchain:cmp_end.datab[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|lifo_graph|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_counter0:inst2
+clock => lpm_counter:lpm_counter_component.clock
+updown => lpm_counter:lpm_counter_component.updown
+clk_en => lpm_counter:lpm_counter_component.clk_en
+aclr => lpm_counter:lpm_counter_component.aclr
+q[0] <= lpm_counter:lpm_counter_component.q[0]
+q[1] <= lpm_counter:lpm_counter_component.q[1]
+q[2] <= lpm_counter:lpm_counter_component.q[2]
+q[3] <= lpm_counter:lpm_counter_component.q[3]
+
+
+|lifo_graph|lpm_counter0:inst2|lpm_counter:lpm_counter_component
+clock => cntr_8t6:auto_generated.clock
+clk_en => cntr_8t6:auto_generated.clk_en
+cnt_en => ~NO_FANOUT~
+updown => cntr_8t6:auto_generated.updown
+aclr => cntr_8t6:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_8t6:auto_generated.q[0]
+q[1] <= cntr_8t6:auto_generated.q[1]
+q[2] <= cntr_8t6:auto_generated.q[2]
+q[3] <= cntr_8t6:auto_generated.q[3]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|lifo_graph|lpm_counter0:inst2|lpm_counter:lpm_counter_component|cntr_8t6:auto_generated
+aclr => counter_cella0.ACLR
+aclr => counter_cella1.ACLR
+aclr => counter_cella2.ACLR
+aclr => counter_cella3.ACLR
+clock => counter_cella0.CLK
+clock => counter_cella1.CLK
+clock => counter_cella2.CLK
+clock => counter_cella3.CLK
+cout <= counter_cella3.COUT
+q[0] <= counter_cella0.REGOUT
+q[1] <= counter_cella1.REGOUT
+q[2] <= counter_cella2.REGOUT
+q[3] <= counter_cella3.REGOUT
+updown => counter_cella0.DATAB
+updown => counter_cella1.DATAB
+updown => counter_cella2.DATAB
+updown => counter_cella3.DATAB
+
+
+|lifo_graph|lpm_compare1:inst7
+dataa[0] => lpm_compare:lpm_compare_component.dataa[0]
+dataa[1] => lpm_compare:lpm_compare_component.dataa[1]
+dataa[2] => lpm_compare:lpm_compare_component.dataa[2]
+dataa[3] => lpm_compare:lpm_compare_component.dataa[3]
+AeB <= lpm_compare:lpm_compare_component.AeB
+
+
+|lifo_graph|lpm_compare1:inst7|lpm_compare:lpm_compare_component
+dataa[0] => comptree:comparator.dataa[0]
+dataa[1] => comptree:comparator.dataa[1]
+dataa[2] => comptree:comparator.dataa[2]
+dataa[3] => comptree:comparator.dataa[3]
+datab[0] => comptree:comparator.datab[0]
+datab[1] => comptree:comparator.datab[1]
+datab[2] => comptree:comparator.datab[2]
+datab[3] => comptree:comparator.datab[3]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_compare1:inst7|lpm_compare:lpm_compare_component|comptree:comparator
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+dataa[2] => cmpchain:cmp_end.dataa[2]
+dataa[3] => cmpchain:cmp_end.dataa[3]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+datab[2] => cmpchain:cmp_end.datab[2]
+datab[3] => cmpchain:cmp_end.datab[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|lifo_graph|lpm_compare1:inst7|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_compare1:inst7|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_compare1:inst7|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_ram_dp0:inst8
+data[0] => altsyncram:altsyncram_component.data_a[0]
+data[1] => altsyncram:altsyncram_component.data_a[1]
+data[2] => altsyncram:altsyncram_component.data_a[2]
+data[3] => altsyncram:altsyncram_component.data_a[3]
+data[4] => altsyncram:altsyncram_component.data_a[4]
+data[5] => altsyncram:altsyncram_component.data_a[5]
+data[6] => altsyncram:altsyncram_component.data_a[6]
+data[7] => altsyncram:altsyncram_component.data_a[7]
+wren => altsyncram:altsyncram_component.wren_a
+wraddress[0] => altsyncram:altsyncram_component.address_a[0]
+wraddress[1] => altsyncram:altsyncram_component.address_a[1]
+wraddress[2] => altsyncram:altsyncram_component.address_a[2]
+wraddress[3] => altsyncram:altsyncram_component.address_a[3]
+rdaddress[0] => altsyncram:altsyncram_component.address_b[0]
+rdaddress[1] => altsyncram:altsyncram_component.address_b[1]
+rdaddress[2] => altsyncram:altsyncram_component.address_b[2]
+rdaddress[3] => altsyncram:altsyncram_component.address_b[3]
+rden => altsyncram:altsyncram_component.rden_b
+clock => altsyncram:altsyncram_component.clock0
+aclr => altsyncram:altsyncram_component.aclr0
+q[0] <= altsyncram:altsyncram_component.q_b[0]
+q[1] <= altsyncram:altsyncram_component.q_b[1]
+q[2] <= altsyncram:altsyncram_component.q_b[2]
+q[3] <= altsyncram:altsyncram_component.q_b[3]
+q[4] <= altsyncram:altsyncram_component.q_b[4]
+q[5] <= altsyncram:altsyncram_component.q_b[5]
+q[6] <= altsyncram:altsyncram_component.q_b[6]
+q[7] <= altsyncram:altsyncram_component.q_b[7]
+
+
+|lifo_graph|lpm_ram_dp0:inst8|altsyncram:altsyncram_component
+wren_a => altsyncram_dkh1:auto_generated.wren_a
+wren_b => ~NO_FANOUT~
+rden_b => altsyncram_dkh1:auto_generated.rden_b
+data_a[0] => altsyncram_dkh1:auto_generated.data_a[0]
+data_a[1] => altsyncram_dkh1:auto_generated.data_a[1]
+data_a[2] => altsyncram_dkh1:auto_generated.data_a[2]
+data_a[3] => altsyncram_dkh1:auto_generated.data_a[3]
+data_a[4] => altsyncram_dkh1:auto_generated.data_a[4]
+data_a[5] => altsyncram_dkh1:auto_generated.data_a[5]
+data_a[6] => altsyncram_dkh1:auto_generated.data_a[6]
+data_a[7] => altsyncram_dkh1:auto_generated.data_a[7]
+data_b[0] => ~NO_FANOUT~
+data_b[1] => ~NO_FANOUT~
+data_b[2] => ~NO_FANOUT~
+data_b[3] => ~NO_FANOUT~
+data_b[4] => ~NO_FANOUT~
+data_b[5] => ~NO_FANOUT~
+data_b[6] => ~NO_FANOUT~
+data_b[7] => ~NO_FANOUT~
+address_a[0] => altsyncram_dkh1:auto_generated.address_a[0]
+address_a[1] => altsyncram_dkh1:auto_generated.address_a[1]
+address_a[2] => altsyncram_dkh1:auto_generated.address_a[2]
+address_a[3] => altsyncram_dkh1:auto_generated.address_a[3]
+address_b[0] => altsyncram_dkh1:auto_generated.address_b[0]
+address_b[1] => altsyncram_dkh1:auto_generated.address_b[1]
+address_b[2] => altsyncram_dkh1:auto_generated.address_b[2]
+address_b[3] => altsyncram_dkh1:auto_generated.address_b[3]
+addressstall_a => ~NO_FANOUT~
+addressstall_b => ~NO_FANOUT~
+clock0 => altsyncram_dkh1:auto_generated.clock0
+clock1 => ~NO_FANOUT~
+clocken0 => ~NO_FANOUT~
+clocken1 => ~NO_FANOUT~
+aclr0 => altsyncram_dkh1:auto_generated.aclr0
+aclr1 => ~NO_FANOUT~
+byteena_a[0] => ~NO_FANOUT~
+byteena_b[0] => ~NO_FANOUT~
+q_a[0] <= <GND>
+q_a[1] <= <GND>
+q_a[2] <= <GND>
+q_a[3] <= <GND>
+q_a[4] <= <GND>
+q_a[5] <= <GND>
+q_a[6] <= <GND>
+q_a[7] <= <GND>
+q_b[0] <= altsyncram_dkh1:auto_generated.q_b[0]
+q_b[1] <= altsyncram_dkh1:auto_generated.q_b[1]
+q_b[2] <= altsyncram_dkh1:auto_generated.q_b[2]
+q_b[3] <= altsyncram_dkh1:auto_generated.q_b[3]
+q_b[4] <= altsyncram_dkh1:auto_generated.q_b[4]
+q_b[5] <= altsyncram_dkh1:auto_generated.q_b[5]
+q_b[6] <= altsyncram_dkh1:auto_generated.q_b[6]
+q_b[7] <= altsyncram_dkh1:auto_generated.q_b[7]
+
+
+|lifo_graph|lpm_ram_dp0:inst8|altsyncram:altsyncram_component|altsyncram_dkh1:auto_generated
+aclr0 => ram_block1a0.CLR0
+aclr0 => ram_block1a1.CLR0
+aclr0 => ram_block1a2.CLR0
+aclr0 => ram_block1a3.CLR0
+aclr0 => ram_block1a4.CLR0
+aclr0 => ram_block1a5.CLR0
+aclr0 => ram_block1a6.CLR0
+aclr0 => ram_block1a7.CLR0
+address_a[0] => ram_block1a0.PORTAADDR
+address_a[0] => ram_block1a1.PORTAADDR
+address_a[0] => ram_block1a2.PORTAADDR
+address_a[0] => ram_block1a3.PORTAADDR
+address_a[0] => ram_block1a4.PORTAADDR
+address_a[0] => ram_block1a5.PORTAADDR
+address_a[0] => ram_block1a6.PORTAADDR
+address_a[0] => ram_block1a7.PORTAADDR
+address_a[1] => ram_block1a0.PORTAADDR1
+address_a[1] => ram_block1a1.PORTAADDR1
+address_a[1] => ram_block1a2.PORTAADDR1
+address_a[1] => ram_block1a3.PORTAADDR1
+address_a[1] => ram_block1a4.PORTAADDR1
+address_a[1] => ram_block1a5.PORTAADDR1
+address_a[1] => ram_block1a6.PORTAADDR1
+address_a[1] => ram_block1a7.PORTAADDR1
+address_a[2] => ram_block1a0.PORTAADDR2
+address_a[2] => ram_block1a1.PORTAADDR2
+address_a[2] => ram_block1a2.PORTAADDR2
+address_a[2] => ram_block1a3.PORTAADDR2
+address_a[2] => ram_block1a4.PORTAADDR2
+address_a[2] => ram_block1a5.PORTAADDR2
+address_a[2] => ram_block1a6.PORTAADDR2
+address_a[2] => ram_block1a7.PORTAADDR2
+address_a[3] => ram_block1a0.PORTAADDR3
+address_a[3] => ram_block1a1.PORTAADDR3
+address_a[3] => ram_block1a2.PORTAADDR3
+address_a[3] => ram_block1a3.PORTAADDR3
+address_a[3] => ram_block1a4.PORTAADDR3
+address_a[3] => ram_block1a5.PORTAADDR3
+address_a[3] => ram_block1a6.PORTAADDR3
+address_a[3] => ram_block1a7.PORTAADDR3
+address_b[0] => ram_block1a0.PORTBADDR
+address_b[0] => ram_block1a1.PORTBADDR
+address_b[0] => ram_block1a2.PORTBADDR
+address_b[0] => ram_block1a3.PORTBADDR
+address_b[0] => ram_block1a4.PORTBADDR
+address_b[0] => ram_block1a5.PORTBADDR
+address_b[0] => ram_block1a6.PORTBADDR
+address_b[0] => ram_block1a7.PORTBADDR
+address_b[1] => ram_block1a0.PORTBADDR1
+address_b[1] => ram_block1a1.PORTBADDR1
+address_b[1] => ram_block1a2.PORTBADDR1
+address_b[1] => ram_block1a3.PORTBADDR1
+address_b[1] => ram_block1a4.PORTBADDR1
+address_b[1] => ram_block1a5.PORTBADDR1
+address_b[1] => ram_block1a6.PORTBADDR1
+address_b[1] => ram_block1a7.PORTBADDR1
+address_b[2] => ram_block1a0.PORTBADDR2
+address_b[2] => ram_block1a1.PORTBADDR2
+address_b[2] => ram_block1a2.PORTBADDR2
+address_b[2] => ram_block1a3.PORTBADDR2
+address_b[2] => ram_block1a4.PORTBADDR2
+address_b[2] => ram_block1a5.PORTBADDR2
+address_b[2] => ram_block1a6.PORTBADDR2
+address_b[2] => ram_block1a7.PORTBADDR2
+address_b[3] => ram_block1a0.PORTBADDR3
+address_b[3] => ram_block1a1.PORTBADDR3
+address_b[3] => ram_block1a2.PORTBADDR3
+address_b[3] => ram_block1a3.PORTBADDR3
+address_b[3] => ram_block1a4.PORTBADDR3
+address_b[3] => ram_block1a5.PORTBADDR3
+address_b[3] => ram_block1a6.PORTBADDR3
+address_b[3] => ram_block1a7.PORTBADDR3
+clock0 => ram_block1a0.CLK0
+clock0 => ram_block1a0.CLK1
+clock0 => ram_block1a1.CLK0
+clock0 => ram_block1a1.CLK1
+clock0 => ram_block1a2.CLK0
+clock0 => ram_block1a2.CLK1
+clock0 => ram_block1a3.CLK0
+clock0 => ram_block1a3.CLK1
+clock0 => ram_block1a4.CLK0
+clock0 => ram_block1a4.CLK1
+clock0 => ram_block1a5.CLK0
+clock0 => ram_block1a5.CLK1
+clock0 => ram_block1a6.CLK0
+clock0 => ram_block1a6.CLK1
+clock0 => ram_block1a7.CLK0
+clock0 => ram_block1a7.CLK1
+data_a[0] => ram_block1a0.PORTADATAIN
+data_a[1] => ram_block1a1.PORTADATAIN
+data_a[2] => ram_block1a2.PORTADATAIN
+data_a[3] => ram_block1a3.PORTADATAIN
+data_a[4] => ram_block1a4.PORTADATAIN
+data_a[5] => ram_block1a5.PORTADATAIN
+data_a[6] => ram_block1a6.PORTADATAIN
+data_a[7] => ram_block1a7.PORTADATAIN
+q_b[0] <= ram_block1a0.PORTBDATAOUT
+q_b[1] <= ram_block1a1.PORTBDATAOUT
+q_b[2] <= ram_block1a2.PORTBDATAOUT
+q_b[3] <= ram_block1a3.PORTBDATAOUT
+q_b[4] <= ram_block1a4.PORTBDATAOUT
+q_b[5] <= ram_block1a5.PORTBDATAOUT
+q_b[6] <= ram_block1a6.PORTBDATAOUT
+q_b[7] <= ram_block1a7.PORTBDATAOUT
+rden_b => ram_block1a0.PORTBRE
+rden_b => ram_block1a1.PORTBRE
+rden_b => ram_block1a2.PORTBRE
+rden_b => ram_block1a3.PORTBRE
+rden_b => ram_block1a4.PORTBRE
+rden_b => ram_block1a5.PORTBRE
+rden_b => ram_block1a6.PORTBRE
+rden_b => ram_block1a7.PORTBRE
+wren_a => ram_block1a0.ENA0
+wren_a => ram_block1a1.ENA0
+wren_a => ram_block1a2.ENA0
+wren_a => ram_block1a3.ENA0
+wren_a => ram_block1a4.ENA0
+wren_a => ram_block1a5.ENA0
+wren_a => ram_block1a6.ENA0
+wren_a => ram_block1a7.ENA0
+
+
+|lifo_graph|pause:inst10
+OUT <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+IN => inst13.DATAIN
+
+
+|lifo_graph|lpm_add_sub0:inst9
+dataa[0] => lpm_add_sub:lpm_add_sub_component.dataa[0]
+dataa[1] => lpm_add_sub:lpm_add_sub_component.dataa[1]
+dataa[2] => lpm_add_sub:lpm_add_sub_component.dataa[2]
+dataa[3] => lpm_add_sub:lpm_add_sub_component.dataa[3]
+result[0] <= lpm_add_sub:lpm_add_sub_component.result[0]
+result[1] <= lpm_add_sub:lpm_add_sub_component.result[1]
+result[2] <= lpm_add_sub:lpm_add_sub_component.result[2]
+result[3] <= lpm_add_sub:lpm_add_sub_component.result[3]
+
+
+|lifo_graph|lpm_add_sub0:inst9|lpm_add_sub:lpm_add_sub_component
+dataa[0] => addcore:adder.dataa[0]
+dataa[1] => addcore:adder.dataa[1]
+dataa[2] => addcore:adder.dataa[2]
+dataa[3] => addcore:adder.dataa[3]
+datab[0] => addcore:adder.datab[0]
+datab[1] => addcore:adder.datab[1]
+datab[2] => addcore:adder.datab[2]
+datab[3] => addcore:adder.datab[3]
+cin => ~NO_FANOUT~
+add_sub => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= altshift:result_ext_latency_ffs.result[0]
+result[1] <= altshift:result_ext_latency_ffs.result[1]
+result[2] <= altshift:result_ext_latency_ffs.result[2]
+result[3] <= altshift:result_ext_latency_ffs.result[3]
+cout <= altshift:carry_ext_latency_ffs.result[0]
+overflow <= altshift:oflow_ext_latency_ffs.result[0]
+
+
+|lifo_graph|lpm_add_sub0:inst9|lpm_add_sub:lpm_add_sub_component|addcore:adder
+datab[0] => datab_node[0].IN0
+datab[1] => datab_node[1].IN0
+datab[2] => datab_node[2].IN0
+datab[3] => datab_node[3].IN0
+cin => ~NO_FANOUT~
+add_sub => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= a_csnbuffer:result_node.sout[0]
+result[1] <= a_csnbuffer:result_node.sout[1]
+result[2] <= a_csnbuffer:result_node.sout[2]
+result[3] <= a_csnbuffer:result_node.sout[3]
+cout <= a_csnbuffer:cout_node.sout[0]
+unreg_result[0] <= unreg_res_node[0].DB_MAX_OUTPUT_PORT_TYPE
+unreg_result[1] <= unreg_res_node[1].DB_MAX_OUTPUT_PORT_TYPE
+unreg_result[2] <= unreg_res_node[2].DB_MAX_OUTPUT_PORT_TYPE
+unreg_result[3] <= unreg_res_node[3].DB_MAX_OUTPUT_PORT_TYPE
+unreg_cout <= unreg_cout_node.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= a_csnbuffer:oflow_node.sout[0]
+bg_out <= <GND>
+bp_out <= <GND>
+
+
+|lifo_graph|lpm_add_sub0:inst9|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node
+sin[0] => sout_node[0].DATAIN
+sin[1] => sout_node[1].DATAIN
+sin[2] => sout_node[2].DATAIN
+sin[3] => sout_node[3].DATAIN
+cin[0] => cout[0].DATAIN
+cin[1] => cout[1].DATAIN
+cin[2] => cout[2].DATAIN
+cin[3] => cout[3].DATAIN
+clk => ~NO_FANOUT~
+clrn => ~NO_FANOUT~
+ena => ~NO_FANOUT~
+sout[0] <= sout_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sout[1] <= sout_node[1].DB_MAX_OUTPUT_PORT_TYPE
+sout[2] <= sout_node[2].DB_MAX_OUTPUT_PORT_TYPE
+sout[3] <= sout_node[3].DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= cin[0].DB_MAX_OUTPUT_PORT_TYPE
+cout[1] <= cin[1].DB_MAX_OUTPUT_PORT_TYPE
+cout[2] <= cin[2].DB_MAX_OUTPUT_PORT_TYPE
+cout[3] <= cin[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_add_sub0:inst9|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node
+sin[0] => cs_buffer[0].SUM_IN
+sin[1] => cs_buffer[1].SUM_IN
+sin[2] => cs_buffer[2].SUM_IN
+sin[3] => cs_buffer[3].SUM_IN
+cin[0] => cs_buffer[0].CIN
+cin[1] => cs_buffer[1].CIN
+cin[2] => cs_buffer[2].CIN
+cin[3] => cs_buffer[3].CIN
+clk => ~NO_FANOUT~
+clrn => ~NO_FANOUT~
+ena => ~NO_FANOUT~
+sout[0] <= cs_buffer[0].DB_MAX_OUTPUT_PORT_TYPE
+sout[1] <= cs_buffer[1].DB_MAX_OUTPUT_PORT_TYPE
+sout[2] <= cs_buffer[2].DB_MAX_OUTPUT_PORT_TYPE
+sout[3] <= cs_buffer[3].DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= cs_buffer[0].DB_MAX_OUTPUT_PORT_TYPE
+cout[1] <= cs_buffer[1].DB_MAX_OUTPUT_PORT_TYPE
+cout[2] <= cs_buffer[2].DB_MAX_OUTPUT_PORT_TYPE
+cout[3] <= cs_buffer[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_add_sub0:inst9|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:cout_node
+sin[0] => sout_node[0].DATAIN
+sin[1] => sout_node[1].DATAIN
+sin[2] => sout_node[2].DATAIN
+sin[3] => sout_node[3].DATAIN
+cin[0] => cout[0].DATAIN
+cin[1] => cout[1].DATAIN
+cin[2] => cout[2].DATAIN
+cin[3] => cout[3].DATAIN
+clk => ~NO_FANOUT~
+clrn => ~NO_FANOUT~
+ena => ~NO_FANOUT~
+sout[0] <= sout_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sout[1] <= sout_node[1].DB_MAX_OUTPUT_PORT_TYPE
+sout[2] <= sout_node[2].DB_MAX_OUTPUT_PORT_TYPE
+sout[3] <= sout_node[3].DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= cin[0].DB_MAX_OUTPUT_PORT_TYPE
+cout[1] <= cin[1].DB_MAX_OUTPUT_PORT_TYPE
+cout[2] <= cin[2].DB_MAX_OUTPUT_PORT_TYPE
+cout[3] <= cin[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_add_sub0:inst9|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs
+data[0] => result[0].DATAIN
+data[1] => result[1].DATAIN
+data[2] => result[2].DATAIN
+data[3] => result[3].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_add_sub0:inst9|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lifo_graph|lpm_add_sub0:inst9|lpm_add_sub:lpm_add_sub_component|altshift:oflow_ext_latency_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

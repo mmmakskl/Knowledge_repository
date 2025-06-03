@@ -1,0 +1,152 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B2L1 is cmp_p:cmp_2|gr~3 at LC_X52_Y1_N3
+--operation mode is normal
+
+B2L1 = y[3] & !y[2] & x[2] & x[3] # !y[3] & (x[3] # !y[2] & x[2]);
+
+
+--B2L2 is cmp_p:cmp_2|xey~75 at LC_X52_Y1_N5
+--operation mode is normal
+
+B2L2 = y[2] & x[2] & (y[3] $ !x[3]) # !y[2] & !x[2] & (y[3] $ !x[3]);
+
+
+--B1L1 is cmp_p:cmp_1|gr~3 at LC_X52_Y1_N9
+--operation mode is normal
+
+B1L1 = y[1] & !y[0] & x[0] & x[1] # !y[1] & (x[1] # !y[0] & x[0]);
+
+
+--B2L3 is cmp_p:cmp_2|xey~76 at LC_X52_Y1_N1
+--operation mode is normal
+
+B2L3 = y[0] & x[0] & (y[1] $ !x[1]) # !y[0] & !x[0] & (y[1] $ !x[1]);
+
+
+--B2L5 is cmp_p:cmp_2|xgy~68 at LC_X52_Y1_N8
+--operation mode is normal
+
+B2L5 = B2L3 & xgy0;
+
+
+--B2L6 is cmp_p:cmp_2|xgy~69 at LC_X52_Y1_N4
+--operation mode is normal
+
+B2L6 = B2L1 # B2L2 & (B2L5 # B1L1);
+
+
+--B2L7 is cmp_p:cmp_2|xly~317 at LC_X52_Y1_N6
+--operation mode is normal
+
+B2L7 = B2L3 & xly0 # !B2L3 & (!B1L1);
+
+
+--B2L8 is cmp_p:cmp_2|xly~318 at LC_X52_Y1_N2
+--operation mode is normal
+
+B2L8 = B2L2 & (B2L7) # !B2L2 & !B2L1;
+
+
+--B2L4 is cmp_p:cmp_2|xey~77 at LC_X52_Y1_N7
+--operation mode is normal
+
+B2L4 = xey0 & B2L2 & B2L3;
+
+
+--x[3] is x[3] at PIN_V3
+--operation mode is input
+
+x[3] = INPUT();
+
+
+--x[2] is x[2] at PIN_W3
+--operation mode is input
+
+x[2] = INPUT();
+
+
+--y[2] is y[2] at PIN_AA2
+--operation mode is input
+
+y[2] = INPUT();
+
+
+--y[3] is y[3] at PIN_V4
+--operation mode is input
+
+y[3] = INPUT();
+
+
+--x[1] is x[1] at PIN_W1
+--operation mode is input
+
+x[1] = INPUT();
+
+
+--x[0] is x[0] at PIN_AA3
+--operation mode is input
+
+x[0] = INPUT();
+
+
+--y[0] is y[0] at PIN_T7
+--operation mode is input
+
+y[0] = INPUT();
+
+
+--y[1] is y[1] at PIN_AB4
+--operation mode is input
+
+y[1] = INPUT();
+
+
+--xgy0 is xgy0 at PIN_U5
+--operation mode is input
+
+xgy0 = INPUT();
+
+
+--xly0 is xly0 at PIN_W4
+--operation mode is input
+
+xly0 = INPUT();
+
+
+--xey0 is xey0 at PIN_T5
+--operation mode is input
+
+xey0 = INPUT();
+
+
+--xgy is xgy at PIN_Y4
+--operation mode is output
+
+xgy = OUTPUT(B2L6);
+
+
+--xly is xly at PIN_W2
+--operation mode is output
+
+xly = OUTPUT(B2L8);
+
+
+--xey is xey at PIN_Y3
+--operation mode is output
+
+xey = OUTPUT(B2L4);
+
+
+

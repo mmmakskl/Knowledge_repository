@@ -1,0 +1,90 @@
+-- MAX+plus II Compiler Fit File      
+-- Version 9.01 07/30/98              
+-- Compiled: 11/02/16 12:49:59        
+
+-- Copyright (C) 1988-1998 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+CHIP "cacheelement"
+BEGIN
+
+    DEVICE = "EPM9320LC84-15";
+
+    "data0"                        : INPUT_PIN  = 23     ;
+    "data1"                        : INPUT_PIN  = 58     ;
+    "data2"                        : INPUT_PIN  = 68     ;
+    "data3"                        : INPUT_PIN  = 65     ;
+    "data4"                        : INPUT_PIN  = 62     ;
+    "data5"                        : INPUT_PIN  = 27     ;
+    "data6"                        : INPUT_PIN  = 17     ;
+    "data7"                        : INPUT_PIN  = 20     ;
+    "TAG0"                         : INPUT_PIN  = 72     ;
+    "TAG1"                         : INPUT_PIN  = 84     ;
+    "TAG2"                         : INPUT_PIN  = 13     ;
+    "wr"                           : INPUT_PIN  = 1      ;
+    "hit"                          : OUTPUT_PIN = 63     ;
+    "odata0"                       : OUTPUT_PIN = 46     ;
+    "odata1"                       : OUTPUT_PIN = 26     ;
+    "odata2"                       : OUTPUT_PIN = 16     ;
+    "odata3"                       : OUTPUT_PIN = 19     ;
+    "odata4"                       : OUTPUT_PIN = 22     ;
+    "odata5"                       : OUTPUT_PIN = 59     ;
+    "odata6"                       : OUTPUT_PIN = 69     ;
+    "odata7"                       : OUTPUT_PIN = 66     ;
+    "|dtrigger3x:9|:12"            : LOCATION   = LC1_B3 ;  -- |dtrigger3x:9|Q0
+    "|dtrigger3x:9|:15"            : LOCATION   = LC2_B3 ;  -- |dtrigger3x:9|Q1
+    "|dtrigger3x:9|:16"            : LOCATION   = LC3_B3 ;  -- |dtrigger3x:9|Q2
+    "|dtrigger8x:3|:12"            : LOCATION   = LC1_B4 ;  -- |dtrigger8x:3|Q0
+    "|dtrigger8x:3|:15"            : LOCATION   = LC11_A1;  -- |dtrigger8x:3|Q1
+    "|dtrigger8x:3|:16"            : LOCATION   = LC11_D3;  -- |dtrigger8x:3|Q2
+    "|dtrigger8x:3|:17"            : LOCATION   = LC11_C1;  -- |dtrigger8x:3|Q3
+    "|dtrigger8x:3|:18"            : LOCATION   = LC11_B5;  -- |dtrigger8x:3|Q4
+    "|dtrigger8x:3|:19"            : LOCATION   = LC11_A2;  -- |dtrigger8x:3|Q5
+    "|dtrigger8x:3|:20"            : LOCATION   = LC11_D4;  -- |dtrigger8x:3|Q6
+    "|dtrigger8x:3|:21"            : LOCATION   = LC11_C2;  -- |dtrigger8x:3|Q7
+    "|LPM_COMPARE:10|comptree:comparator|cmpchain:cmp_end|aeb_out" : LOCATION   = LC11_B3;
+
+END;
+
+INTERNAL_INFO "cacheelement"
+BEGIN
+	DEVICE = EPM9320LC84-15;
+    OH8R1P23 : LORAX = "1:G89R1,PA17R1C3->LC1_B4|";
+    OH9R0P58 : LORAX = "1:G59R0,PA32R0C0->LC11_A1|";
+    OH9R3P68 : LORAX = "1:G59R3,PA32R3C2->LC11_D3|";
+    OH9R2P65 : LORAX = "1:G59R2,PA32R2C0->LC11_C1|";
+    OH9R1P62 : LORAX = "1:G59R1,PA32R1C4->LC11_B5|";
+    OH8R0P27 : LORAX = "1:G58R0,PA31R0C1->LC11_A2|";
+    OH8R3P17 : LORAX = "1:G58R3,PA31R3C3->LC11_D4|";
+    OH8R2P20 : LORAX = "1:G58R2,PA31R2C1->LC11_C2|";
+    LC1_B4  : LORAX = "1:V0C3->OV2C3P46|";
+    LC11_A1 : LORAX = "1:G61R0->OH12R0P26|";
+    LC11_D3 : LORAX = "1:G62R3->OH12R3P16|";
+    LC11_C1 : LORAX = "1:G61R2->OH12R2P19|";
+    LC11_B5 : LORAX = "1:G60R1->OH12R1P22|";
+    LC11_A2 : LORAX = "1:G64R0->OH13R0P59|";
+    LC11_D4 : LORAX = "1:G63R3->OH13R3P69|";
+    LC11_C2 : LORAX = "1:G64R2->OH13R2P66|";
+    LC11_B3 : LORAX = "1:G62R1->OH13R1P63|";
+    OD3P72  : LORAX = "1:G71R1,PA24R1C2->LC1_B3,->LC11_B3|";
+    OD2P84  : LORAX = "1:G70R1,PA21R1C2->LC2_B3,->LC11_B3|";
+    OD0P13  : LORAX = "1:G58R1,PA31R1C2->LC3_B3,->LC11_B3|";
+    OD1P1   : LORAX = "1:->LC1_B4,->LC11_A1,->LC11_D3,->LC11_C1,->LC11_B5,->LC11_A2,->LC11_D4,->LC11_C2,->LC2_B3,->LC1_B3,->LC3_B3|";
+END;

@@ -1,0 +1,79 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L01 is process0~37
+--operation mode is normal
+
+A1L01 = e & (!x[1] & !x[0]);
+
+
+--A1L5 is f[1]$latch~12
+--operation mode is normal
+
+A1L5 = e & x[0] & (!x[1]);
+
+
+--f[2]$latch is f[2]$latch
+--operation mode is normal
+
+f[2]$latch = x[1] & e & (!x[0]);
+
+
+--A1L9 is f[3]$latch~15
+--operation mode is normal
+
+A1L9 = x[1] & e & x[0];
+
+
+--e is e
+--operation mode is input
+
+e = INPUT();
+
+
+--x[1] is x[1]
+--operation mode is input
+
+x[1] = INPUT();
+
+
+--x[0] is x[0]
+--operation mode is input
+
+x[0] = INPUT();
+
+
+--f[0] is f[0]
+--operation mode is output
+
+f[0] = OUTPUT(A1L01);
+
+
+--f[1] is f[1]
+--operation mode is output
+
+f[1] = OUTPUT(A1L5);
+
+
+--f[2] is f[2]
+--operation mode is output
+
+f[2] = OUTPUT(f[2]$latch);
+
+
+--f[3] is f[3]
+--operation mode is output
+
+f[3] = OUTPUT(A1L9);
+
+

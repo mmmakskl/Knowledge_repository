@@ -1,0 +1,128 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B2_inst10 is 8_bit_even_odd:inst3|inst10 at LC_X1_Y22_N0
+--operation mode is normal
+
+B2_inst10 = X[0] $ (X[1]);
+
+
+--X[0] is X[0] at PIN_G21
+--operation mode is input
+
+X[0] = INPUT();
+
+
+--X[1] is X[1] at PIN_L17
+--operation mode is input
+
+X[1] = INPUT();
+
+
+--X[7] is X[7] at PIN_V3
+--operation mode is input
+
+X[7] = INPUT();
+
+
+--X[6] is X[6] at PIN_U6
+--operation mode is input
+
+X[6] = INPUT();
+
+
+--X[5] is X[5] at PIN_A17
+--operation mode is input
+
+X[5] = INPUT();
+
+
+--X[4] is X[4] at PIN_E8
+--operation mode is input
+
+X[4] = INPUT();
+
+
+--X[3] is X[3] at PIN_Y21
+--operation mode is input
+
+X[3] = INPUT();
+
+
+--X[2] is X[2] at PIN_F2
+--operation mode is input
+
+X[2] = INPUT();
+
+
+--IsError is IsError at PIN_G22
+--operation mode is output
+
+IsError = OUTPUT(!B2_inst10);
+
+
+--Out[7] is Out[7] at PIN_V4
+--operation mode is output
+
+Out[7] = OUTPUT(X[7]);
+
+
+--Out[6] is Out[6] at PIN_V6
+--operation mode is output
+
+Out[6] = OUTPUT(X[6]);
+
+
+--Out[5] is Out[5] at PIN_E17
+--operation mode is output
+
+Out[5] = OUTPUT(X[5]);
+
+
+--Out[4] is Out[4] at PIN_H8
+--operation mode is output
+
+Out[4] = OUTPUT(X[4]);
+
+
+--Out[3] is Out[3] at PIN_W20
+--operation mode is output
+
+Out[3] = OUTPUT(X[3]);
+
+
+--Out[2] is Out[2] at PIN_F1
+--operation mode is output
+
+Out[2] = OUTPUT(X[2]);
+
+
+--Out[1] is Out[1] at PIN_N15
+--operation mode is output
+
+Out[1] = OUTPUT(!A1L12);
+
+
+--Out[0] is Out[0] at PIN_P15
+--operation mode is output
+
+Out[0] = OUTPUT(A1L12);
+
+
+--A1L12 is ~STRATIX_FITTER_CREATED_GND~I at LC_X19_Y1_N2
+--operation mode is normal
+
+A1L12 = GND;
+
+
+

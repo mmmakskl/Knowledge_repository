@@ -1,0 +1,102 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--p0 is p0 at LC_X2_Y29_N8
+--operation mode is normal
+
+p0_lut_out = !p0;
+p0 = DFFEAS(p0_lut_out, GLOBAL(c), GLOBAL(r), , jk, , , , );
+
+
+--p1 is p1 at LC_X2_Y29_N2
+--operation mode is normal
+
+p1_lut_out = !p1;
+p1 = DFFEAS(p1_lut_out, GLOBAL(c), GLOBAL(r), , A1L5, , , , );
+
+
+--p2 is p2 at LC_X1_Y29_N2
+--operation mode is normal
+
+p2_lut_out = !p2;
+p2 = DFFEAS(p2_lut_out, GLOBAL(c), GLOBAL(r), , A1L9, , , , );
+
+
+--p3 is p3 at LC_X3_Y29_N2
+--operation mode is normal
+
+p3_lut_out = !p3;
+p3 = DFFEAS(p3_lut_out, GLOBAL(c), GLOBAL(r), , A1L8, , , , );
+
+
+--A1L5 is p1~12 at LC_X2_Y29_N6
+--operation mode is normal
+
+A1L5 = jk & p0;
+
+
+--A1L9 is p3~12 at LC_X2_Y29_N5
+--operation mode is normal
+
+A1L9 = p1 & (jk & p0);
+
+
+--A1L8 is p3~0 at LC_X2_Y29_N4
+--operation mode is normal
+
+A1L8 = p1 & p2 & jk & p0;
+
+
+--c is c at PIN_L2
+--operation mode is input
+
+c = INPUT();
+
+
+--r is r at PIN_L3
+--operation mode is input
+
+r = INPUT();
+
+
+--jk is jk at PIN_E22
+--operation mode is input
+
+jk = INPUT();
+
+
+--q0 is q0 at PIN_C21
+--operation mode is output
+
+q0 = OUTPUT(p0);
+
+
+--q1 is q1 at PIN_E21
+--operation mode is output
+
+q1 = OUTPUT(p1);
+
+
+--q2 is q2 at PIN_F18
+--operation mode is output
+
+q2 = OUTPUT(p2);
+
+
+--q3 is q3 at PIN_A19
+--operation mode is output
+
+q3 = OUTPUT(p3);
+
+
+

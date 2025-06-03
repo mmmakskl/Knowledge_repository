@@ -1,0 +1,74 @@
+|pointer
+q0 <= 74138:inst2.Y0N
+r0 => hpri:inst1.r0
+r1 => hpri:inst1.r1
+r2 => hpri:inst1.r2
+r3 => hpri:inst1.r3
+r4 => hpri:inst1.r4
+r5 => hpri:inst1.r5
+r6 => hpri:inst1.r6
+r7 => hpri:inst1.r7
+q1 <= 74138:inst2.Y1N
+q2 <= 74138:inst2.Y2N
+q3 <= 74138:inst2.Y3N
+q4 <= 74138:inst2.Y4N
+q5 <= 74138:inst2.Y5N
+q6 <= 74138:inst2.Y6N
+q7 <= 74138:inst2.Y7N
+
+
+|pointer|74138:inst2
+Y7N <= 22.DB_MAX_OUTPUT_PORT_TYPE
+G1 => 8.IN0
+G2BN => 1.IN1
+G2AN => 1.IN2
+B => 10.IN0
+A => 9.IN0
+C => 11.IN0
+Y6N <= 21.DB_MAX_OUTPUT_PORT_TYPE
+Y5N <= 20.DB_MAX_OUTPUT_PORT_TYPE
+Y4N <= 19.DB_MAX_OUTPUT_PORT_TYPE
+Y3N <= 18.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 17.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 16.DB_MAX_OUTPUT_PORT_TYPE
+Y0N <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pointer|hpri:inst1
+a1 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+r7 => inst24.IN0
+r7 => inst12.IN0
+r7 => inst18.IN7
+r7 => inst21.IN0
+r7 => inst23.IN0
+r5 => inst10.IN0
+r5 => inst18.IN4
+r5 => inst25.IN2
+r6 => inst11.IN0
+r6 => inst22.IN1
+r6 => inst18.IN6
+r3 => inst8.IN0
+r3 => inst18.IN3
+r3 => inst28.IN4
+r4 => inst9.IN0
+r4 => inst18.IN5
+r4 => inst26.IN3
+r2 => inst29.IN5
+r2 => inst7.IN0
+r2 => inst18.IN1
+EI => inst14.IN1
+EI => inst19.IN1
+EI => inst13.IN1
+EI => inst15.IN1
+EI => inst17.IN8
+EO <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+r1 => inst6.IN0
+r1 => inst18.IN2
+r1 => inst30.IN6
+r0 => inst.IN0
+r0 => inst18.IN0
+G <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+a2 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+a0 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+
+

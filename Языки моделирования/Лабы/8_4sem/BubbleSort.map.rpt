@@ -1,0 +1,251 @@
+Analysis & Synthesis report for BubbleSort
+Fri Apr 16 02:00:23 2021
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Multiplexer Restructuring Statistics (Restructuring Performed)
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |BubbleSort
+ 10. Analysis & Synthesis Equations
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri Apr 16 02:00:23 2021    ;
+; Quartus II Version          ; 5.0 Build 148 04/26/2005 SJ Full Version ;
+; Revision Name               ; BubbleSort                               ;
+; Top-level Entity Name       ; BubbleSort                               ;
+; Family                      ; Stratix                                  ;
+; Total logic elements        ; 196                                      ;
+; Total pins                  ; 132                                      ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; DSP block 9-bit elements    ; 0                                        ;
+; Total PLLs                  ; 0                                        ;
+; Total DLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                     ;
++--------------------------------------------------------------------+--------------+---------------+
+; Option                                                             ; Setting      ; Default Value ;
++--------------------------------------------------------------------+--------------+---------------+
+; Top-level entity name                                              ; BubbleSort   ; BubbleSort    ;
+; Family name                                                        ; Stratix      ; Stratix       ;
+; Use smart compilation                                              ; Off          ; Off           ;
+; Restructure Multiplexers                                           ; Auto         ; Auto          ;
+; Create Debugging Nodes for IP Cores                                ; off          ; off           ;
+; Preserve fewer node names                                          ; On           ; On            ;
+; Disable OpenCore Plus hardware evaluation                          ; Off          ; Off           ;
+; Verilog Version                                                    ; Verilog_2001 ; Verilog_2001  ;
+; VHDL Version                                                       ; VHDL93       ; VHDL93        ;
+; State Machine Processing                                           ; Auto         ; Auto          ;
+; Extract Verilog State Machines                                     ; On           ; On            ;
+; Extract VHDL State Machines                                        ; On           ; On            ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On           ; On            ;
+; DSP Block Balancing                                                ; Auto         ; Auto          ;
+; Maximum DSP Block Usage                                            ; -1           ; -1            ;
+; NOT Gate Push-Back                                                 ; On           ; On            ;
+; Power-Up Don't Care                                                ; On           ; On            ;
+; Remove Redundant Logic Cells                                       ; Off          ; Off           ;
+; Remove Duplicate Registers                                         ; On           ; On            ;
+; Ignore CARRY Buffers                                               ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                             ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                              ; Off          ; Off           ;
+; Ignore ROW GLOBAL Buffers                                          ; Off          ; Off           ;
+; Ignore LCELL Buffers                                               ; Off          ; Off           ;
+; Ignore SOFT Buffers                                                ; On           ; On            ;
+; Limit AHDL Integers to 32 Bits                                     ; Off          ; Off           ;
+; Optimization Technique -- Stratix/Stratix GX                       ; Balanced     ; Balanced      ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70           ; 70            ;
+; Auto Carry Chains                                                  ; On           ; On            ;
+; Auto Open-Drain Pins                                               ; On           ; On            ;
+; Remove Duplicate Logic                                             ; On           ; On            ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off          ; Off           ;
+; Perform gate-level register retiming                               ; Off          ; Off           ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On           ; On            ;
+; Auto ROM Replacement                                               ; On           ; On            ;
+; Auto RAM Replacement                                               ; On           ; On            ;
+; Auto DSP Block Replacement                                         ; On           ; On            ;
+; Auto Shift Register Replacement                                    ; On           ; On            ;
+; Auto Clock Enable Replacement                                      ; On           ; On            ;
+; Allows Synchronous Control Signal Usage in Normal Mode Logic Cells ; On           ; On            ;
+; Auto RAM Block Balancing                                           ; On           ; On            ;
+; Auto Resource Sharing                                              ; Off          ; Off           ;
+; Allow Any RAM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any ROM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any Shift Register Size For Recognition                      ; Off          ; Off           ;
+; Maximum Number of M512 Memory Blocks                               ; -1           ; -1            ;
+; Maximum Number of M4K Memory Blocks                                ; -1           ; -1            ;
+; Maximum Number of M-RAM Memory Blocks                              ; -1           ; -1            ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off          ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On           ; On            ;
++--------------------------------------------------------------------+--------------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                               ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------+
+; BubbleSort.v                     ; yes             ; User Verilog HDL File  ; C:/Documents and Settings/User/Desktop/8_4sem/BubbleSort.v ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++-----------------------------------+---------+
+; Resource                          ; Usage   ;
++-----------------------------------+---------+
+; Total logic elements              ; 196     ;
+; Total combinational functions     ; 196     ;
+;     -- Total 4-input functions    ; 83      ;
+;     -- Total 3-input functions    ; 93      ;
+;     -- Total 2-input functions    ; 17      ;
+;     -- Total 1-input functions    ; 3       ;
+;     -- Total 0-input functions    ; 0       ;
+; Combinational cells for routing   ; 0       ;
+; Total registers                   ; 74      ;
+; Total logic cells in carry chains ; 12      ;
+; I/O pins                          ; 132     ;
+; Maximum fan-out node              ; clk     ;
+; Maximum fan-out                   ; 74      ;
+; Total fan-out                     ; 1011    ;
+; Average fan-out                   ; 3.08    ;
++-----------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                        ;
++----------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name ;
++----------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------+
+; |BubbleSort                ; 196 (196)   ; 74           ; 0           ; 0            ; 0       ; 0         ; 0         ; 132  ; 0            ; 122 (122)    ; 0 (0)             ; 74 (74)          ; 12 (12)         ; |BubbleSort         ;
++----------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 74    ;
+; Number of registers using Synchronous Clear  ; 4     ;
+; Number of registers using Synchronous Load   ; 64    ;
+; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 72    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |BubbleSort|i[3]           ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |BubbleSort|j[3]           ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |BubbleSort|mem[7][7]      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |BubbleSort|mem[6][0]      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |BubbleSort|mem[5][7]      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |BubbleSort|mem[4][7]      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |BubbleSort|mem[3][0]      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |BubbleSort|mem[2][0]      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |BubbleSort|mem[1][7]      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |BubbleSort|mem[0][7]      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |BubbleSort|Mux~5          ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |BubbleSort|Mux~13         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |BubbleSort ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; N              ; 8     ; Integer                                           ;
+; WIDTH          ; 8     ; Integer                                           ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in C:/Documents and Settings/User/Desktop/8_4sem/BubbleSort.map.eqn.
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Fri Apr 16 02:00:21 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BubbleSort -c BubbleSort
+Warning: (10268) Verilog HDL information at BubbleSort.v(16): Always Construct contains both blocking and non-blocking assignments
+Info: Found 1 design units, including 1 entities, in source file BubbleSort.v
+    Info: Found entity 1: BubbleSort
+Info: Elaborating entity "BubbleSort" for the top level hierarchy
+Info: (10035) Verilog HDL or VHDL information at BubbleSort.v(11): object "array" declared but not used
+Warning: Verilog HDL assignment warning at BubbleSort.v(18): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at BubbleSort.v(19): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at BubbleSort.v(20): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at BubbleSort.v(21): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at BubbleSort.v(23): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at BubbleSort.v(24): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at BubbleSort.v(25): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at BubbleSort.v(28): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at BubbleSort.v(29): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at BubbleSort.v(38): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at BubbleSort.v(40): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at BubbleSort.v(41): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at BubbleSort.v(45): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at BubbleSort.v(46): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at BubbleSort.v(50): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL warning at BubbleSort.v(50): can't infer register for Procedural Assignment in Always Construct because the clock signal isn't obvious. Generated combinational logic instead.
+Warning: Verilog HDL Always Construct warning at BubbleSort.v(51): variable "mem" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning: Verilog HDL warning at BubbleSort.v(51): can't infer register for Procedural Assignment in Always Construct because the clock signal isn't obvious. Generated combinational logic instead.
+Info: Implemented 328 device resources after synthesis - the final resource count might be different
+    Info: Implemented 67 input pins
+    Info: Implemented 65 output pins
+    Info: Implemented 196 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Processing ended: Fri Apr 16 02:00:23 2021
+    Info: Elapsed time: 00:00:02
+
+

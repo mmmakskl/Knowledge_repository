@@ -1,0 +1,43 @@
+|FILTER
+OutResult <= AND1.DB_MAX_OUTPUT_PORT_TYPE
+X => X~0.IN4
+A => A~0.IN1
+B => B~0.IN1
+
+
+|FILTER|RStrigger:call1
+out <= res.DB_MAX_OUTPUT_PORT_TYPE
+x => always0~0.IN1
+xdop => comb~0.IN0
+xdop => res.DATAIN
+xdop => comb~1.IN0
+xdop => always0~0.IN0
+
+
+|FILTER|RStrigger:call2
+out <= res.DB_MAX_OUTPUT_PORT_TYPE
+x => always0~0.IN1
+xdop => comb~0.IN0
+xdop => res.DATAIN
+xdop => comb~1.IN0
+xdop => always0~0.IN0
+
+
+|FILTER|RStrigger:call3
+out <= res.DB_MAX_OUTPUT_PORT_TYPE
+x => always0~0.IN1
+xdop => comb~0.IN0
+xdop => res.DATAIN
+xdop => comb~1.IN0
+xdop => always0~0.IN0
+
+
+|FILTER|RStrigger:call4
+out <= res.DB_MAX_OUTPUT_PORT_TYPE
+x => always0~0.IN1
+xdop => comb~0.IN0
+xdop => res.DATAIN
+xdop => comb~1.IN0
+xdop => always0~0.IN0
+
+

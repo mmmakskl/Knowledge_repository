@@ -1,0 +1,155 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L5Q is d11~reg0
+--operation mode is normal
+
+A1L5Q_lut_out = x1;
+A1L5Q = DFFEAS(A1L5Q_lut_out, write, VCC, , reset, , , , );
+
+
+--d2 is d2
+--operation mode is normal
+
+d2_lut_out = x2;
+d2 = DFFEAS(d2_lut_out, write, VCC, , reset, , , , );
+
+
+--d3 is d3
+--operation mode is normal
+
+d3_lut_out = x3;
+d3 = DFFEAS(d3_lut_out, write, VCC, , reset, , , , );
+
+
+--d4 is d4
+--operation mode is normal
+
+d4_lut_out = x4;
+d4 = DFFEAS(d4_lut_out, write, VCC, , reset, , , , );
+
+
+--A1L01 is q1~10
+--operation mode is normal
+
+A1L01 = A1L5Q & read;
+
+
+--A1L21 is q2~10
+--operation mode is normal
+
+A1L21 = d2 & read;
+
+
+--A1L41 is q3~10
+--operation mode is normal
+
+A1L41 = d3 & read;
+
+
+--A1L61 is q4~10
+--operation mode is normal
+
+A1L61 = d4 & read;
+
+
+--read is read
+--operation mode is input
+
+read = INPUT();
+
+
+--x1 is x1
+--operation mode is input
+
+x1 = INPUT();
+
+
+--write is write
+--operation mode is input
+
+write = INPUT();
+
+
+--reset is reset
+--operation mode is input
+
+reset = INPUT();
+
+
+--x2 is x2
+--operation mode is input
+
+x2 = INPUT();
+
+
+--x3 is x3
+--operation mode is input
+
+x3 = INPUT();
+
+
+--x4 is x4
+--operation mode is input
+
+x4 = INPUT();
+
+
+--d11 is d11
+--operation mode is output
+
+d11 = OUTPUT(A1L5Q);
+
+
+--d22 is d22
+--operation mode is output
+
+d22 = OUTPUT(d2);
+
+
+--d33 is d33
+--operation mode is output
+
+d33 = OUTPUT(d3);
+
+
+--d44 is d44
+--operation mode is output
+
+d44 = OUTPUT(d4);
+
+
+--q1 is q1
+--operation mode is output
+
+q1 = OUTPUT(A1L01);
+
+
+--q2 is q2
+--operation mode is output
+
+q2 = OUTPUT(A1L21);
+
+
+--q3 is q3
+--operation mode is output
+
+q3 = OUTPUT(A1L41);
+
+
+--q4 is q4
+--operation mode is output
+
+q4 = OUTPUT(A1L61);
+
+

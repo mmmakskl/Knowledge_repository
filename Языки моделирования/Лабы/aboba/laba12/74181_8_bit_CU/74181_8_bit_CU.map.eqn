@@ -1,0 +1,421 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--C1L1 is 74181:inst1|43~10
+--operation mode is normal
+
+C1L1 = A0 # B0 & S0 # !B0 & (S1);
+
+
+--C1L4 is 74181:inst1|46~51
+--operation mode is normal
+
+C1L4 = B0 & S3 # !B0 & (S2);
+
+
+--C1_53 is 74181:inst1|53
+--operation mode is normal
+
+C1_53 = C1L1 $ (C1L4 & A0);
+
+
+--C1L2 is 74181:inst1|44~16
+--operation mode is normal
+
+C1L2 = A1 # B1 & S0 # !B1 & (S1);
+
+
+--C1L5 is 74181:inst1|47~51
+--operation mode is normal
+
+C1L5 = A1 & (B1 & S3 # !B1 & (S2));
+
+
+--C1L61 is 74181:inst1|81~114
+--operation mode is normal
+
+C1L61 = C1L2 $ C1L5 $ (C1L1 # M);
+
+
+--C1L3 is 74181:inst1|45~13
+--operation mode is normal
+
+C1L3 = A2 # B2 & S0 # !B2 & (S1);
+
+
+--C1L6 is 74181:inst1|48~51
+--operation mode is normal
+
+C1L6 = A2 & (B2 & S3 # !B2 & (S2));
+
+
+--C1L01 is 74181:inst1|63~147
+--operation mode is normal
+
+C1L01 = !C1L1 & !C1L5 # !C1L2;
+
+
+--C1_82 is 74181:inst1|82
+--operation mode is normal
+
+C1_82 = C1L3 $ C1L6 $ (M # !C1L01);
+
+
+--C1L7 is 74181:inst1|51~17
+--operation mode is normal
+
+C1L7 = A3 # B3 & S0 # !B3 & (S1);
+
+
+--C1L8 is 74181:inst1|52~51
+--operation mode is normal
+
+C1L8 = A3 & (B3 & S3 # !B3 & (S2));
+
+
+--C1L41 is 74181:inst1|75~133
+--operation mode is normal
+
+C1L41 = !C1L1 & !C1L5;
+
+
+--C1L31 is 74181:inst1|74~183
+--operation mode is normal
+
+C1L31 = !C1L6 & (C1L41 # !C1L2) # !C1L3;
+
+
+--C1_77 is 74181:inst1|77
+--operation mode is normal
+
+C1_77 = C1L7 $ C1L8 $ (M # !C1L31);
+
+
+--C2L1 is 74181:inst2|43~10
+--operation mode is normal
+
+C2L1 = A4 # B4 & S0 # !B4 & (S1);
+
+
+--C2L4 is 74181:inst2|46~51
+--operation mode is normal
+
+C2L4 = A4 & (B4 & S3 # !B4 & (S2));
+
+
+--C1L11 is 74181:inst1|63~148
+--operation mode is normal
+
+C1L11 = !C1L6 & (!C1L1 & !C1L5 # !C1L2);
+
+
+--C1L21 is 74181:inst1|63~149
+--operation mode is normal
+
+C1L21 = !C1L8 & (C1L11 # !C1L3) # !C1L7;
+
+
+--C2_80 is 74181:inst2|80
+--operation mode is normal
+
+C2_80 = C2L1 $ C2L4 $ (M # !C1L21);
+
+
+--C2L2 is 74181:inst2|44~10
+--operation mode is normal
+
+C2L2 = A5 # B5 & S0 # !B5 & (S1);
+
+
+--C2L5 is 74181:inst2|47~51
+--operation mode is normal
+
+C2L5 = A5 & (B5 & S3 # !B5 & (S2));
+
+
+--C2L61 is 74181:inst2|81~102
+--operation mode is normal
+
+C2L61 = C2L1 & (C2L4 # !C1L21);
+
+
+--C2L71 is 74181:inst2|81~103
+--operation mode is normal
+
+C2L71 = C2L2 $ C2L5 $ (M # C2L61);
+
+
+--C2L01 is 74181:inst2|73~3
+--operation mode is normal
+
+C2L01 = C1L21 & !M & !C2L4 & !C2L5;
+
+
+--C2L31 is 74181:inst2|75~5
+--operation mode is normal
+
+C2L31 = !M & (!C2L1 & !C2L5 # !C2L2);
+
+
+--C2L3 is 74181:inst2|45~10
+--operation mode is normal
+
+C2L3 = A6 # B6 & S0 # !B6 & (S1);
+
+
+--C2L6 is 74181:inst2|48~51
+--operation mode is normal
+
+C2L6 = A6 & (B6 & S3 # !B6 & (S2));
+
+
+--C2_82 is 74181:inst2|82
+--operation mode is normal
+
+C2_82 = C2L3 $ C2L6 $ (!C2L01 & !C2L31);
+
+
+--C2L21 is 74181:inst2|74~23
+--operation mode is normal
+
+C2L21 = !M & (!C2L2 & !C2L6 # !C2L3);
+
+
+--C2L9 is 74181:inst2|72~86
+--operation mode is normal
+
+C2L9 = !M & !C2L1 & !C2L5;
+
+
+--C2_74 is 74181:inst2|74
+--operation mode is normal
+
+C2_74 = C2L21 # !C2L6 & (C2L01 # C2L9);
+
+
+--C2L7 is 74181:inst2|51~10
+--operation mode is normal
+
+C2L7 = A7 # B7 & S0 # !B7 & (S1);
+
+
+--C2L8 is 74181:inst2|52~51
+--operation mode is normal
+
+C2L8 = B7 & S3 # !B7 & (S2);
+
+
+--C2_77 is 74181:inst2|77
+--operation mode is normal
+
+C2_77 = C2_74 $ C2L7 $ (!C2L8 # !A7);
+
+
+--C1_83 is 74181:inst1|83
+--operation mode is normal
+
+C1_83 = C1L61 & C1_82 & C1_77 & !C1_53;
+
+
+--C2L91 is 74181:inst2|83~14
+--operation mode is normal
+
+C2L91 = C2_80 & C2_82;
+
+
+--inst7 is inst7
+--operation mode is normal
+
+inst7 = C1_83 # C2L71 & C2_77 & C2L91;
+
+
+--A0 is A0
+--operation mode is input
+
+A0 = INPUT();
+
+
+--S0 is S0
+--operation mode is input
+
+S0 = INPUT();
+
+
+--S1 is S1
+--operation mode is input
+
+S1 = INPUT();
+
+
+--B0 is B0
+--operation mode is input
+
+B0 = INPUT();
+
+
+--S3 is S3
+--operation mode is input
+
+S3 = INPUT();
+
+
+--S2 is S2
+--operation mode is input
+
+S2 = INPUT();
+
+
+--A1 is A1
+--operation mode is input
+
+A1 = INPUT();
+
+
+--B1 is B1
+--operation mode is input
+
+B1 = INPUT();
+
+
+--M is M
+--operation mode is input
+
+M = INPUT();
+
+
+--A2 is A2
+--operation mode is input
+
+A2 = INPUT();
+
+
+--B2 is B2
+--operation mode is input
+
+B2 = INPUT();
+
+
+--A3 is A3
+--operation mode is input
+
+A3 = INPUT();
+
+
+--B3 is B3
+--operation mode is input
+
+B3 = INPUT();
+
+
+--A4 is A4
+--operation mode is input
+
+A4 = INPUT();
+
+
+--B4 is B4
+--operation mode is input
+
+B4 = INPUT();
+
+
+--A5 is A5
+--operation mode is input
+
+A5 = INPUT();
+
+
+--B5 is B5
+--operation mode is input
+
+B5 = INPUT();
+
+
+--A6 is A6
+--operation mode is input
+
+A6 = INPUT();
+
+
+--B6 is B6
+--operation mode is input
+
+B6 = INPUT();
+
+
+--A7 is A7
+--operation mode is input
+
+A7 = INPUT();
+
+
+--B7 is B7
+--operation mode is input
+
+B7 = INPUT();
+
+
+--F0 is F0
+--operation mode is output
+
+F0 = OUTPUT(!C1_53);
+
+
+--F1 is F1
+--operation mode is output
+
+F1 = OUTPUT(C1L61);
+
+
+--F2 is F2
+--operation mode is output
+
+F2 = OUTPUT(C1_82);
+
+
+--F3 is F3
+--operation mode is output
+
+F3 = OUTPUT(C1_77);
+
+
+--F4 is F4
+--operation mode is output
+
+F4 = OUTPUT(C2_80);
+
+
+--F5 is F5
+--operation mode is output
+
+F5 = OUTPUT(C2L71);
+
+
+--F6 is F6
+--operation mode is output
+
+F6 = OUTPUT(C2_82);
+
+
+--F7 is F7
+--operation mode is output
+
+F7 = OUTPUT(C2_77);
+
+
+--AEQB is AEQB
+--operation mode is output
+
+AEQB = OUTPUT(!inst7);
+
+

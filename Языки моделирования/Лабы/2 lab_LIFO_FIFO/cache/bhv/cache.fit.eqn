@@ -1,0 +1,2589 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L311Q is data_out[0]~reg0 at LC_X34_Y6_N8
+--operation mode is normal
+
+A1L311Q_lut_out = read_en & (A1L261 & A1L921 # !A1L261 & (A1L081));
+A1L311Q = DFFEAS(A1L311Q_lut_out, GLOBAL(clk), !GLOBAL(reset), , !write_en, , , , );
+
+
+--A1L511Q is data_out[1]~reg0 at LC_X33_Y6_N2
+--operation mode is normal
+
+A1L511Q_lut_out = read_en & (A1L261 & (A1L131) # !A1L261 & A1L091);
+A1L511Q = DFFEAS(A1L511Q_lut_out, GLOBAL(clk), !GLOBAL(reset), , !write_en, , , , );
+
+
+--A1L711Q is data_out[2]~reg0 at LC_X35_Y6_N9
+--operation mode is normal
+
+A1L711Q_lut_out = read_en & (A1L261 & A1L331 # !A1L261 & (A1L002));
+A1L711Q = DFFEAS(A1L711Q_lut_out, GLOBAL(clk), !GLOBAL(reset), , !write_en, , , , );
+
+
+--A1L911Q is data_out[3]~reg0 at LC_X33_Y6_N5
+--operation mode is normal
+
+A1L911Q_lut_out = read_en & (A1L261 & (A1L531) # !A1L261 & A1L012);
+A1L911Q = DFFEAS(A1L911Q_lut_out, GLOBAL(clk), !GLOBAL(reset), , !write_en, , , , );
+
+
+--A1L121Q is data_out[4]~reg0 at LC_X34_Y6_N7
+--operation mode is normal
+
+A1L121Q_lut_out = read_en & (A1L261 & (A1L731) # !A1L261 & A1L022);
+A1L121Q = DFFEAS(A1L121Q_lut_out, GLOBAL(clk), !GLOBAL(reset), , !write_en, , , , );
+
+
+--A1L321Q is data_out[5]~reg0 at LC_X33_Y6_N7
+--operation mode is normal
+
+A1L321Q_lut_out = read_en & (A1L261 & A1L931 # !A1L261 & (A1L032));
+A1L321Q = DFFEAS(A1L321Q_lut_out, GLOBAL(clk), !GLOBAL(reset), , !write_en, , , , );
+
+
+--A1L521Q is data_out[6]~reg0 at LC_X35_Y6_N3
+--operation mode is normal
+
+A1L521Q_lut_out = read_en & (A1L261 & A1L141 # !A1L261 & (A1L042));
+A1L521Q = DFFEAS(A1L521Q_lut_out, GLOBAL(clk), !GLOBAL(reset), , !write_en, , , , );
+
+
+--A1L721Q is data_out[7]~reg0 at LC_X33_Y3_N7
+--operation mode is normal
+
+A1L721Q_lut_out = read_en & (A1L261 & A1L341 # !A1L261 & (A1L052));
+A1L721Q = DFFEAS(A1L721Q_lut_out, GLOBAL(clk), !GLOBAL(reset), , !write_en, , , , );
+
+
+--cache[2].valid is cache[2].valid at LC_X32_Y5_N8
+--operation mode is normal
+
+cache[2].valid_lut_out = VCC;
+cache[2].valid = DFFEAS(cache[2].valid_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L07, , , , );
+
+
+--cache[2].tag[7] is cache[2].tag[7] at LC_X34_Y5_N6
+--operation mode is normal
+
+cache[2].tag[7]_lut_out = addr[7];
+cache[2].tag[7] = DFFEAS(cache[2].tag[7]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L07, , , , );
+
+
+--A1L452 is process0~296 at LC_X34_Y5_N4
+--operation mode is normal
+
+cache[2].tag[5]_qfbk = cache[2].tag[5];
+A1L452 = addr[5] & cache[2].tag[5]_qfbk & (addr[7] $ !cache[2].tag[7]) # !addr[5] & !cache[2].tag[5]_qfbk & (addr[7] $ !cache[2].tag[7]);
+
+--cache[2].tag[5] is cache[2].tag[5] at LC_X34_Y5_N4
+--operation mode is normal
+
+cache[2].tag[5] = DFFEAS(A1L452, GLOBAL(clk), !GLOBAL(reset), , A1L07, addr[5], , , VCC);
+
+
+--cache[2].tag[6] is cache[2].tag[6] at LC_X34_Y5_N8
+--operation mode is normal
+
+cache[2].tag[6]_lut_out = addr[6];
+cache[2].tag[6] = DFFEAS(cache[2].tag[6]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L07, , , , );
+
+
+--A1L552 is process0~297 at LC_X34_Y5_N2
+--operation mode is normal
+
+cache[2].tag[4]_qfbk = cache[2].tag[4];
+A1L552 = addr[6] & cache[2].tag[6] & (addr[4] $ !cache[2].tag[4]_qfbk) # !addr[6] & !cache[2].tag[6] & (addr[4] $ !cache[2].tag[4]_qfbk);
+
+--cache[2].tag[4] is cache[2].tag[4] at LC_X34_Y5_N2
+--operation mode is normal
+
+cache[2].tag[4] = DFFEAS(A1L552, GLOBAL(clk), !GLOBAL(reset), , A1L07, addr[4], , , VCC);
+
+
+--cache[2].tag[1] is cache[2].tag[1] at LC_X34_Y5_N1
+--operation mode is normal
+
+cache[2].tag[1]_lut_out = GND;
+cache[2].tag[1] = DFFEAS(cache[2].tag[1]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L07, addr[1], , , VCC);
+
+
+--A1L652 is process0~298 at LC_X34_Y5_N9
+--operation mode is normal
+
+cache[2].tag[2]_qfbk = cache[2].tag[2];
+A1L652 = addr[1] & cache[2].tag[1] & (addr[2] $ !cache[2].tag[2]_qfbk) # !addr[1] & !cache[2].tag[1] & (addr[2] $ !cache[2].tag[2]_qfbk);
+
+--cache[2].tag[2] is cache[2].tag[2] at LC_X34_Y5_N9
+--operation mode is normal
+
+cache[2].tag[2] = DFFEAS(A1L652, GLOBAL(clk), !GLOBAL(reset), , A1L07, addr[2], , , VCC);
+
+
+--cache[2].tag[3] is cache[2].tag[3] at LC_X34_Y5_N0
+--operation mode is normal
+
+cache[2].tag[3]_lut_out = addr[3];
+cache[2].tag[3] = DFFEAS(cache[2].tag[3]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L07, , , , );
+
+
+--A1L752 is process0~299 at LC_X34_Y5_N3
+--operation mode is normal
+
+cache[2].tag[0]_qfbk = cache[2].tag[0];
+A1L752 = addr[0] & cache[2].tag[0]_qfbk & (addr[3] $ !cache[2].tag[3]) # !addr[0] & !cache[2].tag[0]_qfbk & (addr[3] $ !cache[2].tag[3]);
+
+--cache[2].tag[0] is cache[2].tag[0] at LC_X34_Y5_N3
+--operation mode is normal
+
+cache[2].tag[0] = DFFEAS(A1L752, GLOBAL(clk), !GLOBAL(reset), , A1L07, addr[0], , , VCC);
+
+
+--A1L852 is process0~300 at LC_X32_Y5_N0
+--operation mode is normal
+
+A1L852 = A1L552 & A1L652 & A1L752 & A1L452;
+
+
+--cache[1].valid is cache[1].valid at LC_X31_Y5_N6
+--operation mode is normal
+
+cache[1].valid_lut_out = VCC;
+cache[1].valid = DFFEAS(cache[1].valid_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L94, , , , );
+
+
+--cache[1].tag[6] is cache[1].tag[6] at LC_X31_Y5_N9
+--operation mode is normal
+
+cache[1].tag[6]_lut_out = GND;
+cache[1].tag[6] = DFFEAS(cache[1].tag[6]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L94, addr[6], , , VCC);
+
+
+--A1L952 is process0~301 at LC_X31_Y5_N5
+--operation mode is normal
+
+cache[1].tag[4]_qfbk = cache[1].tag[4];
+A1L952 = addr[4] & cache[1].tag[4]_qfbk & (addr[6] $ !cache[1].tag[6]) # !addr[4] & !cache[1].tag[4]_qfbk & (addr[6] $ !cache[1].tag[6]);
+
+--cache[1].tag[4] is cache[1].tag[4] at LC_X31_Y5_N5
+--operation mode is normal
+
+cache[1].tag[4] = DFFEAS(A1L952, GLOBAL(clk), !GLOBAL(reset), , A1L94, addr[4], , , VCC);
+
+
+--A1L061 is equal~15 at LC_X31_Y5_N1
+--operation mode is normal
+
+cache[1].tag[7]_qfbk = cache[1].tag[7];
+A1L061 = addr[7] $ cache[1].tag[7]_qfbk;
+
+--cache[1].tag[7] is cache[1].tag[7] at LC_X31_Y5_N1
+--operation mode is normal
+
+cache[1].tag[7] = DFFEAS(A1L061, GLOBAL(clk), !GLOBAL(reset), , A1L94, addr[7], , , VCC);
+
+
+--A1L062 is process0~302 at LC_X31_Y5_N2
+--operation mode is normal
+
+cache[1].tag[5]_qfbk = cache[1].tag[5];
+A1L062 = A1L952 & !A1L061 & (addr[5] $ !cache[1].tag[5]_qfbk);
+
+--cache[1].tag[5] is cache[1].tag[5] at LC_X31_Y5_N2
+--operation mode is normal
+
+cache[1].tag[5] = DFFEAS(A1L062, GLOBAL(clk), !GLOBAL(reset), , A1L94, addr[5], , , VCC);
+
+
+--cache[1].tag[1] is cache[1].tag[1] at LC_X31_Y5_N4
+--operation mode is normal
+
+cache[1].tag[1]_lut_out = GND;
+cache[1].tag[1] = DFFEAS(cache[1].tag[1]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L94, addr[1], , , VCC);
+
+
+--A1L162 is process0~303 at LC_X31_Y5_N7
+--operation mode is normal
+
+cache[1].tag[2]_qfbk = cache[1].tag[2];
+A1L162 = cache[1].tag[1] & addr[1] & (cache[1].tag[2]_qfbk $ !addr[2]) # !cache[1].tag[1] & !addr[1] & (cache[1].tag[2]_qfbk $ !addr[2]);
+
+--cache[1].tag[2] is cache[1].tag[2] at LC_X31_Y5_N7
+--operation mode is normal
+
+cache[1].tag[2] = DFFEAS(A1L162, GLOBAL(clk), !GLOBAL(reset), , A1L94, addr[2], , , VCC);
+
+
+--cache[1].tag[3] is cache[1].tag[3] at LC_X31_Y5_N0
+--operation mode is normal
+
+cache[1].tag[3]_lut_out = addr[3];
+cache[1].tag[3] = DFFEAS(cache[1].tag[3]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L94, , , , );
+
+
+--A1L262 is process0~304 at LC_X31_Y5_N8
+--operation mode is normal
+
+cache[1].tag[0]_qfbk = cache[1].tag[0];
+A1L262 = addr[0] & cache[1].tag[0]_qfbk & (cache[1].tag[3] $ !addr[3]) # !addr[0] & !cache[1].tag[0]_qfbk & (cache[1].tag[3] $ !addr[3]);
+
+--cache[1].tag[0] is cache[1].tag[0] at LC_X31_Y5_N8
+--operation mode is normal
+
+cache[1].tag[0] = DFFEAS(A1L262, GLOBAL(clk), !GLOBAL(reset), , A1L94, addr[0], , , VCC);
+
+
+--A1L252 is process0~1 at LC_X32_Y5_N7
+--operation mode is normal
+
+A1L252 = A1L162 & A1L262 & A1L062 & cache[1].valid;
+
+
+--cache[3].valid is cache[3].valid at LC_X33_Y5_N4
+--operation mode is normal
+
+cache[3].valid_lut_out = VCC;
+cache[3].valid = DFFEAS(cache[3].valid_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L09, , , , );
+
+
+--cache[3].tag[4] is cache[3].tag[4] at LC_X33_Y5_N9
+--operation mode is normal
+
+cache[3].tag[4]_lut_out = GND;
+cache[3].tag[4] = DFFEAS(cache[3].tag[4]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L09, addr[4], , , VCC);
+
+
+--A1L362 is process0~305 at LC_X33_Y5_N3
+--operation mode is normal
+
+cache[3].tag[6]_qfbk = cache[3].tag[6];
+A1L362 = addr[6] & cache[3].tag[6]_qfbk & (addr[4] $ !cache[3].tag[4]) # !addr[6] & !cache[3].tag[6]_qfbk & (addr[4] $ !cache[3].tag[4]);
+
+--cache[3].tag[6] is cache[3].tag[6] at LC_X33_Y5_N3
+--operation mode is normal
+
+cache[3].tag[6] = DFFEAS(A1L362, GLOBAL(clk), !GLOBAL(reset), , A1L09, addr[6], , , VCC);
+
+
+--A1L161 is equal~31 at LC_X33_Y5_N8
+--operation mode is normal
+
+cache[3].tag[7]_qfbk = cache[3].tag[7];
+A1L161 = addr[7] $ cache[3].tag[7]_qfbk;
+
+--cache[3].tag[7] is cache[3].tag[7] at LC_X33_Y5_N8
+--operation mode is normal
+
+cache[3].tag[7] = DFFEAS(A1L161, GLOBAL(clk), !GLOBAL(reset), , A1L09, addr[7], , , VCC);
+
+
+--A1L462 is process0~306 at LC_X32_Y5_N1
+--operation mode is normal
+
+cache[3].tag[5]_qfbk = cache[3].tag[5];
+A1L462 = A1L362 & !A1L161 & (cache[3].tag[5]_qfbk $ !addr[5]);
+
+--cache[3].tag[5] is cache[3].tag[5] at LC_X32_Y5_N1
+--operation mode is normal
+
+cache[3].tag[5] = DFFEAS(A1L462, GLOBAL(clk), !GLOBAL(reset), , A1L09, addr[5], , , VCC);
+
+
+--cache[3].tag[2] is cache[3].tag[2] at LC_X33_Y5_N1
+--operation mode is normal
+
+cache[3].tag[2]_lut_out = addr[2];
+cache[3].tag[2] = DFFEAS(cache[3].tag[2]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L09, , , , );
+
+
+--A1L562 is process0~307 at LC_X33_Y5_N2
+--operation mode is normal
+
+cache[3].tag[1]_qfbk = cache[3].tag[1];
+A1L562 = addr[1] & cache[3].tag[1]_qfbk & (cache[3].tag[2] $ !addr[2]) # !addr[1] & !cache[3].tag[1]_qfbk & (cache[3].tag[2] $ !addr[2]);
+
+--cache[3].tag[1] is cache[3].tag[1] at LC_X33_Y5_N2
+--operation mode is normal
+
+cache[3].tag[1] = DFFEAS(A1L562, GLOBAL(clk), !GLOBAL(reset), , A1L09, addr[1], , , VCC);
+
+
+--cache[3].tag[0] is cache[3].tag[0] at LC_X33_Y5_N0
+--operation mode is normal
+
+cache[3].tag[0]_lut_out = GND;
+cache[3].tag[0] = DFFEAS(cache[3].tag[0]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L09, addr[0], , , VCC);
+
+
+--A1L662 is process0~308 at LC_X33_Y5_N5
+--operation mode is normal
+
+cache[3].tag[3]_qfbk = cache[3].tag[3];
+A1L662 = addr[0] & cache[3].tag[0] & (cache[3].tag[3]_qfbk $ !addr[3]) # !addr[0] & !cache[3].tag[0] & (cache[3].tag[3]_qfbk $ !addr[3]);
+
+--cache[3].tag[3] is cache[3].tag[3] at LC_X33_Y5_N5
+--operation mode is normal
+
+cache[3].tag[3] = DFFEAS(A1L662, GLOBAL(clk), !GLOBAL(reset), , A1L09, addr[3], , , VCC);
+
+
+--A1L352 is process0~3 at LC_X32_Y5_N9
+--operation mode is normal
+
+A1L352 = cache[3].valid & A1L562 & A1L462 & A1L662;
+
+
+--A1L19 is cache_index~54 at LC_X32_Y5_N5
+--operation mode is normal
+
+A1L19 = !A1L352 & (cache[2].valid & A1L852 # !A1L252);
+
+
+--A1L29 is cache_index~55 at LC_X32_Y5_N4
+--operation mode is normal
+
+A1L29 = !A1L352 & (!A1L852 # !cache[2].valid);
+
+
+--cache[0].data[0] is cache[0].data[0] at LC_X32_Y4_N7
+--operation mode is normal
+
+cache[0].data[0]_lut_out = GND;
+cache[0].data[0] = DFFEAS(cache[0].data[0]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L21, A1L39, , , VCC);
+
+
+--A1L821 is data_out~245 at LC_X33_Y4_N6
+--operation mode is normal
+
+cache[2].data[0]_qfbk = cache[2].data[0];
+A1L821 = A1L19 & (A1L29 & (cache[0].data[0]) # !A1L29 & cache[2].data[0]_qfbk) # !A1L19 & !A1L29;
+
+--cache[2].data[0] is cache[2].data[0] at LC_X33_Y4_N6
+--operation mode is normal
+
+cache[2].data[0] = DFFEAS(A1L821, GLOBAL(clk), !GLOBAL(reset), , A1L95, A1L39, , , VCC);
+
+
+--A1L921 is data_out~246 at LC_X34_Y6_N4
+--operation mode is normal
+
+cache[3].data[0]_qfbk = cache[3].data[0];
+A1L921 = A1L19 & (A1L821) # !A1L19 & (A1L821 & (cache[3].data[0]_qfbk) # !A1L821 & cache[1].data[0]);
+
+--cache[3].data[0] is cache[3].data[0] at LC_X34_Y6_N4
+--operation mode is normal
+
+cache[3].data[0] = DFFEAS(A1L921, GLOBAL(clk), !GLOBAL(reset), , A1L37, A1L39, , , VCC);
+
+
+--ram[1][0] is ram[1][0] at LC_X35_Y2_N3
+--operation mode is normal
+
+ram[1][0]_lut_out = GND;
+ram[1][0] = DFFEAS(ram[1][0]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L482, data_in[0], , , VCC);
+
+
+--A1L171 is Mux~564 at LC_X34_Y4_N9
+--operation mode is normal
+
+ram[9][0]_qfbk = ram[9][0];
+A1L171 = addr[3] & (ram[9][0]_qfbk # addr[2]) # !addr[3] & ram[1][0] & (!addr[2]);
+
+--ram[9][0] is ram[9][0] at LC_X34_Y4_N9
+--operation mode is normal
+
+ram[9][0] = DFFEAS(A1L171, GLOBAL(clk), !GLOBAL(reset), , A1L463, data_in[0], , , VCC);
+
+
+--ram[13][0] is ram[13][0] at LC_X33_Y7_N4
+--operation mode is normal
+
+ram[13][0]_lut_out = GND;
+ram[13][0] = DFFEAS(ram[13][0]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L404, data_in[0], , , VCC);
+
+
+--A1L271 is Mux~565 at LC_X35_Y3_N1
+--operation mode is normal
+
+ram[5][0]_qfbk = ram[5][0];
+A1L271 = A1L171 & (ram[13][0] # !addr[2]) # !A1L171 & (ram[5][0]_qfbk & addr[2]);
+
+--ram[5][0] is ram[5][0] at LC_X35_Y3_N1
+--operation mode is normal
+
+ram[5][0] = DFFEAS(A1L271, GLOBAL(clk), !GLOBAL(reset), , A1L423, data_in[0], , , VCC);
+
+
+--ram[2][0] is ram[2][0] at LC_X33_Y7_N5
+--operation mode is normal
+
+ram[2][0]_lut_out = GND;
+ram[2][0] = DFFEAS(ram[2][0]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L492, data_in[0], , , VCC);
+
+
+--A1L371 is Mux~566 at LC_X34_Y7_N3
+--operation mode is normal
+
+ram[6][0]_qfbk = ram[6][0];
+A1L371 = addr[2] & (addr[3] # ram[6][0]_qfbk) # !addr[2] & !addr[3] & (ram[2][0]);
+
+--ram[6][0] is ram[6][0] at LC_X34_Y7_N3
+--operation mode is normal
+
+ram[6][0] = DFFEAS(A1L371, GLOBAL(clk), !GLOBAL(reset), , A1L433, data_in[0], , , VCC);
+
+
+--ram[14][0] is ram[14][0] at LC_X36_Y3_N1
+--operation mode is normal
+
+ram[14][0]_lut_out = data_in[0];
+ram[14][0] = DFFEAS(ram[14][0]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L414, , , , );
+
+
+--A1L471 is Mux~567 at LC_X34_Y7_N0
+--operation mode is normal
+
+ram[10][0]_qfbk = ram[10][0];
+A1L471 = A1L371 & (ram[14][0] # !addr[3]) # !A1L371 & addr[3] & ram[10][0]_qfbk;
+
+--ram[10][0] is ram[10][0] at LC_X34_Y7_N0
+--operation mode is normal
+
+ram[10][0] = DFFEAS(A1L471, GLOBAL(clk), !GLOBAL(reset), , A1L473, data_in[0], , , VCC);
+
+
+--ram[0][0] is ram[0][0] at LC_X36_Y5_N7
+--operation mode is normal
+
+ram[0][0]_lut_out = data_in[0];
+ram[0][0] = DFFEAS(ram[0][0]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L472, , , , );
+
+
+--A1L571 is Mux~568 at LC_X36_Y6_N5
+--operation mode is normal
+
+ram[8][0]_qfbk = ram[8][0];
+A1L571 = addr[3] & (ram[8][0]_qfbk # addr[2]) # !addr[3] & ram[0][0] & (!addr[2]);
+
+--ram[8][0] is ram[8][0] at LC_X36_Y6_N5
+--operation mode is normal
+
+ram[8][0] = DFFEAS(A1L571, GLOBAL(clk), !GLOBAL(reset), , A1L453, data_in[0], , , VCC);
+
+
+--ram[12][0] is ram[12][0] at LC_X36_Y2_N1
+--operation mode is normal
+
+ram[12][0]_lut_out = data_in[0];
+ram[12][0] = DFFEAS(ram[12][0]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L493, , , , );
+
+
+--A1L671 is Mux~569 at LC_X36_Y6_N8
+--operation mode is normal
+
+ram[4][0]_qfbk = ram[4][0];
+A1L671 = A1L571 & (ram[12][0] # !addr[2]) # !A1L571 & (ram[4][0]_qfbk & addr[2]);
+
+--ram[4][0] is ram[4][0] at LC_X36_Y6_N8
+--operation mode is normal
+
+ram[4][0] = DFFEAS(A1L671, GLOBAL(clk), !GLOBAL(reset), , A1L413, data_in[0], , , VCC);
+
+
+--A1L771 is Mux~570 at LC_X34_Y6_N2
+--operation mode is normal
+
+A1L771 = addr[1] & (A1L471 # addr[0]) # !addr[1] & (!addr[0] & A1L671);
+
+
+--ram[3][0] is ram[3][0] at LC_X36_Y2_N6
+--operation mode is normal
+
+ram[3][0]_lut_out = data_in[0];
+ram[3][0] = DFFEAS(ram[3][0]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L403, , , , );
+
+
+--A1L871 is Mux~571 at LC_X35_Y3_N6
+--operation mode is normal
+
+ram[7][0]_qfbk = ram[7][0];
+A1L871 = addr[3] & (addr[2]) # !addr[3] & (addr[2] & (ram[7][0]_qfbk) # !addr[2] & ram[3][0]);
+
+--ram[7][0] is ram[7][0] at LC_X35_Y3_N6
+--operation mode is normal
+
+ram[7][0] = DFFEAS(A1L871, GLOBAL(clk), !GLOBAL(reset), , A1L443, data_in[0], , , VCC);
+
+
+--ram[15][0] is ram[15][0] at LC_X36_Y4_N2
+--operation mode is normal
+
+ram[15][0]_lut_out = data_in[0];
+ram[15][0] = DFFEAS(ram[15][0]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L424, , , , );
+
+
+--A1L971 is Mux~572 at LC_X35_Y2_N0
+--operation mode is normal
+
+ram[11][0]_qfbk = ram[11][0];
+A1L971 = A1L871 & (ram[15][0] # !addr[3]) # !A1L871 & addr[3] & ram[11][0]_qfbk;
+
+--ram[11][0] is ram[11][0] at LC_X35_Y2_N0
+--operation mode is normal
+
+ram[11][0] = DFFEAS(A1L971, GLOBAL(clk), !GLOBAL(reset), , A1L483, data_in[0], , , VCC);
+
+
+--A1L081 is Mux~573 at LC_X34_Y6_N3
+--operation mode is normal
+
+A1L081 = addr[0] & (A1L771 & (A1L971) # !A1L771 & A1L271) # !addr[0] & (A1L771);
+
+
+--cache[0].valid is cache[0].valid at LC_X35_Y5_N2
+--operation mode is normal
+
+cache[0].valid_lut_out = VCC;
+cache[0].valid = DFFEAS(cache[0].valid_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L92, , , , );
+
+
+--cache[0].tag[7] is cache[0].tag[7] at LC_X35_Y5_N9
+--operation mode is normal
+
+cache[0].tag[7]_lut_out = GND;
+cache[0].tag[7] = DFFEAS(cache[0].tag[7]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L92, addr[7], , , VCC);
+
+
+--A1L762 is process0~309 at LC_X35_Y5_N1
+--operation mode is normal
+
+cache[0].tag[5]_qfbk = cache[0].tag[5];
+A1L762 = addr[5] & cache[0].tag[5]_qfbk & (addr[7] $ !cache[0].tag[7]) # !addr[5] & !cache[0].tag[5]_qfbk & (addr[7] $ !cache[0].tag[7]);
+
+--cache[0].tag[5] is cache[0].tag[5] at LC_X35_Y5_N1
+--operation mode is normal
+
+cache[0].tag[5] = DFFEAS(A1L762, GLOBAL(clk), !GLOBAL(reset), , A1L92, addr[5], , , VCC);
+
+
+--cache[0].tag[6] is cache[0].tag[6] at LC_X35_Y5_N7
+--operation mode is normal
+
+cache[0].tag[6]_lut_out = GND;
+cache[0].tag[6] = DFFEAS(cache[0].tag[6]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L92, addr[6], , , VCC);
+
+
+--A1L862 is process0~310 at LC_X35_Y5_N8
+--operation mode is normal
+
+cache[0].tag[4]_qfbk = cache[0].tag[4];
+A1L862 = cache[0].tag[6] & addr[6] & (addr[4] $ !cache[0].tag[4]_qfbk) # !cache[0].tag[6] & !addr[6] & (addr[4] $ !cache[0].tag[4]_qfbk);
+
+--cache[0].tag[4] is cache[0].tag[4] at LC_X35_Y5_N8
+--operation mode is normal
+
+cache[0].tag[4] = DFFEAS(A1L862, GLOBAL(clk), !GLOBAL(reset), , A1L92, addr[4], , , VCC);
+
+
+--cache[0].tag[1] is cache[0].tag[1] at LC_X35_Y5_N5
+--operation mode is normal
+
+cache[0].tag[1]_lut_out = GND;
+cache[0].tag[1] = DFFEAS(cache[0].tag[1]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L92, addr[1], , , VCC);
+
+
+--A1L962 is process0~311 at LC_X35_Y5_N6
+--operation mode is normal
+
+cache[0].tag[2]_qfbk = cache[0].tag[2];
+A1L962 = addr[1] & cache[0].tag[1] & (cache[0].tag[2]_qfbk $ !addr[2]) # !addr[1] & !cache[0].tag[1] & (cache[0].tag[2]_qfbk $ !addr[2]);
+
+--cache[0].tag[2] is cache[0].tag[2] at LC_X35_Y5_N6
+--operation mode is normal
+
+cache[0].tag[2] = DFFEAS(A1L962, GLOBAL(clk), !GLOBAL(reset), , A1L92, addr[2], , , VCC);
+
+
+--cache[0].tag[3] is cache[0].tag[3] at LC_X35_Y5_N0
+--operation mode is normal
+
+cache[0].tag[3]_lut_out = addr[3];
+cache[0].tag[3] = DFFEAS(cache[0].tag[3]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L92, , , , );
+
+
+--A1L072 is process0~312 at LC_X35_Y5_N4
+--operation mode is normal
+
+cache[0].tag[0]_qfbk = cache[0].tag[0];
+A1L072 = addr[3] & cache[0].tag[3] & (addr[0] $ !cache[0].tag[0]_qfbk) # !addr[3] & !cache[0].tag[3] & (addr[0] $ !cache[0].tag[0]_qfbk);
+
+--cache[0].tag[0] is cache[0].tag[0] at LC_X35_Y5_N4
+--operation mode is normal
+
+cache[0].tag[0] = DFFEAS(A1L072, GLOBAL(clk), !GLOBAL(reset), , A1L92, addr[0], , , VCC);
+
+
+--A1L172 is process0~313 at LC_X32_Y5_N2
+--operation mode is normal
+
+A1L172 = A1L962 & A1L862 & A1L762 & A1L072;
+
+
+--A1L261 is found~16 at LC_X33_Y3_N4
+--operation mode is normal
+
+A1L261 = A1L252 # cache[0].valid & A1L172 # !A1L29;
+
+--A1L561Q is hit~reg0 at LC_X33_Y3_N4
+--operation mode is normal
+
+A1L561Q = DFFEAS(A1L261, GLOBAL(clk), !GLOBAL(reset), , A1L461, , , , );
+
+
+--cache[0].data[1] is cache[0].data[1] at LC_X32_Y4_N5
+--operation mode is normal
+
+cache[0].data[1]_lut_out = A1L49;
+cache[0].data[1] = DFFEAS(cache[0].data[1]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L21, , , , );
+
+
+--A1L031 is data_out~248 at LC_X32_Y6_N6
+--operation mode is normal
+
+cache[1].data[1]_qfbk = cache[1].data[1];
+A1L031 = A1L19 & A1L29 & (cache[0].data[1]) # !A1L19 & (cache[1].data[1]_qfbk # !A1L29);
+
+--cache[1].data[1] is cache[1].data[1] at LC_X32_Y6_N6
+--operation mode is normal
+
+cache[1].data[1] = DFFEAS(A1L031, GLOBAL(clk), !GLOBAL(reset), , A1L23, A1L49, , , VCC);
+
+
+--A1L131 is data_out~249 at LC_X33_Y6_N8
+--operation mode is normal
+
+cache[3].data[1]_qfbk = cache[3].data[1];
+A1L131 = A1L29 & A1L031 # !A1L29 & (A1L031 & cache[3].data[1]_qfbk # !A1L031 & (cache[2].data[1]));
+
+--cache[3].data[1] is cache[3].data[1] at LC_X33_Y6_N8
+--operation mode is normal
+
+cache[3].data[1] = DFFEAS(A1L131, GLOBAL(clk), !GLOBAL(reset), , A1L37, A1L49, , , VCC);
+
+
+--ram[4][1] is ram[4][1] at LC_X34_Y3_N6
+--operation mode is normal
+
+ram[4][1]_lut_out = GND;
+ram[4][1] = DFFEAS(ram[4][1]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L413, data_in[1], , , VCC);
+
+
+--A1L181 is Mux~574 at LC_X35_Y3_N5
+--operation mode is normal
+
+ram[5][1]_qfbk = ram[5][1];
+A1L181 = addr[1] & addr[0] # !addr[1] & (addr[0] & ram[5][1]_qfbk # !addr[0] & (ram[4][1]));
+
+--ram[5][1] is ram[5][1] at LC_X35_Y3_N5
+--operation mode is normal
+
+ram[5][1] = DFFEAS(A1L181, GLOBAL(clk), !GLOBAL(reset), , A1L423, data_in[1], , , VCC);
+
+
+--ram[7][1] is ram[7][1] at LC_X35_Y3_N7
+--operation mode is normal
+
+ram[7][1]_lut_out = GND;
+ram[7][1] = DFFEAS(ram[7][1]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L443, data_in[1], , , VCC);
+
+
+--A1L281 is Mux~575 at LC_X34_Y3_N8
+--operation mode is normal
+
+ram[6][1]_qfbk = ram[6][1];
+A1L281 = addr[1] & (A1L181 & (ram[7][1]) # !A1L181 & ram[6][1]_qfbk) # !addr[1] & A1L181;
+
+--ram[6][1] is ram[6][1] at LC_X34_Y3_N8
+--operation mode is normal
+
+ram[6][1] = DFFEAS(A1L281, GLOBAL(clk), !GLOBAL(reset), , A1L433, data_in[1], , , VCC);
+
+
+--ram[8][1] is ram[8][1] at LC_X36_Y6_N6
+--operation mode is normal
+
+ram[8][1]_lut_out = GND;
+ram[8][1] = DFFEAS(ram[8][1]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L453, data_in[1], , , VCC);
+
+
+--A1L381 is Mux~576 at LC_X35_Y7_N8
+--operation mode is normal
+
+ram[10][1]_qfbk = ram[10][1];
+A1L381 = addr[0] & addr[1] # !addr[0] & (addr[1] & ram[10][1]_qfbk # !addr[1] & (ram[8][1]));
+
+--ram[10][1] is ram[10][1] at LC_X35_Y7_N8
+--operation mode is normal
+
+ram[10][1] = DFFEAS(A1L381, GLOBAL(clk), !GLOBAL(reset), , A1L473, data_in[1], , , VCC);
+
+
+--ram[11][1] is ram[11][1] at LC_X36_Y7_N0
+--operation mode is normal
+
+ram[11][1]_lut_out = GND;
+ram[11][1] = DFFEAS(ram[11][1]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L483, data_in[1], , , VCC);
+
+
+--A1L481 is Mux~577 at LC_X36_Y7_N8
+--operation mode is normal
+
+ram[9][1]_qfbk = ram[9][1];
+A1L481 = addr[0] & (A1L381 & (ram[11][1]) # !A1L381 & ram[9][1]_qfbk) # !addr[0] & A1L381;
+
+--ram[9][1] is ram[9][1] at LC_X36_Y7_N8
+--operation mode is normal
+
+ram[9][1] = DFFEAS(A1L481, GLOBAL(clk), !GLOBAL(reset), , A1L463, data_in[1], , , VCC);
+
+
+--ram[0][1] is ram[0][1] at LC_X33_Y2_N1
+--operation mode is normal
+
+ram[0][1]_lut_out = data_in[1];
+ram[0][1] = DFFEAS(ram[0][1]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L472, , , , );
+
+
+--A1L581 is Mux~578 at LC_X34_Y2_N3
+--operation mode is normal
+
+ram[1][1]_qfbk = ram[1][1];
+A1L581 = addr[1] & addr[0] # !addr[1] & (addr[0] & ram[1][1]_qfbk # !addr[0] & (ram[0][1]));
+
+--ram[1][1] is ram[1][1] at LC_X34_Y2_N3
+--operation mode is normal
+
+ram[1][1] = DFFEAS(A1L581, GLOBAL(clk), !GLOBAL(reset), , A1L482, data_in[1], , , VCC);
+
+
+--ram[3][1] is ram[3][1] at LC_X36_Y5_N6
+--operation mode is normal
+
+ram[3][1]_lut_out = GND;
+ram[3][1] = DFFEAS(ram[3][1]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L403, data_in[1], , , VCC);
+
+
+--A1L681 is Mux~579 at LC_X33_Y2_N7
+--operation mode is normal
+
+ram[2][1]_qfbk = ram[2][1];
+A1L681 = addr[1] & (A1L581 & ram[3][1] # !A1L581 & (ram[2][1]_qfbk)) # !addr[1] & (A1L581);
+
+--ram[2][1] is ram[2][1] at LC_X33_Y2_N7
+--operation mode is normal
+
+ram[2][1] = DFFEAS(A1L681, GLOBAL(clk), !GLOBAL(reset), , A1L492, data_in[1], , , VCC);
+
+
+--A1L781 is Mux~580 at LC_X33_Y3_N8
+--operation mode is normal
+
+A1L781 = addr[3] & (A1L481 # addr[2]) # !addr[3] & (A1L681 & !addr[2]);
+
+
+--ram[12][1] is ram[12][1] at LC_X36_Y2_N4
+--operation mode is normal
+
+ram[12][1]_lut_out = data_in[1];
+ram[12][1] = DFFEAS(ram[12][1]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L493, , , , );
+
+
+--A1L881 is Mux~581 at LC_X36_Y3_N0
+--operation mode is normal
+
+ram[14][1]_qfbk = ram[14][1];
+A1L881 = addr[0] & addr[1] # !addr[0] & (addr[1] & ram[14][1]_qfbk # !addr[1] & (ram[12][1]));
+
+--ram[14][1] is ram[14][1] at LC_X36_Y3_N0
+--operation mode is normal
+
+ram[14][1] = DFFEAS(A1L881, GLOBAL(clk), !GLOBAL(reset), , A1L414, data_in[1], , , VCC);
+
+
+--ram[15][1] is ram[15][1] at LC_X36_Y4_N9
+--operation mode is normal
+
+ram[15][1]_lut_out = GND;
+ram[15][1] = DFFEAS(ram[15][1]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L424, data_in[1], , , VCC);
+
+
+--A1L981 is Mux~582 at LC_X36_Y3_N4
+--operation mode is normal
+
+ram[13][1]_qfbk = ram[13][1];
+A1L981 = addr[0] & (A1L881 & (ram[15][1]) # !A1L881 & ram[13][1]_qfbk) # !addr[0] & A1L881;
+
+--ram[13][1] is ram[13][1] at LC_X36_Y3_N4
+--operation mode is normal
+
+ram[13][1] = DFFEAS(A1L981, GLOBAL(clk), !GLOBAL(reset), , A1L404, data_in[1], , , VCC);
+
+
+--A1L091 is Mux~583 at LC_X33_Y3_N2
+--operation mode is normal
+
+A1L091 = A1L781 & (A1L981 # !addr[2]) # !A1L781 & (A1L281 & addr[2]);
+
+
+--cache[0].data[2] is cache[0].data[2] at LC_X32_Y4_N1
+--operation mode is normal
+
+cache[0].data[2]_lut_out = A1L59;
+cache[0].data[2] = DFFEAS(cache[0].data[2]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L21, , , , );
+
+
+--A1L231 is data_out~251 at LC_X33_Y4_N1
+--operation mode is normal
+
+cache[2].data[2]_qfbk = cache[2].data[2];
+A1L231 = A1L19 & (A1L29 & (cache[0].data[2]) # !A1L29 & cache[2].data[2]_qfbk) # !A1L19 & !A1L29;
+
+--cache[2].data[2] is cache[2].data[2] at LC_X33_Y4_N1
+--operation mode is normal
+
+cache[2].data[2] = DFFEAS(A1L231, GLOBAL(clk), !GLOBAL(reset), , A1L95, A1L59, , , VCC);
+
+
+--A1L331 is data_out~252 at LC_X35_Y6_N6
+--operation mode is normal
+
+cache[3].data[2]_qfbk = cache[3].data[2];
+A1L331 = A1L19 & (A1L231) # !A1L19 & (A1L231 & (cache[3].data[2]_qfbk) # !A1L231 & cache[1].data[2]);
+
+--cache[3].data[2] is cache[3].data[2] at LC_X35_Y6_N6
+--operation mode is normal
+
+cache[3].data[2] = DFFEAS(A1L331, GLOBAL(clk), !GLOBAL(reset), , A1L37, A1L59, , , VCC);
+
+
+--ram[2][2] is ram[2][2] at LC_X33_Y7_N7
+--operation mode is normal
+
+ram[2][2]_lut_out = data_in[2];
+ram[2][2] = DFFEAS(ram[2][2]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L492, , , , );
+
+
+--A1L191 is Mux~584 at LC_X34_Y7_N5
+--operation mode is normal
+
+ram[10][2]_qfbk = ram[10][2];
+A1L191 = addr[2] & addr[3] # !addr[2] & (addr[3] & ram[10][2]_qfbk # !addr[3] & (ram[2][2]));
+
+--ram[10][2] is ram[10][2] at LC_X34_Y7_N5
+--operation mode is normal
+
+ram[10][2] = DFFEAS(A1L191, GLOBAL(clk), !GLOBAL(reset), , A1L473, data_in[2], , , VCC);
+
+
+--ram[14][2] is ram[14][2] at LC_X36_Y3_N8
+--operation mode is normal
+
+ram[14][2]_lut_out = GND;
+ram[14][2] = DFFEAS(ram[14][2]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L414, data_in[2], , , VCC);
+
+
+--A1L291 is Mux~585 at LC_X34_Y7_N6
+--operation mode is normal
+
+ram[6][2]_qfbk = ram[6][2];
+A1L291 = addr[2] & (A1L191 & (ram[14][2]) # !A1L191 & ram[6][2]_qfbk) # !addr[2] & A1L191;
+
+--ram[6][2] is ram[6][2] at LC_X34_Y7_N6
+--operation mode is normal
+
+ram[6][2] = DFFEAS(A1L291, GLOBAL(clk), !GLOBAL(reset), , A1L433, data_in[2], , , VCC);
+
+
+--ram[1][2] is ram[1][2] at LC_X35_Y4_N9
+--operation mode is normal
+
+ram[1][2]_lut_out = GND;
+ram[1][2] = DFFEAS(ram[1][2]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L482, data_in[2], , , VCC);
+
+
+--A1L391 is Mux~586 at LC_X35_Y4_N8
+--operation mode is normal
+
+ram[5][2]_qfbk = ram[5][2];
+A1L391 = addr[2] & (addr[3] # ram[5][2]_qfbk) # !addr[2] & !addr[3] & (ram[1][2]);
+
+--ram[5][2] is ram[5][2] at LC_X35_Y4_N8
+--operation mode is normal
+
+ram[5][2] = DFFEAS(A1L391, GLOBAL(clk), !GLOBAL(reset), , A1L423, data_in[2], , , VCC);
+
+
+--ram[13][2] is ram[13][2] at LC_X33_Y7_N9
+--operation mode is normal
+
+ram[13][2]_lut_out = data_in[2];
+ram[13][2] = DFFEAS(ram[13][2]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L404, , , , );
+
+
+--A1L491 is Mux~587 at LC_X36_Y7_N1
+--operation mode is normal
+
+ram[9][2]_qfbk = ram[9][2];
+A1L491 = addr[3] & (A1L391 & ram[13][2] # !A1L391 & (ram[9][2]_qfbk)) # !addr[3] & (A1L391);
+
+--ram[9][2] is ram[9][2] at LC_X36_Y7_N1
+--operation mode is normal
+
+ram[9][2] = DFFEAS(A1L491, GLOBAL(clk), !GLOBAL(reset), , A1L463, data_in[2], , , VCC);
+
+
+--ram[0][2] is ram[0][2] at LC_X36_Y5_N1
+--operation mode is normal
+
+ram[0][2]_lut_out = GND;
+ram[0][2] = DFFEAS(ram[0][2]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L472, data_in[2], , , VCC);
+
+
+--A1L591 is Mux~588 at LC_X36_Y6_N7
+--operation mode is normal
+
+ram[4][2]_qfbk = ram[4][2];
+A1L591 = addr[3] & (addr[2]) # !addr[3] & (addr[2] & (ram[4][2]_qfbk) # !addr[2] & ram[0][2]);
+
+--ram[4][2] is ram[4][2] at LC_X36_Y6_N7
+--operation mode is normal
+
+ram[4][2] = DFFEAS(A1L591, GLOBAL(clk), !GLOBAL(reset), , A1L413, data_in[2], , , VCC);
+
+
+--ram[12][2] is ram[12][2] at LC_X36_Y2_N3
+--operation mode is normal
+
+ram[12][2]_lut_out = GND;
+ram[12][2] = DFFEAS(ram[12][2]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L493, data_in[2], , , VCC);
+
+
+--A1L691 is Mux~589 at LC_X36_Y6_N9
+--operation mode is normal
+
+ram[8][2]_qfbk = ram[8][2];
+A1L691 = A1L591 & (ram[12][2] # !addr[3]) # !A1L591 & addr[3] & ram[8][2]_qfbk;
+
+--ram[8][2] is ram[8][2] at LC_X36_Y6_N9
+--operation mode is normal
+
+ram[8][2] = DFFEAS(A1L691, GLOBAL(clk), !GLOBAL(reset), , A1L453, data_in[2], , , VCC);
+
+
+--A1L791 is Mux~590 at LC_X35_Y6_N7
+--operation mode is normal
+
+A1L791 = addr[0] & (A1L491 # addr[1]) # !addr[0] & (!addr[1] & A1L691);
+
+
+--ram[3][2] is ram[3][2] at LC_X36_Y5_N3
+--operation mode is normal
+
+ram[3][2]_lut_out = GND;
+ram[3][2] = DFFEAS(ram[3][2]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L403, data_in[2], , , VCC);
+
+
+--A1L891 is Mux~591 at LC_X36_Y7_N5
+--operation mode is normal
+
+ram[11][2]_qfbk = ram[11][2];
+A1L891 = addr[2] & (addr[3]) # !addr[2] & (addr[3] & (ram[11][2]_qfbk) # !addr[3] & ram[3][2]);
+
+--ram[11][2] is ram[11][2] at LC_X36_Y7_N5
+--operation mode is normal
+
+ram[11][2] = DFFEAS(A1L891, GLOBAL(clk), !GLOBAL(reset), , A1L483, data_in[2], , , VCC);
+
+
+--ram[15][2] is ram[15][2] at LC_X36_Y4_N1
+--operation mode is normal
+
+ram[15][2]_lut_out = GND;
+ram[15][2] = DFFEAS(ram[15][2]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L424, data_in[2], , , VCC);
+
+
+--A1L991 is Mux~592 at LC_X36_Y4_N6
+--operation mode is normal
+
+ram[7][2]_qfbk = ram[7][2];
+A1L991 = A1L891 & (ram[15][2] # !addr[2]) # !A1L891 & (ram[7][2]_qfbk & addr[2]);
+
+--ram[7][2] is ram[7][2] at LC_X36_Y4_N6
+--operation mode is normal
+
+ram[7][2] = DFFEAS(A1L991, GLOBAL(clk), !GLOBAL(reset), , A1L443, data_in[2], , , VCC);
+
+
+--A1L002 is Mux~593 at LC_X35_Y6_N8
+--operation mode is normal
+
+A1L002 = addr[1] & (A1L791 & (A1L991) # !A1L791 & A1L291) # !addr[1] & (A1L791);
+
+
+--cache[0].data[3] is cache[0].data[3] at LC_X32_Y4_N8
+--operation mode is normal
+
+cache[0].data[3]_lut_out = A1L69;
+cache[0].data[3] = DFFEAS(cache[0].data[3]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L21, , , , );
+
+
+--A1L431 is data_out~254 at LC_X32_Y6_N8
+--operation mode is normal
+
+cache[1].data[3]_qfbk = cache[1].data[3];
+A1L431 = A1L19 & A1L29 & (cache[0].data[3]) # !A1L19 & (cache[1].data[3]_qfbk # !A1L29);
+
+--cache[1].data[3] is cache[1].data[3] at LC_X32_Y6_N8
+--operation mode is normal
+
+cache[1].data[3] = DFFEAS(A1L431, GLOBAL(clk), !GLOBAL(reset), , A1L23, A1L69, , , VCC);
+
+
+--A1L531 is data_out~255 at LC_X33_Y6_N4
+--operation mode is normal
+
+cache[3].data[3]_qfbk = cache[3].data[3];
+A1L531 = A1L29 & A1L431 # !A1L29 & (A1L431 & cache[3].data[3]_qfbk # !A1L431 & (cache[2].data[3]));
+
+--cache[3].data[3] is cache[3].data[3] at LC_X33_Y6_N4
+--operation mode is normal
+
+cache[3].data[3] = DFFEAS(A1L531, GLOBAL(clk), !GLOBAL(reset), , A1L37, A1L69, , , VCC);
+
+
+--ram[8][3] is ram[8][3] at LC_X36_Y6_N4
+--operation mode is normal
+
+ram[8][3]_lut_out = GND;
+ram[8][3] = DFFEAS(ram[8][3]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L453, data_in[3], , , VCC);
+
+
+--A1L102 is Mux~594 at LC_X36_Y7_N3
+--operation mode is normal
+
+ram[9][3]_qfbk = ram[9][3];
+A1L102 = addr[0] & (addr[1] # ram[9][3]_qfbk) # !addr[0] & !addr[1] & (ram[8][3]);
+
+--ram[9][3] is ram[9][3] at LC_X36_Y7_N3
+--operation mode is normal
+
+ram[9][3] = DFFEAS(A1L102, GLOBAL(clk), !GLOBAL(reset), , A1L463, data_in[3], , , VCC);
+
+
+--ram[11][3] is ram[11][3] at LC_X36_Y7_N9
+--operation mode is normal
+
+ram[11][3]_lut_out = GND;
+ram[11][3] = DFFEAS(ram[11][3]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L483, data_in[3], , , VCC);
+
+
+--A1L202 is Mux~595 at LC_X35_Y7_N5
+--operation mode is normal
+
+ram[10][3]_qfbk = ram[10][3];
+A1L202 = A1L102 & (ram[11][3] # !addr[1]) # !A1L102 & addr[1] & ram[10][3]_qfbk;
+
+--ram[10][3] is ram[10][3] at LC_X35_Y7_N5
+--operation mode is normal
+
+ram[10][3] = DFFEAS(A1L202, GLOBAL(clk), !GLOBAL(reset), , A1L473, data_in[3], , , VCC);
+
+
+--ram[4][3] is ram[4][3] at LC_X34_Y3_N9
+--operation mode is normal
+
+ram[4][3]_lut_out = GND;
+ram[4][3] = DFFEAS(ram[4][3]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L413, data_in[3], , , VCC);
+
+
+--A1L302 is Mux~596 at LC_X34_Y3_N5
+--operation mode is normal
+
+ram[6][3]_qfbk = ram[6][3];
+A1L302 = addr[1] & (addr[0] # ram[6][3]_qfbk) # !addr[1] & !addr[0] & (ram[4][3]);
+
+--ram[6][3] is ram[6][3] at LC_X34_Y3_N5
+--operation mode is normal
+
+ram[6][3] = DFFEAS(A1L302, GLOBAL(clk), !GLOBAL(reset), , A1L433, data_in[3], , , VCC);
+
+
+--ram[7][3] is ram[7][3] at LC_X36_Y4_N3
+--operation mode is normal
+
+ram[7][3]_lut_out = GND;
+ram[7][3] = DFFEAS(ram[7][3]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L443, data_in[3], , , VCC);
+
+
+--A1L402 is Mux~597 at LC_X35_Y4_N7
+--operation mode is normal
+
+ram[5][3]_qfbk = ram[5][3];
+A1L402 = addr[0] & (A1L302 & ram[7][3] # !A1L302 & (ram[5][3]_qfbk)) # !addr[0] & (A1L302);
+
+--ram[5][3] is ram[5][3] at LC_X35_Y4_N7
+--operation mode is normal
+
+ram[5][3] = DFFEAS(A1L402, GLOBAL(clk), !GLOBAL(reset), , A1L423, data_in[3], , , VCC);
+
+
+--ram[0][3] is ram[0][3] at LC_X33_Y2_N4
+--operation mode is normal
+
+ram[0][3]_lut_out = data_in[3];
+ram[0][3] = DFFEAS(ram[0][3]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L472, , , , );
+
+
+--A1L502 is Mux~598 at LC_X33_Y2_N5
+--operation mode is normal
+
+ram[2][3]_qfbk = ram[2][3];
+A1L502 = addr[0] & addr[1] # !addr[0] & (addr[1] & ram[2][3]_qfbk # !addr[1] & (ram[0][3]));
+
+--ram[2][3] is ram[2][3] at LC_X33_Y2_N5
+--operation mode is normal
+
+ram[2][3] = DFFEAS(A1L502, GLOBAL(clk), !GLOBAL(reset), , A1L492, data_in[3], , , VCC);
+
+
+--ram[3][3] is ram[3][3] at LC_X36_Y2_N8
+--operation mode is normal
+
+ram[3][3]_lut_out = GND;
+ram[3][3] = DFFEAS(ram[3][3]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L403, data_in[3], , , VCC);
+
+
+--A1L602 is Mux~599 at LC_X35_Y4_N1
+--operation mode is normal
+
+ram[1][3]_qfbk = ram[1][3];
+A1L602 = addr[0] & (A1L502 & ram[3][3] # !A1L502 & (ram[1][3]_qfbk)) # !addr[0] & (A1L502);
+
+--ram[1][3] is ram[1][3] at LC_X35_Y4_N1
+--operation mode is normal
+
+ram[1][3] = DFFEAS(A1L602, GLOBAL(clk), !GLOBAL(reset), , A1L482, data_in[3], , , VCC);
+
+
+--A1L702 is Mux~600 at LC_X35_Y4_N2
+--operation mode is normal
+
+A1L702 = addr[2] & (addr[3] # A1L402) # !addr[2] & !addr[3] & (A1L602);
+
+
+--ram[12][3] is ram[12][3] at LC_X36_Y2_N7
+--operation mode is normal
+
+ram[12][3]_lut_out = GND;
+ram[12][3] = DFFEAS(ram[12][3]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L493, data_in[3], , , VCC);
+
+
+--A1L802 is Mux~601 at LC_X36_Y3_N5
+--operation mode is normal
+
+ram[13][3]_qfbk = ram[13][3];
+A1L802 = addr[0] & (addr[1] # ram[13][3]_qfbk) # !addr[0] & !addr[1] & (ram[12][3]);
+
+--ram[13][3] is ram[13][3] at LC_X36_Y3_N5
+--operation mode is normal
+
+ram[13][3] = DFFEAS(A1L802, GLOBAL(clk), !GLOBAL(reset), , A1L404, data_in[3], , , VCC);
+
+
+--ram[15][3] is ram[15][3] at LC_X36_Y4_N7
+--operation mode is normal
+
+ram[15][3]_lut_out = GND;
+ram[15][3] = DFFEAS(ram[15][3]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L424, data_in[3], , , VCC);
+
+
+--A1L902 is Mux~602 at LC_X36_Y3_N6
+--operation mode is normal
+
+ram[14][3]_qfbk = ram[14][3];
+A1L902 = addr[1] & (A1L802 & ram[15][3] # !A1L802 & (ram[14][3]_qfbk)) # !addr[1] & (A1L802);
+
+--ram[14][3] is ram[14][3] at LC_X36_Y3_N6
+--operation mode is normal
+
+ram[14][3] = DFFEAS(A1L902, GLOBAL(clk), !GLOBAL(reset), , A1L414, data_in[3], , , VCC);
+
+
+--A1L012 is Mux~603 at LC_X35_Y4_N3
+--operation mode is normal
+
+A1L012 = addr[3] & (A1L702 & (A1L902) # !A1L702 & A1L202) # !addr[3] & (A1L702);
+
+
+--cache[0].data[4] is cache[0].data[4] at LC_X32_Y4_N4
+--operation mode is normal
+
+cache[0].data[4]_lut_out = A1L79;
+cache[0].data[4] = DFFEAS(cache[0].data[4]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L21, , , , );
+
+
+--A1L631 is data_out~257 at LC_X33_Y4_N8
+--operation mode is normal
+
+cache[2].data[4]_qfbk = cache[2].data[4];
+A1L631 = A1L19 & (A1L29 & (cache[0].data[4]) # !A1L29 & cache[2].data[4]_qfbk) # !A1L19 & !A1L29;
+
+--cache[2].data[4] is cache[2].data[4] at LC_X33_Y4_N8
+--operation mode is normal
+
+cache[2].data[4] = DFFEAS(A1L631, GLOBAL(clk), !GLOBAL(reset), , A1L95, A1L79, , , VCC);
+
+
+--A1L731 is data_out~258 at LC_X34_Y6_N9
+--operation mode is normal
+
+cache[3].data[4]_qfbk = cache[3].data[4];
+A1L731 = A1L19 & (A1L631) # !A1L19 & (A1L631 & (cache[3].data[4]_qfbk) # !A1L631 & cache[1].data[4]);
+
+--cache[3].data[4] is cache[3].data[4] at LC_X34_Y6_N9
+--operation mode is normal
+
+cache[3].data[4] = DFFEAS(A1L731, GLOBAL(clk), !GLOBAL(reset), , A1L37, A1L79, , , VCC);
+
+
+--ram[1][4] is ram[1][4] at LC_X35_Y2_N7
+--operation mode is normal
+
+ram[1][4]_lut_out = GND;
+ram[1][4] = DFFEAS(ram[1][4]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L482, data_in[4], , , VCC);
+
+
+--A1L112 is Mux~604 at LC_X34_Y4_N7
+--operation mode is normal
+
+ram[9][4]_qfbk = ram[9][4];
+A1L112 = addr[3] & (ram[9][4]_qfbk # addr[2]) # !addr[3] & ram[1][4] & (!addr[2]);
+
+--ram[9][4] is ram[9][4] at LC_X34_Y4_N7
+--operation mode is normal
+
+ram[9][4] = DFFEAS(A1L112, GLOBAL(clk), !GLOBAL(reset), , A1L463, data_in[4], , , VCC);
+
+
+--ram[13][4] is ram[13][4] at LC_X33_Y7_N8
+--operation mode is normal
+
+ram[13][4]_lut_out = GND;
+ram[13][4] = DFFEAS(ram[13][4]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L404, data_in[4], , , VCC);
+
+
+--A1L212 is Mux~605 at LC_X35_Y3_N3
+--operation mode is normal
+
+ram[5][4]_qfbk = ram[5][4];
+A1L212 = A1L112 & (ram[13][4] # !addr[2]) # !A1L112 & (ram[5][4]_qfbk & addr[2]);
+
+--ram[5][4] is ram[5][4] at LC_X35_Y3_N3
+--operation mode is normal
+
+ram[5][4] = DFFEAS(A1L212, GLOBAL(clk), !GLOBAL(reset), , A1L423, data_in[4], , , VCC);
+
+
+--ram[2][4] is ram[2][4] at LC_X33_Y7_N2
+--operation mode is normal
+
+ram[2][4]_lut_out = GND;
+ram[2][4] = DFFEAS(ram[2][4]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L492, data_in[4], , , VCC);
+
+
+--A1L312 is Mux~606 at LC_X34_Y7_N8
+--operation mode is normal
+
+ram[6][4]_qfbk = ram[6][4];
+A1L312 = addr[2] & (addr[3] # ram[6][4]_qfbk) # !addr[2] & !addr[3] & (ram[2][4]);
+
+--ram[6][4] is ram[6][4] at LC_X34_Y7_N8
+--operation mode is normal
+
+ram[6][4] = DFFEAS(A1L312, GLOBAL(clk), !GLOBAL(reset), , A1L433, data_in[4], , , VCC);
+
+
+--ram[14][4] is ram[14][4] at LC_X34_Y8_N4
+--operation mode is normal
+
+ram[14][4]_lut_out = GND;
+ram[14][4] = DFFEAS(ram[14][4]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L414, data_in[4], , , VCC);
+
+
+--A1L412 is Mux~607 at LC_X34_Y7_N7
+--operation mode is normal
+
+ram[10][4]_qfbk = ram[10][4];
+A1L412 = A1L312 & (ram[14][4] # !addr[3]) # !A1L312 & addr[3] & ram[10][4]_qfbk;
+
+--ram[10][4] is ram[10][4] at LC_X34_Y7_N7
+--operation mode is normal
+
+ram[10][4] = DFFEAS(A1L412, GLOBAL(clk), !GLOBAL(reset), , A1L473, data_in[4], , , VCC);
+
+
+--ram[0][4] is ram[0][4] at LC_X36_Y5_N8
+--operation mode is normal
+
+ram[0][4]_lut_out = GND;
+ram[0][4] = DFFEAS(ram[0][4]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L472, data_in[4], , , VCC);
+
+
+--A1L512 is Mux~608 at LC_X36_Y6_N1
+--operation mode is normal
+
+ram[8][4]_qfbk = ram[8][4];
+A1L512 = addr[3] & (ram[8][4]_qfbk # addr[2]) # !addr[3] & ram[0][4] & (!addr[2]);
+
+--ram[8][4] is ram[8][4] at LC_X36_Y6_N1
+--operation mode is normal
+
+ram[8][4] = DFFEAS(A1L512, GLOBAL(clk), !GLOBAL(reset), , A1L453, data_in[4], , , VCC);
+
+
+--ram[12][4] is ram[12][4] at LC_X36_Y2_N2
+--operation mode is normal
+
+ram[12][4]_lut_out = GND;
+ram[12][4] = DFFEAS(ram[12][4]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L493, data_in[4], , , VCC);
+
+
+--A1L612 is Mux~609 at LC_X36_Y6_N3
+--operation mode is normal
+
+ram[4][4]_qfbk = ram[4][4];
+A1L612 = A1L512 & (ram[12][4] # !addr[2]) # !A1L512 & (ram[4][4]_qfbk & addr[2]);
+
+--ram[4][4] is ram[4][4] at LC_X36_Y6_N3
+--operation mode is normal
+
+ram[4][4] = DFFEAS(A1L612, GLOBAL(clk), !GLOBAL(reset), , A1L413, data_in[4], , , VCC);
+
+
+--A1L712 is Mux~610 at LC_X34_Y6_N1
+--operation mode is normal
+
+A1L712 = addr[1] & (A1L412 # addr[0]) # !addr[1] & (!addr[0] & A1L612);
+
+
+--ram[3][4] is ram[3][4] at LC_X36_Y5_N5
+--operation mode is normal
+
+ram[3][4]_lut_out = GND;
+ram[3][4] = DFFEAS(ram[3][4]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L403, data_in[4], , , VCC);
+
+
+--A1L812 is Mux~611 at LC_X35_Y3_N8
+--operation mode is normal
+
+ram[7][4]_qfbk = ram[7][4];
+A1L812 = addr[3] & (addr[2]) # !addr[3] & (addr[2] & (ram[7][4]_qfbk) # !addr[2] & ram[3][4]);
+
+--ram[7][4] is ram[7][4] at LC_X35_Y3_N8
+--operation mode is normal
+
+ram[7][4] = DFFEAS(A1L812, GLOBAL(clk), !GLOBAL(reset), , A1L443, data_in[4], , , VCC);
+
+
+--ram[15][4] is ram[15][4] at LC_X36_Y4_N8
+--operation mode is normal
+
+ram[15][4]_lut_out = GND;
+ram[15][4] = DFFEAS(ram[15][4]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L424, data_in[4], , , VCC);
+
+
+--A1L912 is Mux~612 at LC_X35_Y2_N9
+--operation mode is normal
+
+ram[11][4]_qfbk = ram[11][4];
+A1L912 = A1L812 & (ram[15][4] # !addr[3]) # !A1L812 & addr[3] & ram[11][4]_qfbk;
+
+--ram[11][4] is ram[11][4] at LC_X35_Y2_N9
+--operation mode is normal
+
+ram[11][4] = DFFEAS(A1L912, GLOBAL(clk), !GLOBAL(reset), , A1L483, data_in[4], , , VCC);
+
+
+--A1L022 is Mux~613 at LC_X34_Y6_N5
+--operation mode is normal
+
+A1L022 = A1L712 & (A1L912 # !addr[0]) # !A1L712 & A1L212 & addr[0];
+
+
+--cache[0].data[5] is cache[0].data[5] at LC_X32_Y4_N9
+--operation mode is normal
+
+cache[0].data[5]_lut_out = GND;
+cache[0].data[5] = DFFEAS(cache[0].data[5]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L21, A1L89, , , VCC);
+
+
+--A1L831 is data_out~260 at LC_X32_Y6_N9
+--operation mode is normal
+
+cache[1].data[5]_qfbk = cache[1].data[5];
+A1L831 = A1L19 & cache[0].data[5] & (A1L29) # !A1L19 & (cache[1].data[5]_qfbk # !A1L29);
+
+--cache[1].data[5] is cache[1].data[5] at LC_X32_Y6_N9
+--operation mode is normal
+
+cache[1].data[5] = DFFEAS(A1L831, GLOBAL(clk), !GLOBAL(reset), , A1L23, A1L89, , , VCC);
+
+
+--A1L931 is data_out~261 at LC_X33_Y6_N1
+--operation mode is normal
+
+cache[3].data[5]_qfbk = cache[3].data[5];
+A1L931 = A1L29 & A1L831 # !A1L29 & (A1L831 & cache[3].data[5]_qfbk # !A1L831 & (cache[2].data[5]));
+
+--cache[3].data[5] is cache[3].data[5] at LC_X33_Y6_N1
+--operation mode is normal
+
+cache[3].data[5] = DFFEAS(A1L931, GLOBAL(clk), !GLOBAL(reset), , A1L37, A1L89, , , VCC);
+
+
+--ram[4][5] is ram[4][5] at LC_X34_Y3_N4
+--operation mode is normal
+
+ram[4][5]_lut_out = GND;
+ram[4][5] = DFFEAS(ram[4][5]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L413, data_in[5], , , VCC);
+
+
+--A1L122 is Mux~614 at LC_X35_Y3_N0
+--operation mode is normal
+
+ram[5][5]_qfbk = ram[5][5];
+A1L122 = addr[1] & addr[0] # !addr[1] & (addr[0] & ram[5][5]_qfbk # !addr[0] & (ram[4][5]));
+
+--ram[5][5] is ram[5][5] at LC_X35_Y3_N0
+--operation mode is normal
+
+ram[5][5] = DFFEAS(A1L122, GLOBAL(clk), !GLOBAL(reset), , A1L423, data_in[5], , , VCC);
+
+
+--ram[7][5] is ram[7][5] at LC_X35_Y3_N2
+--operation mode is normal
+
+ram[7][5]_lut_out = GND;
+ram[7][5] = DFFEAS(ram[7][5]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L443, data_in[5], , , VCC);
+
+
+--A1L222 is Mux~615 at LC_X34_Y3_N7
+--operation mode is normal
+
+ram[6][5]_qfbk = ram[6][5];
+A1L222 = addr[1] & (A1L122 & (ram[7][5]) # !A1L122 & ram[6][5]_qfbk) # !addr[1] & A1L122;
+
+--ram[6][5] is ram[6][5] at LC_X34_Y3_N7
+--operation mode is normal
+
+ram[6][5] = DFFEAS(A1L222, GLOBAL(clk), !GLOBAL(reset), , A1L433, data_in[5], , , VCC);
+
+
+--ram[8][5] is ram[8][5] at LC_X35_Y7_N0
+--operation mode is normal
+
+ram[8][5]_lut_out = data_in[5];
+ram[8][5] = DFFEAS(ram[8][5]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L453, , , , );
+
+
+--A1L322 is Mux~616 at LC_X35_Y7_N7
+--operation mode is normal
+
+ram[10][5]_qfbk = ram[10][5];
+A1L322 = addr[0] & addr[1] # !addr[0] & (addr[1] & ram[10][5]_qfbk # !addr[1] & (ram[8][5]));
+
+--ram[10][5] is ram[10][5] at LC_X35_Y7_N7
+--operation mode is normal
+
+ram[10][5] = DFFEAS(A1L322, GLOBAL(clk), !GLOBAL(reset), , A1L473, data_in[5], , , VCC);
+
+
+--ram[11][5] is ram[11][5] at LC_X35_Y2_N1
+--operation mode is normal
+
+ram[11][5]_lut_out = data_in[5];
+ram[11][5] = DFFEAS(ram[11][5]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L483, , , , );
+
+
+--A1L422 is Mux~617 at LC_X34_Y4_N4
+--operation mode is normal
+
+ram[9][5]_qfbk = ram[9][5];
+A1L422 = addr[0] & (A1L322 & (ram[11][5]) # !A1L322 & ram[9][5]_qfbk) # !addr[0] & A1L322;
+
+--ram[9][5] is ram[9][5] at LC_X34_Y4_N4
+--operation mode is normal
+
+ram[9][5] = DFFEAS(A1L422, GLOBAL(clk), !GLOBAL(reset), , A1L463, data_in[5], , , VCC);
+
+
+--ram[0][5] is ram[0][5] at LC_X34_Y2_N9
+--operation mode is normal
+
+ram[0][5]_lut_out = GND;
+ram[0][5] = DFFEAS(ram[0][5]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L472, data_in[5], , , VCC);
+
+
+--A1L522 is Mux~618 at LC_X34_Y2_N7
+--operation mode is normal
+
+ram[1][5]_qfbk = ram[1][5];
+A1L522 = addr[1] & addr[0] # !addr[1] & (addr[0] & ram[1][5]_qfbk # !addr[0] & (ram[0][5]));
+
+--ram[1][5] is ram[1][5] at LC_X34_Y2_N7
+--operation mode is normal
+
+ram[1][5] = DFFEAS(A1L522, GLOBAL(clk), !GLOBAL(reset), , A1L482, data_in[5], , , VCC);
+
+
+--ram[3][5] is ram[3][5] at LC_X36_Y5_N4
+--operation mode is normal
+
+ram[3][5]_lut_out = data_in[5];
+ram[3][5] = DFFEAS(ram[3][5]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L403, , , , );
+
+
+--A1L622 is Mux~619 at LC_X34_Y4_N1
+--operation mode is normal
+
+ram[2][5]_qfbk = ram[2][5];
+A1L622 = addr[1] & (A1L522 & (ram[3][5]) # !A1L522 & ram[2][5]_qfbk) # !addr[1] & A1L522;
+
+--ram[2][5] is ram[2][5] at LC_X34_Y4_N1
+--operation mode is normal
+
+ram[2][5] = DFFEAS(A1L622, GLOBAL(clk), !GLOBAL(reset), , A1L492, data_in[5], , , VCC);
+
+
+--A1L722 is Mux~620 at LC_X34_Y4_N0
+--operation mode is normal
+
+A1L722 = addr[3] & (A1L422 # addr[2]) # !addr[3] & (A1L622 & !addr[2]);
+
+
+--ram[12][5] is ram[12][5] at LC_X36_Y2_N9
+--operation mode is normal
+
+ram[12][5]_lut_out = GND;
+ram[12][5] = DFFEAS(ram[12][5]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L493, data_in[5], , , VCC);
+
+
+--A1L822 is Mux~621 at LC_X36_Y3_N9
+--operation mode is normal
+
+ram[14][5]_qfbk = ram[14][5];
+A1L822 = addr[0] & addr[1] # !addr[0] & (addr[1] & ram[14][5]_qfbk # !addr[1] & (ram[12][5]));
+
+--ram[14][5] is ram[14][5] at LC_X36_Y3_N9
+--operation mode is normal
+
+ram[14][5] = DFFEAS(A1L822, GLOBAL(clk), !GLOBAL(reset), , A1L414, data_in[5], , , VCC);
+
+
+--ram[15][5] is ram[15][5] at LC_X36_Y4_N4
+--operation mode is normal
+
+ram[15][5]_lut_out = GND;
+ram[15][5] = DFFEAS(ram[15][5]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L424, data_in[5], , , VCC);
+
+
+--A1L922 is Mux~622 at LC_X36_Y3_N7
+--operation mode is normal
+
+ram[13][5]_qfbk = ram[13][5];
+A1L922 = addr[0] & (A1L822 & (ram[15][5]) # !A1L822 & ram[13][5]_qfbk) # !addr[0] & A1L822;
+
+--ram[13][5] is ram[13][5] at LC_X36_Y3_N7
+--operation mode is normal
+
+ram[13][5] = DFFEAS(A1L922, GLOBAL(clk), !GLOBAL(reset), , A1L404, data_in[5], , , VCC);
+
+
+--A1L032 is Mux~623 at LC_X34_Y4_N5
+--operation mode is normal
+
+A1L032 = A1L722 & (A1L922 # !addr[2]) # !A1L722 & (A1L222 & addr[2]);
+
+
+--cache[0].data[6] is cache[0].data[6] at LC_X32_Y4_N6
+--operation mode is normal
+
+cache[0].data[6]_lut_out = GND;
+cache[0].data[6] = DFFEAS(cache[0].data[6]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L21, A1L99, , , VCC);
+
+
+--A1L041 is data_out~263 at LC_X33_Y4_N2
+--operation mode is normal
+
+cache[2].data[6]_qfbk = cache[2].data[6];
+A1L041 = A1L19 & (A1L29 & (cache[0].data[6]) # !A1L29 & cache[2].data[6]_qfbk) # !A1L19 & !A1L29;
+
+--cache[2].data[6] is cache[2].data[6] at LC_X33_Y4_N2
+--operation mode is normal
+
+cache[2].data[6] = DFFEAS(A1L041, GLOBAL(clk), !GLOBAL(reset), , A1L95, A1L99, , , VCC);
+
+
+--A1L141 is data_out~264 at LC_X35_Y6_N5
+--operation mode is normal
+
+cache[3].data[6]_qfbk = cache[3].data[6];
+A1L141 = A1L19 & (A1L041) # !A1L19 & (A1L041 & (cache[3].data[6]_qfbk) # !A1L041 & cache[1].data[6]);
+
+--cache[3].data[6] is cache[3].data[6] at LC_X35_Y6_N5
+--operation mode is normal
+
+cache[3].data[6] = DFFEAS(A1L141, GLOBAL(clk), !GLOBAL(reset), , A1L37, A1L99, , , VCC);
+
+
+--ram[2][6] is ram[2][6] at LC_X33_Y7_N1
+--operation mode is normal
+
+ram[2][6]_lut_out = data_in[6];
+ram[2][6] = DFFEAS(ram[2][6]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L492, , , , );
+
+
+--A1L132 is Mux~624 at LC_X34_Y7_N1
+--operation mode is normal
+
+ram[10][6]_qfbk = ram[10][6];
+A1L132 = addr[2] & addr[3] # !addr[2] & (addr[3] & ram[10][6]_qfbk # !addr[3] & (ram[2][6]));
+
+--ram[10][6] is ram[10][6] at LC_X34_Y7_N1
+--operation mode is normal
+
+ram[10][6] = DFFEAS(A1L132, GLOBAL(clk), !GLOBAL(reset), , A1L473, data_in[6], , , VCC);
+
+
+--ram[14][6] is ram[14][6] at LC_X34_Y8_N2
+--operation mode is normal
+
+ram[14][6]_lut_out = data_in[6];
+ram[14][6] = DFFEAS(ram[14][6]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L414, , , , );
+
+
+--A1L232 is Mux~625 at LC_X34_Y7_N9
+--operation mode is normal
+
+ram[6][6]_qfbk = ram[6][6];
+A1L232 = addr[2] & (A1L132 & (ram[14][6]) # !A1L132 & ram[6][6]_qfbk) # !addr[2] & A1L132;
+
+--ram[6][6] is ram[6][6] at LC_X34_Y7_N9
+--operation mode is normal
+
+ram[6][6] = DFFEAS(A1L232, GLOBAL(clk), !GLOBAL(reset), , A1L433, data_in[6], , , VCC);
+
+
+--ram[1][6] is ram[1][6] at LC_X35_Y4_N0
+--operation mode is normal
+
+ram[1][6]_lut_out = data_in[6];
+ram[1][6] = DFFEAS(ram[1][6]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L482, , , , );
+
+
+--A1L332 is Mux~626 at LC_X35_Y4_N5
+--operation mode is normal
+
+ram[5][6]_qfbk = ram[5][6];
+A1L332 = addr[2] & (addr[3] # ram[5][6]_qfbk) # !addr[2] & !addr[3] & (ram[1][6]);
+
+--ram[5][6] is ram[5][6] at LC_X35_Y4_N5
+--operation mode is normal
+
+ram[5][6] = DFFEAS(A1L332, GLOBAL(clk), !GLOBAL(reset), , A1L423, data_in[6], , , VCC);
+
+
+--ram[13][6] is ram[13][6] at LC_X33_Y7_N6
+--operation mode is normal
+
+ram[13][6]_lut_out = data_in[6];
+ram[13][6] = DFFEAS(ram[13][6]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L404, , , , );
+
+
+--A1L432 is Mux~627 at LC_X36_Y7_N6
+--operation mode is normal
+
+ram[9][6]_qfbk = ram[9][6];
+A1L432 = addr[3] & (A1L332 & ram[13][6] # !A1L332 & (ram[9][6]_qfbk)) # !addr[3] & (A1L332);
+
+--ram[9][6] is ram[9][6] at LC_X36_Y7_N6
+--operation mode is normal
+
+ram[9][6] = DFFEAS(A1L432, GLOBAL(clk), !GLOBAL(reset), , A1L463, data_in[6], , , VCC);
+
+
+--ram[0][6] is ram[0][6] at LC_X36_Y5_N0
+--operation mode is normal
+
+ram[0][6]_lut_out = GND;
+ram[0][6] = DFFEAS(ram[0][6]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L472, data_in[6], , , VCC);
+
+
+--A1L532 is Mux~628 at LC_X36_Y6_N2
+--operation mode is normal
+
+ram[4][6]_qfbk = ram[4][6];
+A1L532 = addr[3] & (addr[2]) # !addr[3] & (addr[2] & (ram[4][6]_qfbk) # !addr[2] & ram[0][6]);
+
+--ram[4][6] is ram[4][6] at LC_X36_Y6_N2
+--operation mode is normal
+
+ram[4][6] = DFFEAS(A1L532, GLOBAL(clk), !GLOBAL(reset), , A1L413, data_in[6], , , VCC);
+
+
+--ram[12][6] is ram[12][6] at LC_X36_Y2_N5
+--operation mode is normal
+
+ram[12][6]_lut_out = GND;
+ram[12][6] = DFFEAS(ram[12][6]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L493, data_in[6], , , VCC);
+
+
+--A1L632 is Mux~629 at LC_X36_Y6_N0
+--operation mode is normal
+
+ram[8][6]_qfbk = ram[8][6];
+A1L632 = A1L532 & (ram[12][6] # !addr[3]) # !A1L532 & addr[3] & ram[8][6]_qfbk;
+
+--ram[8][6] is ram[8][6] at LC_X36_Y6_N0
+--operation mode is normal
+
+ram[8][6] = DFFEAS(A1L632, GLOBAL(clk), !GLOBAL(reset), , A1L453, data_in[6], , , VCC);
+
+
+--A1L732 is Mux~630 at LC_X35_Y6_N1
+--operation mode is normal
+
+A1L732 = addr[0] & (A1L432 # addr[1]) # !addr[0] & (!addr[1] & A1L632);
+
+
+--ram[3][6] is ram[3][6] at LC_X36_Y5_N9
+--operation mode is normal
+
+ram[3][6]_lut_out = GND;
+ram[3][6] = DFFEAS(ram[3][6]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L403, data_in[6], , , VCC);
+
+
+--A1L832 is Mux~631 at LC_X36_Y7_N4
+--operation mode is normal
+
+ram[11][6]_qfbk = ram[11][6];
+A1L832 = addr[2] & (addr[3]) # !addr[2] & (addr[3] & (ram[11][6]_qfbk) # !addr[3] & ram[3][6]);
+
+--ram[11][6] is ram[11][6] at LC_X36_Y7_N4
+--operation mode is normal
+
+ram[11][6] = DFFEAS(A1L832, GLOBAL(clk), !GLOBAL(reset), , A1L483, data_in[6], , , VCC);
+
+
+--ram[15][6] is ram[15][6] at LC_X36_Y4_N0
+--operation mode is normal
+
+ram[15][6]_lut_out = data_in[6];
+ram[15][6] = DFFEAS(ram[15][6]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L424, , , , );
+
+
+--A1L932 is Mux~632 at LC_X36_Y4_N5
+--operation mode is normal
+
+ram[7][6]_qfbk = ram[7][6];
+A1L932 = A1L832 & (ram[15][6] # !addr[2]) # !A1L832 & (ram[7][6]_qfbk & addr[2]);
+
+--ram[7][6] is ram[7][6] at LC_X36_Y4_N5
+--operation mode is normal
+
+ram[7][6] = DFFEAS(A1L932, GLOBAL(clk), !GLOBAL(reset), , A1L443, data_in[6], , , VCC);
+
+
+--A1L042 is Mux~633 at LC_X35_Y6_N2
+--operation mode is normal
+
+A1L042 = A1L732 & (A1L932 # !addr[1]) # !A1L732 & (addr[1] & A1L232);
+
+
+--cache[0].data[7] is cache[0].data[7] at LC_X32_Y4_N0
+--operation mode is normal
+
+cache[0].data[7]_lut_out = GND;
+cache[0].data[7] = DFFEAS(cache[0].data[7]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L21, A1L001, , , VCC);
+
+
+--A1L241 is data_out~266 at LC_X32_Y6_N0
+--operation mode is normal
+
+cache[1].data[7]_qfbk = cache[1].data[7];
+A1L241 = A1L19 & A1L29 & (cache[0].data[7]) # !A1L19 & (cache[1].data[7]_qfbk # !A1L29);
+
+--cache[1].data[7] is cache[1].data[7] at LC_X32_Y6_N0
+--operation mode is normal
+
+cache[1].data[7] = DFFEAS(A1L241, GLOBAL(clk), !GLOBAL(reset), , A1L23, A1L001, , , VCC);
+
+
+--A1L341 is data_out~267 at LC_X33_Y6_N3
+--operation mode is normal
+
+cache[3].data[7]_qfbk = cache[3].data[7];
+A1L341 = A1L29 & (A1L241) # !A1L29 & (A1L241 & (cache[3].data[7]_qfbk) # !A1L241 & cache[2].data[7]);
+
+--cache[3].data[7] is cache[3].data[7] at LC_X33_Y6_N3
+--operation mode is normal
+
+cache[3].data[7] = DFFEAS(A1L341, GLOBAL(clk), !GLOBAL(reset), , A1L37, A1L001, , , VCC);
+
+
+--ram[8][7] is ram[8][7] at LC_X36_Y8_N4
+--operation mode is normal
+
+ram[8][7]_lut_out = GND;
+ram[8][7] = DFFEAS(ram[8][7]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L453, data_in[7], , , VCC);
+
+
+--A1L142 is Mux~634 at LC_X36_Y7_N7
+--operation mode is normal
+
+ram[9][7]_qfbk = ram[9][7];
+A1L142 = addr[0] & (addr[1] # ram[9][7]_qfbk) # !addr[0] & !addr[1] & (ram[8][7]);
+
+--ram[9][7] is ram[9][7] at LC_X36_Y7_N7
+--operation mode is normal
+
+ram[9][7] = DFFEAS(A1L142, GLOBAL(clk), !GLOBAL(reset), , A1L463, data_in[7], , , VCC);
+
+
+--ram[11][7] is ram[11][7] at LC_X36_Y7_N2
+--operation mode is normal
+
+ram[11][7]_lut_out = GND;
+ram[11][7] = DFFEAS(ram[11][7]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L483, data_in[7], , , VCC);
+
+
+--A1L242 is Mux~635 at LC_X35_Y7_N6
+--operation mode is normal
+
+ram[10][7]_qfbk = ram[10][7];
+A1L242 = A1L142 & (ram[11][7] # !addr[1]) # !A1L142 & addr[1] & ram[10][7]_qfbk;
+
+--ram[10][7] is ram[10][7] at LC_X35_Y7_N6
+--operation mode is normal
+
+ram[10][7] = DFFEAS(A1L242, GLOBAL(clk), !GLOBAL(reset), , A1L473, data_in[7], , , VCC);
+
+
+--ram[4][7] is ram[4][7] at LC_X34_Y3_N0
+--operation mode is normal
+
+ram[4][7]_lut_out = GND;
+ram[4][7] = DFFEAS(ram[4][7]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L413, data_in[7], , , VCC);
+
+
+--A1L342 is Mux~636 at LC_X34_Y3_N1
+--operation mode is normal
+
+ram[6][7]_qfbk = ram[6][7];
+A1L342 = addr[1] & (addr[0] # ram[6][7]_qfbk) # !addr[1] & !addr[0] & (ram[4][7]);
+
+--ram[6][7] is ram[6][7] at LC_X34_Y3_N1
+--operation mode is normal
+
+ram[6][7] = DFFEAS(A1L342, GLOBAL(clk), !GLOBAL(reset), , A1L433, data_in[7], , , VCC);
+
+
+--ram[7][7] is ram[7][7] at LC_X35_Y3_N9
+--operation mode is normal
+
+ram[7][7]_lut_out = GND;
+ram[7][7] = DFFEAS(ram[7][7]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L443, data_in[7], , , VCC);
+
+
+--A1L442 is Mux~637 at LC_X35_Y3_N4
+--operation mode is normal
+
+ram[5][7]_qfbk = ram[5][7];
+A1L442 = A1L342 & (ram[7][7] # !addr[0]) # !A1L342 & addr[0] & ram[5][7]_qfbk;
+
+--ram[5][7] is ram[5][7] at LC_X35_Y3_N4
+--operation mode is normal
+
+ram[5][7] = DFFEAS(A1L442, GLOBAL(clk), !GLOBAL(reset), , A1L423, data_in[7], , , VCC);
+
+
+--ram[0][7] is ram[0][7] at LC_X33_Y2_N0
+--operation mode is normal
+
+ram[0][7]_lut_out = GND;
+ram[0][7] = DFFEAS(ram[0][7]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L472, data_in[7], , , VCC);
+
+
+--A1L542 is Mux~638 at LC_X33_Y2_N6
+--operation mode is normal
+
+ram[2][7]_qfbk = ram[2][7];
+A1L542 = addr[0] & addr[1] # !addr[0] & (addr[1] & ram[2][7]_qfbk # !addr[1] & (ram[0][7]));
+
+--ram[2][7] is ram[2][7] at LC_X33_Y2_N6
+--operation mode is normal
+
+ram[2][7] = DFFEAS(A1L542, GLOBAL(clk), !GLOBAL(reset), , A1L492, data_in[7], , , VCC);
+
+
+--ram[3][7] is ram[3][7] at LC_X36_Y5_N2
+--operation mode is normal
+
+ram[3][7]_lut_out = data_in[7];
+ram[3][7] = DFFEAS(ram[3][7]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L403, , , , );
+
+
+--A1L642 is Mux~639 at LC_X34_Y2_N5
+--operation mode is normal
+
+ram[1][7]_qfbk = ram[1][7];
+A1L642 = addr[0] & (A1L542 & ram[3][7] # !A1L542 & (ram[1][7]_qfbk)) # !addr[0] & (A1L542);
+
+--ram[1][7] is ram[1][7] at LC_X34_Y2_N5
+--operation mode is normal
+
+ram[1][7] = DFFEAS(A1L642, GLOBAL(clk), !GLOBAL(reset), , A1L482, data_in[7], , , VCC);
+
+
+--A1L742 is Mux~640 at LC_X33_Y3_N3
+--operation mode is normal
+
+A1L742 = addr[3] & (addr[2]) # !addr[3] & (addr[2] & (A1L442) # !addr[2] & A1L642);
+
+
+--ram[12][7] is ram[12][7] at LC_X36_Y2_N0
+--operation mode is normal
+
+ram[12][7]_lut_out = data_in[7];
+ram[12][7] = DFFEAS(ram[12][7]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L493, , , , );
+
+
+--A1L842 is Mux~641 at LC_X36_Y3_N2
+--operation mode is normal
+
+ram[13][7]_qfbk = ram[13][7];
+A1L842 = addr[0] & (addr[1] # ram[13][7]_qfbk) # !addr[0] & !addr[1] & (ram[12][7]);
+
+--ram[13][7] is ram[13][7] at LC_X36_Y3_N2
+--operation mode is normal
+
+ram[13][7] = DFFEAS(A1L842, GLOBAL(clk), !GLOBAL(reset), , A1L404, data_in[7], , , VCC);
+
+
+--ram[15][7] is ram[15][7] at LC_X36_Y8_N2
+--operation mode is normal
+
+ram[15][7]_lut_out = GND;
+ram[15][7] = DFFEAS(ram[15][7]_lut_out, GLOBAL(clk), !GLOBAL(reset), , A1L424, data_in[7], , , VCC);
+
+
+--A1L942 is Mux~642 at LC_X36_Y3_N3
+--operation mode is normal
+
+ram[14][7]_qfbk = ram[14][7];
+A1L942 = A1L842 & (ram[15][7] # !addr[1]) # !A1L842 & addr[1] & ram[14][7]_qfbk;
+
+--ram[14][7] is ram[14][7] at LC_X36_Y3_N3
+--operation mode is normal
+
+ram[14][7] = DFFEAS(A1L942, GLOBAL(clk), !GLOBAL(reset), , A1L414, data_in[7], , , VCC);
+
+
+--A1L052 is Mux~643 at LC_X33_Y3_N1
+--operation mode is normal
+
+A1L052 = addr[3] & (A1L742 & (A1L942) # !A1L742 & A1L242) # !addr[3] & (A1L742);
+
+
+--A1L461 is hit~22 at LC_X33_Y6_N6
+--operation mode is normal
+
+A1L461 = write_en # read_en;
+
+
+--A1L39 is cache~520 at LC_X32_Y6_N5
+--operation mode is normal
+
+A1L39 = write_en & (data_in[0]) # !write_en & (A1L081);
+
+--cache[1].data[0] is cache[1].data[0] at LC_X32_Y6_N5
+--operation mode is normal
+
+cache[1].data[0] = DFFEAS(A1L39, GLOBAL(clk), !GLOBAL(reset), , A1L23, , , , );
+
+
+--A1L13 is cache[1].data[0]~170 at LC_X32_Y6_N2
+--operation mode is normal
+
+A1L13 = A1L19 # !A1L29 # !write_en;
+
+
+--lru_counter[1] is lru_counter[1] at LC_X34_Y5_N5
+--operation mode is normal
+
+lru_counter[1]_lut_out = !lru_counter[1];
+lru_counter[1] = DFFEAS(lru_counter[1]_lut_out, GLOBAL(clk), VCC, , A1L961, , , , );
+
+
+--lru_counter[0] is lru_counter[0] at LC_X33_Y5_N6
+--operation mode is normal
+
+lru_counter[0]_lut_out = lru_counter[0] $ (!A1L252 & A1L29 & !A1L152);
+lru_counter[0] = DFFEAS(lru_counter[0]_lut_out, GLOBAL(clk), VCC, , A1L071, , , , );
+
+
+--A1L152 is process0~0 at LC_X32_Y5_N6
+--operation mode is normal
+
+A1L152 = cache[0].valid & (A1L172);
+
+
+--A1L86 is cache[2].tag[7]~18 at LC_X32_Y5_N3
+--operation mode is normal
+
+A1L86 = A1L252 # A1L152 # !A1L461 # !A1L29;
+
+
+--A1L23 is cache[1].data[0]~171 at LC_X32_Y6_N3
+--operation mode is normal
+
+A1L23 = A1L86 & (!A1L13) # !A1L86 & !lru_counter[1] & lru_counter[0];
+
+
+--A1L07 is cache[2].valid~13 at LC_X34_Y5_N7
+--operation mode is normal
+
+A1L07 = !A1L86 & lru_counter[1] & !lru_counter[0];
+
+
+--A1L94 is cache[1].valid~13 at LC_X31_Y5_N3
+--operation mode is normal
+
+A1L94 = !A1L86 & lru_counter[0] & !lru_counter[1];
+
+
+--A1L09 is cache[3].valid~12 at LC_X33_Y5_N7
+--operation mode is normal
+
+A1L09 = lru_counter[1] & (!A1L86 & lru_counter[0]);
+
+
+--A1L85 is cache[2].data[7]~172 at LC_X33_Y4_N9
+--operation mode is normal
+
+A1L85 = A1L29 # !write_en # !A1L19;
+
+
+--A1L95 is cache[2].data[7]~173 at LC_X33_Y4_N3
+--operation mode is normal
+
+A1L95 = A1L86 & (!A1L85) # !A1L86 & lru_counter[1] & !lru_counter[0];
+
+
+--A1L11 is cache[0].data[0]~159 at LC_X32_Y4_N2
+--operation mode is normal
+
+A1L11 = A1L252 # !A1L29 # !write_en;
+
+
+--A1L21 is cache[0].data[0]~160 at LC_X32_Y4_N3
+--operation mode is normal
+
+A1L21 = A1L86 & (!A1L11) # !A1L86 & !lru_counter[0] & !lru_counter[1];
+
+
+--A1L27 is cache[3].data[0]~158 at LC_X33_Y3_N9
+--operation mode is normal
+
+A1L27 = !lru_counter[0] # !lru_counter[1];
+
+
+--A1L37 is cache[3].data[0]~159 at LC_X33_Y6_N9
+--operation mode is normal
+
+A1L37 = A1L86 & (write_en & A1L352) # !A1L86 & !A1L27;
+
+
+--A1L441 is Decoder~249 at LC_X35_Y4_N4
+--operation mode is normal
+
+A1L441 = addr[2] & addr[0] & !addr[1] & !addr[3];
+
+
+--A1L423 is ram[5][0]~47 at LC_X35_Y6_N4
+--operation mode is normal
+
+A1L423 = write_en & A1L441;
+
+
+--A1L541 is Decoder~250 at LC_X35_Y4_N6
+--operation mode is normal
+
+A1L541 = !addr[2] & addr[0] & !addr[1] & addr[3];
+
+
+--A1L463 is ram[9][0]~79 at LC_X33_Y3_N5
+--operation mode is normal
+
+A1L463 = write_en & (A1L541);
+
+
+--A1L641 is Decoder~251 at LC_X34_Y4_N6
+--operation mode is normal
+
+A1L641 = addr[0] & !addr[2] & !addr[3] & !addr[1];
+
+
+--A1L482 is ram[1][0]~15 at LC_X34_Y4_N3
+--operation mode is normal
+
+A1L482 = write_en & (A1L641);
+
+
+--A1L741 is Decoder~252 at LC_X34_Y4_N2
+--operation mode is normal
+
+A1L741 = addr[0] & addr[2] & addr[3] & !addr[1];
+
+
+--A1L404 is ram[13][0]~111 at LC_X34_Y4_N8
+--operation mode is normal
+
+A1L404 = write_en & (A1L741);
+
+
+--A1L841 is Decoder~253 at LC_X34_Y7_N2
+--operation mode is normal
+
+A1L841 = !addr[2] & !addr[0] & addr[1] & addr[3];
+
+
+--A1L473 is ram[10][0]~87 at LC_X34_Y7_N4
+--operation mode is normal
+
+A1L473 = write_en & A1L841;
+
+
+--A1L941 is Decoder~254 at LC_X34_Y3_N2
+--operation mode is normal
+
+A1L941 = !addr[3] & !addr[0] & addr[1] & addr[2];
+
+
+--A1L433 is ram[6][0]~55 at LC_X34_Y3_N3
+--operation mode is normal
+
+A1L433 = write_en & A1L941;
+
+
+--A1L051 is Decoder~255 at LC_X33_Y2_N8
+--operation mode is normal
+
+A1L051 = !addr[0] & addr[1] & !addr[3] & !addr[2];
+
+
+--A1L492 is ram[2][0]~23 at LC_X33_Y2_N3
+--operation mode is normal
+
+A1L492 = write_en & (A1L051);
+
+
+--A1L151 is Decoder~256 at LC_X33_Y2_N2
+--operation mode is normal
+
+A1L151 = !addr[0] & addr[1] & addr[3] & addr[2];
+
+
+--A1L414 is ram[14][0]~119 at LC_X33_Y2_N9
+--operation mode is normal
+
+A1L414 = write_en & (A1L151);
+
+
+--A1L251 is Decoder~257 at LC_X35_Y7_N1
+--operation mode is normal
+
+A1L251 = !addr[0] & !addr[1] & addr[2] & !addr[3];
+
+
+--A1L413 is ram[4][0]~39 at LC_X35_Y7_N2
+--operation mode is normal
+
+A1L413 = write_en & A1L251;
+
+
+--A1L351 is Decoder~258 at LC_X35_Y7_N4
+--operation mode is normal
+
+A1L351 = !addr[0] & !addr[1] & !addr[2] & addr[3];
+
+
+--A1L453 is ram[8][0]~71 at LC_X35_Y7_N3
+--operation mode is normal
+
+A1L453 = write_en & A1L351;
+
+
+--A1L451 is Decoder~259 at LC_X35_Y7_N9
+--operation mode is normal
+
+A1L451 = !addr[0] & !addr[1] & !addr[2] & !addr[3];
+
+
+--A1L472 is ram[0][0]~7 at LC_X35_Y2_N6
+--operation mode is normal
+
+A1L472 = write_en & A1L451;
+
+
+--A1L551 is Decoder~260 at LC_X34_Y2_N0
+--operation mode is normal
+
+A1L551 = !addr[1] & !addr[0] & addr[2] & addr[3];
+
+
+--A1L493 is ram[12][0]~103 at LC_X34_Y2_N8
+--operation mode is normal
+
+A1L493 = write_en & A1L551;
+
+
+--A1L651 is Decoder~261 at LC_X34_Y2_N1
+--operation mode is normal
+
+A1L651 = addr[1] & addr[0] & !addr[2] & addr[3];
+
+
+--A1L483 is ram[11][0]~95 at LC_X34_Y2_N4
+--operation mode is normal
+
+A1L483 = A1L651 & write_en;
+
+
+--A1L751 is Decoder~262 at LC_X34_Y2_N2
+--operation mode is normal
+
+A1L751 = addr[1] & addr[0] & addr[2] & !addr[3];
+
+
+--A1L443 is ram[7][0]~63 at LC_X34_Y2_N6
+--operation mode is normal
+
+A1L443 = write_en & A1L751;
+
+
+--A1L851 is Decoder~263 at LC_X35_Y2_N5
+--operation mode is normal
+
+A1L851 = addr[1] & addr[0] & !addr[3] & !addr[2];
+
+
+--A1L403 is ram[3][0]~31 at LC_X35_Y2_N8
+--operation mode is normal
+
+A1L403 = A1L851 & write_en;
+
+
+--A1L951 is Decoder~264 at LC_X35_Y2_N2
+--operation mode is normal
+
+A1L951 = addr[1] & addr[0] & addr[3] & addr[2];
+
+
+--A1L424 is ram[15][0]~127 at LC_X35_Y2_N4
+--operation mode is normal
+
+A1L424 = write_en & A1L951;
+
+
+--A1L92 is cache[0].valid~14 at LC_X35_Y5_N3
+--operation mode is normal
+
+A1L92 = !A1L86 & (!lru_counter[1] & !lru_counter[0]);
+
+
+--A1L49 is cache~521 at LC_X33_Y4_N5
+--operation mode is normal
+
+A1L49 = write_en & data_in[1] # !write_en & (A1L091);
+
+--cache[2].data[1] is cache[2].data[1] at LC_X33_Y4_N5
+--operation mode is normal
+
+cache[2].data[1] = DFFEAS(A1L49, GLOBAL(clk), !GLOBAL(reset), , A1L95, , , , );
+
+
+--A1L59 is cache~522 at LC_X32_Y6_N7
+--operation mode is normal
+
+A1L59 = write_en & (data_in[2]) # !write_en & (A1L002);
+
+--cache[1].data[2] is cache[1].data[2] at LC_X32_Y6_N7
+--operation mode is normal
+
+cache[1].data[2] = DFFEAS(A1L59, GLOBAL(clk), !GLOBAL(reset), , A1L23, , , , );
+
+
+--A1L69 is cache~523 at LC_X33_Y4_N0
+--operation mode is normal
+
+A1L69 = write_en & (data_in[3]) # !write_en & A1L012;
+
+--cache[2].data[3] is cache[2].data[3] at LC_X33_Y4_N0
+--operation mode is normal
+
+cache[2].data[3] = DFFEAS(A1L69, GLOBAL(clk), !GLOBAL(reset), , A1L95, , , , );
+
+
+--A1L79 is cache~524 at LC_X32_Y6_N4
+--operation mode is normal
+
+A1L79 = write_en & (data_in[4]) # !write_en & (A1L022);
+
+--cache[1].data[4] is cache[1].data[4] at LC_X32_Y6_N4
+--operation mode is normal
+
+cache[1].data[4] = DFFEAS(A1L79, GLOBAL(clk), !GLOBAL(reset), , A1L23, , , , );
+
+
+--A1L89 is cache~525 at LC_X33_Y4_N4
+--operation mode is normal
+
+A1L89 = write_en & data_in[5] # !write_en & (A1L032);
+
+--cache[2].data[5] is cache[2].data[5] at LC_X33_Y4_N4
+--operation mode is normal
+
+cache[2].data[5] = DFFEAS(A1L89, GLOBAL(clk), !GLOBAL(reset), , A1L95, , , , );
+
+
+--A1L99 is cache~526 at LC_X32_Y6_N1
+--operation mode is normal
+
+A1L99 = write_en & (data_in[6]) # !write_en & (A1L042);
+
+--cache[1].data[6] is cache[1].data[6] at LC_X32_Y6_N1
+--operation mode is normal
+
+cache[1].data[6] = DFFEAS(A1L99, GLOBAL(clk), !GLOBAL(reset), , A1L23, , , , );
+
+
+--A1L001 is cache~527 at LC_X33_Y4_N7
+--operation mode is normal
+
+A1L001 = write_en & data_in[7] # !write_en & (A1L052);
+
+--cache[2].data[7] is cache[2].data[7] at LC_X33_Y4_N7
+--operation mode is normal
+
+cache[2].data[7] = DFFEAS(A1L001, GLOBAL(clk), !GLOBAL(reset), , A1L95, , , , );
+
+
+--A1L961 is lru_counter[1]~72 at LC_X33_Y3_N6
+--operation mode is normal
+
+A1L961 = !reset & A1L461 & lru_counter[0] & !A1L261;
+
+
+--A1L071 is lru_counter[1]~73 at LC_X34_Y6_N6
+--operation mode is normal
+
+A1L071 = !reset & (read_en # write_en);
+
+
+--read_en is read_en at PIN_T9
+--operation mode is input
+
+read_en = INPUT();
+
+
+--addr[7] is addr[7] at PIN_Y12
+--operation mode is input
+
+addr[7] = INPUT();
+
+
+--addr[5] is addr[5] at PIN_AB11
+--operation mode is input
+
+addr[5] = INPUT();
+
+
+--addr[6] is addr[6] at PIN_AA11
+--operation mode is input
+
+addr[6] = INPUT();
+
+
+--addr[4] is addr[4] at PIN_W9
+--operation mode is input
+
+addr[4] = INPUT();
+
+
+--addr[1] is addr[1] at PIN_V9
+--operation mode is input
+
+addr[1] = INPUT();
+
+
+--addr[2] is addr[2] at PIN_R8
+--operation mode is input
+
+addr[2] = INPUT();
+
+
+--addr[3] is addr[3] at PIN_P9
+--operation mode is input
+
+addr[3] = INPUT();
+
+
+--addr[0] is addr[0] at PIN_N10
+--operation mode is input
+
+addr[0] = INPUT();
+
+
+--clk is clk at PIN_L2
+--operation mode is input
+
+clk = INPUT();
+
+
+--reset is reset at PIN_L3
+--operation mode is input
+
+reset = INPUT();
+
+
+--write_en is write_en at PIN_T10
+--operation mode is input
+
+write_en = INPUT();
+
+
+--data_in[0] is data_in[0] at PIN_P8
+--operation mode is input
+
+data_in[0] = INPUT();
+
+
+--data_in[1] is data_in[1] at PIN_N8
+--operation mode is input
+
+data_in[1] = INPUT();
+
+
+--data_in[2] is data_in[2] at PIN_AA8
+--operation mode is input
+
+data_in[2] = INPUT();
+
+
+--data_in[3] is data_in[3] at PIN_M8
+--operation mode is input
+
+data_in[3] = INPUT();
+
+
+--data_in[4] is data_in[4] at PIN_U9
+--operation mode is input
+
+data_in[4] = INPUT();
+
+
+--data_in[5] is data_in[5] at PIN_Y9
+--operation mode is input
+
+data_in[5] = INPUT();
+
+
+--data_in[6] is data_in[6] at PIN_P10
+--operation mode is input
+
+data_in[6] = INPUT();
+
+
+--data_in[7] is data_in[7] at PIN_Y8
+--operation mode is input
+
+data_in[7] = INPUT();
+
+
+--data_out[0] is data_out[0] at PIN_P4
+--operation mode is output
+
+data_out[0] = OUTPUT(A1L311Q);
+
+
+--data_out[1] is data_out[1] at PIN_M7
+--operation mode is output
+
+data_out[1] = OUTPUT(A1L511Q);
+
+
+--data_out[2] is data_out[2] at PIN_U8
+--operation mode is output
+
+data_out[2] = OUTPUT(A1L711Q);
+
+
+--data_out[3] is data_out[3] at PIN_Y13
+--operation mode is output
+
+data_out[3] = OUTPUT(A1L911Q);
+
+
+--data_out[4] is data_out[4] at PIN_T8
+--operation mode is output
+
+data_out[4] = OUTPUT(A1L121Q);
+
+
+--data_out[5] is data_out[5] at PIN_AB12
+--operation mode is output
+
+data_out[5] = OUTPUT(A1L321Q);
+
+
+--data_out[6] is data_out[6] at PIN_W8
+--operation mode is output
+
+data_out[6] = OUTPUT(A1L521Q);
+
+
+--data_out[7] is data_out[7] at PIN_AA12
+--operation mode is output
+
+data_out[7] = OUTPUT(A1L721Q);
+
+
+--hit is hit at PIN_AA13
+--operation mode is output
+
+hit = OUTPUT(A1L561Q);
+
+
+

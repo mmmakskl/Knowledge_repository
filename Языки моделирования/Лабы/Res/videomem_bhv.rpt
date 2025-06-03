@@ -1,0 +1,1400 @@
+Project Information                       y:\lab19\new folder\videomem_bhv.rpt
+
+MAX+plus II Compiler Report File
+Version 9.01 07/30/98
+Compiled: 02/17/21 02:25:27
+
+Copyright (C) 1988-1998 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+VIDEOMEM_BHV
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input Output Bidir  Memory  Memory  			 LCs
+POF       Device          Pins  Pins   Pins   Bits % Utilized  LCs  % Utilized
+
+videomem_bhv
+      EPF10K10ATC100-1     18     10     0    0         0  %    133      23 %
+
+User Pins:                 18     10     0  
+
+
+
+Project Information                       y:\lab19\new folder\videomem_bhv.rpt
+
+** PROJECT TIMING MESSAGES **
+
+Warning: Timing characteristics of device EPF10K10ATC100-1 are preliminary
+
+
+Project Information                       y:\lab19\new folder\videomem_bhv.rpt
+
+** FILE HIERARCHY **
+
+
+
+|lpm_add_sub:2340|
+|lpm_add_sub:2340|addcore:adder|
+|lpm_add_sub:2340|altshift:result_ext_latency_ffs|
+|lpm_add_sub:2340|altshift:carry_ext_latency_ffs|
+|lpm_add_sub:2340|altshift:oflow_ext_latency_ffs|
+
+
+Device-Specific Information:              y:\lab19\new folder\videomem_bhv.rpt
+videomem_bhv
+
+***** Logic for device 'videomem_bhv' compiled without errors.
+
+
+
+
+Device: EPF10K10ATC100-1
+
+FLEX 10K Configuration Scheme: Passive Serial
+
+Device Options:
+    User-Supplied Start-Up Clock               = OFF
+    Auto-Restart Configuration on Frame Error  = OFF
+    Release Clears Before Tri-States           = OFF
+    Enable Chip_Wide Reset                     = OFF
+    Enable Chip-Wide Output Enable             = OFF
+    Enable INIT_DONE Output                    = OFF
+    JTAG User Code                             = 7f
+    MultiVolt I/O                              = OFF
+
+                                                                   
+                                                                   
+                  R R R R   R R           R R         R R R R R    
+                  E E E E   E E           E E         E E E E E    
+                  S S S S   S S         V S S         S S S S S ^  
+                  E E E E   E E         C E E     V   E E E E E D  
+                # R R R R   R R   K K K C R R     C   R R R R R A  
+                T V V V V G V V G K K K I V V     C   V V V V V T  
+                C E E E E N E E N S S S N E E Q Q I Q E E E E E A  
+                K D D D D D D D D 7 3 6 T D D 5 2 O 6 D D D D D 0  
+              ----------------------------------------------------_ 
+             / 100  98  96  94  92  90  88  86  84  82  80  78  76   |_ 
+            /     99  97  95  93  91  89  87  85  83  81  79  77    | 
+^CONF_DONE |  1                                                    75 | ^DCLK 
+     ^nCEO |  2                                                    74 | ^nCE 
+      #TDO |  3                                                    73 | #TDI 
+     VCCIO |  4                                                    72 | GND 
+      KKS2 |  5                                                    71 | Q1 
+      KKS1 |  6                                                    70 | DATA1 
+      KKS0 |  7                                                    69 | Q0 
+     DATA5 |  8                                                    68 | DATA0 
+     DATA4 |  9                                                    67 | VCCIO 
+     DATA3 | 10                                                    66 | VCCINT 
+       GND | 11                                                    65 | RESERVED 
+       GND | 12                                                    64 | RESERVED 
+     Query | 13                 EPF10K10ATC100-1                   63 | Get 
+     DATA6 | 14                                                    62 | RESERVED 
+  RESERVED | 15                                                    61 | RESERVED 
+  RESERVED | 16                                                    60 | GND 
+     VCCIO | 17                                                    59 | GND 
+    VCCINT | 18                                                    58 | RESERVED 
+     DATA7 | 19                                                    57 | RESERVED 
+     DATA2 | 20                                                    56 | RESERVED 
+  RESERVED | 21                                                    55 | RESERVED 
+  RESERVED | 22                                                    54 | ^MSEL0 
+  RESERVED | 23                                                    53 | ^MSEL1 
+      #TMS | 24                                                    52 | VCCINT 
+  ^nSTATUS | 25                                                    51 | ^nCONFIG 
+           |      27  29  31  33  35  37  39  41  43  45  47  49  _| 
+            \   26  28  30  32  34  36  38  40  42  44  46  48  50   | 
+             \----------------------------------------------------- 
+                R R G R R R V R Q R Q V K C K G R R R R G R Q V S  
+                E E N E E E C E 4 E 3 C K L K N E E E E N E 7 C y  
+                S S D S S S C S   S   C S K S D S S S S D S   C n  
+                E E   E E E I E   E   I 5   4   E E E E   E   I c  
+                R R   R R R O R   R   N         R R R R   R   O h  
+                V V   V V V   V   V   T         V V V V   V     r  
+                E E   E E E   E   E             E E E E   E     o  
+                D D   D D D   D   D             D D D D   D        
+                                                                   
+                                                                   
+
+
+N.C. = Not Connected.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (3.3 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (3.3 volts).
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+^ = Dedicated configuration pin.
++ = Reserved configuration pin, which is tri-stated during user mode.
+* = Reserved configuration pin, which drives out in user mode.
+PDn = Power Down pin. 
+@ = Special-purpose pin. 
+# = JTAG Boundary-Scan Testing/In-System Programming or Configuration Pin. The JTAG inputs (TMS, TCK, TDI) should be tied to VCC when not in use.
+& = JTAG pin used for I/O. When used as user I/O, JTAG pins must be kept stable before and during configuration.  JTAG pin stability prevents accidental loading of JTAG instructions.
+$ = Pin has PCI I/O option enabled. Pin is not '5.0 V'-tolerant. 
+
+
+Device-Specific Information:              y:\lab19\new folder\videomem_bhv.rpt
+videomem_bhv
+
+** RESOURCE USAGE **
+
+Logic                Column       Row                                   
+Array                Interconnect Interconnect         Clears/     External  
+Block   Logic Cells  Driven       Driven       Clocks  Presets   Interconnect
+A2       6/ 8( 75%)   2/ 8( 25%)   0/ 8(  0%)    1/2    0/2      16/22( 72%)   
+A7       8/ 8(100%)   1/ 8( 12%)   1/ 8( 12%)    1/2    0/2       2/22(  9%)   
+A8       8/ 8(100%)   0/ 8(  0%)   1/ 8( 12%)    1/2    0/2       2/22(  9%)   
+A13      8/ 8(100%)   1/ 8( 12%)   1/ 8( 12%)    1/2    0/2       2/22(  9%)   
+A14      8/ 8(100%)   0/ 8(  0%)   1/ 8( 12%)    1/2    0/2       2/22(  9%)   
+A15      8/ 8(100%)   1/ 8( 12%)   1/ 8( 12%)    1/2    0/2       2/22(  9%)   
+B1       8/ 8(100%)   1/ 8( 12%)   4/ 8( 50%)    1/2    0/2       4/22( 18%)   
+B3       6/ 8( 75%)   1/ 8( 12%)   2/ 8( 25%)    1/2    0/2       3/22( 13%)   
+B4       8/ 8(100%)   1/ 8( 12%)   0/ 8(  0%)    1/2    0/2       2/22(  9%)   
+B9       4/ 8( 50%)   0/ 8(  0%)   1/ 8( 12%)    1/2    0/2       1/22(  4%)   
+B10      1/ 8( 12%)   0/ 8(  0%)   1/ 8( 12%)    0/2    0/2       2/22(  9%)   
+B16      1/ 8( 12%)   1/ 8( 12%)   1/ 8( 12%)    1/2    0/2       2/22(  9%)   
+B18      4/ 8( 50%)   0/ 8(  0%)   3/ 8( 37%)    1/2    0/2       3/22( 13%)   
+B19      8/ 8(100%)   0/ 8(  0%)   2/ 8( 25%)    1/2    0/2       9/22( 40%)   
+B23      1/ 8( 12%)   0/ 8(  0%)   1/ 8( 12%)    1/2    0/2       2/22(  9%)   
+C5       8/ 8(100%)   1/ 8( 12%)   0/ 8(  0%)    1/2    0/2       2/22(  9%)   
+C6       8/ 8(100%)   1/ 8( 12%)   0/ 8(  0%)    1/2    0/2       2/22(  9%)   
+C17      8/ 8(100%)   1/ 8( 12%)   0/ 8(  0%)    1/2    0/2       6/22( 27%)   
+C19      1/ 8( 12%)   0/ 8(  0%)   1/ 8( 12%)    1/2    0/2       2/22(  9%)   
+C20      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    1/2    0/2       4/22( 18%)   
+C21      6/ 8( 75%)   0/ 8(  0%)   2/ 8( 25%)    1/2    0/2       4/22( 18%)   
+C22      7/ 8( 87%)   0/ 8(  0%)   2/ 8( 25%)    1/2    0/2       4/22( 18%)   
+C23      1/ 8( 12%)   0/ 8(  0%)   1/ 8( 12%)    1/2    0/2       2/22(  9%)   
+C24      1/ 8( 12%)   0/ 8(  0%)   1/ 8( 12%)    1/2    0/2       2/22(  9%)   
+
+
+Embedded             Column       Row                                   
+Array     Embedded   Interconnect Interconnect         Read/      External  
+Block     Cells      Driven       Driven       Clocks  Write    Interconnect
+
+
+Total dedicated input pins used:                 6/6      (100%)
+Total I/O pins used:                            22/60     ( 36%)
+Total logic cells used:                        133/576    ( 23%)
+Total embedded cells used:                       0/24     (  0%)
+Total EABs used:                                 0/3      (  0%)
+Average fan-in:                                 2.36/4    ( 59%)
+Total fan-in:                                 314/2304    ( 13%)
+
+Total input pins required:                      18
+Total input I/O cell registers required:         0
+Total output pins required:                     10
+Total output I/O cell registers required:        0
+Total buried I/O cell registers required:        0
+Total bidirectional pins required:               0
+Total reserved pins required                     0
+Total logic cells required:                    133
+Total flipflops required:                       98
+Total packed registers required:                 0
+Total logic cells in carry chains:               0
+Total number of carry chains:                    0
+Total logic cells in cascade chains:             0
+Total number of cascade chains:                  0
+Total single-pin Clock Enables required:         0
+Total single-pin Output Enables required:        0
+
+Synthesized logic cells:                        14/ 576   (  2%)
+
+Logic Cell and Embedded Cell Counts
+
+Column:  01  02  03  04  05  06  07  08  09  10  11  12  EA  13  14  15  16  17  18  19  20  21  22  23  24  Total(LC/EC)
+ A:      0   6   0   0   0   0   8   8   0   0   0   0   0   8   8   8   0   0   0   0   0   0   0   0   0     46/0  
+ B:      8   0   6   8   0   0   0   0   4   1   0   0   0   0   0   0   1   0   4   8   0   0   0   1   0     41/0  
+ C:      0   0   0   0   8   8   0   0   0   0   0   0   0   0   0   0   0   8   0   1   6   6   7   1   1     46/0  
+
+Total:   8   6   6   8   8   8   8   8   4   1   0   0   0   8   8   8   1   8   4   9   6   6   7   2   1    133/0  
+
+
+
+Device-Specific Information:              y:\lab19\new folder\videomem_bhv.rpt
+videomem_bhv
+
+** INPUTS **
+
+                                                    Fan-In    Fan-Out
+ Pin     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+  39      -     -    -    --      INPUT  G              0    0    0    0  CLK
+  68      -     -    A    --      INPUT                 0    0    0    1  DATA0
+  70      -     -    A    --      INPUT                 0    0    0    1  DATA1
+  20      -     -    C    --      INPUT                 0    0    0    1  DATA2
+  10      -     -    A    --      INPUT                 0    0    0    1  DATA3
+   9      -     -    A    --      INPUT                 0    0    0    1  DATA4
+   8      -     -    A    --      INPUT                 0    0    0    1  DATA5
+  14      -     -    B    --      INPUT                 0    0    0    1  DATA6
+  19      -     -    C    --      INPUT                 0    0    0    1  DATA7
+   7      -     -    A    --      INPUT                 0    0    0    1  KKS0
+   6      -     -    A    --      INPUT                 0    0    0    1  KKS1
+   5      -     -    A    --      INPUT                 0    0    0    1  KKS2
+  90      -     -    -    --      INPUT                 0    0    0    1  KKS3
+  40      -     -    -    --      INPUT                 0    0    0    1  KKS4
+  38      -     -    -    --      INPUT                 0    0    0    1  KKS5
+  89      -     -    -    --      INPUT                 0    0    0    1  KKS6
+  91      -     -    -    --      INPUT                 0    0    0    1  KKS7
+  13      -     -    B    --      INPUT                 0    0    0    1  Query
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+* = PCI I/O is enabled
+@ = Uses single-pin Clock Enable
+& = Uses single-pin Output Enable
+G = Global Source. Fan-out destinations counted here do not include destinations
+that are driven using global routing resources. Refer to the Auto Global Signals,
+Clock Signals, Clear Signals, Synchronous Load Signals, and Synchronous Clear Signals
+Sections of this Report File for information on which signals' fan-outs are used as
+Clock, Clear, Preset, Output Enable, and synchronous Load signals.
+
+
+Device-Specific Information:              y:\lab19\new folder\videomem_bhv.rpt
+videomem_bhv
+
+** OUTPUTS **
+
+       Fed By Fed By                                Fan-In    Fan-Out
+ Pin     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+  63      -     -    B    --     OUTPUT                 0    1    0    0  Get
+  69      -     -    A    --     OUTPUT                 0    1    0    0  Q0
+  71      -     -    A    --     OUTPUT                 0    1    0    0  Q1
+  84      -     -    -    05     OUTPUT                 0    1    0    0  Q2
+  36      -     -    -    14     OUTPUT                 0    1    0    0  Q3
+  34      -     -    -    16     OUTPUT                 0    1    0    0  Q4
+  85      -     -    -    08     OUTPUT                 0    1    0    0  Q5
+  82      -     -    -    04     OUTPUT                 0    1    0    0  Q6
+  48      -     -    -    06     OUTPUT                 0    1    0    0  Q7
+  50      -     -    -    02     OUTPUT                 0    1    0    0  Synchro
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+* = PCI I/O is enabled
+@ = Uses single-pin Clock Enable
+& = Uses single-pin Output Enable
+
+
+Device-Specific Information:              y:\lab19\new folder\videomem_bhv.rpt
+videomem_bhv
+
+** BURIED LOGIC **
+
+                                                    Fan-In    Fan-Out
+ IOC     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+   -      1     -    B    09       AND2                0    3    0    5  |LPM_ADD_SUB:2340|addcore:adder|:171
+   -      8     -    B    19       AND2                0    2    0    1  |LPM_ADD_SUB:2340|addcore:adder|:175
+   -      1     -    B    19       AND2                0    4    0    2  |LPM_ADD_SUB:2340|addcore:adder|:183
+   -      2     -    B    18       AND2                0    2    0    3  |LPM_ADD_SUB:2340|addcore:adder|:187
+   -      1     -    B    18       AND2                0    3    0    4  |LPM_ADD_SUB:2340|addcore:adder|:195
+   -      8     -    B    01       AND2                0    2    0    1  |LPM_ADD_SUB:2340|addcore:adder|:199
+   -      1     -    B    01       AND2                0    4    0    4  |LPM_ADD_SUB:2340|addcore:adder|:207
+   -      6     -    B    03       AND2                0    2    0    1  |LPM_ADD_SUB:2340|addcore:adder|:211
+   -      1     -    B    03       AND2                0    4    0    4  |LPM_ADD_SUB:2340|addcore:adder|:219
+   -      7     -    C    22       AND2                0    2    0    1  |LPM_ADD_SUB:2340|addcore:adder|:223
+   -      6     -    C    22       AND2                0    4    0    2  |LPM_ADD_SUB:2340|addcore:adder|:231
+   -      1     -    C    22       AND2                0    2    0    3  |LPM_ADD_SUB:2340|addcore:adder|:235
+   -      6     -    C    20       AND2                0    3    0    3  |LPM_ADD_SUB:2340|addcore:adder|:243
+   -      1     -    C    20       AND2                0    3    0    3  |LPM_ADD_SUB:2340|addcore:adder|:251
+   -      6     -    C    21       AND2                0    3    0    3  |LPM_ADD_SUB:2340|addcore:adder|:259
+   -      1     -    C    21       AND2                0    3    0    3  |LPM_ADD_SUB:2340|addcore:adder|:267
+   -      7     -    C    17       AND2                0    3    0    3  |LPM_ADD_SUB:2340|addcore:adder|:275
+   -      8     -    C    17       AND2                0    2    0    1  |LPM_ADD_SUB:2340|addcore:adder|:279
+   -      2     -    A    02       DFFE   +            0    4    1    0  :28
+   -      4     -    B    01       DFFE   +            0    2    1    1  sGet (:30)
+   -      8     -    C    06       DFFE   +            0    1    1    2  pixel7_7 (:31)
+   -      1     -    B    04       DFFE   +            0    1    1    2  pixel7_6 (:32)
+   -      1     -    A    07       DFFE   +            0    1    1    2  pixel7_5 (:33)
+   -      1     -    A    15       DFFE   +            0    1    1    2  pixel7_4 (:34)
+   -      6     -    A    13       DFFE   +            0    1    1    2  pixel7_3 (:35)
+   -      2     -    C    05       DFFE   +            0    1    1    2  pixel7_2 (:36)
+   -      4     -    A    14       DFFE   +            0    1    1    2  pixel7_1 (:37)
+   -      5     -    A    08       DFFE   +            0    1    1    2  pixel7_0 (:38)
+   -      3     -    C    06       DFFE   +            0    1    0    1  pixel6_7 (:39)
+   -      4     -    B    04       DFFE   +            0    1    0    1  pixel6_6 (:40)
+   -      4     -    A    07       DFFE   +            0    1    0    1  pixel6_5 (:41)
+   -      4     -    A    15       DFFE   +            0    1    0    1  pixel6_4 (:42)
+   -      1     -    A    13       DFFE   +            0    1    0    1  pixel6_3 (:43)
+   -      3     -    C    05       DFFE   +            0    1    0    1  pixel6_2 (:44)
+   -      2     -    A    14       DFFE   +            0    1    0    1  pixel6_1 (:45)
+   -      3     -    A    08       DFFE   +            0    1    0    1  pixel6_0 (:46)
+   -      2     -    C    06       DFFE   +            0    1    0    1  pixel5_7 (:47)
+   -      3     -    B    04       DFFE   +            0    1    0    1  pixel5_6 (:48)
+   -      3     -    A    07       DFFE   +            0    1    0    1  pixel5_5 (:49)
+   -      3     -    A    15       DFFE   +            0    1    0    1  pixel5_4 (:50)
+   -      3     -    A    13       DFFE   +            0    1    0    1  pixel5_3 (:51)
+   -      4     -    C    05       DFFE   +            0    1    0    1  pixel5_2 (:52)
+   -      3     -    A    14       DFFE   +            0    1    0    1  pixel5_1 (:53)
+   -      2     -    A    08       DFFE   +            0    1    0    1  pixel5_0 (:54)
+   -      1     -    C    06       DFFE   +            0    1    0    1  pixel4_7 (:55)
+   -      2     -    B    04       DFFE   +            0    1    0    1  pixel4_6 (:56)
+   -      2     -    A    07       DFFE   +            0    1    0    1  pixel4_5 (:57)
+   -      2     -    A    15       DFFE   +            0    1    0    1  pixel4_4 (:58)
+   -      2     -    A    13       DFFE   +            0    1    0    1  pixel4_3 (:59)
+   -      1     -    C    05       DFFE   +            0    1    0    1  pixel4_2 (:60)
+   -      1     -    A    14       DFFE   +            0    1    0    1  pixel4_1 (:61)
+   -      1     -    A    08       DFFE   +            0    1    0    1  pixel4_0 (:62)
+   -      7     -    C    06       DFFE   +            0    1    0    1  pixel3_7 (:63)
+   -      5     -    B    04       DFFE   +            0    1    0    1  pixel3_6 (:64)
+   -      5     -    A    07       DFFE   +            0    1    0    1  pixel3_5 (:65)
+   -      5     -    A    15       DFFE   +            0    1    0    1  pixel3_4 (:66)
+   -      4     -    A    13       DFFE   +            0    1    0    1  pixel3_3 (:67)
+   -      6     -    C    05       DFFE   +            0    1    0    1  pixel3_2 (:68)
+   -      7     -    A    14       DFFE   +            0    1    0    1  pixel3_1 (:69)
+   -      7     -    A    08       DFFE   +            0    1    0    1  pixel3_0 (:70)
+   -      6     -    C    06       DFFE   +            0    1    0    1  pixel2_7 (:71)
+   -      8     -    B    04       DFFE   +            0    1    0    1  pixel2_6 (:72)
+   -      8     -    A    07       DFFE   +            0    1    0    1  pixel2_5 (:73)
+   -      8     -    A    15       DFFE   +            0    1    0    1  pixel2_4 (:74)
+   -      8     -    A    13       DFFE   +            0    1    0    1  pixel2_3 (:75)
+   -      8     -    C    05       DFFE   +            0    1    0    1  pixel2_2 (:76)
+   -      8     -    A    14       DFFE   +            0    1    0    1  pixel2_1 (:77)
+   -      8     -    A    08       DFFE   +            0    1    0    1  pixel2_0 (:78)
+   -      5     -    C    06       DFFE   +            0    1    0    1  pixel1_7 (:79)
+   -      7     -    B    04       DFFE   +            0    1    0    1  pixel1_6 (:80)
+   -      7     -    A    07       DFFE   +            0    1    0    1  pixel1_5 (:81)
+   -      6     -    A    15       DFFE   +            0    1    0    1  pixel1_4 (:82)
+   -      5     -    A    13       DFFE   +            0    1    0    1  pixel1_3 (:83)
+   -      7     -    C    05       DFFE   +            0    1    0    1  pixel1_2 (:84)
+   -      6     -    A    14       DFFE   +            0    1    0    1  pixel1_1 (:85)
+   -      6     -    A    08       DFFE   +            0    1    0    1  pixel1_0 (:86)
+   -      4     -    C    06       DFFE   +            1    2    0    1  pixel0_7 (:87)
+   -      6     -    B    04       DFFE   +            1    2    0    1  pixel0_6 (:88)
+   -      6     -    A    07       DFFE   +            1    2    0    1  pixel0_5 (:89)
+   -      7     -    A    15       DFFE   +            1    2    0    1  pixel0_4 (:90)
+   -      7     -    A    13       DFFE   +            1    2    0    1  pixel0_3 (:91)
+   -      5     -    C    05       DFFE   +            1    2    0    1  pixel0_2 (:92)
+   -      5     -    A    14       DFFE   +            1    2    0    1  pixel0_1 (:93)
+   -      4     -    A    08       DFFE   +            1    2    0    1  pixel0_0 (:94)
+   -      3     -    C    17       DFFE   +            0    3    0    1  count31~178 (:241)
+   -      4     -    C    17       DFFE   +            0    3    0    2  count30~178 (:242)
+   -      5     -    C    17       DFFE   +            0    2    0    3  count29~178 (:243)
+   -      1     -    C    17       DFFE   +            0    3    0    2  count28~178 (:244)
+   -      2     -    C    19       DFFE   +            0    2    0    3  count27~178 (:245)
+   -      5     -    C    21       DFFE   +            0    3    0    2  count26~178 (:246)
+   -      4     -    C    21       DFFE   +            0    2    0    3  count25~178 (:247)
+   -      2     -    C    21       DFFE   +            0    3    0    2  count24~178 (:248)
+   -      1     -    C    24       DFFE   +            0    2    0    3  count23~178 (:249)
+   -      5     -    C    20       DFFE   +            0    3    0    2  count22~178 (:250)
+   -      4     -    C    20       DFFE   +            0    2    0    3  count21~178 (:251)
+   -      3     -    C    20       DFFE   +            0    3    0    2  count20~178 (:252)
+   -      1     -    C    23       DFFE   +            0    2    0    3  count19~178 (:253)
+   -      5     -    C    22       DFFE   +            0    2    0    2  count18~178 (:254)
+   -      4     -    C    22       DFFE   +            0    3    0    2  count17~178 (:255)
+   -      3     -    C    22       DFFE   +            0    3    0    3  count16~178 (:256)
+   -      1     -    B    16       DFFE   +            0    2    0    4  count15~178 (:257)
+   -      5     -    B    03       DFFE   +            0    3    0    2  count14~178 (:258)
+   -      4     -    B    03       DFFE   +            0    3    0    3  count13~178 (:259)
+   -      3     -    B    03       DFFE   +            0    2    0    4  count12~178 (:260)
+   -      5     -    B    01       DFFE   +            0    3    0    2  count11~178 (:261)
+   -      3     -    B    01       DFFE   +            0    3    0    3  count10~178 (:262)
+   -      6     -    B    01       DFFE   +            0    2    0    4  count9~178 (:263)
+   -      3     -    B    18       DFFE   +            0    3    0    2  count8~178 (:264)
+   -      5     -    B    18       DFFE   +            0    2    0    3  count7~178 (:265)
+   -      1     -    B    23       DFFE   +            0    2    0    2  count6~178 (:266)
+   -      7     -    B    19       DFFE   +            0    3    0    2  count5~178 (:267)
+   -      6     -    B    19       DFFE   +            0    3    0    3  count4~178 (:268)
+   -      5     -    B    19       DFFE   +            0    2    0    4  count3~178 (:269)
+   -      2     -    B    09       DFFE   +            0    3    0    1  count2~178 (:270)
+   -      3     -    B    09       DFFE   +            0    2    0    2  count1~178 (:271)
+   -      4     -    B    09       DFFE   +            0    1    0    3  count0~178 (:272)
+   -      2     -    B    03        OR2    s           0    4    0    1  ~2341~1
+   -      7     -    B    01        OR2    s           0    3    0    1  ~2341~2
+   -      3     -    B    19        OR2    s           0    4    0    1  ~2341~3
+   -      4     -    B    19        OR2    s           0    4    0    1  ~2341~4
+   -      6     -    C    17        OR2    s           0    4    0    1  ~2341~5
+   -      3     -    C    21        OR2    s           0    4    0    1  ~2341~6
+   -      2     -    C    20        OR2    s           0    4    0    1  ~2341~7
+   -      2     -    C    22        OR2    s           0    4    0    1  ~2341~8
+   -      2     -    C    17        OR2    s           0    4    0    1  ~2341~9
+   -      2     -    B    19        OR2        !       0    4    0    2  :2341
+   -      3     -    A    02        OR2    s           2    2    0    2  ~2664~1
+   -      4     -    A    02        OR2    s           2    2    0    2  ~2664~2
+   -      5     -    A    02        OR2    s           2    2    0    2  ~2664~3
+   -      6     -    A    02        OR2    s           2    2    0    2  ~2664~4
+   -      1     -    A    02        OR2        !       0    4    0   30  :2664
+   -      1     -    B    10       AND2    s           0    2    0    4  ~2863~1
+   -      2     -    B    01        OR2                1    2    0    9  :4823
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+* = PCI I/O is enabled
+p = Packed register
+
+
+Device-Specific Information:              y:\lab19\new folder\videomem_bhv.rpt
+videomem_bhv
+
+** FASTTRACK INTERCONNECT UTILIZATION **
+
+Row FastTrack Interconnect:
+
+          Global         Left Half-      Right Half-
+         FastTrack       FastTrack       FastTrack 
+Row     Interconnect    Interconnect    Interconnect    Input Pins     Output Pins     Bidir Pins
+A:      12/ 96( 12%)     5/ 48( 10%)     0/ 48(  0%)    8/16( 50%)      2/16( 12%)     0/16(  0%)
+B:      11/ 96( 11%)     3/ 48(  6%)     5/ 48( 10%)    2/16( 12%)      1/16(  6%)     0/16(  0%)
+C:       4/ 96(  4%)     1/ 48(  2%)    10/ 48( 20%)    2/16( 12%)      0/16(  0%)     0/16(  0%)
+
+
+Column FastTrack Interconnect:
+
+         FastTrack                                 
+Column  Interconnect    Input Pins     Output Pins     Bidir Pins
+01:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+02:      2/24(  8%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+03:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+04:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+05:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+06:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+07:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+08:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+09:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+10:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+11:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+12:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+13:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+14:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+15:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+16:      2/24(  8%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+17:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+18:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+19:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+20:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+21:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+22:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+23:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+24:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+EA:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+
+
+Device-Specific Information:              y:\lab19\new folder\videomem_bhv.rpt
+videomem_bhv
+
+** CLOCK SIGNALS **
+
+Type     Fan-out       Name
+INPUT       98         CLK
+
+
+Device-Specific Information:              y:\lab19\new folder\videomem_bhv.rpt
+videomem_bhv
+
+** EQUATIONS **
+
+CLK      : INPUT;
+DATA0    : INPUT;
+DATA1    : INPUT;
+DATA2    : INPUT;
+DATA3    : INPUT;
+DATA4    : INPUT;
+DATA5    : INPUT;
+DATA6    : INPUT;
+DATA7    : INPUT;
+KKS0     : INPUT;
+KKS1     : INPUT;
+KKS2     : INPUT;
+KKS3     : INPUT;
+KKS4     : INPUT;
+KKS5     : INPUT;
+KKS6     : INPUT;
+KKS7     : INPUT;
+Query    : INPUT;
+
+-- Node name is ':272' = 'count0~178' 
+-- Equation name is 'count0~178', location is LC4_B9, type is buried.
+count0~178 = DFFE( _EQ001, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ001 = !count0~178
+         # !_LC1_B10;
+
+-- Node name is ':271' = 'count1~178' 
+-- Equation name is 'count1~178', location is LC3_B9, type is buried.
+count1~178 = DFFE( _EQ002, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ002 =  count0~178 & !count1~178 &  _LC1_B10
+         # !count0~178 &  count1~178 &  _LC1_B10;
+
+-- Node name is ':270' = 'count2~178' 
+-- Equation name is 'count2~178', location is LC2_B9, type is buried.
+count2~178 = DFFE( _EQ003, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ003 = !count0~178 &  count2~178 &  _LC1_B10
+         # !count1~178 &  count2~178 &  _LC1_B10
+         #  count0~178 &  count1~178 & !count2~178 &  _LC1_B10;
+
+-- Node name is ':269' = 'count3~178' 
+-- Equation name is 'count3~178', location is LC5_B19, type is buried.
+count3~178 = DFFE( _EQ004, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ004 =  count3~178 & !_LC1_B9 &  _LC1_B10
+         # !count3~178 &  _LC1_B9 &  _LC1_B10;
+
+-- Node name is ':268' = 'count4~178' 
+-- Equation name is 'count4~178', location is LC6_B19, type is buried.
+count4~178 = DFFE( _EQ005, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ005 = !count3~178 &  count4~178 & !_LC1_A2
+         #  count4~178 & !_LC1_A2 & !_LC1_B9
+         #  count3~178 & !count4~178 & !_LC1_A2 &  _LC1_B9;
+
+-- Node name is ':267' = 'count5~178' 
+-- Equation name is 'count5~178', location is LC7_B19, type is buried.
+count5~178 = DFFE( _EQ006, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ006 = !count4~178 &  count5~178 & !_LC1_A2
+         #  count5~178 & !_LC1_A2 & !_LC8_B19
+         #  count4~178 & !count5~178 & !_LC1_A2 &  _LC8_B19;
+
+-- Node name is ':266' = 'count6~178' 
+-- Equation name is 'count6~178', location is LC1_B23, type is buried.
+count6~178 = DFFE( _EQ007, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ007 =  count6~178 & !_LC1_A2 & !_LC1_B19
+         # !count6~178 & !_LC1_A2 &  _LC1_B19;
+
+-- Node name is ':265' = 'count7~178' 
+-- Equation name is 'count7~178', location is LC5_B18, type is buried.
+count7~178 = DFFE( _EQ008, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ008 =  count7~178 & !_LC1_A2 & !_LC2_B18
+         # !count7~178 & !_LC1_A2 &  _LC2_B18;
+
+-- Node name is ':264' = 'count8~178' 
+-- Equation name is 'count8~178', location is LC3_B18, type is buried.
+count8~178 = DFFE( _EQ009, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ009 = !count7~178 &  count8~178 & !_LC1_A2
+         #  count8~178 & !_LC1_A2 & !_LC2_B18
+         #  count7~178 & !count8~178 & !_LC1_A2 &  _LC2_B18;
+
+-- Node name is ':263' = 'count9~178' 
+-- Equation name is 'count9~178', location is LC6_B1, type is buried.
+count9~178 = DFFE( _EQ010, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ010 =  count9~178 & !_LC1_A2 & !_LC1_B18
+         # !count9~178 & !_LC1_A2 &  _LC1_B18;
+
+-- Node name is ':262' = 'count10~178' 
+-- Equation name is 'count10~178', location is LC3_B1, type is buried.
+count10~178 = DFFE( _EQ011, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ011 = !count9~178 &  count10~178 & !_LC1_A2
+         #  count10~178 & !_LC1_A2 & !_LC1_B18
+         #  count9~178 & !count10~178 & !_LC1_A2 &  _LC1_B18;
+
+-- Node name is ':261' = 'count11~178' 
+-- Equation name is 'count11~178', location is LC5_B1, type is buried.
+count11~178 = DFFE( _EQ012, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ012 = !count10~178 &  count11~178 & !_LC1_A2
+         #  count11~178 & !_LC1_A2 & !_LC8_B1
+         #  count10~178 & !count11~178 & !_LC1_A2 &  _LC8_B1;
+
+-- Node name is ':260' = 'count12~178' 
+-- Equation name is 'count12~178', location is LC3_B3, type is buried.
+count12~178 = DFFE( _EQ013, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ013 =  count12~178 & !_LC1_A2 & !_LC1_B1
+         # !count12~178 & !_LC1_A2 &  _LC1_B1;
+
+-- Node name is ':259' = 'count13~178' 
+-- Equation name is 'count13~178', location is LC4_B3, type is buried.
+count13~178 = DFFE( _EQ014, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ014 = !count12~178 &  count13~178 & !_LC1_A2
+         #  count13~178 & !_LC1_A2 & !_LC1_B1
+         #  count12~178 & !count13~178 & !_LC1_A2 &  _LC1_B1;
+
+-- Node name is ':258' = 'count14~178' 
+-- Equation name is 'count14~178', location is LC5_B3, type is buried.
+count14~178 = DFFE( _EQ015, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ015 = !count13~178 &  count14~178 & !_LC1_A2
+         #  count14~178 & !_LC1_A2 & !_LC6_B3
+         #  count13~178 & !count14~178 & !_LC1_A2 &  _LC6_B3;
+
+-- Node name is ':257' = 'count15~178' 
+-- Equation name is 'count15~178', location is LC1_B16, type is buried.
+count15~178 = DFFE( _EQ016, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ016 =  count15~178 & !_LC1_A2 & !_LC1_B3
+         # !count15~178 & !_LC1_A2 &  _LC1_B3;
+
+-- Node name is ':256' = 'count16~178' 
+-- Equation name is 'count16~178', location is LC3_C22, type is buried.
+count16~178 = DFFE( _EQ017, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ017 = !count15~178 &  count16~178 & !_LC1_A2
+         #  count16~178 & !_LC1_A2 & !_LC1_B3
+         #  count15~178 & !count16~178 & !_LC1_A2 &  _LC1_B3;
+
+-- Node name is ':255' = 'count17~178' 
+-- Equation name is 'count17~178', location is LC4_C22, type is buried.
+count17~178 = DFFE( _EQ018, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ018 = !count16~178 &  count17~178 & !_LC1_A2
+         #  count17~178 & !_LC1_A2 & !_LC7_C22
+         #  count16~178 & !count17~178 & !_LC1_A2 &  _LC7_C22;
+
+-- Node name is ':254' = 'count18~178' 
+-- Equation name is 'count18~178', location is LC5_C22, type is buried.
+count18~178 = DFFE( _EQ019, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ019 =  count18~178 & !_LC1_A2 & !_LC6_C22
+         # !count18~178 & !_LC1_A2 &  _LC6_C22;
+
+-- Node name is ':253' = 'count19~178' 
+-- Equation name is 'count19~178', location is LC1_C23, type is buried.
+count19~178 = DFFE( _EQ020, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ020 =  count19~178 & !_LC1_A2 & !_LC1_C22
+         # !count19~178 & !_LC1_A2 &  _LC1_C22;
+
+-- Node name is ':252' = 'count20~178' 
+-- Equation name is 'count20~178', location is LC3_C20, type is buried.
+count20~178 = DFFE( _EQ021, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ021 = !count19~178 &  count20~178 & !_LC1_A2
+         #  count20~178 & !_LC1_A2 & !_LC1_C22
+         #  count19~178 & !count20~178 & !_LC1_A2 &  _LC1_C22;
+
+-- Node name is ':251' = 'count21~178' 
+-- Equation name is 'count21~178', location is LC4_C20, type is buried.
+count21~178 = DFFE( _EQ022, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ022 =  count21~178 & !_LC1_A2 & !_LC6_C20
+         # !count21~178 & !_LC1_A2 &  _LC6_C20;
+
+-- Node name is ':250' = 'count22~178' 
+-- Equation name is 'count22~178', location is LC5_C20, type is buried.
+count22~178 = DFFE( _EQ023, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ023 = !count21~178 &  count22~178 & !_LC1_A2
+         #  count22~178 & !_LC1_A2 & !_LC6_C20
+         #  count21~178 & !count22~178 & !_LC1_A2 &  _LC6_C20;
+
+-- Node name is ':249' = 'count23~178' 
+-- Equation name is 'count23~178', location is LC1_C24, type is buried.
+count23~178 = DFFE( _EQ024, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ024 =  count23~178 & !_LC1_A2 & !_LC1_C20
+         # !count23~178 & !_LC1_A2 &  _LC1_C20;
+
+-- Node name is ':248' = 'count24~178' 
+-- Equation name is 'count24~178', location is LC2_C21, type is buried.
+count24~178 = DFFE( _EQ025, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ025 = !count23~178 &  count24~178 & !_LC1_A2
+         #  count24~178 & !_LC1_A2 & !_LC1_C20
+         #  count23~178 & !count24~178 & !_LC1_A2 &  _LC1_C20;
+
+-- Node name is ':247' = 'count25~178' 
+-- Equation name is 'count25~178', location is LC4_C21, type is buried.
+count25~178 = DFFE( _EQ026, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ026 =  count25~178 & !_LC1_A2 & !_LC6_C21
+         # !count25~178 & !_LC1_A2 &  _LC6_C21;
+
+-- Node name is ':246' = 'count26~178' 
+-- Equation name is 'count26~178', location is LC5_C21, type is buried.
+count26~178 = DFFE( _EQ027, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ027 = !count25~178 &  count26~178 & !_LC1_A2
+         #  count26~178 & !_LC1_A2 & !_LC6_C21
+         #  count25~178 & !count26~178 & !_LC1_A2 &  _LC6_C21;
+
+-- Node name is ':245' = 'count27~178' 
+-- Equation name is 'count27~178', location is LC2_C19, type is buried.
+count27~178 = DFFE( _EQ028, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ028 =  count27~178 & !_LC1_A2 & !_LC1_C21
+         # !count27~178 & !_LC1_A2 &  _LC1_C21;
+
+-- Node name is ':244' = 'count28~178' 
+-- Equation name is 'count28~178', location is LC1_C17, type is buried.
+count28~178 = DFFE( _EQ029, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ029 = !count27~178 &  count28~178 & !_LC1_A2
+         #  count28~178 & !_LC1_A2 & !_LC1_C21
+         #  count27~178 & !count28~178 & !_LC1_A2 &  _LC1_C21;
+
+-- Node name is ':243' = 'count29~178' 
+-- Equation name is 'count29~178', location is LC5_C17, type is buried.
+count29~178 = DFFE( _EQ030, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ030 =  count29~178 & !_LC1_A2 & !_LC7_C17
+         # !count29~178 & !_LC1_A2 &  _LC7_C17;
+
+-- Node name is ':242' = 'count30~178' 
+-- Equation name is 'count30~178', location is LC4_C17, type is buried.
+count30~178 = DFFE( _EQ031, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ031 = !count29~178 &  count30~178 & !_LC1_A2
+         #  count30~178 & !_LC1_A2 & !_LC7_C17
+         #  count29~178 & !count30~178 & !_LC1_A2 &  _LC7_C17;
+
+-- Node name is ':241' = 'count31~178' 
+-- Equation name is 'count31~178', location is LC3_C17, type is buried.
+count31~178 = DFFE( _EQ032, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ032 = !count30~178 &  count31~178 & !_LC1_A2
+         #  count31~178 & !_LC1_A2 & !_LC8_C17
+         #  count30~178 & !count31~178 & !_LC1_A2 &  _LC8_C17;
+
+-- Node name is 'Get' 
+-- Equation name is 'Get', type is output 
+Get      =  sGet;
+
+-- Node name is ':94' = 'pixel0_0' 
+-- Equation name is 'pixel0_0', location is LC4_A8, type is buried.
+pixel0_0 = DFFE( _EQ033, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ033 = !_LC2_B1 &  pixel7_0
+         #  DATA0 &  _LC2_B1;
+
+-- Node name is ':93' = 'pixel0_1' 
+-- Equation name is 'pixel0_1', location is LC5_A14, type is buried.
+pixel0_1 = DFFE( _EQ034, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ034 = !_LC2_B1 &  pixel7_1
+         #  DATA1 &  _LC2_B1;
+
+-- Node name is ':92' = 'pixel0_2' 
+-- Equation name is 'pixel0_2', location is LC5_C5, type is buried.
+pixel0_2 = DFFE( _EQ035, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ035 = !_LC2_B1 &  pixel7_2
+         #  DATA2 &  _LC2_B1;
+
+-- Node name is ':91' = 'pixel0_3' 
+-- Equation name is 'pixel0_3', location is LC7_A13, type is buried.
+pixel0_3 = DFFE( _EQ036, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ036 = !_LC2_B1 &  pixel7_3
+         #  DATA3 &  _LC2_B1;
+
+-- Node name is ':90' = 'pixel0_4' 
+-- Equation name is 'pixel0_4', location is LC7_A15, type is buried.
+pixel0_4 = DFFE( _EQ037, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ037 = !_LC2_B1 &  pixel7_4
+         #  DATA4 &  _LC2_B1;
+
+-- Node name is ':89' = 'pixel0_5' 
+-- Equation name is 'pixel0_5', location is LC6_A7, type is buried.
+pixel0_5 = DFFE( _EQ038, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ038 = !_LC2_B1 &  pixel7_5
+         #  DATA5 &  _LC2_B1;
+
+-- Node name is ':88' = 'pixel0_6' 
+-- Equation name is 'pixel0_6', location is LC6_B4, type is buried.
+pixel0_6 = DFFE( _EQ039, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ039 = !_LC2_B1 &  pixel7_6
+         #  DATA6 &  _LC2_B1;
+
+-- Node name is ':87' = 'pixel0_7' 
+-- Equation name is 'pixel0_7', location is LC4_C6, type is buried.
+pixel0_7 = DFFE( _EQ040, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ040 = !_LC2_B1 &  pixel7_7
+         #  DATA7 &  _LC2_B1;
+
+-- Node name is ':86' = 'pixel1_0' 
+-- Equation name is 'pixel1_0', location is LC6_A8, type is buried.
+pixel1_0 = DFFE( pixel0_0, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':85' = 'pixel1_1' 
+-- Equation name is 'pixel1_1', location is LC6_A14, type is buried.
+pixel1_1 = DFFE( pixel0_1, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':84' = 'pixel1_2' 
+-- Equation name is 'pixel1_2', location is LC7_C5, type is buried.
+pixel1_2 = DFFE( pixel0_2, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':83' = 'pixel1_3' 
+-- Equation name is 'pixel1_3', location is LC5_A13, type is buried.
+pixel1_3 = DFFE( pixel0_3, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':82' = 'pixel1_4' 
+-- Equation name is 'pixel1_4', location is LC6_A15, type is buried.
+pixel1_4 = DFFE( pixel0_4, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':81' = 'pixel1_5' 
+-- Equation name is 'pixel1_5', location is LC7_A7, type is buried.
+pixel1_5 = DFFE( pixel0_5, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':80' = 'pixel1_6' 
+-- Equation name is 'pixel1_6', location is LC7_B4, type is buried.
+pixel1_6 = DFFE( pixel0_6, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':79' = 'pixel1_7' 
+-- Equation name is 'pixel1_7', location is LC5_C6, type is buried.
+pixel1_7 = DFFE( pixel0_7, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':78' = 'pixel2_0' 
+-- Equation name is 'pixel2_0', location is LC8_A8, type is buried.
+pixel2_0 = DFFE( pixel1_0, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':77' = 'pixel2_1' 
+-- Equation name is 'pixel2_1', location is LC8_A14, type is buried.
+pixel2_1 = DFFE( pixel1_1, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':76' = 'pixel2_2' 
+-- Equation name is 'pixel2_2', location is LC8_C5, type is buried.
+pixel2_2 = DFFE( pixel1_2, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':75' = 'pixel2_3' 
+-- Equation name is 'pixel2_3', location is LC8_A13, type is buried.
+pixel2_3 = DFFE( pixel1_3, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':74' = 'pixel2_4' 
+-- Equation name is 'pixel2_4', location is LC8_A15, type is buried.
+pixel2_4 = DFFE( pixel1_4, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':73' = 'pixel2_5' 
+-- Equation name is 'pixel2_5', location is LC8_A7, type is buried.
+pixel2_5 = DFFE( pixel1_5, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':72' = 'pixel2_6' 
+-- Equation name is 'pixel2_6', location is LC8_B4, type is buried.
+pixel2_6 = DFFE( pixel1_6, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':71' = 'pixel2_7' 
+-- Equation name is 'pixel2_7', location is LC6_C6, type is buried.
+pixel2_7 = DFFE( pixel1_7, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':70' = 'pixel3_0' 
+-- Equation name is 'pixel3_0', location is LC7_A8, type is buried.
+pixel3_0 = DFFE( pixel2_0, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':69' = 'pixel3_1' 
+-- Equation name is 'pixel3_1', location is LC7_A14, type is buried.
+pixel3_1 = DFFE( pixel2_1, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':68' = 'pixel3_2' 
+-- Equation name is 'pixel3_2', location is LC6_C5, type is buried.
+pixel3_2 = DFFE( pixel2_2, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':67' = 'pixel3_3' 
+-- Equation name is 'pixel3_3', location is LC4_A13, type is buried.
+pixel3_3 = DFFE( pixel2_3, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':66' = 'pixel3_4' 
+-- Equation name is 'pixel3_4', location is LC5_A15, type is buried.
+pixel3_4 = DFFE( pixel2_4, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':65' = 'pixel3_5' 
+-- Equation name is 'pixel3_5', location is LC5_A7, type is buried.
+pixel3_5 = DFFE( pixel2_5, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':64' = 'pixel3_6' 
+-- Equation name is 'pixel3_6', location is LC5_B4, type is buried.
+pixel3_6 = DFFE( pixel2_6, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':63' = 'pixel3_7' 
+-- Equation name is 'pixel3_7', location is LC7_C6, type is buried.
+pixel3_7 = DFFE( pixel2_7, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':62' = 'pixel4_0' 
+-- Equation name is 'pixel4_0', location is LC1_A8, type is buried.
+pixel4_0 = DFFE( pixel3_0, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':61' = 'pixel4_1' 
+-- Equation name is 'pixel4_1', location is LC1_A14, type is buried.
+pixel4_1 = DFFE( pixel3_1, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':60' = 'pixel4_2' 
+-- Equation name is 'pixel4_2', location is LC1_C5, type is buried.
+pixel4_2 = DFFE( pixel3_2, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':59' = 'pixel4_3' 
+-- Equation name is 'pixel4_3', location is LC2_A13, type is buried.
+pixel4_3 = DFFE( pixel3_3, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':58' = 'pixel4_4' 
+-- Equation name is 'pixel4_4', location is LC2_A15, type is buried.
+pixel4_4 = DFFE( pixel3_4, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':57' = 'pixel4_5' 
+-- Equation name is 'pixel4_5', location is LC2_A7, type is buried.
+pixel4_5 = DFFE( pixel3_5, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':56' = 'pixel4_6' 
+-- Equation name is 'pixel4_6', location is LC2_B4, type is buried.
+pixel4_6 = DFFE( pixel3_6, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':55' = 'pixel4_7' 
+-- Equation name is 'pixel4_7', location is LC1_C6, type is buried.
+pixel4_7 = DFFE( pixel3_7, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':54' = 'pixel5_0' 
+-- Equation name is 'pixel5_0', location is LC2_A8, type is buried.
+pixel5_0 = DFFE( pixel4_0, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':53' = 'pixel5_1' 
+-- Equation name is 'pixel5_1', location is LC3_A14, type is buried.
+pixel5_1 = DFFE( pixel4_1, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':52' = 'pixel5_2' 
+-- Equation name is 'pixel5_2', location is LC4_C5, type is buried.
+pixel5_2 = DFFE( pixel4_2, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':51' = 'pixel5_3' 
+-- Equation name is 'pixel5_3', location is LC3_A13, type is buried.
+pixel5_3 = DFFE( pixel4_3, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':50' = 'pixel5_4' 
+-- Equation name is 'pixel5_4', location is LC3_A15, type is buried.
+pixel5_4 = DFFE( pixel4_4, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':49' = 'pixel5_5' 
+-- Equation name is 'pixel5_5', location is LC3_A7, type is buried.
+pixel5_5 = DFFE( pixel4_5, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':48' = 'pixel5_6' 
+-- Equation name is 'pixel5_6', location is LC3_B4, type is buried.
+pixel5_6 = DFFE( pixel4_6, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':47' = 'pixel5_7' 
+-- Equation name is 'pixel5_7', location is LC2_C6, type is buried.
+pixel5_7 = DFFE( pixel4_7, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':46' = 'pixel6_0' 
+-- Equation name is 'pixel6_0', location is LC3_A8, type is buried.
+pixel6_0 = DFFE( pixel5_0, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':45' = 'pixel6_1' 
+-- Equation name is 'pixel6_1', location is LC2_A14, type is buried.
+pixel6_1 = DFFE( pixel5_1, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':44' = 'pixel6_2' 
+-- Equation name is 'pixel6_2', location is LC3_C5, type is buried.
+pixel6_2 = DFFE( pixel5_2, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':43' = 'pixel6_3' 
+-- Equation name is 'pixel6_3', location is LC1_A13, type is buried.
+pixel6_3 = DFFE( pixel5_3, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':42' = 'pixel6_4' 
+-- Equation name is 'pixel6_4', location is LC4_A15, type is buried.
+pixel6_4 = DFFE( pixel5_4, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':41' = 'pixel6_5' 
+-- Equation name is 'pixel6_5', location is LC4_A7, type is buried.
+pixel6_5 = DFFE( pixel5_5, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':40' = 'pixel6_6' 
+-- Equation name is 'pixel6_6', location is LC4_B4, type is buried.
+pixel6_6 = DFFE( pixel5_6, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':39' = 'pixel6_7' 
+-- Equation name is 'pixel6_7', location is LC3_C6, type is buried.
+pixel6_7 = DFFE( pixel5_7, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':38' = 'pixel7_0' 
+-- Equation name is 'pixel7_0', location is LC5_A8, type is buried.
+pixel7_0 = DFFE( pixel6_0, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':37' = 'pixel7_1' 
+-- Equation name is 'pixel7_1', location is LC4_A14, type is buried.
+pixel7_1 = DFFE( pixel6_1, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':36' = 'pixel7_2' 
+-- Equation name is 'pixel7_2', location is LC2_C5, type is buried.
+pixel7_2 = DFFE( pixel6_2, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':35' = 'pixel7_3' 
+-- Equation name is 'pixel7_3', location is LC6_A13, type is buried.
+pixel7_3 = DFFE( pixel6_3, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':34' = 'pixel7_4' 
+-- Equation name is 'pixel7_4', location is LC1_A15, type is buried.
+pixel7_4 = DFFE( pixel6_4, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':33' = 'pixel7_5' 
+-- Equation name is 'pixel7_5', location is LC1_A7, type is buried.
+pixel7_5 = DFFE( pixel6_5, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':32' = 'pixel7_6' 
+-- Equation name is 'pixel7_6', location is LC1_B4, type is buried.
+pixel7_6 = DFFE( pixel6_6, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is ':31' = 'pixel7_7' 
+-- Equation name is 'pixel7_7', location is LC8_C6, type is buried.
+pixel7_7 = DFFE( pixel6_7, GLOBAL( CLK),  VCC,  VCC,  VCC);
+
+-- Node name is 'Q0' 
+-- Equation name is 'Q0', type is output 
+Q0       =  pixel7_0;
+
+-- Node name is 'Q1' 
+-- Equation name is 'Q1', type is output 
+Q1       =  pixel7_1;
+
+-- Node name is 'Q2' 
+-- Equation name is 'Q2', type is output 
+Q2       =  pixel7_2;
+
+-- Node name is 'Q3' 
+-- Equation name is 'Q3', type is output 
+Q3       =  pixel7_3;
+
+-- Node name is 'Q4' 
+-- Equation name is 'Q4', type is output 
+Q4       =  pixel7_4;
+
+-- Node name is 'Q5' 
+-- Equation name is 'Q5', type is output 
+Q5       =  pixel7_5;
+
+-- Node name is 'Q6' 
+-- Equation name is 'Q6', type is output 
+Q6       =  pixel7_6;
+
+-- Node name is 'Q7' 
+-- Equation name is 'Q7', type is output 
+Q7       =  pixel7_7;
+
+-- Node name is ':30' = 'sGet' 
+-- Equation name is 'sGet', location is LC4_B1, type is buried.
+sGet     = DFFE( _EQ041, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ041 =  _LC2_B1 & !sGet
+         #  _LC2_B1 & !_LC2_B19;
+
+-- Node name is 'Synchro' 
+-- Equation name is 'Synchro', type is output 
+Synchro  =  _LC2_A2;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:171' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC1_B9', type is buried 
+_LC1_B9  = LCELL( _EQ042);
+  _EQ042 =  count0~178 &  count1~178 &  count2~178;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:175' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC8_B19', type is buried 
+_LC8_B19 = LCELL( _EQ043);
+  _EQ043 =  count3~178 &  _LC1_B9;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:183' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC1_B19', type is buried 
+_LC1_B19 = LCELL( _EQ044);
+  _EQ044 =  count3~178 &  count4~178 &  count5~178 &  _LC1_B9;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:187' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC2_B18', type is buried 
+_LC2_B18 = LCELL( _EQ045);
+  _EQ045 =  count6~178 &  _LC1_B19;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:195' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC1_B18', type is buried 
+_LC1_B18 = LCELL( _EQ046);
+  _EQ046 =  count7~178 &  count8~178 &  _LC2_B18;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:199' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC8_B1', type is buried 
+_LC8_B1  = LCELL( _EQ047);
+  _EQ047 =  count9~178 &  _LC1_B18;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:207' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC1_B1', type is buried 
+_LC1_B1  = LCELL( _EQ048);
+  _EQ048 =  count9~178 &  count10~178 &  count11~178 &  _LC1_B18;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:211' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC6_B3', type is buried 
+_LC6_B3  = LCELL( _EQ049);
+  _EQ049 =  count12~178 &  _LC1_B1;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:219' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC1_B3', type is buried 
+_LC1_B3  = LCELL( _EQ050);
+  _EQ050 =  count12~178 &  count13~178 &  count14~178 &  _LC1_B1;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:223' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC7_C22', type is buried 
+_LC7_C22 = LCELL( _EQ051);
+  _EQ051 =  count15~178 &  _LC1_B3;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:231' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC6_C22', type is buried 
+_LC6_C22 = LCELL( _EQ052);
+  _EQ052 =  count15~178 &  count16~178 &  count17~178 &  _LC1_B3;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:235' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC1_C22', type is buried 
+_LC1_C22 = LCELL( _EQ053);
+  _EQ053 =  count18~178 &  _LC6_C22;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:243' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC6_C20', type is buried 
+_LC6_C20 = LCELL( _EQ054);
+  _EQ054 =  count19~178 &  count20~178 &  _LC1_C22;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:251' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC1_C20', type is buried 
+_LC1_C20 = LCELL( _EQ055);
+  _EQ055 =  count21~178 &  count22~178 &  _LC6_C20;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:259' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC6_C21', type is buried 
+_LC6_C21 = LCELL( _EQ056);
+  _EQ056 =  count23~178 &  count24~178 &  _LC1_C20;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:267' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC1_C21', type is buried 
+_LC1_C21 = LCELL( _EQ057);
+  _EQ057 =  count25~178 &  count26~178 &  _LC6_C21;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:275' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC7_C17', type is buried 
+_LC7_C17 = LCELL( _EQ058);
+  _EQ058 =  count27~178 &  count28~178 &  _LC1_C21;
+
+-- Node name is '|LPM_ADD_SUB:2340|addcore:adder|:279' from file "addcore.tdf" line 312, column 64
+-- Equation name is '_LC8_C17', type is buried 
+_LC8_C17 = LCELL( _EQ059);
+  _EQ059 =  count29~178 &  _LC7_C17;
+
+-- Node name is ':28' 
+-- Equation name is '_LC2_A2', type is buried 
+_LC2_A2  = DFFE( _EQ060, GLOBAL( CLK),  VCC,  VCC,  VCC);
+  _EQ060 = !_LC3_A2 & !_LC4_A2 & !_LC5_A2 & !_LC6_A2;
+
+-- Node name is '~2341~1' 
+-- Equation name is '~2341~1', location is LC2_B3, type is buried.
+-- synthesized logic cell 
+_LC2_B3  = LCELL( _EQ061);
+  _EQ061 =  count12~178
+         #  count13~178
+         #  count14~178
+         #  count15~178;
+
+-- Node name is '~2341~2' 
+-- Equation name is '~2341~2', location is LC7_B1, type is buried.
+-- synthesized logic cell 
+_LC7_B1  = LCELL( _EQ062);
+  _EQ062 =  count10~178
+         #  count11~178
+         #  count9~178;
+
+-- Node name is '~2341~3' 
+-- Equation name is '~2341~3', location is LC3_B19, type is buried.
+-- synthesized logic cell 
+_LC3_B19 = LCELL( _EQ063);
+  _EQ063 =  count6~178
+         #  count7~178
+         #  count5~178
+         #  count4~178;
+
+-- Node name is '~2341~4' 
+-- Equation name is '~2341~4', location is LC4_B19, type is buried.
+-- synthesized logic cell 
+_LC4_B19 = LCELL( _EQ064);
+  _EQ064 =  count8~178
+         #  _LC7_B1
+         #  count3~178
+         #  _LC3_B19;
+
+-- Node name is '~2341~5' 
+-- Equation name is '~2341~5', location is LC6_C17, type is buried.
+-- synthesized logic cell 
+_LC6_C17 = LCELL( _EQ065);
+  _EQ065 =  count30~178
+         #  count31~178
+         #  count29~178
+         #  count28~178;
+
+-- Node name is '~2341~6' 
+-- Equation name is '~2341~6', location is LC3_C21, type is buried.
+-- synthesized logic cell 
+_LC3_C21 = LCELL( _EQ066);
+  _EQ066 =  count26~178
+         #  count27~178
+         #  count25~178
+         #  count24~178;
+
+-- Node name is '~2341~7' 
+-- Equation name is '~2341~7', location is LC2_C20, type is buried.
+-- synthesized logic cell 
+_LC2_C20 = LCELL( _EQ067);
+  _EQ067 =  count22~178
+         #  count23~178
+         #  count21~178
+         #  count20~178;
+
+-- Node name is '~2341~8' 
+-- Equation name is '~2341~8', location is LC2_C22, type is buried.
+-- synthesized logic cell 
+_LC2_C22 = LCELL( _EQ068);
+  _EQ068 =  count18~178
+         #  count19~178
+         #  count17~178
+         #  count16~178;
+
+-- Node name is '~2341~9' 
+-- Equation name is '~2341~9', location is LC2_C17, type is buried.
+-- synthesized logic cell 
+_LC2_C17 = LCELL( _EQ069);
+  _EQ069 =  _LC6_C17
+         #  _LC3_C21
+         #  _LC2_C20
+         #  _LC2_C22;
+
+-- Node name is ':2341' 
+-- Equation name is '_LC2_B19', type is buried 
+!_LC2_B19 = _LC2_B19~NOT;
+_LC2_B19~NOT = LCELL( _EQ070);
+  _EQ070 =  _LC2_B3
+         #  _LC4_B19
+         #  _LC2_C17
+         # !_LC1_B9;
+
+-- Node name is '~2664~1' 
+-- Equation name is '~2664~1', location is LC3_A2, type is buried.
+-- synthesized logic cell 
+_LC3_A2  = LCELL( _EQ071);
+  _EQ071 = !KKS1 &  pixel7_1
+         #  KKS1 & !pixel7_1
+         # !KKS0 &  pixel7_0
+         #  KKS0 & !pixel7_0;
+
+-- Node name is '~2664~2' 
+-- Equation name is '~2664~2', location is LC4_A2, type is buried.
+-- synthesized logic cell 
+_LC4_A2  = LCELL( _EQ072);
+  _EQ072 = !KKS3 &  pixel7_3
+         #  KKS3 & !pixel7_3
+         # !KKS2 &  pixel7_2
+         #  KKS2 & !pixel7_2;
+
+-- Node name is '~2664~3' 
+-- Equation name is '~2664~3', location is LC5_A2, type is buried.
+-- synthesized logic cell 
+_LC5_A2  = LCELL( _EQ073);
+  _EQ073 = !KKS5 &  pixel7_5
+         #  KKS5 & !pixel7_5
+         # !KKS4 &  pixel7_4
+         #  KKS4 & !pixel7_4;
+
+-- Node name is '~2664~4' 
+-- Equation name is '~2664~4', location is LC6_A2, type is buried.
+-- synthesized logic cell 
+_LC6_A2  = LCELL( _EQ074);
+  _EQ074 = !KKS7 &  pixel7_7
+         #  KKS7 & !pixel7_7
+         # !KKS6 &  pixel7_6
+         #  KKS6 & !pixel7_6;
+
+-- Node name is ':2664' 
+-- Equation name is '_LC1_A2', type is buried 
+!_LC1_A2 = _LC1_A2~NOT;
+_LC1_A2~NOT = LCELL( _EQ075);
+  _EQ075 =  _LC3_A2
+         #  _LC4_A2
+         #  _LC5_A2
+         #  _LC6_A2;
+
+-- Node name is '~2863~1' 
+-- Equation name is '~2863~1', location is LC1_B10, type is buried.
+-- synthesized logic cell 
+_LC1_B10 = LCELL( _EQ076);
+  _EQ076 = !_LC1_A2 & !_LC2_B19;
+
+-- Node name is ':4823' 
+-- Equation name is '_LC2_B1', type is buried 
+_LC2_B1  = LCELL( _EQ077);
+  _EQ077 =  sGet
+         #  _LC1_A2 &  Query;
+
+
+
+Project Information                       y:\lab19\new folder\videomem_bhv.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Multi-Level
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'FLEX10KA' family
+
+      CARRY_CHAIN                         = ignore
+      CARRY_CHAIN_LENGTH                  = 32
+      CASCADE_CHAIN                       = ignore
+      CASCADE_CHAIN_LENGTH                = 2
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SUBFACTOR_EXTRACTION                = on
+      IGNORE_SOFT_BUFFERS                 = on
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:00
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 20,975K

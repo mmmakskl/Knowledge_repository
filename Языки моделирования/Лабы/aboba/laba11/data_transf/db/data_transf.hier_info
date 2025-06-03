@@ -1,0 +1,147 @@
+|data_transf
+D0_o <= DC_g:inst1.D0_o
+D3 => CD_g:inst.D3
+D2 => CD_g:inst.D2
+D1 => CD_g:inst.D1
+D0 => CD_g:inst.D0
+err[0] => inst6.IN1
+err[1] => inst9.IN1
+err[2] => inst4.IN1
+err[3] => inst3.IN1
+D1_o <= DC_g:inst1.D1_o
+D2_o <= DC_g:inst1.D2_o
+D3_o <= DC_g:inst1.D3_o
+ONE_ERR <= DC_g:inst1.ONE_ERR
+DBL_ERR <= DC_g:inst1.DBL_ERR
+
+
+|data_transf|DC_g:inst1
+D0_o <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D0 => inst4.IN0
+D0 => XOR8:inst.IN3
+D0 => XOR4:inst8.IN2
+D0 => XOR4:inst7.IN2
+K => XOR8:inst.IN8
+K1 => XOR8:inst.IN1
+K1 => XOR4:inst7.IN1
+D3 => XOR8:inst.IN7
+D3 => XOR4:inst9.IN4
+D3 => XOR4:inst8.IN4
+D3 => XOR4:inst7.IN4
+D3 => inst17.IN0
+D2 => XOR8:inst.IN6
+D2 => XOR4:inst9.IN3
+D2 => XOR4:inst8.IN3
+D2 => inst15.IN0
+D1 => XOR8:inst.IN5
+D1 => XOR4:inst9.IN2
+D1 => XOR4:inst7.IN3
+D1 => inst6.IN0
+K3 => XOR8:inst.IN4
+K3 => XOR4:inst9.IN1
+K2 => XOR8:inst.IN2
+K2 => XOR4:inst8.IN1
+D1_o <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+D2_o <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+D3_o <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+ONE_ERR <= XOR8:inst.OUT
+DBL_ERR <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|data_transf|DC_g:inst1|XOR8:inst
+OUT <= 54.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 33.IN0
+IN2 => 33.IN1
+IN3 => 39.IN1
+IN4 => 48.IN0
+IN5 => 16.IN0
+IN6 => 16.IN1
+IN7 => 19.IN0
+IN8 => 19.IN1
+
+
+|data_transf|DC_g:inst1|XOR4:inst9
+OUT <= 3.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 13.IN0
+IN2 => 13.IN1
+IN3 => 16.IN0
+IN4 => 16.IN1
+
+
+|data_transf|DC_g:inst1|XOR4:inst8
+OUT <= 3.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 13.IN0
+IN2 => 13.IN1
+IN3 => 16.IN0
+IN4 => 16.IN1
+
+
+|data_transf|DC_g:inst1|XOR4:inst7
+OUT <= 3.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 13.IN0
+IN2 => 13.IN1
+IN3 => 16.IN0
+IN4 => 16.IN1
+
+
+|data_transf|CD_g:inst
+K1 <= XOR3:inst3.OUT
+D3 => XOR3:inst3.IN3
+D3 => XOR3:inst2.IN3
+D3 => XOR3:inst1.IN1
+D3 => XOR8:inst7.IN7
+D3 => D3_o.DATAIN
+D0 => XOR3:inst3.IN1
+D0 => XOR3:inst2.IN1
+D0 => XOR8:inst7.IN3
+D0 => D0_o.DATAIN
+D1 => XOR3:inst3.IN2
+D1 => XOR3:inst1.IN3
+D1 => XOR8:inst7.IN5
+D1 => D1_o.DATAIN
+K2 <= XOR3:inst2.OUT
+D2 => XOR3:inst2.IN2
+D2 => XOR3:inst1.IN2
+D2 => XOR8:inst7.IN6
+D2 => D2_o.DATAIN
+K3 <= XOR3:inst1.OUT
+K <= XOR8:inst7.OUT
+D0_o <= D0.DB_MAX_OUTPUT_PORT_TYPE
+D1_o <= D1.DB_MAX_OUTPUT_PORT_TYPE
+D2_o <= D2.DB_MAX_OUTPUT_PORT_TYPE
+D3_o <= D3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|data_transf|CD_g:inst|XOR3:inst3
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|data_transf|CD_g:inst|XOR3:inst2
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|data_transf|CD_g:inst|XOR3:inst1
+OUT <= 1.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 1.IN0
+IN2 => 3.IN0
+IN3 => 3.IN1
+
+
+|data_transf|CD_g:inst|XOR8:inst7
+OUT <= 54.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 33.IN0
+IN2 => 33.IN1
+IN3 => 39.IN1
+IN4 => 48.IN0
+IN5 => 16.IN0
+IN6 => 16.IN1
+IN7 => 19.IN0
+IN8 => 19.IN1
+
+

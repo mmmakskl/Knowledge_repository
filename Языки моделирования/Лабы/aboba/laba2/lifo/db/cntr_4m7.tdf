@@ -1,0 +1,137 @@
+--lpm_counter DEVICE_FAMILY="Stratix" lpm_modulus=15 lpm_width=4 clock q sclr updown
+--VERSION_BEGIN 5.0 cbx_cycloneii 2004:12:20:14:28:52:SJ cbx_lpm_add_sub 2005:04:12:13:30:42:SJ cbx_lpm_compare 2004:11:30:11:30:40:SJ cbx_lpm_counter 2005:02:02:04:37:10:SJ cbx_lpm_decode 2004:12:13:14:19:12:SJ cbx_mgl 2005:04:13:17:26:48:SJ cbx_stratix 2005:03:14:17:09:02:SJ cbx_stratixii 2004:12:22:13:27:12:SJ  VERSION_END
+
+
+--  Copyright (C) 1988-2005 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION stratix_lcell (aclr, aload, cin, clk, dataa, datab, datac, datad, ena, inverta, regcascin, sclr, sload)
+WITH ( 	cin_used,	lut_mask,	operation_mode,	output_mode,	register_cascade_mode,	sum_lutc_input,	synch_mode) 
+RETURNS ( combout, cout, regout);
+
+--synthesis_resources = lut 8 
+SUBDESIGN cntr_4m7
+( 
+	clock	:	input;
+	q[3..0]	:	output;
+	sclr	:	input;
+	updown	:	input;
+) 
+VARIABLE
+	cmpr1_aeb_int	:	WIRE;
+	cmpr1_aeb	:	WIRE;
+	cmpr1_dataa[3..0]	:	WIRE;
+	cmpr1_datab[3..0]	:	WIRE;
+	counter_cella0 : stratix_lcell
+		WITH (
+			cin_used = "false",
+			lut_mask = "5599",
+			operation_mode = "arithmetic",
+			synch_mode = "on"
+		);
+	counter_cella1 : stratix_lcell
+		WITH (
+			cin_used = "true",
+			lut_mask = "5A90",
+			operation_mode = "arithmetic",
+			sum_lutc_input = "cin",
+			synch_mode = "on"
+		);
+	counter_cella2 : stratix_lcell
+		WITH (
+			cin_used = "true",
+			lut_mask = "5A90",
+			operation_mode = "arithmetic",
+			sum_lutc_input = "cin",
+			synch_mode = "on"
+		);
+	counter_cella3 : stratix_lcell
+		WITH (
+			cin_used = "true",
+			lut_mask = "5A90",
+			operation_mode = "arithmetic",
+			sum_lutc_input = "cin",
+			synch_mode = "on"
+		);
+	cout_bit : stratix_lcell
+		WITH (
+			cin_used = "true",
+			lut_mask = "F8F8",
+			operation_mode = "normal",
+			sum_lutc_input = "cin",
+			synch_mode = "off"
+		);
+	a_val[3..0]	: WIRE;
+	aclr	: NODE;
+	aclr_actual	: WIRE;
+	aset_node	: WIRE;
+	clk_en	: NODE;
+	cnt_en	: NODE;
+	compare_result	: WIRE;
+	data[3..0]	: NODE;
+	modulus_bus[3..0]	: WIRE;
+	modulus_trigger	: WIRE;
+	s_val[3..0]	: WIRE;
+	safe_q[3..0]	: WIRE;
+	sload	: NODE;
+	sset	: NODE;
+	sset_node	: WIRE;
+	time_to_clear	: WIRE;
+	updownDir	: WIRE;
+
+BEGIN 
+	IF (cmpr1_dataa[] == cmpr1_datab[]) THEN
+		cmpr1_aeb_int = VCC;
+	ELSE
+		cmpr1_aeb_int = GND;
+	END IF;
+	cmpr1_aeb = cmpr1_aeb_int;
+	cmpr1_dataa[] = safe_q[];
+	cmpr1_datab[] = modulus_bus[];
+	counter_cella[3..0].aclr = aclr_actual;
+	counter_cella[3..0].aload = B"0000";
+	counter_cella[1].cin = counter_cella[0].cout;
+	counter_cella[2].cin = counter_cella[1].cout;
+	counter_cella[3].cin = counter_cella[2].cout;
+	counter_cella[3..0].clk = clock;
+	counter_cella[3..0].dataa = safe_q[];
+	counter_cella[3..0].datab = updownDir;
+	counter_cella[3..0].datac = ((sset & s_val[]) # ((! sset) & ((sload & data[]) # (((! sload) & modulus_bus[]) & (! updownDir)))));
+	counter_cella[3..0].ena = (clk_en & (((cnt_en # sclr) # sset) # sload));
+	counter_cella[3..0].sclr = sclr;
+	counter_cella[3..0].sload = ((sset # sload) # modulus_trigger);
+	cout_bit.cin = counter_cella[3].cout;
+	cout_bit.dataa = updownDir;
+	cout_bit.datab = time_to_clear;
+	a_val[] = B"1111";
+	aclr = GND;
+	aclr_actual = aclr;
+	aset_node = B"0";
+	clk_en = VCC;
+	cnt_en = VCC;
+	compare_result = cmpr1_aeb;
+	data[] = GND;
+	modulus_bus[] = B"1110";
+	modulus_trigger = cout_bit.combout;
+	q[] = safe_q[];
+	s_val[] = B"1111";
+	safe_q[] = counter_cella[3..0].regout;
+	sload = GND;
+	sset = GND;
+	sset_node = B"0";
+	time_to_clear = compare_result;
+	updownDir = updown;
+END;
+--VALID FILE

@@ -1,0 +1,812 @@
+Timing Analyzer report for lifo_bhv
+Thu Mar 04 13:25:58 2021
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'CLK'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                        ;
++------------------------------+-------+---------------+----------------------------------+---------------+---------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From          ; To            ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------+---------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 6.256 ns                         ; WR            ; outElement[0] ;            ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 7.495 ns                         ; outElement[0] ; DATA_OUT[0]   ; CLK        ;          ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.442 ns                        ; Reset         ; outElement[3] ;            ; CLK      ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; 201.29 MHz ( period = 4.968 ns ) ; scount[3]     ; outElement[0] ; CLK        ; CLK      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;               ;               ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------+---------------+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP1S10F484C5       ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; Off                ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK             ;                    ; User Pin ; NONE             ; 0.000 ns      ; 0.000 ns     ; NONE     ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK'                                                                                                                                                                                                                     ;
++-----------------------------------------+-----------------------------------------------------+------------+---------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From       ; To            ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+------------+---------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 201.29 MHz ( period = 4.968 ns )                    ; scount[3]  ; outElement[0] ; CLK        ; CLK      ; None                        ; None                      ; 4.802 ns                ;
+; N/A                                     ; 209.21 MHz ( period = 4.780 ns )                    ; counter[0] ; outElement[0] ; CLK        ; CLK      ; None                        ; None                      ; 4.614 ns                ;
+; N/A                                     ; 213.13 MHz ( period = 4.692 ns )                    ; scount[3]  ; outElement[1] ; CLK        ; CLK      ; None                        ; None                      ; 4.526 ns                ;
+; N/A                                     ; 214.50 MHz ( period = 4.662 ns )                    ; scount[3]  ; outElement[3] ; CLK        ; CLK      ; None                        ; None                      ; 4.496 ns                ;
+; N/A                                     ; 217.01 MHz ( period = 4.608 ns )                    ; counter[1] ; outElement[7] ; CLK        ; CLK      ; None                        ; None                      ; 4.444 ns                ;
+; N/A                                     ; 217.01 MHz ( period = 4.608 ns )                    ; counter[1] ; outElement[6] ; CLK        ; CLK      ; None                        ; None                      ; 4.444 ns                ;
+; N/A                                     ; 217.01 MHz ( period = 4.608 ns )                    ; counter[1] ; outElement[5] ; CLK        ; CLK      ; None                        ; None                      ; 4.444 ns                ;
+; N/A                                     ; 217.01 MHz ( period = 4.608 ns )                    ; counter[1] ; outElement[4] ; CLK        ; CLK      ; None                        ; None                      ; 4.444 ns                ;
+; N/A                                     ; 218.05 MHz ( period = 4.586 ns )                    ; scount[3]  ; outElement[7] ; CLK        ; CLK      ; None                        ; None                      ; 4.422 ns                ;
+; N/A                                     ; 221.14 MHz ( period = 4.522 ns )                    ; counter[1] ; outElement[0] ; CLK        ; CLK      ; None                        ; None                      ; 4.356 ns                ;
+; N/A                                     ; 221.29 MHz ( period = 4.519 ns )                    ; counter[0] ; outElement[1] ; CLK        ; CLK      ; None                        ; None                      ; 4.353 ns                ;
+; N/A                                     ; 221.48 MHz ( period = 4.515 ns )                    ; counter[0] ; outElement[6] ; CLK        ; CLK      ; None                        ; None                      ; 4.351 ns                ;
+; N/A                                     ; 221.63 MHz ( period = 4.512 ns )                    ; counter[1] ; outElement[1] ; CLK        ; CLK      ; None                        ; None                      ; 4.346 ns                ;
+; N/A                                     ; 222.62 MHz ( period = 4.492 ns )                    ; scount[3]  ; outElement[6] ; CLK        ; CLK      ; None                        ; None                      ; 4.328 ns                ;
+; N/A                                     ; 223.51 MHz ( period = 4.474 ns )                    ; scount[3]  ; outElement[2] ; CLK        ; CLK      ; None                        ; None                      ; 4.308 ns                ;
+; N/A                                     ; 226.81 MHz ( period = 4.409 ns )                    ; counter[0] ; outElement[7] ; CLK        ; CLK      ; None                        ; None                      ; 4.245 ns                ;
+; N/A                                     ; 228.47 MHz ( period = 4.377 ns )                    ; scount[3]  ; outElement[5] ; CLK        ; CLK      ; None                        ; None                      ; 4.213 ns                ;
+; N/A                                     ; 228.47 MHz ( period = 4.377 ns )                    ; scount[3]  ; outElement[4] ; CLK        ; CLK      ; None                        ; None                      ; 4.213 ns                ;
+; N/A                                     ; 229.78 MHz ( period = 4.352 ns )                    ; counter[0] ; outElement[5] ; CLK        ; CLK      ; None                        ; None                      ; 4.188 ns                ;
+; N/A                                     ; 229.78 MHz ( period = 4.352 ns )                    ; counter[0] ; outElement[4] ; CLK        ; CLK      ; None                        ; None                      ; 4.188 ns                ;
+; N/A                                     ; 232.56 MHz ( period = 4.300 ns )                    ; counter[0] ; outElement[2] ; CLK        ; CLK      ; None                        ; None                      ; 4.134 ns                ;
+; N/A                                     ; 235.29 MHz ( period = 4.250 ns )                    ; counter[0] ; outElement[3] ; CLK        ; CLK      ; None                        ; None                      ; 4.084 ns                ;
+; N/A                                     ; 236.18 MHz ( period = 4.234 ns )                    ; counter[1] ; isEmpty       ; CLK        ; CLK      ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 236.24 MHz ( period = 4.233 ns )                    ; counter[1] ; isFull        ; CLK        ; CLK      ; None                        ; None                      ; 4.067 ns                ;
+; N/A                                     ; 239.58 MHz ( period = 4.174 ns )                    ; counter[1] ; outElement[3] ; CLK        ; CLK      ; None                        ; None                      ; 4.008 ns                ;
+; N/A                                     ; 239.58 MHz ( period = 4.174 ns )                    ; counter[1] ; outElement[2] ; CLK        ; CLK      ; None                        ; None                      ; 4.008 ns                ;
+; N/A                                     ; 249.81 MHz ( period = 4.003 ns )                    ; scount[3]  ; isEmpty       ; CLK        ; CLK      ; None                        ; None                      ; 3.837 ns                ;
+; N/A                                     ; 249.88 MHz ( period = 4.002 ns )                    ; scount[3]  ; isFull        ; CLK        ; CLK      ; None                        ; None                      ; 3.836 ns                ;
+; N/A                                     ; 251.38 MHz ( period = 3.978 ns )                    ; counter[0] ; isEmpty       ; CLK        ; CLK      ; None                        ; None                      ; 3.812 ns                ;
+; N/A                                     ; 251.45 MHz ( period = 3.977 ns )                    ; counter[0] ; isFull        ; CLK        ; CLK      ; None                        ; None                      ; 3.811 ns                ;
+; N/A                                     ; 266.52 MHz ( period = 3.752 ns )                    ; scount[3]  ; lifo~80       ; CLK        ; CLK      ; None                        ; None                      ; 3.588 ns                ;
+; N/A                                     ; 266.52 MHz ( period = 3.752 ns )                    ; scount[3]  ; lifo~76       ; CLK        ; CLK      ; None                        ; None                      ; 3.588 ns                ;
+; N/A                                     ; 266.52 MHz ( period = 3.752 ns )                    ; scount[3]  ; lifo~75       ; CLK        ; CLK      ; None                        ; None                      ; 3.588 ns                ;
+; N/A                                     ; 266.52 MHz ( period = 3.752 ns )                    ; scount[3]  ; lifo~74       ; CLK        ; CLK      ; None                        ; None                      ; 3.588 ns                ;
+; N/A                                     ; 266.52 MHz ( period = 3.752 ns )                    ; scount[3]  ; lifo~73       ; CLK        ; CLK      ; None                        ; None                      ; 3.588 ns                ;
+; N/A                                     ; 275.03 MHz ( period = 3.636 ns )                    ; counter[2] ; outElement[7] ; CLK        ; CLK      ; None                        ; None                      ; 3.472 ns                ;
+; N/A                                     ; 275.03 MHz ( period = 3.636 ns )                    ; counter[2] ; outElement[6] ; CLK        ; CLK      ; None                        ; None                      ; 3.472 ns                ;
+; N/A                                     ; 275.03 MHz ( period = 3.636 ns )                    ; counter[2] ; outElement[5] ; CLK        ; CLK      ; None                        ; None                      ; 3.472 ns                ;
+; N/A                                     ; 275.03 MHz ( period = 3.636 ns )                    ; counter[2] ; outElement[4] ; CLK        ; CLK      ; None                        ; None                      ; 3.472 ns                ;
+; N/A                                     ; 276.01 MHz ( period = 3.623 ns )                    ; lifo~33    ; outElement[0] ; CLK        ; CLK      ; None                        ; None                      ; 3.455 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; counter[2] ; lifo~80       ; CLK        ; CLK      ; None                        ; None                      ; 3.453 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; counter[2] ; lifo~76       ; CLK        ; CLK      ; None                        ; None                      ; 3.453 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; counter[2] ; lifo~75       ; CLK        ; CLK      ; None                        ; None                      ; 3.453 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; counter[2] ; lifo~74       ; CLK        ; CLK      ; None                        ; None                      ; 3.453 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; counter[2] ; lifo~73       ; CLK        ; CLK      ; None                        ; None                      ; 3.453 ns                ;
+; N/A                                     ; 281.53 MHz ( period = 3.552 ns )                    ; counter[1] ; counter[0]    ; CLK        ; CLK      ; None                        ; None                      ; 3.386 ns                ;
+; N/A                                     ; 282.49 MHz ( period = 3.540 ns )                    ; counter[2] ; outElement[1] ; CLK        ; CLK      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 284.09 MHz ( period = 3.520 ns )                    ; counter[1] ; lifo~80       ; CLK        ; CLK      ; None                        ; None                      ; 3.356 ns                ;
+; N/A                                     ; 284.09 MHz ( period = 3.520 ns )                    ; counter[1] ; lifo~76       ; CLK        ; CLK      ; None                        ; None                      ; 3.356 ns                ;
+; N/A                                     ; 284.09 MHz ( period = 3.520 ns )                    ; counter[1] ; lifo~75       ; CLK        ; CLK      ; None                        ; None                      ; 3.356 ns                ;
+; N/A                                     ; 284.09 MHz ( period = 3.520 ns )                    ; counter[1] ; lifo~74       ; CLK        ; CLK      ; None                        ; None                      ; 3.356 ns                ;
+; N/A                                     ; 284.09 MHz ( period = 3.520 ns )                    ; counter[1] ; lifo~73       ; CLK        ; CLK      ; None                        ; None                      ; 3.356 ns                ;
+; N/A                                     ; 284.90 MHz ( period = 3.510 ns )                    ; scount[3]  ; lifo~79       ; CLK        ; CLK      ; None                        ; None                      ; 3.346 ns                ;
+; N/A                                     ; 284.90 MHz ( period = 3.510 ns )                    ; scount[3]  ; lifo~78       ; CLK        ; CLK      ; None                        ; None                      ; 3.346 ns                ;
+; N/A                                     ; 284.90 MHz ( period = 3.510 ns )                    ; scount[3]  ; lifo~77       ; CLK        ; CLK      ; None                        ; None                      ; 3.346 ns                ;
+; N/A                                     ; 285.96 MHz ( period = 3.497 ns )                    ; scount[3]  ; lifo~32       ; CLK        ; CLK      ; None                        ; None                      ; 3.333 ns                ;
+; N/A                                     ; 285.96 MHz ( period = 3.497 ns )                    ; scount[3]  ; lifo~31       ; CLK        ; CLK      ; None                        ; None                      ; 3.333 ns                ;
+; N/A                                     ; 285.96 MHz ( period = 3.497 ns )                    ; scount[3]  ; lifo~30       ; CLK        ; CLK      ; None                        ; None                      ; 3.333 ns                ;
+; N/A                                     ; 285.96 MHz ( period = 3.497 ns )                    ; scount[3]  ; lifo~29       ; CLK        ; CLK      ; None                        ; None                      ; 3.333 ns                ;
+; N/A                                     ; 286.12 MHz ( period = 3.495 ns )                    ; scount[3]  ; lifo~39       ; CLK        ; CLK      ; None                        ; None                      ; 3.331 ns                ;
+; N/A                                     ; 286.12 MHz ( period = 3.495 ns )                    ; scount[3]  ; lifo~34       ; CLK        ; CLK      ; None                        ; None                      ; 3.331 ns                ;
+; N/A                                     ; 286.45 MHz ( period = 3.491 ns )                    ; scount[3]  ; lifo~71       ; CLK        ; CLK      ; None                        ; None                      ; 3.327 ns                ;
+; N/A                                     ; 286.45 MHz ( period = 3.491 ns )                    ; scount[3]  ; lifo~70       ; CLK        ; CLK      ; None                        ; None                      ; 3.327 ns                ;
+; N/A                                     ; 286.45 MHz ( period = 3.491 ns )                    ; scount[3]  ; lifo~69       ; CLK        ; CLK      ; None                        ; None                      ; 3.327 ns                ;
+; N/A                                     ; 286.86 MHz ( period = 3.486 ns )                    ; scount[3]  ; lifo~48       ; CLK        ; CLK      ; None                        ; None                      ; 3.322 ns                ;
+; N/A                                     ; 286.86 MHz ( period = 3.486 ns )                    ; scount[3]  ; lifo~47       ; CLK        ; CLK      ; None                        ; None                      ; 3.322 ns                ;
+; N/A                                     ; 286.86 MHz ( period = 3.486 ns )                    ; scount[3]  ; lifo~46       ; CLK        ; CLK      ; None                        ; None                      ; 3.322 ns                ;
+; N/A                                     ; 286.86 MHz ( period = 3.486 ns )                    ; scount[3]  ; lifo~45       ; CLK        ; CLK      ; None                        ; None                      ; 3.322 ns                ;
+; N/A                                     ; 286.86 MHz ( period = 3.486 ns )                    ; scount[3]  ; lifo~44       ; CLK        ; CLK      ; None                        ; None                      ; 3.322 ns                ;
+; N/A                                     ; 286.86 MHz ( period = 3.486 ns )                    ; scount[3]  ; lifo~43       ; CLK        ; CLK      ; None                        ; None                      ; 3.322 ns                ;
+; N/A                                     ; 286.86 MHz ( period = 3.486 ns )                    ; scount[3]  ; lifo~42       ; CLK        ; CLK      ; None                        ; None                      ; 3.322 ns                ;
+; N/A                                     ; 286.86 MHz ( period = 3.486 ns )                    ; scount[3]  ; lifo~41       ; CLK        ; CLK      ; None                        ; None                      ; 3.322 ns                ;
+; N/A                                     ; 288.18 MHz ( period = 3.470 ns )                    ; counter[2] ; outElement[0] ; CLK        ; CLK      ; None                        ; None                      ; 3.304 ns                ;
+; N/A                                     ; 291.38 MHz ( period = 3.432 ns )                    ; lifo~63    ; outElement[6] ; CLK        ; CLK      ; None                        ; None                      ; 3.262 ns                ;
+; N/A                                     ; 291.72 MHz ( period = 3.428 ns )                    ; lifo~49    ; outElement[0] ; CLK        ; CLK      ; None                        ; None                      ; 3.262 ns                ;
+; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; counter[0] ; lifo~80       ; CLK        ; CLK      ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; counter[0] ; lifo~76       ; CLK        ; CLK      ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; counter[0] ; lifo~75       ; CLK        ; CLK      ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; counter[0] ; lifo~74       ; CLK        ; CLK      ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; counter[0] ; lifo~73       ; CLK        ; CLK      ; None                        ; None                      ; 3.235 ns                ;
+; N/A                                     ; 296.30 MHz ( period = 3.375 ns )                    ; counter[2] ; lifo~79       ; CLK        ; CLK      ; None                        ; None                      ; 3.211 ns                ;
+; N/A                                     ; 296.30 MHz ( period = 3.375 ns )                    ; counter[2] ; lifo~78       ; CLK        ; CLK      ; None                        ; None                      ; 3.211 ns                ;
+; N/A                                     ; 296.30 MHz ( period = 3.375 ns )                    ; counter[2] ; lifo~77       ; CLK        ; CLK      ; None                        ; None                      ; 3.211 ns                ;
+; N/A                                     ; 297.44 MHz ( period = 3.362 ns )                    ; counter[2] ; lifo~32       ; CLK        ; CLK      ; None                        ; None                      ; 3.198 ns                ;
+; N/A                                     ; 297.44 MHz ( period = 3.362 ns )                    ; counter[2] ; lifo~31       ; CLK        ; CLK      ; None                        ; None                      ; 3.198 ns                ;
+; N/A                                     ; 297.44 MHz ( period = 3.362 ns )                    ; counter[2] ; lifo~30       ; CLK        ; CLK      ; None                        ; None                      ; 3.198 ns                ;
+; N/A                                     ; 297.44 MHz ( period = 3.362 ns )                    ; counter[2] ; lifo~29       ; CLK        ; CLK      ; None                        ; None                      ; 3.198 ns                ;
+; N/A                                     ; 297.71 MHz ( period = 3.359 ns )                    ; counter[2] ; lifo~39       ; CLK        ; CLK      ; None                        ; None                      ; 3.195 ns                ;
+; N/A                                     ; 297.71 MHz ( period = 3.359 ns )                    ; counter[2] ; lifo~34       ; CLK        ; CLK      ; None                        ; None                      ; 3.195 ns                ;
+; N/A                                     ; 298.33 MHz ( period = 3.352 ns )                    ; counter[2] ; lifo~71       ; CLK        ; CLK      ; None                        ; None                      ; 3.188 ns                ;
+; N/A                                     ; 298.33 MHz ( period = 3.352 ns )                    ; counter[2] ; lifo~70       ; CLK        ; CLK      ; None                        ; None                      ; 3.188 ns                ;
+; N/A                                     ; 298.33 MHz ( period = 3.352 ns )                    ; counter[2] ; lifo~69       ; CLK        ; CLK      ; None                        ; None                      ; 3.188 ns                ;
+; N/A                                     ; 298.51 MHz ( period = 3.350 ns )                    ; counter[2] ; lifo~48       ; CLK        ; CLK      ; None                        ; None                      ; 3.186 ns                ;
+; N/A                                     ; 298.51 MHz ( period = 3.350 ns )                    ; counter[2] ; lifo~47       ; CLK        ; CLK      ; None                        ; None                      ; 3.186 ns                ;
+; N/A                                     ; 298.51 MHz ( period = 3.350 ns )                    ; counter[2] ; lifo~46       ; CLK        ; CLK      ; None                        ; None                      ; 3.186 ns                ;
+; N/A                                     ; 298.51 MHz ( period = 3.350 ns )                    ; counter[2] ; lifo~45       ; CLK        ; CLK      ; None                        ; None                      ; 3.186 ns                ;
+; N/A                                     ; 298.51 MHz ( period = 3.350 ns )                    ; counter[2] ; lifo~44       ; CLK        ; CLK      ; None                        ; None                      ; 3.186 ns                ;
+; N/A                                     ; 298.51 MHz ( period = 3.350 ns )                    ; counter[2] ; lifo~43       ; CLK        ; CLK      ; None                        ; None                      ; 3.186 ns                ;
+; N/A                                     ; 298.51 MHz ( period = 3.350 ns )                    ; counter[2] ; lifo~42       ; CLK        ; CLK      ; None                        ; None                      ; 3.186 ns                ;
+; N/A                                     ; 298.51 MHz ( period = 3.350 ns )                    ; counter[2] ; lifo~41       ; CLK        ; CLK      ; None                        ; None                      ; 3.186 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; scount[3]  ; lifo~64       ; CLK        ; CLK      ; None                        ; None                      ; 3.171 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; scount[3]  ; lifo~63       ; CLK        ; CLK      ; None                        ; None                      ; 3.171 ns                ;
+; N/A                                     ; 300.84 MHz ( period = 3.324 ns )                    ; lifo~36    ; outElement[3] ; CLK        ; CLK      ; None                        ; None                      ; 3.156 ns                ;
+; N/A                                     ; 301.11 MHz ( period = 3.321 ns )                    ; scount[3]  ; counter[0]    ; CLK        ; CLK      ; None                        ; None                      ; 3.155 ns                ;
+; N/A                                     ; 301.66 MHz ( period = 3.315 ns )                    ; scount[3]  ; lifo~62       ; CLK        ; CLK      ; None                        ; None                      ; 3.151 ns                ;
+; N/A                                     ; 301.66 MHz ( period = 3.315 ns )                    ; scount[3]  ; lifo~61       ; CLK        ; CLK      ; None                        ; None                      ; 3.151 ns                ;
+; N/A                                     ; 301.66 MHz ( period = 3.315 ns )                    ; scount[3]  ; lifo~60       ; CLK        ; CLK      ; None                        ; None                      ; 3.151 ns                ;
+; N/A                                     ; 301.66 MHz ( period = 3.315 ns )                    ; scount[3]  ; lifo~59       ; CLK        ; CLK      ; None                        ; None                      ; 3.151 ns                ;
+; N/A                                     ; 301.66 MHz ( period = 3.315 ns )                    ; scount[3]  ; lifo~57       ; CLK        ; CLK      ; None                        ; None                      ; 3.151 ns                ;
+; N/A                                     ; 303.40 MHz ( period = 3.296 ns )                    ; counter[0] ; counter[0]    ; CLK        ; CLK      ; None                        ; None                      ; 3.130 ns                ;
+; N/A                                     ; 305.06 MHz ( period = 3.278 ns )                    ; counter[1] ; lifo~79       ; CLK        ; CLK      ; None                        ; None                      ; 3.114 ns                ;
+; N/A                                     ; 305.06 MHz ( period = 3.278 ns )                    ; counter[1] ; lifo~78       ; CLK        ; CLK      ; None                        ; None                      ; 3.114 ns                ;
+; N/A                                     ; 305.06 MHz ( period = 3.278 ns )                    ; counter[1] ; lifo~77       ; CLK        ; CLK      ; None                        ; None                      ; 3.114 ns                ;
+; N/A                                     ; 305.16 MHz ( period = 3.277 ns )                    ; scount[3]  ; lifo~38       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.16 MHz ( period = 3.277 ns )                    ; scount[3]  ; lifo~37       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.16 MHz ( period = 3.277 ns )                    ; scount[3]  ; lifo~36       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.16 MHz ( period = 3.277 ns )                    ; scount[3]  ; lifo~35       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.16 MHz ( period = 3.277 ns )                    ; scount[3]  ; lifo~33       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.53 MHz ( period = 3.273 ns )                    ; scount[3]  ; lifo~24       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.53 MHz ( period = 3.273 ns )                    ; scount[3]  ; lifo~23       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.53 MHz ( period = 3.273 ns )                    ; scount[3]  ; lifo~22       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.53 MHz ( period = 3.273 ns )                    ; scount[3]  ; lifo~21       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.53 MHz ( period = 3.273 ns )                    ; scount[3]  ; lifo~20       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.53 MHz ( period = 3.273 ns )                    ; scount[3]  ; lifo~19       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.53 MHz ( period = 3.273 ns )                    ; scount[3]  ; lifo~18       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.53 MHz ( period = 3.273 ns )                    ; scount[3]  ; lifo~17       ; CLK        ; CLK      ; None                        ; None                      ; 3.113 ns                ;
+; N/A                                     ; 305.81 MHz ( period = 3.270 ns )                    ; scount[3]  ; lifo~72       ; CLK        ; CLK      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 305.81 MHz ( period = 3.270 ns )                    ; scount[3]  ; lifo~68       ; CLK        ; CLK      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 305.81 MHz ( period = 3.270 ns )                    ; scount[3]  ; lifo~67       ; CLK        ; CLK      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 305.81 MHz ( period = 3.270 ns )                    ; scount[3]  ; lifo~66       ; CLK        ; CLK      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 305.81 MHz ( period = 3.270 ns )                    ; scount[3]  ; lifo~65       ; CLK        ; CLK      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 306.56 MHz ( period = 3.262 ns )                    ; counter[2] ; isEmpty       ; CLK        ; CLK      ; None                        ; None                      ; 3.096 ns                ;
+; N/A                                     ; 306.65 MHz ( period = 3.261 ns )                    ; counter[2] ; isFull        ; CLK        ; CLK      ; None                        ; None                      ; 3.095 ns                ;
+; N/A                                     ; 306.94 MHz ( period = 3.258 ns )                    ; counter[1] ; lifo~32       ; CLK        ; CLK      ; None                        ; None                      ; 3.094 ns                ;
+; N/A                                     ; 306.94 MHz ( period = 3.258 ns )                    ; counter[1] ; lifo~31       ; CLK        ; CLK      ; None                        ; None                      ; 3.094 ns                ;
+; N/A                                     ; 306.94 MHz ( period = 3.258 ns )                    ; counter[1] ; lifo~30       ; CLK        ; CLK      ; None                        ; None                      ; 3.094 ns                ;
+; N/A                                     ; 306.94 MHz ( period = 3.258 ns )                    ; counter[1] ; lifo~29       ; CLK        ; CLK      ; None                        ; None                      ; 3.094 ns                ;
+; N/A                                     ; 307.03 MHz ( period = 3.257 ns )                    ; counter[1] ; lifo~71       ; CLK        ; CLK      ; None                        ; None                      ; 3.093 ns                ;
+; N/A                                     ; 307.03 MHz ( period = 3.257 ns )                    ; counter[1] ; lifo~39       ; CLK        ; CLK      ; None                        ; None                      ; 3.093 ns                ;
+; N/A                                     ; 307.03 MHz ( period = 3.257 ns )                    ; counter[1] ; lifo~70       ; CLK        ; CLK      ; None                        ; None                      ; 3.093 ns                ;
+; N/A                                     ; 307.03 MHz ( period = 3.257 ns )                    ; counter[1] ; lifo~69       ; CLK        ; CLK      ; None                        ; None                      ; 3.093 ns                ;
+; N/A                                     ; 307.03 MHz ( period = 3.257 ns )                    ; counter[1] ; lifo~34       ; CLK        ; CLK      ; None                        ; None                      ; 3.093 ns                ;
+; N/A                                     ; 307.98 MHz ( period = 3.247 ns )                    ; counter[1] ; lifo~48       ; CLK        ; CLK      ; None                        ; None                      ; 3.083 ns                ;
+; N/A                                     ; 307.98 MHz ( period = 3.247 ns )                    ; counter[1] ; lifo~47       ; CLK        ; CLK      ; None                        ; None                      ; 3.083 ns                ;
+; N/A                                     ; 307.98 MHz ( period = 3.247 ns )                    ; counter[1] ; lifo~46       ; CLK        ; CLK      ; None                        ; None                      ; 3.083 ns                ;
+; N/A                                     ; 307.98 MHz ( period = 3.247 ns )                    ; counter[1] ; lifo~45       ; CLK        ; CLK      ; None                        ; None                      ; 3.083 ns                ;
+; N/A                                     ; 307.98 MHz ( period = 3.247 ns )                    ; counter[1] ; lifo~44       ; CLK        ; CLK      ; None                        ; None                      ; 3.083 ns                ;
+; N/A                                     ; 307.98 MHz ( period = 3.247 ns )                    ; counter[1] ; lifo~43       ; CLK        ; CLK      ; None                        ; None                      ; 3.083 ns                ;
+; N/A                                     ; 307.98 MHz ( period = 3.247 ns )                    ; counter[1] ; lifo~42       ; CLK        ; CLK      ; None                        ; None                      ; 3.083 ns                ;
+; N/A                                     ; 307.98 MHz ( period = 3.247 ns )                    ; counter[1] ; lifo~41       ; CLK        ; CLK      ; None                        ; None                      ; 3.083 ns                ;
+; N/A                                     ; 312.30 MHz ( period = 3.202 ns )                    ; counter[2] ; outElement[3] ; CLK        ; CLK      ; None                        ; None                      ; 3.036 ns                ;
+; N/A                                     ; 312.30 MHz ( period = 3.202 ns )                    ; counter[2] ; outElement[2] ; CLK        ; CLK      ; None                        ; None                      ; 3.036 ns                ;
+; N/A                                     ; 313.19 MHz ( period = 3.193 ns )                    ; counter[2] ; lifo~64       ; CLK        ; CLK      ; None                        ; None                      ; 3.033 ns                ;
+; N/A                                     ; 313.19 MHz ( period = 3.193 ns )                    ; counter[2] ; lifo~63       ; CLK        ; CLK      ; None                        ; None                      ; 3.033 ns                ;
+; N/A                                     ; 313.38 MHz ( period = 3.191 ns )                    ; counter[1] ; counter[1]    ; CLK        ; CLK      ; None                        ; None                      ; 3.025 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; counter[2] ; lifo~62       ; CLK        ; CLK      ; None                        ; None                      ; 3.013 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; counter[2] ; lifo~61       ; CLK        ; CLK      ; None                        ; None                      ; 3.013 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; counter[2] ; lifo~60       ; CLK        ; CLK      ; None                        ; None                      ; 3.013 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; counter[2] ; lifo~59       ; CLK        ; CLK      ; None                        ; None                      ; 3.013 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; counter[2] ; lifo~57       ; CLK        ; CLK      ; None                        ; None                      ; 3.013 ns                ;
+; N/A                                     ; 315.86 MHz ( period = 3.166 ns )                    ; scount[3]  ; lifo~56       ; CLK        ; CLK      ; None                        ; None                      ; 3.000 ns                ;
+; N/A                                     ; 315.86 MHz ( period = 3.166 ns )                    ; scount[3]  ; lifo~55       ; CLK        ; CLK      ; None                        ; None                      ; 3.000 ns                ;
+; N/A                                     ; 315.86 MHz ( period = 3.166 ns )                    ; scount[3]  ; lifo~54       ; CLK        ; CLK      ; None                        ; None                      ; 3.000 ns                ;
+; N/A                                     ; 315.86 MHz ( period = 3.166 ns )                    ; scount[3]  ; lifo~53       ; CLK        ; CLK      ; None                        ; None                      ; 3.000 ns                ;
+; N/A                                     ; 315.96 MHz ( period = 3.165 ns )                    ; lifo~51    ; outElement[2] ; CLK        ; CLK      ; None                        ; None                      ; 2.999 ns                ;
+; N/A                                     ; 316.76 MHz ( period = 3.157 ns )                    ; counter[0] ; lifo~79       ; CLK        ; CLK      ; None                        ; None                      ; 2.993 ns                ;
+; N/A                                     ; 316.76 MHz ( period = 3.157 ns )                    ; counter[0] ; lifo~78       ; CLK        ; CLK      ; None                        ; None                      ; 2.993 ns                ;
+; N/A                                     ; 316.76 MHz ( period = 3.157 ns )                    ; counter[0] ; lifo~77       ; CLK        ; CLK      ; None                        ; None                      ; 2.993 ns                ;
+; N/A                                     ; 318.07 MHz ( period = 3.144 ns )                    ; lifo~64    ; outElement[7] ; CLK        ; CLK      ; None                        ; None                      ; 2.974 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; counter[2] ; lifo~38       ; CLK        ; CLK      ; None                        ; None                      ; 2.977 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; counter[2] ; lifo~37       ; CLK        ; CLK      ; None                        ; None                      ; 2.977 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; counter[2] ; lifo~36       ; CLK        ; CLK      ; None                        ; None                      ; 2.977 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; counter[2] ; lifo~35       ; CLK        ; CLK      ; None                        ; None                      ; 2.977 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; counter[2] ; lifo~33       ; CLK        ; CLK      ; None                        ; None                      ; 2.977 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; lifo~52    ; outElement[3] ; CLK        ; CLK      ; None                        ; None                      ; 2.975 ns                ;
+; N/A                                     ; 318.67 MHz ( period = 3.138 ns )                    ; counter[2] ; lifo~24       ; CLK        ; CLK      ; None                        ; None                      ; 2.978 ns                ;
+; N/A                                     ; 318.67 MHz ( period = 3.138 ns )                    ; counter[2] ; lifo~23       ; CLK        ; CLK      ; None                        ; None                      ; 2.978 ns                ;
+; N/A                                     ; 318.67 MHz ( period = 3.138 ns )                    ; counter[2] ; lifo~22       ; CLK        ; CLK      ; None                        ; None                      ; 2.978 ns                ;
+; N/A                                     ; 318.67 MHz ( period = 3.138 ns )                    ; counter[2] ; lifo~21       ; CLK        ; CLK      ; None                        ; None                      ; 2.978 ns                ;
+; N/A                                     ; 318.67 MHz ( period = 3.138 ns )                    ; counter[2] ; lifo~20       ; CLK        ; CLK      ; None                        ; None                      ; 2.978 ns                ;
+; N/A                                     ; 318.67 MHz ( period = 3.138 ns )                    ; counter[2] ; lifo~19       ; CLK        ; CLK      ; None                        ; None                      ; 2.978 ns                ;
+; N/A                                     ; 318.67 MHz ( period = 3.138 ns )                    ; counter[2] ; lifo~18       ; CLK        ; CLK      ; None                        ; None                      ; 2.978 ns                ;
+; N/A                                     ; 318.67 MHz ( period = 3.138 ns )                    ; counter[2] ; lifo~17       ; CLK        ; CLK      ; None                        ; None                      ; 2.978 ns                ;
+; N/A                                     ; 318.98 MHz ( period = 3.135 ns )                    ; counter[0] ; lifo~71       ; CLK        ; CLK      ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 318.98 MHz ( period = 3.135 ns )                    ; counter[0] ; lifo~39       ; CLK        ; CLK      ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 318.98 MHz ( period = 3.135 ns )                    ; counter[0] ; lifo~70       ; CLK        ; CLK      ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 318.98 MHz ( period = 3.135 ns )                    ; counter[0] ; lifo~69       ; CLK        ; CLK      ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 318.98 MHz ( period = 3.135 ns )                    ; counter[0] ; lifo~34       ; CLK        ; CLK      ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 319.39 MHz ( period = 3.131 ns )                    ; counter[2] ; lifo~72       ; CLK        ; CLK      ; None                        ; None                      ; 2.967 ns                ;
+; N/A                                     ; 319.39 MHz ( period = 3.131 ns )                    ; counter[2] ; lifo~68       ; CLK        ; CLK      ; None                        ; None                      ; 2.967 ns                ;
+; N/A                                     ; 319.39 MHz ( period = 3.131 ns )                    ; counter[2] ; lifo~67       ; CLK        ; CLK      ; None                        ; None                      ; 2.967 ns                ;
+; N/A                                     ; 319.39 MHz ( period = 3.131 ns )                    ; counter[2] ; lifo~66       ; CLK        ; CLK      ; None                        ; None                      ; 2.967 ns                ;
+; N/A                                     ; 319.39 MHz ( period = 3.131 ns )                    ; counter[2] ; lifo~65       ; CLK        ; CLK      ; None                        ; None                      ; 2.967 ns                ;
+; N/A                                     ; 319.59 MHz ( period = 3.129 ns )                    ; counter[0] ; lifo~32       ; CLK        ; CLK      ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 319.59 MHz ( period = 3.129 ns )                    ; counter[0] ; lifo~31       ; CLK        ; CLK      ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 319.59 MHz ( period = 3.129 ns )                    ; counter[0] ; lifo~30       ; CLK        ; CLK      ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 319.59 MHz ( period = 3.129 ns )                    ; counter[0] ; lifo~29       ; CLK        ; CLK      ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 320.31 MHz ( period = 3.122 ns )                    ; scount[3]  ; lifo~40       ; CLK        ; CLK      ; None                        ; None                      ; 2.956 ns                ;
+; N/A                                     ; 320.72 MHz ( period = 3.118 ns )                    ; counter[0] ; lifo~43       ; CLK        ; CLK      ; None                        ; None                      ; 2.954 ns                ;
+; N/A                                     ; 320.72 MHz ( period = 3.118 ns )                    ; counter[0] ; lifo~42       ; CLK        ; CLK      ; None                        ; None                      ; 2.954 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;               ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+------------+---------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                ;
++-----------------------------------------+-----------------------------------------------------+------------+------------+---------------+----------+
+; Slack                                   ; Required tsu                                        ; Actual tsu ; From       ; To            ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+------------+---------------+----------+
+; N/A                                     ; None                                                ; 6.256 ns   ; WR         ; outElement[0] ; CLK      ;
+; N/A                                     ; None                                                ; 5.995 ns   ; WR         ; outElement[1] ; CLK      ;
+; N/A                                     ; None                                                ; 5.991 ns   ; WR         ; outElement[6] ; CLK      ;
+; N/A                                     ; None                                                ; 5.904 ns   ; WR         ; outElement[4] ; CLK      ;
+; N/A                                     ; None                                                ; 5.904 ns   ; WR         ; outElement[5] ; CLK      ;
+; N/A                                     ; None                                                ; 5.904 ns   ; WR         ; outElement[7] ; CLK      ;
+; N/A                                     ; None                                                ; 5.788 ns   ; WR         ; outElement[3] ; CLK      ;
+; N/A                                     ; None                                                ; 5.776 ns   ; WR         ; outElement[2] ; CLK      ;
+; N/A                                     ; None                                                ; 5.530 ns   ; WR         ; isEmpty       ; CLK      ;
+; N/A                                     ; None                                                ; 5.529 ns   ; WR         ; isFull        ; CLK      ;
+; N/A                                     ; None                                                ; 5.223 ns   ; WR         ; lifo~73       ; CLK      ;
+; N/A                                     ; None                                                ; 5.223 ns   ; WR         ; lifo~74       ; CLK      ;
+; N/A                                     ; None                                                ; 5.223 ns   ; WR         ; lifo~75       ; CLK      ;
+; N/A                                     ; None                                                ; 5.223 ns   ; WR         ; lifo~76       ; CLK      ;
+; N/A                                     ; None                                                ; 5.223 ns   ; WR         ; lifo~80       ; CLK      ;
+; N/A                                     ; None                                                ; 4.981 ns   ; WR         ; lifo~77       ; CLK      ;
+; N/A                                     ; None                                                ; 4.981 ns   ; WR         ; lifo~78       ; CLK      ;
+; N/A                                     ; None                                                ; 4.981 ns   ; WR         ; lifo~79       ; CLK      ;
+; N/A                                     ; None                                                ; 4.968 ns   ; WR         ; lifo~29       ; CLK      ;
+; N/A                                     ; None                                                ; 4.968 ns   ; WR         ; lifo~30       ; CLK      ;
+; N/A                                     ; None                                                ; 4.968 ns   ; WR         ; lifo~31       ; CLK      ;
+; N/A                                     ; None                                                ; 4.968 ns   ; WR         ; lifo~32       ; CLK      ;
+; N/A                                     ; None                                                ; 4.966 ns   ; WR         ; lifo~34       ; CLK      ;
+; N/A                                     ; None                                                ; 4.966 ns   ; WR         ; lifo~39       ; CLK      ;
+; N/A                                     ; None                                                ; 4.962 ns   ; WR         ; lifo~69       ; CLK      ;
+; N/A                                     ; None                                                ; 4.962 ns   ; WR         ; lifo~70       ; CLK      ;
+; N/A                                     ; None                                                ; 4.962 ns   ; WR         ; lifo~71       ; CLK      ;
+; N/A                                     ; None                                                ; 4.957 ns   ; WR         ; lifo~41       ; CLK      ;
+; N/A                                     ; None                                                ; 4.957 ns   ; WR         ; lifo~42       ; CLK      ;
+; N/A                                     ; None                                                ; 4.957 ns   ; WR         ; lifo~43       ; CLK      ;
+; N/A                                     ; None                                                ; 4.957 ns   ; WR         ; lifo~44       ; CLK      ;
+; N/A                                     ; None                                                ; 4.957 ns   ; WR         ; lifo~45       ; CLK      ;
+; N/A                                     ; None                                                ; 4.957 ns   ; WR         ; lifo~46       ; CLK      ;
+; N/A                                     ; None                                                ; 4.957 ns   ; WR         ; lifo~47       ; CLK      ;
+; N/A                                     ; None                                                ; 4.957 ns   ; WR         ; lifo~48       ; CLK      ;
+; N/A                                     ; None                                                ; 4.848 ns   ; WR         ; counter[0]    ; CLK      ;
+; N/A                                     ; None                                                ; 4.840 ns   ; RD         ; outElement[4] ; CLK      ;
+; N/A                                     ; None                                                ; 4.840 ns   ; RD         ; outElement[5] ; CLK      ;
+; N/A                                     ; None                                                ; 4.840 ns   ; RD         ; outElement[6] ; CLK      ;
+; N/A                                     ; None                                                ; 4.840 ns   ; RD         ; outElement[7] ; CLK      ;
+; N/A                                     ; None                                                ; 4.802 ns   ; WR         ; lifo~63       ; CLK      ;
+; N/A                                     ; None                                                ; 4.802 ns   ; WR         ; lifo~64       ; CLK      ;
+; N/A                                     ; None                                                ; 4.786 ns   ; WR         ; lifo~57       ; CLK      ;
+; N/A                                     ; None                                                ; 4.786 ns   ; WR         ; lifo~59       ; CLK      ;
+; N/A                                     ; None                                                ; 4.786 ns   ; WR         ; lifo~60       ; CLK      ;
+; N/A                                     ; None                                                ; 4.786 ns   ; WR         ; lifo~61       ; CLK      ;
+; N/A                                     ; None                                                ; 4.786 ns   ; WR         ; lifo~62       ; CLK      ;
+; N/A                                     ; None                                                ; 4.748 ns   ; WR         ; lifo~33       ; CLK      ;
+; N/A                                     ; None                                                ; 4.748 ns   ; WR         ; lifo~35       ; CLK      ;
+; N/A                                     ; None                                                ; 4.748 ns   ; WR         ; lifo~36       ; CLK      ;
+; N/A                                     ; None                                                ; 4.748 ns   ; WR         ; lifo~37       ; CLK      ;
+; N/A                                     ; None                                                ; 4.748 ns   ; WR         ; lifo~38       ; CLK      ;
+; N/A                                     ; None                                                ; 4.744 ns   ; RD         ; outElement[1] ; CLK      ;
+; N/A                                     ; None                                                ; 4.744 ns   ; WR         ; lifo~17       ; CLK      ;
+; N/A                                     ; None                                                ; 4.744 ns   ; WR         ; lifo~18       ; CLK      ;
+; N/A                                     ; None                                                ; 4.744 ns   ; WR         ; lifo~19       ; CLK      ;
+; N/A                                     ; None                                                ; 4.744 ns   ; WR         ; lifo~20       ; CLK      ;
+; N/A                                     ; None                                                ; 4.744 ns   ; WR         ; lifo~21       ; CLK      ;
+; N/A                                     ; None                                                ; 4.744 ns   ; WR         ; lifo~22       ; CLK      ;
+; N/A                                     ; None                                                ; 4.744 ns   ; WR         ; lifo~23       ; CLK      ;
+; N/A                                     ; None                                                ; 4.744 ns   ; WR         ; lifo~24       ; CLK      ;
+; N/A                                     ; None                                                ; 4.741 ns   ; WR         ; lifo~65       ; CLK      ;
+; N/A                                     ; None                                                ; 4.741 ns   ; WR         ; lifo~66       ; CLK      ;
+; N/A                                     ; None                                                ; 4.741 ns   ; WR         ; lifo~67       ; CLK      ;
+; N/A                                     ; None                                                ; 4.741 ns   ; WR         ; lifo~68       ; CLK      ;
+; N/A                                     ; None                                                ; 4.741 ns   ; WR         ; lifo~72       ; CLK      ;
+; N/A                                     ; None                                                ; 4.674 ns   ; RD         ; outElement[0] ; CLK      ;
+; N/A                                     ; None                                                ; 4.637 ns   ; WR         ; lifo~53       ; CLK      ;
+; N/A                                     ; None                                                ; 4.637 ns   ; WR         ; lifo~54       ; CLK      ;
+; N/A                                     ; None                                                ; 4.637 ns   ; WR         ; lifo~55       ; CLK      ;
+; N/A                                     ; None                                                ; 4.637 ns   ; WR         ; lifo~56       ; CLK      ;
+; N/A                                     ; None                                                ; 4.593 ns   ; WR         ; lifo~40       ; CLK      ;
+; N/A                                     ; None                                                ; 4.495 ns   ; WR         ; lifo~49       ; CLK      ;
+; N/A                                     ; None                                                ; 4.495 ns   ; WR         ; lifo~50       ; CLK      ;
+; N/A                                     ; None                                                ; 4.495 ns   ; WR         ; lifo~51       ; CLK      ;
+; N/A                                     ; None                                                ; 4.495 ns   ; WR         ; lifo~52       ; CLK      ;
+; N/A                                     ; None                                                ; 4.487 ns   ; WR         ; counter[1]    ; CLK      ;
+; N/A                                     ; None                                                ; 4.466 ns   ; RD         ; isEmpty       ; CLK      ;
+; N/A                                     ; None                                                ; 4.465 ns   ; RD         ; isFull        ; CLK      ;
+; N/A                                     ; None                                                ; 4.408 ns   ; WR         ; counter[2]    ; CLK      ;
+; N/A                                     ; None                                                ; 4.406 ns   ; RD         ; outElement[2] ; CLK      ;
+; N/A                                     ; None                                                ; 4.406 ns   ; RD         ; outElement[3] ; CLK      ;
+; N/A                                     ; None                                                ; 4.375 ns   ; WR         ; scount[3]     ; CLK      ;
+; N/A                                     ; None                                                ; 4.311 ns   ; WR         ; lifo~25       ; CLK      ;
+; N/A                                     ; None                                                ; 4.311 ns   ; WR         ; lifo~26       ; CLK      ;
+; N/A                                     ; None                                                ; 4.311 ns   ; WR         ; lifo~27       ; CLK      ;
+; N/A                                     ; None                                                ; 4.311 ns   ; WR         ; lifo~28       ; CLK      ;
+; N/A                                     ; None                                                ; 4.127 ns   ; WR         ; lifo~58       ; CLK      ;
+; N/A                                     ; None                                                ; 3.784 ns   ; RD         ; counter[0]    ; CLK      ;
+; N/A                                     ; None                                                ; 3.423 ns   ; RD         ; counter[1]    ; CLK      ;
+; N/A                                     ; None                                                ; 3.367 ns   ; RD         ; counter[2]    ; CLK      ;
+; N/A                                     ; None                                                ; 3.311 ns   ; RD         ; scount[3]     ; CLK      ;
+; N/A                                     ; None                                                ; 2.907 ns   ; Reset      ; lifo~73       ; CLK      ;
+; N/A                                     ; None                                                ; 2.907 ns   ; Reset      ; lifo~74       ; CLK      ;
+; N/A                                     ; None                                                ; 2.907 ns   ; Reset      ; lifo~75       ; CLK      ;
+; N/A                                     ; None                                                ; 2.907 ns   ; Reset      ; lifo~76       ; CLK      ;
+; N/A                                     ; None                                                ; 2.907 ns   ; Reset      ; lifo~80       ; CLK      ;
+; N/A                                     ; None                                                ; 2.877 ns   ; DATA_IN[3] ; lifo~52       ; CLK      ;
+; N/A                                     ; None                                                ; 2.869 ns   ; DATA_IN[2] ; lifo~51       ; CLK      ;
+; N/A                                     ; None                                                ; 2.815 ns   ; DATA_IN[6] ; lifo~23       ; CLK      ;
+; N/A                                     ; None                                                ; 2.815 ns   ; DATA_IN[6] ; lifo~63       ; CLK      ;
+; N/A                                     ; None                                                ; 2.757 ns   ; DATA_IN[0] ; lifo~33       ; CLK      ;
+; N/A                                     ; None                                                ; 2.753 ns   ; DATA_IN[0] ; lifo~57       ; CLK      ;
+; N/A                                     ; None                                                ; 2.682 ns   ; DATA_IN[3] ; lifo~68       ; CLK      ;
+; N/A                                     ; None                                                ; 2.680 ns   ; DATA_IN[3] ; lifo~76       ; CLK      ;
+; N/A                                     ; None                                                ; 2.665 ns   ; Reset      ; lifo~77       ; CLK      ;
+; N/A                                     ; None                                                ; 2.665 ns   ; Reset      ; lifo~78       ; CLK      ;
+; N/A                                     ; None                                                ; 2.665 ns   ; Reset      ; lifo~79       ; CLK      ;
+; N/A                                     ; None                                                ; 2.652 ns   ; Reset      ; lifo~29       ; CLK      ;
+; N/A                                     ; None                                                ; 2.652 ns   ; Reset      ; lifo~30       ; CLK      ;
+; N/A                                     ; None                                                ; 2.652 ns   ; Reset      ; lifo~31       ; CLK      ;
+; N/A                                     ; None                                                ; 2.652 ns   ; Reset      ; lifo~32       ; CLK      ;
+; N/A                                     ; None                                                ; 2.650 ns   ; Reset      ; lifo~34       ; CLK      ;
+; N/A                                     ; None                                                ; 2.650 ns   ; Reset      ; lifo~39       ; CLK      ;
+; N/A                                     ; None                                                ; 2.646 ns   ; Reset      ; lifo~69       ; CLK      ;
+; N/A                                     ; None                                                ; 2.646 ns   ; Reset      ; lifo~70       ; CLK      ;
+; N/A                                     ; None                                                ; 2.646 ns   ; Reset      ; lifo~71       ; CLK      ;
+; N/A                                     ; None                                                ; 2.641 ns   ; Reset      ; lifo~41       ; CLK      ;
+; N/A                                     ; None                                                ; 2.641 ns   ; Reset      ; lifo~42       ; CLK      ;
+; N/A                                     ; None                                                ; 2.641 ns   ; Reset      ; lifo~43       ; CLK      ;
+; N/A                                     ; None                                                ; 2.641 ns   ; Reset      ; lifo~44       ; CLK      ;
+; N/A                                     ; None                                                ; 2.641 ns   ; Reset      ; lifo~45       ; CLK      ;
+; N/A                                     ; None                                                ; 2.641 ns   ; Reset      ; lifo~46       ; CLK      ;
+; N/A                                     ; None                                                ; 2.641 ns   ; Reset      ; lifo~47       ; CLK      ;
+; N/A                                     ; None                                                ; 2.641 ns   ; Reset      ; lifo~48       ; CLK      ;
+; N/A                                     ; None                                                ; 2.635 ns   ; DATA_IN[1] ; lifo~26       ; CLK      ;
+; N/A                                     ; None                                                ; 2.599 ns   ; DATA_IN[5] ; lifo~62       ; CLK      ;
+; N/A                                     ; None                                                ; 2.598 ns   ; DATA_IN[5] ; lifo~38       ; CLK      ;
+; N/A                                     ; None                                                ; 2.581 ns   ; DATA_IN[4] ; lifo~61       ; CLK      ;
+; N/A                                     ; None                                                ; 2.580 ns   ; DATA_IN[4] ; lifo~37       ; CLK      ;
+; N/A                                     ; None                                                ; 2.565 ns   ; DATA_IN[1] ; lifo~58       ; CLK      ;
+; N/A                                     ; None                                                ; 2.562 ns   ; DATA_IN[5] ; lifo~22       ; CLK      ;
+; N/A                                     ; None                                                ; 2.552 ns   ; DATA_IN[0] ; lifo~49       ; CLK      ;
+; N/A                                     ; None                                                ; 2.502 ns   ; DATA_IN[4] ; lifo~21       ; CLK      ;
+; N/A                                     ; None                                                ; 2.498 ns   ; DATA_IN[1] ; lifo~34       ; CLK      ;
+; N/A                                     ; None                                                ; 2.495 ns   ; DATA_IN[1] ; lifo~42       ; CLK      ;
+; N/A                                     ; None                                                ; 2.488 ns   ; DATA_IN[4] ; lifo~45       ; CLK      ;
+; N/A                                     ; None                                                ; 2.486 ns   ; Reset      ; lifo~63       ; CLK      ;
+; N/A                                     ; None                                                ; 2.486 ns   ; Reset      ; lifo~64       ; CLK      ;
+; N/A                                     ; None                                                ; 2.485 ns   ; DATA_IN[3] ; lifo~28       ; CLK      ;
+; N/A                                     ; None                                                ; 2.476 ns   ; DATA_IN[0] ; lifo~65       ; CLK      ;
+; N/A                                     ; None                                                ; 2.473 ns   ; DATA_IN[5] ; lifo~30       ; CLK      ;
+; N/A                                     ; None                                                ; 2.470 ns   ; Reset      ; lifo~57       ; CLK      ;
+; N/A                                     ; None                                                ; 2.470 ns   ; Reset      ; lifo~59       ; CLK      ;
+; N/A                                     ; None                                                ; 2.470 ns   ; Reset      ; lifo~60       ; CLK      ;
+; N/A                                     ; None                                                ; 2.470 ns   ; Reset      ; lifo~61       ; CLK      ;
+; N/A                                     ; None                                                ; 2.470 ns   ; Reset      ; lifo~62       ; CLK      ;
+; N/A                                     ; None                                                ; 2.468 ns   ; DATA_IN[7] ; lifo~72       ; CLK      ;
+; N/A                                     ; None                                                ; 2.467 ns   ; DATA_IN[7] ; lifo~80       ; CLK      ;
+; N/A                                     ; None                                                ; 2.462 ns   ; DATA_IN[7] ; lifo~48       ; CLK      ;
+; N/A                                     ; None                                                ; 2.456 ns   ; DATA_IN[6] ; lifo~39       ; CLK      ;
+; N/A                                     ; None                                                ; 2.454 ns   ; DATA_IN[6] ; lifo~47       ; CLK      ;
+; N/A                                     ; None                                                ; 2.443 ns   ; DATA_IN[5] ; lifo~46       ; CLK      ;
+; N/A                                     ; None                                                ; 2.433 ns   ; DATA_IN[7] ; lifo~32       ; CLK      ;
+; N/A                                     ; None                                                ; 2.432 ns   ; Reset      ; lifo~33       ; CLK      ;
+; N/A                                     ; None                                                ; 2.432 ns   ; Reset      ; lifo~35       ; CLK      ;
+; N/A                                     ; None                                                ; 2.432 ns   ; Reset      ; lifo~36       ; CLK      ;
+; N/A                                     ; None                                                ; 2.432 ns   ; Reset      ; lifo~37       ; CLK      ;
+; N/A                                     ; None                                                ; 2.432 ns   ; Reset      ; lifo~38       ; CLK      ;
+; N/A                                     ; None                                                ; 2.428 ns   ; Reset      ; lifo~17       ; CLK      ;
+; N/A                                     ; None                                                ; 2.428 ns   ; Reset      ; lifo~18       ; CLK      ;
+; N/A                                     ; None                                                ; 2.428 ns   ; Reset      ; lifo~19       ; CLK      ;
+; N/A                                     ; None                                                ; 2.428 ns   ; Reset      ; lifo~20       ; CLK      ;
+; N/A                                     ; None                                                ; 2.428 ns   ; Reset      ; lifo~21       ; CLK      ;
+; N/A                                     ; None                                                ; 2.428 ns   ; Reset      ; lifo~22       ; CLK      ;
+; N/A                                     ; None                                                ; 2.428 ns   ; Reset      ; lifo~23       ; CLK      ;
+; N/A                                     ; None                                                ; 2.428 ns   ; Reset      ; lifo~24       ; CLK      ;
+; N/A                                     ; None                                                ; 2.425 ns   ; Reset      ; lifo~65       ; CLK      ;
+; N/A                                     ; None                                                ; 2.425 ns   ; Reset      ; lifo~66       ; CLK      ;
+; N/A                                     ; None                                                ; 2.425 ns   ; Reset      ; lifo~67       ; CLK      ;
+; N/A                                     ; None                                                ; 2.425 ns   ; Reset      ; lifo~68       ; CLK      ;
+; N/A                                     ; None                                                ; 2.425 ns   ; Reset      ; lifo~72       ; CLK      ;
+; N/A                                     ; None                                                ; 2.411 ns   ; DATA_IN[6] ; lifo~71       ; CLK      ;
+; N/A                                     ; None                                                ; 2.410 ns   ; DATA_IN[4] ; lifo~29       ; CLK      ;
+; N/A                                     ; None                                                ; 2.407 ns   ; DATA_IN[6] ; lifo~79       ; CLK      ;
+; N/A                                     ; None                                                ; 2.403 ns   ; DATA_IN[6] ; lifo~55       ; CLK      ;
+; N/A                                     ; None                                                ; 2.380 ns   ; DATA_IN[2] ; lifo~43       ; CLK      ;
+; N/A                                     ; None                                                ; 2.366 ns   ; DATA_IN[7] ; lifo~64       ; CLK      ;
+; N/A                                     ; None                                                ; 2.363 ns   ; DATA_IN[7] ; lifo~24       ; CLK      ;
+; N/A                                     ; None                                                ; 2.362 ns   ; DATA_IN[2] ; lifo~75       ; CLK      ;
+; N/A                                     ; None                                                ; 2.361 ns   ; DATA_IN[2] ; lifo~67       ; CLK      ;
+; N/A                                     ; None                                                ; 2.359 ns   ; DATA_IN[7] ; lifo~40       ; CLK      ;
+; N/A                                     ; None                                                ; 2.358 ns   ; DATA_IN[7] ; lifo~56       ; CLK      ;
+; N/A                                     ; None                                                ; 2.357 ns   ; DATA_IN[0] ; lifo~17       ; CLK      ;
+; N/A                                     ; None                                                ; 2.333 ns   ; DATA_IN[0] ; lifo~41       ; CLK      ;
+; N/A                                     ; None                                                ; 2.325 ns   ; DATA_IN[3] ; lifo~44       ; CLK      ;
+; N/A                                     ; None                                                ; 2.321 ns   ; Reset      ; lifo~53       ; CLK      ;
+; N/A                                     ; None                                                ; 2.321 ns   ; Reset      ; lifo~54       ; CLK      ;
+; N/A                                     ; None                                                ; 2.321 ns   ; Reset      ; lifo~55       ; CLK      ;
+; N/A                                     ; None                                                ; 2.321 ns   ; Reset      ; lifo~56       ; CLK      ;
+; N/A                                     ; None                                                ; 2.301 ns   ; DATA_IN[6] ; lifo~31       ; CLK      ;
+; N/A                                     ; None                                                ; 2.277 ns   ; Reset      ; lifo~40       ; CLK      ;
+; N/A                                     ; None                                                ; 2.274 ns   ; DATA_IN[4] ; lifo~53       ; CLK      ;
+; N/A                                     ; None                                                ; 2.271 ns   ; DATA_IN[1] ; lifo~50       ; CLK      ;
+; N/A                                     ; None                                                ; 2.241 ns   ; DATA_IN[2] ; lifo~59       ; CLK      ;
+; N/A                                     ; None                                                ; 2.240 ns   ; DATA_IN[2] ; lifo~35       ; CLK      ;
+; N/A                                     ; None                                                ; 2.223 ns   ; DATA_IN[1] ; lifo~66       ; CLK      ;
+; N/A                                     ; None                                                ; 2.220 ns   ; DATA_IN[1] ; lifo~74       ; CLK      ;
+; N/A                                     ; None                                                ; 2.215 ns   ; DATA_IN[0] ; lifo~25       ; CLK      ;
+; N/A                                     ; None                                                ; 2.210 ns   ; DATA_IN[4] ; lifo~69       ; CLK      ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;            ;               ;          ;
++-----------------------------------------+-----------------------------------------------------+------------+------------+---------------+----------+
+
+
++------------------------------------------------------------------------------+
+; tco                                                                          ;
++-------+--------------+------------+---------------+-------------+------------+
+; Slack ; Required tco ; Actual tco ; From          ; To          ; From Clock ;
++-------+--------------+------------+---------------+-------------+------------+
+; N/A   ; None         ; 7.495 ns   ; outElement[0] ; DATA_OUT[0] ; CLK        ;
+; N/A   ; None         ; 7.480 ns   ; outElement[2] ; DATA_OUT[2] ; CLK        ;
+; N/A   ; None         ; 7.448 ns   ; counter[2]    ; COUNT[2]    ; CLK        ;
+; N/A   ; None         ; 7.258 ns   ; scount[3]     ; COUNT[3]    ; CLK        ;
+; N/A   ; None         ; 7.133 ns   ; outElement[3] ; DATA_OUT[3] ; CLK        ;
+; N/A   ; None         ; 7.116 ns   ; isEmpty       ; Empty       ; CLK        ;
+; N/A   ; None         ; 7.111 ns   ; outElement[1] ; DATA_OUT[1] ; CLK        ;
+; N/A   ; None         ; 6.882 ns   ; isFull        ; Full        ; CLK        ;
+; N/A   ; None         ; 6.862 ns   ; outElement[5] ; DATA_OUT[5] ; CLK        ;
+; N/A   ; None         ; 6.860 ns   ; counter[0]    ; COUNT[0]    ; CLK        ;
+; N/A   ; None         ; 6.830 ns   ; counter[1]    ; COUNT[1]    ; CLK        ;
+; N/A   ; None         ; 6.829 ns   ; outElement[7] ; DATA_OUT[7] ; CLK        ;
+; N/A   ; None         ; 6.823 ns   ; outElement[4] ; DATA_OUT[4] ; CLK        ;
+; N/A   ; None         ; 6.818 ns   ; outElement[6] ; DATA_OUT[6] ; CLK        ;
++-------+--------------+------------+---------------+-------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                ;
++-----------------------------------------+-----------------------------------------------------+-----------+------------+---------------+----------+
+; Minimum Slack                           ; Required th                                         ; Actual th ; From       ; To            ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+-----------+------------+---------------+----------+
+; N/A                                     ; None                                                ; -1.442 ns ; Reset      ; outElement[2] ; CLK      ;
+; N/A                                     ; None                                                ; -1.442 ns ; Reset      ; outElement[3] ; CLK      ;
+; N/A                                     ; None                                                ; -1.701 ns ; Reset      ; lifo~58       ; CLK      ;
+; N/A                                     ; None                                                ; -1.710 ns ; Reset      ; outElement[0] ; CLK      ;
+; N/A                                     ; None                                                ; -1.780 ns ; Reset      ; outElement[1] ; CLK      ;
+; N/A                                     ; None                                                ; -1.876 ns ; Reset      ; outElement[4] ; CLK      ;
+; N/A                                     ; None                                                ; -1.876 ns ; Reset      ; outElement[5] ; CLK      ;
+; N/A                                     ; None                                                ; -1.876 ns ; Reset      ; outElement[6] ; CLK      ;
+; N/A                                     ; None                                                ; -1.876 ns ; Reset      ; outElement[7] ; CLK      ;
+; N/A                                     ; None                                                ; -1.885 ns ; Reset      ; lifo~25       ; CLK      ;
+; N/A                                     ; None                                                ; -1.885 ns ; Reset      ; lifo~26       ; CLK      ;
+; N/A                                     ; None                                                ; -1.885 ns ; Reset      ; lifo~27       ; CLK      ;
+; N/A                                     ; None                                                ; -1.885 ns ; Reset      ; lifo~28       ; CLK      ;
+; N/A                                     ; None                                                ; -1.954 ns ; DATA_IN[3] ; lifo~36       ; CLK      ;
+; N/A                                     ; None                                                ; -1.957 ns ; DATA_IN[3] ; lifo~60       ; CLK      ;
+; N/A                                     ; None                                                ; -2.007 ns ; DATA_IN[2] ; lifo~19       ; CLK      ;
+; N/A                                     ; None                                                ; -2.035 ns ; DATA_IN[2] ; lifo~27       ; CLK      ;
+; N/A                                     ; None                                                ; -2.066 ns ; DATA_IN[3] ; lifo~20       ; CLK      ;
+; N/A                                     ; None                                                ; -2.069 ns ; Reset      ; lifo~49       ; CLK      ;
+; N/A                                     ; None                                                ; -2.069 ns ; Reset      ; lifo~50       ; CLK      ;
+; N/A                                     ; None                                                ; -2.069 ns ; Reset      ; lifo~51       ; CLK      ;
+; N/A                                     ; None                                                ; -2.069 ns ; Reset      ; lifo~52       ; CLK      ;
+; N/A                                     ; None                                                ; -2.086 ns ; DATA_IN[1] ; lifo~18       ; CLK      ;
+; N/A                                     ; None                                                ; -2.092 ns ; DATA_IN[5] ; lifo~70       ; CLK      ;
+; N/A                                     ; None                                                ; -2.093 ns ; DATA_IN[5] ; lifo~54       ; CLK      ;
+; N/A                                     ; None                                                ; -2.095 ns ; DATA_IN[5] ; lifo~78       ; CLK      ;
+; N/A                                     ; None                                                ; -2.098 ns ; DATA_IN[0] ; lifo~73       ; CLK      ;
+; N/A                                     ; None                                                ; -2.099 ns ; DATA_IN[4] ; lifo~77       ; CLK      ;
+; N/A                                     ; None                                                ; -2.100 ns ; DATA_IN[4] ; lifo~69       ; CLK      ;
+; N/A                                     ; None                                                ; -2.105 ns ; DATA_IN[0] ; lifo~25       ; CLK      ;
+; N/A                                     ; None                                                ; -2.110 ns ; DATA_IN[1] ; lifo~74       ; CLK      ;
+; N/A                                     ; None                                                ; -2.113 ns ; DATA_IN[1] ; lifo~66       ; CLK      ;
+; N/A                                     ; None                                                ; -2.130 ns ; DATA_IN[2] ; lifo~35       ; CLK      ;
+; N/A                                     ; None                                                ; -2.131 ns ; DATA_IN[2] ; lifo~59       ; CLK      ;
+; N/A                                     ; None                                                ; -2.161 ns ; DATA_IN[1] ; lifo~50       ; CLK      ;
+; N/A                                     ; None                                                ; -2.164 ns ; DATA_IN[4] ; lifo~53       ; CLK      ;
+; N/A                                     ; None                                                ; -2.167 ns ; Reset      ; lifo~40       ; CLK      ;
+; N/A                                     ; None                                                ; -2.191 ns ; DATA_IN[6] ; lifo~31       ; CLK      ;
+; N/A                                     ; None                                                ; -2.211 ns ; Reset      ; lifo~53       ; CLK      ;
+; N/A                                     ; None                                                ; -2.211 ns ; Reset      ; lifo~54       ; CLK      ;
+; N/A                                     ; None                                                ; -2.211 ns ; Reset      ; lifo~55       ; CLK      ;
+; N/A                                     ; None                                                ; -2.211 ns ; Reset      ; lifo~56       ; CLK      ;
+; N/A                                     ; None                                                ; -2.215 ns ; DATA_IN[3] ; lifo~44       ; CLK      ;
+; N/A                                     ; None                                                ; -2.223 ns ; DATA_IN[0] ; lifo~41       ; CLK      ;
+; N/A                                     ; None                                                ; -2.247 ns ; DATA_IN[0] ; lifo~17       ; CLK      ;
+; N/A                                     ; None                                                ; -2.248 ns ; DATA_IN[7] ; lifo~56       ; CLK      ;
+; N/A                                     ; None                                                ; -2.249 ns ; DATA_IN[7] ; lifo~40       ; CLK      ;
+; N/A                                     ; None                                                ; -2.251 ns ; DATA_IN[2] ; lifo~67       ; CLK      ;
+; N/A                                     ; None                                                ; -2.252 ns ; DATA_IN[2] ; lifo~75       ; CLK      ;
+; N/A                                     ; None                                                ; -2.253 ns ; DATA_IN[7] ; lifo~24       ; CLK      ;
+; N/A                                     ; None                                                ; -2.256 ns ; DATA_IN[7] ; lifo~64       ; CLK      ;
+; N/A                                     ; None                                                ; -2.270 ns ; DATA_IN[2] ; lifo~43       ; CLK      ;
+; N/A                                     ; None                                                ; -2.293 ns ; DATA_IN[6] ; lifo~55       ; CLK      ;
+; N/A                                     ; None                                                ; -2.297 ns ; DATA_IN[6] ; lifo~79       ; CLK      ;
+; N/A                                     ; None                                                ; -2.300 ns ; DATA_IN[4] ; lifo~29       ; CLK      ;
+; N/A                                     ; None                                                ; -2.301 ns ; DATA_IN[6] ; lifo~71       ; CLK      ;
+; N/A                                     ; None                                                ; -2.315 ns ; Reset      ; lifo~65       ; CLK      ;
+; N/A                                     ; None                                                ; -2.315 ns ; Reset      ; lifo~66       ; CLK      ;
+; N/A                                     ; None                                                ; -2.315 ns ; Reset      ; lifo~67       ; CLK      ;
+; N/A                                     ; None                                                ; -2.315 ns ; Reset      ; lifo~68       ; CLK      ;
+; N/A                                     ; None                                                ; -2.315 ns ; Reset      ; lifo~72       ; CLK      ;
+; N/A                                     ; None                                                ; -2.318 ns ; Reset      ; lifo~17       ; CLK      ;
+; N/A                                     ; None                                                ; -2.318 ns ; Reset      ; lifo~18       ; CLK      ;
+; N/A                                     ; None                                                ; -2.318 ns ; Reset      ; lifo~19       ; CLK      ;
+; N/A                                     ; None                                                ; -2.318 ns ; Reset      ; lifo~20       ; CLK      ;
+; N/A                                     ; None                                                ; -2.318 ns ; Reset      ; lifo~21       ; CLK      ;
+; N/A                                     ; None                                                ; -2.318 ns ; Reset      ; lifo~22       ; CLK      ;
+; N/A                                     ; None                                                ; -2.318 ns ; Reset      ; lifo~23       ; CLK      ;
+; N/A                                     ; None                                                ; -2.318 ns ; Reset      ; lifo~24       ; CLK      ;
+; N/A                                     ; None                                                ; -2.322 ns ; Reset      ; lifo~33       ; CLK      ;
+; N/A                                     ; None                                                ; -2.322 ns ; Reset      ; lifo~35       ; CLK      ;
+; N/A                                     ; None                                                ; -2.322 ns ; Reset      ; lifo~36       ; CLK      ;
+; N/A                                     ; None                                                ; -2.322 ns ; Reset      ; lifo~37       ; CLK      ;
+; N/A                                     ; None                                                ; -2.322 ns ; Reset      ; lifo~38       ; CLK      ;
+; N/A                                     ; None                                                ; -2.323 ns ; DATA_IN[7] ; lifo~32       ; CLK      ;
+; N/A                                     ; None                                                ; -2.333 ns ; DATA_IN[5] ; lifo~46       ; CLK      ;
+; N/A                                     ; None                                                ; -2.344 ns ; DATA_IN[6] ; lifo~47       ; CLK      ;
+; N/A                                     ; None                                                ; -2.346 ns ; DATA_IN[6] ; lifo~39       ; CLK      ;
+; N/A                                     ; None                                                ; -2.352 ns ; DATA_IN[7] ; lifo~48       ; CLK      ;
+; N/A                                     ; None                                                ; -2.357 ns ; DATA_IN[7] ; lifo~80       ; CLK      ;
+; N/A                                     ; None                                                ; -2.358 ns ; DATA_IN[7] ; lifo~72       ; CLK      ;
+; N/A                                     ; None                                                ; -2.360 ns ; Reset      ; lifo~57       ; CLK      ;
+; N/A                                     ; None                                                ; -2.360 ns ; Reset      ; lifo~59       ; CLK      ;
+; N/A                                     ; None                                                ; -2.360 ns ; Reset      ; lifo~60       ; CLK      ;
+; N/A                                     ; None                                                ; -2.360 ns ; Reset      ; lifo~61       ; CLK      ;
+; N/A                                     ; None                                                ; -2.360 ns ; Reset      ; lifo~62       ; CLK      ;
+; N/A                                     ; None                                                ; -2.363 ns ; DATA_IN[5] ; lifo~30       ; CLK      ;
+; N/A                                     ; None                                                ; -2.366 ns ; DATA_IN[0] ; lifo~65       ; CLK      ;
+; N/A                                     ; None                                                ; -2.375 ns ; DATA_IN[3] ; lifo~28       ; CLK      ;
+; N/A                                     ; None                                                ; -2.376 ns ; Reset      ; lifo~63       ; CLK      ;
+; N/A                                     ; None                                                ; -2.376 ns ; Reset      ; lifo~64       ; CLK      ;
+; N/A                                     ; None                                                ; -2.378 ns ; DATA_IN[4] ; lifo~45       ; CLK      ;
+; N/A                                     ; None                                                ; -2.385 ns ; DATA_IN[1] ; lifo~42       ; CLK      ;
+; N/A                                     ; None                                                ; -2.388 ns ; DATA_IN[1] ; lifo~34       ; CLK      ;
+; N/A                                     ; None                                                ; -2.392 ns ; DATA_IN[4] ; lifo~21       ; CLK      ;
+; N/A                                     ; None                                                ; -2.442 ns ; DATA_IN[0] ; lifo~49       ; CLK      ;
+; N/A                                     ; None                                                ; -2.452 ns ; DATA_IN[5] ; lifo~22       ; CLK      ;
+; N/A                                     ; None                                                ; -2.455 ns ; DATA_IN[1] ; lifo~58       ; CLK      ;
+; N/A                                     ; None                                                ; -2.470 ns ; DATA_IN[4] ; lifo~37       ; CLK      ;
+; N/A                                     ; None                                                ; -2.471 ns ; DATA_IN[4] ; lifo~61       ; CLK      ;
+; N/A                                     ; None                                                ; -2.488 ns ; DATA_IN[5] ; lifo~38       ; CLK      ;
+; N/A                                     ; None                                                ; -2.489 ns ; DATA_IN[5] ; lifo~62       ; CLK      ;
+; N/A                                     ; None                                                ; -2.525 ns ; DATA_IN[1] ; lifo~26       ; CLK      ;
+; N/A                                     ; None                                                ; -2.531 ns ; Reset      ; lifo~41       ; CLK      ;
+; N/A                                     ; None                                                ; -2.531 ns ; Reset      ; lifo~42       ; CLK      ;
+; N/A                                     ; None                                                ; -2.531 ns ; Reset      ; lifo~43       ; CLK      ;
+; N/A                                     ; None                                                ; -2.531 ns ; Reset      ; lifo~44       ; CLK      ;
+; N/A                                     ; None                                                ; -2.531 ns ; Reset      ; lifo~45       ; CLK      ;
+; N/A                                     ; None                                                ; -2.531 ns ; Reset      ; lifo~46       ; CLK      ;
+; N/A                                     ; None                                                ; -2.531 ns ; Reset      ; lifo~47       ; CLK      ;
+; N/A                                     ; None                                                ; -2.531 ns ; Reset      ; lifo~48       ; CLK      ;
+; N/A                                     ; None                                                ; -2.536 ns ; Reset      ; lifo~69       ; CLK      ;
+; N/A                                     ; None                                                ; -2.536 ns ; Reset      ; lifo~70       ; CLK      ;
+; N/A                                     ; None                                                ; -2.536 ns ; Reset      ; lifo~71       ; CLK      ;
+; N/A                                     ; None                                                ; -2.540 ns ; Reset      ; lifo~34       ; CLK      ;
+; N/A                                     ; None                                                ; -2.540 ns ; Reset      ; lifo~39       ; CLK      ;
+; N/A                                     ; None                                                ; -2.542 ns ; Reset      ; lifo~29       ; CLK      ;
+; N/A                                     ; None                                                ; -2.542 ns ; Reset      ; lifo~30       ; CLK      ;
+; N/A                                     ; None                                                ; -2.542 ns ; Reset      ; lifo~31       ; CLK      ;
+; N/A                                     ; None                                                ; -2.542 ns ; Reset      ; lifo~32       ; CLK      ;
+; N/A                                     ; None                                                ; -2.555 ns ; Reset      ; lifo~77       ; CLK      ;
+; N/A                                     ; None                                                ; -2.555 ns ; Reset      ; lifo~78       ; CLK      ;
+; N/A                                     ; None                                                ; -2.555 ns ; Reset      ; lifo~79       ; CLK      ;
+; N/A                                     ; None                                                ; -2.570 ns ; DATA_IN[3] ; lifo~76       ; CLK      ;
+; N/A                                     ; None                                                ; -2.572 ns ; DATA_IN[3] ; lifo~68       ; CLK      ;
+; N/A                                     ; None                                                ; -2.643 ns ; DATA_IN[0] ; lifo~57       ; CLK      ;
+; N/A                                     ; None                                                ; -2.647 ns ; DATA_IN[0] ; lifo~33       ; CLK      ;
+; N/A                                     ; None                                                ; -2.705 ns ; DATA_IN[6] ; lifo~23       ; CLK      ;
+; N/A                                     ; None                                                ; -2.705 ns ; DATA_IN[6] ; lifo~63       ; CLK      ;
+; N/A                                     ; None                                                ; -2.707 ns ; RD         ; scount[3]     ; CLK      ;
+; N/A                                     ; None                                                ; -2.759 ns ; DATA_IN[2] ; lifo~51       ; CLK      ;
+; N/A                                     ; None                                                ; -2.767 ns ; DATA_IN[3] ; lifo~52       ; CLK      ;
+; N/A                                     ; None                                                ; -2.797 ns ; Reset      ; lifo~73       ; CLK      ;
+; N/A                                     ; None                                                ; -2.797 ns ; Reset      ; lifo~74       ; CLK      ;
+; N/A                                     ; None                                                ; -2.797 ns ; Reset      ; lifo~75       ; CLK      ;
+; N/A                                     ; None                                                ; -2.797 ns ; Reset      ; lifo~76       ; CLK      ;
+; N/A                                     ; None                                                ; -2.797 ns ; Reset      ; lifo~80       ; CLK      ;
+; N/A                                     ; None                                                ; -3.027 ns ; WR         ; outElement[0] ; CLK      ;
+; N/A                                     ; None                                                ; -3.080 ns ; WR         ; counter[1]    ; CLK      ;
+; N/A                                     ; None                                                ; -3.084 ns ; WR         ; counter[0]    ; CLK      ;
+; N/A                                     ; None                                                ; -3.126 ns ; WR         ; scount[3]     ; CLK      ;
+; N/A                                     ; None                                                ; -3.178 ns ; RD         ; isFull        ; CLK      ;
+; N/A                                     ; None                                                ; -3.180 ns ; RD         ; isEmpty       ; CLK      ;
+; N/A                                     ; None                                                ; -3.257 ns ; RD         ; counter[2]    ; CLK      ;
+; N/A                                     ; None                                                ; -3.313 ns ; RD         ; counter[1]    ; CLK      ;
+; N/A                                     ; None                                                ; -3.390 ns ; WR         ; isEmpty       ; CLK      ;
+; N/A                                     ; None                                                ; -3.392 ns ; WR         ; isFull        ; CLK      ;
+; N/A                                     ; None                                                ; -3.619 ns ; WR         ; outElement[1] ; CLK      ;
+; N/A                                     ; None                                                ; -3.631 ns ; WR         ; outElement[3] ; CLK      ;
+; N/A                                     ; None                                                ; -3.637 ns ; WR         ; outElement[2] ; CLK      ;
+; N/A                                     ; None                                                ; -3.674 ns ; RD         ; counter[0]    ; CLK      ;
+; N/A                                     ; None                                                ; -3.742 ns ; WR         ; counter[2]    ; CLK      ;
+; N/A                                     ; None                                                ; -3.808 ns ; WR         ; outElement[4] ; CLK      ;
+; N/A                                     ; None                                                ; -3.817 ns ; WR         ; outElement[6] ; CLK      ;
+; N/A                                     ; None                                                ; -4.010 ns ; WR         ; outElement[7] ; CLK      ;
+; N/A                                     ; None                                                ; -4.017 ns ; WR         ; lifo~58       ; CLK      ;
+; N/A                                     ; None                                                ; -4.129 ns ; WR         ; outElement[5] ; CLK      ;
+; N/A                                     ; None                                                ; -4.201 ns ; WR         ; lifo~25       ; CLK      ;
+; N/A                                     ; None                                                ; -4.201 ns ; WR         ; lifo~26       ; CLK      ;
+; N/A                                     ; None                                                ; -4.201 ns ; WR         ; lifo~27       ; CLK      ;
+; N/A                                     ; None                                                ; -4.201 ns ; WR         ; lifo~28       ; CLK      ;
+; N/A                                     ; None                                                ; -4.296 ns ; RD         ; outElement[2] ; CLK      ;
+; N/A                                     ; None                                                ; -4.296 ns ; RD         ; outElement[3] ; CLK      ;
+; N/A                                     ; None                                                ; -4.385 ns ; WR         ; lifo~49       ; CLK      ;
+; N/A                                     ; None                                                ; -4.385 ns ; WR         ; lifo~50       ; CLK      ;
+; N/A                                     ; None                                                ; -4.385 ns ; WR         ; lifo~51       ; CLK      ;
+; N/A                                     ; None                                                ; -4.385 ns ; WR         ; lifo~52       ; CLK      ;
+; N/A                                     ; None                                                ; -4.483 ns ; WR         ; lifo~40       ; CLK      ;
+; N/A                                     ; None                                                ; -4.527 ns ; WR         ; lifo~53       ; CLK      ;
+; N/A                                     ; None                                                ; -4.527 ns ; WR         ; lifo~54       ; CLK      ;
+; N/A                                     ; None                                                ; -4.527 ns ; WR         ; lifo~55       ; CLK      ;
+; N/A                                     ; None                                                ; -4.527 ns ; WR         ; lifo~56       ; CLK      ;
+; N/A                                     ; None                                                ; -4.564 ns ; RD         ; outElement[0] ; CLK      ;
+; N/A                                     ; None                                                ; -4.631 ns ; WR         ; lifo~65       ; CLK      ;
+; N/A                                     ; None                                                ; -4.631 ns ; WR         ; lifo~66       ; CLK      ;
+; N/A                                     ; None                                                ; -4.631 ns ; WR         ; lifo~67       ; CLK      ;
+; N/A                                     ; None                                                ; -4.631 ns ; WR         ; lifo~68       ; CLK      ;
+; N/A                                     ; None                                                ; -4.631 ns ; WR         ; lifo~72       ; CLK      ;
+; N/A                                     ; None                                                ; -4.634 ns ; RD         ; outElement[1] ; CLK      ;
+; N/A                                     ; None                                                ; -4.634 ns ; WR         ; lifo~17       ; CLK      ;
+; N/A                                     ; None                                                ; -4.634 ns ; WR         ; lifo~18       ; CLK      ;
+; N/A                                     ; None                                                ; -4.634 ns ; WR         ; lifo~19       ; CLK      ;
+; N/A                                     ; None                                                ; -4.634 ns ; WR         ; lifo~20       ; CLK      ;
+; N/A                                     ; None                                                ; -4.634 ns ; WR         ; lifo~21       ; CLK      ;
+; N/A                                     ; None                                                ; -4.634 ns ; WR         ; lifo~22       ; CLK      ;
+; N/A                                     ; None                                                ; -4.634 ns ; WR         ; lifo~23       ; CLK      ;
+; N/A                                     ; None                                                ; -4.634 ns ; WR         ; lifo~24       ; CLK      ;
+; N/A                                     ; None                                                ; -4.638 ns ; WR         ; lifo~33       ; CLK      ;
+; N/A                                     ; None                                                ; -4.638 ns ; WR         ; lifo~35       ; CLK      ;
+; N/A                                     ; None                                                ; -4.638 ns ; WR         ; lifo~36       ; CLK      ;
+; N/A                                     ; None                                                ; -4.638 ns ; WR         ; lifo~37       ; CLK      ;
+; N/A                                     ; None                                                ; -4.638 ns ; WR         ; lifo~38       ; CLK      ;
+; N/A                                     ; None                                                ; -4.676 ns ; WR         ; lifo~57       ; CLK      ;
+; N/A                                     ; None                                                ; -4.676 ns ; WR         ; lifo~59       ; CLK      ;
+; N/A                                     ; None                                                ; -4.676 ns ; WR         ; lifo~60       ; CLK      ;
+; N/A                                     ; None                                                ; -4.676 ns ; WR         ; lifo~61       ; CLK      ;
+; N/A                                     ; None                                                ; -4.676 ns ; WR         ; lifo~62       ; CLK      ;
+; N/A                                     ; None                                                ; -4.692 ns ; WR         ; lifo~63       ; CLK      ;
+; N/A                                     ; None                                                ; -4.692 ns ; WR         ; lifo~64       ; CLK      ;
+; N/A                                     ; None                                                ; -4.730 ns ; RD         ; outElement[4] ; CLK      ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;            ;               ;          ;
++-----------------------------------------+-----------------------------------------------------+-----------+------------+---------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Thu Mar 04 13:25:58 2021
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off lifo_bhv -c lifo_bhv --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK" is an undefined clock
+Info: Clock "CLK" has Internal fmax of 201.29 MHz between source register "scount[3]" and destination register "outElement[0]" (period= 4.968 ns)
+    Info: + Longest register to register delay is 4.802 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X31_Y25_N3; Fanout = 10; REG Node = 'scount[3]'
+        Info: 2: + IC(0.901 ns) + CELL(0.280 ns) = 1.181 ns; Loc. = LC_X30_Y25_N2; Fanout = 24; COMB Node = 'counter~719'
+        Info: 3: + IC(1.063 ns) + CELL(0.280 ns) = 2.524 ns; Loc. = LC_X31_Y26_N4; Fanout = 1; COMB Node = 'lifo~1107'
+        Info: 4: + IC(0.969 ns) + CELL(0.366 ns) = 3.859 ns; Loc. = LC_X30_Y25_N6; Fanout = 1; COMB Node = 'lifo~1108'
+        Info: 5: + IC(0.485 ns) + CELL(0.458 ns) = 4.802 ns; Loc. = LC_X31_Y25_N8; Fanout = 1; REG Node = 'outElement[0]'
+        Info: Total cell delay = 1.384 ns ( 28.82 % )
+        Info: Total interconnect delay = 3.418 ns ( 71.18 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "CLK" to destination register is 2.797 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 78; CLK Node = 'CLK'
+            Info: 2: + IC(1.530 ns) + CELL(0.542 ns) = 2.797 ns; Loc. = LC_X31_Y25_N8; Fanout = 1; REG Node = 'outElement[0]'
+            Info: Total cell delay = 1.267 ns ( 45.30 % )
+            Info: Total interconnect delay = 1.530 ns ( 54.70 % )
+        Info: - Longest clock path from clock "CLK" to source register is 2.797 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 78; CLK Node = 'CLK'
+            Info: 2: + IC(1.530 ns) + CELL(0.542 ns) = 2.797 ns; Loc. = LC_X31_Y25_N3; Fanout = 10; REG Node = 'scount[3]'
+            Info: Total cell delay = 1.267 ns ( 45.30 % )
+            Info: Total interconnect delay = 1.530 ns ( 54.70 % )
+    Info: + Micro clock to output delay of source is 0.156 ns
+    Info: + Micro setup delay of destination is 0.010 ns
+Info: tsu for register "outElement[0]" (data pin = "WR", clock pin = "CLK") is 6.256 ns
+    Info: + Longest pin to register delay is 9.043 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.087 ns) = 1.087 ns; Loc. = PIN_L7; Fanout = 8; PIN Node = 'WR'
+        Info: 2: + IC(4.101 ns) + CELL(0.183 ns) = 5.371 ns; Loc. = LC_X31_Y25_N1; Fanout = 18; COMB Node = 'counter~718'
+        Info: 3: + IC(1.047 ns) + CELL(0.366 ns) = 6.784 ns; Loc. = LC_X30_Y26_N5; Fanout = 1; COMB Node = 'lifo~1109'
+        Info: 4: + IC(0.485 ns) + CELL(0.075 ns) = 7.344 ns; Loc. = LC_X29_Y26_N9; Fanout = 1; COMB Node = 'lifo~1110'
+        Info: 5: + IC(1.160 ns) + CELL(0.539 ns) = 9.043 ns; Loc. = LC_X31_Y25_N8; Fanout = 1; REG Node = 'outElement[0]'
+        Info: Total cell delay = 2.250 ns ( 24.88 % )
+        Info: Total interconnect delay = 6.793 ns ( 75.12 % )
+    Info: + Micro setup delay of destination is 0.010 ns
+    Info: - Shortest clock path from clock "CLK" to destination register is 2.797 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 78; CLK Node = 'CLK'
+        Info: 2: + IC(1.530 ns) + CELL(0.542 ns) = 2.797 ns; Loc. = LC_X31_Y25_N8; Fanout = 1; REG Node = 'outElement[0]'
+        Info: Total cell delay = 1.267 ns ( 45.30 % )
+        Info: Total interconnect delay = 1.530 ns ( 54.70 % )
+Info: tco from clock "CLK" to destination pin "DATA_OUT[0]" through register "outElement[0]" is 7.495 ns
+    Info: + Longest clock path from clock "CLK" to source register is 2.797 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 78; CLK Node = 'CLK'
+        Info: 2: + IC(1.530 ns) + CELL(0.542 ns) = 2.797 ns; Loc. = LC_X31_Y25_N8; Fanout = 1; REG Node = 'outElement[0]'
+        Info: Total cell delay = 1.267 ns ( 45.30 % )
+        Info: Total interconnect delay = 1.530 ns ( 54.70 % )
+    Info: + Micro clock to output delay of source is 0.156 ns
+    Info: + Longest register to pin delay is 4.542 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X31_Y25_N8; Fanout = 1; REG Node = 'outElement[0]'
+        Info: 2: + IC(1.855 ns) + CELL(2.687 ns) = 4.542 ns; Loc. = PIN_B13; Fanout = 0; PIN Node = 'DATA_OUT[0]'
+        Info: Total cell delay = 2.687 ns ( 59.16 % )
+        Info: Total interconnect delay = 1.855 ns ( 40.84 % )
+Info: th for register "outElement[2]" (data pin = "Reset", clock pin = "CLK") is -1.442 ns
+    Info: + Longest clock path from clock "CLK" to destination register is 2.797 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 78; CLK Node = 'CLK'
+        Info: 2: + IC(1.530 ns) + CELL(0.542 ns) = 2.797 ns; Loc. = LC_X30_Y25_N8; Fanout = 1; REG Node = 'outElement[2]'
+        Info: Total cell delay = 1.267 ns ( 45.30 % )
+        Info: Total interconnect delay = 1.530 ns ( 54.70 % )
+    Info: + Micro hold delay of destination is 0.100 ns
+    Info: - Shortest pin to register delay is 4.339 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.828 ns) = 0.828 ns; Loc. = PIN_L3; Fanout = 8; PIN Node = 'Reset'
+        Info: 2: + IC(1.916 ns) + CELL(0.366 ns) = 3.110 ns; Loc. = LC_X31_Y25_N0; Fanout = 8; COMB Node = 'outElement[0]~7'
+        Info: 3: + IC(0.524 ns) + CELL(0.705 ns) = 4.339 ns; Loc. = LC_X30_Y25_N8; Fanout = 1; REG Node = 'outElement[2]'
+        Info: Total cell delay = 1.899 ns ( 43.77 % )
+        Info: Total interconnect delay = 2.440 ns ( 56.23 % )
+Info: Quartus II Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Processing ended: Thu Mar 04 13:25:58 2021
+    Info: Elapsed time: 00:00:00
+
+

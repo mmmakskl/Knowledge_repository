@@ -1,0 +1,277 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--inst16 is inst16
+--operation mode is normal
+
+inst16 = A0 & B0;
+
+
+--B1L4 is 7483:inst17|27~27
+--operation mode is normal
+
+B1L4 = A0 & (B1 $ (B0 & A1)) # !A0 & B0 & A1;
+
+
+--B1L5 is 7483:inst17|43~56
+--operation mode is normal
+
+B1L5 = A0 & B0 # !A1 # !B1;
+
+
+--inst14 is inst14
+--operation mode is normal
+
+inst14 = B0 & A2;
+
+
+--B2L5 is 7483:inst20|27~57
+--operation mode is normal
+
+B2L5 = B1L5 $ inst14 $ (A0 & B2);
+
+
+--B1L9 is 7483:inst17|51~46
+--operation mode is normal
+
+B1L9 = B0 & B1;
+
+
+--B1L01 is 7483:inst17|51~47
+--operation mode is normal
+
+B1L01 = !A0 & !A2;
+
+
+--B1L6 is 7483:inst17|44~132
+--operation mode is normal
+
+B1L6 = B0 & (A3 $ (B1 & A2)) # !B0 & B1 & A2;
+
+
+--B1L7 is 7483:inst17|44~133
+--operation mode is normal
+
+B1L7 = B1L6 $ (B1L01 # !B1L9 # !A1);
+
+
+--B2L4 is 7483:inst20|18~24
+--operation mode is normal
+
+B2L4 = A0 & B2 & (B1L5 $ !inst14);
+
+
+--B2L6 is 7483:inst20|43~142
+--operation mode is normal
+
+B2L6 = B1L7 $ B2L4 $ (A1 & B2);
+
+
+--B3L5 is 7483:inst22|27~2
+--operation mode is normal
+
+B3L5 = B2L6 $ (!B3 # !A0);
+
+
+--B2L1 is 7483:inst20|1~409
+--operation mode is normal
+
+B2L1 = B1L7 & (!B2L4 # !B2 # !A1) # !B1L7 & !B2L4 & (!B2 # !A1);
+
+
+--B1L1 is 7483:inst17|1~104
+--operation mode is normal
+
+B1L1 = A1 & !A2 & (!A3 # !A0) # !A1 & (!A2 # !A3);
+
+
+--B1L8 is 7483:inst17|45~80
+--operation mode is normal
+
+B1L8 = A3 $ (B1L1 # !B0) # !B1;
+
+
+--B2L7 is 7483:inst20|44~238
+--operation mode is normal
+
+B2L7 = B2L1 $ B1L8 $ (B2 & A2);
+
+
+--B3L4 is 7483:inst22|18~82
+--operation mode is normal
+
+B3L4 = A0 & B3 & (!B2L6);
+
+
+--B3_43 is 7483:inst22|43
+--operation mode is normal
+
+B3_43 = B2L7 $ B3L4 $ (!B3 # !A1);
+
+
+--B3L1 is 7483:inst22|1~450
+--operation mode is normal
+
+B3L1 = B2L7 & !B3L4 & (!B3 # !A1) # !B2L7 & (!B3L4 # !B3 # !A1);
+
+
+--B2L2 is 7483:inst20|1~410
+--operation mode is normal
+
+B2L2 = B2L1 & (B1L8 # !A2 # !B2) # !B2L1 & B1L8 & (!A2 # !B2);
+
+
+--B1L2 is 7483:inst17|1~105
+--operation mode is normal
+
+B1L2 = A0 & A1;
+
+
+--B1L3 is 7483:inst17|2~89
+--operation mode is normal
+
+B1L3 = !A2 & !B1L2 # !A3 # !B1L9;
+
+
+--B2L8 is 7483:inst20|45~216
+--operation mode is normal
+
+B2L8 = B2L2 $ B1L3 $ (!A3 # !B2);
+
+
+--B3_44 is 7483:inst22|44
+--operation mode is normal
+
+B3_44 = B3L1 $ B2L8 $ (A2 & B3);
+
+
+--B3L2 is 7483:inst22|1~451
+--operation mode is normal
+
+B3L2 = B3L1 & (B2L8 # !B3 # !A2) # !B3L1 & B2L8 & (!B3 # !A2);
+
+
+--B2L3 is 7483:inst20|2~188
+--operation mode is normal
+
+B2L3 = B2L2 & (B1L3 # !A3 # !B2) # !B2L2 & B1L3 & (!A3 # !B2);
+
+
+--B3_45 is 7483:inst22|45
+--operation mode is normal
+
+B3_45 = B3L2 $ B2L3 $ (!A3 # !B3);
+
+
+--B3L3 is 7483:inst22|2~105
+--operation mode is normal
+
+B3L3 = B3L2 & (B2L3 # !A3 # !B3) # !B3L2 & B2L3 & (!A3 # !B3);
+
+
+--A0 is A0
+--operation mode is input
+
+A0 = INPUT();
+
+
+--B0 is B0
+--operation mode is input
+
+B0 = INPUT();
+
+
+--A1 is A1
+--operation mode is input
+
+A1 = INPUT();
+
+
+--B1 is B1
+--operation mode is input
+
+B1 = INPUT();
+
+
+--B2 is B2
+--operation mode is input
+
+B2 = INPUT();
+
+
+--A2 is A2
+--operation mode is input
+
+A2 = INPUT();
+
+
+--B3 is B3
+--operation mode is input
+
+B3 = INPUT();
+
+
+--A3 is A3
+--operation mode is input
+
+A3 = INPUT();
+
+
+--C0 is C0
+--operation mode is output
+
+C0 = OUTPUT(inst16);
+
+
+--C1 is C1
+--operation mode is output
+
+C1 = OUTPUT(B1L4);
+
+
+--C2 is C2
+--operation mode is output
+
+C2 = OUTPUT(!B2L5);
+
+
+--C3 is C3
+--operation mode is output
+
+C3 = OUTPUT(B3L5);
+
+
+--C4 is C4
+--operation mode is output
+
+C4 = OUTPUT(!B3_43);
+
+
+--C5 is C5
+--operation mode is output
+
+C5 = OUTPUT(B3_44);
+
+
+--C6 is C6
+--operation mode is output
+
+C6 = OUTPUT(!B3_45);
+
+
+--C7 is C7
+--operation mode is output
+
+C7 = OUTPUT(!B3L3);
+
+

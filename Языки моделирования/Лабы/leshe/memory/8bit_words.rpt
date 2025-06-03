@@ -1,0 +1,876 @@
+Project Information                          c:\projects\memory\8bit_words.rpt
+
+MAX+plus II Compiler Report File
+Version 9.01 07/30/98
+Compiled: 12/24/20 01:17:23
+
+Copyright (C) 1988-1998 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input   Output   Bidir         Shareable
+POF       Device          Pins    Pins     Pins     LCs  Expanders  % Utilized
+
+8bit_words
+      EPM7096QC100-7       37       33       0      33      0           34 %
+
+User Pins:                 36       32       0  
+
+
+
+Project Information                          c:\projects\memory\8bit_words.rpt
+
+** MULTIPLE PIN CONNECTIONS **
+
+
+For node name '|buf:43|~15~2' (Same as node '~PIN001')
+For node name '|buf:43|~15~1' (Same as node '~PIN002')
+Connect: {8bit_words@90,8bit_words@86}
+
+
+Project Information                          c:\projects\memory\8bit_words.rpt
+
+** FILE HIERARCHY **
+
+
+
+|lpm_dff:10|
+|lpm_dff:27|
+|lpm_dff:24|
+|lpm_dff:21|
+|74155:15|
+|buf:43|
+
+
+Device-Specific Information:                 c:\projects\memory\8bit_words.rpt
+8bit_words
+
+***** Logic for device '8bit_words' compiled without errors.
+
+
+
+
+Device: EPM7096QC100-7
+
+Device Options:
+    Turbo Bit                                    = ON
+    Security Bit                                 = OFF
+    MultiVolt I/O                              = OFF
+
+
+
+Device-Specific Information:                 c:\projects\memory\8bit_words.rpt
+8bit_words
+
+** ERROR SUMMARY **
+
+Info: Chip '8bit_words' in device 'EPM7096QC100-7' has less than 20% of pins available for future logic changes -- if your project is likely to change, Altera recommends using a larger device
+                                                       
+                                  ~       ~            
+                            V     P       P            
+                            C     I       I   V        
+                      N     C     N       N N C        
+              D D D G . D D I G G 0 G G Q 0 . C Q Q Q  
+              3 4 4 N C 4 4 N N N 0 N N 2 0 C I 1 2 1  
+              7 0 1 D . 2 3 T D D 1 D D 1 2 . O 1 2 3  
+            ------------------------------------------_ 
+           / 100  98  96  94  92  90  88  86  84  82   |_ 
+          /     99  97  95  93  91  89  87  85  83  81    | 
+     D36 |  1                                          80 | Q14 
+     D35 |  2                                          79 | Q10 
+     D34 |  3                                          78 | Q20 
+     D11 |  4                                          77 | Q17 
+   VCCIO |  5                                          76 | GND 
+      A1 |  6                                          75 | Q15 
+      WR |  7                                          74 | Q12 
+      A0 |  8                                          73 | Q16 
+    N.C. |  9                                          72 | N.C. 
+     D32 | 10                                          71 | Q36 
+     D20 | 11                                          70 | Q35 
+     D33 | 12                                          69 | Q23 
+     GND | 13                                          68 | VCCIO 
+      RD | 14                                          67 | Q34 
+     D17 | 15                                          66 | Q24 
+     D10 | 16             EPM7096QC100-7               65 | Q25 
+     D16 | 17                                          64 | Q30 
+     D47 | 18                                          63 | Q26 
+     D46 | 19                                          62 | Q31 
+   VCCIO | 20                                          61 | GND 
+     D15 | 21                                          60 | Q32 
+     D45 | 22                                          59 | Q27 
+     D44 | 23                                          58 | Q33 
+    N.C. | 24                                          57 | N.C. 
+     D26 | 25                                          56 | Q41 
+RESERVED | 26                                          55 | RESERVED 
+     D14 | 27                                          54 | Q37 
+     GND | 28                                          53 | VCCIO 
+     D25 | 29                                          52 | Q42 
+     D21 | 30                                          51 | Q43 
+         |      32  34  36  38  40  42  44  46  48  50  _| 
+          \   31  33  35  37  39  41  43  45  47  49   | 
+           \------------------------------------------- 
+              D D D D D V N R D G V Q D N G Q Q D Q Q  
+              1 2 2 1 2 C . E 3 N C 4 2 . N 4 4 3 4 4  
+              3 4 3 2 2 C C S 1 D C 5 7 C D 7 0 0 6 4  
+                        I . E     I     .              
+                        O   R     N                    
+                            V     T                    
+                            E                          
+                            D                          
+
+
+N.C. = Not Connected.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+
+
+Device-Specific Information:                 c:\projects\memory\8bit_words.rpt
+8bit_words
+
+** RESOURCE USAGE **
+
+                                                Shareable     External
+Logic Array Block     Logic Cells   I/O Pins    Expanders   Interconnect
+
+A:     LC1 - LC16     0/16(  0%)  12/12(100%)   0/16(  0%)   0/36(  0%) 
+B:    LC17 - LC32     0/16(  0%)  12/12(100%)   0/16(  0%)   0/36(  0%) 
+C:    LC33 - LC48     0/16(  0%)  10/12( 83%)   0/16(  0%)   0/36(  0%) 
+D:    LC49 - LC64     9/16( 56%)  11/12( 91%)   0/16(  0%)  21/36( 58%) 
+E:    LC65 - LC80    12/16( 75%)  12/12(100%)   0/16(  0%)  27/36( 75%) 
+F:    LC81 - LC96    12/16( 75%)  12/12(100%)   0/16(  0%)  26/36( 72%) 
+
+
+Total dedicated input pins used:                 1/4      ( 25%)
+Total I/O pins used:                            69/72     ( 95%)
+Total logic cells used:                         33/96     ( 34%)
+Total shareable expanders used:                  0/96     (  0%)
+Total Turbo logic cells used:                   33/96     ( 34%)
+Total shareable expanders not available (n/a):   0/96     (  0%)
+Average fan-in:                                  5.84
+Total fan-in:                                   193
+
+Total input pins required:                      37
+Total output pins required:                     33
+Total bidirectional pins required:               0
+Total logic cells required:                     33
+Total flipflops required:                       32
+Total product terms required:                   97
+Total logic cells lending parallel expanders:    0
+Total shareable expanders in database:           0
+
+Synthesized logic cells:                         0/  96   (  0%)
+
+
+
+Device-Specific Information:                 c:\projects\memory\8bit_words.rpt
+8bit_words
+
+** INPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+   8    (1)  (A)      INPUT               0      0   0    0    0   32    0  A0
+   6    (4)  (A)      INPUT               0      0   0    0    0   32    0  A1
+  16   (25)  (B)      INPUT               0      0   0    0    0    1    0  D10
+   4    (5)  (A)      INPUT               0      0   0    0    0    1    0  D11
+  34   (37)  (C)      INPUT               0      0   0    0    0    1    0  D12
+  31   (41)  (C)      INPUT               0      0   0    0    0    1    0  D13
+  27   (45)  (C)      INPUT               0      0   0    0    0    1    0  D14
+  21   (20)  (B)      INPUT               0      0   0    0    0    1    0  D15
+  17   (24)  (B)      INPUT               0      0   0    0    0    1    0  D16
+  15   (27)  (B)      INPUT               0      0   0    0    0    1    0  D17
+  11   (30)  (B)      INPUT               0      0   0    0    0    1    0  D20
+  30   (43)  (C)      INPUT               0      0   0    0    0    1    0  D21
+  35   (36)  (C)      INPUT               0      0   0    0    0    1    0  D22
+  33   (38)  (C)      INPUT               0      0   0    0    0    1    0  D23
+  32   (40)  (C)      INPUT               0      0   0    0    0    1    0  D24
+  29   (44)  (C)      INPUT               0      0   0    0    0    1    0  D25
+  25   (48)  (C)      INPUT               0      0   0    0    0    1    0  D26
+  43   (51)  (D)      INPUT               0      0   0    0    0    1    0  D27
+  48   (54)  (D)      INPUT               0      0   0    0    0    1    0  D30
+  39   (33)  (C)      INPUT               0      0   0    0    0    1    0  D31
+  10   (32)  (B)      INPUT               0      0   0    0    0    1    0  D32
+  12   (29)  (B)      INPUT               0      0   0    0    0    1    0  D33
+   3    (6)  (A)      INPUT               0      0   0    0    0    1    0  D34
+   2    (8)  (A)      INPUT               0      0   0    0    0    1    0  D35
+   1    (9)  (A)      INPUT               0      0   0    0    0    1    0  D36
+ 100   (11)  (A)      INPUT               0      0   0    0    0    1    0  D37
+  99   (12)  (A)      INPUT               0      0   0    0    0    1    0  D40
+  98   (13)  (A)      INPUT               0      0   0    0    0    1    0  D41
+  95   (14)  (A)      INPUT               0      0   0    0    0    1    0  D42
+  94   (16)  (A)      INPUT               0      0   0    0    0    1    0  D43
+  23   (17)  (B)      INPUT               0      0   0    0    0    1    0  D44
+  22   (19)  (B)      INPUT               0      0   0    0    0    1    0  D45
+  19   (21)  (B)      INPUT               0      0   0    0    0    1    0  D46
+  18   (22)  (B)      INPUT               0      0   0    0    0    1    0  D47
+  90      -   -       INPUT  G s          0      0   0    0    0    0    0  ~PIN001
+  14   (28)  (B)      INPUT               0      0   0    0    0    1    0  RD
+   7    (3)  (A)      INPUT               0      0   0    0    0   32    0  WR
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+G = Global Source. Fan-out destinations counted here do not include destinations
+that are driven using global routing resources. Refer to the Auto Global Signals,
+Clock Signals, Clear Signals, Synchronous Load Signals, and Synchronous Clear Signals
+Sections of this Report File for information on which signals' fan-outs are used as
+Clock, Clear, Preset, Output Enable, and synchronous Load signals.
+
+
+Device-Specific Information:                 c:\projects\memory\8bit_words.rpt
+8bit_words
+
+** OUTPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  86     94    F     OUTPUT      t        0      0   0    1    0    0    0  ~PIN002
+  79     88    F     TRI/FF      t        0      0   0    4    1    1    0  Q10
+  83     93    F     TRI/FF      t        0      0   0    4    1    1    0  Q11
+  74     83    F     TRI/FF      t        0      0   0    4    1    1    0  Q12
+  81     91    F     TRI/FF      t        0      0   0    4    1    1    0  Q13
+  80     89    F     TRI/FF      t        0      0   0    4    1    1    0  Q14
+  75     84    F     TRI/FF      t        0      0   0    4    1    1    0  Q15
+  73     81    F     TRI/FF      t        0      0   0    4    1    1    0  Q16
+  77     85    F     TRI/FF      t        0      0   0    4    1    1    0  Q17
+  78     86    F     TRI/FF      t        0      0   0    4    1    1    0  Q20
+  87     96    F     TRI/FF      t        0      0   0    4    1    1    0  Q21
+  82     92    F     TRI/FF      t        0      0   0    4    1    1    0  Q22
+  69     77    E     TRI/FF      t        0      0   0    4    1    1    0  Q23
+  66     75    E     TRI/FF      t        0      0   0    4    1    1    0  Q24
+  65     73    E     TRI/FF      t        0      0   0    4    1    1    0  Q25
+  63     70    E     TRI/FF      t        0      0   0    4    1    1    0  Q26
+  59     67    E     TRI/FF      t        0      0   0    4    1    1    0  Q27
+  64     72    E     TRI/FF      t        0      0   0    4    1    1    0  Q30
+  62     69    E     TRI/FF      t        0      0   0    4    1    1    0  Q31
+  60     68    E     TRI/FF      t        0      0   0    4    1    1    0  Q32
+  58     65    E     TRI/FF      t        0      0   0    4    1    1    0  Q33
+  67     76    E     TRI/FF      t        0      0   0    4    1    1    0  Q34
+  70     78    E     TRI/FF      t        0      0   0    4    1    1    0  Q35
+  71     80    E     TRI/FF      t        0      0   0    4    1    1    0  Q36
+  54     61    D     TRI/FF      t        0      0   0    4    1    1    0  Q37
+  47     53    D     TRI/FF      t        0      0   0    4    1    1    0  Q40
+  56     64    D     TRI/FF      t        0      0   0    4    1    1    0  Q41
+  52     60    D     TRI/FF      t        0      0   0    4    1    1    0  Q42
+  51     59    D     TRI/FF      t        0      0   0    4    1    1    0  Q43
+  50     57    D     TRI/FF      t        0      0   0    4    1    1    0  Q44
+  42     49    D     TRI/FF      t        0      0   0    4    1    1    0  Q45
+  49     56    D     TRI/FF      t        0      0   0    4    1    1    0  Q46
+  46     52    D     TRI/FF      t        0      0   0    4    1    1    0  Q47
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                 c:\projects\memory\8bit_words.rpt
+8bit_words
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'D':
+
+                           Logic cells placed in LAB 'D'
+        +----------------- LC61 Q37
+        | +--------------- LC53 Q40
+        | | +------------- LC64 Q41
+        | | | +----------- LC60 Q42
+        | | | | +--------- LC59 Q43
+        | | | | | +------- LC57 Q44
+        | | | | | | +----- LC49 Q45
+        | | | | | | | +--- LC56 Q46
+        | | | | | | | | +- LC52 Q47
+        | | | | | | | | | 
+        | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | |   that feed LAB 'D'
+LC      | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'D':
+LC61 -> * - - - - - - - - | - - - * - - | <-- Q37
+LC53 -> - * - - - - - - - | - - - * - - | <-- Q40
+LC64 -> - - * - - - - - - | - - - * - - | <-- Q41
+LC60 -> - - - * - - - - - | - - - * - - | <-- Q42
+LC59 -> - - - - * - - - - | - - - * - - | <-- Q43
+LC57 -> - - - - - * - - - | - - - * - - | <-- Q44
+LC49 -> - - - - - - * - - | - - - * - - | <-- Q45
+LC56 -> - - - - - - - * - | - - - * - - | <-- Q46
+LC52 -> - - - - - - - - * | - - - * - - | <-- Q47
+
+Pin
+8    -> * * * * * * * * * | - - - * * * | <-- A0
+6    -> * * * * * * * * * | - - - * * * | <-- A1
+48   -> * - - - - - - - - | - - - * - - | <-- D30
+99   -> - - - - - - - - * | - - - * - - | <-- D40
+98   -> - - - - - - - * - | - - - * - - | <-- D41
+95   -> - - - - - - * - - | - - - * - - | <-- D42
+94   -> - - - - - * - - - | - - - * - - | <-- D43
+23   -> - - - - * - - - - | - - - * - - | <-- D44
+22   -> - - - * - - - - - | - - - * - - | <-- D45
+19   -> - - * - - - - - - | - - - * - - | <-- D46
+18   -> - * - - - - - - - | - - - * - - | <-- D47
+90   -> - - - - - - - - - | - - - - - - | <-- ~PIN001
+7    -> * * * * * * * * * | - - - * * * | <-- WR
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                 c:\projects\memory\8bit_words.rpt
+8bit_words
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'E':
+
+                                 Logic cells placed in LAB 'E'
+        +----------------------- LC77 Q23
+        | +--------------------- LC75 Q24
+        | | +------------------- LC73 Q25
+        | | | +----------------- LC70 Q26
+        | | | | +--------------- LC67 Q27
+        | | | | | +------------- LC72 Q30
+        | | | | | | +----------- LC69 Q31
+        | | | | | | | +--------- LC68 Q32
+        | | | | | | | | +------- LC65 Q33
+        | | | | | | | | | +----- LC76 Q34
+        | | | | | | | | | | +--- LC78 Q35
+        | | | | | | | | | | | +- LC80 Q36
+        | | | | | | | | | | | | 
+        | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | |   that feed LAB 'E'
+LC      | | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'E':
+LC77 -> * - - - - - - - - - - - | - - - - * - | <-- Q23
+LC75 -> - * - - - - - - - - - - | - - - - * - | <-- Q24
+LC73 -> - - * - - - - - - - - - | - - - - * - | <-- Q25
+LC70 -> - - - * - - - - - - - - | - - - - * - | <-- Q26
+LC67 -> - - - - * - - - - - - - | - - - - * - | <-- Q27
+LC72 -> - - - - - * - - - - - - | - - - - * - | <-- Q30
+LC69 -> - - - - - - * - - - - - | - - - - * - | <-- Q31
+LC68 -> - - - - - - - * - - - - | - - - - * - | <-- Q32
+LC65 -> - - - - - - - - * - - - | - - - - * - | <-- Q33
+LC76 -> - - - - - - - - - * - - | - - - - * - | <-- Q34
+LC78 -> - - - - - - - - - - * - | - - - - * - | <-- Q35
+LC80 -> - - - - - - - - - - - * | - - - - * - | <-- Q36
+
+Pin
+8    -> * * * * * * * * * * * * | - - - * * * | <-- A0
+6    -> * * * * * * * * * * * * | - - - * * * | <-- A1
+11   -> - - - - * - - - - - - - | - - - - * - | <-- D20
+30   -> - - - * - - - - - - - - | - - - - * - | <-- D21
+35   -> - - * - - - - - - - - - | - - - - * - | <-- D22
+33   -> - * - - - - - - - - - - | - - - - * - | <-- D23
+32   -> * - - - - - - - - - - - | - - - - * - | <-- D24
+39   -> - - - - - - - - - - - * | - - - - * - | <-- D31
+10   -> - - - - - - - - - - * - | - - - - * - | <-- D32
+12   -> - - - - - - - - - * - - | - - - - * - | <-- D33
+3    -> - - - - - - - - * - - - | - - - - * - | <-- D34
+2    -> - - - - - - - * - - - - | - - - - * - | <-- D35
+1    -> - - - - - - * - - - - - | - - - - * - | <-- D36
+100  -> - - - - - * - - - - - - | - - - - * - | <-- D37
+90   -> - - - - - - - - - - - - | - - - - - - | <-- ~PIN001
+7    -> * * * * * * * * * * * * | - - - * * * | <-- WR
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                 c:\projects\memory\8bit_words.rpt
+8bit_words
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'F':
+
+                                 Logic cells placed in LAB 'F'
+        +----------------------- LC94 ~PIN002
+        | +--------------------- LC88 Q10
+        | | +------------------- LC93 Q11
+        | | | +----------------- LC83 Q12
+        | | | | +--------------- LC91 Q13
+        | | | | | +------------- LC89 Q14
+        | | | | | | +----------- LC84 Q15
+        | | | | | | | +--------- LC81 Q16
+        | | | | | | | | +------- LC85 Q17
+        | | | | | | | | | +----- LC86 Q20
+        | | | | | | | | | | +--- LC96 Q21
+        | | | | | | | | | | | +- LC92 Q22
+        | | | | | | | | | | | | 
+        | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | |   that feed LAB 'F'
+LC      | | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'F':
+LC88 -> - * - - - - - - - - - - | - - - - - * | <-- Q10
+LC93 -> - - * - - - - - - - - - | - - - - - * | <-- Q11
+LC83 -> - - - * - - - - - - - - | - - - - - * | <-- Q12
+LC91 -> - - - - * - - - - - - - | - - - - - * | <-- Q13
+LC89 -> - - - - - * - - - - - - | - - - - - * | <-- Q14
+LC84 -> - - - - - - * - - - - - | - - - - - * | <-- Q15
+LC81 -> - - - - - - - * - - - - | - - - - - * | <-- Q16
+LC85 -> - - - - - - - - * - - - | - - - - - * | <-- Q17
+LC86 -> - - - - - - - - - * - - | - - - - - * | <-- Q20
+LC96 -> - - - - - - - - - - * - | - - - - - * | <-- Q21
+LC92 -> - - - - - - - - - - - * | - - - - - * | <-- Q22
+
+Pin
+8    -> - * * * * * * * * * * * | - - - * * * | <-- A0
+6    -> - * * * * * * * * * * * | - - - * * * | <-- A1
+16   -> - - - - - - - - * - - - | - - - - - * | <-- D10
+4    -> - - - - - - - * - - - - | - - - - - * | <-- D11
+34   -> - - - - - - * - - - - - | - - - - - * | <-- D12
+31   -> - - - - - * - - - - - - | - - - - - * | <-- D13
+27   -> - - - - * - - - - - - - | - - - - - * | <-- D14
+21   -> - - - * - - - - - - - - | - - - - - * | <-- D15
+17   -> - - * - - - - - - - - - | - - - - - * | <-- D16
+15   -> - * - - - - - - - - - - | - - - - - * | <-- D17
+29   -> - - - - - - - - - - - * | - - - - - * | <-- D25
+25   -> - - - - - - - - - - * - | - - - - - * | <-- D26
+43   -> - - - - - - - - - * - - | - - - - - * | <-- D27
+90   -> - - - - - - - - - - - - | - - - - - - | <-- ~PIN001
+14   -> * - - - - - - - - - - - | - - - - - * | <-- RD
+7    -> - * * * * * * * * * * * | - - - * * * | <-- WR
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                 c:\projects\memory\8bit_words.rpt
+8bit_words
+
+** EQUATIONS **
+
+A0       : INPUT;
+A1       : INPUT;
+D10      : INPUT;
+D11      : INPUT;
+D12      : INPUT;
+D13      : INPUT;
+D14      : INPUT;
+D15      : INPUT;
+D16      : INPUT;
+D17      : INPUT;
+D20      : INPUT;
+D21      : INPUT;
+D22      : INPUT;
+D23      : INPUT;
+D24      : INPUT;
+D25      : INPUT;
+D26      : INPUT;
+D27      : INPUT;
+D30      : INPUT;
+D31      : INPUT;
+D32      : INPUT;
+D33      : INPUT;
+D34      : INPUT;
+D35      : INPUT;
+D36      : INPUT;
+D37      : INPUT;
+D40      : INPUT;
+D41      : INPUT;
+D42      : INPUT;
+D43      : INPUT;
+D44      : INPUT;
+D45      : INPUT;
+D46      : INPUT;
+D47      : INPUT;
+RD       : INPUT;
+WR       : INPUT;
+~PIN001  : INPUT;
+
+-- Node name is 'Q10' = '|LPM_DFF:10|dffs0' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q10', type is output 
+Q10      = TRI(_LC088, GLOBAL(!~PIN001));
+_LC088   = TFFE( _EQ001,  _EQ002,  VCC,  VCC,  VCC);
+  _EQ001 = !A0 & !A1 &  D17 & !_LC088
+         # !A0 & !A1 & !D17 &  _LC088;
+  _EQ002 = !A0 & !A1 & !WR;
+
+-- Node name is 'Q11' = '|LPM_DFF:10|dffs1' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q11', type is output 
+Q11      = TRI(_LC093, GLOBAL(!~PIN001));
+_LC093   = TFFE( _EQ003,  _EQ004,  VCC,  VCC,  VCC);
+  _EQ003 = !A0 & !A1 &  D16 & !_LC093
+         # !A0 & !A1 & !D16 &  _LC093;
+  _EQ004 = !A0 & !A1 & !WR;
+
+-- Node name is 'Q12' = '|LPM_DFF:10|dffs2' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q12', type is output 
+Q12      = TRI(_LC083, GLOBAL(!~PIN001));
+_LC083   = TFFE( _EQ005,  _EQ006,  VCC,  VCC,  VCC);
+  _EQ005 = !A0 & !A1 &  D15 & !_LC083
+         # !A0 & !A1 & !D15 &  _LC083;
+  _EQ006 = !A0 & !A1 & !WR;
+
+-- Node name is 'Q13' = '|LPM_DFF:10|dffs3' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q13', type is output 
+Q13      = TRI(_LC091, GLOBAL(!~PIN001));
+_LC091   = TFFE( _EQ007,  _EQ008,  VCC,  VCC,  VCC);
+  _EQ007 = !A0 & !A1 &  D14 & !_LC091
+         # !A0 & !A1 & !D14 &  _LC091;
+  _EQ008 = !A0 & !A1 & !WR;
+
+-- Node name is 'Q14' = '|LPM_DFF:10|dffs4' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q14', type is output 
+Q14      = TRI(_LC089, GLOBAL(!~PIN001));
+_LC089   = TFFE( _EQ009,  _EQ010,  VCC,  VCC,  VCC);
+  _EQ009 = !A0 & !A1 &  D13 & !_LC089
+         # !A0 & !A1 & !D13 &  _LC089;
+  _EQ010 = !A0 & !A1 & !WR;
+
+-- Node name is 'Q15' = '|LPM_DFF:10|dffs5' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q15', type is output 
+Q15      = TRI(_LC084, GLOBAL(!~PIN001));
+_LC084   = TFFE( _EQ011,  _EQ012,  VCC,  VCC,  VCC);
+  _EQ011 = !A0 & !A1 &  D12 & !_LC084
+         # !A0 & !A1 & !D12 &  _LC084;
+  _EQ012 = !A0 & !A1 & !WR;
+
+-- Node name is 'Q16' = '|LPM_DFF:10|dffs6' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q16', type is output 
+Q16      = TRI(_LC081, GLOBAL(!~PIN001));
+_LC081   = TFFE( _EQ013,  _EQ014,  VCC,  VCC,  VCC);
+  _EQ013 = !A0 & !A1 &  D11 & !_LC081
+         # !A0 & !A1 & !D11 &  _LC081;
+  _EQ014 = !A0 & !A1 & !WR;
+
+-- Node name is 'Q17' = '|LPM_DFF:10|dffs7' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q17', type is output 
+Q17      = TRI(_LC085, GLOBAL(!~PIN001));
+_LC085   = TFFE( _EQ015,  _EQ016,  VCC,  VCC,  VCC);
+  _EQ015 = !A0 & !A1 &  D10 & !_LC085
+         # !A0 & !A1 & !D10 &  _LC085;
+  _EQ016 = !A0 & !A1 & !WR;
+
+-- Node name is 'Q20' = '|LPM_DFF:21|dffs0' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q20', type is output 
+Q20      = TRI(_LC086, GLOBAL(!~PIN001));
+_LC086   = TFFE( _EQ017,  _EQ018,  VCC,  VCC,  VCC);
+  _EQ017 =  A0 & !A1 &  D27 & !_LC086
+         #  A0 & !A1 & !D27 &  _LC086;
+  _EQ018 =  A0 & !A1 & !WR;
+
+-- Node name is 'Q21' = '|LPM_DFF:21|dffs1' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q21', type is output 
+Q21      = TRI(_LC096, GLOBAL(!~PIN001));
+_LC096   = TFFE( _EQ019,  _EQ020,  VCC,  VCC,  VCC);
+  _EQ019 =  A0 & !A1 &  D26 & !_LC096
+         #  A0 & !A1 & !D26 &  _LC096;
+  _EQ020 =  A0 & !A1 & !WR;
+
+-- Node name is 'Q22' = '|LPM_DFF:21|dffs2' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q22', type is output 
+Q22      = TRI(_LC092, GLOBAL(!~PIN001));
+_LC092   = TFFE( _EQ021,  _EQ022,  VCC,  VCC,  VCC);
+  _EQ021 =  A0 & !A1 &  D25 & !_LC092
+         #  A0 & !A1 & !D25 &  _LC092;
+  _EQ022 =  A0 & !A1 & !WR;
+
+-- Node name is 'Q23' = '|LPM_DFF:21|dffs3' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q23', type is output 
+Q23      = TRI(_LC077, GLOBAL(!~PIN001));
+_LC077   = TFFE( _EQ023,  _EQ024,  VCC,  VCC,  VCC);
+  _EQ023 =  A0 & !A1 &  D24 & !_LC077
+         #  A0 & !A1 & !D24 &  _LC077;
+  _EQ024 =  A0 & !A1 & !WR;
+
+-- Node name is 'Q24' = '|LPM_DFF:21|dffs4' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q24', type is output 
+Q24      = TRI(_LC075, GLOBAL(!~PIN001));
+_LC075   = TFFE( _EQ025,  _EQ026,  VCC,  VCC,  VCC);
+  _EQ025 =  A0 & !A1 &  D23 & !_LC075
+         #  A0 & !A1 & !D23 &  _LC075;
+  _EQ026 =  A0 & !A1 & !WR;
+
+-- Node name is 'Q25' = '|LPM_DFF:21|dffs5' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q25', type is output 
+Q25      = TRI(_LC073, GLOBAL(!~PIN001));
+_LC073   = TFFE( _EQ027,  _EQ028,  VCC,  VCC,  VCC);
+  _EQ027 =  A0 & !A1 &  D22 & !_LC073
+         #  A0 & !A1 & !D22 &  _LC073;
+  _EQ028 =  A0 & !A1 & !WR;
+
+-- Node name is 'Q26' = '|LPM_DFF:21|dffs6' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q26', type is output 
+Q26      = TRI(_LC070, GLOBAL(!~PIN001));
+_LC070   = TFFE( _EQ029,  _EQ030,  VCC,  VCC,  VCC);
+  _EQ029 =  A0 & !A1 &  D21 & !_LC070
+         #  A0 & !A1 & !D21 &  _LC070;
+  _EQ030 =  A0 & !A1 & !WR;
+
+-- Node name is 'Q27' = '|LPM_DFF:21|dffs7' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q27', type is output 
+Q27      = TRI(_LC067, GLOBAL(!~PIN001));
+_LC067   = TFFE( _EQ031,  _EQ032,  VCC,  VCC,  VCC);
+  _EQ031 =  A0 & !A1 &  D20 & !_LC067
+         #  A0 & !A1 & !D20 &  _LC067;
+  _EQ032 =  A0 & !A1 & !WR;
+
+-- Node name is 'Q30' = '|LPM_DFF:24|dffs0' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q30', type is output 
+Q30      = TRI(_LC072, GLOBAL(!~PIN001));
+_LC072   = TFFE( _EQ033,  _EQ034,  VCC,  VCC,  VCC);
+  _EQ033 = !A0 &  A1 &  D37 & !_LC072
+         # !A0 &  A1 & !D37 &  _LC072;
+  _EQ034 = !A0 &  A1 & !WR;
+
+-- Node name is 'Q31' = '|LPM_DFF:24|dffs1' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q31', type is output 
+Q31      = TRI(_LC069, GLOBAL(!~PIN001));
+_LC069   = TFFE( _EQ035,  _EQ036,  VCC,  VCC,  VCC);
+  _EQ035 = !A0 &  A1 &  D36 & !_LC069
+         # !A0 &  A1 & !D36 &  _LC069;
+  _EQ036 = !A0 &  A1 & !WR;
+
+-- Node name is 'Q32' = '|LPM_DFF:24|dffs2' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q32', type is output 
+Q32      = TRI(_LC068, GLOBAL(!~PIN001));
+_LC068   = TFFE( _EQ037,  _EQ038,  VCC,  VCC,  VCC);
+  _EQ037 = !A0 &  A1 &  D35 & !_LC068
+         # !A0 &  A1 & !D35 &  _LC068;
+  _EQ038 = !A0 &  A1 & !WR;
+
+-- Node name is 'Q33' = '|LPM_DFF:24|dffs3' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q33', type is output 
+Q33      = TRI(_LC065, GLOBAL(!~PIN001));
+_LC065   = TFFE( _EQ039,  _EQ040,  VCC,  VCC,  VCC);
+  _EQ039 = !A0 &  A1 &  D34 & !_LC065
+         # !A0 &  A1 & !D34 &  _LC065;
+  _EQ040 = !A0 &  A1 & !WR;
+
+-- Node name is 'Q34' = '|LPM_DFF:24|dffs4' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q34', type is output 
+Q34      = TRI(_LC076, GLOBAL(!~PIN001));
+_LC076   = TFFE( _EQ041,  _EQ042,  VCC,  VCC,  VCC);
+  _EQ041 = !A0 &  A1 &  D33 & !_LC076
+         # !A0 &  A1 & !D33 &  _LC076;
+  _EQ042 = !A0 &  A1 & !WR;
+
+-- Node name is 'Q35' = '|LPM_DFF:24|dffs5' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q35', type is output 
+Q35      = TRI(_LC078, GLOBAL(!~PIN001));
+_LC078   = TFFE( _EQ043,  _EQ044,  VCC,  VCC,  VCC);
+  _EQ043 = !A0 &  A1 &  D32 & !_LC078
+         # !A0 &  A1 & !D32 &  _LC078;
+  _EQ044 = !A0 &  A1 & !WR;
+
+-- Node name is 'Q36' = '|LPM_DFF:24|dffs6' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q36', type is output 
+Q36      = TRI(_LC080, GLOBAL(!~PIN001));
+_LC080   = TFFE( _EQ045,  _EQ046,  VCC,  VCC,  VCC);
+  _EQ045 = !A0 &  A1 &  D31 & !_LC080
+         # !A0 &  A1 & !D31 &  _LC080;
+  _EQ046 = !A0 &  A1 & !WR;
+
+-- Node name is 'Q37' = '|LPM_DFF:24|dffs7' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q37', type is output 
+Q37      = TRI(_LC061, GLOBAL(!~PIN001));
+_LC061   = TFFE( _EQ047,  _EQ048,  VCC,  VCC,  VCC);
+  _EQ047 = !A0 &  A1 &  D30 & !_LC061
+         # !A0 &  A1 & !D30 &  _LC061;
+  _EQ048 = !A0 &  A1 & !WR;
+
+-- Node name is 'Q40' = '|LPM_DFF:27|dffs0' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q40', type is output 
+Q40      = TRI(_LC053, GLOBAL(!~PIN001));
+_LC053   = TFFE( _EQ049,  _EQ050,  VCC,  VCC,  VCC);
+  _EQ049 =  A0 &  A1 &  D47 & !_LC053
+         #  A0 &  A1 & !D47 &  _LC053;
+  _EQ050 =  A0 &  A1 & !WR;
+
+-- Node name is 'Q41' = '|LPM_DFF:27|dffs1' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q41', type is output 
+Q41      = TRI(_LC064, GLOBAL(!~PIN001));
+_LC064   = TFFE( _EQ051,  _EQ052,  VCC,  VCC,  VCC);
+  _EQ051 =  A0 &  A1 &  D46 & !_LC064
+         #  A0 &  A1 & !D46 &  _LC064;
+  _EQ052 =  A0 &  A1 & !WR;
+
+-- Node name is 'Q42' = '|LPM_DFF:27|dffs2' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q42', type is output 
+Q42      = TRI(_LC060, GLOBAL(!~PIN001));
+_LC060   = TFFE( _EQ053,  _EQ054,  VCC,  VCC,  VCC);
+  _EQ053 =  A0 &  A1 &  D45 & !_LC060
+         #  A0 &  A1 & !D45 &  _LC060;
+  _EQ054 =  A0 &  A1 & !WR;
+
+-- Node name is 'Q43' = '|LPM_DFF:27|dffs3' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q43', type is output 
+Q43      = TRI(_LC059, GLOBAL(!~PIN001));
+_LC059   = TFFE( _EQ055,  _EQ056,  VCC,  VCC,  VCC);
+  _EQ055 =  A0 &  A1 &  D44 & !_LC059
+         #  A0 &  A1 & !D44 &  _LC059;
+  _EQ056 =  A0 &  A1 & !WR;
+
+-- Node name is 'Q44' = '|LPM_DFF:27|dffs4' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q44', type is output 
+Q44      = TRI(_LC057, GLOBAL(!~PIN001));
+_LC057   = TFFE( _EQ057,  _EQ058,  VCC,  VCC,  VCC);
+  _EQ057 =  A0 &  A1 &  D43 & !_LC057
+         #  A0 &  A1 & !D43 &  _LC057;
+  _EQ058 =  A0 &  A1 & !WR;
+
+-- Node name is 'Q45' = '|LPM_DFF:27|dffs5' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q45', type is output 
+Q45      = TRI(_LC049, GLOBAL(!~PIN001));
+_LC049   = TFFE( _EQ059,  _EQ060,  VCC,  VCC,  VCC);
+  _EQ059 =  A0 &  A1 &  D42 & !_LC049
+         #  A0 &  A1 & !D42 &  _LC049;
+  _EQ060 =  A0 &  A1 & !WR;
+
+-- Node name is 'Q46' = '|LPM_DFF:27|dffs6' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q46', type is output 
+Q46      = TRI(_LC056, GLOBAL(!~PIN001));
+_LC056   = TFFE( _EQ061,  _EQ062,  VCC,  VCC,  VCC);
+  _EQ061 =  A0 &  A1 &  D41 & !_LC056
+         #  A0 &  A1 & !D41 &  _LC056;
+  _EQ062 =  A0 &  A1 & !WR;
+
+-- Node name is 'Q47' = '|LPM_DFF:27|dffs7' from file "lpm_dff.tdf" line 64, column 7
+-- Equation name is 'Q47', type is output 
+Q47      = TRI(_LC052, GLOBAL(!~PIN001));
+_LC052   = TFFE( _EQ063,  _EQ064,  VCC,  VCC,  VCC);
+  _EQ063 =  A0 &  A1 &  D40 & !_LC052
+         #  A0 &  A1 & !D40 &  _LC052;
+  _EQ064 =  A0 &  A1 & !WR;
+
+-- Node name is '|buf:43|~15~1' 
+-- Equation name is '|buf:43|~15~1', type is output 
+ ~PIN002 = LCELL( RD $  VCC);
+
+
+
+--     Shareable expanders that are duplicated in multiple LABs:
+--     (none)
+
+
+
+
+Project Information                          c:\projects\memory\8bit_words.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Standard
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'MAX7000' family
+
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      PARALLEL_EXPANDERS                  = off
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SOFT_BUFFER_INSERTION               = on
+      SUBFACTOR_EXTRACTION                = on
+      TURBO_BIT                           = on
+      XOR_SYNTHESIS                       = on
+      IGNORE_SOFT_BUFFERS                 = off
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      One-Hot State Machine Encoding      = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:00
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 3,653K

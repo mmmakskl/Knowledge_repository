@@ -1,0 +1,794 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B12L12 is mux4_1gr:inst20|inst~70 at LC_X23_Y30_N2
+--operation mode is normal
+
+B12L12 = !a4 & (!a5);
+
+
+--B4L1 is mux4_1gr:inst3|inst4~19 at LC_X17_Y30_N7
+--operation mode is normal
+
+B4L1 = a0 & (a1 # !x13) # !a0 & !x12 & (!a1);
+
+
+--B4L2 is mux4_1gr:inst3|inst4~20 at LC_X17_Y30_N8
+--operation mode is normal
+
+B4L2 = B4L1 & (!a1 # !x15) # !B4L1 & (!x14 & a1);
+
+
+--B12L22 is mux4_1gr:inst20|inst~71 at LC_X25_Y30_N7
+--operation mode is normal
+
+B12L22 = !B4L2 & a3 & a2 & B12L12;
+
+
+--B12L8 is mux4_1gr:inst20|inst3~42 at LC_X23_Y30_N4
+--operation mode is normal
+
+B12L8 = a4 & (a5);
+
+
+--B12L32 is mux4_1gr:inst20|inst~72 at LC_X25_Y30_N0
+--operation mode is normal
+
+B12L32 = !a3 & !a2;
+
+
+--B31L1 is mux4_1gr:inst12|inst4~19 at LC_X17_Y30_N3
+--operation mode is normal
+
+B31L1 = a0 & (a1) # !a0 & (a1 & (!x50) # !a1 & !x48);
+
+
+--B31L2 is mux4_1gr:inst12|inst4~20 at LC_X17_Y30_N4
+--operation mode is normal
+
+B31L2 = a0 & (B31L1 & (!x51) # !B31L1 & !x49) # !a0 & (B31L1);
+
+
+--B12L01 is mux4_1gr:inst20|inst4~112 at LC_X25_Y30_N8
+--operation mode is normal
+
+B12L01 = B12L22 # !B31L2 & B12L8 & B12L32;
+
+
+--B12L1 is mux4_1gr:inst20|inst1~46 at LC_X23_Y30_N5
+--operation mode is normal
+
+B12L1 = a4 & (!a5);
+
+
+--B8L1 is mux4_1gr:inst7|inst4~19 at LC_X25_Y30_N9
+--operation mode is normal
+
+B8L1 = a1 & (a0) # !a1 & (a0 & !x29 # !a0 & (!x28));
+
+
+--B8L2 is mux4_1gr:inst7|inst4~20 at LC_X25_Y30_N6
+--operation mode is normal
+
+B8L2 = a1 & (B8L1 & !x31 # !B8L1 & (!x30)) # !a1 & (B8L1);
+
+
+--B12L2 is mux4_1gr:inst20|inst1~47 at LC_X25_Y30_N4
+--operation mode is normal
+
+B12L2 = B12L1 & a3 & a2 & !B8L2;
+
+
+--B5L1 is mux4_1gr:inst4|inst4~19 at LC_X25_Y30_N2
+--operation mode is normal
+
+B5L1 = a0 & (a1) # !a0 & (a1 & !x18 # !a1 & (!x16));
+
+
+--B5L2 is mux4_1gr:inst4|inst4~20 at LC_X25_Y30_N3
+--operation mode is normal
+
+B5L2 = B5L1 & (!x19 # !a0) # !B5L1 & a0 & !x17;
+
+
+--B12L11 is mux4_1gr:inst20|inst4~113 at LC_X25_Y30_N1
+--operation mode is normal
+
+B12L11 = B12L2 # B12L1 & B12L32 & !B5L2;
+
+
+--B1L1 is mux4_1gr:inst|inst4~19 at LC_X17_Y30_N1
+--operation mode is normal
+
+B1L1 = a0 & (a1) # !a0 & (a1 & (!x2) # !a1 & !x0);
+
+
+--B1L2 is mux4_1gr:inst|inst4~20 at LC_X17_Y30_N0
+--operation mode is normal
+
+B1L2 = B1L1 & (!a0 # !x3) # !B1L1 & (!x1 & a0);
+
+
+--B12L42 is mux4_1gr:inst20|inst~73 at LC_X24_Y30_N7
+--operation mode is normal
+
+B12L42 = !B1L2 & B12L12 & !a3 & !a2;
+
+
+--B12L52 is mux4_1gr:inst20|inst~74 at LC_X25_Y29_N0
+--operation mode is normal
+
+B12L52 = !a3 & a2;
+
+
+--B2L1 is mux4_1gr:inst1|inst4~19 at LC_X17_Y30_N6
+--operation mode is normal
+
+B2L1 = a0 & (a1) # !a0 & (a1 & (!x6) # !a1 & !x4);
+
+
+--B2L2 is mux4_1gr:inst1|inst4~20 at LC_X17_Y30_N9
+--operation mode is normal
+
+B2L2 = a0 & (B2L1 & !x7 # !B2L1 & (!x5)) # !a0 & (B2L1);
+
+
+--B12L21 is mux4_1gr:inst20|inst4~114 at LC_X24_Y30_N0
+--operation mode is normal
+
+B12L21 = B12L42 # !B2L2 & B12L52 & B12L12;
+
+
+--B6L1 is mux4_1gr:inst5|inst4~19 at LC_X41_Y1_N6
+--operation mode is normal
+
+B6L1 = a0 & (a1) # !a0 & (a1 & !x22 # !a1 & (!x20));
+
+
+--B6L2 is mux4_1gr:inst5|inst4~20 at LC_X41_Y1_N5
+--operation mode is normal
+
+B6L2 = a0 & (B6L1 & !x23 # !B6L1 & (!x21)) # !a0 & (B6L1);
+
+
+--B12L3 is mux4_1gr:inst20|inst1~48 at LC_X24_Y30_N6
+--operation mode is normal
+
+B12L3 = B12L1 & !B6L2 & !a3 & a2;
+
+
+--B12L62 is mux4_1gr:inst20|inst~75 at LC_X25_Y29_N6
+--operation mode is normal
+
+B12L62 = a3 & !a2;
+
+
+--B7L1 is mux4_1gr:inst6|inst4~19 at LC_X17_Y30_N5
+--operation mode is normal
+
+B7L1 = a0 & (a1 # !x25) # !a0 & (!x24 & !a1);
+
+
+--B7L2 is mux4_1gr:inst6|inst4~20 at LC_X17_Y30_N2
+--operation mode is normal
+
+B7L2 = B7L1 & (!a1 # !x27) # !B7L1 & (!x26 & a1);
+
+
+--B12L31 is mux4_1gr:inst20|inst4~115 at LC_X24_Y30_N4
+--operation mode is normal
+
+B12L31 = B12L3 # B12L1 & B12L62 & !B7L2;
+
+
+--B12L41 is mux4_1gr:inst20|inst4~116 at LC_X24_Y30_N5
+--operation mode is normal
+
+B12L41 = B12L11 # B12L21 # B12L01 # B12L31;
+
+
+--B61L1 is mux4_1gr:inst15|inst4~19 at LC_X25_Y29_N1
+--operation mode is normal
+
+B61L1 = a0 & (a1 # !x61) # !a0 & (!a1 & !x60);
+
+
+--B61L2 is mux4_1gr:inst15|inst4~20 at LC_X25_Y29_N8
+--operation mode is normal
+
+B61L2 = a1 & (B61L1 & (!x63) # !B61L1 & !x62) # !a1 & (B61L1);
+
+
+--B12L9 is mux4_1gr:inst20|inst3~43 at LC_X25_Y29_N5
+--operation mode is normal
+
+B12L9 = !B61L2 & a3 & a2 & B12L8;
+
+
+--B12L4 is mux4_1gr:inst20|inst2~50 at LC_X23_Y30_N6
+--operation mode is normal
+
+B12L4 = !a4 & (a5);
+
+
+--B9L1 is mux4_1gr:inst8|inst4~19 at LC_X41_Y1_N8
+--operation mode is normal
+
+B9L1 = a0 & (a1) # !a0 & (a1 & !x34 # !a1 & (!x32));
+
+
+--B9L2 is mux4_1gr:inst8|inst4~20 at LC_X41_Y1_N0
+--operation mode is normal
+
+B9L2 = a0 & (B9L1 & (!x35) # !B9L1 & !x33) # !a0 & (B9L1);
+
+
+--B12L51 is mux4_1gr:inst20|inst4~117 at LC_X25_Y30_N5
+--operation mode is normal
+
+B12L51 = B12L9 # B12L4 & !B9L2 & B12L32;
+
+
+--B11L1 is mux4_1gr:inst10|inst4~19 at LC_X41_Y1_N7
+--operation mode is normal
+
+B11L1 = a0 & (a1 # !x41) # !a0 & (!x40 & !a1);
+
+
+--B11L2 is mux4_1gr:inst10|inst4~20 at LC_X41_Y1_N2
+--operation mode is normal
+
+B11L2 = B11L1 & (!a1 # !x43) # !B11L1 & (!x42 & a1);
+
+
+--B12L5 is mux4_1gr:inst20|inst2~51 at LC_X25_Y29_N4
+--operation mode is normal
+
+B12L5 = B12L4 & a3 & !a2 & !B11L2;
+
+
+--B3L1 is mux4_1gr:inst2|inst4~19 at LC_X41_Y1_N3
+--operation mode is normal
+
+B3L1 = a0 & (a1 # !x9) # !a0 & (!x8 & !a1);
+
+
+--B3L2 is mux4_1gr:inst2|inst4~20 at LC_X41_Y1_N4
+--operation mode is normal
+
+B3L2 = B3L1 & (!a1 # !x11) # !B3L1 & !x10 & (a1);
+
+
+--B12L61 is mux4_1gr:inst20|inst4~118 at LC_X24_Y30_N1
+--operation mode is normal
+
+B12L61 = B12L5 # !B3L2 & B12L12 & B12L62;
+
+
+--B21L1 is mux4_1gr:inst11|inst4~19 at LC_X25_Y29_N2
+--operation mode is normal
+
+B21L1 = a0 & (a1 # !x45) # !a0 & (!a1 & !x44);
+
+
+--B21L2 is mux4_1gr:inst11|inst4~20 at LC_X25_Y29_N3
+--operation mode is normal
+
+B21L2 = a1 & (B21L1 & (!x47) # !B21L1 & !x46) # !a1 & (B21L1);
+
+
+--B12L6 is mux4_1gr:inst20|inst2~52 at LC_X25_Y29_N9
+--operation mode is normal
+
+B12L6 = !B21L2 & a3 & a2 & B12L4;
+
+
+--B51L1 is mux4_1gr:inst14|inst4~19 at LC_X41_Y1_N1
+--operation mode is normal
+
+B51L1 = a1 & (a0) # !a1 & (a0 & !x57 # !a0 & (!x56));
+
+
+--B51L2 is mux4_1gr:inst14|inst4~20 at LC_X41_Y1_N9
+--operation mode is normal
+
+B51L2 = B51L1 & (!a1 # !x59) # !B51L1 & !x58 & (a1);
+
+
+--B12L71 is mux4_1gr:inst20|inst4~119 at LC_X24_Y30_N8
+--operation mode is normal
+
+B12L71 = B12L6 # B12L8 & B12L62 & !B51L2;
+
+
+--B01L1 is mux4_1gr:inst9|inst4~19 at LC_X33_Y1_N6
+--operation mode is normal
+
+B01L1 = a0 & (a1) # !a0 & (a1 & !x38 # !a1 & (!x36));
+
+
+--B01L2 is mux4_1gr:inst9|inst4~20 at LC_X33_Y1_N2
+--operation mode is normal
+
+B01L2 = a0 & (B01L1 & (!x39) # !B01L1 & !x37) # !a0 & (B01L1);
+
+
+--B12L7 is mux4_1gr:inst20|inst2~53 at LC_X25_Y29_N7
+--operation mode is normal
+
+B12L7 = !B01L2 & !a3 & a2 & B12L4;
+
+
+--B41L1 is mux4_1gr:inst13|inst4~19 at LC_X33_Y1_N4
+--operation mode is normal
+
+B41L1 = a0 & (a1) # !a0 & (a1 & !x54 # !a1 & (!x52));
+
+
+--B41L2 is mux4_1gr:inst13|inst4~20 at LC_X33_Y1_N5
+--operation mode is normal
+
+B41L2 = a0 & (B41L1 & (!x55) # !B41L1 & !x53) # !a0 & (B41L1);
+
+
+--B12L81 is mux4_1gr:inst20|inst4~120 at LC_X24_Y30_N2
+--operation mode is normal
+
+B12L81 = B12L7 # B12L8 & B12L52 & !B41L2;
+
+
+--B12L91 is mux4_1gr:inst20|inst4~121 at LC_X24_Y30_N3
+--operation mode is normal
+
+B12L91 = B12L71 # B12L51 # B12L61 # B12L81;
+
+
+--B12_inst7 is mux4_1gr:inst20|inst7 at LC_X24_Y30_N9
+--operation mode is normal
+
+B12_inst7 = en & (B12L91 # B12L41);
+
+
+--en is en at PIN_B14
+--operation mode is input
+
+en = INPUT();
+
+
+--a3 is a3 at PIN_C13
+--operation mode is input
+
+a3 = INPUT();
+
+
+--a2 is a2 at PIN_B13
+--operation mode is input
+
+a2 = INPUT();
+
+
+--a4 is a4 at PIN_C14
+--operation mode is input
+
+a4 = INPUT();
+
+
+--a5 is a5 at PIN_K15
+--operation mode is input
+
+a5 = INPUT();
+
+
+--x14 is x14 at PIN_D14
+--operation mode is input
+
+x14 = INPUT();
+
+
+--a1 is a1 at PIN_AA12
+--operation mode is input
+
+a1 = INPUT();
+
+
+--x13 is x13 at PIN_K14
+--operation mode is input
+
+x13 = INPUT();
+
+
+--a0 is a0 at PIN_U15
+--operation mode is input
+
+a0 = INPUT();
+
+
+--x12 is x12 at PIN_L16
+--operation mode is input
+
+x12 = INPUT();
+
+
+--x15 is x15 at PIN_E14
+--operation mode is input
+
+x15 = INPUT();
+
+
+--x49 is x49 at PIN_G16
+--operation mode is input
+
+x49 = INPUT();
+
+
+--x50 is x50 at PIN_C16
+--operation mode is input
+
+x50 = INPUT();
+
+
+--x48 is x48 at PIN_B16
+--operation mode is input
+
+x48 = INPUT();
+
+
+--x51 is x51 at PIN_F15
+--operation mode is input
+
+x51 = INPUT();
+
+
+--x30 is x30 at PIN_G9
+--operation mode is input
+
+x30 = INPUT();
+
+
+--x29 is x29 at PIN_K8
+--operation mode is input
+
+x29 = INPUT();
+
+
+--x28 is x28 at PIN_F10
+--operation mode is input
+
+x28 = INPUT();
+
+
+--x31 is x31 at PIN_A15
+--operation mode is input
+
+x31 = INPUT();
+
+
+--x17 is x17 at PIN_A11
+--operation mode is input
+
+x17 = INPUT();
+
+
+--x18 is x18 at PIN_C12
+--operation mode is input
+
+x18 = INPUT();
+
+
+--x16 is x16 at PIN_B12
+--operation mode is input
+
+x16 = INPUT();
+
+
+--x19 is x19 at PIN_J8
+--operation mode is input
+
+x19 = INPUT();
+
+
+--x1 is x1 at PIN_L15
+--operation mode is input
+
+x1 = INPUT();
+
+
+--x2 is x2 at PIN_E15
+--operation mode is input
+
+x2 = INPUT();
+
+
+--x0 is x0 at PIN_M15
+--operation mode is input
+
+x0 = INPUT();
+
+
+--x3 is x3 at PIN_D15
+--operation mode is input
+
+x3 = INPUT();
+
+
+--x5 is x5 at PIN_J16
+--operation mode is input
+
+x5 = INPUT();
+
+
+--x6 is x6 at PIN_B15
+--operation mode is input
+
+x6 = INPUT();
+
+
+--x4 is x4 at PIN_J15
+--operation mode is input
+
+x4 = INPUT();
+
+
+--x7 is x7 at PIN_F14
+--operation mode is input
+
+x7 = INPUT();
+
+
+--x21 is x21 at PIN_W8
+--operation mode is input
+
+x21 = INPUT();
+
+
+--x22 is x22 at PIN_M7
+--operation mode is input
+
+x22 = INPUT();
+
+
+--x20 is x20 at PIN_Y8
+--operation mode is input
+
+x20 = INPUT();
+
+
+--x23 is x23 at PIN_V6
+--operation mode is input
+
+x23 = INPUT();
+
+
+--x26 is x26 at PIN_D16
+--operation mode is input
+
+x26 = INPUT();
+
+
+--x25 is x25 at PIN_K16
+--operation mode is input
+
+x25 = INPUT();
+
+
+--x24 is x24 at PIN_G14
+--operation mode is input
+
+x24 = INPUT();
+
+
+--x27 is x27 at PIN_C15
+--operation mode is input
+
+x27 = INPUT();
+
+
+--x62 is x62 at PIN_K10
+--operation mode is input
+
+x62 = INPUT();
+
+
+--x61 is x61 at PIN_B11
+--operation mode is input
+
+x61 = INPUT();
+
+
+--x60 is x60 at PIN_E13
+--operation mode is input
+
+x60 = INPUT();
+
+
+--x63 is x63 at PIN_D12
+--operation mode is input
+
+x63 = INPUT();
+
+
+--x33 is x33 at PIN_AB7
+--operation mode is input
+
+x33 = INPUT();
+
+
+--x34 is x34 at PIN_W9
+--operation mode is input
+
+x34 = INPUT();
+
+
+--x32 is x32 at PIN_W7
+--operation mode is input
+
+x32 = INPUT();
+
+
+--x35 is x35 at PIN_U6
+--operation mode is input
+
+x35 = INPUT();
+
+
+--x42 is x42 at PIN_AA7
+--operation mode is input
+
+x42 = INPUT();
+
+
+--x41 is x41 at PIN_AA8
+--operation mode is input
+
+x41 = INPUT();
+
+
+--x40 is x40 at PIN_T8
+--operation mode is input
+
+x40 = INPUT();
+
+
+--x43 is x43 at PIN_V7
+--operation mode is input
+
+x43 = INPUT();
+
+
+--x10 is x10 at PIN_Y9
+--operation mode is input
+
+x10 = INPUT();
+
+
+--x9 is x9 at PIN_U9
+--operation mode is input
+
+x9 = INPUT();
+
+
+--x8 is x8 at PIN_AB8
+--operation mode is input
+
+x8 = INPUT();
+
+
+--x11 is x11 at PIN_V8
+--operation mode is input
+
+x11 = INPUT();
+
+
+--x46 is x46 at PIN_F9
+--operation mode is input
+
+x46 = INPUT();
+
+
+--x45 is x45 at PIN_H10
+--operation mode is input
+
+x45 = INPUT();
+
+
+--x44 is x44 at PIN_A12
+--operation mode is input
+
+x44 = INPUT();
+
+
+--x47 is x47 at PIN_J9
+--operation mode is input
+
+x47 = INPUT();
+
+
+--x58 is x58 at PIN_U8
+--operation mode is input
+
+x58 = INPUT();
+
+
+--x57 is x57 at PIN_V5
+--operation mode is input
+
+x57 = INPUT();
+
+
+--x56 is x56 at PIN_P8
+--operation mode is input
+
+x56 = INPUT();
+
+
+--x59 is x59 at PIN_V9
+--operation mode is input
+
+x59 = INPUT();
+
+
+--x37 is x37 at PIN_P10
+--operation mode is input
+
+x37 = INPUT();
+
+
+--x38 is x38 at PIN_R8
+--operation mode is input
+
+x38 = INPUT();
+
+
+--x36 is x36 at PIN_N10
+--operation mode is input
+
+x36 = INPUT();
+
+
+--x39 is x39 at PIN_T9
+--operation mode is input
+
+x39 = INPUT();
+
+
+--x53 is x53 at PIN_M8
+--operation mode is input
+
+x53 = INPUT();
+
+
+--x54 is x54 at PIN_P9
+--operation mode is input
+
+x54 = INPUT();
+
+
+--x52 is x52 at PIN_T10
+--operation mode is input
+
+x52 = INPUT();
+
+
+--x55 is x55 at PIN_N8
+--operation mode is input
+
+x55 = INPUT();
+
+
+--Q is Q at PIN_D13
+--operation mode is output
+
+Q = OUTPUT(B12_inst7);
+
+
+

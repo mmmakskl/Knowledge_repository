@@ -1,0 +1,134 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--inst1 is inst1 at LC_X52_Y30_N4
+--operation mode is normal
+
+inst1 = a0 # a2 # ENB # a1;
+
+
+--inst12 is inst12 at LC_X52_Y30_N6
+--operation mode is normal
+
+inst12 = a2 # ENB # a1 # !a0;
+
+
+--inst13 is inst13 at LC_X52_Y30_N9
+--operation mode is normal
+
+inst13 = a0 # a2 # ENB # !a1;
+
+
+--inst14 is inst14 at LC_X52_Y30_N7
+--operation mode is normal
+
+inst14 = a2 # ENB # !a1 # !a0;
+
+
+--inst15 is inst15 at LC_X52_Y30_N5
+--operation mode is normal
+
+inst15 = a0 # ENB # a1 # !a2;
+
+
+--inst16 is inst16 at LC_X52_Y30_N2
+--operation mode is normal
+
+inst16 = ENB # a1 # !a2 # !a0;
+
+
+--inst17 is inst17 at LC_X52_Y30_N3
+--operation mode is normal
+
+inst17 = a0 # ENB # !a1 # !a2;
+
+
+--inst18 is inst18 at LC_X52_Y30_N8
+--operation mode is normal
+
+inst18 = ENB # !a1 # !a2 # !a0;
+
+
+--ENB is ENB at PIN_D3
+--operation mode is input
+
+ENB = INPUT();
+
+
+--a0 is a0 at PIN_E2
+--operation mode is input
+
+a0 = INPUT();
+
+
+--a1 is a1 at PIN_D2
+--operation mode is input
+
+a1 = INPUT();
+
+
+--a2 is a2 at PIN_F3
+--operation mode is input
+
+a2 = INPUT();
+
+
+--q0 is q0 at PIN_C2
+--operation mode is output
+
+q0 = OUTPUT(inst1);
+
+
+--q1 is q1 at PIN_B4
+--operation mode is output
+
+q1 = OUTPUT(inst12);
+
+
+--q2 is q2 at PIN_G7
+--operation mode is output
+
+q2 = OUTPUT(inst13);
+
+
+--q3 is q3 at PIN_F4
+--operation mode is output
+
+q3 = OUTPUT(inst14);
+
+
+--q4 is q4 at PIN_B3
+--operation mode is output
+
+q4 = OUTPUT(inst15);
+
+
+--q5 is q5 at PIN_F5
+--operation mode is output
+
+q5 = OUTPUT(inst16);
+
+
+--q6 is q6 at PIN_B2
+--operation mode is output
+
+q6 = OUTPUT(inst17);
+
+
+--q7 is q7 at PIN_D1
+--operation mode is output
+
+q7 = OUTPUT(inst18);
+
+
+

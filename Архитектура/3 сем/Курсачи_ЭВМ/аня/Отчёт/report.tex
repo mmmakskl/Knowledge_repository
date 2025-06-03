@@ -1,0 +1,568 @@
+\documentclass{article}
+\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage[document]{ragged2e}
+\usepackage[left=2.5cm, right=1.5cm, vmargin=2.5cm]{geometry}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{listings} %% собственно, это и есть пакет listing
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}} %% это сделает текст заголовка 
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\graphicspath{{images/}}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, calc}
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\lstset{ %
+language=[x86masm]Assembler,                 % выбор языка для подсветки (здесь это С)
+basicstyle=\small\sffamily, % размер и начертание шрифта для подсветки кода
+numbers=left,               % где поставить нумерацию строк (слева\справа)
+numberstyle=\tiny,           % размер шрифта для номеров строк
+stepnumber=1,                   % размер шага между двумя номерами строк
+firstnumber=1,
+numberfirstline=true
+numbersep=5pt,                % как далеко отстоят номера строк от подсвечиваемого кода
+backgroundcolor=\color{white}, % цвет фона подсветки - используем \usepackage{color}
+showspaces=false,            % показывать или нет пробелы специальными отступами
+showstringspaces=false,      % показывать или нет пробелы в строках
+showtabs=false,             % показывать или нет табуляцию в строках
+frame=single,              % рисовать рамку вокруг кода
+tabsize=2,                 % размер табуляции по умолчанию равен 2 пробелам
+captionpos=t,              % позиция заголовка вверху [t] или внизу [b] 
+breaklines=true,           % автоматически переносить строки (да\нет)
+breakatwhitespace=false, % переносить строки только если есть пробел
+escapeinside={\%*}{*)}   % если нужно добавить комментарии в коде
+}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2
+cm, minimum height=1cm, text width = 3cm,text centered, draw=black, fill=white!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110,minimum width=3cm, minimum height=1cm, text centered, text width=3cm, draw=black, fill=white!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text width=3cm, text centered, draw=black, fill=white!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\begin{titlepage}
+
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+ ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧЕРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ\linebreak  
+«Санкт-Петербургский политехнический университет Петра Великого»\\[2cm] % Name of your university/college
+\textsc{\Large Институт компьютерных наук и технологий}\\[6.5cm] % Major heading such as course name
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+{ \huge \bfseries Курсовой проект\\
+	\Large \mdseries Программирование на языке Ассемблера\\
+	по дисциплине «ЭВМ и переферийные устройства»}\\[6.5cm] % Title of your document
+
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+\begin{multicols}{2}
+\begin{flushright} \large
+
+{Выполнил студент группы: 23504/2:}\\[0.5cm]
+
+{Руководитель\\
+профессор, д.т.н.}
+
+\end{flushright}
+\begin{flushright}
+	
+	{Лаппо С.С}\\[0.5cm] % Your nameГ
+	
+	 
+	Молодяков С. А. % Supervisor's Name
+	
+\end{flushright}
+\end{multicols}
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+\flushright{
+{\today}\\[0.5cm] % Date, change the \today to a set date if you want to be precise
+}
+\centering{
+Санкт-Петербург\\
+2016
+}
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+% Содержание
+
+\tableofcontents
+\newpage
+
+% If you wish to include an abstract, uncomment the lines below
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Описание работы}
+
+\subsection{Цели}
+\begin{enumerate}
+\item Дано арифметическое выражение. Разработать программу
+проверки правильности по следующим критериям:
+\begin{itemize}
+	\item допустимые знаки операций $("+" \,,\ "\,-" \,,\ "\,*" \,,\  "\textbackslash")$;
+	\item допустимые константы (целые без знака);
+	\item допустимые переменные (до пяти латинских букв);
+	\item скобки (только круглые, они должны быть парными).
+\end{itemize}
+Продумать диагностику по разным типам ошибок.
+\item Программа "Будильник2". Будильник должен прозвенеть в абсолютное время (11:45). Перехватите прерывание клавиатуры и при повторном наборе (нажатии клавиш). Ваша программа сообщает "Ошибка". При наступлении заданного времени выдайте звуковой сигнал.
+ \end{enumerate}
+
+%\subsection{Задачи}
+%\begin{enumerate}
+%\item Скачивание последней стабильной версии ядра.
+%\item Распаковка исходного кода ядра
+%\item Конфигурирование ядра, используя прежнюю конфигурацию
+%\item Сборка ядра 
+%\item Установка нового ядра и проверка успешности установки
+%\item Вычисление времени сборки ядра для разного количества потоков(c помощью скрипта: цикл (0..2N+1])
+%\item Анализ результатов
+%\end{enumerate}
+
+%\subsection{Аппаратная и программная платформы}
+
+%\begin{description}
+%\item[Тип устройства]
+%Ультрабук
+%\item[Производитель]
+%Asus
+%\item[Модель устройства]
+%TP300LD (2014)
+%\item[ОЗУ]
+%8гб
+%\item[Тип накопителя]
+%SSD
+%\item[Процессор]
+%Intel core i7-4510U (8 потоков)
+%\item[Операционная система]
+%KUbuntu 16.04 LTS
+%\end{description} 
+ \newpage
+%----------------------------------------------------------------------------------------
+%	SECTION 2
+%----------------------------------------------------------------------------------------
+
+\section{Ход работы}
+\subsection{Задача 1}
+\flushbottom
+\bfseries  Алгоритм \\ \mdseries
+Для выполнения работы программа читает вводимые данные и проверяет является ли данный символ константой. Если символ является константой, то она увеличивает счётчик, отвечающий за количество символов в последней константе. Если сивол является одним из знаков операций, если является то проверяет был ли предыдущий таковым. В случае подтверждения предположения - программа выдаёт ошибку и завершается, иначе счётчик отвечающий за количество символов в константе становится равным нулю. Если символ равен точке программа выдаёт ошибку.\\
+\begin{tabular}{cc}
+	Прерывание &                                Назначение                                \\
+	 int 21h   &          В регистре AH 01h - использовалось для чтения символа           \\
+	 int 21h   &           В регистре AH 09 - использовалось для вывода строки            \\
+	 int 21h   & В регистре AH 4C00h - использовалось для завершения выполнений программы
+\end{tabular} \\
+\begin{lstlisting}[caption=Код программы]
+use16
+macro exit_app
+{
+mov ax,4C00h
+int 21h
+}
+macro print_str str
+{
+mov ah,9
+mov dx,str
+int 21h
+}
+
+macro read_character
+{
+mov ah,01h
+int 21h
+cmp al, 13
+je DoneOk
+mov cl, bl
+mov bl, al
+compareToAll
+je CheckPrevious
+jne UnDone
+}
+
+macro compareToAll
+{
+cmp bl, 42
+je CheckPrevious
+cmp bl, 43
+je CheckPrevious
+cmp bl, 47
+je CheckPrevious
+cmp bl, 45
+je CheckPrevious
+}
+
+macro compareToAllFP
+{
+cmp cl, 42
+je Fail
+cmp cl, 43
+je Fail
+cmp cl, 47
+je Fail
+cmp cl, 45
+je Fail
+cmp cl, 40
+je Fail
+}
+
+org 100h
+mov bx, 1
+mov ax, 1
+print_str hello
+
+DoneOk:
+print_str exit
+read_character
+exit_app
+
+UnDone:
+read_character
+
+CheckPrevious:
+compareToAllFP
+read_character
+Fail:
+print_str failMsg
+mov ah, 01h
+int 21h
+exit_app
+; data
+failMsg db 'Theres fail. Stopping$'
+hello db 'Please enter an experssion!$'
+exit db 'Looks like everything was ok!$'
+\end{lstlisting}
+\centering
+\begin{tikzpicture}[node distance=2cm]
+\node (start) [startstop] {Начало};
+\node (in1) [io, below of=start] {Приветственное сообщение};
+\draw [arrow] (start) -- (in1);
+\node (in2) [io, below of=in1] {Считать очередной символ};
+\draw [arrow] (in1) -- (in2);
+\node (dec1) [decision, below of=in2, yshift=-2.5cm]{Символ является допустимым, не является вторым подряд знаком, не является знаком препинания, в константе меньше 5 символов};
+\draw [arrow] (in2) -- (dec1);
+\draw [arrow] (dec1)  -- node[above,pos=0.5] {Да} ($(dec1.east)+ (1,0)$)-- ($(dec1.east) + (1,5.5)$)  -| (in2);
+\node (proc1) [io, below of=dec1, yshift=-2.5cm] {Вывести сообщение об ошибке};
+\draw [arrow] (dec1) -- node[left,pos=0.5] {Нет} (proc1) ;
+\node (stop) [startstop, below of=proc1] {Конец};
+\draw [arrow] (proc1) -- (stop);
+
+\end{tikzpicture}\\
+Скриншот выполнения:\\
+\includegraphics{screen1.png}
+
+\newpage
+\subsection{Задача 2}
+\flushbottom
+\bfseries Алгоритм \\ \mdseries
+Для выполнения работы было решено получать системное время, преобразовывать его в строку и сравнивать с заранее заданой строкой времени будильника. При совпадении строк - подать звуковой сигнал и завершить работу программы. Так же для обеспечения работы был написан обработчик прерывания, который при нажатии клавиши увеличивает счётчик, со значением по умолчанию равным 0 на 1, и при достижении определённого значения обработчик вызывает функцию завершенения программы с выводом сообщения об ошибке. \\
+\begin{tabular}{cc}
+	Прерывание &                                       Назначение                                       \\
+	 int 21h   &          В регистре AH 2CH - использовалось для получения системного времени           \\
+	 int 21h   &         В регистре AX 3509h - использовалось для получения вектора прерываний          \\
+	 int 21h   &         В регистре AH 4CH - использовалось для завершения выполнений программы         \\
+	 int 21h   & В регистре AX 2509h - использовалось для установки собственного обработчика прерываний \\
+	 int 21h   &          В регистре AH 2, в регистре DL 7 - использовался для генерации звука          \\
+	 int 10h   &                       Установка строки в начало (видеорежим DOS)
+\end{tabular} \\
+\begin{lstlisting}[caption=Код программы]
+.MODEL LARGE
+code segment
+;assume cs:code, ds:code, es:code, ss:code
+org 100H
+
+.DATA
+PROMPT  DB  'Current System Time is : $',0     
+TIME    DB  '00:00:00$',8,0        ; time format hr:min:sec
+TIMEEST DB '11:45:00$',8,0
+errstr DB 'ERROR$',5,0      
+
+;   Data1   SEGMENT WORD 'DATA'
+int1 dw 0h, 0h
+x       DB 0
+e       DB ?
+;   Data1 ends
+.CODE 
+jmp MAIN
+
+;**************************************************************************;
+;-------------------------------  CONVERT  --------------------------------;
+;**************************************************************************;
+
+CONVERT PROC 
+; this procedure will convert the given binary code into ASCII code
+; input : AL=binary code
+; output : AX=ASCII code
+
+PUSH DX                       ; PUSH DX onto the STACK 
+
+MOV AH, 0                     ; set AH=0
+MOV DL, 10                    ; set DL=10
+DIV DL                        ; set AX=AX/DL
+OR AX, 3030H                  ; convert the binary code in AX into ASCII
+
+POP DX                        ; POP a value from STACK into DX 
+
+RET                           ; return control to the calling procedure
+CONVERT ENDP                   ; end of procedure CONVERT
+
+;**************************************************************************;
+;--------------------------------------------------------------------------;
+;**************************************************************************;
+
+
+;**************************************************************************;
+;------------------------------  GET_TIME  --------------------------------;
+;**************************************************************************;
+
+GET_TIME PROC
+; this procedure will get the current system time 
+; input : BX=offset address of the string TIME
+; output : BX=current time
+
+PUSH AX                       ; PUSH AX onto the STACK
+PUSH CX                       ; PUSH CX onto the STACK 
+
+MOV AH, 2CH                   ; get the current system time
+INT 21H                       
+
+MOV AL, CH                    ; set AL=CH , CH=hours
+CALL CONVERT                  ; call the procedure CONVERT
+MOV [BX], AX                  ; set [BX]=hr  , [BX] is pointing to hr
+; in the string TIME
+
+MOV AL, CL                    ; set AL=CL , CL=minutes
+CALL CONVERT                  ; call the procedure CONVERT
+MOV [BX+3], AX                ; set [BX+3]=min  , [BX] is pointing to min
+; in the string TIME
+
+MOV AL, DH                    ; set AL=DH , DH=seconds
+CALL CONVERT                  ; call the procedure CONVERT
+MOV [BX+6], AX                ; set [BX+6]=min  , [BX] is pointing to sec
+; in the string TIME
+
+POP CX                        ; POP a value from STACK into CX
+POP AX                        ; POP a value from STACK into AX
+
+RET                           ; return control to the calling procedure
+GET_TIME ENDP                  ; end of procedure GET_TIME
+
+
+
+
+MAIN PROC
+jmp beginn
+KeybInt:
+cli
+push bp
+mov bp, sp
+push ax
+push bx
+push cx
+push dx
+push si
+
+push    ax
+in      al,60H             ;read the key
+; mov dx, '['
+; call print_symbol
+; 
+;  no, drop through to original driver
+pop     ax
+
+
+in      al,61H             ;get value of keyboard control lines
+mov     ah,al              ; save it
+or      al,80h             ;set the "enable kbd" bit
+out     61H,al             ; and write it out the control port
+xchg    ah,al              ;fetch the original control port value
+out     61H,al             ; and write it back
+
+mov     al,20H             ;send End-Of-Interrupt signal
+out     20H,al             ; to the 8259 Interrupt Controller
+;------ other code handles other tests and finally triggers popu
+push dxprint_symbol
+mov al, x
+add al, 1
+mov x, al
+cmp al, 3
+jg exitperr
+
+pop dx
+pop si
+pop dx
+pop cx
+pop bx
+pop ax
+pop bp
+sti
+iret
+
+beginn: 
+mov ax, 3509h
+int 21h
+mov int1, bx
+mov int1+2, es
+push cs
+pop ds
+mov dx, offset KeybInt
+mov ax, 2509h
+int 21h
+pushf
+pushf
+MOV AX, @DATA                ; initialize DS
+MOV DS, AX
+
+LEA BX, TIME                 ; BX=offset address of string TIME
+
+CALL GET_TIME                ; call the procedure GET_TIME
+lea si, TIME
+lea di, [TIMEEST]
+xor dx, dx         ; make sure edx is 0 to start with
+LOOPP:
+mov al, [si]
+mov bl, [di] 
+inc si              ; prepare for next char
+inc di
+cmp al, bl           ; compare two current characters
+jne DIFFERENT        ; not equal, get out, you are DONE!
+cmp al, 0            ; equal so far, are you at the end?
+je SAME              ; got to end of both strings, you're good, get out
+jmp LOOPP             ; okay well they agree so far, go to next char
+DIFFERENT:
+; Do what you need to do for the strings being different
+;
+jmp DONE
+SAME:
+; Do what you need to do for the strings being the same
+;
+;
+jmp EXITP
+DONE:
+;CMP TIME,TIMEEST 
+
+LEA DX, PROMPT               ; DX=offset address of string PROMPT
+MOV AH, 09H                  ; print the string PROMPT
+INT 21H                      
+
+LEA DX, TIME                 ; DX=offset address of string TIME
+MOV AH, 09H                  ; print the string TIME
+INT 21H 
+mov ax, 0
+mov bp, 43690
+mov si, 13690
+delay2:
+dec bp
+nop
+jnz delay2
+dec si
+cmp si,0    
+jnz delay2
+
+mov ah, 0
+mov bh, 0
+
+int 10h     
+CALL MAIN
+EXITPERR: 
+
+mov ah,9
+lea dx,errstr
+int 21h     
+MOV AH, 4CH                  ; return control to DOS
+INT 21H
+
+EXITP:
+mov ax,1500
+MOV  AH,2     ;??????? ?????? ??????? ?? ?????
+MOV  DL,7     ;???????? ??? ASCII 7
+INT  21H      ;??????? ?????
+MOV AH, 4CH                  ; return control to DOS
+INT 21H
+MAIN ENDP
+END MAIN
+\end{lstlisting}
+\newpage
+\bfseries Cхема алгоритма\\ \mdseries
+\centering
+\begin{tikzpicture}[node distance=2cm]
+
+\node (start) [startstop] {Начало};
+\node (in1) [io, below of=start] {Инициализация данных};
+\draw [arrow] (start) -- (in1);
+\node (in2) [io, below of=in1] {Получить системное время};
+\draw [arrow] (in1) -- (in2);
+\node (dec1) [decision, below of=in2, yshift=-1.5cm]{Системное время совпадает с заданным};
+\draw [arrow] (in2) -- (dec1);
+\draw [arrow] (dec1)  -- node[above,pos=0.5] {Нет} ($(dec1.east)+ (1,0)$)-- ($(dec1.east) + (1,4.5)$)  -| (in2);
+\node (proc1) [process, below of=dec1, yshift=-1.5cm] {Проиграть звук};
+\draw [arrow] (dec1) -- node[left,pos=0.5] {Да} (proc1) ;
+\node (stop) [startstop, below of=proc1] {Конец};
+\draw [arrow] (proc1) -- (stop);
+\end{tikzpicture}\\
+Скриншот выполнения:\\
+\includegraphics{screen2.png}
+
+
+
+
+\newpage
+\section{Вывод}
+\flushleft
+В результате выполнения работы были выполнены задания, а так же улучшен навык взаимодействия с системными прерываниями,и создания собственного обработчика прерывания.
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+%\bibliographystyle{apalike}
+
+%\bibliography{sample}
+
+%----------------------------------------------------------------------------------------
+
+
+\end{document}

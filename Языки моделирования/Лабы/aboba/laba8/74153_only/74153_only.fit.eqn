@@ -1,0 +1,110 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1L1 is 74153:inst|9~6 at LC_X52_Y1_N6
+--operation mode is normal
+
+B1L1 = A & (1C1 # B) # !A & 1C0 & (!B);
+
+
+--B1L2 is 74153:inst|9~7 at LC_X52_Y1_N4
+--operation mode is normal
+
+B1L2 = B1L1 & (1C3 # !B) # !B1L1 & (1C2 & B);
+
+
+--B1L3 is 74153:inst|10~6 at LC_X52_Y1_N2
+--operation mode is normal
+
+B1L3 = A & (B) # !A & (B & 2C2 # !B & (2C0));
+
+
+--B1L4 is 74153:inst|10~7 at LC_X52_Y1_N5
+--operation mode is normal
+
+B1L4 = A & (B1L3 & (2C3) # !B1L3 & 2C1) # !A & (B1L3);
+
+
+--1C2 is 1C2 at PIN_W1
+--operation mode is input
+
+1C2 = INPUT();
+
+
+--B is B at PIN_AA3
+--operation mode is input
+
+B = INPUT();
+
+
+--1C1 is 1C1 at PIN_V3
+--operation mode is input
+
+1C1 = INPUT();
+
+
+--A is A at PIN_U5
+--operation mode is input
+
+A = INPUT();
+
+
+--1C0 is 1C0 at PIN_W4
+--operation mode is input
+
+1C0 = INPUT();
+
+
+--1C3 is 1C3 at PIN_Y3
+--operation mode is input
+
+1C3 = INPUT();
+
+
+--2C1 is 2C1 at PIN_T7
+--operation mode is input
+
+2C1 = INPUT();
+
+
+--2C2 is 2C2 at PIN_T5
+--operation mode is input
+
+2C2 = INPUT();
+
+
+--2C0 is 2C0 at PIN_V4
+--operation mode is input
+
+2C0 = INPUT();
+
+
+--2C3 is 2C3 at PIN_W2
+--operation mode is input
+
+2C3 = INPUT();
+
+
+--1Y is 1Y at PIN_AA2
+--operation mode is output
+
+1Y = OUTPUT(B1L2);
+
+
+--2Y is 2Y at PIN_W3
+--operation mode is output
+
+2Y = OUTPUT(B1L4);
+
+
+

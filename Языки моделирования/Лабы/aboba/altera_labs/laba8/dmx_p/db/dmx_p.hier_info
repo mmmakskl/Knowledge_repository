@@ -1,0 +1,19 @@
+|dmx_p
+e => process0~2.DATAA
+e => process0~9.DATAB
+e => process0~12.DATAB
+e => process0~14.DATAB
+x[0] => reduce_nor~0.IN1
+x[0] => reduce_nor~2.IN1
+x[0] => reduce_nor~1.IN1
+x[0] => reduce_nor~3.IN1
+x[1] => reduce_nor~0.IN0
+x[1] => reduce_nor~1.IN0
+x[1] => reduce_nor~2.IN0
+x[1] => reduce_nor~3.IN0
+f[0] <= f[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+f[1] <= f[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+f[2] <= f[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+f[3] <= f[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

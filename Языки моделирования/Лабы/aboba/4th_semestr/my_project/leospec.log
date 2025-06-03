@@ -1,0 +1,480 @@
+LeonardoSpectrum Level 3 - 2005b.24 (Release Production Release, compiled Nov 10 2005 at 16:21:33)
+Copyright 1990-2005 Mentor Graphics.  All rights reserved.
+Portions copyright 1991-2005 Compuware Corporation
+
+--
+-- Welcome to LeonardoSpectrum Level 3
+-- Run By User@VBOX
+-- Run Started On Fri May 12 13:49:51 HDT 2023
+--
+Info, Working Directory is now 'Z:/4th_semestr/my_project/my_project_lib/ls/mytimer/netlists'
+Info, History file moved to new working directory
+Info, Log file moved to new working directory
+Info: setting part to apa075pqfp208
+Info: setting process to F
+Info: setting wire_table to APA
+Reading library file `C:\FPGAdv72LS\Exemplar\\lib\apa.syn`...
+Library version = 6b2.5
+Delays assume: Process=F Temp= 25.0 C  Voltage=2.50 V  
+Warning: Could not find process parameter (F_process) value in library.
+Info: setting encoding to auto
+-- Reading module generator description from file C:/FPGAdv72LS/Exemplar//data/modgen/apa.vhd
+-- Reading vhdl file C:/FPGAdv72LS/Exemplar//data/modgen/apa.vhd into library OPERATORS
+-- Modgen File 1.vhd Version 1.0
+-- Searching for SYNOPSYS package std_logic_arith..
+Info: setting append_generics_to_toplevel to FALSE
+-- Reading file 'Z:\4th_semestr\my_project/my_project_lib/hdl/control_fsm.v'...
+-- Reading file 'Z:\4th_semestr\my_project/my_project_lib/hdl/BCDCounter.v'...
+-- Reading file 'Z:\4th_semestr\my_project/my_project_lib/hdl/counter_struct.v'...
+-- Reading file 'Z:\4th_semestr\my_project/my_project_lib/hdl/mytimer_struct.v'...
+-- Loading module 'Control'
+-- Loading module 'BCDCounter'
+-- Loading module 'Counter'
+-- Loading module 'mytimer'
+-- Compiling root module 'mytimer'
+-- Compiling module Control
+"Z:\4th_semestr\my_project/my_project_lib/hdl/control_fsm.v",line 82: Info, case choices are mutually exclusive; inferring parallel case.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/control_fsm.v",line 156: Info, case choices are mutually exclusive; inferring parallel case.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/control_fsm.v",line 51: Warning, beep_int is not always assigned. Storage may be needed..
+"Z:\4th_semestr\my_project/my_project_lib/hdl/control_fsm.v",line 48: Warning, hold is not always assigned. Storage may be needed..
+"Z:\4th_semestr\my_project/my_project_lib/hdl/control_fsm.v",line 47: Warning, clear is not always assigned. Storage may be needed..
+"Z:\4th_semestr\my_project/my_project_lib/hdl/control_fsm.v",line 49: Warning, load is not always assigned. Storage may be needed..
+-- Compiling module Counter
+-- Compiling module BCDCounter_5
+Info, Instances dissolved by autodissolve in View .my_project_lib.Counter.INTERFACE
+"Z:\4th_semestr\my_project/my_project_lib/hdl/counter_struct.v", line 55: U_0 (BCDCounter_5)
+"Z:\4th_semestr\my_project/my_project_lib/hdl/counter_struct.v", line 66: U_1 (BCDCounter_5)
+Info, Instances dissolved by autodissolve in View .my_project_lib.mytimer.INTERFACE
+"Z:\4th_semestr\my_project/my_project_lib/hdl/mytimer_struct.v", line 64: U_0 (Control)
+-- Resolving function dec with module generator modgen_DEC_4_small_false  from file C:/FPGAdv72LS/Exemplar//data/modgen/apa.vhd
+-- Resolving function dec with module generator modgen_DEC_4_small_false  from file C:/FPGAdv72LS/Exemplar//data/modgen/apa.vhd
+-- Info, replacing modgen_DEC(FDEC)
+-- Optimizing netlist .my_project_lib.Counter.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Optimizing netlist .my_project_lib.mytimer.INTERFACE
+-- Automatic IO buffer insertion...
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Final Design Rule Check..
+Using wire table: APA
+-- Start timing optimization for design .my_project_lib.Counter.INTERFACE
+Starting Timing Characterization...
+Starting Timing Analysis...
+Using wire table: APA
+Timing analysis done, time = 0 CPU secs.
+Timing characterization done, time = 0 CPU secs.
+AutoWrite args are : -format edif {Z:\4th_semestr\my_project/my_project_lib/ls/mytimer/netlists/mytimer.edf}
+-- Writing file Z:\4th_semestr\my_project/my_project_lib/ls/mytimer/netlists/mytimer.edf
+Info: setting sdf_names_style to edif
+Info: setting sdf_actel_proasic to TRUE
+Info, Writing SDF_PATH file 'Z:/4th_semestr/my_project/my_project_lib/ls/mytimer/netlists/mytimer.sdf'
+-- Writing file Z:/4th_semestr/my_project/my_project_lib/ls/mytimer/netlists/mytimer.sdf
+Using wire table: APA
+
+
+
+                        Critical Path Report
+Warning, no constraints removing Z:/4th_semestr/my_project/my_project_lib/ls/mytimer/netlists/mytimer.sdf
+AutoWrite args are : -format xdb {Z:\4th_semestr\my_project/my_project_lib/ls/mytimer/xdb/mytimer.xdb}
+-- Writing file Z:\4th_semestr\my_project/my_project_lib/ls/mytimer/xdb/mytimer.xdb
+-- Writing XDB version 1999.1
+Info: setting sdf_names_style to edif
+Info: setting sdf_actel_proasic to TRUE
+Info, Writing SDF_PATH file 'Z:/4th_semestr/my_project/my_project_lib/ls/mytimer/xdb/mytimer.sdf'
+-- Writing file Z:/4th_semestr/my_project/my_project_lib/ls/mytimer/xdb/mytimer.sdf
+Using wire table: APA
+
+
+
+                        Critical Path Report
+Warning, no constraints removing Z:/4th_semestr/my_project/my_project_lib/ls/mytimer/xdb/mytimer.sdf
+Info: HDS Synthesis run finished
+Info, Working Directory is now 'Z:/4th_semestr/my_project'
+Info, History file moved to new working directory
+Info, Log file moved to new working directory
+-- Reading file 'Z:/4th_semestr/my_project/my_project_lib/hdl/BCDCounter.v'...
+-- Reading file 'Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v'...
+-- Reading file 'Z:/4th_semestr/my_project/my_project_lib/hdl/counter_struct.v'...
+-- Reading file 'Z:/4th_semestr/my_project/my_project_lib/hdl/mytimer_struct.v'...
+-- Loading module 'BCDCounter'
+-- Loading module 'Control'
+-- Loading module 'Counter'
+-- Loading module 'mytimer'
+"Z:\4th_semestr\my_project/my_project_lib/hdl/BCDCounter.v",line 12: Warning, more than one library contains the cell BCDCounter, choosing the one from library work, instead of my_project_lib.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/BCDCounter.v",line 12: Warning, more than one library contains the cell BCDCounter, choosing the one from library work, instead of my_project_lib.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/BCDCounter.v",line 12: Warning, more than one library contains the cell BCDCounter, choosing the one from library work, instead of my_project_lib.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/BCDCounter.v",line 12: Warning, more than one library contains the cell BCDCounter, choosing the one from library work, instead of my_project_lib.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/control_fsm.v",line 12: Warning, more than one library contains the cell Control, choosing the one from library work, instead of my_project_lib.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/counter_struct.v",line 13: Warning, more than one library contains the cell Counter, choosing the one from library work, instead of my_project_lib.
+-- Compiling root module 'mytimer'
+-- Compiling module Control
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 82: Info, case choices are mutually exclusive; inferring parallel case.
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 156: Info, case choices are mutually exclusive; inferring parallel case.
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 51: Warning, beep_int is not always assigned. Storage may be needed..
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 48: Warning, hold is not always assigned. Storage may be needed..
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 47: Warning, clear is not always assigned. Storage may be needed..
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 49: Warning, load is not always assigned. Storage may be needed..
+-- Compiling module Counter
+-- Compiling module BCDCounter_5
+Info, Command 'read' finished successfully
+-- Boundary optimization.
+-- Boundary optimization.
+-- Start pre-optimization for design .work.Control.INTERFACE
+-- Start pre-optimization for design .work.BCDCounter_5.INTERFACE
+-- Start pre-optimization for design .work.BCDCounter_5.INTERFACE_unfold_1140
+-- Start pre-optimization for design .work.Counter.INTERFACE
+-- Start pre-optimization for design .work.mytimer.INTERFACE
+Info, Command 'pre_optimize' finished successfully
+-- Start pre-optimization for design .work.Control.INTERFACE
+-- Start pre-optimization for design .work.BCDCounter_5.INTERFACE
+-- Start pre-optimization for design .work.BCDCounter_5.INTERFACE_unfold_1140
+-- Start pre-optimization for design .work.Counter.INTERFACE
+-- Start pre-optimization for design .work.mytimer.INTERFACE
+Info, Command 'pre_optimize' finished successfully
+
+*******************************************************
+
+Cell: mytimer    View: INTERFACE    Library: work
+
+*******************************************************
+
+
+ Cell       Library  References     Total Area
+
+AND2        PRIMITIVES     9 x      1      9 AND2
+Control     work           1 x      1      1 or_9u_9u
+                                   16     16 eq_4u_4u
+                                    1      1 AND2
+                                    3      3 LATRS
+                                    5      5 DFFRS
+                                    1      1 mux_4u_4u
+                                    3      3 mux_16u_16u
+                                    1      1 select_4_4
+                                    8      8 OR2
+                                    9      9 INV
+                                    1      1 eq_10u_10u
+                                    2      2 TRUE
+                                    2      2 FALSE
+Counter     work           1 x      3      3 FALSE
+                                   13     13 INV
+                                    2      2 eq_4u_4u
+                                   11     11 AND2
+                                    2      2 dec_4u_4u_0
+                                   16     16 MUX
+                                   15     15 OR2
+                                   10     10 DFFRS
+                                    8      8 DFFERS
+INV         PRIMITIVES     9 x      1      9 INV
+OR2         PRIMITIVES    15 x      1     15 OR2
+or_5u_5u    OPERATORS      1 x      1      1 or_5u_5u
+
+ Number of ports :                      23
+ Number of nets :                       61
+ Number of instances :                  36
+ Number of references to this view :     0
+
+Total accumulated area : 
+ Black Box AND2 :                       21
+ Black Box DFFERS :                      8
+ Black Box DFFRS :                      15
+ Black Box FALSE :                       5
+ Black Box INV :                        31
+ Black Box LATRS :                       3
+ Black Box MUX :                        16
+ Black Box OR2 :                        38
+ Black Box TRUE :                        2
+ Black Box dec_4u_4u_0 :                 2
+ Black Box eq_10u_10u :                  1
+ Black Box eq_4u_4u :                   18
+ Black Box mux_16u_16u :                 3
+ Black Box mux_4u_4u :                   1
+ Black Box or_5u_5u :                    1
+ Black Box or_9u_9u :                    1
+ Black Box select_4_4 :                  1
+ Number of accumulated instances :     150
+Info, Command 'report_area' finished successfully
+
+-- Reading file 'Z:/4th_semestr/my_project/my_project_lib/hdl/BCDCounter.v'...
+-- Reading file 'Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v'...
+-- Reading file 'Z:/4th_semestr/my_project/my_project_lib/hdl/counter_struct.v'...
+-- Reading file 'Z:/4th_semestr/my_project/my_project_lib/hdl/mytimer_struct.v'...
+-- Loading module 'BCDCounter'
+Warning, replacing BCDCounter in HDL library work.
+-- Loading module 'Control'
+Warning, replacing Control in HDL library work.
+-- Loading module 'Counter'
+Warning, replacing Counter in HDL library work.
+-- Loading module 'mytimer'
+Warning, replacing mytimer in HDL library work.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/BCDCounter.v",line 12: Warning, more than one library contains the cell BCDCounter, choosing the one from library work, instead of my_project_lib.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/BCDCounter.v",line 12: Warning, more than one library contains the cell BCDCounter, choosing the one from library work, instead of my_project_lib.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/BCDCounter.v",line 12: Warning, more than one library contains the cell BCDCounter, choosing the one from library work, instead of my_project_lib.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/BCDCounter.v",line 12: Warning, more than one library contains the cell BCDCounter, choosing the one from library work, instead of my_project_lib.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/control_fsm.v",line 12: Warning, more than one library contains the cell Control, choosing the one from library work, instead of my_project_lib.
+"Z:\4th_semestr\my_project/my_project_lib/hdl/counter_struct.v",line 13: Warning, more than one library contains the cell Counter, choosing the one from library work, instead of my_project_lib.
+-- Compiling root module 'mytimer'
+-- Compiling module Control
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 82: Info, case choices are mutually exclusive; inferring parallel case.
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 156: Info, case choices are mutually exclusive; inferring parallel case.
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 51: Warning, beep_int is not always assigned. Storage may be needed..
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 48: Warning, hold is not always assigned. Storage may be needed..
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 47: Warning, clear is not always assigned. Storage may be needed..
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 49: Warning, load is not always assigned. Storage may be needed..
+-- Info, replacing Control(INTERFACE)
+-- Compiling module Counter
+-- Compiling module BCDCounter_5
+-- Info, replacing BCDCounter_5(INTERFACE)
+-- Info, replacing Counter(INTERFACE)
+-- Info, replacing mytimer(INTERFACE)
+Info, Command 'read' finished successfully
+-- Boundary optimization.
+-- Boundary optimization.
+-- Start pre-optimization for design .work.Control.INTERFACE
+-- Start pre-optimization for design .work.BCDCounter_5.INTERFACE
+-- Start pre-optimization for design .work.BCDCounter_5.INTERFACE_unfold_1140
+-- Start pre-optimization for design .work.Counter.INTERFACE
+-- Start pre-optimization for design .work.mytimer.INTERFACE
+Info, Command 'pre_optimize' finished successfully
+-- Start pre-optimization for design .work.Control.INTERFACE
+-- Start pre-optimization for design .work.BCDCounter_5.INTERFACE
+-- Start pre-optimization for design .work.BCDCounter_5.INTERFACE_unfold_1140
+-- Start pre-optimization for design .work.Counter.INTERFACE
+-- Start pre-optimization for design .work.mytimer.INTERFACE
+Info, Command 'pre_optimize' finished successfully
+
+*******************************************************
+
+Cell: mytimer    View: INTERFACE    Library: work
+
+*******************************************************
+
+
+ Cell       Library  References     Total Area
+
+AND2        PRIMITIVES     9 x      1      9 AND2
+Control     work           1 x      1      1 or_9u_9u
+                                   16     16 eq_4u_4u
+                                    1      1 AND2
+                                    3      3 LATRS
+                                    5      5 DFFRS
+                                    1      1 mux_4u_4u
+                                    3      3 mux_16u_16u
+                                    1      1 select_4_4
+                                    8      8 OR2
+                                    9      9 INV
+                                    1      1 eq_10u_10u
+                                    2      2 TRUE
+                                    2      2 FALSE
+Counter     work           1 x      3      3 FALSE
+                                   13     13 INV
+                                    2      2 eq_4u_4u
+                                   11     11 AND2
+                                    2      2 dec_4u_4u_0
+                                   16     16 MUX
+                                   15     15 OR2
+                                   10     10 DFFRS
+                                    8      8 DFFERS
+INV         PRIMITIVES     9 x      1      9 INV
+OR2         PRIMITIVES    15 x      1     15 OR2
+or_5u_5u    OPERATORS      1 x      1      1 or_5u_5u
+
+ Number of ports :                      23
+ Number of nets :                       61
+ Number of instances :                  36
+ Number of references to this view :     0
+
+Total accumulated area : 
+ Black Box AND2 :                       21
+ Black Box DFFERS :                      8
+ Black Box DFFRS :                      15
+ Black Box FALSE :                       5
+ Black Box INV :                        31
+ Black Box LATRS :                       3
+ Black Box MUX :                        16
+ Black Box OR2 :                        38
+ Black Box TRUE :                        2
+ Black Box dec_4u_4u_0 :                 2
+ Black Box eq_10u_10u :                  1
+ Black Box eq_4u_4u :                   18
+ Black Box mux_16u_16u :                 3
+ Black Box mux_4u_4u :                   1
+ Black Box or_5u_5u :                    1
+ Black Box or_9u_9u :                    1
+ Black Box select_4_4 :                  1
+ Number of accumulated instances :     150
+Info, Command 'report_area' finished successfully
+ Z:/4th_semestr/my_project/my_project_lib/hdl/BCDCounter.v Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v Z:/4th_semestr/my_project/my_project_lib/hdl/counter_struct.v Z:/4th_semestr/my_project/my_project_lib/hdl/mytimer_struct.v 
+Info: setting package to 100 TQFP
+100 TQFP
+Info: setting process to COMWC-F
+COMWC-F
+FALSE
+FALSE
+area
+brief
+auto
+TRUE
+FALSE
+FALSE
+mytimer.edf
+FALSE
+Info: setting sdf_names_style to vhdl
+vhdl
+apa
+-- Reading target technology apa
+Reading library file `C:\FPGAdv72LS\Exemplar\\lib\apa.syn`...
+Library version = 6b2.5
+Delays assume: Process=COMWC-F Temp= 25.0 C  Voltage=2.50 V  
+Info: setting encoding to auto
+-- Reading module generator description from file C:/FPGAdv72LS/Exemplar//data/modgen/apa.vhd
+-- Reading vhdl file C:/FPGAdv72LS/Exemplar//data/modgen/apa.vhd into library OPERATORS
+-- Modgen File 1.vhd Version 1.0
+-- Searching for SYNOPSYS package std_logic_arith..
+-- read -tech apa { Z:/4th_semestr/my_project/my_project_lib/hdl/BCDCounter.v Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v Z:/4th_semestr/my_project/my_project_lib/hdl/counter_struct.v Z:/4th_semestr/my_project/my_project_lib/hdl/mytimer_struct.v }
+-- Reading file 'Z:/4th_semestr/my_project/my_project_lib/hdl/BCDCounter.v'...
+-- Reading file 'Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v'...
+-- Reading file 'Z:/4th_semestr/my_project/my_project_lib/hdl/counter_struct.v'...
+-- Reading file 'Z:/4th_semestr/my_project/my_project_lib/hdl/mytimer_struct.v'...
+-- Loading module 'BCDCounter'
+-- Loading module 'Control'
+-- Loading module 'Counter'
+-- Loading module 'mytimer'
+-- Compiling root module 'mytimer'
+-- Compiling module Control
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 82: Info, case choices are mutually exclusive; inferring parallel case.
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 156: Info, case choices are mutually exclusive; inferring parallel case.
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 51: Warning, beep_int is not always assigned. Storage may be needed..
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 48: Warning, hold is not always assigned. Storage may be needed..
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 47: Warning, clear is not always assigned. Storage may be needed..
+"Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v",line 49: Warning, load is not always assigned. Storage may be needed..
+-- Compiling module Counter
+-- Compiling module BCDCounter_5
+-- Pre Optimizing Design .work.mytimer.INTERFACE
+-- Boundary optimization.
+-- Boundary optimization.
+Info: Finished reading design
+-- Run Started On Fri May 12 13:52:41 HDT 2023
+--
+Info: setting modgen_select to small
+-- optimize -target apa -effort quick -chip -area -hierarchy=auto
+Info, Instances dissolved by autodissolve in View .work.Counter.INTERFACE
+"Z:/4th_semestr/my_project/my_project_lib/hdl/counter_struct.v", line 55: U_0 (BCDCounter_5)
+"Z:/4th_semestr/my_project/my_project_lib/hdl/counter_struct.v", line 66: U_1 (BCDCounter_5)
+Info, Instances dissolved by autodissolve in View .work.mytimer.INTERFACE
+"Z:/4th_semestr/my_project/my_project_lib/hdl/mytimer_struct.v", line 64: U_0 (Control)
+-- Resolving function dec with module generator modgen_DEC_4_small_false  from file C:/FPGAdv72LS/Exemplar//data/modgen/apa.vhd
+-- Resolving function dec with module generator modgen_DEC_4_small_false  from file C:/FPGAdv72LS/Exemplar//data/modgen/apa.vhd
+-- Info, replacing modgen_DEC(FDEC)
+-- Optimizing netlist .work.Counter.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Optimizing netlist .work.mytimer.INTERFACE
+-- Automatic IO buffer insertion...
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Final Design Rule Check..
+Info: setting optimize_timing_cpu_limit to 170
+Using wire table: APA
+-- Start timing optimization for design .work.Counter.INTERFACE
+Starting Timing Characterization...
+Starting Timing Analysis...
+Using wire table: APA
+Timing analysis done, time = 0 CPU secs.
+Timing characterization done, time = 0 CPU secs.
+Info: setting optimize_timing_cpu_limit to 0
+Info: setting modgen_select to auto
+
+*******************************************************
+
+Cell: mytimer    View: INTERFACE    Library: work
+
+*******************************************************
+
+ Number of ports :                      23
+ Number of nets :                      112
+ Number of instances :                  90
+ Number of references to this view :     0
+
+Total accumulated area : 
+ Number of Core Cells :                139
+ Number of GND :                         2
+ Number of IB33 :                       14
+ Number of OB33PH :                      9
+ Number of PWR :                         1
+ Number of accumulated instances :     165
+***********************************************
+Device Utilization for apa075pqfp208
+***********************************************
+Resource                Used    Avail   Utilization
+-----------------------------------------------
+IOs                     23      158      14.56%
+Core Cells              139     3072      4.52%
+
+-----------------------------------------------
+                        Clock Frequency Report
+
+	Clock                : Frequency
+      ------------------------------------
+
+	clk                  : 65.3 MHz
+
+                        Critical Path Report
+
+Critical path #1, (unconstrained path)
+NAME                                                 GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------------------------
+d(0)/                                                            0.00  0.00 dn             0.00
+io_d(0)/Y                                            IB33        1.78  1.78 dn             4.00
+ix444/Y                                              NOR3        1.30  3.08 up             2.00
+ix11/Y                                               OR3FTT      1.26  4.35 dn             4.00
+ix15/Y                                               OR3         1.35  5.69 dn             2.00
+ix29/Y                                               OR2         1.44  7.14 dn             4.00
+ix436/Y                                              OR3FTT      1.19  8.32 dn             1.00
+ix434/Y                                              AOI21FTF    0.72  9.04 dn             1.00
+ix45/Y                                               NAND3       0.95  9.99 up             2.00
+U_1/ix263/Y                                          OR3FFT      0.72  10.71 dn             1.00
+U_1/ix69/Y                                           OAI21       0.95  11.65 up             2.00
+U_1/ix213/Y                                          MUX2H       1.14  12.79 up             2.00
+U_1/ix315/Y                                          NOR2        1.12  13.91 dn             1.00
+U_1/ix217/Y                                          OR3FTT      0.79  14.70 up             1.00
+U_1/U_0_reg_zero/D                                   DFF         0.00  14.70 up             0.00
+data arrival time                                                      14.70
+
+
+data required time                                                  not specified
+------------------------------------------------------------------------------------------------
+data required time                                                  not specified
+data arrival time                                                      14.70
+                                                                    ----------
+                                                                 unconstrained path
+------------------------------------------------------------------------------------------------
+
+
+
+-- Design summary in file 'mytimer.sum'
+AutoWrite args are : mytimer.edf
+-- Writing file mytimer.edf
+Info: setting sdf_names_style to edif
+Info: setting sdf_actel_proasic to TRUE
+Info, Writing SDF_PATH file 'mytimer.sdf'
+-- Writing file mytimer.sdf
+Using wire table: APA
+
+
+
+                        Critical Path Report
+Warning, no constraints removing mytimer.sdf
+-- CPU time taken for this run was  0.92 sec
+-- Run Successfully Ended On  Fri May 12 13:52:42 HDT 2023
+0
+Info: Finished Synthesis run
+

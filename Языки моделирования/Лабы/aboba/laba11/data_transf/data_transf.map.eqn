@@ -1,0 +1,145 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--C1L1 is DC_g:inst1|inst1~22
+--operation mode is normal
+
+C1L1 = !err[2] & !err[1];
+
+
+--C1_inst4 is DC_g:inst1|inst4
+--operation mode is normal
+
+C1_inst4 = D0 $ (err[0] & (err[3] # !C1L1));
+
+
+--C1L3 is DC_g:inst1|inst5~22
+--operation mode is normal
+
+C1L3 = !err[0] & !err[3];
+
+
+--C1_inst6 is DC_g:inst1|inst6
+--operation mode is normal
+
+C1_inst6 = D1 $ (err[1] & (err[2] # !C1L3));
+
+
+--C1_inst15 is DC_g:inst1|inst15
+--operation mode is normal
+
+C1_inst15 = D2 $ (err[2] & (err[1] # !C1L3));
+
+
+--C1_inst17 is DC_g:inst1|inst17
+--operation mode is normal
+
+C1_inst17 = D3 $ (err[3] & (err[0] # !C1L1));
+
+
+--E2_50 is DC_g:inst1|XOR8:inst|50
+--operation mode is normal
+
+E2_50 = err[2] $ err[0] $ err[1] $ err[3];
+
+
+--C1L5 is DC_g:inst1|inst12~109
+--operation mode is normal
+
+C1L5 = err[3] & (err[2] $ err[1] $ err[0]) # !err[3] & (err[2] & (err[1] $ err[0]) # !err[2] & err[1] & err[0]);
+
+
+--err[2] is err[2]
+--operation mode is input
+
+err[2] = INPUT();
+
+
+--err[1] is err[1]
+--operation mode is input
+
+err[1] = INPUT();
+
+
+--err[3] is err[3]
+--operation mode is input
+
+err[3] = INPUT();
+
+
+--D0 is D0
+--operation mode is input
+
+D0 = INPUT();
+
+
+--err[0] is err[0]
+--operation mode is input
+
+err[0] = INPUT();
+
+
+--D1 is D1
+--operation mode is input
+
+D1 = INPUT();
+
+
+--D2 is D2
+--operation mode is input
+
+D2 = INPUT();
+
+
+--D3 is D3
+--operation mode is input
+
+D3 = INPUT();
+
+
+--D0_o is D0_o
+--operation mode is output
+
+D0_o = OUTPUT(C1_inst4);
+
+
+--D1_o is D1_o
+--operation mode is output
+
+D1_o = OUTPUT(C1_inst6);
+
+
+--D2_o is D2_o
+--operation mode is output
+
+D2_o = OUTPUT(C1_inst15);
+
+
+--D3_o is D3_o
+--operation mode is output
+
+D3_o = OUTPUT(C1_inst17);
+
+
+--ONE_ERR is ONE_ERR
+--operation mode is output
+
+ONE_ERR = OUTPUT(E2_50);
+
+
+--DBL_ERR is DBL_ERR
+--operation mode is output
+
+DBL_ERR = OUTPUT(C1L5);
+
+

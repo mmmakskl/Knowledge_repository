@@ -1,0 +1,200 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L01 is comb~280 at LC_X1_Y10_N9
+--operation mode is normal
+
+A1L01 = !r[6] & !r[7] & !r[5] & !r[4];
+
+
+--A1L81 is eo~85 at LC_X1_Y10_N6
+--operation mode is normal
+
+A1L81 = r[3] # r[2] # r[0] # r[1];
+
+
+--A1L71 is eo~7 at LC_X1_Y11_N9
+--operation mode is normal
+
+A1L71 = A1L01 & (ei & !A1L81);
+
+
+--A1L02 is g~0 at LC_X1_Y11_N3
+--operation mode is normal
+
+A1L02 = ei & (A1L81 # !A1L01);
+
+
+--A1L12 is process0~197 at LC_X1_Y10_N2
+--operation mode is normal
+
+A1L12 = !r[4] & (r[3] # r[1] & !r[2]);
+
+
+--A1L22 is process0~198 at LC_X1_Y10_N4
+--operation mode is normal
+
+A1L22 = r[7] # !r[6] & (r[5] # A1L12);
+
+
+--A1L11 is comb~281 at LC_X1_Y11_N5
+--operation mode is normal
+
+A1L11 = ei & (A1L22 # A1L01 & !A1L81);
+
+
+--a[0]$latch is a[0]$latch at LC_X1_Y11_N7
+--operation mode is normal
+
+a[0]$latch = A1L11 & (a[0]$latch & GLOBAL(A1L71) # !A1L9);
+
+
+--A1L32 is process0~199 at LC_X1_Y10_N5
+--operation mode is normal
+
+A1L32 = !r[5] & !r[4] & (r[3] # r[2]);
+
+
+--A1L42 is process0~200 at LC_X1_Y10_N8
+--operation mode is normal
+
+A1L42 = r[6] # A1L32 # r[7];
+
+
+--A1L21 is comb~282 at LC_X1_Y11_N0
+--operation mode is normal
+
+A1L21 = ei & (A1L42 # A1L01 & !A1L81);
+
+
+--a[1]$latch is a[1]$latch at LC_X1_Y11_N2
+--operation mode is normal
+
+a[1]$latch = A1L21 & (a[1]$latch & GLOBAL(A1L71) # !A1L8);
+
+
+--A1L31 is comb~283 at LC_X1_Y11_N4
+--operation mode is normal
+
+A1L31 = A1L01 # !ei;
+
+
+--A1L41 is comb~284 at LC_X1_Y11_N6
+--operation mode is normal
+
+A1L41 = ei & (!A1L81 # !A1L01);
+
+
+--a[2]$latch is a[2]$latch at LC_X1_Y9_N2
+--operation mode is normal
+
+a[2]$latch = A1L41 & (a[2]$latch & GLOBAL(A1L71) # !A1L31);
+
+
+--A1L9 is comb~1 at LC_X1_Y11_N8
+--operation mode is normal
+
+A1L9 = A1L01 & !A1L81 # !ei # !A1L22;
+
+
+--A1L8 is comb~0 at LC_X1_Y11_N1
+--operation mode is normal
+
+A1L8 = A1L01 & !A1L81 # !ei # !A1L42;
+
+
+--ei is ei at PIN_M20
+--operation mode is input
+
+ei = INPUT();
+
+
+--r[6] is r[6] at PIN_R22
+--operation mode is input
+
+r[6] = INPUT();
+
+
+--r[4] is r[4] at PIN_M17
+--operation mode is input
+
+r[4] = INPUT();
+
+
+--r[5] is r[5] at PIN_T22
+--operation mode is input
+
+r[5] = INPUT();
+
+
+--r[7] is r[7] at PIN_T21
+--operation mode is input
+
+r[7] = INPUT();
+
+
+--r[3] is r[3] at PIN_M21
+--operation mode is input
+
+r[3] = INPUT();
+
+
+--r[2] is r[2] at PIN_P21
+--operation mode is input
+
+r[2] = INPUT();
+
+
+--r[0] is r[0] at PIN_P20
+--operation mode is input
+
+r[0] = INPUT();
+
+
+--r[1] is r[1] at PIN_R21
+--operation mode is input
+
+r[1] = INPUT();
+
+
+--eo is eo at PIN_N20
+--operation mode is output
+
+eo = OUTPUT(A1L71);
+
+
+--g is g at PIN_N21
+--operation mode is output
+
+g = OUTPUT(A1L02);
+
+
+--a[0] is a[0] at PIN_U22
+--operation mode is output
+
+a[0] = OUTPUT(a[0]$latch);
+
+
+--a[1] is a[1] at PIN_N17
+--operation mode is output
+
+a[1] = OUTPUT(a[1]$latch);
+
+
+--a[2] is a[2] at PIN_U21
+--operation mode is output
+
+a[2] = OUTPUT(a[2]$latch);
+
+
+

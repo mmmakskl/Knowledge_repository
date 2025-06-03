@@ -1,0 +1,95 @@
+|register
+OUTRESULT[0] <= res[0].DB_MAX_OUTPUT_PORT_TYPE
+OUTRESULT[1] <= res[1].DB_MAX_OUTPUT_PORT_TYPE
+OUTRESULT[2] <= res[2].DB_MAX_OUTPUT_PORT_TYPE
+OUTRESULT[3] <= res[3].DB_MAX_OUTPUT_PORT_TYPE
+OUTRESULT[4] <= res[4].DB_MAX_OUTPUT_PORT_TYPE
+OUTRESULT[5] <= res[5].DB_MAX_OUTPUT_PORT_TYPE
+OUTRESULT[6] <= res[6].DB_MAX_OUTPUT_PORT_TYPE
+OUTRESULT[7] <= res[7].DB_MAX_OUTPUT_PORT_TYPE
+EWR => EWR~0.IN8
+CLOCK => CLOCK~0.IN8
+RESET => RESET~0.IN8
+DATA[0] => DATA[0]~7.IN1
+DATA[1] => DATA[1]~6.IN1
+DATA[2] => DATA[2]~5.IN1
+DATA[3] => DATA[3]~4.IN1
+DATA[4] => DATA[4]~3.IN1
+DATA[5] => DATA[5]~2.IN1
+DATA[6] => DATA[6]~1.IN1
+DATA[7] => DATA[7]~0.IN1
+EDY => ~NO_FANOUT~
+
+
+|register|DTrigger:Dtrig1
+Result <= Res.DB_MAX_OUTPUT_PORT_TYPE
+Data => Buf~0.DATAA
+Clock => Buf.CLK
+Clock => Res.CLK
+Reset => ~NO_FANOUT~
+Ewr => Buf~0.OUTPUTSELECT
+
+
+|register|DTrigger:Dtrig2
+Result <= Res.DB_MAX_OUTPUT_PORT_TYPE
+Data => Buf~0.DATAA
+Clock => Buf.CLK
+Clock => Res.CLK
+Reset => ~NO_FANOUT~
+Ewr => Buf~0.OUTPUTSELECT
+
+
+|register|DTrigger:Dtrig3
+Result <= Res.DB_MAX_OUTPUT_PORT_TYPE
+Data => Buf~0.DATAA
+Clock => Buf.CLK
+Clock => Res.CLK
+Reset => ~NO_FANOUT~
+Ewr => Buf~0.OUTPUTSELECT
+
+
+|register|DTrigger:Dtrig4
+Result <= Res.DB_MAX_OUTPUT_PORT_TYPE
+Data => Buf~0.DATAA
+Clock => Buf.CLK
+Clock => Res.CLK
+Reset => ~NO_FANOUT~
+Ewr => Buf~0.OUTPUTSELECT
+
+
+|register|DTrigger:Dtrig5
+Result <= Res.DB_MAX_OUTPUT_PORT_TYPE
+Data => Buf~0.DATAA
+Clock => Buf.CLK
+Clock => Res.CLK
+Reset => ~NO_FANOUT~
+Ewr => Buf~0.OUTPUTSELECT
+
+
+|register|DTrigger:Dtrig6
+Result <= Res.DB_MAX_OUTPUT_PORT_TYPE
+Data => Buf~0.DATAA
+Clock => Buf.CLK
+Clock => Res.CLK
+Reset => ~NO_FANOUT~
+Ewr => Buf~0.OUTPUTSELECT
+
+
+|register|DTrigger:Dtrig7
+Result <= Res.DB_MAX_OUTPUT_PORT_TYPE
+Data => Buf~0.DATAA
+Clock => Buf.CLK
+Clock => Res.CLK
+Reset => ~NO_FANOUT~
+Ewr => Buf~0.OUTPUTSELECT
+
+
+|register|DTrigger:Dtrig8
+Result <= Res.DB_MAX_OUTPUT_PORT_TYPE
+Data => Buf~0.DATAA
+Clock => Buf.CLK
+Clock => Res.CLK
+Reset => ~NO_FANOUT~
+Ewr => Buf~0.OUTPUTSELECT
+
+

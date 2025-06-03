@@ -1,0 +1,71 @@
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+35
+1901
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+VRSM_ON
+VHSM_ON
+0
+# entity
+or2_cstm
+# case_insensitive
+# source_file
+..|or2_cstm|or2_cstm.bdf
+1541029642
+23
+# storage
+db|DC_str.(2).cnf
+db|DC_str.(2).cnf
+# end
+# entity
+DC_graph
+# case_insensitive
+# source_file
+..|DC_graph|DC_graph.bdf
+1541086192
+23
+# storage
+db|DC_str.(1).cnf
+db|DC_str.(1).cnf
+# hierarchies {
+DC_graph:dcEn
+DC_graph:dc0
+DC_graph:dc1
+DC_graph:dc2
+DC_graph:dc3
+DC_graph:dc4
+DC_graph:dc5
+DC_graph:dc6
+DC_graph:dc7
+}
+# end
+# entity
+DC_str
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+DC_str.vhd
+1541087091
+4
+# storage
+db|DC_str.(0).cnf
+db|DC_str.(0).cnf
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+|
+}
+# end
+# complete
+

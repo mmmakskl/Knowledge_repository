@@ -1,0 +1,228 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--E2_dffs[2] is lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+E2_dffs[2]_lut_out = TAG[2];
+E2_dffs[2] = DFFEAS(E2_dffs[2]_lut_out, wr, VCC, , , , , , );
+
+
+--E2_dffs[1] is lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+E2_dffs[1]_lut_out = TAG[1];
+E2_dffs[1] = DFFEAS(E2_dffs[1]_lut_out, wr, VCC, , , , , , );
+
+
+--J5L2 is lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~14
+--operation mode is normal
+
+J5L2 = E2_dffs[2] & TAG[2] & (E2_dffs[1] $ !TAG[1]) # !E2_dffs[2] & !TAG[2] & (E2_dffs[1] $ !TAG[1]);
+
+
+--E2_dffs[0] is lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+E2_dffs[0]_lut_out = TAG[0];
+E2_dffs[0] = DFFEAS(E2_dffs[0]_lut_out, wr, VCC, , , , , , );
+
+
+--J5L1 is lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~0
+--operation mode is normal
+
+J5L1 = J5L2 & (E2_dffs[0] $ !TAG[0]);
+
+
+--E1_dffs[7] is lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[7]
+--operation mode is normal
+
+E1_dffs[7]_lut_out = data[7];
+E1_dffs[7] = DFFEAS(E1_dffs[7]_lut_out, wr, VCC, , , , , , );
+
+
+--E1_dffs[6] is lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[6]
+--operation mode is normal
+
+E1_dffs[6]_lut_out = data[6];
+E1_dffs[6] = DFFEAS(E1_dffs[6]_lut_out, wr, VCC, , , , , , );
+
+
+--E1_dffs[5] is lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[5]
+--operation mode is normal
+
+E1_dffs[5]_lut_out = data[5];
+E1_dffs[5] = DFFEAS(E1_dffs[5]_lut_out, wr, VCC, , , , , , );
+
+
+--E1_dffs[4] is lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[4]
+--operation mode is normal
+
+E1_dffs[4]_lut_out = data[4];
+E1_dffs[4] = DFFEAS(E1_dffs[4]_lut_out, wr, VCC, , , , , , );
+
+
+--E1_dffs[3] is lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[3]
+--operation mode is normal
+
+E1_dffs[3]_lut_out = data[3];
+E1_dffs[3] = DFFEAS(E1_dffs[3]_lut_out, wr, VCC, , , , , , );
+
+
+--E1_dffs[2] is lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[2]
+--operation mode is normal
+
+E1_dffs[2]_lut_out = data[2];
+E1_dffs[2] = DFFEAS(E1_dffs[2]_lut_out, wr, VCC, , , , , , );
+
+
+--E1_dffs[1] is lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[1]
+--operation mode is normal
+
+E1_dffs[1]_lut_out = data[1];
+E1_dffs[1] = DFFEAS(E1_dffs[1]_lut_out, wr, VCC, , , , , , );
+
+
+--E1_dffs[0] is lpm_dff1:inst|lpm_ff:lpm_ff_component|dffs[0]
+--operation mode is normal
+
+E1_dffs[0]_lut_out = data[0];
+E1_dffs[0] = DFFEAS(E1_dffs[0]_lut_out, wr, VCC, , , , , , );
+
+
+--TAG[1] is TAG[1]
+--operation mode is input
+
+TAG[1] = INPUT();
+
+
+--TAG[2] is TAG[2]
+--operation mode is input
+
+TAG[2] = INPUT();
+
+
+--TAG[0] is TAG[0]
+--operation mode is input
+
+TAG[0] = INPUT();
+
+
+--wr is wr
+--operation mode is input
+
+wr = INPUT();
+
+
+--data[7] is data[7]
+--operation mode is input
+
+data[7] = INPUT();
+
+
+--data[6] is data[6]
+--operation mode is input
+
+data[6] = INPUT();
+
+
+--data[5] is data[5]
+--operation mode is input
+
+data[5] = INPUT();
+
+
+--data[4] is data[4]
+--operation mode is input
+
+data[4] = INPUT();
+
+
+--data[3] is data[3]
+--operation mode is input
+
+data[3] = INPUT();
+
+
+--data[2] is data[2]
+--operation mode is input
+
+data[2] = INPUT();
+
+
+--data[1] is data[1]
+--operation mode is input
+
+data[1] = INPUT();
+
+
+--data[0] is data[0]
+--operation mode is input
+
+data[0] = INPUT();
+
+
+--hit is hit
+--operation mode is output
+
+hit = OUTPUT(J5L1);
+
+
+--odata[7] is odata[7]
+--operation mode is output
+
+odata[7] = OUTPUT(E1_dffs[7]);
+
+
+--odata[6] is odata[6]
+--operation mode is output
+
+odata[6] = OUTPUT(E1_dffs[6]);
+
+
+--odata[5] is odata[5]
+--operation mode is output
+
+odata[5] = OUTPUT(E1_dffs[5]);
+
+
+--odata[4] is odata[4]
+--operation mode is output
+
+odata[4] = OUTPUT(E1_dffs[4]);
+
+
+--odata[3] is odata[3]
+--operation mode is output
+
+odata[3] = OUTPUT(E1_dffs[3]);
+
+
+--odata[2] is odata[2]
+--operation mode is output
+
+odata[2] = OUTPUT(E1_dffs[2]);
+
+
+--odata[1] is odata[1]
+--operation mode is output
+
+odata[1] = OUTPUT(E1_dffs[1]);
+
+
+--odata[0] is odata[0]
+--operation mode is output
+
+odata[0] = OUTPUT(E1_dffs[0]);
+
+

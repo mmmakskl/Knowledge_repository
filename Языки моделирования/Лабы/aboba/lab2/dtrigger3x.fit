@@ -1,0 +1,53 @@
+-- MAX+plus II Compiler Fit File      
+-- Version 9.01 07/30/98              
+-- Compiled: 10/25/16 20:34:21        
+
+-- Copyright (C) 1988-1998 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+CHIP "dtrigger3x"
+BEGIN
+
+    DEVICE = "EPM9320LC84-15";
+
+    "Clock"                        : INPUT_PIN  = 1      ;
+    "DI0"                          : INPUT_PIN  = 13     ;
+    "DI1"                          : INPUT_PIN  = 84     ;
+    "DI2"                          : INPUT_PIN  = 72     ;
+    "Q0"                           : OUTPUT_PIN = 20     ;
+    "Q1"                           : OUTPUT_PIN = 23     ;
+    "Q2"                           : OUTPUT_PIN = 17     ;
+    ":12"                          : LOCATION   = LC9_C2 ;
+    ":15"                          : LOCATION   = LC9_B1 ;
+    ":16"                          : LOCATION   = LC9_D3 ;
+
+END;
+
+INTERNAL_INFO "dtrigger3x"
+BEGIN
+	DEVICE = EPM9320LC84-15;
+    OD1P1   : LORAX = "1:->LC9_C2,->LC9_B1,->LC9_D3|";
+    OD0P13  : LORAX = "1:G58R2,PA31R2C1->LC9_C2|";
+    OD2P84  : LORAX = "1:G70R1,PA21R1C0->LC9_B1|";
+    OD3P72  : LORAX = "1:G71R3,PA24R3C2->LC9_D3|";
+    LC9_C2  : LORAX = "1:G51R2->OH8R2P20|";
+    LC9_B1  : LORAX = "1:G49R1->OH8R1P23|";
+    LC9_D3  : LORAX = "1:G50R3->OH8R3P17|";
+END;

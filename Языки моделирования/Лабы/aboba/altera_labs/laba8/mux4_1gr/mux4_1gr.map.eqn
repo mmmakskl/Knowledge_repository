@@ -1,0 +1,79 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L4 is inst4~19
+--operation mode is normal
+
+A1L4 = a0 & (a1) # !a0 & (a1 & !x2 # !a1 & (!x0));
+
+
+--A1L5 is inst4~20
+--operation mode is normal
+
+A1L5 = a0 & (A1L4 & (!x3) # !A1L4 & !x1) # !a0 & (A1L4);
+
+
+--inst7 is inst7
+--operation mode is normal
+
+inst7 = EN & (!A1L5);
+
+
+--EN is EN
+--operation mode is input
+
+EN = INPUT();
+
+
+--x1 is x1
+--operation mode is input
+
+x1 = INPUT();
+
+
+--a0 is a0
+--operation mode is input
+
+a0 = INPUT();
+
+
+--x2 is x2
+--operation mode is input
+
+x2 = INPUT();
+
+
+--a1 is a1
+--operation mode is input
+
+a1 = INPUT();
+
+
+--x0 is x0
+--operation mode is input
+
+x0 = INPUT();
+
+
+--x3 is x3
+--operation mode is input
+
+x3 = INPUT();
+
+
+--Q is Q
+--operation mode is output
+
+Q = OUTPUT(inst7);
+
+

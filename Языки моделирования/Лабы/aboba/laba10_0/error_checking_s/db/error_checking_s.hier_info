@@ -1,0 +1,60 @@
+|error_checking_s
+x[0] => eo8_p:eo8_1.x[0]
+x[1] => eo8_p:eo8_1.x[1]
+x[2] => eo8_p:eo8_2.x[2]
+x[2] => eo8_p:eo8_1.x[2]
+x[2] => x_new[2].DATAIN
+x[3] => eo8_p:eo8_2.x[3]
+x[3] => eo8_p:eo8_1.x[3]
+x[3] => x_new[3].DATAIN
+x[4] => eo8_p:eo8_2.x[4]
+x[4] => eo8_p:eo8_1.x[4]
+x[4] => x_new[4].DATAIN
+x[5] => eo8_p:eo8_2.x[5]
+x[5] => eo8_p:eo8_1.x[5]
+x[5] => x_new[5].DATAIN
+x[6] => eo8_p:eo8_2.x[6]
+x[6] => eo8_p:eo8_1.x[6]
+x[6] => x_new[6].DATAIN
+x[7] => eo8_p:eo8_2.x[7]
+x[7] => eo8_p:eo8_1.x[7]
+x[7] => x_new[7].DATAIN
+IsError <= eo8_p:eo8_2.even
+x_new[0] <= <GND>
+x_new[1] <= <VCC>
+x_new[2] <= x[2].DB_MAX_OUTPUT_PORT_TYPE
+x_new[3] <= x[3].DB_MAX_OUTPUT_PORT_TYPE
+x_new[4] <= x[4].DB_MAX_OUTPUT_PORT_TYPE
+x_new[5] <= x[5].DB_MAX_OUTPUT_PORT_TYPE
+x_new[6] <= x[6].DB_MAX_OUTPUT_PORT_TYPE
+x_new[7] <= x[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|error_checking_s|eo8_p:eo8_1
+x[0] => even_v~0.IN1
+x[1] => even_v~0.IN0
+x[2] => even_v~1.IN0
+x[3] => even_v~2.IN0
+x[4] => even_v~3.IN0
+x[5] => even_v~4.IN0
+x[6] => even_v~5.IN0
+x[7] => even_v~6.IN0
+d => even_v~7.IN0
+even <= even_v~7.DB_MAX_OUTPUT_PORT_TYPE
+odd <= even_v~7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|error_checking_s|eo8_p:eo8_2
+x[0] => even_v~0.IN1
+x[1] => even_v~0.IN0
+x[2] => even_v~1.IN0
+x[3] => even_v~2.IN0
+x[4] => even_v~3.IN0
+x[5] => even_v~4.IN0
+x[6] => even_v~5.IN0
+x[7] => even_v~6.IN0
+d => even_v~7.IN0
+even <= even_v~7.DB_MAX_OUTPUT_PORT_TYPE
+odd <= even_v~7.DB_MAX_OUTPUT_PORT_TYPE
+
+

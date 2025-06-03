@@ -1,0 +1,42 @@
+|hpri_p
+r[0] => eo~0.IN1
+r[1] => eo~0.IN0
+r[1] => process0~14.DATAA
+r[2] => eo~1.IN0
+r[2] => process0~7.DATAA
+r[2] => process0~14.OUTPUTSELECT
+r[3] => eo~2.IN0
+r[3] => process0~7.OUTPUTSELECT
+r[3] => process0~15.OUTPUTSELECT
+r[4] => eo~3.IN0
+r[4] => process0~1.DATAA
+r[4] => process0~8.OUTPUTSELECT
+r[4] => process0~16.OUTPUTSELECT
+r[5] => eo~4.IN0
+r[5] => process0~1.OUTPUTSELECT
+r[5] => process0~9.OUTPUTSELECT
+r[5] => process0~17.OUTPUTSELECT
+r[6] => eo~5.IN0
+r[6] => process0~2.OUTPUTSELECT
+r[6] => process0~10.OUTPUTSELECT
+r[6] => process0~18.OUTPUTSELECT
+r[7] => eo~6.IN0
+r[7] => process0~3.OUTPUTSELECT
+r[7] => process0~11.OUTPUTSELECT
+r[7] => process0~19.OUTPUTSELECT
+ei => g~0.IN0
+ei => eo~7.IN0
+ei => process0~4.OUTPUTSELECT
+ei => process0~12.OUTPUTSELECT
+ei => process0~20.OUTPUTSELECT
+ei => process0~5.IN0
+ei => process0~0.OUTPUTSELECT
+ei => process0~6.OUTPUTSELECT
+ei => process0~13.OUTPUTSELECT
+eo <= eo~7.DB_MAX_OUTPUT_PORT_TYPE
+g <= g~0.DB_MAX_OUTPUT_PORT_TYPE
+a[0] <= a[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= a[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= a[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

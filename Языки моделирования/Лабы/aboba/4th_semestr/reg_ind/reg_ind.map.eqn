@@ -1,0 +1,193 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--data_out_tmp is data_out_tmp
+--operation mode is normal
+
+data_out_tmp_lut_out = i[2] & A1L2 # !i[2] & (A1L4);
+data_out_tmp = DFFEAS(data_out_tmp_lut_out, read_clk, VCC, , , , , , );
+
+
+--data[6] is data[6]
+--operation mode is normal
+
+data[6]_lut_out = data_in[6];
+data[6] = DFFEAS(data[6]_lut_out, write_clk, VCC, , , , , , );
+
+
+--i[1] is i[1]
+--operation mode is normal
+
+i[1]_lut_out = !i[1];
+i[1] = DFFEAS(i[1]_lut_out, read_clk, VCC, , i[0], , , , );
+
+
+--data[5] is data[5]
+--operation mode is normal
+
+data[5]_lut_out = data_in[5];
+data[5] = DFFEAS(data[5]_lut_out, write_clk, VCC, , , , , , );
+
+
+--i[0] is i[0]
+--operation mode is normal
+
+i[0]_lut_out = !i[0];
+i[0] = DFFEAS(i[0]_lut_out, read_clk, VCC, , , , , , );
+
+
+--data[4] is data[4]
+--operation mode is normal
+
+data[4]_lut_out = data_in[4];
+data[4] = DFFEAS(data[4]_lut_out, write_clk, VCC, , , , , , );
+
+
+--A1L1 is Mux~29
+--operation mode is normal
+
+A1L1 = i[1] & (i[0]) # !i[1] & (i[0] & data[5] # !i[0] & (data[4]));
+
+
+--data[7] is data[7]
+--operation mode is normal
+
+data[7]_lut_out = data_in[7];
+data[7] = DFFEAS(data[7]_lut_out, write_clk, VCC, , , , , , );
+
+
+--A1L2 is Mux~30
+--operation mode is normal
+
+A1L2 = i[1] & (A1L1 & (data[7]) # !A1L1 & data[6]) # !i[1] & (A1L1);
+
+
+--data[2] is data[2]
+--operation mode is normal
+
+data[2]_lut_out = data_in[2];
+data[2] = DFFEAS(data[2]_lut_out, write_clk, VCC, , , , , , );
+
+
+--data[1] is data[1]
+--operation mode is normal
+
+data[1]_lut_out = data_in[1];
+data[1] = DFFEAS(data[1]_lut_out, write_clk, VCC, , , , , , );
+
+
+--data[0] is data[0]
+--operation mode is normal
+
+data[0]_lut_out = data_in[0];
+data[0] = DFFEAS(data[0]_lut_out, write_clk, VCC, , , , , , );
+
+
+--A1L3 is Mux~31
+--operation mode is normal
+
+A1L3 = i[1] & (i[0]) # !i[1] & (i[0] & data[1] # !i[0] & (data[0]));
+
+
+--data[3] is data[3]
+--operation mode is normal
+
+data[3]_lut_out = data_in[3];
+data[3] = DFFEAS(data[3]_lut_out, write_clk, VCC, , , , , , );
+
+
+--A1L4 is Mux~32
+--operation mode is normal
+
+A1L4 = i[1] & (A1L3 & (data[3]) # !A1L3 & data[2]) # !i[1] & (A1L3);
+
+
+--i[2] is i[2]
+--operation mode is normal
+
+i[2]_lut_out = !i[2];
+i[2] = DFFEAS(i[2]_lut_out, read_clk, VCC, , A1L5, , , , );
+
+
+--A1L5 is add~186
+--operation mode is normal
+
+A1L5 = i[1] & i[0];
+
+
+--read_clk is read_clk
+--operation mode is input
+
+read_clk = INPUT();
+
+
+--data_in[6] is data_in[6]
+--operation mode is input
+
+data_in[6] = INPUT();
+
+
+--write_clk is write_clk
+--operation mode is input
+
+write_clk = INPUT();
+
+
+--data_in[5] is data_in[5]
+--operation mode is input
+
+data_in[5] = INPUT();
+
+
+--data_in[4] is data_in[4]
+--operation mode is input
+
+data_in[4] = INPUT();
+
+
+--data_in[7] is data_in[7]
+--operation mode is input
+
+data_in[7] = INPUT();
+
+
+--data_in[2] is data_in[2]
+--operation mode is input
+
+data_in[2] = INPUT();
+
+
+--data_in[1] is data_in[1]
+--operation mode is input
+
+data_in[1] = INPUT();
+
+
+--data_in[0] is data_in[0]
+--operation mode is input
+
+data_in[0] = INPUT();
+
+
+--data_in[3] is data_in[3]
+--operation mode is input
+
+data_in[3] = INPUT();
+
+
+--data_out is data_out
+--operation mode is output
+
+data_out = OUTPUT(data_out_tmp);
+
+

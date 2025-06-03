@@ -1,0 +1,907 @@
+Analysis & Synthesis report for cache
+Sun Feb 28 00:47:36 2021
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis RAM Summary
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component
+ 10. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+ 11. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst|BUSMUX:inst
+ 12. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst|lpm_constant0:inst6|lpm_constant:lpm_constant_component
+ 13. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst|lpm_dff0:inst2|lpm_ff:lpm_ff_component
+ 14. Parameter Settings for User Entity Instance: cache:inst|lpm_decode0:inst28|lpm_decode:lpm_decode_component
+ 15. Parameter Settings for User Entity Instance: cache:inst|lpm_counter0:inst27|lpm_counter:lpm_counter_component
+ 16. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component
+ 17. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst33|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+ 18. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst33|BUSMUX:inst
+ 19. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst33|lpm_constant0:inst6|lpm_constant:lpm_constant_component
+ 20. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst33|lpm_dff0:inst2|lpm_ff:lpm_ff_component
+ 21. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component
+ 22. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst34|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+ 23. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst34|BUSMUX:inst
+ 24. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst34|lpm_constant0:inst6|lpm_constant:lpm_constant_component
+ 25. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst34|lpm_dff0:inst2|lpm_ff:lpm_ff_component
+ 26. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component
+ 27. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst32|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+ 28. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst32|BUSMUX:inst
+ 29. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst32|lpm_constant0:inst6|lpm_constant:lpm_constant_component
+ 30. Parameter Settings for User Entity Instance: cache:inst|cacheline:inst32|lpm_dff0:inst2|lpm_ff:lpm_ff_component
+ 31. Parameter Settings for User Entity Instance: cache:inst|lpm_or0:inst35|lpm_or:lpm_or_component
+ 32. Parameter Settings for User Entity Instance: BUSMUX:inst3
+ 33. Parameter Settings for User Entity Instance: lpm_ram_dq0:inst1|altsyncram:altsyncram_component
+ 34. Parameter Settings for User Entity Instance: BUSMUX:inst2
+ 35. Analysis & Synthesis Equations
+ 36. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sun Feb 28 00:47:36 2021    ;
+; Quartus II Version          ; 5.0 Build 148 04/26/2005 SJ Full Version ;
+; Revision Name               ; cache                                    ;
+; Top-level Entity Name       ; cachetest                                ;
+; Family                      ; Stratix                                  ;
+; Total logic elements        ; 127                                      ;
+; Total pins                  ; 35                                       ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 2,048                                    ;
+; DSP block 9-bit elements    ; 0                                        ;
+; Total PLLs                  ; 0                                        ;
+; Total DLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                     ;
++--------------------------------------------------------------------+--------------+---------------+
+; Option                                                             ; Setting      ; Default Value ;
++--------------------------------------------------------------------+--------------+---------------+
+; Top-level entity name                                              ; cachetest    ; cache         ;
+; Family name                                                        ; Stratix      ; Stratix       ;
+; Use smart compilation                                              ; Off          ; Off           ;
+; Restructure Multiplexers                                           ; Auto         ; Auto          ;
+; Create Debugging Nodes for IP Cores                                ; off          ; off           ;
+; Preserve fewer node names                                          ; On           ; On            ;
+; Disable OpenCore Plus hardware evaluation                          ; Off          ; Off           ;
+; Verilog Version                                                    ; Verilog_2001 ; Verilog_2001  ;
+; VHDL Version                                                       ; VHDL93       ; VHDL93        ;
+; State Machine Processing                                           ; Auto         ; Auto          ;
+; Extract Verilog State Machines                                     ; On           ; On            ;
+; Extract VHDL State Machines                                        ; On           ; On            ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On           ; On            ;
+; DSP Block Balancing                                                ; Auto         ; Auto          ;
+; Maximum DSP Block Usage                                            ; -1           ; -1            ;
+; NOT Gate Push-Back                                                 ; On           ; On            ;
+; Power-Up Don't Care                                                ; On           ; On            ;
+; Remove Redundant Logic Cells                                       ; Off          ; Off           ;
+; Remove Duplicate Registers                                         ; On           ; On            ;
+; Ignore CARRY Buffers                                               ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                             ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                              ; Off          ; Off           ;
+; Ignore ROW GLOBAL Buffers                                          ; Off          ; Off           ;
+; Ignore LCELL Buffers                                               ; Off          ; Off           ;
+; Ignore SOFT Buffers                                                ; On           ; On            ;
+; Limit AHDL Integers to 32 Bits                                     ; Off          ; Off           ;
+; Optimization Technique -- Stratix/Stratix GX                       ; Balanced     ; Balanced      ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70           ; 70            ;
+; Auto Carry Chains                                                  ; On           ; On            ;
+; Auto Open-Drain Pins                                               ; On           ; On            ;
+; Remove Duplicate Logic                                             ; On           ; On            ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off          ; Off           ;
+; Perform gate-level register retiming                               ; Off          ; Off           ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On           ; On            ;
+; Auto ROM Replacement                                               ; On           ; On            ;
+; Auto RAM Replacement                                               ; On           ; On            ;
+; Auto DSP Block Replacement                                         ; On           ; On            ;
+; Auto Shift Register Replacement                                    ; On           ; On            ;
+; Auto Clock Enable Replacement                                      ; On           ; On            ;
+; Allows Synchronous Control Signal Usage in Normal Mode Logic Cells ; On           ; On            ;
+; Auto RAM Block Balancing                                           ; On           ; On            ;
+; Auto Resource Sharing                                              ; Off          ; Off           ;
+; Allow Any RAM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any ROM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any Shift Register Size For Recognition                      ; Off          ; Off           ;
+; Maximum Number of M512 Memory Blocks                               ; -1           ; -1            ;
+; Maximum Number of M4K Memory Blocks                                ; -1           ; -1            ;
+; Maximum Number of M-RAM Memory Blocks                              ; -1           ; -1            ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off          ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On           ; On            ;
++--------------------------------------------------------------------+--------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                        ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+
+; cache.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/altera/quartus50/cache/cache.bdf                                 ;
+; cacheline.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/altera/quartus50/cache/cacheline.bdf                             ;
+; cachetest.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/altera/quartus50/cache/cachetest.bdf                             ;
+; lpm_compare0.tdf                 ; yes             ; Other                              ; C:/altera/quartus50/cache/lpm_compare0.tdf                          ;
+; lpm_compare.inc                  ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/lpm_compare.inc         ;
+; lpm_compare.tdf                  ; yes             ; Megafunction                       ; c:/altera/quartus50/libraries/megafunctions/lpm_compare.tdf         ;
+; comptree.inc                     ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/comptree.inc            ;
+; altshift.inc                     ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/altshift.inc            ;
+; aglobal50.inc                    ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/aglobal50.inc           ;
+; comptree.tdf                     ; yes             ; Megafunction                       ; c:/altera/quartus50/libraries/megafunctions/comptree.tdf            ;
+; cmpchain.inc                     ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/cmpchain.inc            ;
+; lpm_constant.inc                 ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/lpm_constant.inc        ;
+; cmpchain.tdf                     ; yes             ; Megafunction                       ; c:/altera/quartus50/libraries/megafunctions/cmpchain.tdf            ;
+; altshift.tdf                     ; yes             ; Megafunction                       ; c:/altera/quartus50/libraries/megafunctions/altshift.tdf            ;
+; lpm_dff0.tdf                     ; yes             ; Other                              ; C:/altera/quartus50/cache/lpm_dff0.tdf                              ;
+; lpm_ff.inc                       ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/lpm_ff.inc              ;
+; lpm_ff.tdf                       ; yes             ; Megafunction                       ; c:/altera/quartus50/libraries/megafunctions/lpm_ff.tdf              ;
+; BUSMUX.tdf                       ; yes             ; Megafunction                       ; c:/altera/quartus50/libraries/megafunctions/BUSMUX.tdf              ;
+; lpm_mux.inc                      ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/lpm_mux.inc             ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/quartus50/libraries/megafunctions/lpm_mux.tdf             ;
+; muxlut.inc                       ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/muxlut.inc              ;
+; bypassff.inc                     ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/bypassff.inc            ;
+; db/mux_cgc.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/altera/quartus50/cache/db/mux_cgc.tdf                            ;
+; lpm_constant0.tdf                ; yes             ; Other                              ; C:/altera/quartus50/cache/lpm_constant0.tdf                         ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                       ; c:/altera/quartus50/libraries/megafunctions/lpm_constant.tdf        ;
+; lpm_decode0.tdf                  ; yes             ; Other                              ; C:/altera/quartus50/cache/lpm_decode0.tdf                           ;
+; lpm_decode.inc                   ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/lpm_decode.inc          ;
+; lpm_decode.tdf                   ; yes             ; Megafunction                       ; c:/altera/quartus50/libraries/megafunctions/lpm_decode.tdf          ;
+; declut.inc                       ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/declut.inc              ;
+; db/decode_vlb.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/altera/quartus50/cache/db/decode_vlb.tdf                         ;
+; lpm_counter0.tdf                 ; yes             ; Other                              ; C:/altera/quartus50/cache/lpm_counter0.tdf                          ;
+; lpm_counter.inc                  ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/lpm_counter.inc         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/quartus50/libraries/megafunctions/lpm_counter.tdf         ;
+; lpm_add_sub.inc                  ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/lpm_add_sub.inc         ;
+; cmpconst.inc                     ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/cmpconst.inc            ;
+; dffeea.inc                       ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/dffeea.inc              ;
+; alt_synch_counter.inc            ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/alt_synch_counter.inc   ;
+; alt_synch_counter_f.inc          ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/alt_synch_counter_f.inc ;
+; alt_counter_f10ke.inc            ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/alt_counter_f10ke.inc   ;
+; alt_counter_stratix.inc          ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/alt_counter_stratix.inc ;
+; db/cntr_ct6.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/altera/quartus50/cache/db/cntr_ct6.tdf                           ;
+; lpm_or0.tdf                      ; yes             ; Other                              ; C:/altera/quartus50/cache/lpm_or0.tdf                               ;
+; lpm_or.inc                       ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/lpm_or.inc              ;
+; lpm_or.tdf                       ; yes             ; Megafunction                       ; c:/altera/quartus50/libraries/megafunctions/lpm_or.tdf              ;
+; lpm_ram_dq0.tdf                  ; yes             ; Other                              ; C:/altera/quartus50/cache/lpm_ram_dq0.tdf                           ;
+; altsyncram.inc                   ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/altsyncram.inc          ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/quartus50/libraries/megafunctions/altsyncram.tdf          ;
+; stratix_ram_block.inc            ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/stratix_ram_block.inc   ;
+; a_rdenreg.inc                    ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/a_rdenreg.inc           ;
+; altrom.inc                       ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/altrom.inc              ;
+; altram.inc                       ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/altram.inc              ;
+; altdpram.inc                     ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/altdpram.inc            ;
+; altqpram.inc                     ; yes             ; Other                              ; c:/altera/quartus50/libraries/megafunctions/altqpram.inc            ;
+; db/altsyncram_d411.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/altera/quartus50/cache/db/altsyncram_d411.tdf                    ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++-----------------------------------+---------+
+; Resource                          ; Usage   ;
++-----------------------------------+---------+
+; Total logic elements              ; 127     ;
+; Total combinational functions     ; 63      ;
+;     -- Total 4-input functions    ; 49      ;
+;     -- Total 3-input functions    ; 12      ;
+;     -- Total 2-input functions    ; 0       ;
+;     -- Total 1-input functions    ; 2       ;
+;     -- Total 0-input functions    ; 0       ;
+; Combinational cells for routing   ; 0       ;
+; Total registers                   ; 66      ;
+; Total logic cells in carry chains ; 2       ;
+; I/O pins                          ; 35      ;
+; Total memory bits                 ; 2048    ;
+; Maximum fan-out node              ; clk     ;
+; Maximum fan-out                   ; 72      ;
+; Total fan-out                     ; 534     ;
+; Average fan-out                   ; 3.14    ;
++-----------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                ;
++-------------------------------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                      ; Logic Cells ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name                                                                                                                                                                    ;
++-------------------------------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |cachetest                                      ; 127 (0)     ; 66           ; 2048        ; 0            ; 0       ; 0         ; 0         ; 35   ; 0            ; 61 (0)       ; 64 (0)            ; 2 (0)            ; 2 (0)           ; |cachetest                                                                                                                                                                             ;
+;    |busmux:inst2|                               ; 24 (0)      ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|busmux:inst2                                                                                                                                                                ;
+;       |lpm_mux:$00000|                          ; 24 (0)      ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|busmux:inst2|lpm_mux:$00000                                                                                                                                                 ;
+;          |mux_cgc:auto_generated|               ; 24 (24)     ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|busmux:inst2|lpm_mux:$00000|mux_cgc:auto_generated                                                                                                                          ;
+;    |busmux:inst3|                               ; 8 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|busmux:inst3                                                                                                                                                                ;
+;       |lpm_mux:$00000|                          ; 8 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|busmux:inst3|lpm_mux:$00000                                                                                                                                                 ;
+;          |mux_cgc:auto_generated|               ; 8 (8)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|busmux:inst3|lpm_mux:$00000|mux_cgc:auto_generated                                                                                                                          ;
+;    |cache:inst|                                 ; 95 (1)      ; 66           ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 29 (1)       ; 64 (0)            ; 2 (0)            ; 2 (0)           ; |cachetest|cache:inst                                                                                                                                                                  ;
+;       |cacheline:inst32|                        ; 22 (1)      ; 16           ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 6 (1)        ; 16 (0)            ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst32                                                                                                                                                 ;
+;          |lpm_compare0:inst10|                  ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst32|lpm_compare0:inst10                                                                                                                             ;
+;             |lpm_compare:lpm_compare_component| ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component                                                                                           ;
+;                |comptree:comparator|            ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator                                                                       ;
+;                   |cmpchain:cmp_end|            ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end                                                      ;
+;                      |comptree:comp|            ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp                                        ;
+;                         |comptree:sub_comptree| ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                  ;
+;                            |cmpchain:cmp_end|   ; 5 (5)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end ;
+;          |lpm_dff0:inst1|                       ; 8 (0)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst32|lpm_dff0:inst1                                                                                                                                  ;
+;             |lpm_ff:lpm_ff_component|           ; 8 (8)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst32|lpm_dff0:inst1|lpm_ff:lpm_ff_component                                                                                                          ;
+;          |lpm_dff0:inst2|                       ; 8 (0)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst32|lpm_dff0:inst2                                                                                                                                  ;
+;             |lpm_ff:lpm_ff_component|           ; 8 (8)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst32|lpm_dff0:inst2|lpm_ff:lpm_ff_component                                                                                                          ;
+;       |cacheline:inst33|                        ; 22 (1)      ; 16           ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 6 (1)        ; 16 (0)            ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst33                                                                                                                                                 ;
+;          |lpm_compare0:inst10|                  ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst33|lpm_compare0:inst10                                                                                                                             ;
+;             |lpm_compare:lpm_compare_component| ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component                                                                                           ;
+;                |comptree:comparator|            ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator                                                                       ;
+;                   |cmpchain:cmp_end|            ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end                                                      ;
+;                      |comptree:comp|            ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp                                        ;
+;                         |comptree:sub_comptree| ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                  ;
+;                            |cmpchain:cmp_end|   ; 5 (5)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end ;
+;          |lpm_dff0:inst1|                       ; 8 (0)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst33|lpm_dff0:inst1                                                                                                                                  ;
+;             |lpm_ff:lpm_ff_component|           ; 8 (8)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst33|lpm_dff0:inst1|lpm_ff:lpm_ff_component                                                                                                          ;
+;          |lpm_dff0:inst2|                       ; 8 (0)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst33|lpm_dff0:inst2                                                                                                                                  ;
+;             |lpm_ff:lpm_ff_component|           ; 8 (8)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst33|lpm_dff0:inst2|lpm_ff:lpm_ff_component                                                                                                          ;
+;       |cacheline:inst34|                        ; 22 (1)      ; 16           ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 6 (1)        ; 16 (0)            ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst34                                                                                                                                                 ;
+;          |lpm_compare0:inst10|                  ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst34|lpm_compare0:inst10                                                                                                                             ;
+;             |lpm_compare:lpm_compare_component| ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component                                                                                           ;
+;                |comptree:comparator|            ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator                                                                       ;
+;                   |cmpchain:cmp_end|            ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end                                                      ;
+;                      |comptree:comp|            ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp                                        ;
+;                         |comptree:sub_comptree| ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                  ;
+;                            |cmpchain:cmp_end|   ; 5 (5)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end ;
+;          |lpm_dff0:inst1|                       ; 8 (0)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst34|lpm_dff0:inst1                                                                                                                                  ;
+;             |lpm_ff:lpm_ff_component|           ; 8 (8)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst34|lpm_dff0:inst1|lpm_ff:lpm_ff_component                                                                                                          ;
+;          |lpm_dff0:inst2|                       ; 8 (0)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst34|lpm_dff0:inst2                                                                                                                                  ;
+;             |lpm_ff:lpm_ff_component|           ; 8 (8)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst34|lpm_dff0:inst2|lpm_ff:lpm_ff_component                                                                                                          ;
+;       |cacheline:inst|                          ; 22 (1)      ; 16           ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 6 (1)        ; 16 (0)            ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst                                                                                                                                                   ;
+;          |lpm_compare0:inst10|                  ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst|lpm_compare0:inst10                                                                                                                               ;
+;             |lpm_compare:lpm_compare_component| ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component                                                                                             ;
+;                |comptree:comparator|            ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator                                                                         ;
+;                   |cmpchain:cmp_end|            ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end                                                        ;
+;                      |comptree:comp|            ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp                                          ;
+;                         |comptree:sub_comptree| ; 5 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                    ;
+;                            |cmpchain:cmp_end|   ; 5 (5)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end   ;
+;          |lpm_dff0:inst1|                       ; 8 (0)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst|lpm_dff0:inst1                                                                                                                                    ;
+;             |lpm_ff:lpm_ff_component|           ; 8 (8)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst|lpm_dff0:inst1|lpm_ff:lpm_ff_component                                                                                                            ;
+;          |lpm_dff0:inst2|                       ; 8 (0)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst|lpm_dff0:inst2                                                                                                                                    ;
+;             |lpm_ff:lpm_ff_component|           ; 8 (8)       ; 8            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|cacheline:inst|lpm_dff0:inst2|lpm_ff:lpm_ff_component                                                                                                            ;
+;       |lpm_counter0:inst27|                     ; 2 (0)       ; 2            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; |cachetest|cache:inst|lpm_counter0:inst27                                                                                                                                              ;
+;          |lpm_counter:lpm_counter_component|    ; 2 (0)       ; 2            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; |cachetest|cache:inst|lpm_counter0:inst27|lpm_counter:lpm_counter_component                                                                                                            ;
+;             |cntr_ct6:auto_generated|           ; 2 (2)       ; 2            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 2 (2)           ; |cachetest|cache:inst|lpm_counter0:inst27|lpm_counter:lpm_counter_component|cntr_ct6:auto_generated                                                                                    ;
+;       |lpm_decode0:inst28|                      ; 4 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|lpm_decode0:inst28                                                                                                                                               ;
+;          |lpm_decode:lpm_decode_component|      ; 4 (0)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|lpm_decode0:inst28|lpm_decode:lpm_decode_component                                                                                                               ;
+;             |decode_vlb:auto_generated|         ; 4 (4)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|cache:inst|lpm_decode0:inst28|lpm_decode:lpm_decode_component|decode_vlb:auto_generated                                                                                     ;
+;    |lpm_ram_dq0:inst1|                          ; 0 (0)       ; 0            ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|lpm_ram_dq0:inst1                                                                                                                                                           ;
+;       |altsyncram:altsyncram_component|         ; 0 (0)       ; 0            ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|lpm_ram_dq0:inst1|altsyncram:altsyncram_component                                                                                                                           ;
+;          |altsyncram_d411:auto_generated|       ; 0 (0)       ; 0            ; 2048        ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |cachetest|lpm_ram_dq0:inst1|altsyncram:altsyncram_component|altsyncram_d411:auto_generated                                                                                            ;
++-------------------------------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                           ;
++---------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                        ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++---------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+; lpm_ram_dq0:inst1|altsyncram:altsyncram_component|altsyncram_d411:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; None ;
++---------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 66    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 64    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component ;
++------------------------+----------+------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                                                     ;
++------------------------+----------+------------------------------------------------------------------------------------------+
+; lpm_width              ; 8        ; Untyped                                                                                  ;
+; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                                                  ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                                                  ;
+; CHAIN_SIZE             ; 8        ; Untyped                                                                                  ;
+; ONE_INPUT_IS_CONSTANT  ; NO       ; Untyped                                                                                  ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                                                  ;
+; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                                                       ;
+; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                                                     ;
+; DEVICE_FAMILY          ; Stratix  ; Untyped                                                                                  ;
+; CBXI_PARAMETER         ; NOTHING  ; Untyped                                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                                           ;
++------------------------+----------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst|lpm_dff0:inst1|lpm_ff:lpm_ff_component ;
++------------------------+---------+----------------------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                                       ;
++------------------------+---------+----------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8       ; Untyped                                                                    ;
+; LPM_AVALUE             ; UNUSED  ; Untyped                                                                    ;
+; LPM_SVALUE             ; UNUSED  ; Untyped                                                                    ;
+; LPM_FFTYPE             ; DFF     ; Untyped                                                                    ;
+; DEVICE_FAMILY          ; Stratix ; Untyped                                                                    ;
+; CBXI_PARAMETER         ; NOTHING ; Untyped                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                                             ;
++------------------------+---------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst|BUSMUX:inst ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 8     ; Untyped                                                   ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst|lpm_constant0:inst6|lpm_constant:lpm_constant_component ;
++----------------+---------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                                                                ;
++----------------+---------+-----------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 8       ; Untyped                                                                                             ;
+; LPM_CVALUE     ; 0       ; Untyped                                                                                             ;
+; CBXI_PARAMETER ; NOTHING ; Untyped                                                                                             ;
++----------------+---------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst|lpm_dff0:inst2|lpm_ff:lpm_ff_component ;
++------------------------+---------+----------------------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                                       ;
++------------------------+---------+----------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8       ; Untyped                                                                    ;
+; LPM_AVALUE             ; UNUSED  ; Untyped                                                                    ;
+; LPM_SVALUE             ; UNUSED  ; Untyped                                                                    ;
+; LPM_FFTYPE             ; DFF     ; Untyped                                                                    ;
+; DEVICE_FAMILY          ; Stratix ; Untyped                                                                    ;
+; CBXI_PARAMETER         ; NOTHING ; Untyped                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                                             ;
++------------------------+---------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|lpm_decode0:inst28|lpm_decode:lpm_decode_component ;
++------------------------+------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                 ;
++------------------------+------------+----------------------------------------------------------------------+
+; LPM_WIDTH              ; 2          ; Untyped                                                              ;
+; LPM_DECODES            ; 4          ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                              ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                              ;
+; DEVICE_FAMILY          ; Stratix    ; Untyped                                                              ;
+; CBXI_PARAMETER         ; decode_vlb ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                       ;
++------------------------+------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|lpm_counter0:inst27|lpm_counter:lpm_counter_component ;
++------------------------+----------+---------------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                                      ;
++------------------------+----------+---------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                            ;
+; LPM_WIDTH              ; 2        ; Untyped                                                                   ;
+; LPM_DIRECTION          ; UP       ; Untyped                                                                   ;
+; LPM_MODULUS            ; 0        ; Untyped                                                                   ;
+; LPM_AVALUE             ; UNUSED   ; Untyped                                                                   ;
+; LPM_SVALUE             ; UNUSED   ; Untyped                                                                   ;
+; DEVICE_FAMILY          ; Stratix  ; Untyped                                                                   ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                                        ;
+; NOT_GATE_PUSH_BACK     ; ON       ; NOT_GATE_PUSH_BACK                                                        ;
+; CARRY_CNT_EN           ; SMART    ; Untyped                                                                   ;
+; LABWIDE_SCLR           ; ON       ; Untyped                                                                   ;
+; USE_NEW_VERSION        ; TRUE     ; Untyped                                                                   ;
+; CBXI_PARAMETER         ; cntr_ct6 ; Untyped                                                                   ;
++------------------------+----------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component ;
++------------------------+----------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                                                       ;
++------------------------+----------+--------------------------------------------------------------------------------------------+
+; lpm_width              ; 8        ; Untyped                                                                                    ;
+; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                                                    ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                                                    ;
+; CHAIN_SIZE             ; 8        ; Untyped                                                                                    ;
+; ONE_INPUT_IS_CONSTANT  ; NO       ; Untyped                                                                                    ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                                                    ;
+; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                                                    ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                                                         ;
+; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                                                       ;
+; DEVICE_FAMILY          ; Stratix  ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; NOTHING  ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                                             ;
++------------------------+----------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst33|lpm_dff0:inst1|lpm_ff:lpm_ff_component ;
++------------------------+---------+------------------------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                                         ;
++------------------------+---------+------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8       ; Untyped                                                                      ;
+; LPM_AVALUE             ; UNUSED  ; Untyped                                                                      ;
+; LPM_SVALUE             ; UNUSED  ; Untyped                                                                      ;
+; LPM_FFTYPE             ; DFF     ; Untyped                                                                      ;
+; DEVICE_FAMILY          ; Stratix ; Untyped                                                                      ;
+; CBXI_PARAMETER         ; NOTHING ; Untyped                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                                               ;
++------------------------+---------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst33|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 8     ; Untyped                                                     ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst33|lpm_constant0:inst6|lpm_constant:lpm_constant_component ;
++----------------+---------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                                                                  ;
++----------------+---------+-------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 8       ; Untyped                                                                                               ;
+; LPM_CVALUE     ; 0       ; Untyped                                                                                               ;
+; CBXI_PARAMETER ; NOTHING ; Untyped                                                                                               ;
++----------------+---------+-------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst33|lpm_dff0:inst2|lpm_ff:lpm_ff_component ;
++------------------------+---------+------------------------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                                         ;
++------------------------+---------+------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8       ; Untyped                                                                      ;
+; LPM_AVALUE             ; UNUSED  ; Untyped                                                                      ;
+; LPM_SVALUE             ; UNUSED  ; Untyped                                                                      ;
+; LPM_FFTYPE             ; DFF     ; Untyped                                                                      ;
+; DEVICE_FAMILY          ; Stratix ; Untyped                                                                      ;
+; CBXI_PARAMETER         ; NOTHING ; Untyped                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                                               ;
++------------------------+---------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component ;
++------------------------+----------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                                                       ;
++------------------------+----------+--------------------------------------------------------------------------------------------+
+; lpm_width              ; 8        ; Untyped                                                                                    ;
+; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                                                    ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                                                    ;
+; CHAIN_SIZE             ; 8        ; Untyped                                                                                    ;
+; ONE_INPUT_IS_CONSTANT  ; NO       ; Untyped                                                                                    ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                                                    ;
+; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                                                    ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                                                         ;
+; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                                                       ;
+; DEVICE_FAMILY          ; Stratix  ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; NOTHING  ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                                             ;
++------------------------+----------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst34|lpm_dff0:inst1|lpm_ff:lpm_ff_component ;
++------------------------+---------+------------------------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                                         ;
++------------------------+---------+------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8       ; Untyped                                                                      ;
+; LPM_AVALUE             ; UNUSED  ; Untyped                                                                      ;
+; LPM_SVALUE             ; UNUSED  ; Untyped                                                                      ;
+; LPM_FFTYPE             ; DFF     ; Untyped                                                                      ;
+; DEVICE_FAMILY          ; Stratix ; Untyped                                                                      ;
+; CBXI_PARAMETER         ; NOTHING ; Untyped                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                                               ;
++------------------------+---------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst34|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 8     ; Untyped                                                     ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst34|lpm_constant0:inst6|lpm_constant:lpm_constant_component ;
++----------------+---------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                                                                  ;
++----------------+---------+-------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 8       ; Untyped                                                                                               ;
+; LPM_CVALUE     ; 0       ; Untyped                                                                                               ;
+; CBXI_PARAMETER ; NOTHING ; Untyped                                                                                               ;
++----------------+---------+-------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst34|lpm_dff0:inst2|lpm_ff:lpm_ff_component ;
++------------------------+---------+------------------------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                                         ;
++------------------------+---------+------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8       ; Untyped                                                                      ;
+; LPM_AVALUE             ; UNUSED  ; Untyped                                                                      ;
+; LPM_SVALUE             ; UNUSED  ; Untyped                                                                      ;
+; LPM_FFTYPE             ; DFF     ; Untyped                                                                      ;
+; DEVICE_FAMILY          ; Stratix ; Untyped                                                                      ;
+; CBXI_PARAMETER         ; NOTHING ; Untyped                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                                               ;
++------------------------+---------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component ;
++------------------------+----------+--------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                                                       ;
++------------------------+----------+--------------------------------------------------------------------------------------------+
+; lpm_width              ; 8        ; Untyped                                                                                    ;
+; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                                                    ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                                                    ;
+; CHAIN_SIZE             ; 8        ; Untyped                                                                                    ;
+; ONE_INPUT_IS_CONSTANT  ; NO       ; Untyped                                                                                    ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                                                    ;
+; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                                                    ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                                                         ;
+; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                                                       ;
+; DEVICE_FAMILY          ; Stratix  ; Untyped                                                                                    ;
+; CBXI_PARAMETER         ; NOTHING  ; Untyped                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                                             ;
++------------------------+----------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst32|lpm_dff0:inst1|lpm_ff:lpm_ff_component ;
++------------------------+---------+------------------------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                                         ;
++------------------------+---------+------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8       ; Untyped                                                                      ;
+; LPM_AVALUE             ; UNUSED  ; Untyped                                                                      ;
+; LPM_SVALUE             ; UNUSED  ; Untyped                                                                      ;
+; LPM_FFTYPE             ; DFF     ; Untyped                                                                      ;
+; DEVICE_FAMILY          ; Stratix ; Untyped                                                                      ;
+; CBXI_PARAMETER         ; NOTHING ; Untyped                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                                               ;
++------------------------+---------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst32|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 8     ; Untyped                                                     ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst32|lpm_constant0:inst6|lpm_constant:lpm_constant_component ;
++----------------+---------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                                                                  ;
++----------------+---------+-------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 8       ; Untyped                                                                                               ;
+; LPM_CVALUE     ; 0       ; Untyped                                                                                               ;
+; CBXI_PARAMETER ; NOTHING ; Untyped                                                                                               ;
++----------------+---------+-------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|cacheline:inst32|lpm_dff0:inst2|lpm_ff:lpm_ff_component ;
++------------------------+---------+------------------------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                                         ;
++------------------------+---------+------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8       ; Untyped                                                                      ;
+; LPM_AVALUE             ; UNUSED  ; Untyped                                                                      ;
+; LPM_SVALUE             ; UNUSED  ; Untyped                                                                      ;
+; LPM_FFTYPE             ; DFF     ; Untyped                                                                      ;
+; DEVICE_FAMILY          ; Stratix ; Untyped                                                                      ;
+; CBXI_PARAMETER         ; NOTHING ; Untyped                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                                               ;
++------------------------+---------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:inst|lpm_or0:inst35|lpm_or:lpm_or_component ;
++------------------------+---------+-------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                        ;
++------------------------+---------+-------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                              ;
+; LPM_WIDTH              ; 8       ; Untyped                                                     ;
+; LPM_SIZE               ; 4       ; Untyped                                                     ;
+; CARRY_CHAIN_LENGTH     ; 48      ; CARRY_CHAIN_LENGTH                                          ;
+; CARRY_CHAIN            ; MANUAL  ; Untyped                                                     ;
+; CASCADE_CHAIN          ; MANUAL  ; Untyped                                                     ;
+; DEVICE_FAMILY          ; Stratix ; Untyped                                                     ;
++------------------------+---------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst3 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 8     ; Untyped                          ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_ram_dq0:inst1|altsyncram:altsyncram_component ;
++------------------------------------+-----------------+-----------------------------------------+
+; Parameter Name                     ; Value           ; Type                                    ;
++------------------------------------+-----------------+-----------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8               ; Untyped                                 ;
+; AUTO_CARRY_CHAINS                  ; ON              ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF             ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS                ; ON              ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF             ; IGNORE_CASCADE                          ;
+; OPERATION_MODE                     ; SINGLE_PORT     ; Untyped                                 ;
+; WIDTH_A                            ; 8               ; Untyped                                 ;
+; WIDTHAD_A                          ; 8               ; Untyped                                 ;
+; NUMWORDS_A                         ; 256             ; Untyped                                 ;
+; OUTDATA_REG_A                      ; CLOCK0          ; Untyped                                 ;
+; ADDRESS_ACLR_A                     ; NONE            ; Untyped                                 ;
+; OUTDATA_ACLR_A                     ; NONE            ; Untyped                                 ;
+; WRCONTROL_ACLR_A                   ; NONE            ; Untyped                                 ;
+; INDATA_ACLR_A                      ; NONE            ; Untyped                                 ;
+; BYTEENA_ACLR_A                     ; NONE            ; Untyped                                 ;
+; WIDTH_B                            ; 1               ; Untyped                                 ;
+; WIDTHAD_B                          ; 1               ; Untyped                                 ;
+; NUMWORDS_B                         ; 1               ; Untyped                                 ;
+; INDATA_REG_B                       ; CLOCK1          ; Untyped                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1          ; Untyped                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1          ; Untyped                                 ;
+; ADDRESS_REG_B                      ; CLOCK1          ; Untyped                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED    ; Untyped                                 ;
+; BYTEENA_REG_B                      ; CLOCK1          ; Untyped                                 ;
+; INDATA_ACLR_B                      ; NONE            ; Untyped                                 ;
+; WRCONTROL_ACLR_B                   ; NONE            ; Untyped                                 ;
+; ADDRESS_ACLR_B                     ; NONE            ; Untyped                                 ;
+; OUTDATA_ACLR_B                     ; NONE            ; Untyped                                 ;
+; RDCONTROL_ACLR_B                   ; NONE            ; Untyped                                 ;
+; BYTEENA_ACLR_B                     ; NONE            ; Untyped                                 ;
+; WIDTH_BYTEENA_A                    ; 1               ; Untyped                                 ;
+; WIDTH_BYTEENA_B                    ; 1               ; Untyped                                 ;
+; RAM_BLOCK_TYPE                     ; AUTO            ; Untyped                                 ;
+; BYTE_SIZE                          ; 8               ; Untyped                                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE       ; Untyped                                 ;
+; INIT_FILE                          ; UNUSED          ; Untyped                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A          ; Untyped                                 ;
+; MAXIMUM_DEPTH                      ; 0               ; Untyped                                 ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL          ; Untyped                                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL          ; Untyped                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL          ; Untyped                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL          ; Untyped                                 ;
+; DEVICE_FAMILY                      ; Stratix         ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_d411 ; Untyped                                 ;
++------------------------------------+-----------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst2 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 8     ; Untyped                          ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in C:/altera/quartus50/cache/cache.map.eqn.
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Sun Feb 28 00:47:35 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cache -c cache
+Info: Found 1 design units, including 1 entities, in source file cache.bdf
+    Info: Found entity 1: cache
+Info: Found 1 design units, including 1 entities, in source file cacheline.bdf
+    Info: Found entity 1: cacheline
+Info: Found 1 design units, including 1 entities, in source file cachetest.bdf
+    Info: Found entity 1: cachetest
+Info: Elaborating entity "cachetest" for the top level hierarchy
+Info: Elaborating entity "cache" for hierarchy "cache:inst"
+Info: Elaborating entity "cacheline" for hierarchy "cache:inst|cacheline:inst"
+Info: Using design file lpm_compare0.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: lpm_compare0
+Info: Elaborating entity "lpm_compare0" for hierarchy "cache:inst|cacheline:inst|lpm_compare0:inst10"
+Info: Found 1 design units, including 1 entities, in source file ../libraries/megafunctions/lpm_compare.tdf
+    Info: Found entity 1: lpm_compare
+Info: Elaborating entity "lpm_compare" for hierarchy "cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component"
+Info: Found 1 design units, including 1 entities, in source file ../libraries/megafunctions/comptree.tdf
+    Info: Found entity 1: comptree
+Info: Elaborating entity "comptree" for hierarchy "cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator"
+Info: Found 1 design units, including 1 entities, in source file ../libraries/megafunctions/cmpchain.tdf
+    Info: Found entity 1: cmpchain
+Info: Elaborating entity "cmpchain" for hierarchy "cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end"
+Info: Elaborating entity "comptree" for hierarchy "cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp"
+Info: Elaborating entity "cmpchain" for hierarchy "cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]"
+Info: Elaborating entity "comptree" for hierarchy "cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree"
+Info: Elaborating entity "cmpchain" for hierarchy "cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end"
+Info: Found 1 design units, including 1 entities, in source file ../libraries/megafunctions/altshift.tdf
+    Info: Found entity 1: altshift
+Info: Elaborating entity "altshift" for hierarchy "cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs"
+Info: Using design file lpm_dff0.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: lpm_dff0
+Info: Elaborating entity "lpm_dff0" for hierarchy "cache:inst|cacheline:inst|lpm_dff0:inst1"
+Info: Found 1 design units, including 1 entities, in source file ../libraries/megafunctions/lpm_ff.tdf
+    Info: Found entity 1: lpm_ff
+Info: Elaborating entity "lpm_ff" for hierarchy "cache:inst|cacheline:inst|lpm_dff0:inst1|lpm_ff:lpm_ff_component"
+Info: Found 1 design units, including 1 entities, in source file ../libraries/megafunctions/BUSMUX.tdf
+    Info: Found entity 1: busmux
+Info: Elaborating entity "BUSMUX" for hierarchy "cache:inst|cacheline:inst|BUSMUX:inst"
+Info: Found 1 design units, including 1 entities, in source file ../libraries/megafunctions/lpm_mux.tdf
+    Info: Found entity 1: lpm_mux
+Info: Elaborating entity "lpm_mux" for hierarchy "cache:inst|cacheline:inst|BUSMUX:inst|lpm_mux:$00000"
+Info: Found 1 design units, including 1 entities, in source file db/mux_cgc.tdf
+    Info: Found entity 1: mux_cgc
+Info: Elaborating entity "mux_cgc" for hierarchy "cache:inst|cacheline:inst|BUSMUX:inst|lpm_mux:$00000|mux_cgc:auto_generated"
+Info: Using design file lpm_constant0.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: lpm_constant0
+Info: Elaborating entity "lpm_constant0" for hierarchy "cache:inst|cacheline:inst|lpm_constant0:inst6"
+Info: Found 1 design units, including 1 entities, in source file ../libraries/megafunctions/lpm_constant.tdf
+    Info: Found entity 1: lpm_constant
+Info: Elaborating entity "lpm_constant" for hierarchy "cache:inst|cacheline:inst|lpm_constant0:inst6|lpm_constant:lpm_constant_component"
+Info: Using design file lpm_decode0.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: lpm_decode0
+Info: Elaborating entity "lpm_decode0" for hierarchy "cache:inst|lpm_decode0:inst28"
+Info: Found 1 design units, including 1 entities, in source file ../libraries/megafunctions/lpm_decode.tdf
+    Info: Found entity 1: lpm_decode
+Info: Elaborating entity "lpm_decode" for hierarchy "cache:inst|lpm_decode0:inst28|lpm_decode:lpm_decode_component"
+Info: Found 1 design units, including 1 entities, in source file db/decode_vlb.tdf
+    Info: Found entity 1: decode_vlb
+Info: Elaborating entity "decode_vlb" for hierarchy "cache:inst|lpm_decode0:inst28|lpm_decode:lpm_decode_component|decode_vlb:auto_generated"
+Info: Using design file lpm_counter0.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: lpm_counter0
+Info: Elaborating entity "lpm_counter0" for hierarchy "cache:inst|lpm_counter0:inst27"
+Info: Found 1 design units, including 1 entities, in source file ../libraries/megafunctions/lpm_counter.tdf
+    Info: Found entity 1: lpm_counter
+Info: Elaborating entity "lpm_counter" for hierarchy "cache:inst|lpm_counter0:inst27|lpm_counter:lpm_counter_component"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_ct6.tdf
+    Info: Found entity 1: cntr_ct6
+Info: Elaborating entity "cntr_ct6" for hierarchy "cache:inst|lpm_counter0:inst27|lpm_counter:lpm_counter_component|cntr_ct6:auto_generated"
+Info: Using design file lpm_or0.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: lpm_or0
+Info: Elaborating entity "lpm_or0" for hierarchy "cache:inst|lpm_or0:inst35"
+Info: Found 1 design units, including 1 entities, in source file ../libraries/megafunctions/lpm_or.tdf
+    Info: Found entity 1: lpm_or
+Info: Elaborating entity "lpm_or" for hierarchy "cache:inst|lpm_or0:inst35|lpm_or:lpm_or_component"
+Info: Using design file lpm_ram_dq0.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: lpm_ram_dq0
+Info: Elaborating entity "lpm_ram_dq0" for hierarchy "lpm_ram_dq0:inst1"
+Info: Found 1 design units, including 1 entities, in source file ../libraries/megafunctions/altsyncram.tdf
+    Info: Found entity 1: altsyncram
+Info: Elaborating entity "altsyncram" for hierarchy "lpm_ram_dq0:inst1|altsyncram:altsyncram_component"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_d411.tdf
+    Info: Found entity 1: altsyncram_d411
+Info: Elaborating entity "altsyncram_d411" for hierarchy "lpm_ram_dq0:inst1|altsyncram:altsyncram_component|altsyncram_d411:auto_generated"
+Info: Ignored 20 buffer(s)
+    Info: Ignored 20 SOFT buffer(s)
+Info: Implemented 170 device resources after synthesis - the final resource count might be different
+    Info: Implemented 18 input pins
+    Info: Implemented 17 output pins
+    Info: Implemented 127 logic cells
+    Info: Implemented 8 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Processing ended: Sun Feb 28 00:47:36 2021
+    Info: Elapsed time: 00:00:01
+
+

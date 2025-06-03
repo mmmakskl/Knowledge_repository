@@ -1,0 +1,38 @@
+#
+#
+# 
+# 05/12/23 13:49:51
+set_working_dir Z:/4th_semestr/my_project/my_project_lib/hdl
+source C:/FPGAdv72LS/Hds/resources/misc/RunSpectrum.tcl
+source "Z:/4th_semestr/my_project/my_project_lib/ls/mytimer/scripts/spectrum.tcl"
+set_working_dir Z:/4th_semestr/my_project
+read -technology "apa"  { Z:/4th_semestr/my_project/my_project_lib/hdl/BCDCounter.v Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v Z:/4th_semestr/my_project/my_project_lib/hdl/counter_struct.v Z:/4th_semestr/my_project/my_project_lib/hdl/mytimer_struct.v }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+report_area -cell_usage -all_leafs 
+view_schematic -rtl -view
+read -technology "apa"  { Z:/4th_semestr/my_project/my_project_lib/hdl/BCDCounter.v Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v Z:/4th_semestr/my_project/my_project_lib/hdl/counter_struct.v Z:/4th_semestr/my_project/my_project_lib/hdl/mytimer_struct.v }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+report_area -cell_usage -all_leafs 
+_gc_read_init
+_gc_run_init
+set input_file_list { Z:/4th_semestr/my_project/my_project_lib/hdl/BCDCounter.v Z:/4th_semestr/my_project/my_project_lib/hdl/control_fsm.v Z:/4th_semestr/my_project/my_project_lib/hdl/counter_struct.v Z:/4th_semestr/my_project/my_project_lib/hdl/mytimer_struct.v }
+set package "100 TQFP"
+set process COMWC-F
+set nologic_rep FALSE
+set chip TRUE
+set macro FALSE
+set optimize_for area
+set report brief
+set -hierarchy auto
+set hierarchy_auto TRUE
+set hierarchy_preserve FALSE
+set hierarchy_flatten FALSE
+set output_file mytimer.edf
+set novendor_constraint_file FALSE
+set sdf_names_style vhdl
+set target apa
+_gc_read
+_gc_run
+view_schematic -view

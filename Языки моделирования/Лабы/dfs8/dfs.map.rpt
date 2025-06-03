@@ -1,0 +1,320 @@
+Analysis & Synthesis report for dfs
+Thu Apr 29 13:45:48 2021
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |dfs|state
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |dfs
+ 11. Analysis & Synthesis Equations
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Apr 29 13:45:48 2021    ;
+; Quartus II Version          ; 5.0 Build 148 04/26/2005 SJ Full Version ;
+; Revision Name               ; dfs                                      ;
+; Top-level Entity Name       ; dfs                                      ;
+; Family                      ; Cyclone                                  ;
+; Total logic elements        ; 425                                      ;
+; Total pins                  ; 151                                      ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; Total PLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                     ;
++--------------------------------------------------------------------+--------------+---------------+
+; Option                                                             ; Setting      ; Default Value ;
++--------------------------------------------------------------------+--------------+---------------+
+; Top-level entity name                                              ; dfs          ; dfs           ;
+; Family name                                                        ; Cyclone      ; Stratix       ;
+; Use smart compilation                                              ; Off          ; Off           ;
+; Restructure Multiplexers                                           ; Auto         ; Auto          ;
+; Create Debugging Nodes for IP Cores                                ; off          ; off           ;
+; Preserve fewer node names                                          ; On           ; On            ;
+; Disable OpenCore Plus hardware evaluation                          ; Off          ; Off           ;
+; Verilog Version                                                    ; Verilog_2001 ; Verilog_2001  ;
+; VHDL Version                                                       ; VHDL93       ; VHDL93        ;
+; State Machine Processing                                           ; Auto         ; Auto          ;
+; Extract Verilog State Machines                                     ; On           ; On            ;
+; Extract VHDL State Machines                                        ; On           ; On            ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On           ; On            ;
+; NOT Gate Push-Back                                                 ; On           ; On            ;
+; Power-Up Don't Care                                                ; On           ; On            ;
+; Remove Redundant Logic Cells                                       ; Off          ; Off           ;
+; Remove Duplicate Registers                                         ; On           ; On            ;
+; Ignore CARRY Buffers                                               ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                             ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                              ; Off          ; Off           ;
+; Ignore ROW GLOBAL Buffers                                          ; Off          ; Off           ;
+; Ignore LCELL Buffers                                               ; Off          ; Off           ;
+; Ignore SOFT Buffers                                                ; On           ; On            ;
+; Limit AHDL Integers to 32 Bits                                     ; Off          ; Off           ;
+; Optimization Technique -- Cyclone                                  ; Balanced     ; Balanced      ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70           ; 70            ;
+; Auto Carry Chains                                                  ; On           ; On            ;
+; Auto Open-Drain Pins                                               ; On           ; On            ;
+; Remove Duplicate Logic                                             ; On           ; On            ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off          ; Off           ;
+; Perform gate-level register retiming                               ; Off          ; Off           ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On           ; On            ;
+; Auto ROM Replacement                                               ; On           ; On            ;
+; Auto RAM Replacement                                               ; On           ; On            ;
+; Auto Shift Register Replacement                                    ; On           ; On            ;
+; Auto Clock Enable Replacement                                      ; On           ; On            ;
+; Allows Synchronous Control Signal Usage in Normal Mode Logic Cells ; On           ; On            ;
+; Auto RAM Block Balancing                                           ; On           ; On            ;
+; Auto Resource Sharing                                              ; Off          ; Off           ;
+; Allow Any RAM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any ROM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any Shift Register Size For Recognition                      ; Off          ; Off           ;
+; Maximum Number of M512 Memory Blocks                               ; -1           ; -1            ;
+; Maximum Number of M4K Memory Blocks                                ; -1           ; -1            ;
+; Maximum Number of M-RAM Memory Blocks                              ; -1           ; -1            ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off          ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On           ; On            ;
++--------------------------------------------------------------------+--------------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                       ;
++----------------------------------+-----------------+------------------------+--------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path   ;
++----------------------------------+-----------------+------------------------+--------------------------------+
+; dfs.v                            ; yes             ; User Verilog HDL File  ; C:/altera/quartus50/dfs8/dfs.v ;
++----------------------------------+-----------------+------------------------+--------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++-----------------------------------+---------+
+; Resource                          ; Usage   ;
++-----------------------------------+---------+
+; Total logic elements              ; 425     ;
+; Total combinational functions     ; 321     ;
+;     -- Total 4-input functions    ; 259     ;
+;     -- Total 3-input functions    ; 44      ;
+;     -- Total 2-input functions    ; 11      ;
+;     -- Total 1-input functions    ; 6       ;
+;     -- Total 0-input functions    ; 1       ;
+; Combinational cells for routing   ; 0       ;
+; Total registers                   ; 135     ;
+; Total logic cells in carry chains ; 8       ;
+; I/O pins                          ; 151     ;
+; Maximum fan-out node              ; clk     ;
+; Maximum fan-out                   ; 135     ;
+; Total fan-out                     ; 1700    ;
+; Average fan-out                   ; 2.95    ;
++-----------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------+
+; |dfs                       ; 425 (425)   ; 135          ; 0           ; 151  ; 0            ; 290 (290)    ; 104 (104)         ; 31 (31)          ; 8 (8)           ; |dfs                ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+---------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------+
+; State Machine - |dfs|state                              ;
++---------------+---------------+------------+------------+
+; Name          ; state.PROCESS ; state.IDLE ; state.DONE ;
++---------------+---------------+------------+------------+
+; state.IDLE    ; 0             ; 0          ; 0          ;
+; state.PROCESS ; 1             ; 1          ; 0          ;
+; state.DONE    ; 0             ; 1          ; 1          ;
++---------------+---------------+------------+------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 135   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 9     ;
+; Number of registers using Asynchronous Clear ; 71    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 127   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |dfs|result_len[3]~reg0    ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |dfs|stack_ptr[0]          ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |dfs|result9[0]~reg0       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |dfs|result8[3]~reg0       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |dfs|result7[3]~reg0       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |dfs|result6[3]~reg0       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |dfs|result5[3]~reg0       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |dfs|result4[3]~reg0       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |dfs|result3[0]~reg0       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |dfs|result2[3]~reg0       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |dfs|result1[3]~reg0       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |dfs|i[0]                  ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |dfs|current_node[3]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |dfs|state~6               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |dfs ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; IDLE           ; 00    ; Binary                                     ;
+; INIT           ; 01    ; Binary                                     ;
+; PROCESS        ; 10    ; Binary                                     ;
+; DONE           ; 11    ; Binary                                     ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in C:/altera/quartus50/dfs8/dfs.map.eqn.
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Thu Apr 29 13:45:46 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dfs -c dfs
+Info: (10281) Verilog HDL information at dfs.v(24): variable name "DONE" and variable name "done" should not differ only in case
+Info: Found 1 design units, including 1 entities, in source file dfs.v
+    Info: Found entity 1: dfs
+Warning: Can't analyze file -- file C:/altera/quartus50/dfs8/dfs_tb.v is missing
+Info: Elaborating entity "dfs" for the top level hierarchy
+Warning: Verilog HDL assignment warning at dfs.v(52): truncated value with size 32 to match size of target (10)
+Warning: Verilog HDL assignment warning at dfs.v(53): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(54): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(55): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(56): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(57): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(58): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(59): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(60): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(61): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(62): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(63): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(64): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(65): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at dfs.v(66): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(67): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(68): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at dfs.v(72): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at dfs.v(74): truncated value with size 32 to match size of target (10)
+Warning: Verilog HDL assignment warning at dfs.v(75): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(76): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(77): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(78): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(79): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(80): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(81): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(82): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(83): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(84): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(85): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(86): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(88): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at dfs.v(91): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(92): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(93): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at dfs.v(102): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at dfs.v(103): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(104): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(105): truncated value with size 32 to match size of target (4)
+Warning: (10271) Verilog HDL Case Statement warning at dfs.v(108): size of case item expression (32) exceeds the size of the case expression (4)
+Warning: Verilog HDL assignment warning at dfs.v(108): truncated value with size 32 to match size of target (4)
+Warning: (10271) Verilog HDL Case Statement warning at dfs.v(109): size of case item expression (32) exceeds the size of the case expression (4)
+Warning: Verilog HDL assignment warning at dfs.v(109): truncated value with size 32 to match size of target (4)
+Warning: (10271) Verilog HDL Case Statement warning at dfs.v(110): size of case item expression (32) exceeds the size of the case expression (4)
+Warning: Verilog HDL assignment warning at dfs.v(110): truncated value with size 32 to match size of target (4)
+Warning: (10271) Verilog HDL Case Statement warning at dfs.v(111): size of case item expression (32) exceeds the size of the case expression (4)
+Warning: Verilog HDL assignment warning at dfs.v(111): truncated value with size 32 to match size of target (4)
+Warning: (10271) Verilog HDL Case Statement warning at dfs.v(112): size of case item expression (32) exceeds the size of the case expression (4)
+Warning: Verilog HDL assignment warning at dfs.v(112): truncated value with size 32 to match size of target (4)
+Warning: (10271) Verilog HDL Case Statement warning at dfs.v(113): size of case item expression (32) exceeds the size of the case expression (4)
+Warning: Verilog HDL assignment warning at dfs.v(113): truncated value with size 32 to match size of target (4)
+Warning: (10271) Verilog HDL Case Statement warning at dfs.v(114): size of case item expression (32) exceeds the size of the case expression (4)
+Warning: Verilog HDL assignment warning at dfs.v(114): truncated value with size 32 to match size of target (4)
+Warning: (10271) Verilog HDL Case Statement warning at dfs.v(115): size of case item expression (32) exceeds the size of the case expression (4)
+Warning: Verilog HDL assignment warning at dfs.v(115): truncated value with size 32 to match size of target (4)
+Warning: (10271) Verilog HDL Case Statement warning at dfs.v(116): size of case item expression (32) exceeds the size of the case expression (4)
+Warning: Verilog HDL assignment warning at dfs.v(116): truncated value with size 32 to match size of target (4)
+Warning: (10270) Verilog HDL statement warning at dfs.v(107): incomplete Case Statement has no default case item
+Warning: Verilog HDL assignment warning at dfs.v(119): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(120): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(122): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(125): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at dfs.v(131): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(133): truncated value with size 32 to match size of target (4)
+Warning: Verilog HDL assignment warning at dfs.v(134): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at dfs.v(140): truncated value with size 32 to match size of target (1)
+Info: State machine "|dfs|state" contains 3 states and 0 state bits
+Info: Selected Auto state machine encoding method for state machine "|dfs|state"
+Info: Encoding result for state machine "|dfs|state"
+    Info: Completed encoding using 3 state bits
+        Info: Encoded state bit "state.PROCESS"
+        Info: Encoded state bit "state.IDLE"
+        Info: Encoded state bit "state.DONE"
+    Info: State "|dfs|state.IDLE" uses code string "000"
+    Info: State "|dfs|state.PROCESS" uses code string "110"
+    Info: State "|dfs|state.DONE" uses code string "011"
+Info: Implemented 576 device resources after synthesis - the final resource count might be different
+    Info: Implemented 106 input pins
+    Info: Implemented 45 output pins
+    Info: Implemented 425 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Processing ended: Thu Apr 29 13:45:48 2021
+    Info: Elapsed time: 00:00:02
+
+

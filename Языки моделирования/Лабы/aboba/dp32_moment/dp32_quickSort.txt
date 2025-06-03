@@ -1,0 +1,46 @@
+recDepth = 0;
+stack: low=0, high=arr.size()-1, pivot_loc, ...000
+low < high;
+
+QuickSort //stack: retAddr?, low, high, pivot_loc
+	if low >= high
+		if recCount == 0
+			jump END OF PROGRAM
+		return; //unspinning recursion
+	
+	-- displacement 1
+	push retAddr, low, high //retAddr - instruction after jump
+	call partition // pivot_loc = partition()
+
+	
+	push retAddr, low, pivot - 1 //retAddr - instruction after jump
+	call QuickSort
+
+	push retAddr, pivot + 1, high //retAddr - instruction after jump
+	call QuickSort
+
+	if recCount == 0
+		jump END OF PROGRAM
+	return; //unspinning recursion
+
+Partition //stack: retAddr, low, high
+	pivot = numbers[high]
+	left_wall = low - 1
+	if low >= high: 
+		jump displacement 3 //skip loop
+	i = low;
+	//loop:
+	if numbers[i] > pivot
+		jump end; //continue
+	left_wall++;
+	std::swap(numbers[i], numbers[left_wall])
+
+	//end:
+	i++;
+	if i < high: jump loop;
+	
+	-- displacement 3
+	left_wall++;
+	std::swap(numbers[high], numbers[left_wall])
+	Quicksort::pivot = left_wall
+	return;

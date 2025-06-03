@@ -1,0 +1,92 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L2 is AND1~24 at LC_X1_Y1_N2
+--operation mode is normal
+
+A1L2 = !B2_res & !B3_res & !B1_res & !B4_res;
+
+
+--B2L1 is RStrigger:call2|always0~16 at LC_X1_Y1_N7
+--operation mode is normal
+
+B2L1 = X # B;
+
+
+--B4_res is RStrigger:call4|res at LC_X1_Y1_N8
+--operation mode is normal
+
+B4_res = !B & (B4_res # !B2L1);
+
+
+--B1L1 is RStrigger:call1|always0~16 at LC_X1_Y1_N3
+--operation mode is normal
+
+B1L1 = A # X;
+
+
+--B3_res is RStrigger:call3|res at LC_X1_Y1_N9
+--operation mode is normal
+
+B3_res = !A & (B3_res # !B1L1);
+
+
+--B2L2 is RStrigger:call2|always0~17 at LC_X1_Y1_N1
+--operation mode is normal
+
+B2L2 = X & B;
+
+
+--B2_res is RStrigger:call2|res at LC_X1_Y1_N4
+--operation mode is normal
+
+B2_res = B & (B2L2 & B2_res # !X);
+
+
+--B1L2 is RStrigger:call1|always0~17 at LC_X1_Y1_N5
+--operation mode is normal
+
+B1L2 = A & X;
+
+
+--B1_res is RStrigger:call1|res at LC_X1_Y1_N6
+--operation mode is normal
+
+B1_res = A & (B1L2 & B1_res # !X);
+
+
+--X is X at PIN_W19
+--operation mode is input
+
+X = INPUT();
+
+
+--B is B at PIN_Y20
+--operation mode is input
+
+B = INPUT();
+
+
+--A is A at PIN_AA20
+--operation mode is input
+
+A = INPUT();
+
+
+--OutResult is OutResult at PIN_W20
+--operation mode is output
+
+OutResult = OUTPUT(A1L2);
+
+
+

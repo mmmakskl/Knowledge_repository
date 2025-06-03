@@ -1,0 +1,23 @@
+# //  ModelSim SE 6.1c Nov 17 2005 
+# //
+# //  Copyright Mentor Graphics Corporation 2005
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -L Timer_first_try -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit C:/FPGAdv72LS/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli C:/FPGAdv72LS/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll Timer_first_try.Timer_first_try_tb 
+# Loading C:/FPGAdv72LS/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading Z:/4th_semestr/Timer_first_try/work.Timer_first_try_tb
+# Loading Z:/4th_semestr/Timer_first_try/work.Timer_first_try
+# Loading Z:/4th_semestr/Timer_first_try/work.Control
+# Loading Z:/4th_semestr/Timer_first_try/work.Counter
+# Loading Z:/4th_semestr/Timer_first_try/work.BCDCounter
+# Loading Z:/4th_semestr/Timer_first_try/work.Timer_first_try_tester
+# ** Warning: (vsim-3015) Z:/4th_semestr/Timer_first_try/counter_struct.v(64): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'count'.
+#         Region: /Timer_first_try_tb/U_0/U_1/U_0
+run -all
+# Break key hit 
+# Break at Z:/4th_semestr/Timer_first_try/timer_first_try_tester_flow.v line 130

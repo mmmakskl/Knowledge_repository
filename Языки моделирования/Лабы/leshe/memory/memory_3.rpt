@@ -1,0 +1,795 @@
+Project Information                            c:\projects\memory\memory_3.rpt
+
+MAX+plus II Compiler Report File
+Version 9.01 07/30/98
+Compiled: 12/24/20 15:13:05
+
+Copyright (C) 1988-1998 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input   Output   Bidir         Shareable
+POF       Device          Pins    Pins     Pins     LCs  Expanders  % Utilized
+
+memory_3  EPM7064LC44-7    12       8        0      40      0           62 %
+
+User Pins:                 12       8        0  
+
+
+
+Project Information                            c:\projects\memory\memory_3.rpt
+
+** AUTO GLOBAL SIGNALS **
+
+
+
+INFO: Signal 'rd' chosen for auto global Output Enable
+
+
+Project Information                            c:\projects\memory\memory_3.rpt
+
+** FILE HIERARCHY **
+
+
+
+|74155:19|
+|74374:15|
+|74374:16|
+|74374:17|
+|74374:18|
+|74244:14|
+
+
+Device-Specific Information:                   c:\projects\memory\memory_3.rpt
+memory_3
+
+***** Logic for device 'memory_3' compiled without errors.
+
+
+
+
+Device: EPM7064LC44-7
+
+Device Options:
+    Turbo Bit                                    = ON
+    Security Bit                                 = OFF
+
+                                         R  R  
+                                         E  E  
+                                         S  S  
+                                         E  E  
+                                         R  R  
+                       V  G  G     G  G  V  V  
+              D  D  D  C  N  N  r  N  N  E  E  
+              5  4  1  C  D  D  d  D  D  D  D  
+            -----------------------------------_ 
+          /   6  5  4  3  2  1 44 43 42 41 40   | 
+      D7 |  7                                39 | RESERVED 
+      D0 |  8                                38 | RESERVED 
+      wr |  9                                37 | RESERVED 
+     GND | 10                                36 | Q6 
+      A1 | 11                                35 | VCC 
+      A0 | 12         EPM7064LC44-7          34 | Q2 
+      Q5 | 13                                33 | RESERVED 
+      Q4 | 14                                32 | RESERVED 
+     VCC | 15                                31 | RESERVED 
+      Q3 | 16                                30 | GND 
+      Q1 | 17                                29 | RESERVED 
+         |_  18 19 20 21 22 23 24 25 26 27 28  _| 
+           ------------------------------------ 
+              Q  D  D  Q  G  V  D  R  R  R  R  
+              0  3  2  7  N  C  6  E  E  E  E  
+                          D  C     S  S  S  S  
+                                   E  E  E  E  
+                                   R  R  R  R  
+                                   V  V  V  V  
+                                   E  E  E  E  
+                                   D  D  D  D  
+
+
+N.C. = Not Connected.
+VCC = Dedicated power pin, which MUST be connected to VCC.
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+
+
+Device-Specific Information:                   c:\projects\memory\memory_3.rpt
+memory_3
+
+** RESOURCE USAGE **
+
+                                                Shareable     External
+Logic Array Block     Logic Cells   I/O Pins    Expanders   Interconnect
+
+A:     LC1 - LC16    14/16( 87%)   8/ 8(100%)   0/16(  0%)   7/36( 19%) 
+B:    LC17 - LC32     6/16( 37%)   8/ 8(100%)   0/16(  0%)  26/36( 72%) 
+C:    LC33 - LC48    16/16(100%)   1/ 8( 12%)   0/16(  0%)   7/36( 19%) 
+D:    LC49 - LC64     4/16( 25%)   2/ 8( 25%)   0/16(  0%)  12/36( 33%) 
+
+
+Total dedicated input pins used:                 1/4      ( 25%)
+Total I/O pins used:                            19/32     ( 59%)
+Total logic cells used:                         40/64     ( 62%)
+Total shareable expanders used:                  0/64     (  0%)
+Total Turbo logic cells used:                   40/64     ( 62%)
+Total shareable expanders not available (n/a):   0/64     (  0%)
+Average fan-in:                                  4.60
+Total fan-in:                                   184
+
+Total input pins required:                      12
+Total output pins required:                      8
+Total bidirectional pins required:               0
+Total logic cells required:                     40
+Total flipflops required:                       32
+Total product terms required:                   96
+Total logic cells lending parallel expanders:    0
+Total shareable expanders in database:           0
+
+Synthesized logic cells:                         0/  64   (  0%)
+
+
+
+Device-Specific Information:                   c:\projects\memory\memory_3.rpt
+memory_3
+
+** INPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  12    (1)  (A)      INPUT               0      0   0    0    0    8   32  A0
+  11    (3)  (A)      INPUT               0      0   0    0    0    8   32  A1
+   8    (5)  (A)      INPUT               0      0   0    0    0    0    4  D0
+   4   (16)  (A)      INPUT               0      0   0    0    0    0    4  D1
+  20   (19)  (B)      INPUT               0      0   0    0    0    0    4  D2
+  19   (20)  (B)      INPUT               0      0   0    0    0    0    4  D3
+   5   (14)  (A)      INPUT               0      0   0    0    0    0    4  D4
+   6   (11)  (A)      INPUT               0      0   0    0    0    0    4  D5
+  24   (33)  (C)      INPUT               0      0   0    0    0    0    4  D6
+   7    (8)  (A)      INPUT               0      0   0    0    0    0    4  D7
+  44      -   -       INPUT  G            0      0   0    0    0    0    0  rd
+   9    (4)  (A)      INPUT               0      0   0    0    0    0   32  wr
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+G = Global Source. Fan-out destinations counted here do not include destinations
+that are driven using global routing resources. Refer to the Auto Global Signals,
+Clock Signals, Clear Signals, Synchronous Load Signals, and Synchronous Clear Signals
+Sections of this Report File for information on which signals' fan-outs are used as
+Clock, Clear, Preset, Output Enable, and synchronous Load signals.
+
+
+Device-Specific Information:                   c:\projects\memory\memory_3.rpt
+memory_3
+
+** OUTPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  18     21    B        TRI      t        0      0   0    2    4    0    0  Q0
+  17     24    B        TRI      t        0      0   0    2    4    0    0  Q1
+  34     51    D        TRI      t        0      0   0    2    4    0    0  Q2
+  16     25    B        TRI      t        0      0   0    2    4    0    0  Q3
+  14     30    B        TRI      t        0      0   0    2    4    0    0  Q4
+  13     32    B        TRI      t        0      0   0    2    4    0    0  Q5
+  36     52    D        TRI      t        0      0   0    2    4    0    0  Q6
+  21     17    B        TRI      t        0      0   0    2    4    0    0  Q7
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                   c:\projects\memory\memory_3.rpt
+memory_3
+
+** BURIED LOGIC **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+ (38)    56    D       DFFE      t        0      0   0    4    0    1    0  |74374:15|:13
+  (5)    14    A       DFFE      t        0      0   0    4    0    1    0  |74374:15|:14
+   -     13    A       DFFE      t        0      0   0    4    0    1    0  |74374:15|:15
+   -     15    A       DFFE      t        0      0   0    4    0    1    0  |74374:15|:16
+   -     39    C       DFFE      t        0      0   0    4    0    1    0  |74374:15|:17
+ (32)    48    C       DFFE      t        0      0   0    4    0    1    0  |74374:15|:18
+ (31)    46    C       DFFE      t        0      0   0    4    0    1    0  |74374:15|:19
+   -     45    C       DFFE      t        0      0   0    4    0    1    0  |74374:15|:20
+   -     10    A       DFFE      t        0      0   0    4    0    1    0  |74374:16|:13
+ (12)     1    A       DFFE      t        0      0   0    4    0    1    0  |74374:16|:14
+   -      2    A       DFFE      t        0      0   0    4    0    1    0  |74374:16|:15
+ (11)     3    A       DFFE      t        0      0   0    4    0    1    0  |74374:16|:16
+ (24)    33    C       DFFE      t        0      0   0    4    0    1    0  |74374:16|:17
+   -     34    C       DFFE      t        0      0   0    4    0    1    0  |74374:16|:18
+ (25)    35    C       DFFE      t        0      0   0    4    0    1    0  |74374:16|:19
+ (29)    41    C       DFFE      t        0      0   0    4    0    1    0  |74374:16|:20
+  (9)     4    A       DFFE      t        0      0   0    4    0    1    0  |74374:17|:13
+   -      6    A       DFFE      t        0      0   0    4    0    1    0  |74374:17|:14
+   -      7    A       DFFE      t        0      0   0    4    0    1    0  |74374:17|:15
+  (7)     8    A       DFFE      t        0      0   0    4    0    1    0  |74374:17|:16
+   -     42    C       DFFE      t        0      0   0    4    0    1    0  |74374:17|:17
+   -     44    C       DFFE      t        0      0   0    4    0    1    0  |74374:17|:18
+ (26)    36    C       DFFE      t        0      0   0    4    0    1    0  |74374:17|:19
+ (28)    40    C       DFFE      t        0      0   0    4    0    1    0  |74374:17|:20
+ (33)    49    D       DFFE      t        0      0   0    4    0    1    0  |74374:18|:13
+   -     12    A       DFFE      t        0      0   0    4    0    1    0  |74374:18|:14
+  (6)    11    A       DFFE      t        0      0   0    4    0    1    0  |74374:18|:15
+   -      9    A       DFFE      t        0      0   0    4    0    1    0  |74374:18|:16
+   -     43    C       DFFE      t        0      0   0    4    0    1    0  |74374:18|:17
+   -     38    C       DFFE      t        0      0   0    4    0    1    0  |74374:18|:18
+ (27)    37    C       DFFE      t        0      0   0    4    0    1    0  |74374:18|:19
+   -     47    C       DFFE      t        0      0   0    4    0    1    0  |74374:18|:20
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                   c:\projects\memory\memory_3.rpt
+memory_3
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'A':
+
+                                     Logic cells placed in LAB 'A'
+        +--------------------------- LC14 |74374:15|:14
+        | +------------------------- LC13 |74374:15|:15
+        | | +----------------------- LC15 |74374:15|:16
+        | | | +--------------------- LC10 |74374:16|:13
+        | | | | +------------------- LC1 |74374:16|:14
+        | | | | | +----------------- LC2 |74374:16|:15
+        | | | | | | +--------------- LC3 |74374:16|:16
+        | | | | | | | +------------- LC4 |74374:17|:13
+        | | | | | | | | +----------- LC6 |74374:17|:14
+        | | | | | | | | | +--------- LC7 |74374:17|:15
+        | | | | | | | | | | +------- LC8 |74374:17|:16
+        | | | | | | | | | | | +----- LC12 |74374:18|:14
+        | | | | | | | | | | | | +--- LC11 |74374:18|:15
+        | | | | | | | | | | | | | +- LC9 |74374:18|:16
+        | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | |   that feed LAB 'A'
+LC      | | | | | | | | | | | | | | | A B C D |     Logic cells that feed LAB 'A':
+
+Pin
+12   -> * * * * * * * * * * * * * * | * * * * | <-- A0
+11   -> * * * * * * * * * * * * * * | * * * * | <-- A1
+8    -> - - - * - - - * - - - - - - | * - - * | <-- D0
+4    -> * - - - * - - - * - - * - - | * - - - | <-- D1
+20   -> - * - - - * - - - * - - * - | * - - - | <-- D2
+19   -> - - * - - - * - - - * - - * | * - - - | <-- D3
+44   -> - - - - - - - - - - - - - - | - - - - | <-- rd
+9    -> * * * * * * * * * * * * * * | * - * * | <-- wr
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                   c:\projects\memory\memory_3.rpt
+memory_3
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'B':
+
+                     Logic cells placed in LAB 'B'
+        +----------- LC21 Q0
+        | +--------- LC24 Q1
+        | | +------- LC25 Q3
+        | | | +----- LC30 Q4
+        | | | | +--- LC32 Q5
+        | | | | | +- LC17 Q7
+        | | | | | | 
+        | | | | | |   Other LABs fed by signals
+        | | | | | |   that feed LAB 'B'
+LC      | | | | | | | A B C D |     Logic cells that feed LAB 'B':
+
+Pin
+12   -> * * * * * * | * * * * | <-- A0
+11   -> * * * * * * | * * * * | <-- A1
+44   -> - - - - - - | - - - - | <-- rd
+LC56 -> * - - - - - | - * - - | <-- |74374:15|:13
+LC14 -> - * - - - - | - * - - | <-- |74374:15|:14
+LC15 -> - - * - - - | - * - - | <-- |74374:15|:16
+LC39 -> - - - * - - | - * - - | <-- |74374:15|:17
+LC48 -> - - - - * - | - * - - | <-- |74374:15|:18
+LC45 -> - - - - - * | - * - - | <-- |74374:15|:20
+LC10 -> * - - - - - | - * - - | <-- |74374:16|:13
+LC1  -> - * - - - - | - * - - | <-- |74374:16|:14
+LC3  -> - - * - - - | - * - - | <-- |74374:16|:16
+LC33 -> - - - * - - | - * - - | <-- |74374:16|:17
+LC34 -> - - - - * - | - * - - | <-- |74374:16|:18
+LC41 -> - - - - - * | - * - - | <-- |74374:16|:20
+LC4  -> * - - - - - | - * - - | <-- |74374:17|:13
+LC6  -> - * - - - - | - * - - | <-- |74374:17|:14
+LC8  -> - - * - - - | - * - - | <-- |74374:17|:16
+LC42 -> - - - * - - | - * - - | <-- |74374:17|:17
+LC44 -> - - - - * - | - * - - | <-- |74374:17|:18
+LC40 -> - - - - - * | - * - - | <-- |74374:17|:20
+LC49 -> * - - - - - | - * - - | <-- |74374:18|:13
+LC12 -> - * - - - - | - * - - | <-- |74374:18|:14
+LC9  -> - - * - - - | - * - - | <-- |74374:18|:16
+LC43 -> - - - * - - | - * - - | <-- |74374:18|:17
+LC38 -> - - - - * - | - * - - | <-- |74374:18|:18
+LC47 -> - - - - - * | - * - - | <-- |74374:18|:20
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                   c:\projects\memory\memory_3.rpt
+memory_3
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'C':
+
+                                         Logic cells placed in LAB 'C'
+        +------------------------------- LC39 |74374:15|:17
+        | +----------------------------- LC48 |74374:15|:18
+        | | +--------------------------- LC46 |74374:15|:19
+        | | | +------------------------- LC45 |74374:15|:20
+        | | | | +----------------------- LC33 |74374:16|:17
+        | | | | | +--------------------- LC34 |74374:16|:18
+        | | | | | | +------------------- LC35 |74374:16|:19
+        | | | | | | | +----------------- LC41 |74374:16|:20
+        | | | | | | | | +--------------- LC42 |74374:17|:17
+        | | | | | | | | | +------------- LC44 |74374:17|:18
+        | | | | | | | | | | +----------- LC36 |74374:17|:19
+        | | | | | | | | | | | +--------- LC40 |74374:17|:20
+        | | | | | | | | | | | | +------- LC43 |74374:18|:17
+        | | | | | | | | | | | | | +----- LC38 |74374:18|:18
+        | | | | | | | | | | | | | | +--- LC37 |74374:18|:19
+        | | | | | | | | | | | | | | | +- LC47 |74374:18|:20
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'C'
+LC      | | | | | | | | | | | | | | | | | A B C D |     Logic cells that feed LAB 'C':
+
+Pin
+12   -> * * * * * * * * * * * * * * * * | * * * * | <-- A0
+11   -> * * * * * * * * * * * * * * * * | * * * * | <-- A1
+5    -> * - - - * - - - * - - - * - - - | - - * - | <-- D4
+6    -> - * - - - * - - - * - - - * - - | - - * - | <-- D5
+24   -> - - * - - - * - - - * - - - * - | - - * - | <-- D6
+7    -> - - - * - - - * - - - * - - - * | - - * - | <-- D7
+44   -> - - - - - - - - - - - - - - - - | - - - - | <-- rd
+9    -> * * * * * * * * * * * * * * * * | * - * * | <-- wr
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                   c:\projects\memory\memory_3.rpt
+memory_3
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'D':
+
+                 Logic cells placed in LAB 'D'
+        +------- LC51 Q2
+        | +----- LC52 Q6
+        | | +--- LC56 |74374:15|:13
+        | | | +- LC49 |74374:18|:13
+        | | | | 
+        | | | |   Other LABs fed by signals
+        | | | |   that feed LAB 'D'
+LC      | | | | | A B C D |     Logic cells that feed LAB 'D':
+
+Pin
+12   -> * * * * | * * * * | <-- A0
+11   -> * * * * | * * * * | <-- A1
+8    -> - - * * | * - - * | <-- D0
+44   -> - - - - | - - - - | <-- rd
+9    -> - - * * | * - * * | <-- wr
+LC13 -> * - - - | - - - * | <-- |74374:15|:15
+LC46 -> - * - - | - - - * | <-- |74374:15|:19
+LC2  -> * - - - | - - - * | <-- |74374:16|:15
+LC35 -> - * - - | - - - * | <-- |74374:16|:19
+LC7  -> * - - - | - - - * | <-- |74374:17|:15
+LC36 -> - * - - | - - - * | <-- |74374:17|:19
+LC11 -> * - - - | - - - * | <-- |74374:18|:15
+LC37 -> - * - - | - - - * | <-- |74374:18|:19
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                   c:\projects\memory\memory_3.rpt
+memory_3
+
+** EQUATIONS **
+
+A0       : INPUT;
+A1       : INPUT;
+D0       : INPUT;
+D1       : INPUT;
+D2       : INPUT;
+D3       : INPUT;
+D4       : INPUT;
+D5       : INPUT;
+D6       : INPUT;
+D7       : INPUT;
+rd       : INPUT;
+wr       : INPUT;
+
+-- Node name is 'Q0' 
+-- Equation name is 'Q0', location is LC021, type is output.
+Q0       = TRI(_LC021, GLOBAL(!rd));
+_LC021   = LCELL( _EQ001 $  VCC);
+  _EQ001 =  A0 &  A1 & !_LC049
+         # !A0 &  A1 & !_LC004
+         #  A0 & !A1 & !_LC010
+         # !A0 & !A1 & !_LC056;
+
+-- Node name is 'Q1' 
+-- Equation name is 'Q1', location is LC024, type is output.
+Q1       = TRI(_LC024, GLOBAL(!rd));
+_LC024   = LCELL( _EQ002 $  VCC);
+  _EQ002 =  A0 &  A1 & !_LC012
+         # !A0 &  A1 & !_LC006
+         #  A0 & !A1 & !_LC001
+         # !A0 & !A1 & !_LC014;
+
+-- Node name is 'Q2' 
+-- Equation name is 'Q2', location is LC051, type is output.
+Q2       = TRI(_LC051, GLOBAL(!rd));
+_LC051   = LCELL( _EQ003 $  VCC);
+  _EQ003 =  A0 &  A1 & !_LC011
+         # !A0 &  A1 & !_LC007
+         #  A0 & !A1 & !_LC002
+         # !A0 & !A1 & !_LC013;
+
+-- Node name is 'Q3' 
+-- Equation name is 'Q3', location is LC025, type is output.
+Q3       = TRI(_LC025, GLOBAL(!rd));
+_LC025   = LCELL( _EQ004 $  VCC);
+  _EQ004 =  A0 &  A1 & !_LC009
+         # !A0 &  A1 & !_LC008
+         #  A0 & !A1 & !_LC003
+         # !A0 & !A1 & !_LC015;
+
+-- Node name is 'Q4' 
+-- Equation name is 'Q4', location is LC030, type is output.
+Q4       = TRI(_LC030, GLOBAL(!rd));
+_LC030   = LCELL( _EQ005 $  VCC);
+  _EQ005 =  A0 &  A1 & !_LC043
+         # !A0 &  A1 & !_LC042
+         #  A0 & !A1 & !_LC033
+         # !A0 & !A1 & !_LC039;
+
+-- Node name is 'Q5' 
+-- Equation name is 'Q5', location is LC032, type is output.
+Q5       = TRI(_LC032, GLOBAL(!rd));
+_LC032   = LCELL( _EQ006 $  VCC);
+  _EQ006 =  A0 &  A1 & !_LC038
+         # !A0 &  A1 & !_LC044
+         #  A0 & !A1 & !_LC034
+         # !A0 & !A1 & !_LC048;
+
+-- Node name is 'Q6' 
+-- Equation name is 'Q6', location is LC052, type is output.
+Q6       = TRI(_LC052, GLOBAL(!rd));
+_LC052   = LCELL( _EQ007 $  VCC);
+  _EQ007 =  A0 &  A1 & !_LC037
+         # !A0 &  A1 & !_LC036
+         #  A0 & !A1 & !_LC035
+         # !A0 & !A1 & !_LC046;
+
+-- Node name is 'Q7' 
+-- Equation name is 'Q7', location is LC017, type is output.
+Q7       = TRI(_LC017, GLOBAL(!rd));
+_LC017   = LCELL( _EQ008 $  VCC);
+  _EQ008 =  A0 &  A1 & !_LC047
+         # !A0 &  A1 & !_LC040
+         #  A0 & !A1 & !_LC041
+         # !A0 & !A1 & !_LC045;
+
+-- Node name is '|74374:15|:13' 
+-- Equation name is '_LC056', type is buried 
+_LC056   = DFFE( D0 $  GND,  _EQ009,  VCC,  VCC,  VCC);
+  _EQ009 = !A0 & !A1 & !wr;
+
+-- Node name is '|74374:15|:14' 
+-- Equation name is '_LC014', type is buried 
+_LC014   = DFFE( D1 $  GND,  _EQ010,  VCC,  VCC,  VCC);
+  _EQ010 = !A0 & !A1 & !wr;
+
+-- Node name is '|74374:15|:15' 
+-- Equation name is '_LC013', type is buried 
+_LC013   = DFFE( D2 $  GND,  _EQ011,  VCC,  VCC,  VCC);
+  _EQ011 = !A0 & !A1 & !wr;
+
+-- Node name is '|74374:15|:16' 
+-- Equation name is '_LC015', type is buried 
+_LC015   = DFFE( D3 $  GND,  _EQ012,  VCC,  VCC,  VCC);
+  _EQ012 = !A0 & !A1 & !wr;
+
+-- Node name is '|74374:15|:17' 
+-- Equation name is '_LC039', type is buried 
+_LC039   = DFFE( D4 $  GND,  _EQ013,  VCC,  VCC,  VCC);
+  _EQ013 = !A0 & !A1 & !wr;
+
+-- Node name is '|74374:15|:18' 
+-- Equation name is '_LC048', type is buried 
+_LC048   = DFFE( D5 $  GND,  _EQ014,  VCC,  VCC,  VCC);
+  _EQ014 = !A0 & !A1 & !wr;
+
+-- Node name is '|74374:15|:19' 
+-- Equation name is '_LC046', type is buried 
+_LC046   = DFFE( D6 $  GND,  _EQ015,  VCC,  VCC,  VCC);
+  _EQ015 = !A0 & !A1 & !wr;
+
+-- Node name is '|74374:15|:20' 
+-- Equation name is '_LC045', type is buried 
+_LC045   = DFFE( D7 $  GND,  _EQ016,  VCC,  VCC,  VCC);
+  _EQ016 = !A0 & !A1 & !wr;
+
+-- Node name is '|74374:16|:13' 
+-- Equation name is '_LC010', type is buried 
+_LC010   = DFFE( D0 $  GND,  _EQ017,  VCC,  VCC,  VCC);
+  _EQ017 =  A0 & !A1 & !wr;
+
+-- Node name is '|74374:16|:14' 
+-- Equation name is '_LC001', type is buried 
+_LC001   = DFFE( D1 $  GND,  _EQ018,  VCC,  VCC,  VCC);
+  _EQ018 =  A0 & !A1 & !wr;
+
+-- Node name is '|74374:16|:15' 
+-- Equation name is '_LC002', type is buried 
+_LC002   = DFFE( D2 $  GND,  _EQ019,  VCC,  VCC,  VCC);
+  _EQ019 =  A0 & !A1 & !wr;
+
+-- Node name is '|74374:16|:16' 
+-- Equation name is '_LC003', type is buried 
+_LC003   = DFFE( D3 $  GND,  _EQ020,  VCC,  VCC,  VCC);
+  _EQ020 =  A0 & !A1 & !wr;
+
+-- Node name is '|74374:16|:17' 
+-- Equation name is '_LC033', type is buried 
+_LC033   = DFFE( D4 $  GND,  _EQ021,  VCC,  VCC,  VCC);
+  _EQ021 =  A0 & !A1 & !wr;
+
+-- Node name is '|74374:16|:18' 
+-- Equation name is '_LC034', type is buried 
+_LC034   = DFFE( D5 $  GND,  _EQ022,  VCC,  VCC,  VCC);
+  _EQ022 =  A0 & !A1 & !wr;
+
+-- Node name is '|74374:16|:19' 
+-- Equation name is '_LC035', type is buried 
+_LC035   = DFFE( D6 $  GND,  _EQ023,  VCC,  VCC,  VCC);
+  _EQ023 =  A0 & !A1 & !wr;
+
+-- Node name is '|74374:16|:20' 
+-- Equation name is '_LC041', type is buried 
+_LC041   = DFFE( D7 $  GND,  _EQ024,  VCC,  VCC,  VCC);
+  _EQ024 =  A0 & !A1 & !wr;
+
+-- Node name is '|74374:17|:13' 
+-- Equation name is '_LC004', type is buried 
+_LC004   = DFFE( D0 $  GND,  _EQ025,  VCC,  VCC,  VCC);
+  _EQ025 = !A0 &  A1 & !wr;
+
+-- Node name is '|74374:17|:14' 
+-- Equation name is '_LC006', type is buried 
+_LC006   = DFFE( D1 $  GND,  _EQ026,  VCC,  VCC,  VCC);
+  _EQ026 = !A0 &  A1 & !wr;
+
+-- Node name is '|74374:17|:15' 
+-- Equation name is '_LC007', type is buried 
+_LC007   = DFFE( D2 $  GND,  _EQ027,  VCC,  VCC,  VCC);
+  _EQ027 = !A0 &  A1 & !wr;
+
+-- Node name is '|74374:17|:16' 
+-- Equation name is '_LC008', type is buried 
+_LC008   = DFFE( D3 $  GND,  _EQ028,  VCC,  VCC,  VCC);
+  _EQ028 = !A0 &  A1 & !wr;
+
+-- Node name is '|74374:17|:17' 
+-- Equation name is '_LC042', type is buried 
+_LC042   = DFFE( D4 $  GND,  _EQ029,  VCC,  VCC,  VCC);
+  _EQ029 = !A0 &  A1 & !wr;
+
+-- Node name is '|74374:17|:18' 
+-- Equation name is '_LC044', type is buried 
+_LC044   = DFFE( D5 $  GND,  _EQ030,  VCC,  VCC,  VCC);
+  _EQ030 = !A0 &  A1 & !wr;
+
+-- Node name is '|74374:17|:19' 
+-- Equation name is '_LC036', type is buried 
+_LC036   = DFFE( D6 $  GND,  _EQ031,  VCC,  VCC,  VCC);
+  _EQ031 = !A0 &  A1 & !wr;
+
+-- Node name is '|74374:17|:20' 
+-- Equation name is '_LC040', type is buried 
+_LC040   = DFFE( D7 $  GND,  _EQ032,  VCC,  VCC,  VCC);
+  _EQ032 = !A0 &  A1 & !wr;
+
+-- Node name is '|74374:18|:13' 
+-- Equation name is '_LC049', type is buried 
+_LC049   = DFFE( D0 $  GND,  _EQ033,  VCC,  VCC,  VCC);
+  _EQ033 =  A0 &  A1 & !wr;
+
+-- Node name is '|74374:18|:14' 
+-- Equation name is '_LC012', type is buried 
+_LC012   = DFFE( D1 $  GND,  _EQ034,  VCC,  VCC,  VCC);
+  _EQ034 =  A0 &  A1 & !wr;
+
+-- Node name is '|74374:18|:15' 
+-- Equation name is '_LC011', type is buried 
+_LC011   = DFFE( D2 $  GND,  _EQ035,  VCC,  VCC,  VCC);
+  _EQ035 =  A0 &  A1 & !wr;
+
+-- Node name is '|74374:18|:16' 
+-- Equation name is '_LC009', type is buried 
+_LC009   = DFFE( D3 $  GND,  _EQ036,  VCC,  VCC,  VCC);
+  _EQ036 =  A0 &  A1 & !wr;
+
+-- Node name is '|74374:18|:17' 
+-- Equation name is '_LC043', type is buried 
+_LC043   = DFFE( D4 $  GND,  _EQ037,  VCC,  VCC,  VCC);
+  _EQ037 =  A0 &  A1 & !wr;
+
+-- Node name is '|74374:18|:18' 
+-- Equation name is '_LC038', type is buried 
+_LC038   = DFFE( D5 $  GND,  _EQ038,  VCC,  VCC,  VCC);
+  _EQ038 =  A0 &  A1 & !wr;
+
+-- Node name is '|74374:18|:19' 
+-- Equation name is '_LC037', type is buried 
+_LC037   = DFFE( D6 $  GND,  _EQ039,  VCC,  VCC,  VCC);
+  _EQ039 =  A0 &  A1 & !wr;
+
+-- Node name is '|74374:18|:20' 
+-- Equation name is '_LC047', type is buried 
+_LC047   = DFFE( D7 $  GND,  _EQ040,  VCC,  VCC,  VCC);
+  _EQ040 =  A0 &  A1 & !wr;
+
+
+
+--     Shareable expanders that are duplicated in multiple LABs:
+--     (none)
+
+
+
+
+Project Information                            c:\projects\memory\memory_3.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Standard
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'MAX7000' family
+
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      PARALLEL_EXPANDERS                  = off
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SOFT_BUFFER_INSERTION               = on
+      SUBFACTOR_EXTRACTION                = on
+      TURBO_BIT                           = on
+      XOR_SYNTHESIS                       = on
+      IGNORE_SOFT_BUFFERS                 = off
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      One-Hot State Machine Encoding      = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:00
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 3,528K

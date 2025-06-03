@@ -1,0 +1,20 @@
+|p3_4bitcounter
+q3 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+r => inst7.ACLR
+r => inst5.ACLR
+r => inst4.ACLR
+r => inst.ACLR
+jk => inst7~1.IN0
+jk => inst7~0.IN1
+jk => inst5~1.IN0
+jk => inst5~0.IN1
+jk => inst4~1.IN0
+jk => inst4~0.IN1
+jk => inst~1.IN0
+jk => inst~0.IN1
+c => inst.CLK
+q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+q1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+

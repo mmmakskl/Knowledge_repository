@@ -1,0 +1,28 @@
+|CD_p
+d[0] => k1~0.IN1
+d[0] => k2~0.IN0
+d[0] => d_o~2.IN0
+d[0] => d_o[2].DATAIN
+d[1] => k1~0.IN0
+d[1] => k3~0.IN0
+d[1] => d_o~3.IN0
+d[1] => d_o[4].DATAIN
+d[2] => k2~0.IN1
+d[2] => k3~0.IN1
+d[2] => d_o~4.IN0
+d[2] => d_o[5].DATAIN
+d[3] => k1~1.IN0
+d[3] => k2~1.IN0
+d[3] => k3~1.IN0
+d[3] => d_o~5.IN0
+d[3] => d_o[6].DATAIN
+d_o[0] <= k1~1.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= k2~1.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= k3~1.DB_MAX_OUTPUT_PORT_TYPE
+d_o[4] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+d_o[5] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+d_o[6] <= d[3].DB_MAX_OUTPUT_PORT_TYPE
+d_o[7] <= d_o~5.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,152 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L01 is q1~10 at LC_X46_Y1_N5
+--operation mode is normal
+
+A1L5Q_qfbk = A1L5Q;
+A1L01 = read & A1L5Q_qfbk;
+
+--A1L5Q is d11~reg0 at LC_X46_Y1_N5
+--operation mode is normal
+
+A1L5Q = DFFEAS(A1L01, GLOBAL(write), VCC, , reset, x1, , , VCC);
+
+
+--A1L21 is q2~10 at LC_X46_Y1_N2
+--operation mode is normal
+
+d2_qfbk = d2;
+A1L21 = read & d2_qfbk;
+
+--d2 is d2 at LC_X46_Y1_N2
+--operation mode is normal
+
+d2 = DFFEAS(A1L21, GLOBAL(write), VCC, , reset, x2, , , VCC);
+
+
+--A1L41 is q3~10 at LC_X46_Y1_N6
+--operation mode is normal
+
+d3_qfbk = d3;
+A1L41 = read & d3_qfbk;
+
+--d3 is d3 at LC_X46_Y1_N6
+--operation mode is normal
+
+d3 = DFFEAS(A1L41, GLOBAL(write), VCC, , reset, x3, , , VCC);
+
+
+--A1L61 is q4~10 at LC_X46_Y1_N8
+--operation mode is normal
+
+d4_qfbk = d4;
+A1L61 = read & d4_qfbk;
+
+--d4 is d4 at LC_X46_Y1_N8
+--operation mode is normal
+
+d4 = DFFEAS(A1L61, GLOBAL(write), VCC, , reset, x4, , , VCC);
+
+
+--read is read at PIN_W7
+--operation mode is input
+
+read = INPUT();
+
+
+--x1 is x1 at PIN_AA5
+--operation mode is input
+
+x1 = INPUT();
+
+
+--write is write at PIN_L2
+--operation mode is input
+
+write = INPUT();
+
+
+--reset is reset at PIN_Y6
+--operation mode is input
+
+reset = INPUT();
+
+
+--x2 is x2 at PIN_U7
+--operation mode is input
+
+x2 = INPUT();
+
+
+--x3 is x3 at PIN_V6
+--operation mode is input
+
+x3 = INPUT();
+
+
+--x4 is x4 at PIN_AB6
+--operation mode is input
+
+x4 = INPUT();
+
+
+--d11 is d11 at PIN_AA6
+--operation mode is output
+
+d11 = OUTPUT(A1L5Q);
+
+
+--d22 is d22 at PIN_U6
+--operation mode is output
+
+d22 = OUTPUT(d2);
+
+
+--d33 is d33 at PIN_V5
+--operation mode is output
+
+d33 = OUTPUT(d3);
+
+
+--d44 is d44 at PIN_V7
+--operation mode is output
+
+d44 = OUTPUT(d4);
+
+
+--q1 is q1 at PIN_W6
+--operation mode is output
+
+q1 = OUTPUT(A1L01);
+
+
+--q2 is q2 at PIN_AB7
+--operation mode is output
+
+q2 = OUTPUT(A1L21);
+
+
+--q3 is q3 at PIN_Y7
+--operation mode is output
+
+q3 = OUTPUT(A1L41);
+
+
+--q4 is q4 at PIN_AB5
+--operation mode is output
+
+q4 = OUTPUT(A1L61);
+
+
+

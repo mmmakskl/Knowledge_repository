@@ -1,0 +1,23 @@
+# //  ModelSim SE 6.1c Nov 17 2005 
+# //
+# //  Copyright Mentor Graphics Corporation 2005
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -L quicksort_lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit C:/FPGAdv72LS/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli C:/FPGAdv72LS/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll quicksort_lib.verilog_qs_tb 
+# Loading C:/FPGAdv72LS/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading Z:\4th_semestr\quicksort_best_try/quicksort_lib/work.verilog_qs_tb
+# Loading Z:\4th_semestr\quicksort_best_try/quicksort_lib/work.verilog_qs
+# ** Warning: (vsim-3009) [TSCALE] - Module 'verilog_qs' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /verilog_qs_tb/U_0
+# Loading Z:\4th_semestr\quicksort_best_try/quicksort_lib/work.verilog_qs_tester
+view -new wave
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+run
+run
+# 0
+# 

@@ -1,0 +1,825 @@
+Project Information                         c:\projects\alu\par_8digit_alu.rpt
+
+MAX+plus II Compiler Report File
+Version 9.01 07/30/98
+Compiled: 12/17/20 15:16:51
+
+Copyright (C) 1988-1998 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input   Output   Bidir         Shareable
+POF       Device          Pins    Pins     Pins     LCs  Expanders  % Utilized
+
+par_8digit_alu
+      EPM7064LC44-7        22       11       0      33      21          51 %
+
+User Pins:                 22       11       0  
+
+
+
+Project Information                         c:\projects\alu\par_8digit_alu.rpt
+
+** PROJECT COMPILATION MESSAGES **
+
+Warning: Primitive 'GN' is stuck at GND
+
+
+Project Information                         c:\projects\alu\par_8digit_alu.rpt
+
+** FILE HIERARCHY **
+
+
+
+|74181:36|
+|74181:35|
+|74182:1|
+
+
+Device-Specific Information:                c:\projects\alu\par_8digit_alu.rpt
+par_8digit_alu
+
+***** Logic for device 'par_8digit_alu' compiled without errors.
+
+
+
+
+Device: EPM7064LC44-7
+
+Device Options:
+    Turbo Bit                                    = ON
+    Security Bit                                 = OFF
+
+
+
+Device-Specific Information:                c:\projects\alu\par_8digit_alu.rpt
+par_8digit_alu
+
+** ERROR SUMMARY **
+
+Info: Chip 'par_8digit_alu' in device 'EPM7064LC44-7' has less than 20% of pins available for future logic changes -- if your project is likely to change, Altera recommends using a larger device
+                                               
+                                               
+                                               
+                                               
+                                               
+                 B  B  V  B  A     G  G  B  F  
+              C  5  6  C  1  2  S  N  N  0  7  
+              N  N  N  C  N  N  2  D  D  N  N  
+            -----------------------------------_ 
+          /   6  5  4  3  2  1 44 43 42 41 40   | 
+       M |  7                                39 | A6N 
+      S3 |  8                                38 | RESERVED 
+      S0 |  9                                37 | PN 
+     GND | 10                                36 | F6N 
+      S1 | 11                                35 | VCC 
+RESERVED | 12         EPM7064LC44-7          34 | F5N 
+     A3N | 13                                33 | CN8 
+     A5N | 14                                32 | F4N 
+     VCC | 15                                31 | F1N 
+     A4N | 16                                30 | GND 
+     B2N | 17                                29 | F2N 
+         |_  18 19 20 21 22 23 24 25 26 27 28  _| 
+           ------------------------------------ 
+              B  B  A  G  G  V  F  F  A  A  B  
+              3  4  0  N  N  C  0  3  7  1  7  
+              N  N  N     D  C  N  N  N  N  N  
+                                               
+                                               
+                                               
+                                               
+                                               
+
+
+N.C. = Not Connected.
+VCC = Dedicated power pin, which MUST be connected to VCC.
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+
+
+Device-Specific Information:                c:\projects\alu\par_8digit_alu.rpt
+par_8digit_alu
+
+** RESOURCE USAGE **
+
+                                                Shareable     External
+Logic Array Block     Logic Cells   I/O Pins    Expanders   Interconnect
+
+A:     LC1 - LC16     0/16(  0%)   7/ 8( 87%)   0/16(  0%)   0/36(  0%) 
+B:    LC17 - LC32     1/16(  6%)   8/ 8(100%)   0/16(  0%)   0/36(  0%) 
+C:    LC33 - LC48    16/16(100%)   8/ 8(100%)  10/16( 62%)  29/36( 80%) 
+D:    LC49 - LC64    16/16(100%)   7/ 8( 87%)  15/16( 93%)  31/36( 86%) 
+
+
+Total dedicated input pins used:                 3/4      ( 75%)
+Total I/O pins used:                            30/32     ( 93%)
+Total logic cells used:                         33/64     ( 51%)
+Total shareable expanders used:                 21/64     ( 32%)
+Total Turbo logic cells used:                   33/64     ( 51%)
+Total shareable expanders not available (n/a):   4/64     (  6%)
+Average fan-in:                                  6.27
+Total fan-in:                                   207
+
+Total input pins required:                      22
+Total output pins required:                     11
+Total bidirectional pins required:               0
+Total logic cells required:                     33
+Total flipflops required:                        0
+Total product terms required:                  122
+Total logic cells lending parallel expanders:    0
+Total shareable expanders in database:          21
+
+Synthesized logic cells:                         0/  64   (  0%)
+
+
+
+Device-Specific Information:                c:\projects\alu\par_8digit_alu.rpt
+par_8digit_alu
+
+** INPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  20   (19)  (B)      INPUT               0      0   0    0    0    0    2  A0N
+  27   (37)  (C)      INPUT               0      0   0    0    0    1    2  A1N
+   1      -   -       INPUT               0      0   0    0    0    1    2  A2N
+  13   (32)  (B)      INPUT               0      0   0    0    0    1    2  A3N
+  16   (25)  (B)      INPUT               0      0   0    0    0    0    2  A4N
+  14   (30)  (B)      INPUT               0      0   0    0    0    1    2  A5N
+  39   (57)  (D)      INPUT               0      0   0    0    0    1    2  A6N
+  26   (36)  (C)      INPUT               0      0   0    0    0    1    2  A7N
+  41   (64)  (D)      INPUT               0      0   0    0    0    0    2  B0N
+   2      -   -       INPUT               0      0   0    0    0    1    2  B1N
+  17   (24)  (B)      INPUT               0      0   0    0    0    1    2  B2N
+  18   (21)  (B)      INPUT               0      0   0    0    0    1    2  B3N
+  19   (20)  (B)      INPUT               0      0   0    0    0    0    2  B4N
+   5   (14)  (A)      INPUT               0      0   0    0    0    1    2  B5N
+   4   (16)  (A)      INPUT               0      0   0    0    0    1    2  B6N
+  28   (40)  (C)      INPUT               0      0   0    0    0    1    2  B7N
+   6   (11)  (A)      INPUT               0      0   0    0    0    3    6  CN
+   7    (8)  (A)      INPUT               0      0   0    0    0    2    6  M
+   9    (4)  (A)      INPUT               0      0   0    0    0    0    8  S0
+  11    (3)  (A)      INPUT               0      0   0    0    0    0    8  S1
+  44      -   -       INPUT               0      0   0    0    0    6    8  S2
+   8    (5)  (A)      INPUT               0      0   0    0    0    6    8  S3
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                c:\projects\alu\par_8digit_alu.rpt
+par_8digit_alu
+
+** OUTPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  33     49    D     OUTPUT      t        6      0   1    1   16    0    0  CN8
+  24     33    C     OUTPUT      t        0      0   0    2    2    0    0  F0N
+  31     46    C     OUTPUT      t        0      0   0    4    3    0    0  F1N
+  29     41    C     OUTPUT      t        0      0   0    4    3    0    0  F2N
+  25     35    C     OUTPUT      t        0      0   0    4    3    0    0  F3N
+  32     48    C     OUTPUT      t        7      0   0    2   10    0    0  F4N
+  34     51    D     OUTPUT      t        0      0   0    4    3    0    0  F5N
+  36     52    D     OUTPUT      t        0      0   0    4    3    0    0  F6N
+  40     62    D     OUTPUT      t        0      0   0    4    3    0    0  F7N
+  21     17    B     OUTPUT      t        0      0   0    0    0    0    0  GN
+  37     53    D     OUTPUT      t        0      0   0    0    8    0    0  PN
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                c:\projects\alu\par_8digit_alu.rpt
+par_8digit_alu
+
+** BURIED LOGIC **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+ (28)    40    C       SOFT      t        0      0   0    4    0    3    6  |74181:35|:37
+   -     38    C       SOFT      t        0      0   0    4    0    4    6  |74181:35|:38
+ (27)    37    C       SOFT      t        0      0   0    4    0    3    5  |74181:35|:39
+   -     34    C       SOFT      t        0      0   0    4    0    4    5  |74181:35|:40
+   -     39    C       SOFT      t        0      0   0    4    0    3    4  |74181:35|:41
+   -     45    C       SOFT      t        0      0   0    4    0    4    4  |74181:35|:42
+   -     44    C       SOFT      t        0      0   0    4    0    4    3  |74181:35|:49
+   -     42    C       SOFT      t        0      0   0    4    0    3    3  |74181:35|:50
+   -     63    D       SOFT      t        0      0   0    2    6    1    0  |74181:35|:76
+   -     61    D       SOFT      t        0      0   0    2    2    1    0  |74181:35|:88
+   -     60    D       SOFT      t        0      0   0    2    4    1    0  |74181:35|:89
+   -     47    C       SOFT      t        0      0   0    4    0    2    3  |74181:36|:37
+ (26)    36    C       SOFT      t        0      0   0    4    0    3    3  |74181:36|:38
+   -     59    D       SOFT      t        0      0   0    4    0    2    2  |74181:36|:39
+   -     58    D       SOFT      t        0      0   0    4    0    3    2  |74181:36|:40
+ (39)    57    D       SOFT      t        0      0   0    4    0    2    1  |74181:36|:41
+ (41)    64    D       SOFT      t        0      0   0    4    0    3    1  |74181:36|:42
+ (38)    56    D       SOFT      t        0      0   0    4    0    3    0  |74181:36|:49
+   -     55    D       SOFT      t        0      0   0    4    0    2    0  |74181:36|:50
+   -     54    D       SOFT      t        5      0   1    2   14    1    0  |74181:36|:76
+   -     43    C       SOFT      t        3      0   1    2   10    1    0  |74181:36|:88
+   -     50    D       SOFT      t        4      0   1    2   12    1    0  |74181:36|:89
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                c:\projects\alu\par_8digit_alu.rpt
+par_8digit_alu
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'B':
+
+           Logic cells placed in LAB 'B'
+        +- LC17 GN
+        | 
+        |   Other LABs fed by signals
+        |   that feed LAB 'B'
+LC      | | A B C D |     Logic cells that feed LAB 'B':
+
+Pin
+1    -> - | - - * - | <-- A2N
+2    -> - | - - * - | <-- B1N
+44   -> - | - - * * | <-- S2
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                c:\projects\alu\par_8digit_alu.rpt
+par_8digit_alu
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'C':
+
+                                         Logic cells placed in LAB 'C'
+        +------------------------------- LC33 F0N
+        | +----------------------------- LC46 F1N
+        | | +--------------------------- LC41 F2N
+        | | | +------------------------- LC35 F3N
+        | | | | +----------------------- LC48 F4N
+        | | | | | +--------------------- LC40 |74181:35|:37
+        | | | | | | +------------------- LC38 |74181:35|:38
+        | | | | | | | +----------------- LC37 |74181:35|:39
+        | | | | | | | | +--------------- LC34 |74181:35|:40
+        | | | | | | | | | +------------- LC39 |74181:35|:41
+        | | | | | | | | | | +----------- LC45 |74181:35|:42
+        | | | | | | | | | | | +--------- LC44 |74181:35|:49
+        | | | | | | | | | | | | +------- LC42 |74181:35|:50
+        | | | | | | | | | | | | | +----- LC47 |74181:36|:37
+        | | | | | | | | | | | | | | +--- LC36 |74181:36|:38
+        | | | | | | | | | | | | | | | +- LC43 |74181:36|:88
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'C'
+LC      | | | | | | | | | | | | | | | | | A B C D |     Logic cells that feed LAB 'C':
+LC40 -> * - - - * - - - - - - - - - - * | - - * * | <-- |74181:35|:37
+LC38 -> * - - - * - - - - - - - - - - * | - - * * | <-- |74181:35|:38
+LC37 -> - * - - * - - - - - - - - - - * | - - * * | <-- |74181:35|:39
+LC34 -> - * - - * - - - - - - - - - - * | - - * * | <-- |74181:35|:40
+LC39 -> - - * - * - - - - - - - - - - * | - - * * | <-- |74181:35|:41
+LC45 -> - - * - * - - - - - - - - - - * | - - * * | <-- |74181:35|:42
+LC44 -> - - - * * - - - - - - - - - - * | - - * * | <-- |74181:35|:49
+LC42 -> - - - * * - - - - - - - - - - * | - - * * | <-- |74181:35|:50
+LC47 -> - - - - * - - - - - - - - - - * | - - * * | <-- |74181:36|:37
+LC36 -> - - - - * - - - - - - - - - - * | - - * * | <-- |74181:36|:38
+
+Pin
+20   -> - - - - - * * - - - - - - - - - | - - * - | <-- A0N
+27   -> - * - - - - - * * - - - - - - - | - - * - | <-- A1N
+1    -> - - * - - - - - - * * - - - - - | - - * - | <-- A2N
+13   -> - - - * - - - - - - - * * - - - | - - * - | <-- A3N
+16   -> - - - - - - - - - - - - - * * - | - - * - | <-- A4N
+41   -> - - - - - * * - - - - - - - - - | - - * - | <-- B0N
+2    -> - * - - - - - * * - - - - - - - | - - * - | <-- B1N
+17   -> - - * - - - - - - * * - - - - - | - - * - | <-- B2N
+18   -> - - - * - - - - - - - * * - - - | - - * - | <-- B3N
+19   -> - - - - - - - - - - - - - * * - | - - * - | <-- B4N
+6    -> * - - - * - - - - - - - - - - * | - - * * | <-- CN
+7    -> * - - - * - - - - - - - - - - * | - - * * | <-- M
+9    -> - - - - - * - * - * - - * * - - | - - * * | <-- S0
+11   -> - - - - - * - * - * - - * * - - | - - * * | <-- S1
+44   -> - * * * - - * - * - * * - - * - | - - * * | <-- S2
+8    -> - * * * - - * - * - * * - - * - | - - * * | <-- S3
+LC63 -> - - - * - - - - - - - - - - - - | - - * - | <-- |74181:35|:76
+LC61 -> - * - - - - - - - - - - - - - - | - - * - | <-- |74181:35|:88
+LC60 -> - - * - - - - - - - - - - - - - | - - * - | <-- |74181:35|:89
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                c:\projects\alu\par_8digit_alu.rpt
+par_8digit_alu
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'D':
+
+                                         Logic cells placed in LAB 'D'
+        +------------------------------- LC49 CN8
+        | +----------------------------- LC51 F5N
+        | | +--------------------------- LC52 F6N
+        | | | +------------------------- LC62 F7N
+        | | | | +----------------------- LC53 PN
+        | | | | | +--------------------- LC63 |74181:35|:76
+        | | | | | | +------------------- LC61 |74181:35|:88
+        | | | | | | | +----------------- LC60 |74181:35|:89
+        | | | | | | | | +--------------- LC59 |74181:36|:39
+        | | | | | | | | | +------------- LC58 |74181:36|:40
+        | | | | | | | | | | +----------- LC57 |74181:36|:41
+        | | | | | | | | | | | +--------- LC64 |74181:36|:42
+        | | | | | | | | | | | | +------- LC56 |74181:36|:49
+        | | | | | | | | | | | | | +----- LC55 |74181:36|:50
+        | | | | | | | | | | | | | | +--- LC54 |74181:36|:76
+        | | | | | | | | | | | | | | | +- LC50 |74181:36|:89
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'D'
+LC      | | | | | | | | | | | | | | | | | A B C D |     Logic cells that feed LAB 'D':
+LC59 -> * * - - - - - - - - - - - - * * | - - - * | <-- |74181:36|:39
+LC58 -> * * - - * - - - - - - - - - * * | - - - * | <-- |74181:36|:40
+LC57 -> * - * - - - - - - - - - - - * - | - - - * | <-- |74181:36|:41
+LC64 -> * - * - * - - - - - - - - - * - | - - - * | <-- |74181:36|:42
+LC56 -> * - - * * - - - - - - - - - - - | - - - * | <-- |74181:36|:49
+LC55 -> * - - * - - - - - - - - - - - - | - - - * | <-- |74181:36|:50
+LC54 -> - - - * - - - - - - - - - - - - | - - - * | <-- |74181:36|:76
+LC50 -> - - * - - - - - - - - - - - - - | - - - * | <-- |74181:36|:89
+
+Pin
+1    -> - - - - - - - - - - - - - - - - | - - * - | <-- A2N
+14   -> - * - - - - - - * * - - - - - - | - - - * | <-- A5N
+39   -> - - * - - - - - - - * * - - - - | - - - * | <-- A6N
+26   -> - - - * - - - - - - - - * * - - | - - - * | <-- A7N
+2    -> - - - - - - - - - - - - - - - - | - - * - | <-- B1N
+5    -> - * - - - - - - * * - - - - - - | - - - * | <-- B5N
+4    -> - - * - - - - - - - * * - - - - | - - - * | <-- B6N
+28   -> - - - * - - - - - - - - * * - - | - - - * | <-- B7N
+6    -> * - - - - * * * - - - - - - * * | - - * * | <-- CN
+7    -> - - - - - * * * - - - - - - * * | - - * * | <-- M
+9    -> - - - - - - - - * - * - - * - - | - - * * | <-- S0
+11   -> - - - - - - - - * - * - - * - - | - - * * | <-- S1
+44   -> - * * * - - - - - * - * * - - - | - - * * | <-- S2
+8    -> - * * * - - - - - * - * * - - - | - - * * | <-- S3
+LC40 -> * - - - - * * * - - - - - - * * | - - * * | <-- |74181:35|:37
+LC38 -> * - - - * * * * - - - - - - * * | - - * * | <-- |74181:35|:38
+LC37 -> * - - - - * - * - - - - - - * * | - - * * | <-- |74181:35|:39
+LC34 -> * - - - * * - * - - - - - - * * | - - * * | <-- |74181:35|:40
+LC39 -> * - - - - * - - - - - - - - * * | - - * * | <-- |74181:35|:41
+LC45 -> * - - - * * - - - - - - - - * * | - - * * | <-- |74181:35|:42
+LC44 -> * - - - * - - - - - - - - - * * | - - * * | <-- |74181:35|:49
+LC42 -> * - - - - - - - - - - - - - * * | - - * * | <-- |74181:35|:50
+LC47 -> * - - - - - - - - - - - - - * * | - - * * | <-- |74181:36|:37
+LC36 -> * - - - * - - - - - - - - - * * | - - * * | <-- |74181:36|:38
+LC43 -> - * - - - - - - - - - - - - - - | - - - * | <-- |74181:36|:88
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                c:\projects\alu\par_8digit_alu.rpt
+par_8digit_alu
+
+** EQUATIONS **
+
+A0N      : INPUT;
+A1N      : INPUT;
+A2N      : INPUT;
+A3N      : INPUT;
+A4N      : INPUT;
+A5N      : INPUT;
+A6N      : INPUT;
+A7N      : INPUT;
+B0N      : INPUT;
+B1N      : INPUT;
+B2N      : INPUT;
+B3N      : INPUT;
+B4N      : INPUT;
+B5N      : INPUT;
+B6N      : INPUT;
+B7N      : INPUT;
+CN       : INPUT;
+M        : INPUT;
+S0       : INPUT;
+S1       : INPUT;
+S2       : INPUT;
+S3       : INPUT;
+
+-- Node name is 'CN8' 
+-- Equation name is 'CN8', location is LC049, type is output.
+ CN8     = LCELL( _EQ001 $  _EQ002);
+  _EQ001 = !CN & !_LC037 & !_LC039 & !_LC040 & !_LC042 & !_LC047 & !_LC055 & 
+             !_LC057 & !_LC059 &  _X001 &  _X002 &  _X003 &  _X004 &  _X005
+         # !_LC037 & !_LC038 & !_LC039 & !_LC040 & !_LC042 & !_LC047 & 
+             !_LC055 & !_LC057 & !_LC059 &  _X001 &  _X002 &  _X003 &  _X004 & 
+              _X005
+         # !_LC034 & !_LC037 & !_LC039 & !_LC042 & !_LC047 & !_LC055 & 
+             !_LC057 & !_LC059 &  _X001 &  _X002 &  _X003 &  _X004 &  _X005
+         # !_LC039 & !_LC042 & !_LC045 & !_LC047 & !_LC055 & !_LC057 & 
+             !_LC059 &  _X001 &  _X002 &  _X003 &  _X004 &  _X005;
+  _X001  = EXP(!_LC042 & !_LC044 & !_LC047 & !_LC055 & !_LC057 & !_LC059);
+  _X002  = EXP(!_LC036 & !_LC047 & !_LC055 & !_LC057 & !_LC059);
+  _X003  = EXP(!_LC055 & !_LC057 & !_LC058 & !_LC059);
+  _X004  = EXP(!_LC055 & !_LC057 & !_LC064);
+  _X005  = EXP(!_LC055 & !_LC056);
+  _EQ002 =  _X001 &  _X002 &  _X003 &  _X004 &  _X005;
+  _X001  = EXP(!_LC042 & !_LC044 & !_LC047 & !_LC055 & !_LC057 & !_LC059);
+  _X002  = EXP(!_LC036 & !_LC047 & !_LC055 & !_LC057 & !_LC059);
+  _X003  = EXP(!_LC055 & !_LC057 & !_LC058 & !_LC059);
+  _X004  = EXP(!_LC055 & !_LC057 & !_LC064);
+  _X005  = EXP(!_LC055 & !_LC056);
+
+-- Node name is 'F0N' 
+-- Equation name is 'F0N', location is LC033, type is output.
+ F0N     = LCELL( _EQ003 $  _LC038);
+  _EQ003 =  CN &  _LC040 & !M
+         # !_LC040 &  M
+         # !CN & !_LC040;
+
+-- Node name is 'F1N' 
+-- Equation name is 'F1N', location is LC046, type is output.
+ F1N     = LCELL( _EQ004 $  _LC061);
+  _EQ004 =  A1N &  B1N &  _LC037 &  S3
+         #  A1N & !B1N &  _LC037 &  S2
+         #  _LC034 & !_LC037;
+
+-- Node name is 'F2N' 
+-- Equation name is 'F2N', location is LC041, type is output.
+ F2N     = LCELL( _EQ005 $  _LC060);
+  _EQ005 =  A2N &  B2N &  _LC039 &  S3
+         #  A2N & !B2N &  _LC039 &  S2
+         # !_LC039 &  _LC045;
+
+-- Node name is 'F3N' 
+-- Equation name is 'F3N', location is LC035, type is output.
+ F3N     = LCELL( _EQ006 $  _LC063);
+  _EQ006 =  A3N &  B3N &  _LC042 &  S3
+         #  A3N & !B3N &  _LC042 &  S2
+         # !_LC042 &  _LC044;
+
+-- Node name is 'F4N' 
+-- Equation name is 'F4N', location is LC048, type is output.
+ F4N     = LCELL( _EQ007 $  _EQ008);
+  _EQ007 =  _X006 &  _X007;
+  _X006  = EXP(!_LC036 &  _LC047);
+  _X007  = EXP( _LC036 & !_LC047);
+  _EQ008 = !M &  _X008 &  _X009 &  _X010 &  _X011 &  _X012;
+  _X008  = EXP(!CN & !_LC037 & !_LC039 & !_LC040 & !_LC042);
+  _X009  = EXP(!_LC037 & !_LC038 & !_LC039 & !_LC040 & !_LC042);
+  _X010  = EXP(!_LC034 & !_LC037 & !_LC039 & !_LC042);
+  _X011  = EXP(!_LC039 & !_LC042 & !_LC045);
+  _X012  = EXP(!_LC042 & !_LC044);
+
+-- Node name is 'F5N' 
+-- Equation name is 'F5N', location is LC051, type is output.
+ F5N     = LCELL( _EQ009 $  _LC043);
+  _EQ009 =  A5N &  B5N &  _LC059 &  S3
+         #  A5N & !B5N &  _LC059 &  S2
+         #  _LC058 & !_LC059;
+
+-- Node name is 'F6N' 
+-- Equation name is 'F6N', location is LC052, type is output.
+ F6N     = LCELL( _EQ010 $  _LC050);
+  _EQ010 =  A6N &  B6N &  _LC057 &  S3
+         #  A6N & !B6N &  _LC057 &  S2
+         # !_LC057 &  _LC064;
+
+-- Node name is 'F7N' 
+-- Equation name is 'F7N', location is LC062, type is output.
+ F7N     = LCELL( _EQ011 $  _LC054);
+  _EQ011 =  A7N &  B7N &  _LC055 &  S3
+         #  A7N & !B7N &  _LC055 &  S2
+         # !_LC055 &  _LC056;
+
+-- Node name is 'GN' 
+-- Equation name is 'GN', location is LC017, type is output.
+ GN      = LCELL( VCC $  VCC);
+
+-- Node name is 'PN' 
+-- Equation name is 'PN', location is LC053, type is output.
+ PN      = LCELL( _EQ012 $  VCC);
+  _EQ012 =  _LC034 &  _LC036 &  _LC038 &  _LC044 &  _LC045 &  _LC056 & 
+              _LC058 &  _LC064;
+
+-- Node name is '|74181:35|:37' 
+-- Equation name is '_LC040', type is buried 
+_LC040   = LCELL( _EQ013 $ !A0N);
+  _EQ013 = !A0N &  B0N &  S0
+         # !A0N & !B0N &  S1;
+
+-- Node name is '|74181:35|:38' 
+-- Equation name is '_LC038', type is buried 
+_LC038   = LCELL( _EQ014 $  VCC);
+  _EQ014 =  A0N &  B0N &  S3
+         #  A0N & !B0N &  S2;
+
+-- Node name is '|74181:35|:39' 
+-- Equation name is '_LC037', type is buried 
+_LC037   = LCELL( _EQ015 $ !A1N);
+  _EQ015 = !A1N &  B1N &  S0
+         # !A1N & !B1N &  S1;
+
+-- Node name is '|74181:35|:40' 
+-- Equation name is '_LC034', type is buried 
+_LC034   = LCELL( _EQ016 $  VCC);
+  _EQ016 =  A1N &  B1N &  S3
+         #  A1N & !B1N &  S2;
+
+-- Node name is '|74181:35|:41' 
+-- Equation name is '_LC039', type is buried 
+_LC039   = LCELL( _EQ017 $ !A2N);
+  _EQ017 = !A2N &  B2N &  S0
+         # !A2N & !B2N &  S1;
+
+-- Node name is '|74181:35|:42' 
+-- Equation name is '_LC045', type is buried 
+_LC045   = LCELL( _EQ018 $  VCC);
+  _EQ018 =  A2N &  B2N &  S3
+         #  A2N & !B2N &  S2;
+
+-- Node name is '|74181:35|:49' 
+-- Equation name is '_LC044', type is buried 
+_LC044   = LCELL( _EQ019 $  VCC);
+  _EQ019 =  A3N &  B3N &  S3
+         #  A3N & !B3N &  S2;
+
+-- Node name is '|74181:35|:50' 
+-- Equation name is '_LC042', type is buried 
+_LC042   = LCELL( _EQ020 $ !A3N);
+  _EQ020 = !A3N &  B3N &  S0
+         # !A3N & !B3N &  S1;
+
+-- Node name is '|74181:35|:76' 
+-- Equation name is '_LC063', type is buried 
+_LC063   = LCELL( _EQ021 $  VCC);
+  _EQ021 =  CN &  _LC034 &  _LC038 &  _LC045 & !M
+         #  _LC034 &  _LC040 &  _LC045 & !M
+         #  _LC037 &  _LC045 & !M
+         #  _LC039 & !M;
+
+-- Node name is '|74181:35|:88' 
+-- Equation name is '_LC061', type is buried 
+_LC061   = LCELL( _EQ022 $  VCC);
+  _EQ022 =  CN &  _LC038 & !M
+         #  _LC040 & !M;
+
+-- Node name is '|74181:35|:89' 
+-- Equation name is '_LC060', type is buried 
+_LC060   = LCELL( _EQ023 $  VCC);
+  _EQ023 =  CN &  _LC034 &  _LC038 & !M
+         #  _LC034 &  _LC040 & !M
+         #  _LC037 & !M;
+
+-- Node name is '|74181:36|:37' 
+-- Equation name is '_LC047', type is buried 
+_LC047   = LCELL( _EQ024 $ !A4N);
+  _EQ024 = !A4N &  B4N &  S0
+         # !A4N & !B4N &  S1;
+
+-- Node name is '|74181:36|:38' 
+-- Equation name is '_LC036', type is buried 
+_LC036   = LCELL( _EQ025 $  VCC);
+  _EQ025 =  A4N &  B4N &  S3
+         #  A4N & !B4N &  S2;
+
+-- Node name is '|74181:36|:39' 
+-- Equation name is '_LC059', type is buried 
+_LC059   = LCELL( _EQ026 $ !A5N);
+  _EQ026 = !A5N &  B5N &  S0
+         # !A5N & !B5N &  S1;
+
+-- Node name is '|74181:36|:40' 
+-- Equation name is '_LC058', type is buried 
+_LC058   = LCELL( _EQ027 $  VCC);
+  _EQ027 =  A5N &  B5N &  S3
+         #  A5N & !B5N &  S2;
+
+-- Node name is '|74181:36|:41' 
+-- Equation name is '_LC057', type is buried 
+_LC057   = LCELL( _EQ028 $ !A6N);
+  _EQ028 = !A6N &  B6N &  S0
+         # !A6N & !B6N &  S1;
+
+-- Node name is '|74181:36|:42' 
+-- Equation name is '_LC064', type is buried 
+_LC064   = LCELL( _EQ029 $  VCC);
+  _EQ029 =  A6N &  B6N &  S3
+         #  A6N & !B6N &  S2;
+
+-- Node name is '|74181:36|:49' 
+-- Equation name is '_LC056', type is buried 
+_LC056   = LCELL( _EQ030 $  VCC);
+  _EQ030 =  A7N &  B7N &  S3
+         #  A7N & !B7N &  S2;
+
+-- Node name is '|74181:36|:50' 
+-- Equation name is '_LC055', type is buried 
+_LC055   = LCELL( _EQ031 $ !A7N);
+  _EQ031 = !A7N &  B7N &  S0
+         # !A7N & !B7N &  S1;
+
+-- Node name is '|74181:36|:76' 
+-- Equation name is '_LC054', type is buried 
+_LC054   = LCELL( _EQ032 $  _EQ033);
+  _EQ032 =  CN &  _LC034 &  _LC036 &  _LC038 &  _LC044 &  _LC045 &  _LC058 & 
+              _LC064 & !M &  _X013 &  _X014 &  _X015 &  _X016
+         #  _LC034 &  _LC036 &  _LC040 &  _LC044 &  _LC045 &  _LC058 & 
+              _LC064 & !M &  _X013 &  _X014 &  _X015 &  _X016
+         #  _LC036 &  _LC037 &  _LC044 &  _LC045 &  _LC058 &  _LC064 & !M & 
+              _X013 &  _X014 &  _X015 &  _X016
+         #  _LC036 &  _LC039 &  _LC044 &  _LC058 &  _LC064 & !M &  _X013 & 
+              _X014 &  _X015 &  _X016;
+  _X013  = EXP( _LC036 &  _LC042 &  _LC058 &  _LC064 & !M);
+  _X014  = EXP( _LC047 &  _LC058 &  _LC064 & !M);
+  _X015  = EXP( _LC059 &  _LC064 & !M);
+  _X016  = EXP( _LC057 & !M);
+  _EQ033 =  _X013 &  _X014 &  _X015 &  _X016;
+  _X013  = EXP( _LC036 &  _LC042 &  _LC058 &  _LC064 & !M);
+  _X014  = EXP( _LC047 &  _LC058 &  _LC064 & !M);
+  _X015  = EXP( _LC059 &  _LC064 & !M);
+  _X016  = EXP( _LC057 & !M);
+
+-- Node name is '|74181:36|:88' 
+-- Equation name is '_LC043', type is buried 
+_LC043   = LCELL( _EQ034 $  _EQ035);
+  _EQ034 =  CN &  _LC034 &  _LC036 &  _LC038 &  _LC044 &  _LC045 & !M & 
+              _X017 &  _X018
+         #  _LC034 &  _LC036 &  _LC040 &  _LC044 &  _LC045 & !M &  _X017 & 
+              _X018
+         #  _LC036 &  _LC037 &  _LC044 &  _LC045 & !M &  _X017 &  _X018
+         #  _LC036 &  _LC039 &  _LC044 & !M &  _X017 &  _X018;
+  _X017  = EXP( _LC047 & !M);
+  _X018  = EXP( _LC036 &  _LC042 & !M);
+  _EQ035 =  _X017 &  _X018;
+  _X017  = EXP( _LC047 & !M);
+  _X018  = EXP( _LC036 &  _LC042 & !M);
+
+-- Node name is '|74181:36|:89' 
+-- Equation name is '_LC050', type is buried 
+_LC050   = LCELL( _EQ036 $  _EQ037);
+  _EQ036 =  CN &  _LC034 &  _LC036 &  _LC038 &  _LC044 &  _LC045 &  _LC058 & 
+             !M &  _X019 &  _X020 &  _X021
+         #  _LC034 &  _LC036 &  _LC040 &  _LC044 &  _LC045 &  _LC058 & !M & 
+              _X019 &  _X020 &  _X021
+         #  _LC036 &  _LC037 &  _LC044 &  _LC045 &  _LC058 & !M &  _X019 & 
+              _X020 &  _X021
+         #  _LC036 &  _LC039 &  _LC044 &  _LC058 & !M &  _X019 &  _X020 & 
+              _X021;
+  _X019  = EXP( _LC036 &  _LC042 &  _LC058 & !M);
+  _X020  = EXP( _LC047 &  _LC058 & !M);
+  _X021  = EXP( _LC059 & !M);
+  _EQ037 =  _X019 &  _X020 &  _X021;
+  _X019  = EXP( _LC036 &  _LC042 &  _LC058 & !M);
+  _X020  = EXP( _LC047 &  _LC058 & !M);
+  _X021  = EXP( _LC059 & !M);
+
+
+
+--     Shareable expanders that are duplicated in multiple LABs:
+--     (none)
+
+
+
+
+Project Information                         c:\projects\alu\par_8digit_alu.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Standard
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'MAX7000' family
+
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      PARALLEL_EXPANDERS                  = off
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SOFT_BUFFER_INSERTION               = on
+      SUBFACTOR_EXTRACTION                = on
+      TURBO_BIT                           = on
+      XOR_SYNTHESIS                       = on
+      IGNORE_SOFT_BUFFERS                 = off
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      One-Hot State Machine Encoding      = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:00
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 3,069K

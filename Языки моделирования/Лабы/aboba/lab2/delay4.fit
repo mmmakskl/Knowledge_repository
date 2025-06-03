@@ -1,0 +1,188 @@
+-- MAX+plus II Compiler Fit File      
+-- Version 9.01 07/30/98              
+-- Compiled: 10/26/16 14:08:48        
+
+-- Copyright (C) 1988-1998 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+CHIP "delay4"
+BEGIN
+
+    DEVICE = "EPM9320LC84-15";
+
+    "in0"                          : INPUT_PIN  = 1      ;
+    "in1"                          : INPUT_PIN  = 72     ;
+    "in2"                          : INPUT_PIN  = 13     ;
+    "in3"                          : INPUT_PIN  = 84     ;
+    "out0"                         : OUTPUT_PIN = 27     ;
+    "out1"                         : OUTPUT_PIN = 20     ;
+    "out2"                         : OUTPUT_PIN = 17     ;
+    "out3"                         : OUTPUT_PIN = 23     ;
+    "|delay2:3|:3"                 : LOCATION   = LC2_A5 ;
+    "|delay2:3|:4"                 : LOCATION   = LC9_A5 ;
+    "|delay2:3|:5"                 : LOCATION   = LC10_A5;
+    "|delay2:3|:6"                 : LOCATION   = LC11_A5;  -- |delay2:3|out0
+    "|delay2:3|:7"                 : LOCATION   = LC9_C5 ;
+    "|delay2:3|:8"                 : LOCATION   = LC10_C5;
+    "|delay2:3|:9"                 : LOCATION   = LC11_C5;
+    "|delay2:3|:10"                : LOCATION   = LC12_C5;  -- |delay2:3|out1
+    "|delay2:4|:3"                 : LOCATION   = LC12_A5;
+    "|delay2:4|:4"                 : LOCATION   = LC13_A5;
+    "|delay2:4|:5"                 : LOCATION   = LC14_A5;
+    "|delay2:4|:6"                 : LOCATION   = LC15_A5;  -- |delay2:4|out0
+    "|delay2:4|:7"                 : LOCATION   = LC13_C5;
+    "|delay2:4|:8"                 : LOCATION   = LC14_C5;
+    "|delay2:4|:9"                 : LOCATION   = LC15_C5;
+    "|delay2:4|:10"                : LOCATION   = LC8_C5 ;  -- |delay2:4|out1
+    "|delay2:5|:3"                 : LOCATION   = LC8_A5 ;
+    "|delay2:5|:4"                 : LOCATION   = LC3_A5 ;
+    "|delay2:5|:5"                 : LOCATION   = LC4_A5 ;
+    "|delay2:5|:6"                 : LOCATION   = LC5_A5 ;  -- |delay2:5|out0
+    "|delay2:5|:7"                 : LOCATION   = LC2_C5 ;
+    "|delay2:5|:8"                 : LOCATION   = LC3_C5 ;
+    "|delay2:5|:9"                 : LOCATION   = LC4_C5 ;
+    "|delay2:5|:10"                : LOCATION   = LC5_C5 ;  -- |delay2:5|out1
+    "|delay2:6|:3"                 : LOCATION   = LC6_A5 ;
+    "|delay2:6|:4"                 : LOCATION   = LC7_A5 ;
+    "|delay2:6|:5"                 : LOCATION   = LC1_A5 ;
+    "|delay2:6|:6"                 : LOCATION   = LC2_A2 ;  -- |delay2:6|out0
+    "|delay2:6|:7"                 : LOCATION   = LC6_C5 ;
+    "|delay2:6|:8"                 : LOCATION   = LC7_C5 ;
+    "|delay2:6|:9"                 : LOCATION   = LC1_C5 ;
+    "|delay2:6|:10"                : LOCATION   = LC2_C4 ;  -- |delay2:6|out1
+    "|delay2:7|:3"                 : LOCATION   = LC3_A2 ;
+    "|delay2:7|:4"                 : LOCATION   = LC4_A2 ;
+    "|delay2:7|:5"                 : LOCATION   = LC5_A2 ;
+    "|delay2:7|:6"                 : LOCATION   = LC6_A2 ;  -- |delay2:7|out0
+    "|delay2:7|:7"                 : LOCATION   = LC9_C4 ;
+    "|delay2:7|:8"                 : LOCATION   = LC10_C4;
+    "|delay2:7|:9"                 : LOCATION   = LC11_C4;
+    "|delay2:7|:10"                : LOCATION   = LC12_C4;  -- |delay2:7|out1
+    "|delay2:8|:3"                 : LOCATION   = LC11_A2;
+    "|delay2:8|:4"                 : LOCATION   = LC12_A2;
+    "|delay2:8|:5"                 : LOCATION   = LC13_A2;
+    "|delay2:8|:6"                 : LOCATION   = LC14_A2;  -- |delay2:8|out0
+    "|delay2:8|:7"                 : LOCATION   = LC13_C4;
+    "|delay2:8|:8"                 : LOCATION   = LC14_C4;
+    "|delay2:8|:9"                 : LOCATION   = LC15_C4;
+    "|delay2:8|:10"                : LOCATION   = LC16_C4;  -- |delay2:8|out1
+    "|delay2:9|:3"                 : LOCATION   = LC15_A2;
+    "|delay2:9|:4"                 : LOCATION   = LC16_A2;
+    "|delay2:9|:5"                 : LOCATION   = LC10_A2;
+    "|delay2:9|:6"                 : LOCATION   = LC9_A2 ;  -- |delay2:9|out0
+    "|delay2:9|:7"                 : LOCATION   = LC3_C4 ;
+    "|delay2:9|:8"                 : LOCATION   = LC4_C4 ;
+    "|delay2:9|:9"                 : LOCATION   = LC5_C4 ;
+    "|delay2:9|:10"                : LOCATION   = LC6_C4 ;  -- |delay2:9|out1
+    "|delay2:10|:3"                : LOCATION   = LC7_A2 ;
+    "|delay2:10|:4"                : LOCATION   = LC8_A2 ;
+    "|delay2:10|:5"                : LOCATION   = LC1_A2 ;
+    "|delay2:10|:6"                : LOCATION   = LC9_A1 ;  -- |delay2:10|out0
+    "|delay2:10|:7"                : LOCATION   = LC7_C4 ;
+    "|delay2:10|:8"                : LOCATION   = LC8_C4 ;
+    "|delay2:10|:9"                : LOCATION   = LC1_C4 ;
+    "|delay2:10|:10"               : LOCATION   = LC9_C3 ;  -- |delay2:10|out1
+    "|delay2:11|:3"                : LOCATION   = LC12_D5;
+    "|delay2:11|:4"                : LOCATION   = LC13_D5;
+    "|delay2:11|:5"                : LOCATION   = LC14_D5;
+    "|delay2:11|:6"                : LOCATION   = LC15_D5;  -- |delay2:11|out0
+    "|delay2:11|:7"                : LOCATION   = LC14_B5;
+    "|delay2:11|:8"                : LOCATION   = LC15_B5;
+    "|delay2:11|:9"                : LOCATION   = LC13_B5;
+    "|delay2:11|:10"               : LOCATION   = LC12_B5;  -- |delay2:11|out1
+    "|delay2:12|:3"                : LOCATION   = LC5_D5 ;
+    "|delay2:12|:4"                : LOCATION   = LC6_D5 ;
+    "|delay2:12|:5"                : LOCATION   = LC7_D5 ;
+    "|delay2:12|:6"                : LOCATION   = LC8_D5 ;  -- |delay2:12|out0
+    "|delay2:12|:7"                : LOCATION   = LC4_B5 ;
+    "|delay2:12|:8"                : LOCATION   = LC5_B5 ;
+    "|delay2:12|:9"                : LOCATION   = LC6_B5 ;
+    "|delay2:12|:10"               : LOCATION   = LC7_B5 ;  -- |delay2:12|out1
+    "|delay2:13|:3"                : LOCATION   = LC4_D5 ;
+    "|delay2:13|:4"                : LOCATION   = LC11_D5;
+    "|delay2:13|:5"                : LOCATION   = LC10_D5;
+    "|delay2:13|:6"                : LOCATION   = LC9_D5 ;  -- |delay2:13|out0
+    "|delay2:13|:7"                : LOCATION   = LC11_B5;
+    "|delay2:13|:8"                : LOCATION   = LC10_B5;
+    "|delay2:13|:9"                : LOCATION   = LC9_B5 ;
+    "|delay2:13|:10"               : LOCATION   = LC8_B5 ;  -- |delay2:13|out1
+    "|delay2:14|:3"                : LOCATION   = LC3_D5 ;
+    "|delay2:14|:4"                : LOCATION   = LC2_D5 ;
+    "|delay2:14|:5"                : LOCATION   = LC1_D5 ;
+    "|delay2:14|:6"                : LOCATION   = LC2_D3 ;  -- |delay2:14|out0
+    "|delay2:14|:7"                : LOCATION   = LC3_B5 ;
+    "|delay2:14|:8"                : LOCATION   = LC2_B5 ;
+    "|delay2:14|:9"                : LOCATION   = LC1_B5 ;
+    "|delay2:14|:10"               : LOCATION   = LC2_B1 ;  -- |delay2:14|out1
+    "|delay2:15|:3"                : LOCATION   = LC3_D3 ;
+    "|delay2:15|:4"                : LOCATION   = LC4_D3 ;
+    "|delay2:15|:5"                : LOCATION   = LC5_D3 ;
+    "|delay2:15|:6"                : LOCATION   = LC12_D3;  -- |delay2:15|out0
+    "|delay2:15|:7"                : LOCATION   = LC9_B1 ;
+    "|delay2:15|:8"                : LOCATION   = LC10_B1;
+    "|delay2:15|:9"                : LOCATION   = LC11_B1;
+    "|delay2:15|:10"               : LOCATION   = LC12_B1;  -- |delay2:15|out1
+    "|delay2:16|:3"                : LOCATION   = LC13_D3;
+    "|delay2:16|:4"                : LOCATION   = LC14_D3;
+    "|delay2:16|:5"                : LOCATION   = LC15_D3;
+    "|delay2:16|:6"                : LOCATION   = LC16_D3;  -- |delay2:16|out0
+    "|delay2:16|:7"                : LOCATION   = LC13_B1;
+    "|delay2:16|:8"                : LOCATION   = LC14_B1;
+    "|delay2:16|:9"                : LOCATION   = LC15_B1;
+    "|delay2:16|:10"               : LOCATION   = LC16_B1;  -- |delay2:16|out1
+    "|delay2:17|:3"                : LOCATION   = LC11_D3;
+    "|delay2:17|:4"                : LOCATION   = LC10_D3;
+    "|delay2:17|:5"                : LOCATION   = LC6_D3 ;
+    "|delay2:17|:6"                : LOCATION   = LC7_D3 ;  -- |delay2:17|out0
+    "|delay2:17|:7"                : LOCATION   = LC3_B1 ;
+    "|delay2:17|:8"                : LOCATION   = LC4_B1 ;
+    "|delay2:17|:9"                : LOCATION   = LC5_B1 ;
+    "|delay2:17|:10"               : LOCATION   = LC6_B1 ;  -- |delay2:17|out1
+    "|delay2:18|:3"                : LOCATION   = LC8_D3 ;
+    "|delay2:18|:4"                : LOCATION   = LC9_D3 ;
+    "|delay2:18|:5"                : LOCATION   = LC1_D3 ;
+    "|delay2:18|:6"                : LOCATION   = LC9_D4 ;  -- |delay2:18|out0
+    "|delay2:18|:7"                : LOCATION   = LC7_B1 ;
+    "|delay2:18|:8"                : LOCATION   = LC8_B1 ;
+    "|delay2:18|:9"                : LOCATION   = LC1_B1 ;
+    "|delay2:18|:10"               : LOCATION   = LC9_B2 ;  -- |delay2:18|out1
+
+END;
+
+INTERNAL_INFO "delay4"
+BEGIN
+	DEVICE = EPM9320LC84-15;
+    LC1_A5  : LORAX = "1:G2R0,PA13R0C1->LC2_A2|";
+    LC1_C5  : LORAX = "1:G2R2,PA13R2C3->LC2_C4|";
+    LC1_A2  : LORAX = "1:G3R0,PA17R0C0->LC9_A1|";
+    LC9_A1  : LORAX = "1:G49R0->OH8R0P27|";
+    LC1_C4  : LORAX = "1:G1R2,PA12R2C2->LC9_C3|";
+    LC9_C3  : LORAX = "1:G50R2->OH8R2P20|";
+    LC1_D5  : LORAX = "1:G2R3,PA13R3C2->LC2_D3|";
+    LC1_B5  : LORAX = "1:G2R1,PA13R1C0->LC2_B1|";
+    LC1_D3  : LORAX = "1:G4R3,PA18R3C3->LC9_D4|";
+    LC9_D4  : LORAX = "1:G52R3->OH8R3P17|";
+    LC1_B1  : LORAX = "1:G0R1,PA1R1C1->LC9_B2|";
+    LC9_B2  : LORAX = "1:G51R1->OH8R1P23|";
+    OD1P1   : LORAX = "1:G59R0,PA32R0C4->LC2_A5|";
+    OD3P72  : LORAX = "1:G71R2,PA24R2C4->LC9_C5|";
+    OD0P13  : LORAX = "1:G58R3,PA31R3C4->LC12_D5|";
+    OD2P84  : LORAX = "1:G70R1,PA21R1C4->LC14_B5|";
+END;

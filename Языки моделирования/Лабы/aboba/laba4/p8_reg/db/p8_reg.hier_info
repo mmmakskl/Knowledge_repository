@@ -1,0 +1,23 @@
+|p8_reg
+d => ex1~reg0.DATAIN
+d => d11.DATAIN
+c1 => d31.CLK
+c1 => ex1~reg0.CLK
+c1 => ex2~reg0.CLK
+c1 => d11.CLK
+c2 => q1~reg0.CLK
+c2 => q2~reg0.CLK
+c2 => d21.CLK
+r => d31.ENA
+r => ex1~reg0.ENA
+r => ex2~reg0.ENA
+r => d21.ENA
+r => q1~reg0.ENA
+r => q2~reg0.ENA
+r => d11.ENA
+ex1 <= ex1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ex2 <= ex2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q1 <= q1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= q2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

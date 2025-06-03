@@ -1,0 +1,176 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1L4 is 74181:inst|75~54 at LC_X1_Y1_N8
+--operation mode is normal
+
+B1L4 = B1 & (B0 # !A0) # !B1 & !A1 & (B0 # !A0);
+
+
+--B1_44 is 74181:inst|44 at LC_X2_Y1_N2
+--operation mode is normal
+
+B1_44 = A1 # !B1;
+
+
+--B1L6 is 74181:inst|78~123 at LC_X1_Y1_N5
+--operation mode is normal
+
+B1L6 = A2 & (B1_44 & !B1L4 # !B2) # !A2 & B1_44 & !B2 & !B1L4;
+
+
+--B1L7 is 74181:inst|78~124 at LC_X1_Y1_N6
+--operation mode is normal
+
+B1L7 = B1L6 & B3 & !A3 # !B1L6 & (B3 # !A3);
+
+
+--B1L3 is 74181:inst|74~119 at LC_X1_Y1_N2
+--operation mode is normal
+
+B1L3 = A2 & B2 & (B1L4 # !B1_44) # !A2 & (B2 # B1L4 # !B1_44);
+
+
+--B1_77 is 74181:inst|77 at LC_X1_Y1_N0
+--operation mode is normal
+
+B1_77 = B1L3 $ (B3 $ A3);
+
+
+--B1_82 is 74181:inst|82 at LC_X1_Y1_N4
+--operation mode is normal
+
+B1_82 = A2 $ B2 $ (B1L4 # !B1_44);
+
+
+--B1L8 is 74181:inst|81~36 at LC_X1_Y1_N3
+--operation mode is normal
+
+B1L8 = B1 $ A1 $ (B0 # !A0);
+
+
+--B1_53 is 74181:inst|53 at LC_X1_Y2_N2
+--operation mode is normal
+
+B1_53 = B0 $ (!A0);
+
+
+--A1L61 is inst6~12 at LC_X1_Y1_N7
+--operation mode is normal
+
+A1L61 = B1_53 & B1_82 & B1L8 & B1_77;
+
+
+--inst12 is inst12 at LC_X1_Y1_N1
+--operation mode is normal
+
+inst12 = A1L61 # B1L6 & (A3 # !B3) # !B1L6 & !B3 & A3;
+
+
+--inst11 is inst11 at LC_X1_Y1_N9
+--operation mode is normal
+
+inst11 = A1L61 & (B1L6 & B3 & !A3 # !B1L6 & (B3 # !A3));
+
+
+--A3 is A3 at PIN_AA19
+--operation mode is input
+
+A3 = INPUT();
+
+
+--B3 is B3 at PIN_W20
+--operation mode is input
+
+B3 = INPUT();
+
+
+--A2 is A2 at PIN_W18
+--operation mode is input
+
+A2 = INPUT();
+
+
+--B2 is B2 at PIN_W19
+--operation mode is input
+
+B2 = INPUT();
+
+
+--B1 is B1 at PIN_AB19
+--operation mode is input
+
+B1 = INPUT();
+
+
+--B0 is B0 at PIN_W21
+--operation mode is input
+
+B0 = INPUT();
+
+
+--A0 is A0 at PIN_W22
+--operation mode is input
+
+A0 = INPUT();
+
+
+--A1 is A1 at PIN_Y19
+--operation mode is input
+
+A1 = INPUT();
+
+
+--ALB is ALB at PIN_AA21
+--operation mode is output
+
+ALB = OUTPUT(!B1L7);
+
+
+--AMB is AMB at PIN_Y20
+--operation mode is output
+
+AMB = OUTPUT(!inst12);
+
+
+--AEQB is AEQB at PIN_Y21
+--operation mode is output
+
+AEQB = OUTPUT(inst11);
+
+
+--F0 is F0 at PIN_T18
+--operation mode is output
+
+F0 = OUTPUT(B1_53);
+
+
+--F1 is F1 at PIN_AA20
+--operation mode is output
+
+F1 = OUTPUT(B1L8);
+
+
+--F2 is F2 at PIN_U20
+--operation mode is output
+
+F2 = OUTPUT(B1_82);
+
+
+--F3 is F3 at PIN_U19
+--operation mode is output
+
+F3 = OUTPUT(B1_77);
+
+
+

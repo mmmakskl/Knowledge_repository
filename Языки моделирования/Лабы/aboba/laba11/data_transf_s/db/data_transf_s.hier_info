@@ -1,0 +1,92 @@
+|data_transf_s
+d[0] => CD_p:cd.d[0]
+d[1] => CD_p:cd.d[1]
+d[2] => CD_p:cd.d[2]
+d[3] => CD_p:cd.d[3]
+err[0] => comb~3.IN1
+err[1] => comb~0.IN1
+err[2] => comb~1.IN1
+err[3] => comb~2.IN1
+d_o[0] <= DC_p:dc.d_o[0]
+d_o[1] <= DC_p:dc.d_o[1]
+d_o[2] <= DC_p:dc.d_o[2]
+d_o[3] <= DC_p:dc.d_o[3]
+ONE_ERR <= DC_p:dc.ONE_ERR
+DBL_ERR <= DC_p:dc.DBL_ERR
+
+
+|data_transf_s|CD_p:cd
+d[0] => k1~0.IN1
+d[0] => k2~0.IN0
+d[0] => d_o~2.IN0
+d[0] => d_o[2].DATAIN
+d[1] => k1~0.IN0
+d[1] => k3~0.IN0
+d[1] => d_o~3.IN0
+d[1] => d_o[4].DATAIN
+d[2] => k2~0.IN1
+d[2] => k3~0.IN1
+d[2] => d_o~4.IN0
+d[2] => d_o[5].DATAIN
+d[3] => k1~1.IN0
+d[3] => k2~1.IN0
+d[3] => k3~1.IN0
+d[3] => d_o~5.IN0
+d[3] => d_o[6].DATAIN
+d_o[0] <= k1~1.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= k2~1.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= k3~1.DB_MAX_OUTPUT_PORT_TYPE
+d_o[4] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+d_o[5] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+d_o[6] <= d[3].DB_MAX_OUTPUT_PORT_TYPE
+d_o[7] <= d_o~5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|data_transf_s|DC_p:dc
+d[0] => p1~0.IN1
+d[0] => kp~0.IN0
+d[1] => p2~0.IN1
+d[1] => kp~0.IN1
+d[2] => p1~0.IN0
+d[2] => p2~0.IN0
+d[2] => kp~1.IN0
+d[2] => d_otv~9.DATAA
+d[2] => d_otv~13.DATAA
+d[2] => d_otv~9.DATAB
+d[3] => p3~0.IN1
+d[3] => kp~2.IN0
+d[4] => p1~1.IN0
+d[4] => p3~0.IN0
+d[4] => kp~3.IN0
+d[4] => d_otv~5.DATAA
+d[4] => d_otv~8.DATAB
+d[4] => d_otv~12.DATAA
+d[4] => d_otv~5.DATAB
+d[5] => p2~1.IN0
+d[5] => p3~1.IN0
+d[5] => kp~4.IN0
+d[5] => d_otv~2.DATAA
+d[5] => d_otv~4.DATAB
+d[5] => d_otv~7.DATAB
+d[5] => d_otv~11.DATAA
+d[5] => d_otv~2.DATAB
+d[6] => p1~2.IN0
+d[6] => p2~2.IN0
+d[6] => p3~2.IN0
+d[6] => kp~5.IN0
+d[6] => d_otv~0.DATAA
+d[6] => d_otv~1.DATAB
+d[6] => d_otv~3.DATAB
+d[6] => d_otv~6.DATAB
+d[6] => d_otv~10.DATAA
+d[6] => d_otv~0.DATAB
+d[7] => kp~6.IN0
+d_o[0] <= d_otv~13.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= d_otv~12.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d_otv~11.DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= d_otv~10.DB_MAX_OUTPUT_PORT_TYPE
+ONE_ERR <= kp~6.DB_MAX_OUTPUT_PORT_TYPE
+DBL_ERR <= DBL_ERR~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

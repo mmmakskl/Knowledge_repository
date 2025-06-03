@@ -1,0 +1,78 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1_16 is 7493:inst|16 at LC_X1_Y19_N2
+--operation mode is normal
+
+B1_16_lut_out = !B1_16;
+B1_16 = DFFEAS(B1_16_lut_out, !c, !GLOBAL(B1_13), , , , , , );
+
+
+--B1_15 is 7493:inst|15 at LC_X2_Y20_N2
+--operation mode is normal
+
+B1_15_lut_out = !B1_15;
+B1_15 = DFFEAS(B1_15_lut_out, !GLOBAL(B1_16), !GLOBAL(B1_13), , , , , , );
+
+
+--B1_14 is 7493:inst|14 at LC_X1_Y20_N5
+--operation mode is normal
+
+B1_14_lut_out = !B1_14;
+B1_14 = DFFEAS(B1_14_lut_out, !GLOBAL(B1_16), !GLOBAL(B1_13), , B1_15, , , , );
+
+
+--B1_13 is 7493:inst|13 at LC_X1_Y20_N6
+--operation mode is normal
+
+B1_13_lut_out = VCC;
+B1_13 = DFFEAS(B1_13_lut_out, !GLOBAL(B1_16), !GLOBAL(B1_13), , B1_39, , , , );
+
+
+--B1_39 is 7493:inst|39 at LC_X1_Y20_N4
+--operation mode is normal
+
+B1_39 = B1_14 & B1_15;
+
+
+--c is c at PIN_L22
+--operation mode is input
+
+c = INPUT();
+
+
+--q0 is q0 at PIN_K20
+--operation mode is output
+
+q0 = OUTPUT(B1_16);
+
+
+--q1 is q1 at PIN_H21
+--operation mode is output
+
+q1 = OUTPUT(B1_15);
+
+
+--q2 is q2 at PIN_J20
+--operation mode is output
+
+q2 = OUTPUT(B1_14);
+
+
+--q3 is q3 at PIN_K21
+--operation mode is output
+
+q3 = OUTPUT(B1_13);
+
+
+

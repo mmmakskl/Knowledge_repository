@@ -1,0 +1,134 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1L1 is 74153:1|9~168 at LC_X33_Y30_N8
+--operation mode is normal
+
+B1L1 = a & (1c3) # !a & 1c2;
+
+
+--B1L2 is 74153:1|9~169 at LC_X33_Y30_N6
+--operation mode is normal
+
+B1L2 = a & 1c1 # !a & (1c0);
+
+
+--B1L3 is 74153:1|9~170 at LC_X33_Y30_N4
+--operation mode is normal
+
+B1L3 = !1gn & (b & B1L1 # !b & (B1L2));
+
+
+--B1L4 is 74153:1|10~161 at LC_X33_Y30_N9
+--operation mode is normal
+
+B1L4 = a & (2c3) # !a & 2c2;
+
+
+--B1L5 is 74153:1|10~162 at LC_X33_Y30_N2
+--operation mode is normal
+
+B1L5 = a & (2c1) # !a & 2c0;
+
+
+--B1L6 is 74153:1|10~163 at LC_X33_Y30_N5
+--operation mode is normal
+
+B1L6 = !2gn & (b & (B1L4) # !b & B1L5);
+
+
+--1c3 is 1c3 at PIN_F10
+--operation mode is input
+
+1c3 = INPUT();
+
+
+--1c2 is 1c2 at PIN_G9
+--operation mode is input
+
+1c2 = INPUT();
+
+
+--a is a at PIN_E9
+--operation mode is input
+
+a = INPUT();
+
+
+--1c1 is 1c1 at PIN_H10
+--operation mode is input
+
+1c1 = INPUT();
+
+
+--1c0 is 1c0 at PIN_C9
+--operation mode is input
+
+1c0 = INPUT();
+
+
+--b is b at PIN_L7
+--operation mode is input
+
+b = INPUT();
+
+
+--1gn is 1gn at PIN_B8
+--operation mode is input
+
+1gn = INPUT();
+
+
+--2c3 is 2c3 at PIN_B11
+--operation mode is input
+
+2c3 = INPUT();
+
+
+--2c2 is 2c2 at PIN_K8
+--operation mode is input
+
+2c2 = INPUT();
+
+
+--2c1 is 2c1 at PIN_J9
+--operation mode is input
+
+2c1 = INPUT();
+
+
+--2c0 is 2c0 at PIN_F9
+--operation mode is input
+
+2c0 = INPUT();
+
+
+--2gn is 2gn at PIN_K10
+--operation mode is input
+
+2gn = INPUT();
+
+
+--1y is 1y at PIN_D9
+--operation mode is output
+
+1y = OUTPUT(B1L3);
+
+
+--2y is 2y at PIN_J8
+--operation mode is output
+
+2y = OUTPUT(B1L6);
+
+
+

@@ -1,0 +1,245 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--res[0] is res[0]
+--operation mode is normal
+
+res[0]_lut_out = B1_Buf;
+res[0] = DFFEAS(res[0]_lut_out, CLOCK, VCC, , , , , , );
+
+
+--res[1] is res[1]
+--operation mode is normal
+
+res[1]_lut_out = B2_Buf;
+res[1] = DFFEAS(res[1]_lut_out, CLOCK, VCC, , , , , , );
+
+
+--res[2] is res[2]
+--operation mode is normal
+
+res[2]_lut_out = B3_Buf;
+res[2] = DFFEAS(res[2]_lut_out, CLOCK, VCC, , , , , , );
+
+
+--res[3] is res[3]
+--operation mode is normal
+
+res[3]_lut_out = B4_Buf;
+res[3] = DFFEAS(res[3]_lut_out, CLOCK, VCC, , , , , , );
+
+
+--res[4] is res[4]
+--operation mode is normal
+
+res[4]_lut_out = B5_Buf;
+res[4] = DFFEAS(res[4]_lut_out, CLOCK, VCC, , , , , , );
+
+
+--res[5] is res[5]
+--operation mode is normal
+
+res[5]_lut_out = B6_Buf;
+res[5] = DFFEAS(res[5]_lut_out, CLOCK, VCC, , , , , , );
+
+
+--res[6] is res[6]
+--operation mode is normal
+
+res[6]_lut_out = B7_Buf;
+res[6] = DFFEAS(res[6]_lut_out, CLOCK, VCC, , , , , , );
+
+
+--res[7] is res[7]
+--operation mode is normal
+
+res[7]_lut_out = B8_Buf;
+res[7] = DFFEAS(res[7]_lut_out, CLOCK, VCC, , , , , , );
+
+
+--B1_Buf is DTrigger:Dtrig1|Buf
+--operation mode is normal
+
+B1_Buf_lut_out = DATA[0];
+B1_Buf = DFFEAS(B1_Buf_lut_out, !CLOCK, VCC, , !EWR, , , , );
+
+
+--B2_Buf is DTrigger:Dtrig2|Buf
+--operation mode is normal
+
+B2_Buf_lut_out = DATA[1];
+B2_Buf = DFFEAS(B2_Buf_lut_out, !CLOCK, VCC, , !EWR, , , , );
+
+
+--B3_Buf is DTrigger:Dtrig3|Buf
+--operation mode is normal
+
+B3_Buf_lut_out = DATA[2];
+B3_Buf = DFFEAS(B3_Buf_lut_out, !CLOCK, VCC, , !EWR, , , , );
+
+
+--B4_Buf is DTrigger:Dtrig4|Buf
+--operation mode is normal
+
+B4_Buf_lut_out = DATA[3];
+B4_Buf = DFFEAS(B4_Buf_lut_out, !CLOCK, VCC, , !EWR, , , , );
+
+
+--B5_Buf is DTrigger:Dtrig5|Buf
+--operation mode is normal
+
+B5_Buf_lut_out = DATA[4];
+B5_Buf = DFFEAS(B5_Buf_lut_out, !CLOCK, VCC, , !EWR, , , , );
+
+
+--B6_Buf is DTrigger:Dtrig6|Buf
+--operation mode is normal
+
+B6_Buf_lut_out = DATA[5];
+B6_Buf = DFFEAS(B6_Buf_lut_out, !CLOCK, VCC, , !EWR, , , , );
+
+
+--B7_Buf is DTrigger:Dtrig7|Buf
+--operation mode is normal
+
+B7_Buf_lut_out = DATA[6];
+B7_Buf = DFFEAS(B7_Buf_lut_out, !CLOCK, VCC, , !EWR, , , , );
+
+
+--B8_Buf is DTrigger:Dtrig8|Buf
+--operation mode is normal
+
+B8_Buf_lut_out = DATA[7];
+B8_Buf = DFFEAS(B8_Buf_lut_out, !CLOCK, VCC, , !EWR, , , , );
+
+
+--RESET is RESET
+--operation mode is input
+
+RESET = INPUT();
+
+
+--EDY is EDY
+--operation mode is input
+
+EDY = INPUT();
+
+
+--CLOCK is CLOCK
+--operation mode is input
+
+CLOCK = INPUT();
+
+
+--DATA[0] is DATA[0]
+--operation mode is input
+
+DATA[0] = INPUT();
+
+
+--EWR is EWR
+--operation mode is input
+
+EWR = INPUT();
+
+
+--DATA[1] is DATA[1]
+--operation mode is input
+
+DATA[1] = INPUT();
+
+
+--DATA[2] is DATA[2]
+--operation mode is input
+
+DATA[2] = INPUT();
+
+
+--DATA[3] is DATA[3]
+--operation mode is input
+
+DATA[3] = INPUT();
+
+
+--DATA[4] is DATA[4]
+--operation mode is input
+
+DATA[4] = INPUT();
+
+
+--DATA[5] is DATA[5]
+--operation mode is input
+
+DATA[5] = INPUT();
+
+
+--DATA[6] is DATA[6]
+--operation mode is input
+
+DATA[6] = INPUT();
+
+
+--DATA[7] is DATA[7]
+--operation mode is input
+
+DATA[7] = INPUT();
+
+
+--OUTRESULT[0] is OUTRESULT[0]
+--operation mode is output
+
+OUTRESULT[0] = OUTPUT(res[0]);
+
+
+--OUTRESULT[1] is OUTRESULT[1]
+--operation mode is output
+
+OUTRESULT[1] = OUTPUT(res[1]);
+
+
+--OUTRESULT[2] is OUTRESULT[2]
+--operation mode is output
+
+OUTRESULT[2] = OUTPUT(res[2]);
+
+
+--OUTRESULT[3] is OUTRESULT[3]
+--operation mode is output
+
+OUTRESULT[3] = OUTPUT(res[3]);
+
+
+--OUTRESULT[4] is OUTRESULT[4]
+--operation mode is output
+
+OUTRESULT[4] = OUTPUT(res[4]);
+
+
+--OUTRESULT[5] is OUTRESULT[5]
+--operation mode is output
+
+OUTRESULT[5] = OUTPUT(res[5]);
+
+
+--OUTRESULT[6] is OUTRESULT[6]
+--operation mode is output
+
+OUTRESULT[6] = OUTPUT(res[6]);
+
+
+--OUTRESULT[7] is OUTRESULT[7]
+--operation mode is output
+
+OUTRESULT[7] = OUTPUT(res[7]);
+
+

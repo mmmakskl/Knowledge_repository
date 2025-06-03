@@ -1,0 +1,1048 @@
+Project Information                                  e:\term3\lab20\delay4.rpt
+
+MAX+plus II Compiler Report File
+Version 9.01 07/30/98
+Compiled: 10/26/16 14:08:48
+
+Copyright (C) 1988-1998 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input   Output   Bidir         Shareable
+POF       Device          Pins    Pins     Pins     LCs  Expanders  % Utilized
+
+delay4    EPM9320LC84-15   4        4        0      128     0           40 %
+
+User Pins:                 4        4        0  
+
+
+
+Project Information                                  e:\term3\lab20\delay4.rpt
+
+** FILE HIERARCHY **
+
+
+
+|delay2:3|
+|delay2:11|
+|delay2:12|
+|delay2:13|
+|delay2:14|
+|delay2:15|
+|delay2:16|
+|delay2:17|
+|delay2:18|
+|delay2:7|
+|delay2:8|
+|delay2:9|
+|delay2:10|
+|delay2:6|
+|delay2:5|
+|delay2:4|
+
+
+Device-Specific Information:                         e:\term3\lab20\delay4.rpt
+delay4
+
+***** Logic for device 'delay4' compiled without errors.
+
+
+
+
+Device: EPM9320LC84-15
+
+Device Options:
+    Turbo Bit                                    = ON
+    Security Bit                                 = OFF
+    User Code                                  = ffff
+    MultiVolt I/O                              = OFF
+
+              R  R  R  R  R     R  R  R  R        R  R  R  R     R  R  R  R  
+              E  E  E  E  E     E  E  E  E        E  E  E  E     E  E  E  E  
+              S  S  S  S  S     S  S  S  S        S  S  S  S     S  S  S  S  
+              E  E  E  E  E     E  E  E  E        E  E  E  E  V  E  E  E  E  
+              R  R  R  R  R     R  R  R  R        R  R  R  R  C  R  R  R  R  
+              V  V  V  V  V  G  V  V  V  V  i  i  V  V  V  V  C  V  V  V  V  
+              E  E  E  E  E  N  E  E  E  E  n  n  E  E  E  E  I  E  E  E  E  
+              D  D  D  D  D  D  D  D  D  D  0  3  D  D  D  D  O  D  D  D  D  
+            -----------------------------------------------------------------_ 
+          /  11 10  9  8  7  6  5  4  3  2  1 84 83 82 81 80 79 78 77 76 75   | 
+RESERVED | 12                                                              74 | RESERVED 
+     in2 | 13                                                              73 | RESERVED 
+  VCCINT | 14                                                              72 | in1 
+   VCCIO | 15                                                              71 | VCCINT 
+RESERVED | 16                                                              70 | GND 
+    out2 | 17                                                              69 | RESERVED 
+     GND | 18                                                              68 | RESERVED 
+RESERVED | 19                                                              67 | GND 
+    out1 | 20                                                              66 | RESERVED 
+  VCCINT | 21                                                              65 | RESERVED 
+RESERVED | 22                        EPM9320LC84-15                        64 | VCCINT 
+    out3 | 23                                                              63 | RESERVED 
+     GND | 24                                                              62 | RESERVED 
+     GND | 25                                                              61 | GND 
+RESERVED | 26                                                              60 | VCCIO 
+    out0 | 27                                                              59 | RESERVED 
+  VCCINT | 28                                                              58 | RESERVED 
+    N.C. | 29                                                              57 | VCCINT 
+    #TDO | 30                                                              56 | ^VPP 
+RESERVED | 31                                                              55 | #TMS 
+RESERVED | 32                                                              54 | RESERVED 
+         |_  33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53  _| 
+           ------------------------------------------------------------------ 
+              R  R  R  R  V  R  R  R  R  #  #  R  R  R  R  G  R  R  R  R  R  
+              E  E  E  E  C  E  E  E  E  T  T  E  E  E  E  N  E  E  E  E  E  
+              S  S  S  S  C  S  S  S  S  D  C  S  S  S  S  D  S  S  S  S  S  
+              E  E  E  E  I  E  E  E  E  I  K  E  E  E  E     E  E  E  E  E  
+              R  R  R  R  O  R  R  R  R        R  R  R  R     R  R  R  R  R  
+              V  V  V  V     V  V  V  V        V  V  V  V     V  V  V  V  V  
+              E  E  E  E     E  E  E  E        E  E  E  E     E  E  E  E  E  
+              D  D  D  D     D  D  D  D        D  D  D  D     D  D  D  D  D  
+
+
+N.C. = Not Connected.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+# = JTAG Boundary-Scan Testing/In-System Programming or Configuration Pin. The JTAG inputs (TMS, TCK, TDI) should be tied to VCC when not in use.
+& = JTAG pin used for I/O. When used as user I/O, JTAG pins must be kept stable before and during configuration.  JTAG pin stability prevents accidental loading of JTAG instructions.
+
+
+Device-Specific Information:                         e:\term3\lab20\delay4.rpt
+delay4
+
+** RESOURCE USAGE **
+
+Logic                Column       Row                                   
+Array                Interconnect Interconnect         Clears/     External    Shareable
+Block   Logic Cells  Driven       Driven       Clocks  Presets   Interconnect  Expanders
+A1       1/16(  6%)   0/16(  0%)   1/16(  6%)    0/2    0/2       1/33(  3%)    0/16(  0%)  
+A2      16/16(100%)   0/16(  0%)   1/16(  6%)    0/2    0/2       1/33(  3%)    0/16(  0%)  
+A5      15/16( 93%)   0/16(  0%)   1/16(  6%)    0/2    0/2       1/33(  3%)    0/16(  0%)  
+B1      16/16(100%)   0/16(  0%)   1/16(  6%)    0/2    0/2       1/33(  3%)    0/16(  0%)  
+B2       1/16(  6%)   0/16(  0%)   1/16(  6%)    0/2    0/2       1/33(  3%)    0/16(  0%)  
+B5      15/16( 93%)   0/16(  0%)   1/16(  6%)    0/2    0/2       1/33(  3%)    0/16(  0%)  
+C3       1/16(  6%)   0/16(  0%)   1/16(  6%)    0/2    0/2       1/33(  3%)    0/16(  0%)  
+C4      16/16(100%)   0/16(  0%)   1/16(  6%)    0/2    0/2       1/33(  3%)    0/16(  0%)  
+C5      15/16( 93%)   0/16(  0%)   1/16(  6%)    0/2    0/2       1/33(  3%)    0/16(  0%)  
+D3      16/16(100%)   0/16(  0%)   1/16(  6%)    0/2    0/2       1/33(  3%)    0/16(  0%)  
+D4       1/16(  6%)   0/16(  0%)   1/16(  6%)    0/2    0/2       1/33(  3%)    0/16(  0%)  
+D5      15/16( 93%)   0/16(  0%)   1/16(  6%)    0/2    0/2       1/33(  3%)    0/16(  0%)  
+
+
+Total dedicated input pins used:                 4/4      (100%)
+Total I/O pins used:                             4/56     (  7%)
+Total logic cells used:                        128/320    ( 40%)
+Total shareable expanders used:                  0/320    (  0%)
+Total Turbo logic cells used:                  128/320    ( 40%)
+Total shareable expanders not available (n/a):   0/320    (  0%)
+Average fan-in:                                  1.00
+Total fan-in:                                   128
+
+Total input pins required:                       4
+Total input I/O cell registers required:         0
+Total output pins required:                      4
+Total output I/O cell registers required:        0
+Total buried I/O cell registers required:        0
+Total bidirectional pins required:               0
+Total logic cells required:                    128
+Total flipflops required:                        0
+Total product terms required:                  128
+Total logic cells lending parallel expanders:    0
+Total shareable expanders in database:           0
+Total packed registers required:                 0
+
+Synthesized logic cells:                         0/ 320   (  0%)
+
+Logic Cell Counts
+
+Column:  01  02  03  04  05  Total
+ A:      1  16   0   0  15     32
+ B:     16   1   0   0  15     32
+ C:      0   0   1  16  15     32
+ D:      0   0  16   1  15     32
+
+Total:  17  17  17  17  60    128
+
+
+
+Device-Specific Information:                         e:\term3\lab20\delay4.rpt
+delay4
+
+** INPUTS **
+
+                                               Shareable
+                                               Expanders     Fan-In    Fan-Out
+ Pin     LC   Row  Col  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+   1      -    -    --      INPUT               0      0   0    0    0    0    1  in0
+  72      -    -    --      INPUT               0      0   0    0    0    0    1  in1
+  13      -    -    --      INPUT               0      0   0    0    0    0    1  in2
+  84      -    -    --      INPUT               0      0   0    0    0    0    1  in3
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                         e:\term3\lab20\delay4.rpt
+delay4
+
+** OUTPUTS **
+
+                                               Shareable
+                                               Expanders     Fan-In    Fan-Out
+ Pin     LC   Row  Col  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  27      -    A    --     OUTPUT               0      0   0    0    1    0    0  out0
+  20      -    C    --     OUTPUT               0      0   0    0    1    0    0  out1
+  17      -    D    --     OUTPUT               0      0   0    0    1    0    0  out2
+  23      -    B    --     OUTPUT               0      0   0    0    1    0    0  out3
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                         e:\term3\lab20\delay4.rpt
+delay4
+
+** BURIED LOGIC **
+
+                                               Shareable
+                                               Expanders     Fan-In    Fan-Out
+ IOC     LC   Row  Col  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK Name
+   -      2    A    05      LCELL      t        0      0   0    1    0    0    1  |delay2:3|:3
+   -      9    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:3|:4
+   -     10    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:3|:5
+   -     11    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:3|out0 (|delay2:3|:6)
+   -      9    C    05      LCELL      t        0      0   0    1    0    0    1  |delay2:3|:7
+   -     10    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:3|:8
+   -     11    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:3|:9
+   -     12    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:3|out1 (|delay2:3|:10)
+   -     12    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:4|:3
+   -     13    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:4|:4
+   -     14    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:4|:5
+   -     15    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:4|out0 (|delay2:4|:6)
+   -     13    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:4|:7
+   -     14    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:4|:8
+   -     15    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:4|:9
+   -      8    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:4|out1 (|delay2:4|:10)
+   -      8    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:5|:3
+   -      3    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:5|:4
+   -      4    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:5|:5
+   -      5    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:5|out0 (|delay2:5|:6)
+   -      2    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:5|:7
+   -      3    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:5|:8
+   -      4    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:5|:9
+   -      5    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:5|out1 (|delay2:5|:10)
+   -      6    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:6|:3
+   -      7    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:6|:4
+   -      1    A    05      LCELL      t        0      0   0    0    1    0    1  |delay2:6|:5
+   -      2    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:6|out0 (|delay2:6|:6)
+   -      6    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:6|:7
+   -      7    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:6|:8
+   -      1    C    05      LCELL      t        0      0   0    0    1    0    1  |delay2:6|:9
+   -      2    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:6|out1 (|delay2:6|:10)
+   -      3    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:7|:3
+   -      4    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:7|:4
+   -      5    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:7|:5
+   -      6    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:7|out0 (|delay2:7|:6)
+   -      9    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:7|:7
+   -     10    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:7|:8
+   -     11    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:7|:9
+   -     12    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:7|out1 (|delay2:7|:10)
+   -     11    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:8|:3
+   -     12    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:8|:4
+   -     13    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:8|:5
+   -     14    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:8|out0 (|delay2:8|:6)
+   -     13    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:8|:7
+   -     14    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:8|:8
+   -     15    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:8|:9
+   -     16    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:8|out1 (|delay2:8|:10)
+   -     15    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:9|:3
+   -     16    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:9|:4
+   -     10    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:9|:5
+   -      9    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:9|out0 (|delay2:9|:6)
+   -      3    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:9|:7
+   -      4    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:9|:8
+   -      5    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:9|:9
+   -      6    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:9|out1 (|delay2:9|:10)
+   -      7    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:10|:3
+   -      8    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:10|:4
+   -      1    A    02      LCELL      t        0      0   0    0    1    0    1  |delay2:10|:5
+   -      9    A    01      LCELL      t        0      0   0    0    1    1    0  |delay2:10|out0 (|delay2:10|:6)
+   -      7    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:10|:7
+   -      8    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:10|:8
+   -      1    C    04      LCELL      t        0      0   0    0    1    0    1  |delay2:10|:9
+   -      9    C    03      LCELL      t        0      0   0    0    1    1    0  |delay2:10|out1 (|delay2:10|:10)
+   -     12    D    05      LCELL      t        0      0   0    1    0    0    1  |delay2:11|:3
+   -     13    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:11|:4
+   -     14    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:11|:5
+   -     15    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:11|out0 (|delay2:11|:6)
+   -     14    B    05      LCELL      t        0      0   0    1    0    0    1  |delay2:11|:7
+   -     15    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:11|:8
+   -     13    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:11|:9
+   -     12    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:11|out1 (|delay2:11|:10)
+   -      5    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:12|:3
+   -      6    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:12|:4
+   -      7    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:12|:5
+   -      8    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:12|out0 (|delay2:12|:6)
+   -      4    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:12|:7
+   -      5    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:12|:8
+   -      6    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:12|:9
+   -      7    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:12|out1 (|delay2:12|:10)
+   -      4    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:13|:3
+   -     11    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:13|:4
+   -     10    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:13|:5
+   -      9    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:13|out0 (|delay2:13|:6)
+   -     11    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:13|:7
+   -     10    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:13|:8
+   -      9    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:13|:9
+   -      8    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:13|out1 (|delay2:13|:10)
+   -      3    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:14|:3
+   -      2    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:14|:4
+   -      1    D    05      LCELL      t        0      0   0    0    1    0    1  |delay2:14|:5
+   -      2    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:14|out0 (|delay2:14|:6)
+   -      3    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:14|:7
+   -      2    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:14|:8
+   -      1    B    05      LCELL      t        0      0   0    0    1    0    1  |delay2:14|:9
+   -      2    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:14|out1 (|delay2:14|:10)
+   -      3    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:15|:3
+   -      4    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:15|:4
+   -      5    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:15|:5
+   -     12    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:15|out0 (|delay2:15|:6)
+   -      9    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:15|:7
+   -     10    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:15|:8
+   -     11    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:15|:9
+   -     12    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:15|out1 (|delay2:15|:10)
+   -     13    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:16|:3
+   -     14    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:16|:4
+   -     15    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:16|:5
+   -     16    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:16|out0 (|delay2:16|:6)
+   -     13    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:16|:7
+   -     14    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:16|:8
+   -     15    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:16|:9
+   -     16    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:16|out1 (|delay2:16|:10)
+   -     11    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:17|:3
+   -     10    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:17|:4
+   -      6    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:17|:5
+   -      7    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:17|out0 (|delay2:17|:6)
+   -      3    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:17|:7
+   -      4    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:17|:8
+   -      5    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:17|:9
+   -      6    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:17|out1 (|delay2:17|:10)
+   -      8    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:18|:3
+   -      9    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:18|:4
+   -      1    D    03      LCELL      t        0      0   0    0    1    0    1  |delay2:18|:5
+   -      9    D    04      LCELL      t        0      0   0    0    1    1    0  |delay2:18|out0 (|delay2:18|:6)
+   -      7    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:18|:7
+   -      8    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:18|:8
+   -      1    B    01      LCELL      t        0      0   0    0    1    0    1  |delay2:18|:9
+   -      9    B    02      LCELL      t        0      0   0    0    1    1    0  |delay2:18|out1 (|delay2:18|:10)
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+p = Packed register
+
+
+Device-Specific Information:                         e:\term3\lab20\delay4.rpt
+delay4
+
+** FASTTRACK INTERCONNECT UTILIZATION **
+
+Row FastTrack Interconnect:
+
+         FastTrack                                 
+Row     Interconnect    Input Pins     Output Pins     Bidir Pins
+A:       4/ 96(  4%)    0/16(  0%)      1/16(  6%)     0/16(  0%)
+B:       4/ 96(  4%)    0/16(  0%)      1/16(  6%)     0/16(  0%)
+C:       4/ 96(  4%)    0/16(  0%)      1/16(  6%)     0/16(  0%)
+D:       4/ 96(  4%)    0/16(  0%)      1/16(  6%)     0/16(  0%)
+
+
+Column FastTrack Interconnect:
+
+         FastTrack                                 
+Column  Interconnect    Input Pins     Output Pins     Bidir Pins
+01:      0/48(  0%)     0/20(  0%)      0/20(  0%)       0/20(  0%)
+02:      0/48(  0%)     0/20(  0%)      0/20(  0%)       0/20(  0%)
+03:      0/48(  0%)     0/20(  0%)      0/20(  0%)       0/20(  0%)
+04:      0/48(  0%)     0/20(  0%)      0/20(  0%)       0/20(  0%)
+05:      0/48(  0%)     0/20(  0%)      0/20(  0%)       0/20(  0%)
+
+
+Device-Specific Information:                         e:\term3\lab20\delay4.rpt
+delay4
+
+** EQUATIONS **
+
+in0      : INPUT;
+in1      : INPUT;
+in2      : INPUT;
+in3      : INPUT;
+
+-- Node name is 'out0' 
+-- Equation name is 'out0', type is output 
+out0     =  _LC9_A1;
+
+-- Node name is 'out1' 
+-- Equation name is 'out1', type is output 
+out1     =  _LC9_C3;
+
+-- Node name is 'out2' 
+-- Equation name is 'out2', type is output 
+out2     =  _LC9_D4;
+
+-- Node name is 'out3' 
+-- Equation name is 'out3', type is output 
+out3     =  _LC9_B2;
+
+-- Node name is '|delay2:3|:6' = '|delay2:3|out0' 
+-- Equation name is '_LC11_A5', type is buried 
+_LC11_A5 = LCELL( _LC10_A5 $  GND);
+
+-- Node name is '|delay2:3|:10' = '|delay2:3|out1' 
+-- Equation name is '_LC12_C5', type is buried 
+_LC12_C5 = LCELL( _LC11_C5 $  GND);
+
+-- Node name is '|delay2:3|:3' 
+-- Equation name is '_LC2_A5', type is buried 
+_LC2_A5  = LCELL( in0 $  GND);
+
+-- Node name is '|delay2:3|:4' 
+-- Equation name is '_LC9_A5', type is buried 
+_LC9_A5  = LCELL( _LC2_A5 $  GND);
+
+-- Node name is '|delay2:3|:5' 
+-- Equation name is '_LC10_A5', type is buried 
+_LC10_A5 = LCELL( _LC9_A5 $  GND);
+
+-- Node name is '|delay2:3|:7' 
+-- Equation name is '_LC9_C5', type is buried 
+_LC9_C5  = LCELL( in1 $  GND);
+
+-- Node name is '|delay2:3|:8' 
+-- Equation name is '_LC10_C5', type is buried 
+_LC10_C5 = LCELL( _LC9_C5 $  GND);
+
+-- Node name is '|delay2:3|:9' 
+-- Equation name is '_LC11_C5', type is buried 
+_LC11_C5 = LCELL( _LC10_C5 $  GND);
+
+-- Node name is '|delay2:4|:6' = '|delay2:4|out0' 
+-- Equation name is '_LC15_A5', type is buried 
+_LC15_A5 = LCELL( _LC14_A5 $  GND);
+
+-- Node name is '|delay2:4|:10' = '|delay2:4|out1' 
+-- Equation name is '_LC8_C5', type is buried 
+_LC8_C5  = LCELL( _LC15_C5 $  GND);
+
+-- Node name is '|delay2:4|:3' 
+-- Equation name is '_LC12_A5', type is buried 
+_LC12_A5 = LCELL( _LC11_A5 $  GND);
+
+-- Node name is '|delay2:4|:4' 
+-- Equation name is '_LC13_A5', type is buried 
+_LC13_A5 = LCELL( _LC12_A5 $  GND);
+
+-- Node name is '|delay2:4|:5' 
+-- Equation name is '_LC14_A5', type is buried 
+_LC14_A5 = LCELL( _LC13_A5 $  GND);
+
+-- Node name is '|delay2:4|:7' 
+-- Equation name is '_LC13_C5', type is buried 
+_LC13_C5 = LCELL( _LC12_C5 $  GND);
+
+-- Node name is '|delay2:4|:8' 
+-- Equation name is '_LC14_C5', type is buried 
+_LC14_C5 = LCELL( _LC13_C5 $  GND);
+
+-- Node name is '|delay2:4|:9' 
+-- Equation name is '_LC15_C5', type is buried 
+_LC15_C5 = LCELL( _LC14_C5 $  GND);
+
+-- Node name is '|delay2:5|:6' = '|delay2:5|out0' 
+-- Equation name is '_LC5_A5', type is buried 
+_LC5_A5  = LCELL( _LC4_A5 $  GND);
+
+-- Node name is '|delay2:5|:10' = '|delay2:5|out1' 
+-- Equation name is '_LC5_C5', type is buried 
+_LC5_C5  = LCELL( _LC4_C5 $  GND);
+
+-- Node name is '|delay2:5|:3' 
+-- Equation name is '_LC8_A5', type is buried 
+_LC8_A5  = LCELL( _LC15_A5 $  GND);
+
+-- Node name is '|delay2:5|:4' 
+-- Equation name is '_LC3_A5', type is buried 
+_LC3_A5  = LCELL( _LC8_A5 $  GND);
+
+-- Node name is '|delay2:5|:5' 
+-- Equation name is '_LC4_A5', type is buried 
+_LC4_A5  = LCELL( _LC3_A5 $  GND);
+
+-- Node name is '|delay2:5|:7' 
+-- Equation name is '_LC2_C5', type is buried 
+_LC2_C5  = LCELL( _LC8_C5 $  GND);
+
+-- Node name is '|delay2:5|:8' 
+-- Equation name is '_LC3_C5', type is buried 
+_LC3_C5  = LCELL( _LC2_C5 $  GND);
+
+-- Node name is '|delay2:5|:9' 
+-- Equation name is '_LC4_C5', type is buried 
+_LC4_C5  = LCELL( _LC3_C5 $  GND);
+
+-- Node name is '|delay2:6|:6' = '|delay2:6|out0' 
+-- Equation name is '_LC2_A2', type is buried 
+_LC2_A2  = LCELL( _LC1_A5 $  GND);
+
+-- Node name is '|delay2:6|:10' = '|delay2:6|out1' 
+-- Equation name is '_LC2_C4', type is buried 
+_LC2_C4  = LCELL( _LC1_C5 $  GND);
+
+-- Node name is '|delay2:6|:3' 
+-- Equation name is '_LC6_A5', type is buried 
+_LC6_A5  = LCELL( _LC5_A5 $  GND);
+
+-- Node name is '|delay2:6|:4' 
+-- Equation name is '_LC7_A5', type is buried 
+_LC7_A5  = LCELL( _LC6_A5 $  GND);
+
+-- Node name is '|delay2:6|:5' 
+-- Equation name is '_LC1_A5', type is buried 
+_LC1_A5  = LCELL( _LC7_A5 $  GND);
+
+-- Node name is '|delay2:6|:7' 
+-- Equation name is '_LC6_C5', type is buried 
+_LC6_C5  = LCELL( _LC5_C5 $  GND);
+
+-- Node name is '|delay2:6|:8' 
+-- Equation name is '_LC7_C5', type is buried 
+_LC7_C5  = LCELL( _LC6_C5 $  GND);
+
+-- Node name is '|delay2:6|:9' 
+-- Equation name is '_LC1_C5', type is buried 
+_LC1_C5  = LCELL( _LC7_C5 $  GND);
+
+-- Node name is '|delay2:7|:6' = '|delay2:7|out0' 
+-- Equation name is '_LC6_A2', type is buried 
+_LC6_A2  = LCELL( _LC5_A2 $  GND);
+
+-- Node name is '|delay2:7|:10' = '|delay2:7|out1' 
+-- Equation name is '_LC12_C4', type is buried 
+_LC12_C4 = LCELL( _LC11_C4 $  GND);
+
+-- Node name is '|delay2:7|:3' 
+-- Equation name is '_LC3_A2', type is buried 
+_LC3_A2  = LCELL( _LC2_A2 $  GND);
+
+-- Node name is '|delay2:7|:4' 
+-- Equation name is '_LC4_A2', type is buried 
+_LC4_A2  = LCELL( _LC3_A2 $  GND);
+
+-- Node name is '|delay2:7|:5' 
+-- Equation name is '_LC5_A2', type is buried 
+_LC5_A2  = LCELL( _LC4_A2 $  GND);
+
+-- Node name is '|delay2:7|:7' 
+-- Equation name is '_LC9_C4', type is buried 
+_LC9_C4  = LCELL( _LC2_C4 $  GND);
+
+-- Node name is '|delay2:7|:8' 
+-- Equation name is '_LC10_C4', type is buried 
+_LC10_C4 = LCELL( _LC9_C4 $  GND);
+
+-- Node name is '|delay2:7|:9' 
+-- Equation name is '_LC11_C4', type is buried 
+_LC11_C4 = LCELL( _LC10_C4 $  GND);
+
+-- Node name is '|delay2:8|:6' = '|delay2:8|out0' 
+-- Equation name is '_LC14_A2', type is buried 
+_LC14_A2 = LCELL( _LC13_A2 $  GND);
+
+-- Node name is '|delay2:8|:10' = '|delay2:8|out1' 
+-- Equation name is '_LC16_C4', type is buried 
+_LC16_C4 = LCELL( _LC15_C4 $  GND);
+
+-- Node name is '|delay2:8|:3' 
+-- Equation name is '_LC11_A2', type is buried 
+_LC11_A2 = LCELL( _LC6_A2 $  GND);
+
+-- Node name is '|delay2:8|:4' 
+-- Equation name is '_LC12_A2', type is buried 
+_LC12_A2 = LCELL( _LC11_A2 $  GND);
+
+-- Node name is '|delay2:8|:5' 
+-- Equation name is '_LC13_A2', type is buried 
+_LC13_A2 = LCELL( _LC12_A2 $  GND);
+
+-- Node name is '|delay2:8|:7' 
+-- Equation name is '_LC13_C4', type is buried 
+_LC13_C4 = LCELL( _LC12_C4 $  GND);
+
+-- Node name is '|delay2:8|:8' 
+-- Equation name is '_LC14_C4', type is buried 
+_LC14_C4 = LCELL( _LC13_C4 $  GND);
+
+-- Node name is '|delay2:8|:9' 
+-- Equation name is '_LC15_C4', type is buried 
+_LC15_C4 = LCELL( _LC14_C4 $  GND);
+
+-- Node name is '|delay2:9|:6' = '|delay2:9|out0' 
+-- Equation name is '_LC9_A2', type is buried 
+_LC9_A2  = LCELL( _LC10_A2 $  GND);
+
+-- Node name is '|delay2:9|:10' = '|delay2:9|out1' 
+-- Equation name is '_LC6_C4', type is buried 
+_LC6_C4  = LCELL( _LC5_C4 $  GND);
+
+-- Node name is '|delay2:9|:3' 
+-- Equation name is '_LC15_A2', type is buried 
+_LC15_A2 = LCELL( _LC14_A2 $  GND);
+
+-- Node name is '|delay2:9|:4' 
+-- Equation name is '_LC16_A2', type is buried 
+_LC16_A2 = LCELL( _LC15_A2 $  GND);
+
+-- Node name is '|delay2:9|:5' 
+-- Equation name is '_LC10_A2', type is buried 
+_LC10_A2 = LCELL( _LC16_A2 $  GND);
+
+-- Node name is '|delay2:9|:7' 
+-- Equation name is '_LC3_C4', type is buried 
+_LC3_C4  = LCELL( _LC16_C4 $  GND);
+
+-- Node name is '|delay2:9|:8' 
+-- Equation name is '_LC4_C4', type is buried 
+_LC4_C4  = LCELL( _LC3_C4 $  GND);
+
+-- Node name is '|delay2:9|:9' 
+-- Equation name is '_LC5_C4', type is buried 
+_LC5_C4  = LCELL( _LC4_C4 $  GND);
+
+-- Node name is '|delay2:10|:6' = '|delay2:10|out0' 
+-- Equation name is '_LC9_A1', type is buried 
+_LC9_A1  = LCELL( _LC1_A2 $  GND);
+
+-- Node name is '|delay2:10|:10' = '|delay2:10|out1' 
+-- Equation name is '_LC9_C3', type is buried 
+_LC9_C3  = LCELL( _LC1_C4 $  GND);
+
+-- Node name is '|delay2:10|:3' 
+-- Equation name is '_LC7_A2', type is buried 
+_LC7_A2  = LCELL( _LC9_A2 $  GND);
+
+-- Node name is '|delay2:10|:4' 
+-- Equation name is '_LC8_A2', type is buried 
+_LC8_A2  = LCELL( _LC7_A2 $  GND);
+
+-- Node name is '|delay2:10|:5' 
+-- Equation name is '_LC1_A2', type is buried 
+_LC1_A2  = LCELL( _LC8_A2 $  GND);
+
+-- Node name is '|delay2:10|:7' 
+-- Equation name is '_LC7_C4', type is buried 
+_LC7_C4  = LCELL( _LC6_C4 $  GND);
+
+-- Node name is '|delay2:10|:8' 
+-- Equation name is '_LC8_C4', type is buried 
+_LC8_C4  = LCELL( _LC7_C4 $  GND);
+
+-- Node name is '|delay2:10|:9' 
+-- Equation name is '_LC1_C4', type is buried 
+_LC1_C4  = LCELL( _LC8_C4 $  GND);
+
+-- Node name is '|delay2:11|:6' = '|delay2:11|out0' 
+-- Equation name is '_LC15_D5', type is buried 
+_LC15_D5 = LCELL( _LC14_D5 $  GND);
+
+-- Node name is '|delay2:11|:10' = '|delay2:11|out1' 
+-- Equation name is '_LC12_B5', type is buried 
+_LC12_B5 = LCELL( _LC13_B5 $  GND);
+
+-- Node name is '|delay2:11|:3' 
+-- Equation name is '_LC12_D5', type is buried 
+_LC12_D5 = LCELL( in2 $  GND);
+
+-- Node name is '|delay2:11|:4' 
+-- Equation name is '_LC13_D5', type is buried 
+_LC13_D5 = LCELL( _LC12_D5 $  GND);
+
+-- Node name is '|delay2:11|:5' 
+-- Equation name is '_LC14_D5', type is buried 
+_LC14_D5 = LCELL( _LC13_D5 $  GND);
+
+-- Node name is '|delay2:11|:7' 
+-- Equation name is '_LC14_B5', type is buried 
+_LC14_B5 = LCELL( in3 $  GND);
+
+-- Node name is '|delay2:11|:8' 
+-- Equation name is '_LC15_B5', type is buried 
+_LC15_B5 = LCELL( _LC14_B5 $  GND);
+
+-- Node name is '|delay2:11|:9' 
+-- Equation name is '_LC13_B5', type is buried 
+_LC13_B5 = LCELL( _LC15_B5 $  GND);
+
+-- Node name is '|delay2:12|:6' = '|delay2:12|out0' 
+-- Equation name is '_LC8_D5', type is buried 
+_LC8_D5  = LCELL( _LC7_D5 $  GND);
+
+-- Node name is '|delay2:12|:10' = '|delay2:12|out1' 
+-- Equation name is '_LC7_B5', type is buried 
+_LC7_B5  = LCELL( _LC6_B5 $  GND);
+
+-- Node name is '|delay2:12|:3' 
+-- Equation name is '_LC5_D5', type is buried 
+_LC5_D5  = LCELL( _LC15_D5 $  GND);
+
+-- Node name is '|delay2:12|:4' 
+-- Equation name is '_LC6_D5', type is buried 
+_LC6_D5  = LCELL( _LC5_D5 $  GND);
+
+-- Node name is '|delay2:12|:5' 
+-- Equation name is '_LC7_D5', type is buried 
+_LC7_D5  = LCELL( _LC6_D5 $  GND);
+
+-- Node name is '|delay2:12|:7' 
+-- Equation name is '_LC4_B5', type is buried 
+_LC4_B5  = LCELL( _LC12_B5 $  GND);
+
+-- Node name is '|delay2:12|:8' 
+-- Equation name is '_LC5_B5', type is buried 
+_LC5_B5  = LCELL( _LC4_B5 $  GND);
+
+-- Node name is '|delay2:12|:9' 
+-- Equation name is '_LC6_B5', type is buried 
+_LC6_B5  = LCELL( _LC5_B5 $  GND);
+
+-- Node name is '|delay2:13|:6' = '|delay2:13|out0' 
+-- Equation name is '_LC9_D5', type is buried 
+_LC9_D5  = LCELL( _LC10_D5 $  GND);
+
+-- Node name is '|delay2:13|:10' = '|delay2:13|out1' 
+-- Equation name is '_LC8_B5', type is buried 
+_LC8_B5  = LCELL( _LC9_B5 $  GND);
+
+-- Node name is '|delay2:13|:3' 
+-- Equation name is '_LC4_D5', type is buried 
+_LC4_D5  = LCELL( _LC8_D5 $  GND);
+
+-- Node name is '|delay2:13|:4' 
+-- Equation name is '_LC11_D5', type is buried 
+_LC11_D5 = LCELL( _LC4_D5 $  GND);
+
+-- Node name is '|delay2:13|:5' 
+-- Equation name is '_LC10_D5', type is buried 
+_LC10_D5 = LCELL( _LC11_D5 $  GND);
+
+-- Node name is '|delay2:13|:7' 
+-- Equation name is '_LC11_B5', type is buried 
+_LC11_B5 = LCELL( _LC7_B5 $  GND);
+
+-- Node name is '|delay2:13|:8' 
+-- Equation name is '_LC10_B5', type is buried 
+_LC10_B5 = LCELL( _LC11_B5 $  GND);
+
+-- Node name is '|delay2:13|:9' 
+-- Equation name is '_LC9_B5', type is buried 
+_LC9_B5  = LCELL( _LC10_B5 $  GND);
+
+-- Node name is '|delay2:14|:6' = '|delay2:14|out0' 
+-- Equation name is '_LC2_D3', type is buried 
+_LC2_D3  = LCELL( _LC1_D5 $  GND);
+
+-- Node name is '|delay2:14|:10' = '|delay2:14|out1' 
+-- Equation name is '_LC2_B1', type is buried 
+_LC2_B1  = LCELL( _LC1_B5 $  GND);
+
+-- Node name is '|delay2:14|:3' 
+-- Equation name is '_LC3_D5', type is buried 
+_LC3_D5  = LCELL( _LC9_D5 $  GND);
+
+-- Node name is '|delay2:14|:4' 
+-- Equation name is '_LC2_D5', type is buried 
+_LC2_D5  = LCELL( _LC3_D5 $  GND);
+
+-- Node name is '|delay2:14|:5' 
+-- Equation name is '_LC1_D5', type is buried 
+_LC1_D5  = LCELL( _LC2_D5 $  GND);
+
+-- Node name is '|delay2:14|:7' 
+-- Equation name is '_LC3_B5', type is buried 
+_LC3_B5  = LCELL( _LC8_B5 $  GND);
+
+-- Node name is '|delay2:14|:8' 
+-- Equation name is '_LC2_B5', type is buried 
+_LC2_B5  = LCELL( _LC3_B5 $  GND);
+
+-- Node name is '|delay2:14|:9' 
+-- Equation name is '_LC1_B5', type is buried 
+_LC1_B5  = LCELL( _LC2_B5 $  GND);
+
+-- Node name is '|delay2:15|:6' = '|delay2:15|out0' 
+-- Equation name is '_LC12_D3', type is buried 
+_LC12_D3 = LCELL( _LC5_D3 $  GND);
+
+-- Node name is '|delay2:15|:10' = '|delay2:15|out1' 
+-- Equation name is '_LC12_B1', type is buried 
+_LC12_B1 = LCELL( _LC11_B1 $  GND);
+
+-- Node name is '|delay2:15|:3' 
+-- Equation name is '_LC3_D3', type is buried 
+_LC3_D3  = LCELL( _LC2_D3 $  GND);
+
+-- Node name is '|delay2:15|:4' 
+-- Equation name is '_LC4_D3', type is buried 
+_LC4_D3  = LCELL( _LC3_D3 $  GND);
+
+-- Node name is '|delay2:15|:5' 
+-- Equation name is '_LC5_D3', type is buried 
+_LC5_D3  = LCELL( _LC4_D3 $  GND);
+
+-- Node name is '|delay2:15|:7' 
+-- Equation name is '_LC9_B1', type is buried 
+_LC9_B1  = LCELL( _LC2_B1 $  GND);
+
+-- Node name is '|delay2:15|:8' 
+-- Equation name is '_LC10_B1', type is buried 
+_LC10_B1 = LCELL( _LC9_B1 $  GND);
+
+-- Node name is '|delay2:15|:9' 
+-- Equation name is '_LC11_B1', type is buried 
+_LC11_B1 = LCELL( _LC10_B1 $  GND);
+
+-- Node name is '|delay2:16|:6' = '|delay2:16|out0' 
+-- Equation name is '_LC16_D3', type is buried 
+_LC16_D3 = LCELL( _LC15_D3 $  GND);
+
+-- Node name is '|delay2:16|:10' = '|delay2:16|out1' 
+-- Equation name is '_LC16_B1', type is buried 
+_LC16_B1 = LCELL( _LC15_B1 $  GND);
+
+-- Node name is '|delay2:16|:3' 
+-- Equation name is '_LC13_D3', type is buried 
+_LC13_D3 = LCELL( _LC12_D3 $  GND);
+
+-- Node name is '|delay2:16|:4' 
+-- Equation name is '_LC14_D3', type is buried 
+_LC14_D3 = LCELL( _LC13_D3 $  GND);
+
+-- Node name is '|delay2:16|:5' 
+-- Equation name is '_LC15_D3', type is buried 
+_LC15_D3 = LCELL( _LC14_D3 $  GND);
+
+-- Node name is '|delay2:16|:7' 
+-- Equation name is '_LC13_B1', type is buried 
+_LC13_B1 = LCELL( _LC12_B1 $  GND);
+
+-- Node name is '|delay2:16|:8' 
+-- Equation name is '_LC14_B1', type is buried 
+_LC14_B1 = LCELL( _LC13_B1 $  GND);
+
+-- Node name is '|delay2:16|:9' 
+-- Equation name is '_LC15_B1', type is buried 
+_LC15_B1 = LCELL( _LC14_B1 $  GND);
+
+-- Node name is '|delay2:17|:6' = '|delay2:17|out0' 
+-- Equation name is '_LC7_D3', type is buried 
+_LC7_D3  = LCELL( _LC6_D3 $  GND);
+
+-- Node name is '|delay2:17|:10' = '|delay2:17|out1' 
+-- Equation name is '_LC6_B1', type is buried 
+_LC6_B1  = LCELL( _LC5_B1 $  GND);
+
+-- Node name is '|delay2:17|:3' 
+-- Equation name is '_LC11_D3', type is buried 
+_LC11_D3 = LCELL( _LC16_D3 $  GND);
+
+-- Node name is '|delay2:17|:4' 
+-- Equation name is '_LC10_D3', type is buried 
+_LC10_D3 = LCELL( _LC11_D3 $  GND);
+
+-- Node name is '|delay2:17|:5' 
+-- Equation name is '_LC6_D3', type is buried 
+_LC6_D3  = LCELL( _LC10_D3 $  GND);
+
+-- Node name is '|delay2:17|:7' 
+-- Equation name is '_LC3_B1', type is buried 
+_LC3_B1  = LCELL( _LC16_B1 $  GND);
+
+-- Node name is '|delay2:17|:8' 
+-- Equation name is '_LC4_B1', type is buried 
+_LC4_B1  = LCELL( _LC3_B1 $  GND);
+
+-- Node name is '|delay2:17|:9' 
+-- Equation name is '_LC5_B1', type is buried 
+_LC5_B1  = LCELL( _LC4_B1 $  GND);
+
+-- Node name is '|delay2:18|:6' = '|delay2:18|out0' 
+-- Equation name is '_LC9_D4', type is buried 
+_LC9_D4  = LCELL( _LC1_D3 $  GND);
+
+-- Node name is '|delay2:18|:10' = '|delay2:18|out1' 
+-- Equation name is '_LC9_B2', type is buried 
+_LC9_B2  = LCELL( _LC1_B1 $  GND);
+
+-- Node name is '|delay2:18|:3' 
+-- Equation name is '_LC8_D3', type is buried 
+_LC8_D3  = LCELL( _LC7_D3 $  GND);
+
+-- Node name is '|delay2:18|:4' 
+-- Equation name is '_LC9_D3', type is buried 
+_LC9_D3  = LCELL( _LC8_D3 $  GND);
+
+-- Node name is '|delay2:18|:5' 
+-- Equation name is '_LC1_D3', type is buried 
+_LC1_D3  = LCELL( _LC9_D3 $  GND);
+
+-- Node name is '|delay2:18|:7' 
+-- Equation name is '_LC7_B1', type is buried 
+_LC7_B1  = LCELL( _LC6_B1 $  GND);
+
+-- Node name is '|delay2:18|:8' 
+-- Equation name is '_LC8_B1', type is buried 
+_LC8_B1  = LCELL( _LC7_B1 $  GND);
+
+-- Node name is '|delay2:18|:9' 
+-- Equation name is '_LC1_B1', type is buried 
+_LC1_B1  = LCELL( _LC8_B1 $  GND);
+
+
+
+Project Information                                  e:\term3\lab20\delay4.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Multi-Level
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'MAX9000' family
+
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      PARALLEL_EXPANDERS                  = off
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SOFT_BUFFER_INSERTION               = on
+      SUBFACTOR_EXTRACTION                = on
+      TURBO_BIT                           = on
+      XOR_SYNTHESIS                       = on
+      IGNORE_SOFT_BUFFERS                 = off
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      One-Hot State Machine Encoding      = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:00
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 6,865K

@@ -1,0 +1,753 @@
+Timing Analyzer report for fifo2
+Thu Mar 14 19:44:25 2019
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'RD'
+  6. Clock Setup: 'WR'
+  7. tco
+  8. tpd
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                                                        ;
++------------------------------+-------+---------------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                                                                                   ; To                                                                                     ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 20.245 ns                                      ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[6]                                                                                   ; WR         ;          ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 17.724 ns                                      ; WR                                                                                     ; D[6]                                                                                   ;            ;          ; 0            ;
+; Clock Setup: 'WR'            ; N/A   ; None          ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; WR         ; WR       ; 0            ;
+; Clock Setup: 'RD'            ; N/A   ; None          ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; RD         ; RD       ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                                                                                        ;                                                                                        ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP1S10F484C5       ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; Off                ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; RD              ;                    ; User Pin ; NONE             ; 0.000 ns      ; 0.000 ns     ; NONE     ; N/A                   ; N/A                 ; N/A    ;              ;
+; WR              ;                    ; User Pin ; NONE             ; 0.000 ns      ; 0.000 ns     ; NONE     ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'RD'                                                                                                                                                                                                                                                                                                                                    ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                                                   ; To                                                                                     ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; RD         ; RD       ; None                        ; None                      ; 1.420 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; RD         ; RD       ; None                        ; None                      ; 1.361 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; RD         ; RD       ; None                        ; None                      ; 1.360 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; RD         ; RD       ; None                        ; None                      ; 1.343 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; RD         ; RD       ; None                        ; None                      ; 1.283 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; RD         ; RD       ; None                        ; None                      ; 1.223 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; RD         ; RD       ; None                        ; None                      ; 0.952 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; RD         ; RD       ; None                        ; None                      ; 0.951 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; RD         ; RD       ; None                        ; None                      ; 0.843 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; RD         ; RD       ; None                        ; None                      ; 0.629 ns                ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'WR'                                                                                                                                                                                                                                                                                                                                    ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                                                   ; To                                                                                     ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; WR         ; WR       ; None                        ; None                      ; 1.360 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; WR         ; WR       ; None                        ; None                      ; 1.347 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; WR         ; WR       ; None                        ; None                      ; 1.287 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; WR         ; WR       ; None                        ; None                      ; 1.280 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; WR         ; WR       ; None                        ; None                      ; 1.227 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; WR         ; WR       ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; WR         ; WR       ; None                        ; None                      ; 0.951 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; WR         ; WR       ; None                        ; None                      ; 0.847 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; WR         ; WR       ; None                        ; None                      ; 0.840 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; WR         ; WR       ; None                        ; None                      ; 0.632 ns                ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                             ;
++-------+--------------+------------+----------------------------------------------------------------------------------------+-------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                                   ; To    ; From Clock ;
++-------+--------------+------------+----------------------------------------------------------------------------------------+-------+------------+
+; N/A   ; None         ; 20.245 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[6]  ; WR         ;
+; N/A   ; None         ; 20.223 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[2]  ; WR         ;
+; N/A   ; None         ; 20.129 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[0]  ; WR         ;
+; N/A   ; None         ; 20.092 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[3]  ; WR         ;
+; N/A   ; None         ; 20.049 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[1]  ; WR         ;
+; N/A   ; None         ; 19.518 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[4]  ; WR         ;
+; N/A   ; None         ; 19.486 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[5]  ; WR         ;
+; N/A   ; None         ; 19.237 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[7]  ; WR         ;
+; N/A   ; None         ; 17.300 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[6]  ; WR         ;
+; N/A   ; None         ; 17.201 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[6]  ; WR         ;
+; N/A   ; None         ; 17.168 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[6]  ; WR         ;
+; N/A   ; None         ; 16.942 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[0]  ; WR         ;
+; N/A   ; None         ; 16.874 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[2]  ; WR         ;
+; N/A   ; None         ; 16.842 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[0]  ; WR         ;
+; N/A   ; None         ; 16.804 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[0]  ; WR         ;
+; N/A   ; None         ; 16.785 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[1]  ; WR         ;
+; N/A   ; None         ; 16.751 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[2]  ; WR         ;
+; N/A   ; None         ; 16.739 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[3]  ; WR         ;
+; N/A   ; None         ; 16.653 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[1]  ; WR         ;
+; N/A   ; None         ; 16.621 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[3]  ; WR         ;
+; N/A   ; None         ; 16.598 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[1]  ; WR         ;
+; N/A   ; None         ; 16.550 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[2]  ; WR         ;
+; N/A   ; None         ; 16.301 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[3]  ; WR         ;
+; N/A   ; None         ; 16.222 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[5]  ; WR         ;
+; N/A   ; None         ; 16.169 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[4]  ; WR         ;
+; N/A   ; None         ; 16.121 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[4]  ; WR         ;
+; N/A   ; None         ; 16.090 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[5]  ; WR         ;
+; N/A   ; None         ; 16.035 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[5]  ; WR         ;
+; N/A   ; None         ; 15.989 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[4]  ; WR         ;
+; N/A   ; None         ; 15.888 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[7]  ; WR         ;
+; N/A   ; None         ; 15.803 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[7]  ; WR         ;
+; N/A   ; None         ; 15.673 ns  ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[7]  ; WR         ;
+; N/A   ; None         ; 13.407 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[0]  ; RD         ;
+; N/A   ; None         ; 12.744 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[0]  ; RD         ;
+; N/A   ; None         ; 12.096 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[1]  ; RD         ;
+; N/A   ; None         ; 12.012 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[6]  ; RD         ;
+; N/A   ; None         ; 12.011 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[2]  ; RD         ;
+; N/A   ; None         ; 11.927 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[4]  ; RD         ;
+; N/A   ; None         ; 11.829 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[6]  ; RD         ;
+; N/A   ; None         ; 11.494 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[1]  ; RD         ;
+; N/A   ; None         ; 11.407 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[3]  ; RD         ;
+; N/A   ; None         ; 11.280 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[2]  ; RD         ;
+; N/A   ; None         ; 11.172 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[3]  ; RD         ;
+; N/A   ; None         ; 11.139 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[4]  ; RD         ;
+; N/A   ; None         ; 10.983 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[7]  ; RD         ;
+; N/A   ; None         ; 10.627 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[7]  ; RD         ;
+; N/A   ; None         ; 10.621 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; D[5]  ; RD         ;
+; N/A   ; None         ; 10.591 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; D[5]  ; RD         ;
+; N/A   ; None         ; 10.051 ns  ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[2]  ; RD         ;
+; N/A   ; None         ; 9.781 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[0]  ; RD         ;
+; N/A   ; None         ; 9.661 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[6]  ; RD         ;
+; N/A   ; None         ; 9.623 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[2]  ; RD         ;
+; N/A   ; None         ; 9.463 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[1]  ; RD         ;
+; N/A   ; None         ; 9.353 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[5]  ; RD         ;
+; N/A   ; None         ; 9.339 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[3]  ; RD         ;
+; N/A   ; None         ; 9.291 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[4]  ; RD         ;
+; N/A   ; None         ; 9.170 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[6]  ; RD         ;
+; N/A   ; None         ; 9.153 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; D[7]  ; RD         ;
+; N/A   ; None         ; 9.055 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[1]  ; RD         ;
+; N/A   ; None         ; 8.982 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[4]  ; RD         ;
+; N/A   ; None         ; 8.698 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[0]  ; RD         ;
+; N/A   ; None         ; 8.697 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[7]  ; RD         ;
+; N/A   ; None         ; 8.690 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[3]  ; RD         ;
+; N/A   ; None         ; 8.627 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; full  ; RD         ;
+; N/A   ; None         ; 8.563 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; D[5]  ; RD         ;
+; N/A   ; None         ; 8.527 ns   ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; full  ; WR         ;
+; N/A   ; None         ; 8.526 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; full  ; RD         ;
+; N/A   ; None         ; 8.478 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; full  ; RD         ;
+; N/A   ; None         ; 8.478 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; empty ; RD         ;
+; N/A   ; None         ; 8.464 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; full  ; RD         ;
+; N/A   ; None         ; 8.464 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; empty ; RD         ;
+; N/A   ; None         ; 8.453 ns   ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; full  ; WR         ;
+; N/A   ; None         ; 8.451 ns   ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; full  ; WR         ;
+; N/A   ; None         ; 8.451 ns   ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1] ; empty ; WR         ;
+; N/A   ; None         ; 8.431 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; empty ; RD         ;
+; N/A   ; None         ; 8.331 ns   ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[0] ; empty ; WR         ;
+; N/A   ; None         ; 8.330 ns   ; lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; empty ; RD         ;
+; N/A   ; None         ; 8.274 ns   ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; full  ; WR         ;
+; N/A   ; None         ; 8.274 ns   ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3] ; empty ; WR         ;
+; N/A   ; None         ; 8.257 ns   ; lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2] ; empty ; WR         ;
++-------+--------------+------------+----------------------------------------------------------------------------------------+-------+------------+
+
+
++-------------------------------------------------------------+
+; tpd                                                         ;
++-------+-------------------+-----------------+-------+-------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From  ; To    ;
++-------+-------------------+-----------------+-------+-------+
+; N/A   ; None              ; 17.724 ns       ; WR    ; D[6]  ;
+; N/A   ; None              ; 17.699 ns       ; WR    ; D[2]  ;
+; N/A   ; None              ; 17.608 ns       ; WR    ; D[0]  ;
+; N/A   ; None              ; 17.568 ns       ; WR    ; D[3]  ;
+; N/A   ; None              ; 17.528 ns       ; WR    ; D[1]  ;
+; N/A   ; None              ; 16.994 ns       ; WR    ; D[4]  ;
+; N/A   ; None              ; 16.965 ns       ; WR    ; D[5]  ;
+; N/A   ; None              ; 16.713 ns       ; WR    ; D[7]  ;
+; N/A   ; None              ; 13.922 ns       ; DI[0] ; D[0]  ;
+; N/A   ; None              ; 13.790 ns       ; DI[3] ; D[3]  ;
+; N/A   ; None              ; 13.682 ns       ; DI[6] ; D[6]  ;
+; N/A   ; None              ; 13.612 ns       ; DI[1] ; D[1]  ;
+; N/A   ; None              ; 13.150 ns       ; DI[2] ; D[2]  ;
+; N/A   ; None              ; 12.998 ns       ; DI[5] ; D[5]  ;
+; N/A   ; None              ; 12.597 ns       ; DI[4] ; D[4]  ;
+; N/A   ; None              ; 12.104 ns       ; DI[7] ; D[7]  ;
+; N/A   ; None              ; 6.986 ns        ; RD    ; D[2]  ;
+; N/A   ; None              ; 6.986 ns        ; WR    ; empty ;
+; N/A   ; None              ; 6.818 ns        ; RD    ; D[0]  ;
+; N/A   ; None              ; 6.753 ns        ; RD    ; D[1]  ;
+; N/A   ; None              ; 6.742 ns        ; RD    ; D[5]  ;
+; N/A   ; None              ; 6.680 ns        ; WR    ; full  ;
+; N/A   ; None              ; 6.670 ns        ; RD    ; empty ;
+; N/A   ; None              ; 6.654 ns        ; RD    ; D[4]  ;
+; N/A   ; None              ; 6.654 ns        ; RD    ; D[6]  ;
+; N/A   ; None              ; 6.625 ns        ; RD    ; D[7]  ;
+; N/A   ; None              ; 6.490 ns        ; RD    ; D[3]  ;
+; N/A   ; None              ; 6.364 ns        ; RD    ; full  ;
++-------+-------------------+-----------------+-------+-------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Thu Mar 14 19:44:25 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off fifo2 -c fifo2 --timing_analysis_only
+Warning: Timing Analysis found one or more latches implemented as combinational loops
+    Warning: Node "sr_ff_or:inst5|inst2" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|xql[7]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|xql[6]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|xql[5]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|xql[4]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|xql[3]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|xql[2]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|xql[1]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][0]" is a latch
+    Warning: Node "altdpram0:inst|altdpram:altdpram_component|xql[0]" is a latch
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|xql[0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][0]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|xql[1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][1]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|xql[2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][2]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|xql[3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][3]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|xql[4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][4]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|xql[5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][5]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|xql[6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][6]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|xql[7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[11][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[9][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[8][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[10][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[3][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[1][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[2][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[0][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[7][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[5][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[4][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[6][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[15][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[14][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[12][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "altdpram0:inst|altdpram:altdpram_component|cells[13][7]"
+Info: Found combinational loop of 1 nodes
+    Info: Node "sr_ff_or:inst5|inst2"
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "RD" is an undefined clock
+    Info: Assuming node "WR" is an undefined clock
+Info: Clock "RD" Internal fmax is restricted to 422.12 MHz between source register "lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1]" and destination register "lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3]"
+    Info: fmax restricted to clock pin edge rate 2.369 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.420 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X32_Y20_N2; Fanout = 56; REG Node = 'lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1]'
+            Info: 2: + IC(0.412 ns) + CELL(0.451 ns) = 0.863 ns; Loc. = LC_X32_Y20_N2; Fanout = 2; COMB Node = 'lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|counter_cella1~COUTCOUT1'
+            Info: 3: + IC(0.000 ns) + CELL(0.060 ns) = 0.923 ns; Loc. = LC_X32_Y20_N3; Fanout = 1; COMB Node = 'lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|counter_cella2~COUTCOUT1_81'
+            Info: 4: + IC(0.000 ns) + CELL(0.497 ns) = 1.420 ns; Loc. = LC_X32_Y20_N4; Fanout = 18; REG Node = 'lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3]'
+            Info: Total cell delay = 1.008 ns ( 70.99 % )
+            Info: Total interconnect delay = 0.412 ns ( 29.01 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "RD" to destination register is 2.794 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 22; CLK Node = 'RD'
+                Info: 2: + IC(1.527 ns) + CELL(0.542 ns) = 2.794 ns; Loc. = LC_X32_Y20_N4; Fanout = 18; REG Node = 'lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3]'
+                Info: Total cell delay = 1.267 ns ( 45.35 % )
+                Info: Total interconnect delay = 1.527 ns ( 54.65 % )
+            Info: - Longest clock path from clock "RD" to source register is 2.794 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 22; CLK Node = 'RD'
+                Info: 2: + IC(1.527 ns) + CELL(0.542 ns) = 2.794 ns; Loc. = LC_X32_Y20_N2; Fanout = 56; REG Node = 'lpm_counter0:inst4|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[1]'
+                Info: Total cell delay = 1.267 ns ( 45.35 % )
+                Info: Total interconnect delay = 1.527 ns ( 54.65 % )
+        Info: + Micro clock to output delay of source is 0.156 ns
+        Info: + Micro setup delay of destination is 0.010 ns
+Info: Clock "WR" Internal fmax is restricted to 422.12 MHz between source register "lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2]" and destination register "lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3]"
+    Info: fmax restricted to clock pin edge rate 2.369 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.360 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X32_Y20_N7; Fanout = 20; REG Node = 'lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2]'
+            Info: 2: + IC(0.412 ns) + CELL(0.451 ns) = 0.863 ns; Loc. = LC_X32_Y20_N7; Fanout = 1; COMB Node = 'lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|counter_cella2~COUTCOUT1_1'
+            Info: 3: + IC(0.000 ns) + CELL(0.497 ns) = 1.360 ns; Loc. = LC_X32_Y20_N8; Fanout = 4; REG Node = 'lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3]'
+            Info: Total cell delay = 0.948 ns ( 69.71 % )
+            Info: Total interconnect delay = 0.412 ns ( 30.29 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "WR" to destination register is 2.903 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.828 ns) = 0.828 ns; Loc. = PIN_L3; Fanout = 9; CLK Node = 'WR'
+                Info: 2: + IC(1.533 ns) + CELL(0.542 ns) = 2.903 ns; Loc. = LC_X32_Y20_N8; Fanout = 4; REG Node = 'lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3]'
+                Info: Total cell delay = 1.370 ns ( 47.19 % )
+                Info: Total interconnect delay = 1.533 ns ( 52.81 % )
+            Info: - Longest clock path from clock "WR" to source register is 2.903 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.828 ns) = 0.828 ns; Loc. = PIN_L3; Fanout = 9; CLK Node = 'WR'
+                Info: 2: + IC(1.533 ns) + CELL(0.542 ns) = 2.903 ns; Loc. = LC_X32_Y20_N7; Fanout = 20; REG Node = 'lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[2]'
+                Info: Total cell delay = 1.370 ns ( 47.19 % )
+                Info: Total interconnect delay = 1.533 ns ( 52.81 % )
+        Info: + Micro clock to output delay of source is 0.156 ns
+        Info: + Micro setup delay of destination is 0.010 ns
+Info: tco from clock "WR" to destination pin "D[6]" through register "lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3]" is 20.245 ns
+    Info: + Longest clock path from clock "WR" to source register is 2.903 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.828 ns) = 0.828 ns; Loc. = PIN_L3; Fanout = 9; CLK Node = 'WR'
+        Info: 2: + IC(1.533 ns) + CELL(0.542 ns) = 2.903 ns; Loc. = LC_X32_Y20_N8; Fanout = 4; REG Node = 'lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3]'
+        Info: Total cell delay = 1.370 ns ( 47.19 % )
+        Info: Total interconnect delay = 1.533 ns ( 52.81 % )
+    Info: + Micro clock to output delay of source is 0.156 ns
+    Info: + Longest register to pin delay is 17.186 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X32_Y20_N8; Fanout = 4; REG Node = 'lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_gb7:auto_generated|safe_q[3]'
+        Info: 2: + IC(2.231 ns) + CELL(0.183 ns) = 2.414 ns; Loc. = LC_X52_Y13_N2; Fanout = 8; COMB Node = 'altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode101w[1]'
+        Info: 3: + IC(2.159 ns) + CELL(0.183 ns) = 4.756 ns; Loc. = LC_X27_Y20_N4; Fanout = 16; COMB Node = 'altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode179w[3]'
+        Info: 4: + IC(0.000 ns) + CELL(4.985 ns) = 9.741 ns; Loc. = LC_X29_Y26_N4; Fanout = 2; COMB LOOP Node = 'altdpram0:inst|altdpram:altdpram_component|cells[15][6]'
+            Info: Loc. = LC_X29_Y26_N4; Node "altdpram0:inst|altdpram:altdpram_component|cells[15][6]"
+        Info: 5: + IC(1.013 ns) + CELL(0.183 ns) = 10.937 ns; Loc. = LC_X29_Y23_N5; Fanout = 1; COMB Node = 'altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result922w~45'
+        Info: 6: + IC(0.914 ns) + CELL(0.280 ns) = 12.131 ns; Loc. = LC_X28_Y24_N7; Fanout = 1; COMB Node = 'altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result853w~175'
+        Info: 7: + IC(0.332 ns) + CELL(0.183 ns) = 12.646 ns; Loc. = LC_X28_Y24_N2; Fanout = 2; COMB Node = 'altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result853w~179'
+        Info: 8: + IC(0.000 ns) + CELL(0.703 ns) = 13.349 ns; Loc. = LC_X28_Y24_N0; Fanout = 2; COMB LOOP Node = 'altdpram0:inst|altdpram:altdpram_component|xql[6]'
+            Info: Loc. = LC_X28_Y24_N0; Node "altdpram0:inst|altdpram:altdpram_component|xql[6]"
+        Info: 9: + IC(1.433 ns) + CELL(2.404 ns) = 17.186 ns; Loc. = PIN_G9; Fanout = 0; PIN Node = 'D[6]'
+        Info: Total cell delay = 9.104 ns ( 52.97 % )
+        Info: Total interconnect delay = 8.082 ns ( 47.03 % )
+Info: Longest tpd from source pin "WR" to destination pin "D[6]" is 17.724 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.828 ns) = 0.828 ns; Loc. = PIN_L3; Fanout = 9; CLK Node = 'WR'
+    Info: 2: + IC(2.049 ns) + CELL(0.075 ns) = 2.952 ns; Loc. = LC_X52_Y13_N2; Fanout = 8; COMB Node = 'altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode101w[1]'
+    Info: 3: + IC(2.159 ns) + CELL(0.183 ns) = 5.294 ns; Loc. = LC_X27_Y20_N4; Fanout = 16; COMB Node = 'altdpram0:inst|altdpram:altdpram_component|lpm_decode:wdecoder|decode_knb:auto_generated|w_anode179w[3]'
+    Info: 4: + IC(0.000 ns) + CELL(4.985 ns) = 10.279 ns; Loc. = LC_X29_Y26_N4; Fanout = 2; COMB LOOP Node = 'altdpram0:inst|altdpram:altdpram_component|cells[15][6]'
+        Info: Loc. = LC_X29_Y26_N4; Node "altdpram0:inst|altdpram:altdpram_component|cells[15][6]"
+    Info: 5: + IC(1.013 ns) + CELL(0.183 ns) = 11.475 ns; Loc. = LC_X29_Y23_N5; Fanout = 1; COMB Node = 'altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result922w~45'
+    Info: 6: + IC(0.914 ns) + CELL(0.280 ns) = 12.669 ns; Loc. = LC_X28_Y24_N7; Fanout = 1; COMB Node = 'altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result853w~175'
+    Info: 7: + IC(0.332 ns) + CELL(0.183 ns) = 13.184 ns; Loc. = LC_X28_Y24_N2; Fanout = 2; COMB Node = 'altdpram0:inst|altdpram:altdpram_component|lpm_mux:mux|mux_4ic:auto_generated|w_result853w~179'
+    Info: 8: + IC(0.000 ns) + CELL(0.703 ns) = 13.887 ns; Loc. = LC_X28_Y24_N0; Fanout = 2; COMB LOOP Node = 'altdpram0:inst|altdpram:altdpram_component|xql[6]'
+        Info: Loc. = LC_X28_Y24_N0; Node "altdpram0:inst|altdpram:altdpram_component|xql[6]"
+    Info: 9: + IC(1.433 ns) + CELL(2.404 ns) = 17.724 ns; Loc. = PIN_G9; Fanout = 0; PIN Node = 'D[6]'
+    Info: Total cell delay = 9.824 ns ( 55.43 % )
+    Info: Total interconnect delay = 7.900 ns ( 44.57 % )
+Info: Quartus II Timing Analyzer was successful. 0 errors, 139 warnings
+    Info: Processing ended: Thu Mar 14 19:44:25 2019
+    Info: Elapsed time: 00:00:01
+
+

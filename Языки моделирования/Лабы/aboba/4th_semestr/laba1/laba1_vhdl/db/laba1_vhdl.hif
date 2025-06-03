@@ -1,0 +1,216 @@
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+35
+1901
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+VRSM_ON
+VHSM_ON
+0
+# entity
+altshift_taps
+# case_insensitive
+# source_file
+..|..|..|altera|quartus50|libraries|megafunctions|altshift_taps.tdf
+1114026840
+6
+# storage
+db|laba1_vhdl.(1).cnf
+db|laba1_vhdl.(1).cnf
+# user_parameter {
+NUMBER_OF_TAPS
+1
+PARAMETER_UNKNOWN
+USR
+TAP_DISTANCE
+8
+PARAMETER_UNKNOWN
+USR
+WIDTH
+8
+PARAMETER_UNKNOWN
+USR
+POWER_UP_STATE
+CLEARED
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+shift_taps_ujg
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+clock
+shiftin0
+shiftin1
+shiftin2
+shiftin3
+shiftin4
+shiftin5
+shiftin6
+shiftin7
+taps0
+taps1
+taps2
+taps3
+taps4
+taps5
+taps6
+taps7
+}
+# include_file {
+..|..|..|altera|quartus50|libraries|megafunctions|altdpram.inc
+1107591082
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_counter.inc
+1107592548
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_compare.inc
+1107592500
+..|..|..|altera|quartus50|libraries|megafunctions|lpm_constant.inc
+1107592524
+}
+# end
+# entity
+shift_taps_ujg
+# case_insensitive
+# source_file
+db|shift_taps_ujg.tdf
+1551207732
+6
+# storage
+db|laba1_vhdl.(2).cnf
+db|laba1_vhdl.(2).cnf
+# used_port {
+shiftin0
+shiftin1
+shiftin2
+shiftin3
+shiftin4
+shiftin5
+shiftin6
+shiftin7
+clock
+taps0
+taps1
+taps2
+taps3
+taps4
+taps5
+taps6
+taps7
+}
+# end
+# entity
+cntr_6gc
+# case_insensitive
+# source_file
+db|cntr_6gc.tdf
+1551207732
+6
+# storage
+db|laba1_vhdl.(4).cnf
+db|laba1_vhdl.(4).cnf
+# used_port {
+clk_en
+clock
+q0
+q1
+q2
+}
+# end
+# entity
+laba1_vhdl
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+laba1_vhdl.vhd
+1551211218
+4
+# storage
+db|laba1_vhdl.(0).cnf
+db|laba1_vhdl.(0).cnf
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+|
+}
+# end
+# entity
+altsyncram_uru
+# case_insensitive
+# source_file
+db|altsyncram_uru.tdf
+1551207732
+6
+# storage
+db|laba1_vhdl.(3).cnf
+db|laba1_vhdl.(3).cnf
+# user_parameter {
+PORT_A_ADDRESS_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_A_BYTE_ENABLE_MASK_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_A_DATA_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_B_ADDRESS_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_B_BYTE_ENABLE_MASK_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_B_DATA_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+}
+# used_port {
+address_a0
+address_a1
+address_a2
+address_b0
+address_b1
+address_b2
+clock0
+clocken0
+data_a0
+data_a1
+data_a2
+data_a3
+data_a4
+data_a5
+data_a6
+data_a7
+wren_a
+q_b0
+q_b1
+q_b2
+q_b3
+q_b4
+q_b5
+q_b6
+q_b7
+}
+# memory_file {
+none
+0
+}
+# end
+# complete
+

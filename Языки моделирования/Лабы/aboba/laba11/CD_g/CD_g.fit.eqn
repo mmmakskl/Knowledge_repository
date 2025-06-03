@@ -1,0 +1,110 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B3_1 is XOR3:inst3|1 at LC_X48_Y30_N2
+--operation mode is normal
+
+B3_1 = D0 $ D3 $ D1;
+
+
+--B2_1 is XOR3:inst2|1 at LC_X48_Y30_N4
+--operation mode is normal
+
+B2_1 = D0 $ D2 $ D3;
+
+
+--B1_1 is XOR3:inst1|1 at LC_X48_Y30_N5
+--operation mode is normal
+
+B1_1 = D1 $ D2 $ D3;
+
+
+--C1L1 is XOR8:inst7|39~3 at LC_X48_Y30_N6
+--operation mode is normal
+
+C1L1 = D0 $ D2 $ D1;
+
+
+--D1 is D1 at PIN_C3
+--operation mode is input
+
+D1 = INPUT();
+
+
+--D0 is D0 at PIN_F7
+--operation mode is input
+
+D0 = INPUT();
+
+
+--D3 is D3 at PIN_A6
+--operation mode is input
+
+D3 = INPUT();
+
+
+--D2 is D2 at PIN_D5
+--operation mode is input
+
+D2 = INPUT();
+
+
+--K1 is K1 at PIN_B5
+--operation mode is output
+
+K1 = OUTPUT(B3_1);
+
+
+--K2 is K2 at PIN_A5
+--operation mode is output
+
+K2 = OUTPUT(B2_1);
+
+
+--K3 is K3 at PIN_C6
+--operation mode is output
+
+K3 = OUTPUT(B1_1);
+
+
+--K is K at PIN_E5
+--operation mode is output
+
+K = OUTPUT(C1L1);
+
+
+--D0_o is D0_o at PIN_B6
+--operation mode is output
+
+D0_o = OUTPUT(D0);
+
+
+--D1_o is D1_o at PIN_K7
+--operation mode is output
+
+D1_o = OUTPUT(D1);
+
+
+--D2_o is D2_o at PIN_C5
+--operation mode is output
+
+D2_o = OUTPUT(D2);
+
+
+--D3_o is D3_o at PIN_D6
+--operation mode is output
+
+D3_o = OUTPUT(D3);
+
+
+

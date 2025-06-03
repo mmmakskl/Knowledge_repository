@@ -1,0 +1,680 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L64Q is OUT_DATA[0]~reg0
+--operation mode is normal
+
+A1L64Q_lut_out = A1L62Q & C1_q_b[0] # !A1L62Q & (A1L72Q);
+A1L64Q = DFFEAS(A1L64Q_lut_out, CLK, VCC, , A1L54, , , , );
+
+
+--A1L84Q is OUT_DATA[1]~reg0
+--operation mode is normal
+
+A1L84Q_lut_out = A1L62Q & C1_q_b[1] # !A1L62Q & (A1L82Q);
+A1L84Q = DFFEAS(A1L84Q_lut_out, CLK, VCC, , A1L54, , , , );
+
+
+--A1L05Q is OUT_DATA[2]~reg0
+--operation mode is normal
+
+A1L05Q_lut_out = A1L62Q & C1_q_b[2] # !A1L62Q & (A1L92Q);
+A1L05Q = DFFEAS(A1L05Q_lut_out, CLK, VCC, , A1L54, , , , );
+
+
+--A1L25Q is OUT_DATA[3]~reg0
+--operation mode is normal
+
+A1L25Q_lut_out = A1L62Q & C1_q_b[3] # !A1L62Q & (A1L03Q);
+A1L25Q = DFFEAS(A1L25Q_lut_out, CLK, VCC, , A1L54, , , , );
+
+
+--A1L45Q is OUT_DATA[4]~reg0
+--operation mode is normal
+
+A1L45Q_lut_out = A1L62Q & C1_q_b[4] # !A1L62Q & (A1L13Q);
+A1L45Q = DFFEAS(A1L45Q_lut_out, CLK, VCC, , A1L54, , , , );
+
+
+--A1L65Q is OUT_DATA[5]~reg0
+--operation mode is normal
+
+A1L65Q_lut_out = A1L62Q & C1_q_b[5] # !A1L62Q & (A1L23Q);
+A1L65Q = DFFEAS(A1L65Q_lut_out, CLK, VCC, , A1L54, , , , );
+
+
+--A1L85Q is OUT_DATA[6]~reg0
+--operation mode is normal
+
+A1L85Q_lut_out = A1L62Q & C1_q_b[6] # !A1L62Q & (A1L33Q);
+A1L85Q = DFFEAS(A1L85Q_lut_out, CLK, VCC, , A1L54, , , , );
+
+
+--A1L06Q is OUT_DATA[7]~reg0
+--operation mode is normal
+
+A1L06Q_lut_out = A1L62Q & C1_q_b[7] # !A1L62Q & (A1L43Q);
+A1L06Q = DFFEAS(A1L06Q_lut_out, CLK, VCC, , A1L54, , , , );
+
+
+--A1L14Q is IS_FULL~reg0
+--operation mode is normal
+
+A1L14Q_lut_out = count[4] & A1L07;
+A1L14Q = DFFEAS(A1L14Q_lut_out, CLK, !RESET, , , , , , );
+
+
+--A1L93Q is IS_EMPTY~reg0
+--operation mode is normal
+
+A1L93Q_lut_out = A1L24;
+A1L93Q = DFFEAS(A1L93Q_lut_out, CLK, !RESET, , , , , , );
+
+
+--C1_q_b[0] is altsyncram:fifo_data_rtl_0|altsyncram_1761:auto_generated|q_b[0]
+--RAM Block Operation Mode: Simple Dual-Port
+--Port A Depth: 16, Port A Width: 1, Port B Depth: 16, Port B Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 8, Port B Logical Depth: 16, Port B Logical Width: 8
+--Port A Input: Registered, Port B Input: Registered, Port B Output: Un-registered
+C1_q_b[0]_PORT_A_data_in = DATA[0];
+C1_q_b[0]_PORT_A_data_in_reg = DFFE(C1_q_b[0]_PORT_A_data_in, C1_q_b[0]_clock_0, , , C1_q_b[0]_clock_enable_0);
+C1_q_b[0]_PORT_A_address = BUS(wr_ptr[0], wr_ptr[1], wr_ptr[2], wr_ptr[3]);
+C1_q_b[0]_PORT_A_address_reg = DFFE(C1_q_b[0]_PORT_A_address, C1_q_b[0]_clock_0, , , C1_q_b[0]_clock_enable_0);
+C1_q_b[0]_PORT_B_address = BUS(A1L66, A1L1, A1L2, A1L3);
+C1_q_b[0]_PORT_B_address_reg = DFFE(C1_q_b[0]_PORT_B_address, C1_q_b[0]_clock_1, , , C1_q_b[0]_clock_enable_1);
+C1_q_b[0]_PORT_A_write_enable = VCC;
+C1_q_b[0]_PORT_A_write_enable_reg = DFFE(C1_q_b[0]_PORT_A_write_enable, C1_q_b[0]_clock_0, , , C1_q_b[0]_clock_enable_0);
+C1_q_b[0]_PORT_B_read_enable = VCC;
+C1_q_b[0]_PORT_B_read_enable_reg = DFFE(C1_q_b[0]_PORT_B_read_enable, C1_q_b[0]_clock_1, , , C1_q_b[0]_clock_enable_1);
+C1_q_b[0]_clock_0 = CLK;
+C1_q_b[0]_clock_1 = CLK;
+C1_q_b[0]_clock_enable_0 = A1L53;
+C1_q_b[0]_clock_enable_1 = A1L26;
+C1_q_b[0]_PORT_B_data_out = MEMORY(C1_q_b[0]_PORT_A_data_in_reg, , C1_q_b[0]_PORT_A_address_reg, C1_q_b[0]_PORT_B_address_reg, C1_q_b[0]_PORT_A_write_enable_reg, C1_q_b[0]_PORT_B_read_enable_reg, , , C1_q_b[0]_clock_0, C1_q_b[0]_clock_1, C1_q_b[0]_clock_enable_0, C1_q_b[0]_clock_enable_1, , );
+C1_q_b[0] = C1_q_b[0]_PORT_B_data_out[0];
+
+
+--A1L72Q is fifo_data~4
+--operation mode is normal
+
+A1L72Q_lut_out = DATA[0];
+A1L72Q = DFFEAS(A1L72Q_lut_out, CLK, VCC, , A1L73, , , , );
+
+
+--A1L62Q is fifo_data~3
+--operation mode is normal
+
+A1L62Q_lut_out = VCC;
+A1L62Q = DFFEAS(A1L62Q_lut_out, CLK, !RESET, , A1L26, , , , );
+
+
+--count[4] is count[4]
+--operation mode is normal
+
+count[4]_carry_eqn = A1L51;
+count[4]_lut_out = count[4] $ A1L26 $ count[4]_carry_eqn;
+count[4] = DFFEAS(count[4]_lut_out, CLK, !RESET, , , , , , );
+
+
+--count[0] is count[0]
+--operation mode is arithmetic
+
+count[0]_carry_eqn = A1L9;
+count[0]_lut_out = A1L4 $ count[0] $ count[0]_carry_eqn;
+count[0] = DFFEAS(count[0]_lut_out, CLK, !RESET, , , , , , );
+
+--A1L8 is count[0]~131
+--operation mode is arithmetic
+
+A1L8 = CARRY(A1L4 & !count[0] & !A1L9 # !A1L4 & (!A1L9 # !count[0]));
+
+
+--count[1] is count[1]
+--operation mode is arithmetic
+
+count[1]_carry_eqn = A1L8;
+count[1]_lut_out = count[1] $ A1L26 $ !count[1]_carry_eqn;
+count[1] = DFFEAS(count[1]_lut_out, CLK, !RESET, , , , , , );
+
+--A1L11 is count[1]~135
+--operation mode is arithmetic
+
+A1L11 = CARRY(count[1] & (A1L26 # !A1L8) # !count[1] & A1L26 & !A1L8);
+
+
+--count[2] is count[2]
+--operation mode is arithmetic
+
+count[2]_carry_eqn = A1L11;
+count[2]_lut_out = count[2] $ A1L26 $ count[2]_carry_eqn;
+count[2] = DFFEAS(count[2]_lut_out, CLK, !RESET, , , , , , );
+
+--A1L31 is count[2]~139
+--operation mode is arithmetic
+
+A1L31 = CARRY(count[2] & !A1L26 & !A1L11 # !count[2] & (!A1L11 # !A1L26));
+
+
+--count[3] is count[3]
+--operation mode is arithmetic
+
+count[3]_carry_eqn = A1L31;
+count[3]_lut_out = count[3] $ A1L26 $ !count[3]_carry_eqn;
+count[3] = DFFEAS(count[3]_lut_out, CLK, !RESET, , , , , , );
+
+--A1L51 is count[3]~143
+--operation mode is arithmetic
+
+A1L51 = CARRY(count[3] & (A1L26 # !A1L31) # !count[3] & A1L26 & !A1L31);
+
+
+--A1L07 is reduce_nor~20
+--operation mode is normal
+
+A1L07 = !count[0] & !count[1] & !count[2] & !count[3];
+
+
+--A1L54 is OUT_DATA[0]~15
+--operation mode is normal
+
+A1L54 = RD & !RESET & (count[4] # !A1L07);
+
+
+--C1_q_b[1] is altsyncram:fifo_data_rtl_0|altsyncram_1761:auto_generated|q_b[1]
+--RAM Block Operation Mode: Simple Dual-Port
+--Port A Depth: 16, Port A Width: 1, Port B Depth: 16, Port B Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 8, Port B Logical Depth: 16, Port B Logical Width: 8
+--Port A Input: Registered, Port B Input: Registered, Port B Output: Un-registered
+C1_q_b[1]_PORT_A_data_in = DATA[1];
+C1_q_b[1]_PORT_A_data_in_reg = DFFE(C1_q_b[1]_PORT_A_data_in, C1_q_b[1]_clock_0, , , C1_q_b[1]_clock_enable_0);
+C1_q_b[1]_PORT_A_address = BUS(wr_ptr[0], wr_ptr[1], wr_ptr[2], wr_ptr[3]);
+C1_q_b[1]_PORT_A_address_reg = DFFE(C1_q_b[1]_PORT_A_address, C1_q_b[1]_clock_0, , , C1_q_b[1]_clock_enable_0);
+C1_q_b[1]_PORT_B_address = BUS(A1L66, A1L1, A1L2, A1L3);
+C1_q_b[1]_PORT_B_address_reg = DFFE(C1_q_b[1]_PORT_B_address, C1_q_b[1]_clock_1, , , C1_q_b[1]_clock_enable_1);
+C1_q_b[1]_PORT_A_write_enable = VCC;
+C1_q_b[1]_PORT_A_write_enable_reg = DFFE(C1_q_b[1]_PORT_A_write_enable, C1_q_b[1]_clock_0, , , C1_q_b[1]_clock_enable_0);
+C1_q_b[1]_PORT_B_read_enable = VCC;
+C1_q_b[1]_PORT_B_read_enable_reg = DFFE(C1_q_b[1]_PORT_B_read_enable, C1_q_b[1]_clock_1, , , C1_q_b[1]_clock_enable_1);
+C1_q_b[1]_clock_0 = CLK;
+C1_q_b[1]_clock_1 = CLK;
+C1_q_b[1]_clock_enable_0 = A1L53;
+C1_q_b[1]_clock_enable_1 = A1L26;
+C1_q_b[1]_PORT_B_data_out = MEMORY(C1_q_b[1]_PORT_A_data_in_reg, , C1_q_b[1]_PORT_A_address_reg, C1_q_b[1]_PORT_B_address_reg, C1_q_b[1]_PORT_A_write_enable_reg, C1_q_b[1]_PORT_B_read_enable_reg, , , C1_q_b[1]_clock_0, C1_q_b[1]_clock_1, C1_q_b[1]_clock_enable_0, C1_q_b[1]_clock_enable_1, , );
+C1_q_b[1] = C1_q_b[1]_PORT_B_data_out[0];
+
+
+--A1L82Q is fifo_data~6
+--operation mode is normal
+
+A1L82Q_lut_out = DATA[1];
+A1L82Q = DFFEAS(A1L82Q_lut_out, CLK, VCC, , A1L73, , , , );
+
+
+--C1_q_b[2] is altsyncram:fifo_data_rtl_0|altsyncram_1761:auto_generated|q_b[2]
+--RAM Block Operation Mode: Simple Dual-Port
+--Port A Depth: 16, Port A Width: 1, Port B Depth: 16, Port B Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 8, Port B Logical Depth: 16, Port B Logical Width: 8
+--Port A Input: Registered, Port B Input: Registered, Port B Output: Un-registered
+C1_q_b[2]_PORT_A_data_in = DATA[2];
+C1_q_b[2]_PORT_A_data_in_reg = DFFE(C1_q_b[2]_PORT_A_data_in, C1_q_b[2]_clock_0, , , C1_q_b[2]_clock_enable_0);
+C1_q_b[2]_PORT_A_address = BUS(wr_ptr[0], wr_ptr[1], wr_ptr[2], wr_ptr[3]);
+C1_q_b[2]_PORT_A_address_reg = DFFE(C1_q_b[2]_PORT_A_address, C1_q_b[2]_clock_0, , , C1_q_b[2]_clock_enable_0);
+C1_q_b[2]_PORT_B_address = BUS(A1L66, A1L1, A1L2, A1L3);
+C1_q_b[2]_PORT_B_address_reg = DFFE(C1_q_b[2]_PORT_B_address, C1_q_b[2]_clock_1, , , C1_q_b[2]_clock_enable_1);
+C1_q_b[2]_PORT_A_write_enable = VCC;
+C1_q_b[2]_PORT_A_write_enable_reg = DFFE(C1_q_b[2]_PORT_A_write_enable, C1_q_b[2]_clock_0, , , C1_q_b[2]_clock_enable_0);
+C1_q_b[2]_PORT_B_read_enable = VCC;
+C1_q_b[2]_PORT_B_read_enable_reg = DFFE(C1_q_b[2]_PORT_B_read_enable, C1_q_b[2]_clock_1, , , C1_q_b[2]_clock_enable_1);
+C1_q_b[2]_clock_0 = CLK;
+C1_q_b[2]_clock_1 = CLK;
+C1_q_b[2]_clock_enable_0 = A1L53;
+C1_q_b[2]_clock_enable_1 = A1L26;
+C1_q_b[2]_PORT_B_data_out = MEMORY(C1_q_b[2]_PORT_A_data_in_reg, , C1_q_b[2]_PORT_A_address_reg, C1_q_b[2]_PORT_B_address_reg, C1_q_b[2]_PORT_A_write_enable_reg, C1_q_b[2]_PORT_B_read_enable_reg, , , C1_q_b[2]_clock_0, C1_q_b[2]_clock_1, C1_q_b[2]_clock_enable_0, C1_q_b[2]_clock_enable_1, , );
+C1_q_b[2] = C1_q_b[2]_PORT_B_data_out[0];
+
+
+--A1L92Q is fifo_data~8
+--operation mode is normal
+
+A1L92Q_lut_out = DATA[2];
+A1L92Q = DFFEAS(A1L92Q_lut_out, CLK, VCC, , A1L73, , , , );
+
+
+--C1_q_b[3] is altsyncram:fifo_data_rtl_0|altsyncram_1761:auto_generated|q_b[3]
+--RAM Block Operation Mode: Simple Dual-Port
+--Port A Depth: 16, Port A Width: 1, Port B Depth: 16, Port B Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 8, Port B Logical Depth: 16, Port B Logical Width: 8
+--Port A Input: Registered, Port B Input: Registered, Port B Output: Un-registered
+C1_q_b[3]_PORT_A_data_in = DATA[3];
+C1_q_b[3]_PORT_A_data_in_reg = DFFE(C1_q_b[3]_PORT_A_data_in, C1_q_b[3]_clock_0, , , C1_q_b[3]_clock_enable_0);
+C1_q_b[3]_PORT_A_address = BUS(wr_ptr[0], wr_ptr[1], wr_ptr[2], wr_ptr[3]);
+C1_q_b[3]_PORT_A_address_reg = DFFE(C1_q_b[3]_PORT_A_address, C1_q_b[3]_clock_0, , , C1_q_b[3]_clock_enable_0);
+C1_q_b[3]_PORT_B_address = BUS(A1L66, A1L1, A1L2, A1L3);
+C1_q_b[3]_PORT_B_address_reg = DFFE(C1_q_b[3]_PORT_B_address, C1_q_b[3]_clock_1, , , C1_q_b[3]_clock_enable_1);
+C1_q_b[3]_PORT_A_write_enable = VCC;
+C1_q_b[3]_PORT_A_write_enable_reg = DFFE(C1_q_b[3]_PORT_A_write_enable, C1_q_b[3]_clock_0, , , C1_q_b[3]_clock_enable_0);
+C1_q_b[3]_PORT_B_read_enable = VCC;
+C1_q_b[3]_PORT_B_read_enable_reg = DFFE(C1_q_b[3]_PORT_B_read_enable, C1_q_b[3]_clock_1, , , C1_q_b[3]_clock_enable_1);
+C1_q_b[3]_clock_0 = CLK;
+C1_q_b[3]_clock_1 = CLK;
+C1_q_b[3]_clock_enable_0 = A1L53;
+C1_q_b[3]_clock_enable_1 = A1L26;
+C1_q_b[3]_PORT_B_data_out = MEMORY(C1_q_b[3]_PORT_A_data_in_reg, , C1_q_b[3]_PORT_A_address_reg, C1_q_b[3]_PORT_B_address_reg, C1_q_b[3]_PORT_A_write_enable_reg, C1_q_b[3]_PORT_B_read_enable_reg, , , C1_q_b[3]_clock_0, C1_q_b[3]_clock_1, C1_q_b[3]_clock_enable_0, C1_q_b[3]_clock_enable_1, , );
+C1_q_b[3] = C1_q_b[3]_PORT_B_data_out[0];
+
+
+--A1L03Q is fifo_data~10
+--operation mode is normal
+
+A1L03Q_lut_out = DATA[3];
+A1L03Q = DFFEAS(A1L03Q_lut_out, CLK, VCC, , A1L73, , , , );
+
+
+--C1_q_b[4] is altsyncram:fifo_data_rtl_0|altsyncram_1761:auto_generated|q_b[4]
+--RAM Block Operation Mode: Simple Dual-Port
+--Port A Depth: 16, Port A Width: 1, Port B Depth: 16, Port B Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 8, Port B Logical Depth: 16, Port B Logical Width: 8
+--Port A Input: Registered, Port B Input: Registered, Port B Output: Un-registered
+C1_q_b[4]_PORT_A_data_in = DATA[4];
+C1_q_b[4]_PORT_A_data_in_reg = DFFE(C1_q_b[4]_PORT_A_data_in, C1_q_b[4]_clock_0, , , C1_q_b[4]_clock_enable_0);
+C1_q_b[4]_PORT_A_address = BUS(wr_ptr[0], wr_ptr[1], wr_ptr[2], wr_ptr[3]);
+C1_q_b[4]_PORT_A_address_reg = DFFE(C1_q_b[4]_PORT_A_address, C1_q_b[4]_clock_0, , , C1_q_b[4]_clock_enable_0);
+C1_q_b[4]_PORT_B_address = BUS(A1L66, A1L1, A1L2, A1L3);
+C1_q_b[4]_PORT_B_address_reg = DFFE(C1_q_b[4]_PORT_B_address, C1_q_b[4]_clock_1, , , C1_q_b[4]_clock_enable_1);
+C1_q_b[4]_PORT_A_write_enable = VCC;
+C1_q_b[4]_PORT_A_write_enable_reg = DFFE(C1_q_b[4]_PORT_A_write_enable, C1_q_b[4]_clock_0, , , C1_q_b[4]_clock_enable_0);
+C1_q_b[4]_PORT_B_read_enable = VCC;
+C1_q_b[4]_PORT_B_read_enable_reg = DFFE(C1_q_b[4]_PORT_B_read_enable, C1_q_b[4]_clock_1, , , C1_q_b[4]_clock_enable_1);
+C1_q_b[4]_clock_0 = CLK;
+C1_q_b[4]_clock_1 = CLK;
+C1_q_b[4]_clock_enable_0 = A1L53;
+C1_q_b[4]_clock_enable_1 = A1L26;
+C1_q_b[4]_PORT_B_data_out = MEMORY(C1_q_b[4]_PORT_A_data_in_reg, , C1_q_b[4]_PORT_A_address_reg, C1_q_b[4]_PORT_B_address_reg, C1_q_b[4]_PORT_A_write_enable_reg, C1_q_b[4]_PORT_B_read_enable_reg, , , C1_q_b[4]_clock_0, C1_q_b[4]_clock_1, C1_q_b[4]_clock_enable_0, C1_q_b[4]_clock_enable_1, , );
+C1_q_b[4] = C1_q_b[4]_PORT_B_data_out[0];
+
+
+--A1L13Q is fifo_data~12
+--operation mode is normal
+
+A1L13Q_lut_out = DATA[4];
+A1L13Q = DFFEAS(A1L13Q_lut_out, CLK, VCC, , A1L73, , , , );
+
+
+--C1_q_b[5] is altsyncram:fifo_data_rtl_0|altsyncram_1761:auto_generated|q_b[5]
+--RAM Block Operation Mode: Simple Dual-Port
+--Port A Depth: 16, Port A Width: 1, Port B Depth: 16, Port B Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 8, Port B Logical Depth: 16, Port B Logical Width: 8
+--Port A Input: Registered, Port B Input: Registered, Port B Output: Un-registered
+C1_q_b[5]_PORT_A_data_in = DATA[5];
+C1_q_b[5]_PORT_A_data_in_reg = DFFE(C1_q_b[5]_PORT_A_data_in, C1_q_b[5]_clock_0, , , C1_q_b[5]_clock_enable_0);
+C1_q_b[5]_PORT_A_address = BUS(wr_ptr[0], wr_ptr[1], wr_ptr[2], wr_ptr[3]);
+C1_q_b[5]_PORT_A_address_reg = DFFE(C1_q_b[5]_PORT_A_address, C1_q_b[5]_clock_0, , , C1_q_b[5]_clock_enable_0);
+C1_q_b[5]_PORT_B_address = BUS(A1L66, A1L1, A1L2, A1L3);
+C1_q_b[5]_PORT_B_address_reg = DFFE(C1_q_b[5]_PORT_B_address, C1_q_b[5]_clock_1, , , C1_q_b[5]_clock_enable_1);
+C1_q_b[5]_PORT_A_write_enable = VCC;
+C1_q_b[5]_PORT_A_write_enable_reg = DFFE(C1_q_b[5]_PORT_A_write_enable, C1_q_b[5]_clock_0, , , C1_q_b[5]_clock_enable_0);
+C1_q_b[5]_PORT_B_read_enable = VCC;
+C1_q_b[5]_PORT_B_read_enable_reg = DFFE(C1_q_b[5]_PORT_B_read_enable, C1_q_b[5]_clock_1, , , C1_q_b[5]_clock_enable_1);
+C1_q_b[5]_clock_0 = CLK;
+C1_q_b[5]_clock_1 = CLK;
+C1_q_b[5]_clock_enable_0 = A1L53;
+C1_q_b[5]_clock_enable_1 = A1L26;
+C1_q_b[5]_PORT_B_data_out = MEMORY(C1_q_b[5]_PORT_A_data_in_reg, , C1_q_b[5]_PORT_A_address_reg, C1_q_b[5]_PORT_B_address_reg, C1_q_b[5]_PORT_A_write_enable_reg, C1_q_b[5]_PORT_B_read_enable_reg, , , C1_q_b[5]_clock_0, C1_q_b[5]_clock_1, C1_q_b[5]_clock_enable_0, C1_q_b[5]_clock_enable_1, , );
+C1_q_b[5] = C1_q_b[5]_PORT_B_data_out[0];
+
+
+--A1L23Q is fifo_data~14
+--operation mode is normal
+
+A1L23Q_lut_out = DATA[5];
+A1L23Q = DFFEAS(A1L23Q_lut_out, CLK, VCC, , A1L73, , , , );
+
+
+--C1_q_b[6] is altsyncram:fifo_data_rtl_0|altsyncram_1761:auto_generated|q_b[6]
+--RAM Block Operation Mode: Simple Dual-Port
+--Port A Depth: 16, Port A Width: 1, Port B Depth: 16, Port B Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 8, Port B Logical Depth: 16, Port B Logical Width: 8
+--Port A Input: Registered, Port B Input: Registered, Port B Output: Un-registered
+C1_q_b[6]_PORT_A_data_in = DATA[6];
+C1_q_b[6]_PORT_A_data_in_reg = DFFE(C1_q_b[6]_PORT_A_data_in, C1_q_b[6]_clock_0, , , C1_q_b[6]_clock_enable_0);
+C1_q_b[6]_PORT_A_address = BUS(wr_ptr[0], wr_ptr[1], wr_ptr[2], wr_ptr[3]);
+C1_q_b[6]_PORT_A_address_reg = DFFE(C1_q_b[6]_PORT_A_address, C1_q_b[6]_clock_0, , , C1_q_b[6]_clock_enable_0);
+C1_q_b[6]_PORT_B_address = BUS(A1L66, A1L1, A1L2, A1L3);
+C1_q_b[6]_PORT_B_address_reg = DFFE(C1_q_b[6]_PORT_B_address, C1_q_b[6]_clock_1, , , C1_q_b[6]_clock_enable_1);
+C1_q_b[6]_PORT_A_write_enable = VCC;
+C1_q_b[6]_PORT_A_write_enable_reg = DFFE(C1_q_b[6]_PORT_A_write_enable, C1_q_b[6]_clock_0, , , C1_q_b[6]_clock_enable_0);
+C1_q_b[6]_PORT_B_read_enable = VCC;
+C1_q_b[6]_PORT_B_read_enable_reg = DFFE(C1_q_b[6]_PORT_B_read_enable, C1_q_b[6]_clock_1, , , C1_q_b[6]_clock_enable_1);
+C1_q_b[6]_clock_0 = CLK;
+C1_q_b[6]_clock_1 = CLK;
+C1_q_b[6]_clock_enable_0 = A1L53;
+C1_q_b[6]_clock_enable_1 = A1L26;
+C1_q_b[6]_PORT_B_data_out = MEMORY(C1_q_b[6]_PORT_A_data_in_reg, , C1_q_b[6]_PORT_A_address_reg, C1_q_b[6]_PORT_B_address_reg, C1_q_b[6]_PORT_A_write_enable_reg, C1_q_b[6]_PORT_B_read_enable_reg, , , C1_q_b[6]_clock_0, C1_q_b[6]_clock_1, C1_q_b[6]_clock_enable_0, C1_q_b[6]_clock_enable_1, , );
+C1_q_b[6] = C1_q_b[6]_PORT_B_data_out[0];
+
+
+--A1L33Q is fifo_data~16
+--operation mode is normal
+
+A1L33Q_lut_out = DATA[6];
+A1L33Q = DFFEAS(A1L33Q_lut_out, CLK, VCC, , A1L73, , , , );
+
+
+--C1_q_b[7] is altsyncram:fifo_data_rtl_0|altsyncram_1761:auto_generated|q_b[7]
+--RAM Block Operation Mode: Simple Dual-Port
+--Port A Depth: 16, Port A Width: 1, Port B Depth: 16, Port B Width: 1
+--Port A Logical Depth: 16, Port A Logical Width: 8, Port B Logical Depth: 16, Port B Logical Width: 8
+--Port A Input: Registered, Port B Input: Registered, Port B Output: Un-registered
+C1_q_b[7]_PORT_A_data_in = DATA[7];
+C1_q_b[7]_PORT_A_data_in_reg = DFFE(C1_q_b[7]_PORT_A_data_in, C1_q_b[7]_clock_0, , , C1_q_b[7]_clock_enable_0);
+C1_q_b[7]_PORT_A_address = BUS(wr_ptr[0], wr_ptr[1], wr_ptr[2], wr_ptr[3]);
+C1_q_b[7]_PORT_A_address_reg = DFFE(C1_q_b[7]_PORT_A_address, C1_q_b[7]_clock_0, , , C1_q_b[7]_clock_enable_0);
+C1_q_b[7]_PORT_B_address = BUS(A1L66, A1L1, A1L2, A1L3);
+C1_q_b[7]_PORT_B_address_reg = DFFE(C1_q_b[7]_PORT_B_address, C1_q_b[7]_clock_1, , , C1_q_b[7]_clock_enable_1);
+C1_q_b[7]_PORT_A_write_enable = VCC;
+C1_q_b[7]_PORT_A_write_enable_reg = DFFE(C1_q_b[7]_PORT_A_write_enable, C1_q_b[7]_clock_0, , , C1_q_b[7]_clock_enable_0);
+C1_q_b[7]_PORT_B_read_enable = VCC;
+C1_q_b[7]_PORT_B_read_enable_reg = DFFE(C1_q_b[7]_PORT_B_read_enable, C1_q_b[7]_clock_1, , , C1_q_b[7]_clock_enable_1);
+C1_q_b[7]_clock_0 = CLK;
+C1_q_b[7]_clock_1 = CLK;
+C1_q_b[7]_clock_enable_0 = A1L53;
+C1_q_b[7]_clock_enable_1 = A1L26;
+C1_q_b[7]_PORT_B_data_out = MEMORY(C1_q_b[7]_PORT_A_data_in_reg, , C1_q_b[7]_PORT_A_address_reg, C1_q_b[7]_PORT_B_address_reg, C1_q_b[7]_PORT_A_write_enable_reg, C1_q_b[7]_PORT_B_read_enable_reg, , , C1_q_b[7]_clock_0, C1_q_b[7]_clock_1, C1_q_b[7]_clock_enable_0, C1_q_b[7]_clock_enable_1, , );
+C1_q_b[7] = C1_q_b[7]_PORT_B_data_out[0];
+
+
+--A1L43Q is fifo_data~18
+--operation mode is normal
+
+A1L43Q_lut_out = DATA[7];
+A1L43Q = DFFEAS(A1L43Q_lut_out, CLK, VCC, , A1L73, , , , );
+
+
+--A1L24 is LessThan~82
+--operation mode is normal
+
+A1L24 = count[4] # !A1L07;
+
+
+--A1L53 is fifo_data~152
+--operation mode is normal
+
+A1L53 = WR & (!count[4] & !RESET);
+
+
+--A1L26 is process0~1
+--operation mode is normal
+
+A1L26 = RD & (count[4] # !A1L07);
+
+
+--wr_ptr[0] is wr_ptr[0]
+--operation mode is normal
+
+wr_ptr[0]_lut_out = !wr_ptr[0];
+wr_ptr[0] = DFFEAS(wr_ptr[0]_lut_out, CLK, !RESET, , A1L16, , , , );
+
+
+--wr_ptr[1] is wr_ptr[1]
+--operation mode is normal
+
+wr_ptr[1]_lut_out = !wr_ptr[1];
+wr_ptr[1] = DFFEAS(wr_ptr[1]_lut_out, CLK, !RESET, , A1L67, , , , );
+
+
+--wr_ptr[2] is wr_ptr[2]
+--operation mode is normal
+
+wr_ptr[2]_lut_out = !wr_ptr[2];
+wr_ptr[2] = DFFEAS(wr_ptr[2]_lut_out, CLK, !RESET, , A1L87, , , , );
+
+
+--wr_ptr[3] is wr_ptr[3]
+--operation mode is normal
+
+wr_ptr[3]_lut_out = !wr_ptr[3];
+wr_ptr[3] = DFFEAS(wr_ptr[3]_lut_out, CLK, !RESET, , A1L08, , , , );
+
+
+--rd_ptr[0] is rd_ptr[0]
+--operation mode is normal
+
+rd_ptr[0]_lut_out = !rd_ptr[0];
+rd_ptr[0] = DFFEAS(rd_ptr[0]_lut_out, CLK, !RESET, , A1L26, , , , );
+
+
+--rd_ptr[1] is rd_ptr[1]
+--operation mode is normal
+
+rd_ptr[1]_lut_out = A1L1;
+rd_ptr[1] = DFFEAS(rd_ptr[1]_lut_out, CLK, !RESET, , A1L26, , , , );
+
+
+--A1L1 is add~312
+--operation mode is normal
+
+A1L1 = rd_ptr[0] $ rd_ptr[1];
+
+
+--rd_ptr[2] is rd_ptr[2]
+--operation mode is normal
+
+rd_ptr[2]_lut_out = A1L2;
+rd_ptr[2] = DFFEAS(rd_ptr[2]_lut_out, CLK, !RESET, , A1L26, , , , );
+
+
+--A1L2 is add~313
+--operation mode is normal
+
+A1L2 = rd_ptr[2] $ (rd_ptr[0] & rd_ptr[1]);
+
+
+--rd_ptr[3] is rd_ptr[3]
+--operation mode is normal
+
+rd_ptr[3]_lut_out = A1L3;
+rd_ptr[3] = DFFEAS(rd_ptr[3]_lut_out, CLK, !RESET, , A1L26, , , , );
+
+
+--A1L3 is add~314
+--operation mode is normal
+
+A1L3 = rd_ptr[3] $ (rd_ptr[0] & rd_ptr[1] & rd_ptr[2]);
+
+
+--A1L63 is fifo_data~153
+--operation mode is normal
+
+A1L63 = !wr_ptr[2] & !wr_ptr[3];
+
+
+--A1L73 is fifo_data~154
+--operation mode is normal
+
+A1L73 = A1L53 & A1L63 & !wr_ptr[0] & !wr_ptr[1];
+
+
+--A1L4 is add~315
+--operation mode is normal
+
+A1L4 = WR & !count[4] & (A1L07 # !RD);
+
+
+--A1L9 is count[0]~148
+--operation mode is arithmetic
+
+A1L9 = CARRY(RD & A1L24);
+
+
+--A1L16 is process0~0
+--operation mode is normal
+
+A1L16 = WR & (!count[4]);
+
+
+--A1L67 is wr_ptr[1]~46
+--operation mode is normal
+
+A1L67 = WR & wr_ptr[0] & (!count[4]);
+
+
+--A1L87 is wr_ptr[2]~47
+--operation mode is normal
+
+A1L87 = WR & wr_ptr[0] & wr_ptr[1] & !count[4];
+
+
+--A1L08 is wr_ptr[3]~48
+--operation mode is normal
+
+A1L08 = wr_ptr[2] & A1L87;
+
+
+--CLK is CLK
+--operation mode is input
+
+CLK = INPUT();
+
+
+--RD is RD
+--operation mode is input
+
+RD = INPUT();
+
+
+--RESET is RESET
+--operation mode is input
+
+RESET = INPUT();
+
+
+--WR is WR
+--operation mode is input
+
+WR = INPUT();
+
+
+--DATA[0] is DATA[0]
+--operation mode is input
+
+DATA[0] = INPUT();
+
+
+--DATA[1] is DATA[1]
+--operation mode is input
+
+DATA[1] = INPUT();
+
+
+--DATA[2] is DATA[2]
+--operation mode is input
+
+DATA[2] = INPUT();
+
+
+--DATA[3] is DATA[3]
+--operation mode is input
+
+DATA[3] = INPUT();
+
+
+--DATA[4] is DATA[4]
+--operation mode is input
+
+DATA[4] = INPUT();
+
+
+--DATA[5] is DATA[5]
+--operation mode is input
+
+DATA[5] = INPUT();
+
+
+--DATA[6] is DATA[6]
+--operation mode is input
+
+DATA[6] = INPUT();
+
+
+--DATA[7] is DATA[7]
+--operation mode is input
+
+DATA[7] = INPUT();
+
+
+--OUT_DATA[0] is OUT_DATA[0]
+--operation mode is output
+
+OUT_DATA[0] = OUTPUT(A1L64Q);
+
+
+--OUT_DATA[1] is OUT_DATA[1]
+--operation mode is output
+
+OUT_DATA[1] = OUTPUT(A1L84Q);
+
+
+--OUT_DATA[2] is OUT_DATA[2]
+--operation mode is output
+
+OUT_DATA[2] = OUTPUT(A1L05Q);
+
+
+--OUT_DATA[3] is OUT_DATA[3]
+--operation mode is output
+
+OUT_DATA[3] = OUTPUT(A1L25Q);
+
+
+--OUT_DATA[4] is OUT_DATA[4]
+--operation mode is output
+
+OUT_DATA[4] = OUTPUT(A1L45Q);
+
+
+--OUT_DATA[5] is OUT_DATA[5]
+--operation mode is output
+
+OUT_DATA[5] = OUTPUT(A1L65Q);
+
+
+--OUT_DATA[6] is OUT_DATA[6]
+--operation mode is output
+
+OUT_DATA[6] = OUTPUT(A1L85Q);
+
+
+--OUT_DATA[7] is OUT_DATA[7]
+--operation mode is output
+
+OUT_DATA[7] = OUTPUT(A1L06Q);
+
+
+--IS_FULL is IS_FULL
+--operation mode is output
+
+IS_FULL = OUTPUT(A1L14Q);
+
+
+--IS_EMPTY is IS_EMPTY
+--operation mode is output
+
+IS_EMPTY = OUTPUT(!A1L93Q);
+
+
+--A1L66 is rd_ptr[0]~16
+--operation mode is normal
+
+A1L66 = !rd_ptr[0];
+
+

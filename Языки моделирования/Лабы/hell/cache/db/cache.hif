@@ -1,0 +1,2000 @@
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+35
+1901
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+VRSM_ON
+VHSM_ON
+0
+# entity
+lpm_compare0
+# case_insensitive
+# source_file
+lpm_compare0.tdf
+1614425232
+6
+# storage
+db|cache.(1).cnf
+db|cache.(1).cnf
+# used_port {
+aeb
+dataa0
+dataa1
+dataa2
+dataa3
+dataa4
+dataa5
+dataa6
+dataa7
+datab0
+datab1
+datab2
+datab3
+datab4
+datab5
+datab6
+datab7
+}
+# include_file {
+..|libraries|megafunctions|lpm_compare.inc
+1107592500
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_compare0:inst10
+cache:inst|cacheline:inst33|lpm_compare0:inst10
+cache:inst|cacheline:inst34|lpm_compare0:inst10
+cache:inst|cacheline:inst32|lpm_compare0:inst10
+}
+# end
+# entity
+lpm_compare
+# case_insensitive
+# source_file
+..|libraries|megafunctions|lpm_compare.tdf
+1114026848
+6
+# storage
+db|cache.(2).cnf
+db|cache.(2).cnf
+# user_parameter {
+lpm_width
+8
+PARAMETER_UNKNOWN
+USR
+LPM_REPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CHAIN_SIZE
+8
+PARAMETER_UNKNOWN
+DEF
+ONE_INPUT_IS_CONSTANT
+NO
+PARAMETER_UNKNOWN
+DEF
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CASCADE_CHAIN_LENGTH
+2
+CASCADE_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+dataa0
+dataa1
+dataa2
+dataa3
+dataa4
+dataa5
+dataa6
+dataa7
+datab0
+datab1
+datab2
+datab3
+datab4
+datab5
+datab6
+datab7
+aeb
+}
+# include_file {
+..|libraries|megafunctions|altshift.inc
+1107591438
+..|libraries|megafunctions|aglobal50.inc
+1114026820
+..|libraries|megafunctions|comptree.inc
+1107591994
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component
+cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component
+cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component
+cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component
+}
+# end
+# entity
+comptree
+# case_insensitive
+# source_file
+..|libraries|megafunctions|comptree.tdf
+1114026848
+6
+# storage
+db|cache.(3).cnf
+db|cache.(3).cnf
+# user_parameter {
+lpm_width
+8
+PARAMETER_UNKNOWN
+USR
+CHAIN_LENGTH
+8
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+0
+PARAMETER_UNKNOWN
+USR
+OUTPUTS_CLOCKED
+0
+PARAMETER_UNKNOWN
+USR
+BURRIED_CLOCKED
+1
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+dataa0
+dataa1
+dataa2
+dataa3
+dataa4
+dataa5
+dataa6
+dataa7
+datab0
+datab1
+datab2
+datab3
+datab4
+datab5
+datab6
+datab7
+aeb
+}
+# include_file {
+..|libraries|megafunctions|comptree.inc
+1107591994
+..|libraries|megafunctions|cmpchain.inc
+1107591964
+..|libraries|megafunctions|lpm_constant.inc
+1107592524
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator
+cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator
+cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator
+cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator
+}
+# end
+# entity
+cmpchain
+# case_insensitive
+# source_file
+..|libraries|megafunctions|cmpchain.tdf
+1114026848
+6
+# storage
+db|cache.(4).cnf
+db|cache.(4).cnf
+# user_parameter {
+lpm_width
+8
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+0
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CASCADE_CHAIN_LENGTH
+2
+CASCADE_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+dataa0
+dataa1
+dataa2
+dataa3
+dataa4
+dataa5
+dataa6
+dataa7
+datab0
+datab1
+datab2
+datab3
+datab4
+datab5
+datab6
+datab7
+aeb
+}
+# include_file {
+..|libraries|megafunctions|aglobal50.inc
+1114026820
+..|libraries|megafunctions|comptree.inc
+1107591994
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+}
+# end
+# entity
+comptree
+# case_insensitive
+# source_file
+..|libraries|megafunctions|comptree.tdf
+1114026848
+6
+# storage
+db|cache.(5).cnf
+db|cache.(5).cnf
+# user_parameter {
+lpm_width
+8
+PARAMETER_UNKNOWN
+USR
+CHAIN_LENGTH
+1
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+0
+PARAMETER_UNKNOWN
+USR
+OUTPUTS_CLOCKED
+1
+PARAMETER_UNKNOWN
+USR
+BURRIED_CLOCKED
+0
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+dataa0
+dataa1
+dataa2
+dataa3
+dataa4
+dataa5
+dataa6
+dataa7
+datab0
+datab1
+datab2
+datab3
+datab4
+datab5
+datab6
+datab7
+aeb
+}
+# include_file {
+..|libraries|megafunctions|comptree.inc
+1107591994
+..|libraries|megafunctions|cmpchain.inc
+1107591964
+..|libraries|megafunctions|lpm_constant.inc
+1107592524
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp
+cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp
+cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp
+cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp
+}
+# end
+# entity
+cmpchain
+# case_insensitive
+# source_file
+..|libraries|megafunctions|cmpchain.tdf
+1114026848
+6
+# storage
+db|cache.(6).cnf
+db|cache.(6).cnf
+# user_parameter {
+lpm_width
+2
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+0
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CASCADE_CHAIN_LENGTH
+2
+CASCADE_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+dataa0
+dataa1
+datab0
+datab1
+aeb
+}
+# include_file {
+..|libraries|megafunctions|aglobal50.inc
+1114026820
+..|libraries|megafunctions|comptree.inc
+1107591994
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]
+cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]
+cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]
+cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]
+cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]
+cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]
+cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]
+cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]
+cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]
+cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]
+cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]
+cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]
+cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+}
+# end
+# entity
+comptree
+# case_insensitive
+# source_file
+..|libraries|megafunctions|comptree.tdf
+1114026848
+6
+# storage
+db|cache.(7).cnf
+db|cache.(7).cnf
+# user_parameter {
+lpm_width
+4
+PARAMETER_UNKNOWN
+USR
+CHAIN_LENGTH
+1
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+1
+PARAMETER_UNKNOWN
+USR
+OUTPUTS_CLOCKED
+1
+PARAMETER_UNKNOWN
+USR
+BURRIED_CLOCKED
+0
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+dataa0
+dataa1
+dataa2
+dataa3
+datab0
+datab1
+datab2
+datab3
+aeb
+}
+# include_file {
+..|libraries|megafunctions|comptree.inc
+1107591994
+..|libraries|megafunctions|cmpchain.inc
+1107591964
+..|libraries|megafunctions|lpm_constant.inc
+1107592524
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+}
+# end
+# entity
+cmpchain
+# case_insensitive
+# source_file
+..|libraries|megafunctions|cmpchain.tdf
+1114026848
+6
+# storage
+db|cache.(8).cnf
+db|cache.(8).cnf
+# user_parameter {
+lpm_width
+4
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+1
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CASCADE_CHAIN_LENGTH
+2
+CASCADE_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+dataa0
+dataa1
+dataa2
+dataa3
+datab0
+datab1
+datab2
+datab3
+aeb
+}
+# include_file {
+..|libraries|megafunctions|aglobal50.inc
+1114026820
+..|libraries|megafunctions|comptree.inc
+1107591994
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+}
+# end
+# entity
+altshift
+# case_insensitive
+# source_file
+..|libraries|megafunctions|altshift.tdf
+1114026854
+6
+# storage
+db|cache.(9).cnf
+db|cache.(9).cnf
+# user_parameter {
+WIDTH
+1
+PARAMETER_UNKNOWN
+USR
+DEPTH
+0
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+data0
+result0
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+cache:inst|cacheline:inst|lpm_compare0:inst10|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+cache:inst|cacheline:inst33|lpm_compare0:inst10|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+cache:inst|cacheline:inst34|lpm_compare0:inst10|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+cache:inst|cacheline:inst32|lpm_compare0:inst10|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+}
+# end
+# entity
+lpm_latch0
+# case_insensitive
+# source_file
+lpm_latch0.tdf
+1614425429
+6
+# storage
+db|cache.(10).cnf
+db|cache.(10).cnf
+# used_port {
+data0
+data1
+data2
+data3
+data4
+data5
+data6
+data7
+gate
+q0
+q1
+q2
+q3
+q4
+q5
+q6
+q7
+}
+# include_file {
+..|libraries|megafunctions|lpm_latch.inc
+1107592730
+}
+# end
+# entity
+lpm_latch
+# case_insensitive
+# source_file
+..|libraries|megafunctions|lpm_latch.tdf
+1114026852
+6
+# storage
+db|cache.(11).cnf
+db|cache.(11).cnf
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_UNKNOWN
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+}
+# used_port {
+data0
+data1
+data2
+data3
+data4
+data5
+data6
+data7
+gate
+q0
+q1
+q2
+q3
+q4
+q5
+q6
+q7
+}
+# include_file {
+..|libraries|megafunctions|lpm_constant.inc
+1107592524
+}
+# end
+# entity
+busmux
+# case_insensitive
+# source_file
+..|libraries|megafunctions|BUSMUX.tdf
+1114026836
+6
+# storage
+db|cache.(12).cnf
+db|cache.(12).cnf
+# user_parameter {
+WIDTH
+8
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+dataa0
+dataa1
+dataa2
+dataa3
+dataa4
+dataa5
+dataa6
+dataa7
+datab0
+datab1
+datab2
+datab3
+datab4
+datab5
+datab6
+datab7
+result0
+result1
+result2
+result3
+result4
+result5
+result6
+result7
+sel
+}
+# include_file {
+..|libraries|megafunctions|lpm_mux.inc
+1107592776
+}
+# hierarchies {
+cache:inst|cacheline:inst|busmux:inst
+cache:inst|cacheline:inst33|busmux:inst
+cache:inst|cacheline:inst34|busmux:inst
+cache:inst|cacheline:inst32|busmux:inst
+busmux:inst3
+busmux:inst2
+}
+# end
+# entity
+lpm_mux
+# case_insensitive
+# source_file
+..|libraries|megafunctions|lpm_mux.tdf
+1114026854
+6
+# storage
+db|cache.(13).cnf
+db|cache.(13).cnf
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+8
+PARAMETER_UNKNOWN
+USR
+LPM_SIZE
+2
+PARAMETER_UNKNOWN
+USR
+LPM_WIDTHS
+1
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+mux_cgc
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+data0_0
+data0_1
+data0_2
+data0_3
+data0_4
+data0_5
+data0_6
+data0_7
+data1_0
+data1_1
+data1_2
+data1_3
+data1_4
+data1_5
+data1_6
+data1_7
+sel0
+result0
+result1
+result2
+result3
+result4
+result5
+result6
+result7
+}
+# include_file {
+..|libraries|megafunctions|altshift.inc
+1107591438
+..|libraries|megafunctions|aglobal50.inc
+1114026820
+..|libraries|megafunctions|muxlut.inc
+1107593250
+..|libraries|megafunctions|bypassff.inc
+1107591920
+}
+# hierarchies {
+cache:inst|cacheline:inst|busmux:inst|lpm_mux:$00000
+cache:inst|cacheline:inst33|busmux:inst|lpm_mux:$00000
+cache:inst|cacheline:inst34|busmux:inst|lpm_mux:$00000
+cache:inst|cacheline:inst32|busmux:inst|lpm_mux:$00000
+busmux:inst3|lpm_mux:$00000
+busmux:inst2|lpm_mux:$00000
+}
+# end
+# entity
+mux_cgc
+# case_insensitive
+# source_file
+db|mux_cgc.tdf
+1614458327
+6
+# storage
+db|cache.(14).cnf
+db|cache.(14).cnf
+# used_port {
+data0
+data1
+data2
+data3
+data4
+data5
+data6
+data7
+data8
+data9
+data10
+data11
+data12
+data13
+data14
+data15
+sel0
+result0
+result1
+result2
+result3
+result4
+result5
+result6
+result7
+}
+# hierarchies {
+cache:inst|cacheline:inst|busmux:inst|lpm_mux:$00000|mux_cgc:auto_generated
+cache:inst|cacheline:inst33|busmux:inst|lpm_mux:$00000|mux_cgc:auto_generated
+cache:inst|cacheline:inst34|busmux:inst|lpm_mux:$00000|mux_cgc:auto_generated
+cache:inst|cacheline:inst32|busmux:inst|lpm_mux:$00000|mux_cgc:auto_generated
+busmux:inst3|lpm_mux:$00000|mux_cgc:auto_generated
+busmux:inst2|lpm_mux:$00000|mux_cgc:auto_generated
+}
+# end
+# entity
+lpm_constant0
+# case_insensitive
+# source_file
+lpm_constant0.tdf
+1614457363
+6
+# storage
+db|cache.(15).cnf
+db|cache.(15).cnf
+# used_port {
+result0
+result1
+result2
+result3
+result4
+result5
+result6
+result7
+}
+# include_file {
+..|libraries|megafunctions|lpm_constant.inc
+1107592524
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_constant0:inst6
+cache:inst|cacheline:inst33|lpm_constant0:inst6
+cache:inst|cacheline:inst34|lpm_constant0:inst6
+cache:inst|cacheline:inst32|lpm_constant0:inst6
+}
+# end
+# entity
+lpm_constant
+# case_insensitive
+# source_file
+..|libraries|megafunctions|lpm_constant.tdf
+1114026848
+6
+# storage
+db|cache.(16).cnf
+db|cache.(16).cnf
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_UNKNOWN
+USR
+LPM_CVALUE
+0
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+}
+# used_port {
+result0
+result1
+result2
+result3
+result4
+result5
+result6
+result7
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_constant0:inst6|lpm_constant:lpm_constant_component
+cache:inst|cacheline:inst33|lpm_constant0:inst6|lpm_constant:lpm_constant_component
+cache:inst|cacheline:inst34|lpm_constant0:inst6|lpm_constant:lpm_constant_component
+cache:inst|cacheline:inst32|lpm_constant0:inst6|lpm_constant:lpm_constant_component
+}
+# end
+# entity
+lpm_decode0
+# case_insensitive
+# source_file
+lpm_decode0.tdf
+1614455990
+6
+# storage
+db|cache.(18).cnf
+db|cache.(18).cnf
+# used_port {
+data0
+data1
+enable
+eq0
+eq1
+eq2
+eq3
+}
+# include_file {
+..|libraries|megafunctions|lpm_decode.inc
+1107592570
+}
+# hierarchies {
+cache:inst|lpm_decode0:inst28
+}
+# end
+# entity
+lpm_decode
+# case_insensitive
+# source_file
+..|libraries|megafunctions|lpm_decode.tdf
+1114026850
+6
+# storage
+db|cache.(19).cnf
+db|cache.(19).cnf
+# user_parameter {
+LPM_WIDTH
+2
+PARAMETER_UNKNOWN
+USR
+LPM_DECODES
+4
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+decode_vlb
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+data0
+data1
+enable
+eq0
+eq1
+eq2
+eq3
+}
+# include_file {
+..|libraries|megafunctions|lpm_compare.inc
+1107592500
+..|libraries|megafunctions|altshift.inc
+1107591438
+..|libraries|megafunctions|aglobal50.inc
+1114026820
+..|libraries|megafunctions|lpm_constant.inc
+1107592524
+..|libraries|megafunctions|declut.inc
+1107592136
+}
+# hierarchies {
+cache:inst|lpm_decode0:inst28|lpm_decode:lpm_decode_component
+}
+# end
+# entity
+decode_vlb
+# case_insensitive
+# source_file
+db|decode_vlb.tdf
+1614459047
+6
+# storage
+db|cache.(20).cnf
+db|cache.(20).cnf
+# used_port {
+data0
+data1
+enable
+eq0
+eq1
+eq2
+eq3
+}
+# hierarchies {
+cache:inst|lpm_decode0:inst28|lpm_decode:lpm_decode_component|decode_vlb:auto_generated
+}
+# end
+# entity
+lpm_counter0
+# case_insensitive
+# source_file
+lpm_counter0.tdf
+1614425690
+6
+# storage
+db|cache.(21).cnf
+db|cache.(21).cnf
+# used_port {
+clock
+q0
+q1
+}
+# include_file {
+..|libraries|megafunctions|lpm_counter.inc
+1107592548
+}
+# hierarchies {
+cache:inst|lpm_counter0:inst27
+}
+# end
+# entity
+lpm_counter
+# case_insensitive
+# source_file
+..|libraries|megafunctions|lpm_counter.tdf
+1114026848
+6
+# storage
+db|cache.(22).cnf
+db|cache.(22).cnf
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+2
+PARAMETER_UNKNOWN
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_ct6
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+clock
+q0
+q1
+}
+# include_file {
+..|libraries|megafunctions|lpm_compare.inc
+1107592500
+..|libraries|megafunctions|aglobal50.inc
+1114026820
+..|libraries|megafunctions|lpm_constant.inc
+1107592524
+..|libraries|megafunctions|lpm_decode.inc
+1107592570
+..|libraries|megafunctions|lpm_counter.inc
+1107592548
+..|libraries|megafunctions|lpm_add_sub.inc
+1107592408
+..|libraries|megafunctions|cmpconst.inc
+1107591980
+..|libraries|megafunctions|dffeea.inc
+1107592164
+..|libraries|megafunctions|alt_synch_counter.inc
+1107590664
+..|libraries|megafunctions|alt_synch_counter_f.inc
+1107590680
+..|libraries|megafunctions|alt_counter_f10ke.inc
+1107590320
+..|libraries|megafunctions|alt_counter_stratix.inc
+1107590334
+}
+# hierarchies {
+cache:inst|lpm_counter0:inst27|lpm_counter:lpm_counter_component
+}
+# end
+# entity
+cntr_ct6
+# case_insensitive
+# source_file
+db|cntr_ct6.tdf
+1614459047
+6
+# storage
+db|cache.(23).cnf
+db|cache.(23).cnf
+# used_port {
+clock
+q0
+q1
+}
+# hierarchies {
+cache:inst|lpm_counter0:inst27|lpm_counter:lpm_counter_component|cntr_ct6:auto_generated
+}
+# end
+# entity
+lpm_or0
+# case_insensitive
+# source_file
+lpm_or0.tdf
+1614458534
+6
+# storage
+db|cache.(24).cnf
+db|cache.(24).cnf
+# used_port {
+data0x0
+data0x1
+data0x2
+data0x3
+data0x4
+data0x5
+data0x6
+data0x7
+data1x0
+data1x1
+data1x2
+data1x3
+data1x4
+data1x5
+data1x6
+data1x7
+data2x0
+data2x1
+data2x2
+data2x3
+data2x4
+data2x5
+data2x6
+data2x7
+data3x0
+data3x1
+data3x2
+data3x3
+data3x4
+data3x5
+data3x6
+data3x7
+result0
+result1
+result2
+result3
+result4
+result5
+result6
+result7
+}
+# include_file {
+..|libraries|megafunctions|lpm_or.inc
+1107592800
+}
+# hierarchies {
+cache:inst|lpm_or0:inst35
+}
+# end
+# entity
+lpm_or
+# case_insensitive
+# source_file
+..|libraries|megafunctions|lpm_or.tdf
+1114026854
+6
+# storage
+db|cache.(25).cnf
+db|cache.(25).cnf
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+8
+PARAMETER_UNKNOWN
+USR
+LPM_SIZE
+4
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+data0_0
+data0_1
+data0_2
+data0_3
+data0_4
+data0_5
+data0_6
+data0_7
+data1_0
+data1_1
+data1_2
+data1_3
+data1_4
+data1_5
+data1_6
+data1_7
+data2_0
+data2_1
+data2_2
+data2_3
+data2_4
+data2_5
+data2_6
+data2_7
+data3_0
+data3_1
+data3_2
+data3_3
+data3_4
+data3_5
+data3_6
+data3_7
+result0
+result1
+result2
+result3
+result4
+result5
+result6
+result7
+}
+# include_file {
+..|libraries|megafunctions|aglobal50.inc
+1114026820
+}
+# hierarchies {
+cache:inst|lpm_or0:inst35|lpm_or:lpm_or_component
+}
+# end
+# entity
+lpm_dff0
+# case_insensitive
+# source_file
+lpm_dff0.tdf
+1614459338
+6
+# storage
+db|cache.(26).cnf
+db|cache.(26).cnf
+# used_port {
+clock
+data0
+data1
+data2
+data3
+data4
+data5
+data6
+data7
+enable
+q0
+q1
+q2
+q3
+q4
+q5
+q6
+q7
+}
+# include_file {
+..|libraries|megafunctions|lpm_ff.inc
+1107592640
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_dff0:inst1
+cache:inst|cacheline:inst|lpm_dff0:inst2
+cache:inst|cacheline:inst33|lpm_dff0:inst1
+cache:inst|cacheline:inst33|lpm_dff0:inst2
+cache:inst|cacheline:inst34|lpm_dff0:inst1
+cache:inst|cacheline:inst34|lpm_dff0:inst2
+cache:inst|cacheline:inst32|lpm_dff0:inst1
+cache:inst|cacheline:inst32|lpm_dff0:inst2
+}
+# end
+# entity
+lpm_ff
+# case_insensitive
+# source_file
+..|libraries|megafunctions|lpm_ff.tdf
+1114026852
+6
+# storage
+db|cache.(27).cnf
+db|cache.(27).cnf
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_UNKNOWN
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_FFTYPE
+DFF
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+data0
+data1
+data2
+data3
+data4
+data5
+data6
+data7
+clock
+enable
+q0
+q1
+q2
+q3
+q4
+q5
+q6
+q7
+}
+# include_file {
+..|libraries|megafunctions|aglobal50.inc
+1114026820
+..|libraries|megafunctions|lpm_constant.inc
+1107592524
+}
+# hierarchies {
+cache:inst|cacheline:inst|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+cache:inst|cacheline:inst|lpm_dff0:inst2|lpm_ff:lpm_ff_component
+cache:inst|cacheline:inst33|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+cache:inst|cacheline:inst33|lpm_dff0:inst2|lpm_ff:lpm_ff_component
+cache:inst|cacheline:inst34|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+cache:inst|cacheline:inst34|lpm_dff0:inst2|lpm_ff:lpm_ff_component
+cache:inst|cacheline:inst32|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+cache:inst|cacheline:inst32|lpm_dff0:inst2|lpm_ff:lpm_ff_component
+}
+# end
+# entity
+cache
+# case_insensitive
+# source_file
+cache.bdf
+1614460477
+23
+# storage
+db|cache.(17).cnf
+db|cache.(17).cnf
+# hierarchies {
+cache:inst
+}
+# end
+# entity
+cacheline
+# case_insensitive
+# source_file
+cacheline.bdf
+1614460286
+23
+# storage
+db|cache.(28).cnf
+db|cache.(28).cnf
+# hierarchies {
+cache:inst|cacheline:inst
+cache:inst|cacheline:inst33
+cache:inst|cacheline:inst34
+cache:inst|cacheline:inst32
+}
+# end
+# entity
+lpm_ram_dq0
+# case_insensitive
+# source_file
+lpm_ram_dq0.tdf
+1614460225
+6
+# storage
+db|cache.(29).cnf
+db|cache.(29).cnf
+# used_port {
+address0
+address1
+address2
+address3
+address4
+address5
+address6
+address7
+clock
+data0
+data1
+data2
+data3
+data4
+data5
+data6
+data7
+q0
+q1
+q2
+q3
+q4
+q5
+q6
+q7
+wren
+}
+# include_file {
+..|libraries|megafunctions|altsyncram.inc
+1107591506
+}
+# hierarchies {
+lpm_ram_dq0:inst1
+}
+# end
+# entity
+altsyncram
+# case_insensitive
+# source_file
+..|libraries|megafunctions|altsyncram.tdf
+1114026838
+6
+# storage
+db|cache.(30).cnf
+db|cache.(30).cnf
+# user_parameter {
+BYTE_SIZE_BLOCK
+8
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+OPERATION_MODE
+SINGLE_PORT
+PARAMETER_UNKNOWN
+USR
+WIDTH_A
+8
+PARAMETER_UNKNOWN
+USR
+WIDTHAD_A
+8
+PARAMETER_UNKNOWN
+USR
+NUMWORDS_A
+256
+PARAMETER_UNKNOWN
+USR
+OUTDATA_REG_A
+CLOCK0
+PARAMETER_UNKNOWN
+USR
+ADDRESS_ACLR_A
+NONE
+PARAMETER_UNKNOWN
+USR
+OUTDATA_ACLR_A
+NONE
+PARAMETER_UNKNOWN
+USR
+WRCONTROL_ACLR_A
+NONE
+PARAMETER_UNKNOWN
+USR
+INDATA_ACLR_A
+NONE
+PARAMETER_UNKNOWN
+USR
+BYTEENA_ACLR_A
+NONE
+PARAMETER_UNKNOWN
+DEF
+WIDTH_B
+1
+PARAMETER_UNKNOWN
+DEF
+WIDTHAD_B
+1
+PARAMETER_UNKNOWN
+DEF
+NUMWORDS_B
+1
+PARAMETER_UNKNOWN
+DEF
+INDATA_REG_B
+CLOCK1
+PARAMETER_UNKNOWN
+DEF
+WRCONTROL_WRADDRESS_REG_B
+CLOCK1
+PARAMETER_UNKNOWN
+DEF
+RDCONTROL_REG_B
+CLOCK1
+PARAMETER_UNKNOWN
+DEF
+ADDRESS_REG_B
+CLOCK1
+PARAMETER_UNKNOWN
+DEF
+OUTDATA_REG_B
+UNREGISTERED
+PARAMETER_UNKNOWN
+DEF
+BYTEENA_REG_B
+CLOCK1
+PARAMETER_UNKNOWN
+DEF
+INDATA_ACLR_B
+NONE
+PARAMETER_UNKNOWN
+DEF
+WRCONTROL_ACLR_B
+NONE
+PARAMETER_UNKNOWN
+DEF
+ADDRESS_ACLR_B
+NONE
+PARAMETER_UNKNOWN
+DEF
+OUTDATA_ACLR_B
+NONE
+PARAMETER_UNKNOWN
+DEF
+RDCONTROL_ACLR_B
+NONE
+PARAMETER_UNKNOWN
+DEF
+BYTEENA_ACLR_B
+NONE
+PARAMETER_UNKNOWN
+DEF
+WIDTH_BYTEENA_A
+1
+PARAMETER_UNKNOWN
+USR
+WIDTH_BYTEENA_B
+1
+PARAMETER_UNKNOWN
+DEF
+RAM_BLOCK_TYPE
+AUTO
+PARAMETER_UNKNOWN
+DEF
+BYTE_SIZE
+8
+PARAMETER_UNKNOWN
+DEF
+READ_DURING_WRITE_MODE_MIXED_PORTS
+DONT_CARE
+PARAMETER_UNKNOWN
+DEF
+INIT_FILE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+INIT_FILE_LAYOUT
+PORT_A
+PARAMETER_UNKNOWN
+DEF
+MAXIMUM_DEPTH
+0
+PARAMETER_UNKNOWN
+DEF
+CLOCK_ENABLE_INPUT_A
+NORMAL
+PARAMETER_UNKNOWN
+DEF
+CLOCK_ENABLE_INPUT_B
+NORMAL
+PARAMETER_UNKNOWN
+DEF
+CLOCK_ENABLE_OUTPUT_A
+NORMAL
+PARAMETER_UNKNOWN
+DEF
+CLOCK_ENABLE_OUTPUT_B
+NORMAL
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+altsyncram_d411
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+wren_a
+data_a0
+data_a1
+data_a2
+data_a3
+data_a4
+data_a5
+data_a6
+data_a7
+address_a0
+address_a1
+address_a2
+address_a3
+address_a4
+address_a5
+address_a6
+address_a7
+clock0
+q_a0
+q_a1
+q_a2
+q_a3
+q_a4
+q_a5
+q_a6
+q_a7
+}
+# include_file {
+..|libraries|megafunctions|aglobal50.inc
+1114026820
+..|libraries|megafunctions|lpm_mux.inc
+1107592776
+..|libraries|megafunctions|lpm_decode.inc
+1107592570
+..|libraries|megafunctions|altsyncram.inc
+1107591506
+..|libraries|megafunctions|a_rdenreg.inc
+1107590148
+..|libraries|megafunctions|stratix_ram_block.inc
+1107593592
+..|libraries|megafunctions|altrom.inc
+1107591422
+..|libraries|megafunctions|altram.inc
+1107591384
+..|libraries|megafunctions|altdpram.inc
+1107591082
+..|libraries|megafunctions|altqpram.inc
+1107591362
+}
+# hierarchies {
+lpm_ram_dq0:inst1|altsyncram:altsyncram_component
+}
+# end
+# entity
+cachetest
+# case_insensitive
+# source_file
+cachetest.bdf
+1614462453
+23
+# storage
+db|cache.(0).cnf
+db|cache.(0).cnf
+# hierarchies {
+|
+}
+# end
+# entity
+altsyncram_d411
+# case_insensitive
+# source_file
+db|altsyncram_d411.tdf
+1614460959
+6
+# storage
+db|cache.(31).cnf
+db|cache.(31).cnf
+# user_parameter {
+PORT_A_ADDRESS_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_A_BYTE_ENABLE_MASK_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_A_DATA_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_B_ADDRESS_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_B_BYTE_ENABLE_MASK_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+PORT_B_DATA_WIDTH
+1
+PARAMETER_UNKNOWN
+DEF
+}
+# used_port {
+wren_a
+data_a0
+data_a1
+data_a2
+data_a3
+data_a4
+data_a5
+data_a6
+data_a7
+address_a0
+address_a1
+address_a2
+address_a3
+address_a4
+address_a5
+address_a6
+address_a7
+clock0
+q_a0
+q_a1
+q_a2
+q_a3
+q_a4
+q_a5
+q_a6
+q_a7
+}
+# memory_file {
+none
+0
+}
+# hierarchies {
+lpm_ram_dq0:inst1|altsyncram:altsyncram_component|altsyncram_d411:auto_generated
+}
+# end
+# complete
+

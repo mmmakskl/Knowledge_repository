@@ -1,0 +1,248 @@
+Timing Analyzer report for REGISTER
+Thu Apr 08 18:20:02 2021
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'CLOCK'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                  ;
++------------------------------+-------+---------------+------------------------------------------------+---------------------+---------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                ; To                  ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+---------------------+---------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 2.862 ns                                       ; EWR                 ; DTrigger:Dtrig7|Buf ;            ; CLOCK    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 6.530 ns                                       ; res[6]              ; OUTRESULT[6]        ; CLOCK      ;          ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.603 ns                                      ; DATA[1]             ; DTrigger:Dtrig1|Buf ;            ; CLOCK    ; 0            ;
+; Clock Setup: 'CLOCK'         ; N/A   ; None          ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; DTrigger:Dtrig2|Buf ; res[2]              ; CLOCK      ; CLOCK    ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                     ;                     ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+---------------------+---------------------+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP1S10F484C5       ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; Off                ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLOCK           ;                    ; User Pin ; NONE             ; 0.000 ns      ; 0.000 ns     ; NONE     ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLOCK'                                                                                                                                                                              ;
++-------+------------------------------------------------+---------------------+--------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                ; To     ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+---------------------+--------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; DTrigger:Dtrig2|Buf ; res[2] ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.616 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; DTrigger:Dtrig3|Buf ; res[3] ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.612 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; DTrigger:Dtrig1|Buf ; res[1] ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.612 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; DTrigger:Dtrig6|Buf ; res[6] ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.611 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; DTrigger:Dtrig7|Buf ; res[7] ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; DTrigger:Dtrig5|Buf ; res[5] ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.486 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; DTrigger:Dtrig0|Buf ; res[0] ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.485 ns                ;
+; N/A   ; Restricted to 422.12 MHz ( period = 2.369 ns ) ; DTrigger:Dtrig4|Buf ; res[4] ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.484 ns                ;
++-------+------------------------------------------------+---------------------+--------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------+
+; tsu                                                                          ;
++-------+--------------+------------+---------+---------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To                  ; To Clock ;
++-------+--------------+------------+---------+---------------------+----------+
+; N/A   ; None         ; 2.862 ns   ; EWR     ; DTrigger:Dtrig5|Buf ; CLOCK    ;
+; N/A   ; None         ; 2.862 ns   ; EWR     ; DTrigger:Dtrig6|Buf ; CLOCK    ;
+; N/A   ; None         ; 2.862 ns   ; EWR     ; DTrigger:Dtrig7|Buf ; CLOCK    ;
+; N/A   ; None         ; 2.732 ns   ; EWR     ; DTrigger:Dtrig0|Buf ; CLOCK    ;
+; N/A   ; None         ; 2.732 ns   ; EWR     ; DTrigger:Dtrig1|Buf ; CLOCK    ;
+; N/A   ; None         ; 2.732 ns   ; EWR     ; DTrigger:Dtrig2|Buf ; CLOCK    ;
+; N/A   ; None         ; 2.732 ns   ; EWR     ; DTrigger:Dtrig3|Buf ; CLOCK    ;
+; N/A   ; None         ; 2.732 ns   ; EWR     ; DTrigger:Dtrig4|Buf ; CLOCK    ;
+; N/A   ; None         ; 2.376 ns   ; EDY     ; always0~8           ; CLOCK    ;
+; N/A   ; None         ; 2.218 ns   ; DATA[5] ; DTrigger:Dtrig5|Buf ; CLOCK    ;
+; N/A   ; None         ; 2.201 ns   ; DATA[6] ; DTrigger:Dtrig6|Buf ; CLOCK    ;
+; N/A   ; None         ; 2.118 ns   ; DATA[3] ; DTrigger:Dtrig3|Buf ; CLOCK    ;
+; N/A   ; None         ; 2.073 ns   ; DATA[7] ; DTrigger:Dtrig7|Buf ; CLOCK    ;
+; N/A   ; None         ; 1.861 ns   ; DATA[4] ; DTrigger:Dtrig4|Buf ; CLOCK    ;
+; N/A   ; None         ; 1.841 ns   ; DATA[2] ; DTrigger:Dtrig2|Buf ; CLOCK    ;
+; N/A   ; None         ; 1.719 ns   ; DATA[0] ; DTrigger:Dtrig0|Buf ; CLOCK    ;
+; N/A   ; None         ; 1.713 ns   ; DATA[1] ; DTrigger:Dtrig1|Buf ; CLOCK    ;
++-------+--------------+------------+---------+---------------------+----------+
+
+
++---------------------------------------------------------------------------+
+; tco                                                                       ;
++-------+--------------+------------+-----------+--------------+------------+
+; Slack ; Required tco ; Actual tco ; From      ; To           ; From Clock ;
++-------+--------------+------------+-----------+--------------+------------+
+; N/A   ; None         ; 6.530 ns   ; res[6]    ; OUTRESULT[6] ; CLOCK      ;
+; N/A   ; None         ; 6.526 ns   ; always0~8 ; OUTRESULT[7] ; CLOCK      ;
+; N/A   ; None         ; 6.526 ns   ; always0~8 ; OUTRESULT[6] ; CLOCK      ;
+; N/A   ; None         ; 6.526 ns   ; always0~8 ; OUTRESULT[5] ; CLOCK      ;
+; N/A   ; None         ; 6.520 ns   ; res[0]    ; OUTRESULT[0] ; CLOCK      ;
+; N/A   ; None         ; 6.518 ns   ; res[1]    ; OUTRESULT[1] ; CLOCK      ;
+; N/A   ; None         ; 6.516 ns   ; res[7]    ; OUTRESULT[7] ; CLOCK      ;
+; N/A   ; None         ; 6.515 ns   ; res[2]    ; OUTRESULT[2] ; CLOCK      ;
+; N/A   ; None         ; 6.514 ns   ; res[5]    ; OUTRESULT[5] ; CLOCK      ;
+; N/A   ; None         ; 6.514 ns   ; res[3]    ; OUTRESULT[3] ; CLOCK      ;
+; N/A   ; None         ; 6.513 ns   ; res[4]    ; OUTRESULT[4] ; CLOCK      ;
+; N/A   ; None         ; 6.512 ns   ; always0~8 ; OUTRESULT[4] ; CLOCK      ;
+; N/A   ; None         ; 6.512 ns   ; always0~8 ; OUTRESULT[3] ; CLOCK      ;
+; N/A   ; None         ; 6.512 ns   ; always0~8 ; OUTRESULT[2] ; CLOCK      ;
+; N/A   ; None         ; 6.512 ns   ; always0~8 ; OUTRESULT[1] ; CLOCK      ;
+; N/A   ; None         ; 6.512 ns   ; always0~8 ; OUTRESULT[0] ; CLOCK      ;
++-------+--------------+------------+-----------+--------------+------------+
+
+
++------------------------------------------------------------------------------------+
+; th                                                                                 ;
++---------------+-------------+-----------+---------+---------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To                  ; To Clock ;
++---------------+-------------+-----------+---------+---------------------+----------+
+; N/A           ; None        ; -1.603 ns ; DATA[1] ; DTrigger:Dtrig1|Buf ; CLOCK    ;
+; N/A           ; None        ; -1.609 ns ; DATA[0] ; DTrigger:Dtrig0|Buf ; CLOCK    ;
+; N/A           ; None        ; -1.731 ns ; DATA[2] ; DTrigger:Dtrig2|Buf ; CLOCK    ;
+; N/A           ; None        ; -1.751 ns ; DATA[4] ; DTrigger:Dtrig4|Buf ; CLOCK    ;
+; N/A           ; None        ; -1.963 ns ; DATA[7] ; DTrigger:Dtrig7|Buf ; CLOCK    ;
+; N/A           ; None        ; -2.008 ns ; DATA[3] ; DTrigger:Dtrig3|Buf ; CLOCK    ;
+; N/A           ; None        ; -2.091 ns ; DATA[6] ; DTrigger:Dtrig6|Buf ; CLOCK    ;
+; N/A           ; None        ; -2.108 ns ; DATA[5] ; DTrigger:Dtrig5|Buf ; CLOCK    ;
+; N/A           ; None        ; -2.266 ns ; EDY     ; always0~8           ; CLOCK    ;
+; N/A           ; None        ; -2.622 ns ; EWR     ; DTrigger:Dtrig0|Buf ; CLOCK    ;
+; N/A           ; None        ; -2.622 ns ; EWR     ; DTrigger:Dtrig1|Buf ; CLOCK    ;
+; N/A           ; None        ; -2.622 ns ; EWR     ; DTrigger:Dtrig2|Buf ; CLOCK    ;
+; N/A           ; None        ; -2.622 ns ; EWR     ; DTrigger:Dtrig3|Buf ; CLOCK    ;
+; N/A           ; None        ; -2.622 ns ; EWR     ; DTrigger:Dtrig4|Buf ; CLOCK    ;
+; N/A           ; None        ; -2.752 ns ; EWR     ; DTrigger:Dtrig5|Buf ; CLOCK    ;
+; N/A           ; None        ; -2.752 ns ; EWR     ; DTrigger:Dtrig6|Buf ; CLOCK    ;
+; N/A           ; None        ; -2.752 ns ; EWR     ; DTrigger:Dtrig7|Buf ; CLOCK    ;
++---------------+-------------+-----------+---------+---------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Thu Apr 08 18:19:59 2021
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Register -c REGISTER --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLOCK" is an undefined clock
+Info: Clock "CLOCK" Internal fmax is restricted to 422.12 MHz between source register "DTrigger:Dtrig2|Buf" and destination register "res[2]"
+    Info: fmax restricted to clock pin edge rate 2.369 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 0.616 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X52_Y30_N0; Fanout = 1; REG Node = 'DTrigger:Dtrig2|Buf'
+            Info: 2: + IC(0.393 ns) + CELL(0.223 ns) = 0.616 ns; Loc. = LC_X52_Y30_N8; Fanout = 1; REG Node = 'res[2]'
+            Info: Total cell delay = 0.223 ns ( 36.20 % )
+            Info: Total interconnect delay = 0.393 ns ( 63.80 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "CLOCK" to destination register is 2.790 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 17; CLK Node = 'CLOCK'
+                Info: 2: + IC(1.523 ns) + CELL(0.542 ns) = 2.790 ns; Loc. = LC_X52_Y30_N8; Fanout = 1; REG Node = 'res[2]'
+                Info: Total cell delay = 1.267 ns ( 45.41 % )
+                Info: Total interconnect delay = 1.523 ns ( 54.59 % )
+            Info: - Longest clock path from clock "CLOCK" to source register is 2.790 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 17; CLK Node = 'CLOCK'
+                Info: 2: + IC(1.523 ns) + CELL(0.542 ns) = 2.790 ns; Loc. = LC_X52_Y30_N0; Fanout = 1; REG Node = 'DTrigger:Dtrig2|Buf'
+                Info: Total cell delay = 1.267 ns ( 45.41 % )
+                Info: Total interconnect delay = 1.523 ns ( 54.59 % )
+        Info: + Micro clock to output delay of source is 0.156 ns
+        Info: + Micro setup delay of destination is 0.010 ns
+        Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50, fmax is divided by two
+Info: tsu for register "DTrigger:Dtrig5|Buf" (data pin = "EWR", clock pin = "CLOCK") is 2.862 ns
+    Info: + Longest pin to register delay is 5.642 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.087 ns) = 1.087 ns; Loc. = PIN_B4; Fanout = 8; PIN Node = 'EWR'
+        Info: 2: + IC(3.850 ns) + CELL(0.705 ns) = 5.642 ns; Loc. = LC_X50_Y30_N5; Fanout = 1; REG Node = 'DTrigger:Dtrig5|Buf'
+        Info: Total cell delay = 1.792 ns ( 31.76 % )
+        Info: Total interconnect delay = 3.850 ns ( 68.24 % )
+    Info: + Micro setup delay of destination is 0.010 ns
+    Info: - Shortest clock path from clock "CLOCK" to destination register is 2.790 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 17; CLK Node = 'CLOCK'
+        Info: 2: + IC(1.523 ns) + CELL(0.542 ns) = 2.790 ns; Loc. = LC_X50_Y30_N5; Fanout = 1; REG Node = 'DTrigger:Dtrig5|Buf'
+        Info: Total cell delay = 1.267 ns ( 45.41 % )
+        Info: Total interconnect delay = 1.523 ns ( 54.59 % )
+Info: tco from clock "CLOCK" to destination pin "OUTRESULT[6]" through register "res[6]" is 6.530 ns
+    Info: + Longest clock path from clock "CLOCK" to source register is 2.790 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 17; CLK Node = 'CLOCK'
+        Info: 2: + IC(1.523 ns) + CELL(0.542 ns) = 2.790 ns; Loc. = LC_X50_Y30_N9; Fanout = 1; REG Node = 'res[6]'
+        Info: Total cell delay = 1.267 ns ( 45.41 % )
+        Info: Total interconnect delay = 1.523 ns ( 54.59 % )
+    Info: + Micro clock to output delay of source is 0.156 ns
+    Info: + Longest register to pin delay is 3.584 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X50_Y30_N9; Fanout = 1; REG Node = 'res[6]'
+        Info: 2: + IC(1.180 ns) + CELL(2.404 ns) = 3.584 ns; Loc. = PIN_C3; Fanout = 0; PIN Node = 'OUTRESULT[6]'
+        Info: Total cell delay = 2.404 ns ( 67.08 % )
+        Info: Total interconnect delay = 1.180 ns ( 32.92 % )
+Info: th for register "DTrigger:Dtrig1|Buf" (data pin = "DATA[1]", clock pin = "CLOCK") is -1.603 ns
+    Info: + Longest clock path from clock "CLOCK" to destination register is 2.790 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 17; CLK Node = 'CLOCK'
+        Info: 2: + IC(1.523 ns) + CELL(0.542 ns) = 2.790 ns; Loc. = LC_X52_Y30_N9; Fanout = 1; REG Node = 'DTrigger:Dtrig1|Buf'
+        Info: Total cell delay = 1.267 ns ( 45.41 % )
+        Info: Total interconnect delay = 1.523 ns ( 54.59 % )
+    Info: + Micro hold delay of destination is 0.100 ns
+    Info: - Shortest pin to register delay is 4.493 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.234 ns) = 1.234 ns; Loc. = PIN_F3; Fanout = 1; PIN Node = 'DATA[1]'
+        Info: 2: + IC(3.174 ns) + CELL(0.085 ns) = 4.493 ns; Loc. = LC_X52_Y30_N9; Fanout = 1; REG Node = 'DTrigger:Dtrig1|Buf'
+        Info: Total cell delay = 1.319 ns ( 29.36 % )
+        Info: Total interconnect delay = 3.174 ns ( 70.64 % )
+Info: Quartus II Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Processing ended: Thu Apr 08 18:20:02 2021
+    Info: Elapsed time: 00:00:03
+
+

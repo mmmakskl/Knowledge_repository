@@ -1,0 +1,62 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L1 is inst5~48 at LC_X1_Y30_N2
+--operation mode is normal
+
+A1L1 = S & !A1L2 & (!A1L3 # !T);
+
+
+--A1L3 is inst10~70 at LC_X1_Y30_N5
+--operation mode is normal
+
+A1L3 = T & (A1L3) # !T & S & (!A1L2);
+
+
+--A1L2 is inst6~57 at LC_X1_Y30_N4
+--operation mode is normal
+
+A1L2 = R & !A1L1 & (A1L3 # !T);
+
+
+--S is S at PIN_B21
+--operation mode is input
+
+S = INPUT();
+
+
+--T is T at PIN_M16
+--operation mode is input
+
+T = INPUT();
+
+
+--R is R at PIN_C20
+--operation mode is input
+
+R = INPUT();
+
+
+--Q is Q at PIN_D22
+--operation mode is output
+
+Q = OUTPUT(!A1L1);
+
+
+--Qi is Qi at PIN_D20
+--operation mode is output
+
+Qi = OUTPUT(!A1L2);
+
+
+

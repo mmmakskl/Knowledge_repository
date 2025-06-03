@@ -1,0 +1,89 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L7Q is ex1~reg0
+--operation mode is normal
+
+A1L7Q_lut_out = d;
+A1L7Q = DFFEAS(A1L7Q_lut_out, c1, VCC, , r, , , , );
+
+
+--d31 is d31
+--operation mode is normal
+
+d31_lut_out = d21;
+d31 = DFFEAS(d31_lut_out, c1, VCC, , r, , , , );
+
+
+--d21 is d21
+--operation mode is normal
+
+d21_lut_out = A1L7Q;
+d21 = DFFEAS(d21_lut_out, c2, VCC, , r, , , , );
+
+
+--A1L11Q is q2~reg0
+--operation mode is normal
+
+A1L11Q_lut_out = d31;
+A1L11Q = DFFEAS(A1L11Q_lut_out, c2, VCC, , r, , , , );
+
+
+--d is d
+--operation mode is input
+
+d = INPUT();
+
+
+--c1 is c1
+--operation mode is input
+
+c1 = INPUT();
+
+
+--r is r
+--operation mode is input
+
+r = INPUT();
+
+
+--c2 is c2
+--operation mode is input
+
+c2 = INPUT();
+
+
+--ex1 is ex1
+--operation mode is output
+
+ex1 = OUTPUT(A1L7Q);
+
+
+--ex2 is ex2
+--operation mode is output
+
+ex2 = OUTPUT(d31);
+
+
+--q1 is q1
+--operation mode is output
+
+q1 = OUTPUT(d21);
+
+
+--q2 is q2
+--operation mode is output
+
+q2 = OUTPUT(A1L11Q);
+
+

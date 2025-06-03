@@ -1,0 +1,88 @@
+Flow report for lifo_graph
+Thu Feb 25 04:59:57 2021
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Elapsed Time
+  5. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------+
+; Flow Summary                                                       ;
++-------------------------+------------------------------------------+
+; Flow Status             ; Successful - Thu Feb 25 04:59:56 2021    ;
+; Quartus II Version      ; 5.0 Build 148 04/26/2005 SJ Full Version ;
+; Revision Name           ; lifo_graph                               ;
+; Top-level Entity Name   ; lifo_graph                               ;
+; Family                  ; Cyclone                                  ;
+; Met timing requirements ; No                                       ;
+; Total logic elements    ; 20 / 2,910 ( < 1 % )                     ;
+; Total pins              ; 27 / 65 ( 41 % )                         ;
+; Total virtual pins      ; 0                                        ;
+; Total memory bits       ; 128 / 59,904 ( < 1 % )                   ;
+; Total PLLs              ; 0 / 1 ( 0 % )                            ;
+; Device                  ; EP1C3T100C6                              ;
+; Timing Models           ; Final                                    ;
++-------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 02/25/2021 04:59:50 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; lifo_graph          ;
++-------------------+---------------------+
+
+
++-------------------------------------+
+; Flow Elapsed Time                   ;
++----------------------+--------------+
+; Module Name          ; Elapsed Time ;
++----------------------+--------------+
+; Analysis & Synthesis ; 00:00:02     ;
+; Fitter               ; 00:00:02     ;
+; Assembler            ; 00:00:00     ;
+; Timing Analyzer      ; 00:00:00     ;
+; Total                ; 00:00:04     ;
++----------------------+--------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off lifo_graph -c lifo_graph
+quartus_fit --read_settings_files=off --write_settings_files=off lifo_graph -c lifo_graph
+quartus_asm --read_settings_files=off --write_settings_files=off lifo_graph -c lifo_graph
+quartus_tan --read_settings_files=off --write_settings_files=off lifo_graph -c lifo_graph --timing_analysis_only
+
+
+

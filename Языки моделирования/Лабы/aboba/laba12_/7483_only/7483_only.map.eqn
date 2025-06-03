@@ -1,0 +1,133 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1L4 is 7483:inst|27~1
+--operation mode is normal
+
+B1L4 = X1 $ Y1;
+
+
+--B1L5 is 7483:inst|43~39
+--operation mode is normal
+
+B1L5 = Y2 $ X2 $ (X1 & Y1);
+
+
+--B1L1 is 7483:inst|1~199
+--operation mode is normal
+
+B1L1 = Y2 & !X2 & (!Y1 # !X1) # !Y2 & (!X2 # !Y1 # !X1);
+
+
+--B1_44 is 7483:inst|44
+--operation mode is normal
+
+B1_44 = B1L1 $ Y3 $ X3;
+
+
+--B1L2 is 7483:inst|1~200
+--operation mode is normal
+
+B1L2 = B1L1 & (!X3 # !Y3) # !B1L1 & (!Y3 & !X3);
+
+
+--B1_45 is 7483:inst|45
+--operation mode is normal
+
+B1_45 = B1L2 $ Y4 $ X4;
+
+
+--B1L3 is 7483:inst|2~71
+--operation mode is normal
+
+B1L3 = B1L2 & (!X4 # !Y4) # !B1L2 & (!Y4 & !X4);
+
+
+--X1 is X1
+--operation mode is input
+
+X1 = INPUT();
+
+
+--Y1 is Y1
+--operation mode is input
+
+Y1 = INPUT();
+
+
+--Y2 is Y2
+--operation mode is input
+
+Y2 = INPUT();
+
+
+--X2 is X2
+--operation mode is input
+
+X2 = INPUT();
+
+
+--Y3 is Y3
+--operation mode is input
+
+Y3 = INPUT();
+
+
+--X3 is X3
+--operation mode is input
+
+X3 = INPUT();
+
+
+--Y4 is Y4
+--operation mode is input
+
+Y4 = INPUT();
+
+
+--X4 is X4
+--operation mode is input
+
+X4 = INPUT();
+
+
+--S1 is S1
+--operation mode is output
+
+S1 = OUTPUT(B1L4);
+
+
+--S2 is S2
+--operation mode is output
+
+S2 = OUTPUT(B1L5);
+
+
+--S3 is S3
+--operation mode is output
+
+S3 = OUTPUT(!B1_44);
+
+
+--S4 is S4
+--operation mode is output
+
+S4 = OUTPUT(!B1_45);
+
+
+--C4 is C4
+--operation mode is output
+
+C4 = OUTPUT(!B1L3);
+
+

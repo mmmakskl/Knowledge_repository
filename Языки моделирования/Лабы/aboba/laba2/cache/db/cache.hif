@@ -1,0 +1,1485 @@
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+35
+1901
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+VRSM_ON
+VHSM_ON
+0
+# entity
+cache
+# case_insensitive
+# source_file
+cache.bdf
+1552617540
+23
+# storage
+db|cache.(0).cnf
+db|cache.(0).cnf
+# hierarchies {
+|
+}
+# end
+# entity
+cache_cell
+# case_insensitive
+# source_file
+..|cache_cell|cache_cell.bdf
+1552615768
+23
+# storage
+db|cache.(1).cnf
+db|cache.(1).cnf
+# hierarchies {
+cache_cell:inst
+cache_cell:inst1
+cache_cell:inst2
+cache_cell:inst3
+cache_cell:inst4
+cache_cell:inst5
+cache_cell:inst6
+cache_cell:inst7
+}
+# end
+# entity
+lpm_compare0
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|cache_cell|lpm_compare0.vhd
+1552615624
+4
+# storage
+db|cache.(2).cnf
+db|cache.(2).cnf
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+cache_cell:inst|lpm_compare0:inst4
+cache_cell:inst1|lpm_compare0:inst4
+cache_cell:inst2|lpm_compare0:inst4
+cache_cell:inst3|lpm_compare0:inst4
+cache_cell:inst4|lpm_compare0:inst4
+cache_cell:inst5|lpm_compare0:inst4
+cache_cell:inst6|lpm_compare0:inst4
+cache_cell:inst7|lpm_compare0:inst4
+}
+# end
+# entity
+lpm_compare
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|lpm_compare.tdf
+1114026848
+6
+# storage
+db|cache.(3).cnf
+db|cache.(3).cnf
+# user_parameter {
+lpm_width
+3
+PARAMETER_DEC
+USR
+LPM_REPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CHAIN_SIZE
+8
+PARAMETER_UNKNOWN
+DEF
+ONE_INPUT_IS_CONSTANT
+NO
+PARAMETER_UNKNOWN
+DEF
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CASCADE_CHAIN_LENGTH
+2
+CASCADE_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+AeB
+dataa0
+dataa1
+dataa2
+datab0
+datab1
+datab2
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|altshift.inc
+1107591438
+c:|altera|quartus50|libraries|megafunctions|comptree.inc
+1107591994
+c:|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+}
+# hierarchies {
+cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component
+cache_cell:inst1|lpm_compare0:inst4|lpm_compare:lpm_compare_component
+cache_cell:inst2|lpm_compare0:inst4|lpm_compare:lpm_compare_component
+cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component
+cache_cell:inst4|lpm_compare0:inst4|lpm_compare:lpm_compare_component
+cache_cell:inst5|lpm_compare0:inst4|lpm_compare:lpm_compare_component
+cache_cell:inst6|lpm_compare0:inst4|lpm_compare:lpm_compare_component
+cache_cell:inst7|lpm_compare0:inst4|lpm_compare:lpm_compare_component
+}
+# end
+# entity
+comptree
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|comptree.tdf
+1114026848
+6
+# storage
+db|cache.(4).cnf
+db|cache.(4).cnf
+# user_parameter {
+lpm_width
+3
+PARAMETER_UNKNOWN
+USR
+CHAIN_LENGTH
+8
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+0
+PARAMETER_UNKNOWN
+USR
+OUTPUTS_CLOCKED
+0
+PARAMETER_UNKNOWN
+USR
+BURRIED_CLOCKED
+1
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+dataa0
+dataa1
+dataa2
+datab0
+datab1
+datab2
+aeb
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|comptree.inc
+1107591994
+c:|altera|quartus50|libraries|megafunctions|lpm_constant.inc
+1107592524
+c:|altera|quartus50|libraries|megafunctions|cmpchain.inc
+1107591964
+}
+# hierarchies {
+cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator
+cache_cell:inst1|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator
+cache_cell:inst2|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator
+cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator
+cache_cell:inst4|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator
+cache_cell:inst5|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator
+cache_cell:inst6|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator
+cache_cell:inst7|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator
+}
+# end
+# entity
+cmpchain
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|cmpchain.tdf
+1114026848
+6
+# storage
+db|cache.(5).cnf
+db|cache.(5).cnf
+# user_parameter {
+lpm_width
+3
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+0
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CASCADE_CHAIN_LENGTH
+2
+CASCADE_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+dataa0
+dataa1
+dataa2
+datab0
+datab1
+datab2
+aeb
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|comptree.inc
+1107591994
+c:|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+}
+# hierarchies {
+cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+cache_cell:inst1|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+cache_cell:inst2|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+cache_cell:inst4|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+cache_cell:inst5|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+cache_cell:inst6|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+cache_cell:inst7|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+}
+# end
+# entity
+comptree
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|comptree.tdf
+1114026848
+6
+# storage
+db|cache.(6).cnf
+db|cache.(6).cnf
+# user_parameter {
+lpm_width
+3
+PARAMETER_UNKNOWN
+USR
+CHAIN_LENGTH
+1
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+0
+PARAMETER_UNKNOWN
+USR
+OUTPUTS_CLOCKED
+1
+PARAMETER_UNKNOWN
+USR
+BURRIED_CLOCKED
+0
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+dataa0
+dataa1
+dataa2
+datab0
+datab1
+datab2
+aeb
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|comptree.inc
+1107591994
+c:|altera|quartus50|libraries|megafunctions|lpm_constant.inc
+1107592524
+c:|altera|quartus50|libraries|megafunctions|cmpchain.inc
+1107591964
+}
+# hierarchies {
+cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp
+cache_cell:inst1|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp
+cache_cell:inst2|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp
+cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp
+cache_cell:inst4|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp
+cache_cell:inst5|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp
+cache_cell:inst6|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp
+cache_cell:inst7|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp
+}
+# end
+# entity
+cmpchain
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|cmpchain.tdf
+1114026848
+6
+# storage
+db|cache.(7).cnf
+db|cache.(7).cnf
+# user_parameter {
+lpm_width
+2
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+0
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CASCADE_CHAIN_LENGTH
+2
+CASCADE_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+dataa0
+dataa1
+datab0
+datab1
+aeb
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|comptree.inc
+1107591994
+c:|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+}
+# hierarchies {
+cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+cache_cell:inst1|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+cache_cell:inst2|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+cache_cell:inst4|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+cache_cell:inst5|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+cache_cell:inst6|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+cache_cell:inst7|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+}
+# end
+# entity
+cmpchain
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|cmpchain.tdf
+1114026848
+6
+# storage
+db|cache.(8).cnf
+db|cache.(8).cnf
+# user_parameter {
+lpm_width
+1
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+0
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CASCADE_CHAIN_LENGTH
+2
+CASCADE_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+dataa0
+datab0
+aeb
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|comptree.inc
+1107591994
+c:|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+}
+# hierarchies {
+cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end
+cache_cell:inst1|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end
+cache_cell:inst2|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end
+cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end
+cache_cell:inst4|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end
+cache_cell:inst5|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end
+cache_cell:inst6|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end
+cache_cell:inst7|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end
+}
+# end
+# entity
+comptree
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|comptree.tdf
+1114026848
+6
+# storage
+db|cache.(9).cnf
+db|cache.(9).cnf
+# user_parameter {
+lpm_width
+2
+PARAMETER_UNKNOWN
+USR
+CHAIN_LENGTH
+1
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+1
+PARAMETER_UNKNOWN
+USR
+OUTPUTS_CLOCKED
+1
+PARAMETER_UNKNOWN
+USR
+BURRIED_CLOCKED
+0
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+dataa0
+dataa1
+datab0
+datab1
+aeb
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|comptree.inc
+1107591994
+c:|altera|quartus50|libraries|megafunctions|lpm_constant.inc
+1107592524
+c:|altera|quartus50|libraries|megafunctions|cmpchain.inc
+1107591964
+}
+# hierarchies {
+cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+cache_cell:inst1|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+cache_cell:inst2|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+cache_cell:inst4|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+cache_cell:inst5|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+cache_cell:inst6|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+cache_cell:inst7|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+}
+# end
+# entity
+cmpchain
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|cmpchain.tdf
+1114026848
+6
+# storage
+db|cache.(10).cnf
+db|cache.(10).cnf
+# user_parameter {
+lpm_width
+2
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_CONSTANT
+1
+PARAMETER_UNKNOWN
+USR
+MODE
+0
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CASCADE_CHAIN_LENGTH
+2
+CASCADE_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+dataa0
+dataa1
+datab0
+datab1
+aeb
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|comptree.inc
+1107591994
+c:|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+}
+# hierarchies {
+cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+cache_cell:inst1|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+cache_cell:inst2|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+cache_cell:inst4|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+cache_cell:inst5|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+cache_cell:inst6|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+cache_cell:inst7|lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+}
+# end
+# entity
+altshift
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|altshift.tdf
+1114026854
+6
+# storage
+db|cache.(11).cnf
+db|cache.(11).cnf
+# user_parameter {
+WIDTH
+1
+PARAMETER_UNKNOWN
+USR
+DEPTH
+0
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+data0
+result0
+}
+# hierarchies {
+cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+cache_cell:inst|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+cache_cell:inst1|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+cache_cell:inst1|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+cache_cell:inst2|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+cache_cell:inst2|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+cache_cell:inst3|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+cache_cell:inst4|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+cache_cell:inst4|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+cache_cell:inst5|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+cache_cell:inst5|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+cache_cell:inst6|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+cache_cell:inst6|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+cache_cell:inst7|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+cache_cell:inst7|lpm_compare0:inst4|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+}
+# end
+# entity
+lpm_dff0
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|cache_cell|lpm_dff0.vhd
+1552615532
+4
+# storage
+db|cache.(12).cnf
+db|cache.(12).cnf
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+cache_cell:inst|lpm_dff0:inst1
+cache_cell:inst1|lpm_dff0:inst1
+cache_cell:inst2|lpm_dff0:inst1
+cache_cell:inst3|lpm_dff0:inst1
+cache_cell:inst4|lpm_dff0:inst1
+cache_cell:inst5|lpm_dff0:inst1
+cache_cell:inst6|lpm_dff0:inst1
+cache_cell:inst7|lpm_dff0:inst1
+}
+# end
+# entity
+lpm_ff
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|lpm_ff.tdf
+1114026852
+6
+# storage
+db|cache.(13).cnf
+db|cache.(13).cnf
+# user_parameter {
+LPM_WIDTH
+3
+PARAMETER_DEC
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_FFTYPE
+DFF
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+clock
+data0
+data1
+data2
+q0
+q1
+q2
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+c:|altera|quartus50|libraries|megafunctions|lpm_constant.inc
+1107592524
+}
+# hierarchies {
+cache_cell:inst|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+cache_cell:inst1|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+cache_cell:inst2|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+cache_cell:inst3|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+cache_cell:inst4|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+cache_cell:inst5|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+cache_cell:inst6|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+cache_cell:inst7|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+}
+# end
+# entity
+lpm_dff1
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|cache_cell|lpm_dff1.vhd
+1552615762
+4
+# storage
+db|cache.(14).cnf
+db|cache.(14).cnf
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+cache_cell:inst|lpm_dff1:inst
+cache_cell:inst1|lpm_dff1:inst
+cache_cell:inst2|lpm_dff1:inst
+cache_cell:inst3|lpm_dff1:inst
+cache_cell:inst4|lpm_dff1:inst
+cache_cell:inst5|lpm_dff1:inst
+cache_cell:inst6|lpm_dff1:inst
+cache_cell:inst7|lpm_dff1:inst
+}
+# end
+# entity
+lpm_ff
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|lpm_ff.tdf
+1114026852
+6
+# storage
+db|cache.(15).cnf
+db|cache.(15).cnf
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_DEC
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_FFTYPE
+DFF
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+clock
+data0
+data1
+data2
+data3
+data4
+data5
+data6
+data7
+q0
+q1
+q2
+q3
+q4
+q5
+q6
+q7
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+c:|altera|quartus50|libraries|megafunctions|lpm_constant.inc
+1107592524
+}
+# hierarchies {
+cache_cell:inst|lpm_dff1:inst|lpm_ff:lpm_ff_component
+cache_cell:inst1|lpm_dff1:inst|lpm_ff:lpm_ff_component
+cache_cell:inst2|lpm_dff1:inst|lpm_ff:lpm_ff_component
+cache_cell:inst3|lpm_dff1:inst|lpm_ff:lpm_ff_component
+cache_cell:inst4|lpm_dff1:inst|lpm_ff:lpm_ff_component
+cache_cell:inst5|lpm_dff1:inst|lpm_ff:lpm_ff_component
+cache_cell:inst6|lpm_dff1:inst|lpm_ff:lpm_ff_component
+cache_cell:inst7|lpm_dff1:inst|lpm_ff:lpm_ff_component
+}
+# end
+# entity
+LPM_DECODE
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|LPM_DECODE.tdf
+1114026850
+6
+# storage
+db|cache.(16).cnf
+db|cache.(16).cnf
+# user_parameter {
+LPM_WIDTH
+3
+PARAMETER_UNKNOWN
+USR
+LPM_DECODES
+8
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+decode_4mb
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+data0
+data1
+data2
+enable
+eq0
+eq1
+eq2
+eq3
+eq4
+eq5
+eq6
+eq7
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|altshift.inc
+1107591438
+c:|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+c:|altera|quartus50|libraries|megafunctions|lpm_constant.inc
+1107592524
+c:|altera|quartus50|libraries|megafunctions|declut.inc
+1107592136
+c:|altera|quartus50|libraries|megafunctions|lpm_compare.inc
+1107592500
+}
+# hierarchies {
+lpm_decode:30
+}
+# end
+# entity
+decode_4mb
+# case_insensitive
+# source_file
+db|decode_4mb.tdf
+1552617542
+6
+# storage
+db|cache.(17).cnf
+db|cache.(17).cnf
+# used_port {
+data0
+data1
+data2
+enable
+eq0
+eq1
+eq2
+eq3
+eq4
+eq5
+eq6
+eq7
+}
+# hierarchies {
+lpm_decode:30|decode_4mb:auto_generated
+}
+# end
+# entity
+BUSMUX
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|BUSMUX.tdf
+1114026836
+6
+# storage
+db|cache.(18).cnf
+db|cache.(18).cnf
+# user_parameter {
+WIDTH
+3
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+dataa0
+dataa1
+dataa2
+datab0
+datab1
+datab2
+result0
+result1
+result2
+sel
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|lpm_mux.inc
+1107592776
+}
+# hierarchies {
+busmux:159
+}
+# end
+# entity
+lpm_mux
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|lpm_mux.tdf
+1114026854
+6
+# storage
+db|cache.(19).cnf
+db|cache.(19).cnf
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+3
+PARAMETER_UNKNOWN
+USR
+LPM_SIZE
+2
+PARAMETER_UNKNOWN
+USR
+LPM_WIDTHS
+1
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+mux_7gc
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+data0_0
+data0_1
+data0_2
+data1_0
+data1_1
+data1_2
+sel0
+result0
+result1
+result2
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|altshift.inc
+1107591438
+c:|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+c:|altera|quartus50|libraries|megafunctions|muxlut.inc
+1107593250
+c:|altera|quartus50|libraries|megafunctions|bypassff.inc
+1107591920
+}
+# hierarchies {
+busmux:159|lpm_mux:$00000
+}
+# end
+# entity
+mux_7gc
+# case_insensitive
+# source_file
+db|mux_7gc.tdf
+1552617542
+6
+# storage
+db|cache.(20).cnf
+db|cache.(20).cnf
+# used_port {
+data0
+data1
+data2
+data3
+data4
+data5
+sel0
+result0
+result1
+result2
+}
+# hierarchies {
+busmux:159|lpm_mux:$00000|mux_7gc:auto_generated
+}
+# end
+# entity
+coder8_3
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|coder8_3|coder8_3.vhd
+1552617228
+4
+# storage
+db|cache.(21).cnf
+db|cache.(21).cnf
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+coder8_3:inst8
+}
+# end
+# entity
+lpm_mux
+# case_insensitive
+# source_file
+c:|altera|quartus50|libraries|megafunctions|lpm_mux.tdf
+1114026854
+6
+# storage
+db|cache.(22).cnf
+db|cache.(22).cnf
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+8
+PARAMETER_UNKNOWN
+USR
+LPM_SIZE
+8
+PARAMETER_UNKNOWN
+USR
+LPM_WIDTHS
+3
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+mux_kgc
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+data0_0
+data0_1
+data0_2
+data0_3
+data0_4
+data0_5
+data0_6
+data0_7
+data1_0
+data1_1
+data1_2
+data1_3
+data1_4
+data1_5
+data1_6
+data1_7
+data2_0
+data2_1
+data2_2
+data2_3
+data2_4
+data2_5
+data2_6
+data2_7
+data3_0
+data3_1
+data3_2
+data3_3
+data3_4
+data3_5
+data3_6
+data3_7
+data4_0
+data4_1
+data4_2
+data4_3
+data4_4
+data4_5
+data4_6
+data4_7
+data5_0
+data5_1
+data5_2
+data5_3
+data5_4
+data5_5
+data5_6
+data5_7
+data6_0
+data6_1
+data6_2
+data6_3
+data6_4
+data6_5
+data6_6
+data6_7
+data7_0
+data7_1
+data7_2
+data7_3
+data7_4
+data7_5
+data7_6
+data7_7
+result0
+result1
+result2
+result3
+result4
+result5
+result6
+result7
+sel0
+sel1
+sel2
+}
+# include_file {
+c:|altera|quartus50|libraries|megafunctions|altshift.inc
+1107591438
+c:|altera|quartus50|libraries|megafunctions|aglobal50.inc
+1114026820
+c:|altera|quartus50|libraries|megafunctions|muxlut.inc
+1107593250
+c:|altera|quartus50|libraries|megafunctions|bypassff.inc
+1107591920
+}
+# hierarchies {
+lpm_mux:17
+}
+# end
+# entity
+mux_kgc
+# case_insensitive
+# source_file
+db|mux_kgc.tdf
+1552617542
+6
+# storage
+db|cache.(23).cnf
+db|cache.(23).cnf
+# used_port {
+data0
+data1
+data2
+data3
+data4
+data5
+data6
+data7
+data8
+data9
+data10
+data11
+data12
+data13
+data14
+data15
+data16
+data17
+data18
+data19
+data20
+data21
+data22
+data23
+data24
+data25
+data26
+data27
+data28
+data29
+data30
+data31
+data32
+data33
+data34
+data35
+data36
+data37
+data38
+data39
+data40
+data41
+data42
+data43
+data44
+data45
+data46
+data47
+data48
+data49
+data50
+data51
+data52
+data53
+data54
+data55
+data56
+data57
+data58
+data59
+data60
+data61
+data62
+data63
+sel0
+sel1
+sel2
+result0
+result1
+result2
+result3
+result4
+result5
+result6
+result7
+}
+# hierarchies {
+lpm_mux:17|mux_kgc:auto_generated
+}
+# end
+# complete
+

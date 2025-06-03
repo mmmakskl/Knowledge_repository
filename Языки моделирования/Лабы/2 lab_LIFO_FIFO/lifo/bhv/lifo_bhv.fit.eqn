@@ -1,0 +1,1182 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--outElement[0] is outElement[0] at LC_X31_Y25_N8
+--operation mode is normal
+
+outElement[0]_lut_out = A1L041 & (A1L831 # A1L44 $ A1L2) # !A1L041 & A1L831 & (A1L44 $ !A1L2);
+outElement[0] = DFFEAS(outElement[0]_lut_out, GLOBAL(CLK), VCC, , A1L271, , , , );
+
+
+--outElement[1] is outElement[1] at LC_X29_Y25_N9
+--operation mode is normal
+
+outElement[1]_lut_out = A1L2 & (A1L44 & A1L241 # !A1L44 & (A1L441)) # !A1L2 & (A1L44 & (A1L441) # !A1L44 & A1L241);
+outElement[1] = DFFEAS(outElement[1]_lut_out, GLOBAL(CLK), VCC, , A1L271, , , , );
+
+
+--outElement[2] is outElement[2] at LC_X30_Y25_N8
+--operation mode is normal
+
+outElement[2]_lut_out = A1L2 & (A1L44 & (A1L641) # !A1L44 & A1L841) # !A1L2 & (A1L44 & A1L841 # !A1L44 & (A1L641));
+outElement[2] = DFFEAS(outElement[2]_lut_out, GLOBAL(CLK), VCC, , A1L271, , , , );
+
+
+--outElement[3] is outElement[3] at LC_X30_Y25_N4
+--operation mode is normal
+
+outElement[3]_lut_out = A1L2 & (A1L44 & (A1L051) # !A1L44 & A1L251) # !A1L2 & (A1L44 & A1L251 # !A1L44 & (A1L051));
+outElement[3] = DFFEAS(outElement[3]_lut_out, GLOBAL(CLK), VCC, , A1L271, , , , );
+
+
+--outElement[4] is outElement[4] at LC_X32_Y26_N2
+--operation mode is normal
+
+outElement[4]_lut_out = A1L651 & (A1L451 # A1L2 $ A1L44) # !A1L651 & A1L451 & (A1L2 $ !A1L44);
+outElement[4] = DFFEAS(outElement[4]_lut_out, GLOBAL(CLK), VCC, , A1L271, , , , );
+
+
+--outElement[5] is outElement[5] at LC_X32_Y26_N3
+--operation mode is normal
+
+outElement[5]_lut_out = A1L44 & (A1L2 & A1L851 # !A1L2 & (A1L061)) # !A1L44 & (A1L2 & (A1L061) # !A1L2 & A1L851);
+outElement[5] = DFFEAS(outElement[5]_lut_out, GLOBAL(CLK), VCC, , A1L271, , , , );
+
+
+--outElement[6] is outElement[6] at LC_X32_Y26_N6
+--operation mode is normal
+
+outElement[6]_lut_out = A1L261 & (A1L461 # A1L2 $ !A1L44) # !A1L261 & A1L461 & (A1L2 $ A1L44);
+outElement[6] = DFFEAS(outElement[6]_lut_out, GLOBAL(CLK), VCC, , A1L271, , , , );
+
+
+--outElement[7] is outElement[7] at LC_X32_Y26_N8
+--operation mode is normal
+
+outElement[7]_lut_out = A1L44 & (A1L2 & (A1L661) # !A1L2 & A1L861) # !A1L44 & (A1L2 & A1L861 # !A1L2 & (A1L661));
+outElement[7] = DFFEAS(outElement[7]_lut_out, GLOBAL(CLK), VCC, , A1L271, , , , );
+
+
+--isFull is isFull at LC_X32_Y25_N3
+--operation mode is normal
+
+isFull_lut_out = !A1L05 & !A1L64 & A1L94 & !A1L74;
+isFull = DFFEAS(isFull_lut_out, GLOBAL(CLK), !GLOBAL(Reset), , , , , , );
+
+
+--isEmpty is isEmpty at LC_X32_Y25_N9
+--operation mode is normal
+
+isEmpty_lut_out = A1L05 # A1L64 # A1L94 # A1L74;
+isEmpty = DFFEAS(isEmpty_lut_out, GLOBAL(CLK), !GLOBAL(Reset), , , , , , );
+
+
+--A1L1 is add~276 at LC_X30_Y25_N5
+--operation mode is normal
+
+A1L1 = counter[1] $ (counter[0] # !scount[3] & WR);
+
+
+--A1L24 is counter~718 at LC_X31_Y25_N1
+--operation mode is normal
+
+A1L24 = counter[1] $ (!scount[3] & WR & counter[0]);
+
+
+--A1L34 is counter~719 at LC_X30_Y25_N2
+--operation mode is normal
+
+A1L34 = counter[0] $ (!scount[3] & WR);
+
+
+--A1L98Q is lifo~33 at LC_X29_Y26_N5
+--operation mode is normal
+
+A1L98Q_lut_out = GND;
+A1L98Q = DFFEAS(A1L98Q_lut_out, GLOBAL(CLK), VCC, , A1L481, DATA_IN[0], , , VCC);
+
+
+--A1L731 is lifo~1107 at LC_X31_Y26_N4
+--operation mode is normal
+
+A1L79Q_qfbk = A1L79Q;
+A1L731 = A1L34 & (A1L98Q # !A1L24) # !A1L34 & (A1L79Q_qfbk & !A1L24);
+
+--A1L79Q is lifo~41 at LC_X31_Y26_N4
+--operation mode is normal
+
+A1L79Q = DFFEAS(A1L731, GLOBAL(CLK), VCC, , A1L581, DATA_IN[0], , , VCC);
+
+
+--A1L37Q is lifo~17 at LC_X30_Y27_N0
+--operation mode is normal
+
+A1L37Q_lut_out = DATA_IN[0];
+A1L37Q = DFFEAS(A1L37Q_lut_out, GLOBAL(CLK), VCC, , A1L681, , , , );
+
+
+--A1L831 is lifo~1108 at LC_X30_Y25_N6
+--operation mode is normal
+
+A1L18Q_qfbk = A1L18Q;
+A1L831 = A1L731 & (A1L37Q # !A1L1) # !A1L731 & A1L1 & A1L18Q_qfbk;
+
+--A1L18Q is lifo~25 at LC_X30_Y25_N6
+--operation mode is normal
+
+A1L18Q = DFFEAS(A1L831, GLOBAL(CLK), VCC, , A1L381, DATA_IN[0], , , VCC);
+
+
+--A1L121Q is lifo~65 at LC_X30_Y26_N9
+--operation mode is normal
+
+A1L121Q_lut_out = DATA_IN[0];
+A1L121Q = DFFEAS(A1L121Q_lut_out, GLOBAL(CLK), VCC, , A1L881, , , , );
+
+
+--A1L931 is lifo~1109 at LC_X30_Y26_N5
+--operation mode is normal
+
+A1L921Q_qfbk = A1L921Q;
+A1L931 = A1L24 & A1L34 & (A1L121Q) # !A1L24 & (A1L34 # A1L921Q_qfbk);
+
+--A1L921Q is lifo~73 at LC_X30_Y26_N5
+--operation mode is normal
+
+A1L921Q = DFFEAS(A1L931, GLOBAL(CLK), VCC, , A1L981, DATA_IN[0], , , VCC);
+
+
+--A1L501Q is lifo~49 at LC_X32_Y25_N2
+--operation mode is normal
+
+A1L501Q_lut_out = GND;
+A1L501Q = DFFEAS(A1L501Q_lut_out, GLOBAL(CLK), VCC, , A1L091, DATA_IN[0], , , VCC);
+
+
+--A1L041 is lifo~1110 at LC_X29_Y26_N9
+--operation mode is normal
+
+A1L311Q_qfbk = A1L311Q;
+A1L041 = A1L1 & (A1L931 & A1L501Q # !A1L931 & (A1L311Q_qfbk)) # !A1L1 & (A1L931);
+
+--A1L311Q is lifo~57 at LC_X29_Y26_N9
+--operation mode is normal
+
+A1L311Q = DFFEAS(A1L041, GLOBAL(CLK), VCC, , A1L781, DATA_IN[0], , , VCC);
+
+
+--A1L2 is add~277 at LC_X31_Y25_N4
+--operation mode is normal
+
+A1L2 = counter[1] & !scount[3] & WR & counter[0] # !counter[1] & !counter[0] & (scount[3] # !WR);
+
+
+--A1L3 is add~278 at LC_X31_Y25_N7
+--operation mode is normal
+
+counter[0]_qfbk = counter[0];
+A1L3 = counter[0]_qfbk & counter[1];
+
+--counter[0] is counter[0] at LC_X31_Y25_N7
+--operation mode is normal
+
+counter[0] = DFFEAS(A1L3, GLOBAL(CLK), !GLOBAL(Reset), , , A1L05, , , VCC);
+
+
+--A1L44 is counter~720 at LC_X31_Y25_N2
+--operation mode is normal
+
+counter[2]_qfbk = counter[2];
+A1L44 = counter[2]_qfbk $ (A1L3 & WR & !scount[3]);
+
+--counter[2] is counter[2] at LC_X31_Y25_N2
+--operation mode is normal
+
+counter[2] = DFFEAS(A1L44, GLOBAL(CLK), !GLOBAL(Reset), , , A1L74, , , VCC);
+
+
+--A1L54 is counter~721 at LC_X31_Y25_N6
+--operation mode is normal
+
+A1L54 = scount[3] # WR & A1L3 & counter[2];
+
+
+--A1L081 is process0~63 at LC_X31_Y25_N5
+--operation mode is normal
+
+A1L081 = RD & (A1L44 # A1L54 # !A1L2);
+
+
+--A1L271 is outElement[0]~7 at LC_X31_Y25_N0
+--operation mode is normal
+
+A1L271 = !Reset & (A1L081);
+
+
+--A1L09Q is lifo~34 at LC_X31_Y26_N8
+--operation mode is normal
+
+A1L09Q_lut_out = GND;
+A1L09Q = DFFEAS(A1L09Q_lut_out, GLOBAL(CLK), VCC, , A1L481, DATA_IN[1], , , VCC);
+
+
+--A1L141 is lifo~1112 at LC_X31_Y26_N2
+--operation mode is normal
+
+A1L89Q_qfbk = A1L89Q;
+A1L141 = A1L34 & (A1L09Q # !A1L24) # !A1L34 & (A1L89Q_qfbk & !A1L24);
+
+--A1L89Q is lifo~42 at LC_X31_Y26_N2
+--operation mode is normal
+
+A1L89Q = DFFEAS(A1L141, GLOBAL(CLK), VCC, , A1L581, DATA_IN[1], , , VCC);
+
+
+--A1L47Q is lifo~18 at LC_X30_Y27_N2
+--operation mode is normal
+
+A1L47Q_lut_out = GND;
+A1L47Q = DFFEAS(A1L47Q_lut_out, GLOBAL(CLK), VCC, , A1L681, DATA_IN[1], , , VCC);
+
+
+--A1L241 is lifo~1113 at LC_X30_Y25_N9
+--operation mode is normal
+
+A1L28Q_qfbk = A1L28Q;
+A1L241 = A1L1 & (A1L141 & A1L47Q # !A1L141 & (A1L28Q_qfbk)) # !A1L1 & (A1L141);
+
+--A1L28Q is lifo~26 at LC_X30_Y25_N9
+--operation mode is normal
+
+A1L28Q = DFFEAS(A1L241, GLOBAL(CLK), VCC, , A1L381, DATA_IN[1], , , VCC);
+
+
+--A1L221Q is lifo~66 at LC_X30_Y26_N6
+--operation mode is normal
+
+A1L221Q_lut_out = GND;
+A1L221Q = DFFEAS(A1L221Q_lut_out, GLOBAL(CLK), VCC, , A1L881, DATA_IN[1], , , VCC);
+
+
+--A1L341 is lifo~1114 at LC_X30_Y26_N1
+--operation mode is normal
+
+A1L031Q_qfbk = A1L031Q;
+A1L341 = A1L24 & A1L34 & (A1L221Q) # !A1L24 & (A1L34 # A1L031Q_qfbk);
+
+--A1L031Q is lifo~74 at LC_X30_Y26_N1
+--operation mode is normal
+
+A1L031Q = DFFEAS(A1L341, GLOBAL(CLK), VCC, , A1L981, DATA_IN[1], , , VCC);
+
+
+--A1L601Q is lifo~50 at LC_X32_Y25_N6
+--operation mode is normal
+
+A1L601Q_lut_out = GND;
+A1L601Q = DFFEAS(A1L601Q_lut_out, GLOBAL(CLK), VCC, , A1L091, DATA_IN[1], , , VCC);
+
+
+--A1L441 is lifo~1115 at LC_X29_Y25_N7
+--operation mode is normal
+
+A1L411Q_qfbk = A1L411Q;
+A1L441 = A1L341 & (A1L601Q # !A1L1) # !A1L341 & A1L1 & A1L411Q_qfbk;
+
+--A1L411Q is lifo~58 at LC_X29_Y25_N7
+--operation mode is normal
+
+A1L411Q = DFFEAS(A1L441, GLOBAL(CLK), VCC, , A1L781, DATA_IN[1], , , VCC);
+
+
+--A1L19Q is lifo~35 at LC_X29_Y26_N7
+--operation mode is normal
+
+A1L19Q_lut_out = DATA_IN[2];
+A1L19Q = DFFEAS(A1L19Q_lut_out, GLOBAL(CLK), VCC, , A1L481, , , , );
+
+
+--A1L541 is lifo~1117 at LC_X31_Y26_N1
+--operation mode is normal
+
+A1L99Q_qfbk = A1L99Q;
+A1L541 = A1L34 & (A1L19Q # !A1L24) # !A1L34 & (A1L99Q_qfbk & !A1L24);
+
+--A1L99Q is lifo~43 at LC_X31_Y26_N1
+--operation mode is normal
+
+A1L99Q = DFFEAS(A1L541, GLOBAL(CLK), VCC, , A1L581, DATA_IN[2], , , VCC);
+
+
+--A1L57Q is lifo~19 at LC_X30_Y27_N3
+--operation mode is normal
+
+A1L57Q_lut_out = GND;
+A1L57Q = DFFEAS(A1L57Q_lut_out, GLOBAL(CLK), VCC, , A1L681, DATA_IN[2], , , VCC);
+
+
+--A1L641 is lifo~1118 at LC_X30_Y25_N3
+--operation mode is normal
+
+A1L38Q_qfbk = A1L38Q;
+A1L641 = A1L1 & (A1L541 & A1L57Q # !A1L541 & (A1L38Q_qfbk)) # !A1L1 & (A1L541);
+
+--A1L38Q is lifo~27 at LC_X30_Y25_N3
+--operation mode is normal
+
+A1L38Q = DFFEAS(A1L641, GLOBAL(CLK), VCC, , A1L381, DATA_IN[2], , , VCC);
+
+
+--A1L511Q is lifo~59 at LC_X29_Y26_N6
+--operation mode is normal
+
+A1L511Q_lut_out = DATA_IN[2];
+A1L511Q = DFFEAS(A1L511Q_lut_out, GLOBAL(CLK), VCC, , A1L781, , , , );
+
+
+--A1L741 is lifo~1119 at LC_X30_Y26_N0
+--operation mode is normal
+
+A1L131Q_qfbk = A1L131Q;
+A1L741 = A1L24 & !A1L34 & (A1L511Q) # !A1L24 & (A1L34 # A1L131Q_qfbk);
+
+--A1L131Q is lifo~75 at LC_X30_Y26_N0
+--operation mode is normal
+
+A1L131Q = DFFEAS(A1L741, GLOBAL(CLK), VCC, , A1L981, DATA_IN[2], , , VCC);
+
+
+--A1L701Q is lifo~51 at LC_X32_Y25_N4
+--operation mode is normal
+
+A1L701Q_lut_out = DATA_IN[2];
+A1L701Q = DFFEAS(A1L701Q_lut_out, GLOBAL(CLK), VCC, , A1L091, , , , );
+
+
+--A1L841 is lifo~1120 at LC_X30_Y26_N8
+--operation mode is normal
+
+A1L321Q_qfbk = A1L321Q;
+A1L841 = A1L34 & (A1L741 & A1L701Q # !A1L741 & (A1L321Q_qfbk)) # !A1L34 & (A1L741);
+
+--A1L321Q is lifo~67 at LC_X30_Y26_N8
+--operation mode is normal
+
+A1L321Q = DFFEAS(A1L841, GLOBAL(CLK), VCC, , A1L881, DATA_IN[2], , , VCC);
+
+
+--A1L29Q is lifo~36 at LC_X29_Y26_N8
+--operation mode is normal
+
+A1L29Q_lut_out = GND;
+A1L29Q = DFFEAS(A1L29Q_lut_out, GLOBAL(CLK), VCC, , A1L481, DATA_IN[3], , , VCC);
+
+
+--A1L941 is lifo~1122 at LC_X31_Y26_N9
+--operation mode is normal
+
+A1L001Q_qfbk = A1L001Q;
+A1L941 = A1L34 & (A1L29Q # !A1L24) # !A1L34 & (A1L001Q_qfbk & !A1L24);
+
+--A1L001Q is lifo~44 at LC_X31_Y26_N9
+--operation mode is normal
+
+A1L001Q = DFFEAS(A1L941, GLOBAL(CLK), VCC, , A1L581, DATA_IN[3], , , VCC);
+
+
+--A1L67Q is lifo~20 at LC_X30_Y27_N9
+--operation mode is normal
+
+A1L67Q_lut_out = DATA_IN[3];
+A1L67Q = DFFEAS(A1L67Q_lut_out, GLOBAL(CLK), VCC, , A1L681, , , , );
+
+
+--A1L051 is lifo~1123 at LC_X30_Y25_N7
+--operation mode is normal
+
+A1L48Q_qfbk = A1L48Q;
+A1L051 = A1L941 & (A1L67Q # !A1L1) # !A1L941 & A1L1 & A1L48Q_qfbk;
+
+--A1L48Q is lifo~28 at LC_X30_Y25_N7
+--operation mode is normal
+
+A1L48Q = DFFEAS(A1L051, GLOBAL(CLK), VCC, , A1L381, DATA_IN[3], , , VCC);
+
+
+--A1L611Q is lifo~60 at LC_X29_Y26_N0
+--operation mode is normal
+
+A1L611Q_lut_out = GND;
+A1L611Q = DFFEAS(A1L611Q_lut_out, GLOBAL(CLK), VCC, , A1L781, DATA_IN[3], , , VCC);
+
+
+--A1L151 is lifo~1124 at LC_X30_Y26_N3
+--operation mode is normal
+
+A1L231Q_qfbk = A1L231Q;
+A1L151 = A1L24 & !A1L34 & (A1L611Q) # !A1L24 & (A1L34 # A1L231Q_qfbk);
+
+--A1L231Q is lifo~76 at LC_X30_Y26_N3
+--operation mode is normal
+
+A1L231Q = DFFEAS(A1L151, GLOBAL(CLK), VCC, , A1L981, DATA_IN[3], , , VCC);
+
+
+--A1L801Q is lifo~52 at LC_X32_Y25_N1
+--operation mode is normal
+
+A1L801Q_lut_out = DATA_IN[3];
+A1L801Q = DFFEAS(A1L801Q_lut_out, GLOBAL(CLK), VCC, , A1L091, , , , );
+
+
+--A1L251 is lifo~1125 at LC_X30_Y26_N4
+--operation mode is normal
+
+A1L421Q_qfbk = A1L421Q;
+A1L251 = A1L34 & (A1L151 & A1L801Q # !A1L151 & (A1L421Q_qfbk)) # !A1L34 & (A1L151);
+
+--A1L421Q is lifo~68 at LC_X30_Y26_N4
+--operation mode is normal
+
+A1L421Q = DFFEAS(A1L251, GLOBAL(CLK), VCC, , A1L881, DATA_IN[3], , , VCC);
+
+
+--A1L39Q is lifo~37 at LC_X29_Y26_N3
+--operation mode is normal
+
+A1L39Q_lut_out = DATA_IN[4];
+A1L39Q = DFFEAS(A1L39Q_lut_out, GLOBAL(CLK), VCC, , A1L481, , , , );
+
+
+--A1L351 is lifo~1127 at LC_X31_Y26_N0
+--operation mode is normal
+
+A1L101Q_qfbk = A1L101Q;
+A1L351 = A1L34 & (A1L39Q # !A1L24) # !A1L34 & (A1L101Q_qfbk & !A1L24);
+
+--A1L101Q is lifo~45 at LC_X31_Y26_N0
+--operation mode is normal
+
+A1L101Q = DFFEAS(A1L351, GLOBAL(CLK), VCC, , A1L581, DATA_IN[4], , , VCC);
+
+
+--A1L77Q is lifo~21 at LC_X30_Y27_N1
+--operation mode is normal
+
+A1L77Q_lut_out = GND;
+A1L77Q = DFFEAS(A1L77Q_lut_out, GLOBAL(CLK), VCC, , A1L681, DATA_IN[4], , , VCC);
+
+
+--A1L451 is lifo~1128 at LC_X32_Y26_N9
+--operation mode is normal
+
+A1L58Q_qfbk = A1L58Q;
+A1L451 = A1L351 & (A1L77Q # !A1L1) # !A1L351 & A1L1 & A1L58Q_qfbk;
+
+--A1L58Q is lifo~29 at LC_X32_Y26_N9
+--operation mode is normal
+
+A1L58Q = DFFEAS(A1L451, GLOBAL(CLK), VCC, , A1L381, DATA_IN[4], , , VCC);
+
+
+--A1L711Q is lifo~61 at LC_X29_Y26_N4
+--operation mode is normal
+
+A1L711Q_lut_out = DATA_IN[4];
+A1L711Q = DFFEAS(A1L711Q_lut_out, GLOBAL(CLK), VCC, , A1L781, , , , );
+
+
+--A1L551 is lifo~1129 at LC_X33_Y26_N9
+--operation mode is normal
+
+A1L331Q_qfbk = A1L331Q;
+A1L551 = A1L24 & A1L711Q & (!A1L34) # !A1L24 & (A1L331Q_qfbk # A1L34);
+
+--A1L331Q is lifo~77 at LC_X33_Y26_N9
+--operation mode is normal
+
+A1L331Q = DFFEAS(A1L551, GLOBAL(CLK), VCC, , A1L981, DATA_IN[4], , , VCC);
+
+
+--A1L901Q is lifo~53 at LC_X33_Y25_N6
+--operation mode is normal
+
+A1L901Q_lut_out = GND;
+A1L901Q = DFFEAS(A1L901Q_lut_out, GLOBAL(CLK), VCC, , A1L091, DATA_IN[4], , , VCC);
+
+
+--A1L651 is lifo~1130 at LC_X33_Y26_N4
+--operation mode is normal
+
+A1L521Q_qfbk = A1L521Q;
+A1L651 = A1L551 & (A1L901Q # !A1L34) # !A1L551 & (A1L521Q_qfbk & A1L34);
+
+--A1L521Q is lifo~69 at LC_X33_Y26_N4
+--operation mode is normal
+
+A1L521Q = DFFEAS(A1L651, GLOBAL(CLK), VCC, , A1L881, DATA_IN[4], , , VCC);
+
+
+--A1L49Q is lifo~38 at LC_X29_Y26_N1
+--operation mode is normal
+
+A1L49Q_lut_out = DATA_IN[5];
+A1L49Q = DFFEAS(A1L49Q_lut_out, GLOBAL(CLK), VCC, , A1L481, , , , );
+
+
+--A1L751 is lifo~1132 at LC_X31_Y26_N5
+--operation mode is normal
+
+A1L201Q_qfbk = A1L201Q;
+A1L751 = A1L34 & (A1L49Q # !A1L24) # !A1L34 & (A1L201Q_qfbk & !A1L24);
+
+--A1L201Q is lifo~46 at LC_X31_Y26_N5
+--operation mode is normal
+
+A1L201Q = DFFEAS(A1L751, GLOBAL(CLK), VCC, , A1L581, DATA_IN[5], , , VCC);
+
+
+--A1L87Q is lifo~22 at LC_X30_Y27_N8
+--operation mode is normal
+
+A1L87Q_lut_out = DATA_IN[5];
+A1L87Q = DFFEAS(A1L87Q_lut_out, GLOBAL(CLK), VCC, , A1L681, , , , );
+
+
+--A1L851 is lifo~1133 at LC_X32_Y26_N5
+--operation mode is normal
+
+A1L68Q_qfbk = A1L68Q;
+A1L851 = A1L751 & (A1L87Q # !A1L1) # !A1L751 & A1L1 & A1L68Q_qfbk;
+
+--A1L68Q is lifo~30 at LC_X32_Y26_N5
+--operation mode is normal
+
+A1L68Q = DFFEAS(A1L851, GLOBAL(CLK), VCC, , A1L381, DATA_IN[5], , , VCC);
+
+
+--A1L811Q is lifo~62 at LC_X29_Y26_N2
+--operation mode is normal
+
+A1L811Q_lut_out = DATA_IN[5];
+A1L811Q = DFFEAS(A1L811Q_lut_out, GLOBAL(CLK), VCC, , A1L781, , , , );
+
+
+--A1L951 is lifo~1134 at LC_X33_Y26_N6
+--operation mode is normal
+
+A1L431Q_qfbk = A1L431Q;
+A1L951 = A1L24 & A1L811Q & (!A1L34) # !A1L24 & (A1L431Q_qfbk # A1L34);
+
+--A1L431Q is lifo~78 at LC_X33_Y26_N6
+--operation mode is normal
+
+A1L431Q = DFFEAS(A1L951, GLOBAL(CLK), VCC, , A1L981, DATA_IN[5], , , VCC);
+
+
+--A1L011Q is lifo~54 at LC_X33_Y25_N2
+--operation mode is normal
+
+A1L011Q_lut_out = GND;
+A1L011Q = DFFEAS(A1L011Q_lut_out, GLOBAL(CLK), VCC, , A1L091, DATA_IN[5], , , VCC);
+
+
+--A1L061 is lifo~1135 at LC_X33_Y26_N8
+--operation mode is normal
+
+A1L621Q_qfbk = A1L621Q;
+A1L061 = A1L34 & (A1L951 & (A1L011Q) # !A1L951 & A1L621Q_qfbk) # !A1L34 & A1L951;
+
+--A1L621Q is lifo~70 at LC_X33_Y26_N8
+--operation mode is normal
+
+A1L621Q = DFFEAS(A1L061, GLOBAL(CLK), VCC, , A1L881, DATA_IN[5], , , VCC);
+
+
+--A1L59Q is lifo~39 at LC_X31_Y26_N7
+--operation mode is normal
+
+A1L59Q_lut_out = GND;
+A1L59Q = DFFEAS(A1L59Q_lut_out, GLOBAL(CLK), VCC, , A1L481, DATA_IN[6], , , VCC);
+
+
+--A1L161 is lifo~1137 at LC_X31_Y26_N3
+--operation mode is normal
+
+A1L301Q_qfbk = A1L301Q;
+A1L161 = A1L34 & (A1L59Q # !A1L24) # !A1L34 & (A1L301Q_qfbk & !A1L24);
+
+--A1L301Q is lifo~47 at LC_X31_Y26_N3
+--operation mode is normal
+
+A1L301Q = DFFEAS(A1L161, GLOBAL(CLK), VCC, , A1L581, DATA_IN[6], , , VCC);
+
+
+--A1L97Q is lifo~23 at LC_X30_Y27_N7
+--operation mode is normal
+
+A1L97Q_lut_out = GND;
+A1L97Q = DFFEAS(A1L97Q_lut_out, GLOBAL(CLK), VCC, , A1L681, DATA_IN[6], , , VCC);
+
+
+--A1L261 is lifo~1138 at LC_X32_Y26_N4
+--operation mode is normal
+
+A1L78Q_qfbk = A1L78Q;
+A1L261 = A1L1 & (A1L161 & A1L97Q # !A1L161 & (A1L78Q_qfbk)) # !A1L1 & (A1L161);
+
+--A1L78Q is lifo~31 at LC_X32_Y26_N4
+--operation mode is normal
+
+A1L78Q = DFFEAS(A1L261, GLOBAL(CLK), VCC, , A1L381, DATA_IN[6], , , VCC);
+
+
+--A1L911Q is lifo~63 at LC_X30_Y27_N6
+--operation mode is normal
+
+A1L911Q_lut_out = GND;
+A1L911Q = DFFEAS(A1L911Q_lut_out, GLOBAL(CLK), VCC, , A1L781, DATA_IN[6], , , VCC);
+
+
+--A1L361 is lifo~1139 at LC_X33_Y26_N2
+--operation mode is normal
+
+A1L531Q_qfbk = A1L531Q;
+A1L361 = A1L24 & A1L911Q & (!A1L34) # !A1L24 & (A1L531Q_qfbk # A1L34);
+
+--A1L531Q is lifo~79 at LC_X33_Y26_N2
+--operation mode is normal
+
+A1L531Q = DFFEAS(A1L361, GLOBAL(CLK), VCC, , A1L981, DATA_IN[6], , , VCC);
+
+
+--A1L111Q is lifo~55 at LC_X33_Y25_N5
+--operation mode is normal
+
+A1L111Q_lut_out = DATA_IN[6];
+A1L111Q = DFFEAS(A1L111Q_lut_out, GLOBAL(CLK), VCC, , A1L091, , , , );
+
+
+--A1L461 is lifo~1140 at LC_X33_Y26_N5
+--operation mode is normal
+
+A1L721Q_qfbk = A1L721Q;
+A1L461 = A1L361 & (A1L111Q # !A1L34) # !A1L361 & (A1L721Q_qfbk & A1L34);
+
+--A1L721Q is lifo~71 at LC_X33_Y26_N5
+--operation mode is normal
+
+A1L721Q = DFFEAS(A1L461, GLOBAL(CLK), VCC, , A1L881, DATA_IN[6], , , VCC);
+
+
+--A1L69Q is lifo~40 at LC_X33_Y25_N8
+--operation mode is normal
+
+A1L69Q_lut_out = DATA_IN[7];
+A1L69Q = DFFEAS(A1L69Q_lut_out, GLOBAL(CLK), VCC, , A1L481, , , , );
+
+
+--A1L561 is lifo~1142 at LC_X31_Y26_N6
+--operation mode is normal
+
+A1L401Q_qfbk = A1L401Q;
+A1L561 = A1L34 & (A1L69Q # !A1L24) # !A1L34 & (A1L401Q_qfbk & !A1L24);
+
+--A1L401Q is lifo~48 at LC_X31_Y26_N6
+--operation mode is normal
+
+A1L401Q = DFFEAS(A1L561, GLOBAL(CLK), VCC, , A1L581, DATA_IN[7], , , VCC);
+
+
+--A1L08Q is lifo~24 at LC_X30_Y27_N4
+--operation mode is normal
+
+A1L08Q_lut_out = DATA_IN[7];
+A1L08Q = DFFEAS(A1L08Q_lut_out, GLOBAL(CLK), VCC, , A1L681, , , , );
+
+
+--A1L661 is lifo~1143 at LC_X32_Y26_N7
+--operation mode is normal
+
+A1L88Q_qfbk = A1L88Q;
+A1L661 = A1L1 & (A1L561 & A1L08Q # !A1L561 & (A1L88Q_qfbk)) # !A1L1 & (A1L561);
+
+--A1L88Q is lifo~32 at LC_X32_Y26_N7
+--operation mode is normal
+
+A1L88Q = DFFEAS(A1L661, GLOBAL(CLK), VCC, , A1L381, DATA_IN[7], , , VCC);
+
+
+--A1L021Q is lifo~64 at LC_X30_Y27_N5
+--operation mode is normal
+
+A1L021Q_lut_out = DATA_IN[7];
+A1L021Q = DFFEAS(A1L021Q_lut_out, GLOBAL(CLK), VCC, , A1L781, , , , );
+
+
+--A1L761 is lifo~1144 at LC_X30_Y26_N2
+--operation mode is normal
+
+A1L631Q_qfbk = A1L631Q;
+A1L761 = A1L24 & !A1L34 & (A1L021Q) # !A1L24 & (A1L34 # A1L631Q_qfbk);
+
+--A1L631Q is lifo~80 at LC_X30_Y26_N2
+--operation mode is normal
+
+A1L631Q = DFFEAS(A1L761, GLOBAL(CLK), VCC, , A1L981, DATA_IN[7], , , VCC);
+
+
+--A1L211Q is lifo~56 at LC_X33_Y25_N4
+--operation mode is normal
+
+A1L211Q_lut_out = DATA_IN[7];
+A1L211Q = DFFEAS(A1L211Q_lut_out, GLOBAL(CLK), VCC, , A1L091, , , , );
+
+
+--A1L861 is lifo~1145 at LC_X30_Y26_N7
+--operation mode is normal
+
+A1L821Q_qfbk = A1L821Q;
+A1L861 = A1L761 & (A1L211Q # !A1L34) # !A1L761 & A1L34 & A1L821Q_qfbk;
+
+--A1L821Q is lifo~72 at LC_X30_Y26_N7
+--operation mode is normal
+
+A1L821Q = DFFEAS(A1L861, GLOBAL(CLK), VCC, , A1L881, DATA_IN[7], , , VCC);
+
+
+--A1L64 is counter~722 at LC_X31_Y25_N9
+--operation mode is normal
+
+A1L64 = A1L24 $ (A1L081 & !A1L34);
+
+--counter[1] is counter[1] at LC_X31_Y25_N9
+--operation mode is normal
+
+counter[1] = DFFEAS(A1L64, GLOBAL(CLK), !GLOBAL(Reset), , , , , , );
+
+
+--A1L74 is counter~723 at LC_X32_Y25_N0
+--operation mode is normal
+
+A1L74 = RD & (A1L44 & !A1L2 # !A1L44 & A1L2 & A1L54) # !RD & A1L44;
+
+
+--A1L84 is counter~724 at LC_X32_Y25_N5
+--operation mode is normal
+
+A1L84 = scount[3] & (counter[0] # counter[2] # counter[1]);
+
+
+--A1L94 is counter~725 at LC_X31_Y25_N3
+--operation mode is normal
+
+A1L94 = A1L84 & (RD # !A1L081 & A1L54) # !A1L84 & (!A1L081 & A1L54);
+
+--scount[3] is scount[3] at LC_X31_Y25_N3
+--operation mode is normal
+
+scount[3] = DFFEAS(A1L94, GLOBAL(CLK), !GLOBAL(Reset), , , , , , );
+
+
+--A1L961 is lifo~1147 at LC_X29_Y25_N0
+--operation mode is normal
+
+A1L961 = !Reset & WR & (!scount[3]);
+
+
+--A1L381 is rtl~0 at LC_X29_Y25_N8
+--operation mode is normal
+
+A1L381 = !counter[2] & !counter[1] & counter[0] & A1L961;
+
+
+--A1L581 is rtl~2 at LC_X29_Y25_N6
+--operation mode is normal
+
+A1L581 = !counter[2] & counter[1] & counter[0] & A1L961;
+
+
+--A1L481 is rtl~1 at LC_X29_Y25_N4
+--operation mode is normal
+
+A1L481 = !counter[2] & counter[1] & !counter[0] & A1L961;
+
+
+--A1L681 is rtl~3 at LC_X29_Y25_N5
+--operation mode is normal
+
+A1L681 = !counter[2] & !counter[1] & !counter[0] & A1L961;
+
+
+--A1L781 is rtl~4 at LC_X29_Y25_N3
+--operation mode is normal
+
+A1L781 = counter[2] & !counter[1] & counter[0] & A1L961;
+
+
+--A1L981 is rtl~6 at LC_X29_Y25_N1
+--operation mode is normal
+
+A1L981 = counter[2] & counter[1] & counter[0] & A1L961;
+
+
+--A1L881 is rtl~5 at LC_X29_Y25_N2
+--operation mode is normal
+
+A1L881 = counter[2] & counter[1] & !counter[0] & A1L961;
+
+
+--A1L091 is rtl~7 at LC_X32_Y25_N7
+--operation mode is normal
+
+A1L091 = !counter[0] & counter[2] & !counter[1] & A1L961;
+
+
+--A1L05 is counter~726 at LC_X32_Y25_N8
+--operation mode is normal
+
+A1L05 = counter[0] $ A1L081 $ (!scount[3] & WR);
+
+
+--WR is WR at PIN_L7
+--operation mode is input
+
+WR = INPUT();
+
+
+--CLK is CLK at PIN_L2
+--operation mode is input
+
+CLK = INPUT();
+
+
+--RD is RD at PIN_F9
+--operation mode is input
+
+RD = INPUT();
+
+
+--Reset is Reset at PIN_L3
+--operation mode is input
+
+Reset = INPUT();
+
+
+--DATA_IN[0] is DATA_IN[0] at PIN_K10
+--operation mode is input
+
+DATA_IN[0] = INPUT();
+
+
+--DATA_IN[1] is DATA_IN[1] at PIN_G9
+--operation mode is input
+
+DATA_IN[1] = INPUT();
+
+
+--DATA_IN[2] is DATA_IN[2] at PIN_B11
+--operation mode is input
+
+DATA_IN[2] = INPUT();
+
+
+--DATA_IN[3] is DATA_IN[3] at PIN_A11
+--operation mode is input
+
+DATA_IN[3] = INPUT();
+
+
+--DATA_IN[4] is DATA_IN[4] at PIN_J8
+--operation mode is input
+
+DATA_IN[4] = INPUT();
+
+
+--DATA_IN[5] is DATA_IN[5] at PIN_H10
+--operation mode is input
+
+DATA_IN[5] = INPUT();
+
+
+--DATA_IN[6] is DATA_IN[6] at PIN_K8
+--operation mode is input
+
+DATA_IN[6] = INPUT();
+
+
+--DATA_IN[7] is DATA_IN[7] at PIN_J9
+--operation mode is input
+
+DATA_IN[7] = INPUT();
+
+
+--DATA_OUT[0] is DATA_OUT[0] at PIN_B13
+--operation mode is output
+
+DATA_OUT[0] = OUTPUT(outElement[0]);
+
+
+--DATA_OUT[1] is DATA_OUT[1] at PIN_B12
+--operation mode is output
+
+DATA_OUT[1] = OUTPUT(outElement[1]);
+
+
+--DATA_OUT[2] is DATA_OUT[2] at PIN_A12
+--operation mode is output
+
+DATA_OUT[2] = OUTPUT(outElement[2]);
+
+
+--DATA_OUT[3] is DATA_OUT[3] at PIN_C13
+--operation mode is output
+
+DATA_OUT[3] = OUTPUT(outElement[3]);
+
+
+--DATA_OUT[4] is DATA_OUT[4] at PIN_D9
+--operation mode is output
+
+DATA_OUT[4] = OUTPUT(outElement[4]);
+
+
+--DATA_OUT[5] is DATA_OUT[5] at PIN_D8
+--operation mode is output
+
+DATA_OUT[5] = OUTPUT(outElement[5]);
+
+
+--DATA_OUT[6] is DATA_OUT[6] at PIN_B8
+--operation mode is output
+
+DATA_OUT[6] = OUTPUT(outElement[6]);
+
+
+--DATA_OUT[7] is DATA_OUT[7] at PIN_C9
+--operation mode is output
+
+DATA_OUT[7] = OUTPUT(outElement[7]);
+
+
+--Full is Full at PIN_E8
+--operation mode is output
+
+Full = OUTPUT(isFull);
+
+
+--Empty is Empty at PIN_C8
+--operation mode is output
+
+Empty = OUTPUT(!isEmpty);
+
+
+--COUNT[0] is COUNT[0] at PIN_C12
+--operation mode is output
+
+COUNT[0] = OUTPUT(counter[0]);
+
+
+--COUNT[1] is COUNT[1] at PIN_F10
+--operation mode is output
+
+COUNT[1] = OUTPUT(counter[1]);
+
+
+--COUNT[2] is COUNT[2] at PIN_D12
+--operation mode is output
+
+COUNT[2] = OUTPUT(counter[2]);
+
+
+--COUNT[3] is COUNT[3] at PIN_E9
+--operation mode is output
+
+COUNT[3] = OUTPUT(scount[3]);
+
+
+--COUNT[4] is COUNT[4] at PIN_G4
+--operation mode is output
+
+COUNT[4] = OUTPUT(A1L591);
+
+
+--COUNT[5] is COUNT[5] at PIN_V2
+--operation mode is output
+
+COUNT[5] = OUTPUT(A1L591);
+
+
+--COUNT[6] is COUNT[6] at PIN_L6
+--operation mode is output
+
+COUNT[6] = OUTPUT(A1L591);
+
+
+--COUNT[7] is COUNT[7] at PIN_G1
+--operation mode is output
+
+COUNT[7] = OUTPUT(A1L591);
+
+
+--COUNT[8] is COUNT[8] at PIN_F2
+--operation mode is output
+
+COUNT[8] = OUTPUT(A1L591);
+
+
+--COUNT[9] is COUNT[9] at PIN_R2
+--operation mode is output
+
+COUNT[9] = OUTPUT(A1L591);
+
+
+--COUNT[10] is COUNT[10] at PIN_P3
+--operation mode is output
+
+COUNT[10] = OUTPUT(A1L591);
+
+
+--COUNT[11] is COUNT[11] at PIN_N2
+--operation mode is output
+
+COUNT[11] = OUTPUT(A1L591);
+
+
+--COUNT[12] is COUNT[12] at PIN_J4
+--operation mode is output
+
+COUNT[12] = OUTPUT(A1L591);
+
+
+--COUNT[13] is COUNT[13] at PIN_H1
+--operation mode is output
+
+COUNT[13] = OUTPUT(A1L591);
+
+
+--COUNT[14] is COUNT[14] at PIN_K3
+--operation mode is output
+
+COUNT[14] = OUTPUT(A1L591);
+
+
+--COUNT[15] is COUNT[15] at PIN_K6
+--operation mode is output
+
+COUNT[15] = OUTPUT(A1L591);
+
+
+--COUNT[16] is COUNT[16] at PIN_N3
+--operation mode is output
+
+COUNT[16] = OUTPUT(A1L591);
+
+
+--COUNT[17] is COUNT[17] at PIN_F1
+--operation mode is output
+
+COUNT[17] = OUTPUT(A1L591);
+
+
+--COUNT[18] is COUNT[18] at PIN_J2
+--operation mode is output
+
+COUNT[18] = OUTPUT(A1L591);
+
+
+--COUNT[19] is COUNT[19] at PIN_P2
+--operation mode is output
+
+COUNT[19] = OUTPUT(A1L591);
+
+
+--COUNT[20] is COUNT[20] at PIN_P4
+--operation mode is output
+
+COUNT[20] = OUTPUT(A1L591);
+
+
+--COUNT[21] is COUNT[21] at PIN_T2
+--operation mode is output
+
+COUNT[21] = OUTPUT(A1L591);
+
+
+--COUNT[22] is COUNT[22] at PIN_J3
+--operation mode is output
+
+COUNT[22] = OUTPUT(A1L591);
+
+
+--COUNT[23] is COUNT[23] at PIN_U2
+--operation mode is output
+
+COUNT[23] = OUTPUT(A1L591);
+
+
+--COUNT[24] is COUNT[24] at PIN_H4
+--operation mode is output
+
+COUNT[24] = OUTPUT(A1L591);
+
+
+--COUNT[25] is COUNT[25] at PIN_V1
+--operation mode is output
+
+COUNT[25] = OUTPUT(A1L591);
+
+
+--COUNT[26] is COUNT[26] at PIN_N6
+--operation mode is output
+
+COUNT[26] = OUTPUT(A1L591);
+
+
+--COUNT[27] is COUNT[27] at PIN_H2
+--operation mode is output
+
+COUNT[27] = OUTPUT(A1L591);
+
+
+--COUNT[28] is COUNT[28] at PIN_R3
+--operation mode is output
+
+COUNT[28] = OUTPUT(A1L591);
+
+
+--COUNT[29] is COUNT[29] at PIN_G3
+--operation mode is output
+
+COUNT[29] = OUTPUT(A1L591);
+
+
+--COUNT[30] is COUNT[30] at PIN_U1
+--operation mode is output
+
+COUNT[30] = OUTPUT(A1L591);
+
+
+--COUNT[31] is COUNT[31] at PIN_J6
+--operation mode is output
+
+COUNT[31] = OUTPUT(A1L591);
+
+
+--A1L591 is ~STRATIX_FITTER_CREATED_GND~I at LC_X52_Y21_N2
+--operation mode is normal
+
+A1L591 = GND;
+
+
+

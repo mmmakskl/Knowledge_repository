@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 25.2.2.2 (Linux)"/>
+	<meta name="created" content="2025-04-21T14:27:30.347585371"/>
+	<meta name="changed" content="2025-04-21T14:27:55.357373843"/>
+</head>
+<body lang="ru-RU" dir="ltr"><p>&lt;pre
+style=&quot;font-family:monospace;color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255); font-weight: 400; &quot;&gt;&lt;ol
+style=&quot;padding-left: 3em;&quot;&gt;&lt;li&gt;&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight: 400;&quot;&gt;package&lt;/span&gt;
+main&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;color:
+rgb(0, 0, 255); font-weight: 400;&quot;&gt;import&lt;/span&gt;
+(&lt;/li&gt;&lt;li&gt;	&lt;span style=&quot;color: rgb(163, 21, 21);
+font-weight: 400;&quot;&gt;&quot;encoding/csv&quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;	&lt;span
+style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;&quot;fmt&quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;	&lt;span
+style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;&quot;math&quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;	&lt;span
+style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;&quot;os&quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;)&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;span
+style=&quot;color: rgb(0, 128, 0); font-weight: 400;&quot;&gt;//
+Фиксированные параметры&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight: 400;&quot;&gt;const&lt;/span&gt;
+(&lt;/li&gt;&lt;li&gt;	p1 = &lt;span style=&quot;color: rgb(0, 0, 0);
+font-weight: 400;&quot;&gt;1.0&lt;/span&gt;&lt;/li&gt;&lt;li&gt;	p3 =
+&lt;span style=&quot;color: rgb(0, 0, 0); font-weight:
+400;&quot;&gt;20.0&lt;/span&gt;&lt;/li&gt;&lt;li&gt;	p6 = &lt;span
+style=&quot;color: rgb(0, 0, 0); font-weight:
+400;&quot;&gt;0.0&lt;/span&gt;&lt;/li&gt;&lt;li&gt;)&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;span
+style=&quot;color: rgb(0, 128, 0); font-weight: 400;&quot;&gt;//
+foldP2 вычисляет p2 по заданной формуле
+бифуркационного условия&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span
+style=&quot;color: rgb(0, 0, 0); font-weight: 400;&quot;&gt;&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight: 400;&quot;&gt;func&lt;/span&gt;
+&lt;span style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;foldP5&lt;/span&gt;&lt;span style=&quot;color: rgb(0,
+0, 0); font-weight: 400;&quot;&gt;(x2, p3, p4, p1, p6 &lt;span
+style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;float64&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span
+style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;float64&lt;/span&gt; {&lt;/li&gt;&lt;li&gt;	a := p3 *
+p3 * (p6 - x2) * (p6 - x2)&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;	b
+:= p1 * (p3*p3*p4*p6 - p3*p3*p4*x2 + p3*p3*p4 - &lt;span
+style=&quot;color: rgb(0, 0, 0); font-weight:
+400;&quot;&gt;2&lt;/span&gt;*p3*p3*p6*x2 + &lt;span style=&quot;color:
+rgb(0, 0, 0); font-weight: 400;&quot;&gt;2&lt;/span&gt;*p3*p3*x2*x2 +
+&lt;span style=&quot;color: rgb(0, 0, 0); font-weight:
+400;&quot;&gt;2&lt;/span&gt;*p3*p4*x2 + p4*x2*x2)&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;	c
+:= p1 * p1 * (-p3*p3*p4*x2 + p3*p3*p4 + p3*p3*x2*x2 + &lt;span
+style=&quot;color: rgb(0, 0, 0); font-weight: 400;&quot;&gt;2&lt;/span&gt;*p3*p4*x2
++ p4*x2*x2)&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;	p5 := (-b +
+math.Sqrt(b*b&lt;span style=&quot;color: rgb(0, 0, 0); font-weight:
+400;&quot;&gt;-4&lt;/span&gt;*a*c)) / (&lt;span style=&quot;color:
+rgb(0, 0, 0); font-weight: 400;&quot;&gt;2&lt;/span&gt; *
+a)&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;	&lt;span style=&quot;color:
+rgb(0, 0, 255); font-weight: 400;&quot;&gt;return&lt;/span&gt;
+p5&lt;/li&gt;&lt;li&gt;}&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;span
+style=&quot;color: rgb(0, 0, 0); font-weight: 400;&quot;&gt;&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight: 400;&quot;&gt;func&lt;/span&gt;
+&lt;span style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;foldP2&lt;/span&gt;&lt;span style=&quot;color: rgb(0,
+0, 0); font-weight: 400;&quot;&gt;(p1, x2, p4, p5, p6 &lt;span
+style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;float64&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span
+style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;float64&lt;/span&gt; {&lt;/li&gt;&lt;li&gt;	den := p1 *
+(p1*x2 + p5*(x2-p6))&lt;/li&gt;&lt;li&gt;	nom := p1*(p4-x2) -
+p5*(x2-p6)&lt;/li&gt;&lt;li&gt;	p2 := den / (nom * math.Exp(x2/(&lt;span
+style=&quot;color: rgb(0, 0, 0); font-weight:
+400;&quot;&gt;1&lt;/span&gt;+x2/p3)))&lt;/li&gt;&lt;li&gt;	&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight: 400;&quot;&gt;return&lt;/span&gt;
+p2&lt;/li&gt;&lt;li&gt;}&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;span
+style=&quot;color: rgb(0, 0, 0); font-weight: 400;&quot;&gt;&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight: 400;&quot;&gt;func&lt;/span&gt;
+&lt;span style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;main&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0,
+0); font-weight: 400;&quot;&gt;()&lt;/span&gt;&lt;/span&gt;
+{&lt;/li&gt;&lt;li&gt;	p4vals := []&lt;span style=&quot;color:
+rgb(163, 21, 21); font-weight: 400;&quot;&gt;float64&lt;/span&gt;{&lt;span
+style=&quot;color: rgb(0, 0, 0); font-weight: 400;&quot;&gt;6&lt;/span&gt;,
+&lt;span style=&quot;color: rgb(0, 0, 0); font-weight:
+400;&quot;&gt;8&lt;/span&gt;, &lt;span style=&quot;color: rgb(0, 0,
+0); font-weight: 400;&quot;&gt;10&lt;/span&gt;, &lt;span
+style=&quot;color: rgb(0, 0, 0); font-weight:
+400;&quot;&gt;12&lt;/span&gt;}&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;	&lt;span
+style=&quot;color: rgb(0, 128, 0); font-weight: 400;&quot;&gt;//
+Создаем CSV&lt;/span&gt;&lt;/li&gt;&lt;li&gt;	f, _ :=
+os.Create(&lt;span style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;&quot;bifurcation.csv&quot;&lt;/span&gt;)&lt;/li&gt;&lt;li&gt;	f2,
+_ := os.Create(&lt;span style=&quot;color: rgb(163, 21, 21);
+font-weight: 400;&quot;&gt;&quot;Result.txt&quot;&lt;/span&gt;)&lt;/li&gt;&lt;li&gt;	&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight: 400;&quot;&gt;defer&lt;/span&gt;
+f.Close()&lt;/li&gt;&lt;li&gt;	&lt;span style=&quot;color: rgb(0, 0,
+255); font-weight: 400;&quot;&gt;defer&lt;/span&gt;
+f2.Close()&lt;/li&gt;&lt;li&gt;	w := csv.NewWriter(f)&lt;/li&gt;&lt;li&gt;	&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight: 400;&quot;&gt;defer&lt;/span&gt;
+w.Flush()&lt;/li&gt;&lt;li&gt;	w.Write([]&lt;span style=&quot;color:
+rgb(163, 21, 21); font-weight: 400;&quot;&gt;string&lt;/span&gt;{&lt;span
+style=&quot;color: rgb(163, 21, 21); font-weight: 400;&quot;&gt;&quot;p4&quot;&lt;/span&gt;,
+&lt;span style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;&quot;p5&quot;&lt;/span&gt;, &lt;span style=&quot;color:
+rgb(163, 21, 21); font-weight: 400;&quot;&gt;&quot;x2&quot;&lt;/span&gt;,
+&lt;span style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;&quot;p2&quot;&lt;/span&gt;})&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;	f2.WriteString(&lt;span
+style=&quot;color: rgb(163, 21, 21); font-weight: 400;&quot;&gt;&quot;
+    p4        x2         p5      
+p2\n&quot;&lt;/span&gt;)&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;	&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight: 400;&quot;&gt;for&lt;/span&gt;
+_, p4 := &lt;span style=&quot;color: rgb(0, 0, 255); font-weight:
+400;&quot;&gt;range&lt;/span&gt; p4vals {&lt;/li&gt;&lt;li&gt;		&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight: 400;&quot;&gt;for&lt;/span&gt;
+x2 := &lt;span style=&quot;color: rgb(0, 0, 0); font-weight:
+400;&quot;&gt;1.0&lt;/span&gt;; x2 &amp;lt;= &lt;span style=&quot;color:
+rgb(0, 0, 0); font-weight: 400;&quot;&gt;10.0&lt;/span&gt;; x2 +=
+&lt;span style=&quot;color: rgb(0, 0, 0); font-weight:
+400;&quot;&gt;0.1&lt;/span&gt; {&lt;/li&gt;&lt;li&gt;			p5 :=
+foldP5(x2, p3, p4, p1, p6)&lt;/li&gt;&lt;li&gt;			p2 := foldP2(p1,
+x2, p4, p5, p6)&lt;/li&gt;&lt;li&gt;			&lt;span style=&quot;color:
+rgb(0, 0, 255); font-weight: 400;&quot;&gt;if&lt;/span&gt;
+math.IsNaN(p2) {&lt;/li&gt;&lt;li&gt;				&lt;span style=&quot;color:
+rgb(0, 0, 255); font-weight:
+400;&quot;&gt;continue&lt;/span&gt;&lt;/li&gt;&lt;li&gt;			}&lt;/li&gt;&lt;li&gt;			&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight: 400;&quot;&gt;if&lt;/span&gt;
+math.IsInf(p2, &lt;span style=&quot;color: rgb(0, 0, 0); font-weight:
+400;&quot;&gt;0&lt;/span&gt;) {&lt;/li&gt;&lt;li&gt;				&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight:
+400;&quot;&gt;continue&lt;/span&gt;&lt;/li&gt;&lt;li&gt;			}&lt;/li&gt;&lt;li&gt;			&lt;span
+style=&quot;color: rgb(0, 0, 255); font-weight: 400;&quot;&gt;if&lt;/span&gt;
+p5 &amp;lt; &lt;span style=&quot;color: rgb(0, 0, 0); font-weight:
+400;&quot;&gt;0&lt;/span&gt; || p2 &amp;lt; &lt;span style=&quot;color:
+rgb(0, 0, 0); font-weight: 400;&quot;&gt;0&lt;/span&gt;
+{&lt;/li&gt;&lt;li&gt;				&lt;span style=&quot;color: rgb(0, 0, 255);
+font-weight:
+400;&quot;&gt;continue&lt;/span&gt;&lt;/li&gt;&lt;li&gt;			}&lt;/li&gt;&lt;li&gt;			w.Write([]&lt;span
+style=&quot;color: rgb(163, 21, 21); font-weight:
+400;&quot;&gt;string&lt;/span&gt;{fmt.Sprintf(&lt;span style=&quot;color:
+rgb(163, 21, 21); font-weight: 400;&quot;&gt;&quot;%.2f&quot;&lt;/span&gt;,
+p4), fmt.Sprintf(&lt;span style=&quot;color: rgb(163, 21, 21);
+font-weight: 400;&quot;&gt;&quot;%.5f&quot;&lt;/span&gt;, p5),
+fmt.Sprintf(&lt;span style=&quot;color: rgb(163, 21, 21);
+font-weight: 400;&quot;&gt;&quot;%.2f&quot;&lt;/span&gt;, x2),
+fmt.Sprintf(&lt;span style=&quot;color: rgb(163, 21, 21);
+font-weight: 400;&quot;&gt;&quot;%.5f&quot;&lt;/span&gt;,
+p2)})&lt;/li&gt;&lt;li&gt;			f2.WriteString(fmt.Sprintf(&lt;span
+style=&quot;color: rgb(163, 21, 21); font-weight: 400;&quot;&gt;&quot;p4:
+%.2f, x2: %.2f, p5: %.5f, p2: %.5f\n&quot;&lt;/span&gt;, p4, x2, p5,
+p2))&lt;/li&gt;&lt;li&gt;		}&lt;/li&gt;&lt;li&gt;	}&lt;/li&gt;&lt;li&gt;}&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/pre&gt;</p>
+</body>
+</html>

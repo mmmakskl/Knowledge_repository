@@ -1,0 +1,157 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L9 is inst14~38
+--operation mode is normal
+
+A1L9 = !r4 & !r5 & (r3 # r2);
+
+
+--A1L01 is inst14~39
+--operation mode is normal
+
+A1L01 = EI & (A1L9 # r7 # r6);
+
+
+--A1L7 is inst13~38
+--operation mode is normal
+
+A1L7 = !r4 & !r5 & !r7 & !r6;
+
+
+--A1L51 is inst17~24
+--operation mode is normal
+
+A1L51 = !r3 & !r2 & !r1 & !r0;
+
+
+--inst17 is inst17
+--operation mode is normal
+
+inst17 = EI & A1L7 & A1L51;
+
+
+--inst19 is inst19
+--operation mode is normal
+
+inst19 = EI & (!A1L51 # !A1L7);
+
+
+--A1L8 is inst13~39
+--operation mode is normal
+
+A1L8 = EI & (!A1L7);
+
+
+--A1L11 is inst15~85
+--operation mode is normal
+
+A1L11 = EI & (r7 # r5 & !r6);
+
+
+--A1L21 is inst15~86
+--operation mode is normal
+
+A1L21 = !r4 & (r3 # r1 & !r2);
+
+
+--A1L31 is inst15~87
+--operation mode is normal
+
+A1L31 = A1L11 # EI & A1L21 & !r6;
+
+
+--EI is EI
+--operation mode is input
+
+EI = INPUT();
+
+
+--r3 is r3
+--operation mode is input
+
+r3 = INPUT();
+
+
+--r2 is r2
+--operation mode is input
+
+r2 = INPUT();
+
+
+--r4 is r4
+--operation mode is input
+
+r4 = INPUT();
+
+
+--r5 is r5
+--operation mode is input
+
+r5 = INPUT();
+
+
+--r7 is r7
+--operation mode is input
+
+r7 = INPUT();
+
+
+--r6 is r6
+--operation mode is input
+
+r6 = INPUT();
+
+
+--r1 is r1
+--operation mode is input
+
+r1 = INPUT();
+
+
+--r0 is r0
+--operation mode is input
+
+r0 = INPUT();
+
+
+--a1 is a1
+--operation mode is output
+
+a1 = OUTPUT(A1L01);
+
+
+--EO is EO
+--operation mode is output
+
+EO = OUTPUT(inst17);
+
+
+--G is G
+--operation mode is output
+
+G = OUTPUT(inst19);
+
+
+--a2 is a2
+--operation mode is output
+
+a2 = OUTPUT(A1L8);
+
+
+--a0 is a0
+--operation mode is output
+
+a0 = OUTPUT(A1L31);
+
+

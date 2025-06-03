@@ -1,0 +1,955 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B8L2 is hpri:inst10|inst17~56
+--operation mode is normal
+
+B8L2 = !x61 & !x60 & !x63 & !x62;
+
+
+--B8L3 is hpri:inst10|inst17~57
+--operation mode is normal
+
+B8L3 = !x59 & !x58;
+
+
+--B8_inst17 is hpri:inst10|inst17
+--operation mode is normal
+
+B8_inst17 = B8L2 & B8L3 & !x56 & !x57;
+
+
+--A1L75 is inst11~266
+--operation mode is normal
+
+A1L75 = !x55 & !x54 & !x52 & !x53;
+
+
+--A1L23 is inst6~438
+--operation mode is normal
+
+A1L23 = !x50 & !x51;
+
+
+--B4L1 is hpri:inst3|inst17~29
+--operation mode is normal
+
+B4L1 = A1L75 & A1L23 & !x49 & !x48;
+
+
+--A1L85 is inst11~267
+--operation mode is normal
+
+A1L85 = !x47 & !x46 & !x44 & !x45;
+
+
+--A1L33 is inst6~439
+--operation mode is normal
+
+A1L33 = !x42 & !x43;
+
+
+--B7L1 is hpri:inst9|inst17~28
+--operation mode is normal
+
+B7L1 = A1L85 & A1L33 & !x41 & !x40;
+
+
+--A1L95 is inst11~268
+--operation mode is normal
+
+A1L95 = !x39 & !x38 & !x37 & !x36;
+
+
+--A1L43 is inst6~440
+--operation mode is normal
+
+A1L43 = !x35 & !x34;
+
+
+--B3L2 is hpri:inst2|inst17~28
+--operation mode is normal
+
+B3L2 = A1L95 & A1L43 & !x33 & !x32;
+
+
+--B3_inst17 is hpri:inst2|inst17
+--operation mode is normal
+
+B3_inst17 = B8_inst17 & B4L1 & B7L1 & B3L2;
+
+
+--A1L06 is inst11~269
+--operation mode is normal
+
+A1L06 = !x31 & !x30 & !x29 & !x28;
+
+
+--B6L2 is hpri:inst8|inst17~28
+--operation mode is normal
+
+B6L2 = !x27 & !x26 & !x25 & !x24;
+
+
+--B6_inst17 is hpri:inst8|inst17
+--operation mode is normal
+
+B6_inst17 = B3_inst17 & A1L06 & B6L2;
+
+
+--A1L8 is inst5~1117
+--operation mode is normal
+
+A1L8 = !x20 & (x19 # x17 & !x18);
+
+
+--A1L9 is inst5~1118
+--operation mode is normal
+
+A1L9 = x23 # !x22 & (x21 # A1L8);
+
+
+--A1L53 is inst6~441
+--operation mode is normal
+
+A1L53 = !x20 & !x21;
+
+
+--B2L1 is hpri:inst1|inst17~28
+--operation mode is normal
+
+B2L1 = !x19 & !x18 & !x16 & !x17;
+
+
+--B2L2 is hpri:inst1|inst17~29
+--operation mode is normal
+
+B2L2 = A1L53 & B2L1 & !x23 & !x22;
+
+
+--A1L01 is inst5~1119
+--operation mode is normal
+
+A1L01 = !x12 & (x11 # x9 & !x10);
+
+
+--A1L11 is inst5~1120
+--operation mode is normal
+
+A1L11 = x15 # !x14 & (x13 # A1L01);
+
+
+--A1L21 is inst5~1121
+--operation mode is normal
+
+A1L21 = B6_inst17 & (A1L9 # B2L2 & A1L11);
+
+
+--A1L31 is inst5~1122
+--operation mode is normal
+
+A1L31 = x31 # x29 & (!x30);
+
+
+--A1L41 is inst5~1123
+--operation mode is normal
+
+A1L41 = !x30 & (x27 # x25 & !x26);
+
+
+--A1L51 is inst5~1124
+--operation mode is normal
+
+A1L51 = B3_inst17 & (A1L31 # A1L41 & !x28);
+
+
+--A1L61 is inst5~1125
+--operation mode is normal
+
+A1L61 = !x36 & (x35 # x33 & !x34);
+
+
+--A1L71 is inst5~1126
+--operation mode is normal
+
+A1L71 = x39 # !x38 & (x37 # A1L61);
+
+
+--A1L81 is inst5~1127
+--operation mode is normal
+
+A1L81 = B8_inst17 & B4L1 & B7L1 & A1L71;
+
+
+--B4L2 is hpri:inst3|inst17~30
+--operation mode is normal
+
+B4L2 = B8_inst17 & B4L1;
+
+
+--A1L91 is inst5~1128
+--operation mode is normal
+
+A1L91 = x47 # x45 & (!x46);
+
+
+--A1L02 is inst5~1129
+--operation mode is normal
+
+A1L02 = !x46 & (x43 # x41 & !x42);
+
+
+--A1L12 is inst5~1130
+--operation mode is normal
+
+A1L12 = B4L2 & (A1L91 # A1L02 & !x44);
+
+
+--A1L22 is inst5~1131
+--operation mode is normal
+
+A1L22 = x55 # x53 & (!x54);
+
+
+--A1L32 is inst5~1132
+--operation mode is normal
+
+A1L32 = !x54 & (x51 # x49 & !x50);
+
+
+--A1L42 is inst5~1133
+--operation mode is normal
+
+A1L42 = B8_inst17 & (A1L22 # A1L32 & !x52);
+
+
+--A1L52 is inst5~1134
+--operation mode is normal
+
+A1L52 = x57 & (!x58);
+
+
+--A1L62 is inst5~1135
+--operation mode is normal
+
+A1L62 = x61 # !x60 & (x59 # A1L52);
+
+
+--A1L72 is inst5~1136
+--operation mode is normal
+
+A1L72 = x63 # A1L42 # A1L62 & !x62;
+
+
+--A1L82 is inst5~1137
+--operation mode is normal
+
+A1L82 = A1L51 # A1L81 # A1L12 # A1L72;
+
+
+--A1L92 is inst5~1138
+--operation mode is normal
+
+A1L92 = !x4 & (x3 # x1 & !x2);
+
+
+--A1L03 is inst5~1139
+--operation mode is normal
+
+A1L03 = x7 # !x6 & (x5 # A1L92);
+
+
+--A1L16 is inst11~270
+--operation mode is normal
+
+A1L16 = !x15 & !x14 & !x13 & !x12;
+
+
+--A1L63 is inst6~442
+--operation mode is normal
+
+A1L63 = !x11 & !x10;
+
+
+--B5L2 is hpri:inst7|inst17~26
+--operation mode is normal
+
+B5L2 = A1L16 & A1L63 & !x9 & !x8;
+
+
+--B5_inst17 is hpri:inst7|inst17
+--operation mode is normal
+
+B5_inst17 = B6_inst17 & B2L2 & B5L2;
+
+
+--A1L13 is inst5~1140
+--operation mode is normal
+
+A1L13 = A1L21 # A1L82 # A1L03 & B5_inst17;
+
+
+--A1L73 is inst6~443
+--operation mode is normal
+
+A1L73 = !x19 & !x18;
+
+
+--A1L83 is inst6~444
+--operation mode is normal
+
+A1L83 = x23 # x22 # A1L53 & !A1L73;
+
+
+--A1L93 is inst6~445
+--operation mode is normal
+
+A1L93 = !x13 & !x12;
+
+
+--A1L04 is inst6~446
+--operation mode is normal
+
+A1L04 = x15 # x14 # A1L93 & !A1L63;
+
+
+--A1L14 is inst6~447
+--operation mode is normal
+
+A1L14 = B6_inst17 & (A1L83 # B2L2 & A1L04);
+
+
+--A1L24 is inst6~448
+--operation mode is normal
+
+A1L24 = !x44 & !x45;
+
+
+--A1L34 is inst6~449
+--operation mode is normal
+
+A1L34 = x47 # x46 # A1L24 & !A1L33;
+
+
+--A1L44 is inst6~450
+--operation mode is normal
+
+A1L44 = !x37 & !x36;
+
+
+--A1L54 is inst6~451
+--operation mode is normal
+
+A1L54 = x39 # x38 # A1L44 & !A1L43;
+
+
+--A1L64 is inst6~452
+--operation mode is normal
+
+A1L64 = B4L2 & (A1L34 # B7L1 & A1L54);
+
+
+--A1L74 is inst6~453
+--operation mode is normal
+
+A1L74 = !x52 & !x53 & (x50 # x51);
+
+
+--A1L84 is inst6~454
+--operation mode is normal
+
+A1L84 = B8_inst17 & (x55 # x54 # A1L74);
+
+
+--A1L94 is inst6~455
+--operation mode is normal
+
+A1L94 = x63 # x62 # A1L84 # !A1L65;
+
+
+--A1L05 is inst6~456
+--operation mode is normal
+
+A1L05 = !x28 & (x27 # x26);
+
+
+--A1L15 is inst6~457
+--operation mode is normal
+
+A1L15 = x31 # x30 # !x29 & A1L05;
+
+
+--A1L25 is inst6~458
+--operation mode is normal
+
+A1L25 = A1L64 # A1L94 # B3_inst17 & A1L15;
+
+
+--A1L35 is inst6~459
+--operation mode is normal
+
+A1L35 = !x5 & !x4;
+
+
+--B1L2 is hpri:inst|inst18~20
+--operation mode is normal
+
+B1L2 = !x3 & !x2;
+
+
+--A1L45 is inst6~460
+--operation mode is normal
+
+A1L45 = x7 # x6 # A1L35 & !B1L2;
+
+
+--A1L55 is inst6~461
+--operation mode is normal
+
+A1L55 = A1L14 # A1L25 # B5_inst17 & A1L45;
+
+
+--A1L26 is inst11~271
+--operation mode is normal
+
+A1L26 = !x23 & !x22 & !x20 & !x21;
+
+
+--A1L36 is inst11~272
+--operation mode is normal
+
+A1L36 = B6_inst17 & (B2L1 & !A1L16 # !A1L26);
+
+
+--A1L46 is inst11~273
+--operation mode is normal
+
+A1L46 = B4L2 & (B7L1 & !A1L95 # !A1L85);
+
+
+--A1L56 is inst11~274
+--operation mode is normal
+
+A1L56 = B8_inst17 & !A1L75 # !B8L2;
+
+
+--A1L66 is inst11~275
+--operation mode is normal
+
+A1L66 = A1L46 # A1L56 # B3_inst17 & !A1L06;
+
+
+--B1L3 is hpri:inst|inst18~21
+--operation mode is normal
+
+B1L3 = !x7 & !x5 & !x4 & !x6;
+
+
+--A1L76 is inst11~276
+--operation mode is normal
+
+A1L76 = A1L36 # A1L66 # B5_inst17 & !B1L3;
+
+
+--B9L9 is hpri:inst12|inst28~42
+--operation mode is normal
+
+B9L9 = B3_inst17 & (!B6L2 # !A1L06);
+
+
+--B9L3 is hpri:inst12|inst23~28
+--operation mode is normal
+
+B9L3 = B2L2 & !B5L2 & B3L2;
+
+
+--B9L4 is hpri:inst12|inst23~29
+--operation mode is normal
+
+B9L4 = B7L1 & (!B9L3 # !B6_inst17);
+
+
+--B9L5 is hpri:inst12|inst23~30
+--operation mode is normal
+
+B9L5 = B4L1 & (B9L9 # !B9L4) # !B8_inst17;
+
+
+--B9L6 is hpri:inst12|inst24~28
+--operation mode is normal
+
+B9L6 = B7L1 & B3L2 # !B4L1 # !B8_inst17;
+
+
+--B9L7 is hpri:inst12|inst24~29
+--operation mode is normal
+
+B9L7 = B3_inst17 & A1L06 & B6L2 & !B2L2;
+
+
+--B9L8 is hpri:inst12|inst24~30
+--operation mode is normal
+
+B9L8 = B9L6 & (B9L9 # B9L7) # !B4L2;
+
+
+--B1_inst18 is hpri:inst|inst18
+--operation mode is normal
+
+B1_inst18 = x1 # x0 # !B1L3 # !B1L2;
+
+
+--B9L2 is hpri:inst12|inst18~23
+--operation mode is normal
+
+B9L2 = B6_inst17 & (B1_inst18 # !B5L2 # !B2L2);
+
+
+--B9_inst18 is hpri:inst12|inst18
+--operation mode is normal
+
+B9_inst18 = B9L9 # B9L2 # !B9L6 # !B4L2;
+
+
+--A1L65 is inst6~462
+--operation mode is normal
+
+A1L65 = x61 # x60 # !x59 & !x58;
+
+
+--x61 is x61
+--operation mode is input
+
+x61 = INPUT();
+
+
+--x60 is x60
+--operation mode is input
+
+x60 = INPUT();
+
+
+--x63 is x63
+--operation mode is input
+
+x63 = INPUT();
+
+
+--x62 is x62
+--operation mode is input
+
+x62 = INPUT();
+
+
+--x59 is x59
+--operation mode is input
+
+x59 = INPUT();
+
+
+--x58 is x58
+--operation mode is input
+
+x58 = INPUT();
+
+
+--x56 is x56
+--operation mode is input
+
+x56 = INPUT();
+
+
+--x57 is x57
+--operation mode is input
+
+x57 = INPUT();
+
+
+--x55 is x55
+--operation mode is input
+
+x55 = INPUT();
+
+
+--x54 is x54
+--operation mode is input
+
+x54 = INPUT();
+
+
+--x52 is x52
+--operation mode is input
+
+x52 = INPUT();
+
+
+--x53 is x53
+--operation mode is input
+
+x53 = INPUT();
+
+
+--x50 is x50
+--operation mode is input
+
+x50 = INPUT();
+
+
+--x51 is x51
+--operation mode is input
+
+x51 = INPUT();
+
+
+--x49 is x49
+--operation mode is input
+
+x49 = INPUT();
+
+
+--x48 is x48
+--operation mode is input
+
+x48 = INPUT();
+
+
+--x47 is x47
+--operation mode is input
+
+x47 = INPUT();
+
+
+--x46 is x46
+--operation mode is input
+
+x46 = INPUT();
+
+
+--x44 is x44
+--operation mode is input
+
+x44 = INPUT();
+
+
+--x45 is x45
+--operation mode is input
+
+x45 = INPUT();
+
+
+--x42 is x42
+--operation mode is input
+
+x42 = INPUT();
+
+
+--x43 is x43
+--operation mode is input
+
+x43 = INPUT();
+
+
+--x41 is x41
+--operation mode is input
+
+x41 = INPUT();
+
+
+--x40 is x40
+--operation mode is input
+
+x40 = INPUT();
+
+
+--x39 is x39
+--operation mode is input
+
+x39 = INPUT();
+
+
+--x38 is x38
+--operation mode is input
+
+x38 = INPUT();
+
+
+--x37 is x37
+--operation mode is input
+
+x37 = INPUT();
+
+
+--x36 is x36
+--operation mode is input
+
+x36 = INPUT();
+
+
+--x35 is x35
+--operation mode is input
+
+x35 = INPUT();
+
+
+--x34 is x34
+--operation mode is input
+
+x34 = INPUT();
+
+
+--x33 is x33
+--operation mode is input
+
+x33 = INPUT();
+
+
+--x32 is x32
+--operation mode is input
+
+x32 = INPUT();
+
+
+--x31 is x31
+--operation mode is input
+
+x31 = INPUT();
+
+
+--x30 is x30
+--operation mode is input
+
+x30 = INPUT();
+
+
+--x29 is x29
+--operation mode is input
+
+x29 = INPUT();
+
+
+--x28 is x28
+--operation mode is input
+
+x28 = INPUT();
+
+
+--x27 is x27
+--operation mode is input
+
+x27 = INPUT();
+
+
+--x26 is x26
+--operation mode is input
+
+x26 = INPUT();
+
+
+--x25 is x25
+--operation mode is input
+
+x25 = INPUT();
+
+
+--x24 is x24
+--operation mode is input
+
+x24 = INPUT();
+
+
+--x23 is x23
+--operation mode is input
+
+x23 = INPUT();
+
+
+--x21 is x21
+--operation mode is input
+
+x21 = INPUT();
+
+
+--x19 is x19
+--operation mode is input
+
+x19 = INPUT();
+
+
+--x17 is x17
+--operation mode is input
+
+x17 = INPUT();
+
+
+--x18 is x18
+--operation mode is input
+
+x18 = INPUT();
+
+
+--x20 is x20
+--operation mode is input
+
+x20 = INPUT();
+
+
+--x22 is x22
+--operation mode is input
+
+x22 = INPUT();
+
+
+--x16 is x16
+--operation mode is input
+
+x16 = INPUT();
+
+
+--x15 is x15
+--operation mode is input
+
+x15 = INPUT();
+
+
+--x13 is x13
+--operation mode is input
+
+x13 = INPUT();
+
+
+--x11 is x11
+--operation mode is input
+
+x11 = INPUT();
+
+
+--x9 is x9
+--operation mode is input
+
+x9 = INPUT();
+
+
+--x10 is x10
+--operation mode is input
+
+x10 = INPUT();
+
+
+--x12 is x12
+--operation mode is input
+
+x12 = INPUT();
+
+
+--x14 is x14
+--operation mode is input
+
+x14 = INPUT();
+
+
+--x7 is x7
+--operation mode is input
+
+x7 = INPUT();
+
+
+--x5 is x5
+--operation mode is input
+
+x5 = INPUT();
+
+
+--x3 is x3
+--operation mode is input
+
+x3 = INPUT();
+
+
+--x1 is x1
+--operation mode is input
+
+x1 = INPUT();
+
+
+--x2 is x2
+--operation mode is input
+
+x2 = INPUT();
+
+
+--x4 is x4
+--operation mode is input
+
+x4 = INPUT();
+
+
+--x6 is x6
+--operation mode is input
+
+x6 = INPUT();
+
+
+--x8 is x8
+--operation mode is input
+
+x8 = INPUT();
+
+
+--x0 is x0
+--operation mode is input
+
+x0 = INPUT();
+
+
+--a0 is a0
+--operation mode is output
+
+a0 = OUTPUT(A1L13);
+
+
+--a1 is a1
+--operation mode is output
+
+a1 = OUTPUT(A1L55);
+
+
+--a2 is a2
+--operation mode is output
+
+a2 = OUTPUT(A1L76);
+
+
+--a3 is a3
+--operation mode is output
+
+a3 = OUTPUT(B9L5);
+
+
+--a4 is a4
+--operation mode is output
+
+a4 = OUTPUT(B9L8);
+
+
+--a5 is a5
+--operation mode is output
+
+a5 = OUTPUT(!B3_inst17);
+
+
+--G is G
+--operation mode is output
+
+G = OUTPUT(B9_inst18);
+
+

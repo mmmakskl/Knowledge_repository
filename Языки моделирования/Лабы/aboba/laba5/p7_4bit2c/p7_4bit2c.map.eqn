@@ -1,0 +1,101 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--p0 is p0
+--operation mode is normal
+
+p0_lut_out = !p0;
+p0 = DFFEAS(p0_lut_out, c, r, , jk, , , , );
+
+
+--p1 is p1
+--operation mode is normal
+
+p1_lut_out = !p1;
+p1 = DFFEAS(p1_lut_out, c, r, , A1L5, , , , );
+
+
+--p2 is p2
+--operation mode is normal
+
+p2_lut_out = !p2;
+p2 = DFFEAS(p2_lut_out, c, r, , A1L9, , , , );
+
+
+--p3 is p3
+--operation mode is normal
+
+p3_lut_out = !p3;
+p3 = DFFEAS(p3_lut_out, c, r, , A1L8, , , , );
+
+
+--A1L5 is p1~12
+--operation mode is normal
+
+A1L5 = p0 & jk;
+
+
+--A1L9 is p3~12
+--operation mode is normal
+
+A1L9 = p0 & p1 & jk;
+
+
+--A1L8 is p3~0
+--operation mode is normal
+
+A1L8 = p0 & p1 & p2 & jk;
+
+
+--c is c
+--operation mode is input
+
+c = INPUT();
+
+
+--r is r
+--operation mode is input
+
+r = INPUT();
+
+
+--jk is jk
+--operation mode is input
+
+jk = INPUT();
+
+
+--q0 is q0
+--operation mode is output
+
+q0 = OUTPUT(p0);
+
+
+--q1 is q1
+--operation mode is output
+
+q1 = OUTPUT(p1);
+
+
+--q2 is q2
+--operation mode is output
+
+q2 = OUTPUT(p2);
+
+
+--q3 is q3
+--operation mode is output
+
+q3 = OUTPUT(p3);
+
+

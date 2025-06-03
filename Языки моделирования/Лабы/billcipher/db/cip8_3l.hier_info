@@ -1,0 +1,22 @@
+|cip8_3l
+r[0] => process0~20.IN1
+r[1] => process0~16.IN1
+r[2] => process0~12.IN1
+r[3] => process0~8.IN1
+r[4] => process0~5.IN1
+r[5] => process0~2.IN1
+r[6] => process0~0.IN1
+r[7] => process0~0.IN0
+r[7] => process0~1.DATAB
+ei => a~0.OUTPUTSELECT
+ei => a~1.OUTPUTSELECT
+ei => a~2.OUTPUTSELECT
+ei => g~0.OUTPUTSELECT
+ei => eo~0.OUTPUTSELECT
+a[0] <= a~2.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= a~1.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= a~0.DB_MAX_OUTPUT_PORT_TYPE
+g <= g~0.DB_MAX_OUTPUT_PORT_TYPE
+eo <= eo~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

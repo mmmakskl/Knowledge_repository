@@ -1,0 +1,670 @@
+Project Information                                 c:\projects\memory\buf.rpt
+
+MAX+plus II Compiler Report File
+Version 9.01 07/30/98
+Compiled: 12/24/20 01:07:33
+
+Copyright (C) 1988-1998 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input   Output   Bidir         Shareable
+POF       Device          Pins    Pins     Pins     LCs  Expanders  % Utilized
+
+buf       EPM7064LC84-7    33       32       0      32      0           50 %
+
+User Pins:                 33       32       0  
+
+
+
+Project Information                                 c:\projects\memory\buf.rpt
+
+** AUTO GLOBAL SIGNALS **
+
+
+
+INFO: Signal 'GN' chosen for auto global Output Enable
+
+
+Device-Specific Information:                        c:\projects\memory\buf.rpt
+buf
+
+***** Logic for device 'buf' compiled without errors.
+
+
+
+
+Device: EPM7064LC84-7
+
+Device Options:
+    Turbo Bit                                    = ON
+    Security Bit                                 = OFF
+    MultiVolt I/O                              = OFF
+
+
+
+Device-Specific Information:                        c:\projects\memory\buf.rpt
+buf
+
+** ERROR SUMMARY **
+
+Info: Chip 'buf' in device 'EPM7064LC84-7' has less than 20% of pins available for future logic changes -- if your project is likely to change, Altera recommends using a larger device
+                                    V                                      
+                                    C                          V           
+                                    C                          C           
+            W  W  W  W  G  W  W  W  I  G  G     G  G  Q  Q  Q  C  Q  Q  Q  
+            1  1  1  1  N  1  4  2  N  N  N  G  N  N  1  2  1  I  1  1  1  
+            4  3  2  1  D  0  7  6  T  D  D  N  D  D  3  2  2  O  1  0  4  
+          -----------------------------------------------------------------_ 
+        /  11 10  9  8  7  6  5  4  3  2  1 84 83 82 81 80 79 78 77 76 75   | 
+   W15 | 12                                                              74 | Q21 
+ VCCIO | 13                                                              73 | Q23 
+   W16 | 14                                                              72 | GND 
+   W17 | 15                                                              71 | Q24 
+   W20 | 16                                                              70 | Q20 
+   W21 | 17                                                              69 | Q17 
+   W22 | 18                                                              68 | Q26 
+   GND | 19                                                              67 | Q27 
+   W23 | 20                                                              66 | VCCIO 
+   W24 | 21                                                              65 | Q16 
+   W25 | 22                        EPM7064LC84-7                         64 | Q15 
+   W35 | 23                                                              63 | Q25 
+   W34 | 24                                                              62 | Q43 
+   W42 | 25                                                              61 | Q42 
+ VCCIO | 26                                                              60 | Q41 
+   W43 | 27                                                              59 | GND 
+   W33 | 28                                                              58 | Q40 
+   W32 | 29                                                              57 | Q44 
+   W44 | 30                                                              56 | Q47 
+   W45 | 31                                                              55 | Q46 
+   GND | 32                                                              54 | Q45 
+       |_  33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53  _| 
+         ------------------------------------------------------------------ 
+            W  W  W  W  W  V  W  W  W  G  V  Q  Q  Q  G  Q  Q  Q  Q  Q  V  
+            3  3  4  3  3  C  4  2  4  N  C  3  3  3  N  3  3  3  3  3  C  
+            1  0  6  6  7  C  0  7  1  D  C  4  3  6  D  2  1  7  0  5  C  
+                           I              I                             I  
+                           O              N                             O  
+                                          T                                
+
+
+N.C. = Not Connected.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+
+
+Device-Specific Information:                        c:\projects\memory\buf.rpt
+buf
+
+** RESOURCE USAGE **
+
+                                                Shareable     External
+Logic Array Block     Logic Cells   I/O Pins    Expanders   Interconnect
+
+A:     LC1 - LC16     0/16(  0%)  16/16(100%)   0/16(  0%)   0/36(  0%) 
+B:    LC17 - LC32     0/16(  0%)  16/16(100%)   0/16(  0%)   0/36(  0%) 
+C:    LC33 - LC48    16/16(100%)  16/16(100%)   0/16(  0%)  16/36( 44%) 
+D:    LC49 - LC64    16/16(100%)  16/16(100%)   0/16(  0%)  16/36( 44%) 
+
+
+Total dedicated input pins used:                 1/4      ( 25%)
+Total I/O pins used:                            64/64     (100%)
+Total logic cells used:                         32/64     ( 50%)
+Total shareable expanders used:                  0/64     (  0%)
+Total Turbo logic cells used:                   32/64     ( 50%)
+Total shareable expanders not available (n/a):   0/64     (  0%)
+Average fan-in:                                  2.00
+Total fan-in:                                    64
+
+Total input pins required:                      33
+Total output pins required:                     32
+Total bidirectional pins required:               0
+Total logic cells required:                     32
+Total flipflops required:                        0
+Total product terms required:                   32
+Total logic cells lending parallel expanders:    0
+Total shareable expanders in database:           0
+
+Synthesized logic cells:                         0/  64   (  0%)
+
+
+
+Device-Specific Information:                        c:\projects\memory\buf.rpt
+buf
+
+** INPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  84      -   -       INPUT  G            0      0   0    0    0    0    0  GN
+   6   (14)  (A)      INPUT               0      0   0    0    0    1    0  W10
+   8   (13)  (A)      INPUT               0      0   0    0    0    1    0  W11
+   9   (12)  (A)      INPUT               0      0   0    0    0    1    0  W12
+  10   (11)  (A)      INPUT               0      0   0    0    0    1    0  W13
+  11   (10)  (A)      INPUT               0      0   0    0    0    1    0  W14
+  12    (9)  (A)      INPUT               0      0   0    0    0    1    0  W15
+  14    (8)  (A)      INPUT               0      0   0    0    0    1    0  W16
+  15    (7)  (A)      INPUT               0      0   0    0    0    1    0  W17
+  16    (6)  (A)      INPUT               0      0   0    0    0    1    0  W20
+  17    (5)  (A)      INPUT               0      0   0    0    0    1    0  W21
+  18    (4)  (A)      INPUT               0      0   0    0    0    1    0  W22
+  20    (3)  (A)      INPUT               0      0   0    0    0    1    0  W23
+  21    (2)  (A)      INPUT               0      0   0    0    0    1    0  W24
+  22    (1)  (A)      INPUT               0      0   0    0    0    1    0  W25
+   4   (16)  (A)      INPUT               0      0   0    0    0    1    0  W26
+  40   (18)  (B)      INPUT               0      0   0    0    0    1    0  W27
+  34   (23)  (B)      INPUT               0      0   0    0    0    1    0  W30
+  33   (24)  (B)      INPUT               0      0   0    0    0    1    0  W31
+  29   (27)  (B)      INPUT               0      0   0    0    0    1    0  W32
+  28   (28)  (B)      INPUT               0      0   0    0    0    1    0  W33
+  24   (31)  (B)      INPUT               0      0   0    0    0    1    0  W34
+  23   (32)  (B)      INPUT               0      0   0    0    0    1    0  W35
+  36   (21)  (B)      INPUT               0      0   0    0    0    1    0  W36
+  37   (20)  (B)      INPUT               0      0   0    0    0    1    0  W37
+  39   (19)  (B)      INPUT               0      0   0    0    0    1    0  W40
+  41   (17)  (B)      INPUT               0      0   0    0    0    1    0  W41
+  25   (30)  (B)      INPUT               0      0   0    0    0    1    0  W42
+  27   (29)  (B)      INPUT               0      0   0    0    0    1    0  W43
+  30   (26)  (B)      INPUT               0      0   0    0    0    1    0  W44
+  31   (25)  (B)      INPUT               0      0   0    0    0    1    0  W45
+  35   (22)  (B)      INPUT               0      0   0    0    0    1    0  W46
+   5   (15)  (A)      INPUT               0      0   0    0    0    1    0  W47
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+G = Global Source. Fan-out destinations counted here do not include destinations
+that are driven using global routing resources. Refer to the Auto Global Signals,
+Clock Signals, Clear Signals, Synchronous Load Signals, and Synchronous Clear Signals
+Sections of this Report File for information on which signals' fan-outs are used as
+Clock, Clear, Preset, Output Enable, and synchronous Load signals.
+
+
+Device-Specific Information:                        c:\projects\memory\buf.rpt
+buf
+
+** OUTPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  76     60    D        TRI      t        0      0   0    1    0    0    0  Q10
+  77     61    D        TRI      t        0      0   0    1    0    0    0  Q11
+  79     62    D        TRI      t        0      0   0    1    0    0    0  Q12
+  81     64    D        TRI      t        0      0   0    1    0    0    0  Q13
+  75     59    D        TRI      t        0      0   0    1    0    0    0  Q14
+  64     50    D        TRI      t        0      0   0    1    0    0    0  Q15
+  65     51    D        TRI      t        0      0   0    1    0    0    0  Q16
+  69     54    D        TRI      t        0      0   0    1    0    0    0  Q17
+  70     55    D        TRI      t        0      0   0    1    0    0    0  Q20
+  74     58    D        TRI      t        0      0   0    1    0    0    0  Q21
+  80     63    D        TRI      t        0      0   0    1    0    0    0  Q22
+  73     57    D        TRI      t        0      0   0    1    0    0    0  Q23
+  71     56    D        TRI      t        0      0   0    1    0    0    0  Q24
+  63     49    D        TRI      t        0      0   0    1    0    0    0  Q25
+  68     53    D        TRI      t        0      0   0    1    0    0    0  Q26
+  67     52    D        TRI      t        0      0   0    1    0    0    0  Q27
+  51     39    C        TRI      t        0      0   0    1    0    0    0  Q30
+  49     37    C        TRI      t        0      0   0    1    0    0    0  Q31
+  48     36    C        TRI      t        0      0   0    1    0    0    0  Q32
+  45     34    C        TRI      t        0      0   0    1    0    0    0  Q33
+  44     33    C        TRI      t        0      0   0    1    0    0    0  Q34
+  52     40    C        TRI      t        0      0   0    1    0    0    0  Q35
+  46     35    C        TRI      t        0      0   0    1    0    0    0  Q36
+  50     38    C        TRI      t        0      0   0    1    0    0    0  Q37
+  58     45    C        TRI      t        0      0   0    1    0    0    0  Q40
+  60     46    C        TRI      t        0      0   0    1    0    0    0  Q41
+  61     47    C        TRI      t        0      0   0    1    0    0    0  Q42
+  62     48    C        TRI      t        0      0   0    1    0    0    0  Q43
+  57     44    C        TRI      t        0      0   0    1    0    0    0  Q44
+  54     41    C        TRI      t        0      0   0    1    0    0    0  Q45
+  55     42    C        TRI      t        0      0   0    1    0    0    0  Q46
+  56     43    C        TRI      t        0      0   0    1    0    0    0  Q47
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                        c:\projects\memory\buf.rpt
+buf
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'C':
+
+                                         Logic cells placed in LAB 'C'
+        +------------------------------- LC39 Q30
+        | +----------------------------- LC37 Q31
+        | | +--------------------------- LC36 Q32
+        | | | +------------------------- LC34 Q33
+        | | | | +----------------------- LC33 Q34
+        | | | | | +--------------------- LC40 Q35
+        | | | | | | +------------------- LC35 Q36
+        | | | | | | | +----------------- LC38 Q37
+        | | | | | | | | +--------------- LC45 Q40
+        | | | | | | | | | +------------- LC46 Q41
+        | | | | | | | | | | +----------- LC47 Q42
+        | | | | | | | | | | | +--------- LC48 Q43
+        | | | | | | | | | | | | +------- LC44 Q44
+        | | | | | | | | | | | | | +----- LC41 Q45
+        | | | | | | | | | | | | | | +--- LC42 Q46
+        | | | | | | | | | | | | | | | +- LC43 Q47
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'C'
+LC      | | | | | | | | | | | | | | | | | A B C D |     Logic cells that feed LAB 'C':
+
+Pin
+84   -> - - - - - - - - - - - - - - - - | - - - - | <-- GN
+34   -> * - - - - - - - - - - - - - - - | - - * - | <-- W30
+33   -> - * - - - - - - - - - - - - - - | - - * - | <-- W31
+29   -> - - * - - - - - - - - - - - - - | - - * - | <-- W32
+28   -> - - - * - - - - - - - - - - - - | - - * - | <-- W33
+24   -> - - - - * - - - - - - - - - - - | - - * - | <-- W34
+23   -> - - - - - * - - - - - - - - - - | - - * - | <-- W35
+36   -> - - - - - - * - - - - - - - - - | - - * - | <-- W36
+37   -> - - - - - - - * - - - - - - - - | - - * - | <-- W37
+39   -> - - - - - - - - * - - - - - - - | - - * - | <-- W40
+41   -> - - - - - - - - - * - - - - - - | - - * - | <-- W41
+25   -> - - - - - - - - - - * - - - - - | - - * - | <-- W42
+27   -> - - - - - - - - - - - * - - - - | - - * - | <-- W43
+30   -> - - - - - - - - - - - - * - - - | - - * - | <-- W44
+31   -> - - - - - - - - - - - - - * - - | - - * - | <-- W45
+35   -> - - - - - - - - - - - - - - * - | - - * - | <-- W46
+5    -> - - - - - - - - - - - - - - - * | - - * - | <-- W47
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                        c:\projects\memory\buf.rpt
+buf
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'D':
+
+                                         Logic cells placed in LAB 'D'
+        +------------------------------- LC60 Q10
+        | +----------------------------- LC61 Q11
+        | | +--------------------------- LC62 Q12
+        | | | +------------------------- LC64 Q13
+        | | | | +----------------------- LC59 Q14
+        | | | | | +--------------------- LC50 Q15
+        | | | | | | +------------------- LC51 Q16
+        | | | | | | | +----------------- LC54 Q17
+        | | | | | | | | +--------------- LC55 Q20
+        | | | | | | | | | +------------- LC58 Q21
+        | | | | | | | | | | +----------- LC63 Q22
+        | | | | | | | | | | | +--------- LC57 Q23
+        | | | | | | | | | | | | +------- LC56 Q24
+        | | | | | | | | | | | | | +----- LC49 Q25
+        | | | | | | | | | | | | | | +--- LC53 Q26
+        | | | | | | | | | | | | | | | +- LC52 Q27
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'D'
+LC      | | | | | | | | | | | | | | | | | A B C D |     Logic cells that feed LAB 'D':
+
+Pin
+84   -> - - - - - - - - - - - - - - - - | - - - - | <-- GN
+6    -> * - - - - - - - - - - - - - - - | - - - * | <-- W10
+8    -> - * - - - - - - - - - - - - - - | - - - * | <-- W11
+9    -> - - * - - - - - - - - - - - - - | - - - * | <-- W12
+10   -> - - - * - - - - - - - - - - - - | - - - * | <-- W13
+11   -> - - - - * - - - - - - - - - - - | - - - * | <-- W14
+12   -> - - - - - * - - - - - - - - - - | - - - * | <-- W15
+14   -> - - - - - - * - - - - - - - - - | - - - * | <-- W16
+15   -> - - - - - - - * - - - - - - - - | - - - * | <-- W17
+16   -> - - - - - - - - * - - - - - - - | - - - * | <-- W20
+17   -> - - - - - - - - - * - - - - - - | - - - * | <-- W21
+18   -> - - - - - - - - - - * - - - - - | - - - * | <-- W22
+20   -> - - - - - - - - - - - * - - - - | - - - * | <-- W23
+21   -> - - - - - - - - - - - - * - - - | - - - * | <-- W24
+22   -> - - - - - - - - - - - - - * - - | - - - * | <-- W25
+4    -> - - - - - - - - - - - - - - * - | - - - * | <-- W26
+40   -> - - - - - - - - - - - - - - - * | - - - * | <-- W27
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                        c:\projects\memory\buf.rpt
+buf
+
+** EQUATIONS **
+
+GN       : INPUT;
+W10      : INPUT;
+W11      : INPUT;
+W12      : INPUT;
+W13      : INPUT;
+W14      : INPUT;
+W15      : INPUT;
+W16      : INPUT;
+W17      : INPUT;
+W20      : INPUT;
+W21      : INPUT;
+W22      : INPUT;
+W23      : INPUT;
+W24      : INPUT;
+W25      : INPUT;
+W26      : INPUT;
+W27      : INPUT;
+W30      : INPUT;
+W31      : INPUT;
+W32      : INPUT;
+W33      : INPUT;
+W34      : INPUT;
+W35      : INPUT;
+W36      : INPUT;
+W37      : INPUT;
+W40      : INPUT;
+W41      : INPUT;
+W42      : INPUT;
+W43      : INPUT;
+W44      : INPUT;
+W45      : INPUT;
+W46      : INPUT;
+W47      : INPUT;
+
+-- Node name is 'Q10' 
+-- Equation name is 'Q10', location is LC060, type is output.
+Q10      = TRI(_LC060, GLOBAL(!GN));
+_LC060   = LCELL( W10 $  GND);
+
+-- Node name is 'Q11' 
+-- Equation name is 'Q11', location is LC061, type is output.
+Q11      = TRI(_LC061, GLOBAL(!GN));
+_LC061   = LCELL( W11 $  GND);
+
+-- Node name is 'Q12' 
+-- Equation name is 'Q12', location is LC062, type is output.
+Q12      = TRI(_LC062, GLOBAL(!GN));
+_LC062   = LCELL( W12 $  GND);
+
+-- Node name is 'Q13' 
+-- Equation name is 'Q13', location is LC064, type is output.
+Q13      = TRI(_LC064, GLOBAL(!GN));
+_LC064   = LCELL( W13 $  GND);
+
+-- Node name is 'Q14' 
+-- Equation name is 'Q14', location is LC059, type is output.
+Q14      = TRI(_LC059, GLOBAL(!GN));
+_LC059   = LCELL( W14 $  GND);
+
+-- Node name is 'Q15' 
+-- Equation name is 'Q15', location is LC050, type is output.
+Q15      = TRI(_LC050, GLOBAL(!GN));
+_LC050   = LCELL( W15 $  GND);
+
+-- Node name is 'Q16' 
+-- Equation name is 'Q16', location is LC051, type is output.
+Q16      = TRI(_LC051, GLOBAL(!GN));
+_LC051   = LCELL( W16 $  GND);
+
+-- Node name is 'Q17' 
+-- Equation name is 'Q17', location is LC054, type is output.
+Q17      = TRI(_LC054, GLOBAL(!GN));
+_LC054   = LCELL( W17 $  GND);
+
+-- Node name is 'Q20' 
+-- Equation name is 'Q20', location is LC055, type is output.
+Q20      = TRI(_LC055, GLOBAL(!GN));
+_LC055   = LCELL( W20 $  GND);
+
+-- Node name is 'Q21' 
+-- Equation name is 'Q21', location is LC058, type is output.
+Q21      = TRI(_LC058, GLOBAL(!GN));
+_LC058   = LCELL( W21 $  GND);
+
+-- Node name is 'Q22' 
+-- Equation name is 'Q22', location is LC063, type is output.
+Q22      = TRI(_LC063, GLOBAL(!GN));
+_LC063   = LCELL( W22 $  GND);
+
+-- Node name is 'Q23' 
+-- Equation name is 'Q23', location is LC057, type is output.
+Q23      = TRI(_LC057, GLOBAL(!GN));
+_LC057   = LCELL( W23 $  GND);
+
+-- Node name is 'Q24' 
+-- Equation name is 'Q24', location is LC056, type is output.
+Q24      = TRI(_LC056, GLOBAL(!GN));
+_LC056   = LCELL( W24 $  GND);
+
+-- Node name is 'Q25' 
+-- Equation name is 'Q25', location is LC049, type is output.
+Q25      = TRI(_LC049, GLOBAL(!GN));
+_LC049   = LCELL( W25 $  GND);
+
+-- Node name is 'Q26' 
+-- Equation name is 'Q26', location is LC053, type is output.
+Q26      = TRI(_LC053, GLOBAL(!GN));
+_LC053   = LCELL( W26 $  GND);
+
+-- Node name is 'Q27' 
+-- Equation name is 'Q27', location is LC052, type is output.
+Q27      = TRI(_LC052, GLOBAL(!GN));
+_LC052   = LCELL( W27 $  GND);
+
+-- Node name is 'Q30' 
+-- Equation name is 'Q30', location is LC039, type is output.
+Q30      = TRI(_LC039, GLOBAL(!GN));
+_LC039   = LCELL( W30 $  GND);
+
+-- Node name is 'Q31' 
+-- Equation name is 'Q31', location is LC037, type is output.
+Q31      = TRI(_LC037, GLOBAL(!GN));
+_LC037   = LCELL( W31 $  GND);
+
+-- Node name is 'Q32' 
+-- Equation name is 'Q32', location is LC036, type is output.
+Q32      = TRI(_LC036, GLOBAL(!GN));
+_LC036   = LCELL( W32 $  GND);
+
+-- Node name is 'Q33' 
+-- Equation name is 'Q33', location is LC034, type is output.
+Q33      = TRI(_LC034, GLOBAL(!GN));
+_LC034   = LCELL( W33 $  GND);
+
+-- Node name is 'Q34' 
+-- Equation name is 'Q34', location is LC033, type is output.
+Q34      = TRI(_LC033, GLOBAL(!GN));
+_LC033   = LCELL( W34 $  GND);
+
+-- Node name is 'Q35' 
+-- Equation name is 'Q35', location is LC040, type is output.
+Q35      = TRI(_LC040, GLOBAL(!GN));
+_LC040   = LCELL( W35 $  GND);
+
+-- Node name is 'Q36' 
+-- Equation name is 'Q36', location is LC035, type is output.
+Q36      = TRI(_LC035, GLOBAL(!GN));
+_LC035   = LCELL( W36 $  GND);
+
+-- Node name is 'Q37' 
+-- Equation name is 'Q37', location is LC038, type is output.
+Q37      = TRI(_LC038, GLOBAL(!GN));
+_LC038   = LCELL( W37 $  GND);
+
+-- Node name is 'Q40' 
+-- Equation name is 'Q40', location is LC045, type is output.
+Q40      = TRI(_LC045, GLOBAL(!GN));
+_LC045   = LCELL( W40 $  GND);
+
+-- Node name is 'Q41' 
+-- Equation name is 'Q41', location is LC046, type is output.
+Q41      = TRI(_LC046, GLOBAL(!GN));
+_LC046   = LCELL( W41 $  GND);
+
+-- Node name is 'Q42' 
+-- Equation name is 'Q42', location is LC047, type is output.
+Q42      = TRI(_LC047, GLOBAL(!GN));
+_LC047   = LCELL( W42 $  GND);
+
+-- Node name is 'Q43' 
+-- Equation name is 'Q43', location is LC048, type is output.
+Q43      = TRI(_LC048, GLOBAL(!GN));
+_LC048   = LCELL( W43 $  GND);
+
+-- Node name is 'Q44' 
+-- Equation name is 'Q44', location is LC044, type is output.
+Q44      = TRI(_LC044, GLOBAL(!GN));
+_LC044   = LCELL( W44 $  GND);
+
+-- Node name is 'Q45' 
+-- Equation name is 'Q45', location is LC041, type is output.
+Q45      = TRI(_LC041, GLOBAL(!GN));
+_LC041   = LCELL( W45 $  GND);
+
+-- Node name is 'Q46' 
+-- Equation name is 'Q46', location is LC042, type is output.
+Q46      = TRI(_LC042, GLOBAL(!GN));
+_LC042   = LCELL( W46 $  GND);
+
+-- Node name is 'Q47' 
+-- Equation name is 'Q47', location is LC043, type is output.
+Q47      = TRI(_LC043, GLOBAL(!GN));
+_LC043   = LCELL( W47 $  GND);
+
+
+
+--     Shareable expanders that are duplicated in multiple LABs:
+--     (none)
+
+
+
+
+Project Information                                 c:\projects\memory\buf.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Standard
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'MAX7000' family
+
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      PARALLEL_EXPANDERS                  = off
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SOFT_BUFFER_INSERTION               = on
+      SUBFACTOR_EXTRACTION                = on
+      TURBO_BIT                           = on
+      XOR_SYNTHESIS                       = on
+      IGNORE_SOFT_BUFFERS                 = off
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      One-Hot State Machine Encoding      = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:00
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 3,002K

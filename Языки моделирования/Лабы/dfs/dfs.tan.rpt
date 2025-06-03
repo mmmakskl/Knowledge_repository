@@ -1,0 +1,474 @@
+Timing Analyzer report for dfs
+Wed Apr 21 18:32:28 2021
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'clk'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                   ;
++------------------------------+-------+---------------+----------------------------------+------------+-------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From       ; To          ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+------------+-------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.975 ns                         ; start      ; visited[4]  ;            ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 7.276 ns                         ; visited[1] ; visit[1]    ; clk        ;          ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.360 ns                        ; rst        ; stack[4][1] ;            ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 126.02 MHz ( period = 7.935 ns ) ; visited[0] ; stack[3][2] ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;            ;             ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+------------+-------------+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP1S10F484C5       ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; Off                ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; NONE             ; 0.000 ns      ; 0.000 ns     ; NONE     ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                              ;
++-----------------------------------------+-----------------------------------------------------+-------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From        ; To                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 126.02 MHz ( period = 7.935 ns )                    ; visited[0]  ; stack[3][1]           ; clk        ; clk      ; None                        ; None                      ; 7.754 ns                ;
+; N/A                                     ; 126.02 MHz ( period = 7.935 ns )                    ; visited[0]  ; stack[3][0]           ; clk        ; clk      ; None                        ; None                      ; 7.754 ns                ;
+; N/A                                     ; 126.02 MHz ( period = 7.935 ns )                    ; visited[0]  ; stack[3][2]           ; clk        ; clk      ; None                        ; None                      ; 7.754 ns                ;
+; N/A                                     ; 130.55 MHz ( period = 7.660 ns )                    ; visited[0]  ; stack[1][2]           ; clk        ; clk      ; None                        ; None                      ; 7.479 ns                ;
+; N/A                                     ; 130.98 MHz ( period = 7.635 ns )                    ; visited[0]  ; stack[2][1]           ; clk        ; clk      ; None                        ; None                      ; 7.454 ns                ;
+; N/A                                     ; 130.98 MHz ( period = 7.635 ns )                    ; visited[0]  ; stack[2][0]           ; clk        ; clk      ; None                        ; None                      ; 7.454 ns                ;
+; N/A                                     ; 130.98 MHz ( period = 7.635 ns )                    ; visited[0]  ; stack[2][2]           ; clk        ; clk      ; None                        ; None                      ; 7.454 ns                ;
+; N/A                                     ; 132.86 MHz ( period = 7.527 ns )                    ; neighbor[1] ; stack[3][1]           ; clk        ; clk      ; None                        ; None                      ; 7.357 ns                ;
+; N/A                                     ; 132.86 MHz ( period = 7.527 ns )                    ; neighbor[1] ; stack[3][0]           ; clk        ; clk      ; None                        ; None                      ; 7.357 ns                ;
+; N/A                                     ; 132.86 MHz ( period = 7.527 ns )                    ; neighbor[1] ; stack[3][2]           ; clk        ; clk      ; None                        ; None                      ; 7.357 ns                ;
+; N/A                                     ; 134.35 MHz ( period = 7.443 ns )                    ; neighbor[0] ; stack[3][1]           ; clk        ; clk      ; None                        ; None                      ; 7.273 ns                ;
+; N/A                                     ; 134.35 MHz ( period = 7.443 ns )                    ; neighbor[0] ; stack[3][0]           ; clk        ; clk      ; None                        ; None                      ; 7.273 ns                ;
+; N/A                                     ; 134.35 MHz ( period = 7.443 ns )                    ; neighbor[0] ; stack[3][2]           ; clk        ; clk      ; None                        ; None                      ; 7.273 ns                ;
+; N/A                                     ; 134.57 MHz ( period = 7.431 ns )                    ; sp[0]       ; visited[0]            ; clk        ; clk      ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 135.41 MHz ( period = 7.385 ns )                    ; sp[0]       ; visited[1]            ; clk        ; clk      ; None                        ; None                      ; 7.219 ns                ;
+; N/A                                     ; 135.41 MHz ( period = 7.385 ns )                    ; sp[1]       ; visited[0]            ; clk        ; clk      ; None                        ; None                      ; 7.219 ns                ;
+; N/A                                     ; 135.70 MHz ( period = 7.369 ns )                    ; sp[0]       ; visited[3]            ; clk        ; clk      ; None                        ; None                      ; 7.203 ns                ;
+; N/A                                     ; 136.26 MHz ( period = 7.339 ns )                    ; sp[1]       ; visited[1]            ; clk        ; clk      ; None                        ; None                      ; 7.173 ns                ;
+; N/A                                     ; 136.56 MHz ( period = 7.323 ns )                    ; sp[1]       ; visited[3]            ; clk        ; clk      ; None                        ; None                      ; 7.157 ns                ;
+; N/A                                     ; 137.89 MHz ( period = 7.252 ns )                    ; neighbor[1] ; stack[1][2]           ; clk        ; clk      ; None                        ; None                      ; 7.082 ns                ;
+; N/A                                     ; 138.37 MHz ( period = 7.227 ns )                    ; neighbor[1] ; stack[2][1]           ; clk        ; clk      ; None                        ; None                      ; 7.057 ns                ;
+; N/A                                     ; 138.37 MHz ( period = 7.227 ns )                    ; neighbor[1] ; stack[2][0]           ; clk        ; clk      ; None                        ; None                      ; 7.057 ns                ;
+; N/A                                     ; 138.37 MHz ( period = 7.227 ns )                    ; neighbor[1] ; stack[2][2]           ; clk        ; clk      ; None                        ; None                      ; 7.057 ns                ;
+; N/A                                     ; 139.24 MHz ( period = 7.182 ns )                    ; sp[0]       ; visited[4]            ; clk        ; clk      ; None                        ; None                      ; 7.016 ns                ;
+; N/A                                     ; 139.51 MHz ( period = 7.168 ns )                    ; neighbor[0] ; stack[1][2]           ; clk        ; clk      ; None                        ; None                      ; 6.998 ns                ;
+; N/A                                     ; 140.00 MHz ( period = 7.143 ns )                    ; neighbor[0] ; stack[2][1]           ; clk        ; clk      ; None                        ; None                      ; 6.973 ns                ;
+; N/A                                     ; 140.00 MHz ( period = 7.143 ns )                    ; neighbor[0] ; stack[2][0]           ; clk        ; clk      ; None                        ; None                      ; 6.973 ns                ;
+; N/A                                     ; 140.00 MHz ( period = 7.143 ns )                    ; neighbor[0] ; stack[2][2]           ; clk        ; clk      ; None                        ; None                      ; 6.973 ns                ;
+; N/A                                     ; 140.13 MHz ( period = 7.136 ns )                    ; sp[1]       ; visited[4]            ; clk        ; clk      ; None                        ; None                      ; 6.970 ns                ;
+; N/A                                     ; 140.67 MHz ( period = 7.109 ns )                    ; visited[0]  ; stack[0][1]           ; clk        ; clk      ; None                        ; None                      ; 6.938 ns                ;
+; N/A                                     ; 140.67 MHz ( period = 7.109 ns )                    ; visited[0]  ; stack[0][0]           ; clk        ; clk      ; None                        ; None                      ; 6.938 ns                ;
+; N/A                                     ; 140.67 MHz ( period = 7.109 ns )                    ; visited[0]  ; stack[0][2]           ; clk        ; clk      ; None                        ; None                      ; 6.938 ns                ;
+; N/A                                     ; 140.94 MHz ( period = 7.095 ns )                    ; visited[0]  ; stack[4][1]           ; clk        ; clk      ; None                        ; None                      ; 6.914 ns                ;
+; N/A                                     ; 140.94 MHz ( period = 7.095 ns )                    ; visited[0]  ; stack[4][0]           ; clk        ; clk      ; None                        ; None                      ; 6.914 ns                ;
+; N/A                                     ; 140.94 MHz ( period = 7.095 ns )                    ; visited[0]  ; stack[4][2]           ; clk        ; clk      ; None                        ; None                      ; 6.914 ns                ;
+; N/A                                     ; 141.44 MHz ( period = 7.070 ns )                    ; visited[0]  ; sp[2]                 ; clk        ; clk      ; None                        ; None                      ; 6.899 ns                ;
+; N/A                                     ; 141.48 MHz ( period = 7.068 ns )                    ; sp[0]       ; visited[2]            ; clk        ; clk      ; None                        ; None                      ; 6.891 ns                ;
+; N/A                                     ; 142.41 MHz ( period = 7.022 ns )                    ; sp[1]       ; visited[2]            ; clk        ; clk      ; None                        ; None                      ; 6.845 ns                ;
+; N/A                                     ; 143.27 MHz ( period = 6.980 ns )                    ; visited[0]  ; neighbor[2]           ; clk        ; clk      ; None                        ; None                      ; 6.803 ns                ;
+; N/A                                     ; 143.31 MHz ( period = 6.978 ns )                    ; visited[0]  ; sp[1]                 ; clk        ; clk      ; None                        ; None                      ; 6.812 ns                ;
+; N/A                                     ; 143.58 MHz ( period = 6.965 ns )                    ; visited[2]  ; stack[3][1]           ; clk        ; clk      ; None                        ; None                      ; 6.795 ns                ;
+; N/A                                     ; 143.58 MHz ( period = 6.965 ns )                    ; visited[2]  ; stack[3][0]           ; clk        ; clk      ; None                        ; None                      ; 6.795 ns                ;
+; N/A                                     ; 143.58 MHz ( period = 6.965 ns )                    ; visited[2]  ; stack[3][2]           ; clk        ; clk      ; None                        ; None                      ; 6.795 ns                ;
+; N/A                                     ; 143.93 MHz ( period = 6.948 ns )                    ; sp[2]       ; visited[0]            ; clk        ; clk      ; None                        ; None                      ; 6.787 ns                ;
+; N/A                                     ; 144.20 MHz ( period = 6.935 ns )                    ; visited[0]  ; stack[1][1]           ; clk        ; clk      ; None                        ; None                      ; 6.769 ns                ;
+; N/A                                     ; 144.20 MHz ( period = 6.935 ns )                    ; visited[0]  ; stack[1][0]           ; clk        ; clk      ; None                        ; None                      ; 6.769 ns                ;
+; N/A                                     ; 144.89 MHz ( period = 6.902 ns )                    ; sp[2]       ; visited[1]            ; clk        ; clk      ; None                        ; None                      ; 6.741 ns                ;
+; N/A                                     ; 145.22 MHz ( period = 6.886 ns )                    ; sp[2]       ; visited[3]            ; clk        ; clk      ; None                        ; None                      ; 6.725 ns                ;
+; N/A                                     ; 149.23 MHz ( period = 6.701 ns )                    ; neighbor[1] ; stack[0][1]           ; clk        ; clk      ; None                        ; None                      ; 6.541 ns                ;
+; N/A                                     ; 149.23 MHz ( period = 6.701 ns )                    ; neighbor[1] ; stack[0][0]           ; clk        ; clk      ; None                        ; None                      ; 6.541 ns                ;
+; N/A                                     ; 149.23 MHz ( period = 6.701 ns )                    ; neighbor[1] ; stack[0][2]           ; clk        ; clk      ; None                        ; None                      ; 6.541 ns                ;
+; N/A                                     ; 149.30 MHz ( period = 6.698 ns )                    ; sp[2]       ; visited[4]            ; clk        ; clk      ; None                        ; None                      ; 6.537 ns                ;
+; N/A                                     ; 149.48 MHz ( period = 6.690 ns )                    ; visited[2]  ; stack[1][2]           ; clk        ; clk      ; None                        ; None                      ; 6.520 ns                ;
+; N/A                                     ; 149.54 MHz ( period = 6.687 ns )                    ; neighbor[1] ; stack[4][1]           ; clk        ; clk      ; None                        ; None                      ; 6.517 ns                ;
+; N/A                                     ; 149.54 MHz ( period = 6.687 ns )                    ; neighbor[1] ; stack[4][0]           ; clk        ; clk      ; None                        ; None                      ; 6.517 ns                ;
+; N/A                                     ; 149.54 MHz ( period = 6.687 ns )                    ; neighbor[1] ; stack[4][2]           ; clk        ; clk      ; None                        ; None                      ; 6.517 ns                ;
+; N/A                                     ; 150.04 MHz ( period = 6.665 ns )                    ; visited[2]  ; stack[2][1]           ; clk        ; clk      ; None                        ; None                      ; 6.495 ns                ;
+; N/A                                     ; 150.04 MHz ( period = 6.665 ns )                    ; visited[2]  ; stack[2][0]           ; clk        ; clk      ; None                        ; None                      ; 6.495 ns                ;
+; N/A                                     ; 150.04 MHz ( period = 6.665 ns )                    ; visited[2]  ; stack[2][2]           ; clk        ; clk      ; None                        ; None                      ; 6.495 ns                ;
+; N/A                                     ; 150.11 MHz ( period = 6.662 ns )                    ; neighbor[1] ; sp[2]                 ; clk        ; clk      ; None                        ; None                      ; 6.502 ns                ;
+; N/A                                     ; 150.22 MHz ( period = 6.657 ns )                    ; visited[0]  ; state.push            ; clk        ; clk      ; None                        ; None                      ; 6.486 ns                ;
+; N/A                                     ; 150.35 MHz ( period = 6.651 ns )                    ; visited[0]  ; sp[0]                 ; clk        ; clk      ; None                        ; None                      ; 6.485 ns                ;
+; N/A                                     ; 151.13 MHz ( period = 6.617 ns )                    ; neighbor[0] ; stack[0][1]           ; clk        ; clk      ; None                        ; None                      ; 6.457 ns                ;
+; N/A                                     ; 151.13 MHz ( period = 6.617 ns )                    ; neighbor[0] ; stack[0][0]           ; clk        ; clk      ; None                        ; None                      ; 6.457 ns                ;
+; N/A                                     ; 151.13 MHz ( period = 6.617 ns )                    ; neighbor[0] ; stack[0][2]           ; clk        ; clk      ; None                        ; None                      ; 6.457 ns                ;
+; N/A                                     ; 151.45 MHz ( period = 6.603 ns )                    ; neighbor[0] ; stack[4][1]           ; clk        ; clk      ; None                        ; None                      ; 6.433 ns                ;
+; N/A                                     ; 151.45 MHz ( period = 6.603 ns )                    ; neighbor[0] ; stack[4][0]           ; clk        ; clk      ; None                        ; None                      ; 6.433 ns                ;
+; N/A                                     ; 151.45 MHz ( period = 6.603 ns )                    ; neighbor[0] ; stack[4][2]           ; clk        ; clk      ; None                        ; None                      ; 6.433 ns                ;
+; N/A                                     ; 151.88 MHz ( period = 6.584 ns )                    ; sp[2]       ; visited[2]            ; clk        ; clk      ; None                        ; None                      ; 6.412 ns                ;
+; N/A                                     ; 152.02 MHz ( period = 6.578 ns )                    ; neighbor[0] ; sp[2]                 ; clk        ; clk      ; None                        ; None                      ; 6.418 ns                ;
+; N/A                                     ; 152.16 MHz ( period = 6.572 ns )                    ; neighbor[1] ; neighbor[2]           ; clk        ; clk      ; None                        ; None                      ; 6.406 ns                ;
+; N/A                                     ; 152.21 MHz ( period = 6.570 ns )                    ; neighbor[1] ; sp[1]                 ; clk        ; clk      ; None                        ; None                      ; 6.415 ns                ;
+; N/A                                     ; 153.21 MHz ( period = 6.527 ns )                    ; neighbor[1] ; stack[1][1]           ; clk        ; clk      ; None                        ; None                      ; 6.372 ns                ;
+; N/A                                     ; 153.21 MHz ( period = 6.527 ns )                    ; neighbor[1] ; stack[1][0]           ; clk        ; clk      ; None                        ; None                      ; 6.372 ns                ;
+; N/A                                     ; 154.13 MHz ( period = 6.488 ns )                    ; neighbor[0] ; neighbor[2]           ; clk        ; clk      ; None                        ; None                      ; 6.322 ns                ;
+; N/A                                     ; 154.18 MHz ( period = 6.486 ns )                    ; neighbor[0] ; sp[1]                 ; clk        ; clk      ; None                        ; None                      ; 6.331 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; neighbor[0] ; stack[1][1]           ; clk        ; clk      ; None                        ; None                      ; 6.288 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; neighbor[0] ; stack[1][0]           ; clk        ; clk      ; None                        ; None                      ; 6.288 ns                ;
+; N/A                                     ; 156.69 MHz ( period = 6.382 ns )                    ; visited[0]  ; neighbor[0]           ; clk        ; clk      ; None                        ; None                      ; 6.205 ns                ;
+; N/A                                     ; 157.63 MHz ( period = 6.344 ns )                    ; visited[0]  ; state.check_neighbors ; clk        ; clk      ; None                        ; None                      ; 6.173 ns                ;
+; N/A                                     ; 158.10 MHz ( period = 6.325 ns )                    ; visited[0]  ; state.finish          ; clk        ; clk      ; None                        ; None                      ; 6.159 ns                ;
+; N/A                                     ; 160.03 MHz ( period = 6.249 ns )                    ; neighbor[1] ; state.push            ; clk        ; clk      ; None                        ; None                      ; 6.089 ns                ;
+; N/A                                     ; 160.18 MHz ( period = 6.243 ns )                    ; neighbor[1] ; sp[0]                 ; clk        ; clk      ; None                        ; None                      ; 6.088 ns                ;
+; N/A                                     ; 162.21 MHz ( period = 6.165 ns )                    ; neighbor[0] ; state.push            ; clk        ; clk      ; None                        ; None                      ; 6.005 ns                ;
+; N/A                                     ; 162.36 MHz ( period = 6.159 ns )                    ; neighbor[0] ; sp[0]                 ; clk        ; clk      ; None                        ; None                      ; 6.004 ns                ;
+; N/A                                     ; 162.89 MHz ( period = 6.139 ns )                    ; visited[2]  ; stack[0][1]           ; clk        ; clk      ; None                        ; None                      ; 5.979 ns                ;
+; N/A                                     ; 162.89 MHz ( period = 6.139 ns )                    ; visited[2]  ; stack[0][0]           ; clk        ; clk      ; None                        ; None                      ; 5.979 ns                ;
+; N/A                                     ; 162.89 MHz ( period = 6.139 ns )                    ; visited[2]  ; stack[0][2]           ; clk        ; clk      ; None                        ; None                      ; 5.979 ns                ;
+; N/A                                     ; 163.27 MHz ( period = 6.125 ns )                    ; visited[2]  ; stack[4][1]           ; clk        ; clk      ; None                        ; None                      ; 5.955 ns                ;
+; N/A                                     ; 163.27 MHz ( period = 6.125 ns )                    ; visited[2]  ; stack[4][0]           ; clk        ; clk      ; None                        ; None                      ; 5.955 ns                ;
+; N/A                                     ; 163.27 MHz ( period = 6.125 ns )                    ; visited[2]  ; stack[4][2]           ; clk        ; clk      ; None                        ; None                      ; 5.955 ns                ;
+; N/A                                     ; 163.93 MHz ( period = 6.100 ns )                    ; visited[2]  ; sp[2]                 ; clk        ; clk      ; None                        ; None                      ; 5.940 ns                ;
+; N/A                                     ; 166.39 MHz ( period = 6.010 ns )                    ; visited[2]  ; neighbor[2]           ; clk        ; clk      ; None                        ; None                      ; 5.844 ns                ;
+; N/A                                     ; 166.44 MHz ( period = 6.008 ns )                    ; visited[2]  ; sp[1]                 ; clk        ; clk      ; None                        ; None                      ; 5.853 ns                ;
+; N/A                                     ; 167.39 MHz ( period = 5.974 ns )                    ; neighbor[1] ; neighbor[0]           ; clk        ; clk      ; None                        ; None                      ; 5.808 ns                ;
+; N/A                                     ; 167.64 MHz ( period = 5.965 ns )                    ; visited[2]  ; stack[1][1]           ; clk        ; clk      ; None                        ; None                      ; 5.810 ns                ;
+; N/A                                     ; 167.64 MHz ( period = 5.965 ns )                    ; visited[2]  ; stack[1][0]           ; clk        ; clk      ; None                        ; None                      ; 5.810 ns                ;
+; N/A                                     ; 168.46 MHz ( period = 5.936 ns )                    ; neighbor[1] ; state.check_neighbors ; clk        ; clk      ; None                        ; None                      ; 5.776 ns                ;
+; N/A                                     ; 169.00 MHz ( period = 5.917 ns )                    ; neighbor[1] ; state.finish          ; clk        ; clk      ; None                        ; None                      ; 5.762 ns                ;
+; N/A                                     ; 169.78 MHz ( period = 5.890 ns )                    ; neighbor[0] ; neighbor[0]           ; clk        ; clk      ; None                        ; None                      ; 5.724 ns                ;
+; N/A                                     ; 170.88 MHz ( period = 5.852 ns )                    ; neighbor[0] ; state.check_neighbors ; clk        ; clk      ; None                        ; None                      ; 5.692 ns                ;
+; N/A                                     ; 171.44 MHz ( period = 5.833 ns )                    ; neighbor[0] ; state.finish          ; clk        ; clk      ; None                        ; None                      ; 5.678 ns                ;
+; N/A                                     ; 171.73 MHz ( period = 5.823 ns )                    ; visited[3]  ; stack[3][1]           ; clk        ; clk      ; None                        ; None                      ; 5.642 ns                ;
+; N/A                                     ; 171.73 MHz ( period = 5.823 ns )                    ; visited[3]  ; stack[3][0]           ; clk        ; clk      ; None                        ; None                      ; 5.642 ns                ;
+; N/A                                     ; 171.73 MHz ( period = 5.823 ns )                    ; visited[3]  ; stack[3][2]           ; clk        ; clk      ; None                        ; None                      ; 5.642 ns                ;
+; N/A                                     ; 172.50 MHz ( period = 5.797 ns )                    ; neighbor[2] ; stack[3][1]           ; clk        ; clk      ; None                        ; None                      ; 5.627 ns                ;
+; N/A                                     ; 172.50 MHz ( period = 5.797 ns )                    ; neighbor[2] ; stack[3][0]           ; clk        ; clk      ; None                        ; None                      ; 5.627 ns                ;
+; N/A                                     ; 172.50 MHz ( period = 5.797 ns )                    ; neighbor[2] ; stack[3][2]           ; clk        ; clk      ; None                        ; None                      ; 5.627 ns                ;
+; N/A                                     ; 172.56 MHz ( period = 5.795 ns )                    ; visited[0]  ; neighbor[1]           ; clk        ; clk      ; None                        ; None                      ; 5.618 ns                ;
+; N/A                                     ; 174.46 MHz ( period = 5.732 ns )                    ; sp[0]       ; current[0]            ; clk        ; clk      ; None                        ; None                      ; 5.555 ns                ;
+; N/A                                     ; 175.72 MHz ( period = 5.691 ns )                    ; stack[0][2] ; visited[0]            ; clk        ; clk      ; None                        ; None                      ; 5.530 ns                ;
+; N/A                                     ; 175.84 MHz ( period = 5.687 ns )                    ; visited[2]  ; state.push            ; clk        ; clk      ; None                        ; None                      ; 5.527 ns                ;
+; N/A                                     ; 175.87 MHz ( period = 5.686 ns )                    ; sp[1]       ; current[0]            ; clk        ; clk      ; None                        ; None                      ; 5.509 ns                ;
+; N/A                                     ; 176.03 MHz ( period = 5.681 ns )                    ; visited[2]  ; sp[0]                 ; clk        ; clk      ; None                        ; None                      ; 5.526 ns                ;
+; N/A                                     ; 176.37 MHz ( period = 5.670 ns )                    ; stack[3][2] ; visited[0]            ; clk        ; clk      ; None                        ; None                      ; 5.519 ns                ;
+; N/A                                     ; 177.15 MHz ( period = 5.645 ns )                    ; stack[0][2] ; visited[1]            ; clk        ; clk      ; None                        ; None                      ; 5.484 ns                ;
+; N/A                                     ; 177.65 MHz ( period = 5.629 ns )                    ; stack[0][2] ; visited[3]            ; clk        ; clk      ; None                        ; None                      ; 5.468 ns                ;
+; N/A                                     ; 177.81 MHz ( period = 5.624 ns )                    ; stack[3][2] ; visited[1]            ; clk        ; clk      ; None                        ; None                      ; 5.473 ns                ;
+; N/A                                     ; 178.32 MHz ( period = 5.608 ns )                    ; stack[3][2] ; visited[3]            ; clk        ; clk      ; None                        ; None                      ; 5.457 ns                ;
+; N/A                                     ; 179.34 MHz ( period = 5.576 ns )                    ; visited[1]  ; stack[3][1]           ; clk        ; clk      ; None                        ; None                      ; 5.395 ns                ;
+; N/A                                     ; 179.34 MHz ( period = 5.576 ns )                    ; visited[1]  ; stack[3][0]           ; clk        ; clk      ; None                        ; None                      ; 5.395 ns                ;
+; N/A                                     ; 179.34 MHz ( period = 5.576 ns )                    ; visited[1]  ; stack[3][2]           ; clk        ; clk      ; None                        ; None                      ; 5.395 ns                ;
+; N/A                                     ; 179.66 MHz ( period = 5.566 ns )                    ; current[0]  ; stack[4][1]           ; clk        ; clk      ; None                        ; None                      ; 5.396 ns                ;
+; N/A                                     ; 179.66 MHz ( period = 5.566 ns )                    ; current[0]  ; stack[4][0]           ; clk        ; clk      ; None                        ; None                      ; 5.396 ns                ;
+; N/A                                     ; 179.66 MHz ( period = 5.566 ns )                    ; current[0]  ; stack[4][2]           ; clk        ; clk      ; None                        ; None                      ; 5.396 ns                ;
+; N/A                                     ; 179.95 MHz ( period = 5.557 ns )                    ; current[0]  ; stack[3][1]           ; clk        ; clk      ; None                        ; None                      ; 5.387 ns                ;
+; N/A                                     ; 179.95 MHz ( period = 5.557 ns )                    ; current[0]  ; stack[3][0]           ; clk        ; clk      ; None                        ; None                      ; 5.387 ns                ;
+; N/A                                     ; 179.95 MHz ( period = 5.557 ns )                    ; current[0]  ; stack[3][2]           ; clk        ; clk      ; None                        ; None                      ; 5.387 ns                ;
+; N/A                                     ; 180.25 MHz ( period = 5.548 ns )                    ; visited[3]  ; stack[1][2]           ; clk        ; clk      ; None                        ; None                      ; 5.367 ns                ;
+; N/A                                     ; 180.77 MHz ( period = 5.532 ns )                    ; sp[0]       ; current[1]            ; clk        ; clk      ; None                        ; None                      ; 5.355 ns                ;
+; N/A                                     ; 181.06 MHz ( period = 5.523 ns )                    ; visited[3]  ; stack[2][1]           ; clk        ; clk      ; None                        ; None                      ; 5.342 ns                ;
+; N/A                                     ; 181.06 MHz ( period = 5.523 ns )                    ; visited[3]  ; stack[2][0]           ; clk        ; clk      ; None                        ; None                      ; 5.342 ns                ;
+; N/A                                     ; 181.06 MHz ( period = 5.523 ns )                    ; visited[3]  ; stack[2][2]           ; clk        ; clk      ; None                        ; None                      ; 5.342 ns                ;
+; N/A                                     ; 181.09 MHz ( period = 5.522 ns )                    ; neighbor[2] ; stack[1][2]           ; clk        ; clk      ; None                        ; None                      ; 5.352 ns                ;
+; N/A                                     ; 181.92 MHz ( period = 5.497 ns )                    ; neighbor[2] ; stack[2][1]           ; clk        ; clk      ; None                        ; None                      ; 5.327 ns                ;
+; N/A                                     ; 181.92 MHz ( period = 5.497 ns )                    ; neighbor[2] ; stack[2][0]           ; clk        ; clk      ; None                        ; None                      ; 5.327 ns                ;
+; N/A                                     ; 181.92 MHz ( period = 5.497 ns )                    ; neighbor[2] ; stack[2][2]           ; clk        ; clk      ; None                        ; None                      ; 5.327 ns                ;
+; N/A                                     ; 182.32 MHz ( period = 5.485 ns )                    ; sp[1]       ; current[1]            ; clk        ; clk      ; None                        ; None                      ; 5.308 ns                ;
+; N/A                                     ; 184.43 MHz ( period = 5.422 ns )                    ; stack[3][0] ; visited[4]            ; clk        ; clk      ; None                        ; None                      ; 5.271 ns                ;
+; N/A                                     ; 184.77 MHz ( period = 5.412 ns )                    ; visited[2]  ; neighbor[0]           ; clk        ; clk      ; None                        ; None                      ; 5.246 ns                ;
+; N/A                                     ; 185.63 MHz ( period = 5.387 ns )                    ; neighbor[1] ; neighbor[1]           ; clk        ; clk      ; None                        ; None                      ; 5.221 ns                ;
+; N/A                                     ; 186.08 MHz ( period = 5.374 ns )                    ; visited[2]  ; state.check_neighbors ; clk        ; clk      ; None                        ; None                      ; 5.214 ns                ;
+; N/A                                     ; 186.53 MHz ( period = 5.361 ns )                    ; current[1]  ; stack[3][1]           ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 186.53 MHz ( period = 5.361 ns )                    ; current[1]  ; stack[3][0]           ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 186.53 MHz ( period = 5.361 ns )                    ; current[1]  ; stack[3][2]           ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 186.74 MHz ( period = 5.355 ns )                    ; visited[2]  ; state.finish          ; clk        ; clk      ; None                        ; None                      ; 5.200 ns                ;
+; N/A                                     ; 187.20 MHz ( period = 5.342 ns )                    ; sp[2]       ; current[1]            ; clk        ; clk      ; None                        ; None                      ; 5.170 ns                ;
+; N/A                                     ; 187.44 MHz ( period = 5.335 ns )                    ; current[1]  ; stack[4][1]           ; clk        ; clk      ; None                        ; None                      ; 5.165 ns                ;
+; N/A                                     ; 187.44 MHz ( period = 5.335 ns )                    ; current[1]  ; stack[4][0]           ; clk        ; clk      ; None                        ; None                      ; 5.165 ns                ;
+; N/A                                     ; 187.44 MHz ( period = 5.335 ns )                    ; current[1]  ; stack[4][2]           ; clk        ; clk      ; None                        ; None                      ; 5.165 ns                ;
+; N/A                                     ; 187.69 MHz ( period = 5.328 ns )                    ; stack[0][0] ; visited[4]            ; clk        ; clk      ; None                        ; None                      ; 5.167 ns                ;
+; N/A                                     ; 188.39 MHz ( period = 5.308 ns )                    ; stack[3][0] ; visited[2]            ; clk        ; clk      ; None                        ; None                      ; 5.146 ns                ;
+; N/A                                     ; 188.57 MHz ( period = 5.303 ns )                    ; neighbor[0] ; neighbor[1]           ; clk        ; clk      ; None                        ; None                      ; 5.137 ns                ;
+; N/A                                     ; 188.64 MHz ( period = 5.301 ns )                    ; visited[1]  ; stack[1][2]           ; clk        ; clk      ; None                        ; None                      ; 5.120 ns                ;
+; N/A                                     ; 189.32 MHz ( period = 5.282 ns )                    ; current[0]  ; stack[1][2]           ; clk        ; clk      ; None                        ; None                      ; 5.112 ns                ;
+; N/A                                     ; 189.54 MHz ( period = 5.276 ns )                    ; visited[1]  ; stack[2][1]           ; clk        ; clk      ; None                        ; None                      ; 5.095 ns                ;
+; N/A                                     ; 189.54 MHz ( period = 5.276 ns )                    ; visited[1]  ; stack[2][0]           ; clk        ; clk      ; None                        ; None                      ; 5.095 ns                ;
+; N/A                                     ; 189.54 MHz ( period = 5.276 ns )                    ; visited[1]  ; stack[2][2]           ; clk        ; clk      ; None                        ; None                      ; 5.095 ns                ;
+; N/A                                     ; 190.22 MHz ( period = 5.257 ns )                    ; current[0]  ; stack[2][1]           ; clk        ; clk      ; None                        ; None                      ; 5.087 ns                ;
+; N/A                                     ; 190.22 MHz ( period = 5.257 ns )                    ; current[0]  ; stack[2][0]           ; clk        ; clk      ; None                        ; None                      ; 5.087 ns                ;
+; N/A                                     ; 190.22 MHz ( period = 5.257 ns )                    ; current[0]  ; stack[2][2]           ; clk        ; clk      ; None                        ; None                      ; 5.087 ns                ;
+; N/A                                     ; 190.55 MHz ( period = 5.248 ns )                    ; sp[2]       ; current[0]            ; clk        ; clk      ; None                        ; None                      ; 5.076 ns                ;
+; N/A                                     ; 190.84 MHz ( period = 5.240 ns )                    ; stack[4][2] ; visited[0]            ; clk        ; clk      ; None                        ; None                      ; 5.089 ns                ;
+; N/A                                     ; 191.79 MHz ( period = 5.214 ns )                    ; stack[0][0] ; visited[2]            ; clk        ; clk      ; None                        ; None                      ; 5.042 ns                ;
+; N/A                                     ; 192.53 MHz ( period = 5.194 ns )                    ; stack[3][1] ; visited[4]            ; clk        ; clk      ; None                        ; None                      ; 5.043 ns                ;
+; N/A                                     ; 192.53 MHz ( period = 5.194 ns )                    ; stack[4][2] ; visited[1]            ; clk        ; clk      ; None                        ; None                      ; 5.043 ns                ;
+; N/A                                     ; 192.86 MHz ( period = 5.185 ns )                    ; stack[3][0] ; visited[0]            ; clk        ; clk      ; None                        ; None                      ; 5.034 ns                ;
+; N/A                                     ; 193.12 MHz ( period = 5.178 ns )                    ; stack[4][2] ; visited[3]            ; clk        ; clk      ; None                        ; None                      ; 5.027 ns                ;
+; N/A                                     ; 195.01 MHz ( period = 5.128 ns )                    ; current[0]  ; state.push            ; clk        ; clk      ; None                        ; None                      ; 4.968 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; stack[3][1] ; visited[2]            ; clk        ; clk      ; None                        ; None                      ; 4.933 ns                ;
+; N/A                                     ; 196.43 MHz ( period = 5.091 ns )                    ; stack[0][0] ; visited[0]            ; clk        ; clk      ; None                        ; None                      ; 4.930 ns                ;
+; N/A                                     ; 196.62 MHz ( period = 5.086 ns )                    ; current[1]  ; stack[1][2]           ; clk        ; clk      ; None                        ; None                      ; 4.916 ns                ;
+; N/A                                     ; 197.59 MHz ( period = 5.061 ns )                    ; current[1]  ; stack[2][1]           ; clk        ; clk      ; None                        ; None                      ; 4.891 ns                ;
+; N/A                                     ; 197.59 MHz ( period = 5.061 ns )                    ; current[1]  ; stack[2][0]           ; clk        ; clk      ; None                        ; None                      ; 4.891 ns                ;
+; N/A                                     ; 197.59 MHz ( period = 5.061 ns )                    ; current[1]  ; stack[2][2]           ; clk        ; clk      ; None                        ; None                      ; 4.891 ns                ;
+; N/A                                     ; 200.12 MHz ( period = 4.997 ns )                    ; visited[3]  ; stack[0][1]           ; clk        ; clk      ; None                        ; None                      ; 4.826 ns                ;
+; N/A                                     ; 200.12 MHz ( period = 4.997 ns )                    ; visited[3]  ; stack[0][0]           ; clk        ; clk      ; None                        ; None                      ; 4.826 ns                ;
+; N/A                                     ; 200.12 MHz ( period = 4.997 ns )                    ; visited[3]  ; stack[0][2]           ; clk        ; clk      ; None                        ; None                      ; 4.826 ns                ;
+; N/A                                     ; 200.32 MHz ( period = 4.992 ns )                    ; stack[4][0] ; visited[4]            ; clk        ; clk      ; None                        ; None                      ; 4.841 ns                ;
+; N/A                                     ; 200.68 MHz ( period = 4.983 ns )                    ; visited[3]  ; stack[4][1]           ; clk        ; clk      ; None                        ; None                      ; 4.802 ns                ;
+; N/A                                     ; 200.68 MHz ( period = 4.983 ns )                    ; visited[3]  ; stack[4][0]           ; clk        ; clk      ; None                        ; None                      ; 4.802 ns                ;
+; N/A                                     ; 200.68 MHz ( period = 4.983 ns )                    ; visited[3]  ; stack[4][2]           ; clk        ; clk      ; None                        ; None                      ; 4.802 ns                ;
+; N/A                                     ; 201.17 MHz ( period = 4.971 ns )                    ; neighbor[2] ; stack[0][1]           ; clk        ; clk      ; None                        ; None                      ; 4.811 ns                ;
+; N/A                                     ; 201.17 MHz ( period = 4.971 ns )                    ; neighbor[2] ; stack[0][0]           ; clk        ; clk      ; None                        ; None                      ; 4.811 ns                ;
+; N/A                                     ; 201.17 MHz ( period = 4.971 ns )                    ; neighbor[2] ; stack[0][2]           ; clk        ; clk      ; None                        ; None                      ; 4.811 ns                ;
+; N/A                                     ; 201.69 MHz ( period = 4.958 ns )                    ; visited[3]  ; sp[2]                 ; clk        ; clk      ; None                        ; None                      ; 4.787 ns                ;
+; N/A                                     ; 201.73 MHz ( period = 4.957 ns )                    ; neighbor[2] ; stack[4][1]           ; clk        ; clk      ; None                        ; None                      ; 4.787 ns                ;
+; N/A                                     ; 201.73 MHz ( period = 4.957 ns )                    ; neighbor[2] ; stack[4][0]           ; clk        ; clk      ; None                        ; None                      ; 4.787 ns                ;
+; N/A                                     ; 201.73 MHz ( period = 4.957 ns )                    ; neighbor[2] ; stack[4][2]           ; clk        ; clk      ; None                        ; None                      ; 4.787 ns                ;
+; N/A                                     ; 201.73 MHz ( period = 4.957 ns )                    ; stack[3][1] ; visited[0]            ; clk        ; clk      ; None                        ; None                      ; 4.806 ns                ;
+; N/A                                     ; 202.35 MHz ( period = 4.942 ns )                    ; current[2]  ; stack[4][1]           ; clk        ; clk      ; None                        ; None                      ; 4.772 ns                ;
+; N/A                                     ; 202.35 MHz ( period = 4.942 ns )                    ; current[2]  ; stack[4][0]           ; clk        ; clk      ; None                        ; None                      ; 4.772 ns                ;
+; N/A                                     ; 202.35 MHz ( period = 4.942 ns )                    ; current[2]  ; stack[4][2]           ; clk        ; clk      ; None                        ; None                      ; 4.772 ns                ;
+; N/A                                     ; 202.72 MHz ( period = 4.933 ns )                    ; current[2]  ; stack[3][1]           ; clk        ; clk      ; None                        ; None                      ; 4.763 ns                ;
+; N/A                                     ; 202.72 MHz ( period = 4.933 ns )                    ; current[2]  ; stack[3][0]           ; clk        ; clk      ; None                        ; None                      ; 4.763 ns                ;
+; N/A                                     ; 202.72 MHz ( period = 4.933 ns )                    ; current[2]  ; stack[3][2]           ; clk        ; clk      ; None                        ; None                      ; 4.763 ns                ;
+; N/A                                     ; 202.76 MHz ( period = 4.932 ns )                    ; neighbor[2] ; sp[2]                 ; clk        ; clk      ; None                        ; None                      ; 4.772 ns                ;
+; N/A                                     ; 203.17 MHz ( period = 4.922 ns )                    ; stack[0][1] ; visited[4]            ; clk        ; clk      ; None                        ; None                      ; 4.761 ns                ;
+; N/A                                     ; 204.21 MHz ( period = 4.897 ns )                    ; current[1]  ; state.push            ; clk        ; clk      ; None                        ; None                      ; 4.737 ns                ;
+; N/A                                     ; 204.71 MHz ( period = 4.885 ns )                    ; stack[0][2] ; visited[4]            ; clk        ; clk      ; None                        ; None                      ; 4.724 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;             ;                       ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------+
+; tsu                                                                        ;
++-------+--------------+------------+---------------+-------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From          ; To          ; To Clock ;
++-------+--------------+------------+---------------+-------------+----------+
+; N/A   ; None         ; 4.975 ns   ; start         ; visited[4]  ; clk      ;
+; N/A   ; None         ; 4.832 ns   ; start         ; visited[2]  ; clk      ;
+; N/A   ; None         ; 4.750 ns   ; start         ; stack[0][2] ; clk      ;
+; N/A   ; None         ; 4.750 ns   ; start         ; stack[0][0] ; clk      ;
+; N/A   ; None         ; 4.750 ns   ; start         ; stack[0][1] ; clk      ;
+; N/A   ; None         ; 4.526 ns   ; start         ; neighbor[2] ; clk      ;
+; N/A   ; None         ; 4.525 ns   ; start         ; neighbor[1] ; clk      ;
+; N/A   ; None         ; 4.523 ns   ; start         ; neighbor[0] ; clk      ;
+; N/A   ; None         ; 4.320 ns   ; start         ; sp[2]       ; clk      ;
+; N/A   ; None         ; 4.228 ns   ; start         ; sp[1]       ; clk      ;
+; N/A   ; None         ; 3.926 ns   ; start         ; state.push  ; clk      ;
+; N/A   ; None         ; 3.905 ns   ; start         ; visited[1]  ; clk      ;
+; N/A   ; None         ; 3.901 ns   ; start         ; sp[0]       ; clk      ;
+; N/A   ; None         ; 3.689 ns   ; start         ; state.idle  ; clk      ;
+; N/A   ; None         ; 3.675 ns   ; start         ; visited[3]  ; clk      ;
+; N/A   ; None         ; 3.453 ns   ; start         ; visited[0]  ; clk      ;
+; N/A   ; None         ; 2.999 ns   ; start_node[2] ; stack[0][2] ; clk      ;
+; N/A   ; None         ; 2.884 ns   ; rst           ; stack[3][2] ; clk      ;
+; N/A   ; None         ; 2.884 ns   ; rst           ; stack[3][0] ; clk      ;
+; N/A   ; None         ; 2.884 ns   ; rst           ; stack[3][1] ; clk      ;
+; N/A   ; None         ; 2.747 ns   ; start_node[1] ; stack[0][1] ; clk      ;
+; N/A   ; None         ; 2.734 ns   ; start_node[0] ; stack[0][0] ; clk      ;
+; N/A   ; None         ; 2.715 ns   ; start         ; done_reg    ; clk      ;
+; N/A   ; None         ; 2.609 ns   ; rst           ; stack[1][2] ; clk      ;
+; N/A   ; None         ; 2.584 ns   ; rst           ; stack[2][2] ; clk      ;
+; N/A   ; None         ; 2.584 ns   ; rst           ; stack[2][0] ; clk      ;
+; N/A   ; None         ; 2.584 ns   ; rst           ; stack[2][1] ; clk      ;
+; N/A   ; None         ; 2.453 ns   ; rst           ; stack[0][2] ; clk      ;
+; N/A   ; None         ; 2.453 ns   ; rst           ; stack[0][0] ; clk      ;
+; N/A   ; None         ; 2.453 ns   ; rst           ; stack[0][1] ; clk      ;
+; N/A   ; None         ; 1.884 ns   ; rst           ; stack[1][0] ; clk      ;
+; N/A   ; None         ; 1.884 ns   ; rst           ; stack[1][1] ; clk      ;
+; N/A   ; None         ; 1.470 ns   ; rst           ; stack[4][2] ; clk      ;
+; N/A   ; None         ; 1.470 ns   ; rst           ; stack[4][0] ; clk      ;
+; N/A   ; None         ; 1.470 ns   ; rst           ; stack[4][1] ; clk      ;
++-------+--------------+------------+---------------+-------------+----------+
+
+
++------------------------------------------------------------------------+
+; tco                                                                    ;
++-------+--------------+------------+------------+----------+------------+
+; Slack ; Required tco ; Actual tco ; From       ; To       ; From Clock ;
++-------+--------------+------------+------------+----------+------------+
+; N/A   ; None         ; 7.276 ns   ; visited[1] ; visit[1] ; clk        ;
+; N/A   ; None         ; 7.245 ns   ; visited[3] ; visit[3] ; clk        ;
+; N/A   ; None         ; 7.236 ns   ; visited[4] ; visit[4] ; clk        ;
+; N/A   ; None         ; 6.980 ns   ; visited[0] ; visit[0] ; clk        ;
+; N/A   ; None         ; 6.964 ns   ; done_reg   ; done     ; clk        ;
+; N/A   ; None         ; 6.910 ns   ; visited[2] ; visit[2] ; clk        ;
++-------+--------------+------------+------------+----------+------------+
+
+
++----------------------------------------------------------------------------------+
+; th                                                                               ;
++---------------+-------------+-----------+---------------+-------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From          ; To          ; To Clock ;
++---------------+-------------+-----------+---------------+-------------+----------+
+; N/A           ; None        ; -1.360 ns ; rst           ; stack[4][2] ; clk      ;
+; N/A           ; None        ; -1.360 ns ; rst           ; stack[4][0] ; clk      ;
+; N/A           ; None        ; -1.360 ns ; rst           ; stack[4][1] ; clk      ;
+; N/A           ; None        ; -1.774 ns ; rst           ; stack[1][0] ; clk      ;
+; N/A           ; None        ; -1.774 ns ; rst           ; stack[1][1] ; clk      ;
+; N/A           ; None        ; -2.343 ns ; rst           ; stack[0][2] ; clk      ;
+; N/A           ; None        ; -2.343 ns ; rst           ; stack[0][0] ; clk      ;
+; N/A           ; None        ; -2.343 ns ; rst           ; stack[0][1] ; clk      ;
+; N/A           ; None        ; -2.474 ns ; rst           ; stack[2][2] ; clk      ;
+; N/A           ; None        ; -2.474 ns ; rst           ; stack[2][0] ; clk      ;
+; N/A           ; None        ; -2.474 ns ; rst           ; stack[2][1] ; clk      ;
+; N/A           ; None        ; -2.499 ns ; rst           ; stack[1][2] ; clk      ;
+; N/A           ; None        ; -2.605 ns ; start         ; done_reg    ; clk      ;
+; N/A           ; None        ; -2.624 ns ; start_node[0] ; stack[0][0] ; clk      ;
+; N/A           ; None        ; -2.637 ns ; start_node[1] ; stack[0][1] ; clk      ;
+; N/A           ; None        ; -2.774 ns ; rst           ; stack[3][2] ; clk      ;
+; N/A           ; None        ; -2.774 ns ; rst           ; stack[3][0] ; clk      ;
+; N/A           ; None        ; -2.774 ns ; rst           ; stack[3][1] ; clk      ;
+; N/A           ; None        ; -2.889 ns ; start_node[2] ; stack[0][2] ; clk      ;
+; N/A           ; None        ; -3.343 ns ; start         ; visited[0]  ; clk      ;
+; N/A           ; None        ; -3.565 ns ; start         ; visited[3]  ; clk      ;
+; N/A           ; None        ; -3.579 ns ; start         ; state.idle  ; clk      ;
+; N/A           ; None        ; -3.791 ns ; start         ; sp[0]       ; clk      ;
+; N/A           ; None        ; -3.795 ns ; start         ; visited[1]  ; clk      ;
+; N/A           ; None        ; -3.816 ns ; start         ; state.push  ; clk      ;
+; N/A           ; None        ; -4.118 ns ; start         ; sp[1]       ; clk      ;
+; N/A           ; None        ; -4.210 ns ; start         ; sp[2]       ; clk      ;
+; N/A           ; None        ; -4.413 ns ; start         ; neighbor[0] ; clk      ;
+; N/A           ; None        ; -4.415 ns ; start         ; neighbor[1] ; clk      ;
+; N/A           ; None        ; -4.416 ns ; start         ; neighbor[2] ; clk      ;
+; N/A           ; None        ; -4.531 ns ; start         ; stack[0][2] ; clk      ;
+; N/A           ; None        ; -4.531 ns ; start         ; stack[0][0] ; clk      ;
+; N/A           ; None        ; -4.531 ns ; start         ; stack[0][1] ; clk      ;
+; N/A           ; None        ; -4.722 ns ; start         ; visited[2]  ; clk      ;
+; N/A           ; None        ; -4.865 ns ; start         ; visited[4]  ; clk      ;
++---------------+-------------+-----------+---------------+-------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Wed Apr 21 18:32:28 2021
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off dfs -c dfs --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Info: Clock "clk" has Internal fmax of 126.02 MHz between source register "visited[0]" and destination register "stack[3][1]" (period= 7.935 ns)
+    Info: + Longest register to register delay is 7.754 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X33_Y20_N1; Fanout = 2; REG Node = 'visited[0]'
+        Info: 2: + IC(1.114 ns) + CELL(0.075 ns) = 1.189 ns; Loc. = LC_X33_Y22_N7; Fanout = 1; COMB Node = 'Mux~480'
+        Info: 3: + IC(1.034 ns) + CELL(0.366 ns) = 2.589 ns; Loc. = LC_X34_Y20_N5; Fanout = 1; COMB Node = 'Mux~481'
+        Info: 4: + IC(0.762 ns) + CELL(0.280 ns) = 3.631 ns; Loc. = LC_X32_Y20_N8; Fanout = 3; COMB Node = 'process0~132'
+        Info: 5: + IC(0.804 ns) + CELL(0.183 ns) = 4.618 ns; Loc. = LC_X33_Y20_N6; Fanout = 6; COMB Node = 'process0~0'
+        Info: 6: + IC(0.306 ns) + CELL(0.280 ns) = 5.204 ns; Loc. = LC_X33_Y20_N7; Fanout = 3; COMB Node = 'stack[4][2]~525'
+        Info: 7: + IC(1.239 ns) + CELL(0.280 ns) = 6.723 ns; Loc. = LC_X32_Y23_N7; Fanout = 3; COMB Node = 'stack[3][2]~21'
+        Info: 8: + IC(0.326 ns) + CELL(0.705 ns) = 7.754 ns; Loc. = LC_X32_Y23_N1; Fanout = 1; REG Node = 'stack[3][1]'
+        Info: Total cell delay = 2.169 ns ( 27.97 % )
+        Info: Total interconnect delay = 5.585 ns ( 72.03 % )
+    Info: - Smallest clock skew is -0.015 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 2.779 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 35; CLK Node = 'clk'
+            Info: 2: + IC(1.512 ns) + CELL(0.542 ns) = 2.779 ns; Loc. = LC_X32_Y23_N1; Fanout = 1; REG Node = 'stack[3][1]'
+            Info: Total cell delay = 1.267 ns ( 45.59 % )
+            Info: Total interconnect delay = 1.512 ns ( 54.41 % )
+        Info: - Longest clock path from clock "clk" to source register is 2.794 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 35; CLK Node = 'clk'
+            Info: 2: + IC(1.527 ns) + CELL(0.542 ns) = 2.794 ns; Loc. = LC_X33_Y20_N1; Fanout = 2; REG Node = 'visited[0]'
+            Info: Total cell delay = 1.267 ns ( 45.35 % )
+            Info: Total interconnect delay = 1.527 ns ( 54.65 % )
+    Info: + Micro clock to output delay of source is 0.156 ns
+    Info: + Micro setup delay of destination is 0.010 ns
+Info: tsu for register "visited[4]" (data pin = "start", clock pin = "clk") is 4.975 ns
+    Info: + Longest pin to register delay is 7.759 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.087 ns) = 1.087 ns; Loc. = PIN_K10; Fanout = 5; PIN Node = 'start'
+        Info: 2: + IC(3.944 ns) + CELL(0.183 ns) = 5.214 ns; Loc. = LC_X34_Y20_N6; Fanout = 7; COMB Node = 'Select~1402'
+        Info: 3: + IC(0.811 ns) + CELL(0.280 ns) = 6.305 ns; Loc. = LC_X33_Y20_N9; Fanout = 1; COMB Node = 'Select~1412'
+        Info: 4: + IC(0.749 ns) + CELL(0.705 ns) = 7.759 ns; Loc. = LC_X32_Y20_N8; Fanout = 2; REG Node = 'visited[4]'
+        Info: Total cell delay = 2.255 ns ( 29.06 % )
+        Info: Total interconnect delay = 5.504 ns ( 70.94 % )
+    Info: + Micro setup delay of destination is 0.010 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 2.794 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 35; CLK Node = 'clk'
+        Info: 2: + IC(1.527 ns) + CELL(0.542 ns) = 2.794 ns; Loc. = LC_X32_Y20_N8; Fanout = 2; REG Node = 'visited[4]'
+        Info: Total cell delay = 1.267 ns ( 45.35 % )
+        Info: Total interconnect delay = 1.527 ns ( 54.65 % )
+Info: tco from clock "clk" to destination pin "visit[1]" through register "visited[1]" is 7.276 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.794 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 35; CLK Node = 'clk'
+        Info: 2: + IC(1.527 ns) + CELL(0.542 ns) = 2.794 ns; Loc. = LC_X34_Y20_N5; Fanout = 2; REG Node = 'visited[1]'
+        Info: Total cell delay = 1.267 ns ( 45.35 % )
+        Info: Total interconnect delay = 1.527 ns ( 54.65 % )
+    Info: + Micro clock to output delay of source is 0.156 ns
+    Info: + Longest register to pin delay is 4.326 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X34_Y20_N5; Fanout = 2; REG Node = 'visited[1]'
+        Info: 2: + IC(1.922 ns) + CELL(2.404 ns) = 4.326 ns; Loc. = PIN_B8; Fanout = 0; PIN Node = 'visit[1]'
+        Info: Total cell delay = 2.404 ns ( 55.57 % )
+        Info: Total interconnect delay = 1.922 ns ( 44.43 % )
+Info: th for register "stack[4][2]" (data pin = "rst", clock pin = "clk") is -1.360 ns
+    Info: + Longest clock path from clock "clk" to destination register is 2.779 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.725 ns) = 0.725 ns; Loc. = PIN_L2; Fanout = 35; CLK Node = 'clk'
+        Info: 2: + IC(1.512 ns) + CELL(0.542 ns) = 2.779 ns; Loc. = LC_X32_Y23_N8; Fanout = 1; REG Node = 'stack[4][2]'
+        Info: Total cell delay = 1.267 ns ( 45.59 % )
+        Info: Total interconnect delay = 1.512 ns ( 54.41 % )
+    Info: + Micro hold delay of destination is 0.100 ns
+    Info: - Shortest pin to register delay is 4.239 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.828 ns) = 0.828 ns; Loc. = PIN_L3; Fanout = 23; PIN Node = 'rst'
+        Info: 2: + IC(1.886 ns) + CELL(0.075 ns) = 2.789 ns; Loc. = LC_X33_Y23_N7; Fanout = 3; COMB Node = 'stack[4][2]~24'
+        Info: 3: + IC(0.745 ns) + CELL(0.705 ns) = 4.239 ns; Loc. = LC_X32_Y23_N8; Fanout = 1; REG Node = 'stack[4][2]'
+        Info: Total cell delay = 1.608 ns ( 37.93 % )
+        Info: Total interconnect delay = 2.631 ns ( 62.07 % )
+Info: Quartus II Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Processing ended: Wed Apr 21 18:32:28 2021
+    Info: Elapsed time: 00:00:00
+
+

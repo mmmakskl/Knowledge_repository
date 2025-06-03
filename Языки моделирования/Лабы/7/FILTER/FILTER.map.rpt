@@ -1,0 +1,237 @@
+Analysis & Synthesis report for FILTER
+Tue Apr 13 02:10:50 2021
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. User-Specified and Inferred Latches
+  8. General Register Statistics
+  9. Analysis & Synthesis Equations
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Apr 13 02:10:50 2021    ;
+; Quartus II Version          ; 5.0 Build 148 04/26/2005 SJ Full Version ;
+; Revision Name               ; FILTER                                   ;
+; Top-level Entity Name       ; FILTER                                   ;
+; Family                      ; Stratix                                  ;
+; Total logic elements        ; 9                                        ;
+; Total pins                  ; 4                                        ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; DSP block 9-bit elements    ; 0                                        ;
+; Total PLLs                  ; 0                                        ;
+; Total DLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                     ;
++--------------------------------------------------------------------+--------------+---------------+
+; Option                                                             ; Setting      ; Default Value ;
++--------------------------------------------------------------------+--------------+---------------+
+; Top-level entity name                                              ; FILTER       ; FILTER        ;
+; Family name                                                        ; Stratix      ; Stratix       ;
+; Use smart compilation                                              ; Off          ; Off           ;
+; Restructure Multiplexers                                           ; Auto         ; Auto          ;
+; Create Debugging Nodes for IP Cores                                ; off          ; off           ;
+; Preserve fewer node names                                          ; On           ; On            ;
+; Disable OpenCore Plus hardware evaluation                          ; Off          ; Off           ;
+; Verilog Version                                                    ; Verilog_2001 ; Verilog_2001  ;
+; VHDL Version                                                       ; VHDL93       ; VHDL93        ;
+; State Machine Processing                                           ; Auto         ; Auto          ;
+; Extract Verilog State Machines                                     ; On           ; On            ;
+; Extract VHDL State Machines                                        ; On           ; On            ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On           ; On            ;
+; DSP Block Balancing                                                ; Auto         ; Auto          ;
+; Maximum DSP Block Usage                                            ; -1           ; -1            ;
+; NOT Gate Push-Back                                                 ; On           ; On            ;
+; Power-Up Don't Care                                                ; On           ; On            ;
+; Remove Redundant Logic Cells                                       ; Off          ; Off           ;
+; Remove Duplicate Registers                                         ; On           ; On            ;
+; Ignore CARRY Buffers                                               ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                             ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                              ; Off          ; Off           ;
+; Ignore ROW GLOBAL Buffers                                          ; Off          ; Off           ;
+; Ignore LCELL Buffers                                               ; Off          ; Off           ;
+; Ignore SOFT Buffers                                                ; On           ; On            ;
+; Limit AHDL Integers to 32 Bits                                     ; Off          ; Off           ;
+; Optimization Technique -- Stratix/Stratix GX                       ; Balanced     ; Balanced      ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70           ; 70            ;
+; Auto Carry Chains                                                  ; On           ; On            ;
+; Auto Open-Drain Pins                                               ; On           ; On            ;
+; Remove Duplicate Logic                                             ; On           ; On            ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off          ; Off           ;
+; Perform gate-level register retiming                               ; Off          ; Off           ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On           ; On            ;
+; Auto ROM Replacement                                               ; On           ; On            ;
+; Auto RAM Replacement                                               ; On           ; On            ;
+; Auto DSP Block Replacement                                         ; On           ; On            ;
+; Auto Shift Register Replacement                                    ; On           ; On            ;
+; Auto Clock Enable Replacement                                      ; On           ; On            ;
+; Allows Synchronous Control Signal Usage in Normal Mode Logic Cells ; On           ; On            ;
+; Auto RAM Block Balancing                                           ; On           ; On            ;
+; Auto Resource Sharing                                              ; Off          ; Off           ;
+; Allow Any RAM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any ROM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any Shift Register Size For Recognition                      ; Off          ; Off           ;
+; Maximum Number of M512 Memory Blocks                               ; -1           ; -1            ;
+; Maximum Number of M4K Memory Blocks                                ; -1           ; -1            ;
+; Maximum Number of M-RAM Memory Blocks                              ; -1           ; -1            ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off          ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On           ; On            ;
++--------------------------------------------------------------------+--------------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                 ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+
+; FILTER.V                         ; yes             ; User Verilog HDL File  ; C:/Documents and Settings/User/Desktop/7/FILTER/FILTER.V ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++---------------------------------+-----------+
+; Resource                        ; Usage     ;
++---------------------------------+-----------+
+; Total logic elements            ; 9         ;
+; Total combinational functions   ; 9         ;
+;     -- Total 4-input functions  ; 3         ;
+;     -- Total 3-input functions  ; 2         ;
+;     -- Total 2-input functions  ; 4         ;
+;     -- Total 1-input functions  ; 0         ;
+;     -- Total 0-input functions  ; 0         ;
+; Combinational cells for routing ; 0         ;
+; Total registers                 ; 0         ;
+; I/O pins                        ; 4         ;
+; Maximum fan-out node            ; X         ;
+; Maximum fan-out                 ; 6         ;
+; Total fan-out                   ; 27        ;
+; Average fan-out                 ; 2.08      ;
++---------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
++----------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+-------------------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name     ;
++----------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+-------------------------+
+; |FILTER                    ; 9 (1)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 4    ; 0            ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |FILTER                 ;
+;    |RStrigger:call1|       ; 3 (3)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |FILTER|RStrigger:call1 ;
+;    |RStrigger:call2|       ; 3 (3)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |FILTER|RStrigger:call2 ;
+;    |RStrigger:call3|       ; 1 (1)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |FILTER|RStrigger:call3 ;
+;    |RStrigger:call4|       ; 1 (1)       ; 0            ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |FILTER|RStrigger:call4 ;
++----------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+-------------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------+
+; User-Specified and Inferred Latches               ;
++-----------------------------------------------+---+
+; Latch Name                                    ;   ;
++-----------------------------------------------+---+
+; RStrigger:call4|res                           ;   ;
+; RStrigger:call3|res                           ;   ;
+; RStrigger:call2|res                           ;   ;
+; RStrigger:call1|res                           ;   ;
+; Number of user-specified and inferred latches ; 4 ;
++-----------------------------------------------+---+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in C:/Documents and Settings/User/Desktop/7/FILTER/FILTER.map.eqn.
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Tue Apr 13 02:10:49 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FILTER -c FILTER
+Warning: Verilog HDL net warning at FILTER.V(23): created undeclared net "AInv"
+Warning: Verilog HDL net warning at FILTER.V(24): created undeclared net "BInv"
+Warning: Verilog HDL net warning at FILTER.V(26): created undeclared net "ou1"
+Warning: Verilog HDL net warning at FILTER.V(27): created undeclared net "ou2"
+Warning: Verilog HDL net warning at FILTER.V(28): created undeclared net "ou3"
+Warning: Verilog HDL net warning at FILTER.V(29): created undeclared net "ou4"
+Info: Found 2 design units, including 2 entities, in source file FILTER.V
+    Info: Found entity 1: RStrigger
+    Info: Found entity 2: FILTER
+Info: Elaborating entity "FILTER" for the top level hierarchy
+Info: Elaborating entity "RStrigger" for hierarchy "RStrigger:call1"
+Warning: Verilog HDL assignment warning at FILTER.V(10): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL assignment warning at FILTER.V(13): truncated value with size 32 to match size of target (1)
+Warning: Verilog HDL Always Construct warning at FILTER.V(7): variable "res" may not be assigned a new value in every possible path through the Always Construct.  Variable "res" holds its previous value in every path with no new value assignment, which may create a combinational loop in the current design.
+Warning: Latch RStrigger:call4|res has unsafe behavior
+    Warning: Ports CLR and PRE on the latch are fed by the same signal B
+Warning: Latch RStrigger:call3|res has unsafe behavior
+    Warning: Ports CLR and PRE on the latch are fed by the same signal A
+Warning: Latch RStrigger:call2|res has unsafe behavior
+    Warning: Ports ENA and CLR on the latch are fed by the same signal B
+    Warning: Ports ENA and PRE on the latch are fed by the same signal X
+Warning: Latch RStrigger:call1|res has unsafe behavior
+    Warning: Ports ENA and CLR on the latch are fed by the same signal A
+    Warning: Ports ENA and PRE on the latch are fed by the same signal X
+Info: Implemented 13 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 1 output pins
+    Info: Implemented 9 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Processing ended: Tue Apr 13 02:10:50 2021
+    Info: Elapsed time: 00:00:01
+
+

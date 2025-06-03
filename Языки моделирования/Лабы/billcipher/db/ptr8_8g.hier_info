@@ -1,0 +1,92 @@
+|ptr8_8g
+q0 <= dc3g:inst.q0
+r0 => cip8_3g:inst1.r0
+r1 => cip8_3g:inst1.r1
+r2 => cip8_3g:inst1.r2
+r3 => cip8_3g:inst1.r3
+r4 => cip8_3g:inst1.r4
+r5 => cip8_3g:inst1.r5
+r6 => cip8_3g:inst1.r6
+r7 => cip8_3g:inst1.r7
+EI => cip8_3g:inst1.EI
+q1 <= dc3g:inst.q1
+q2 <= dc3g:inst.q2
+q3 <= dc3g:inst.q3
+q4 <= dc3g:inst.q4
+q5 <= dc3g:inst.q5
+q6 <= dc3g:inst.q6
+q7 <= dc3g:inst.q7
+
+
+|ptr8_8g|dc3g:inst
+q0 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+a0 => inst.IN0
+a0 => inst2.IN0
+a0 => inst12.IN0
+a0 => inst14.IN0
+a0 => inst16.IN0
+a1 => inst3.IN0
+a1 => inst7.IN1
+a1 => inst12.IN1
+a1 => inst15.IN1
+a1 => inst16.IN1
+a2 => inst4.IN0
+a2 => inst13.IN2
+a2 => inst14.IN2
+a2 => inst15.IN2
+a2 => inst16.IN2
+ena => inst5.IN1
+ena => inst6.IN1
+ena => inst8.IN1
+ena => inst9.IN1
+ena => inst10.IN1
+ena => inst11.IN1
+ena => inst17.IN1
+ena => inst18.IN1
+q1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+q3 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+q4 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+q5 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+q6 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+q7 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ptr8_8g|cip8_3g:inst1
+a0 <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+r1 => inst15.IN0
+r1 => inst.IN2
+r3 => inst29.IN0
+r3 => inst16.IN0
+r3 => inst18.IN1
+r3 => inst.IN3
+r2 => inst4.IN0
+r2 => inst19.IN1
+r2 => inst.IN1
+r4 => inst6.IN0
+r4 => inst22.IN2
+r4 => inst.IN5
+r6 => inst8.IN0
+r6 => inst21.IN1
+r6 => inst22.IN3
+r6 => inst.IN6
+r5 => inst17.IN0
+r5 => inst7.IN0
+r5 => inst22.IN1
+r5 => inst.IN4
+r7 => inst20.IN2
+r7 => inst21.IN2
+r7 => inst22.IN0
+r7 => inst.IN7
+EI => inst23.IN1
+EI => inst24.IN1
+EI => inst25.IN1
+EI => inst26.IN1
+EI => inst27.IN1
+a1 <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+a2 <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+EO <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+r0 => inst.IN0
+G <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+
+

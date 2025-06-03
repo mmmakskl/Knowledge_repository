@@ -1,0 +1,133 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L2 is reduce_or~161
+--operation mode is normal
+
+A1L2 = X[7] & !X[6] & !X[2] & !X[3] # !X[7] & (X[6] & !X[2] & !X[3] # !X[6] & (X[2] $ X[3]));
+
+
+--A1L1 is reduce_or~159
+--operation mode is normal
+
+A1L1 = A1L2 & !X[1];
+
+
+--A1L7 is reduce_or~186
+--operation mode is normal
+
+A1L7 = A1L1 & !X[4] & !X[0] & !X[5];
+
+
+--A1L4 is reduce_or~171
+--operation mode is normal
+
+A1L4 = X[7] & !X[5] & !X[1] & !X[3] # !X[7] & (X[5] & !X[1] & !X[3] # !X[5] & (X[1] $ X[3]));
+
+
+--A1L3 is reduce_or~169
+--operation mode is normal
+
+A1L3 = A1L4 & !X[2];
+
+
+--A1L8 is reduce_or~187
+--operation mode is normal
+
+A1L8 = A1L3 & !X[4] & !X[6] & !X[0];
+
+
+--A1L6 is reduce_or~181
+--operation mode is normal
+
+A1L6 = X[4] & !X[7] & !X[5] & !X[6] # !X[4] & (X[7] & !X[5] & !X[6] # !X[7] & (X[5] $ X[6]));
+
+
+--A1L5 is reduce_or~179
+--operation mode is normal
+
+A1L5 = A1L6 & !X[1];
+
+
+--A1L9 is reduce_or~188
+--operation mode is normal
+
+A1L9 = A1L5 & !X[2] & !X[3] & !X[0];
+
+
+--X[7] is X[7]
+--operation mode is input
+
+X[7] = INPUT();
+
+
+--X[5] is X[5]
+--operation mode is input
+
+X[5] = INPUT();
+
+
+--X[0] is X[0]
+--operation mode is input
+
+X[0] = INPUT();
+
+
+--X[6] is X[6]
+--operation mode is input
+
+X[6] = INPUT();
+
+
+--X[1] is X[1]
+--operation mode is input
+
+X[1] = INPUT();
+
+
+--X[4] is X[4]
+--operation mode is input
+
+X[4] = INPUT();
+
+
+--X[3] is X[3]
+--operation mode is input
+
+X[3] = INPUT();
+
+
+--X[2] is X[2]
+--operation mode is input
+
+X[2] = INPUT();
+
+
+--Y[0] is Y[0]
+--operation mode is output
+
+Y[0] = OUTPUT(A1L8);
+
+
+--Y[1] is Y[1]
+--operation mode is output
+
+Y[1] = OUTPUT(A1L7);
+
+
+--Y[2] is Y[2]
+--operation mode is output
+
+Y[2] = OUTPUT(A1L9);
+
+

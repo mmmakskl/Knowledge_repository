@@ -1,0 +1,121 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B2_inst10 is 8_bit_even_odd:inst3|inst10
+--operation mode is normal
+
+B2_inst10 = X[0] $ X[1];
+
+
+--X[0] is X[0]
+--operation mode is input
+
+X[0] = INPUT();
+
+
+--X[1] is X[1]
+--operation mode is input
+
+X[1] = INPUT();
+
+
+--X[7] is X[7]
+--operation mode is input
+
+X[7] = INPUT();
+
+
+--X[6] is X[6]
+--operation mode is input
+
+X[6] = INPUT();
+
+
+--X[5] is X[5]
+--operation mode is input
+
+X[5] = INPUT();
+
+
+--X[4] is X[4]
+--operation mode is input
+
+X[4] = INPUT();
+
+
+--X[3] is X[3]
+--operation mode is input
+
+X[3] = INPUT();
+
+
+--X[2] is X[2]
+--operation mode is input
+
+X[2] = INPUT();
+
+
+--IsError is IsError
+--operation mode is output
+
+IsError = OUTPUT(!B2_inst10);
+
+
+--Out[7] is Out[7]
+--operation mode is output
+
+Out[7] = OUTPUT(X[7]);
+
+
+--Out[6] is Out[6]
+--operation mode is output
+
+Out[6] = OUTPUT(X[6]);
+
+
+--Out[5] is Out[5]
+--operation mode is output
+
+Out[5] = OUTPUT(X[5]);
+
+
+--Out[4] is Out[4]
+--operation mode is output
+
+Out[4] = OUTPUT(X[4]);
+
+
+--Out[3] is Out[3]
+--operation mode is output
+
+Out[3] = OUTPUT(X[3]);
+
+
+--Out[2] is Out[2]
+--operation mode is output
+
+Out[2] = OUTPUT(X[2]);
+
+
+--Out[1] is Out[1]
+--operation mode is output
+
+Out[1] = OUTPUT(VCC);
+
+
+--Out[0] is Out[0]
+--operation mode is output
+
+Out[0] = OUTPUT(GND);
+
+

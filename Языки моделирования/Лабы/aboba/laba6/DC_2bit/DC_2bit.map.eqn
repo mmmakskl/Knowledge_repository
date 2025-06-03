@@ -1,0 +1,937 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1L2 is DC_graph:inst1|inst4~584
+--operation mode is normal
+
+B1L2 = !X0 & !X1;
+
+
+--B1L3 is DC_graph:inst1|inst4~585
+--operation mode is normal
+
+B1L3 = X0 & (!X1);
+
+
+--B1L4 is DC_graph:inst1|inst4~586
+--operation mode is normal
+
+B1L4 = X1 & (!X0);
+
+
+--B1L5 is DC_graph:inst1|inst4~587
+--operation mode is normal
+
+B1L5 = X0 & X1;
+
+
+--B9L1 is DC_graph:inst13|inst17~89
+--operation mode is normal
+
+B9L1 = X4 & (!ENB & !X3);
+
+
+--B6_inst1 is DC_graph:inst10|inst1
+--operation mode is normal
+
+B6_inst1 = X2 # X5 # !B9L1 # !B1L2;
+
+
+--B6_inst12 is DC_graph:inst10|inst12
+--operation mode is normal
+
+B6_inst12 = X2 # X5 # !B9L1 # !B1L3;
+
+
+--B6_inst13 is DC_graph:inst10|inst13
+--operation mode is normal
+
+B6_inst13 = X2 # X5 # !B9L1 # !B1L4;
+
+
+--B6_inst14 is DC_graph:inst10|inst14
+--operation mode is normal
+
+B6_inst14 = X2 # X5 # !B9L1 # !B1L5;
+
+
+--B6_inst15 is DC_graph:inst10|inst15
+--operation mode is normal
+
+B6_inst15 = X5 # !B9L1 # !B1L2 # !X2;
+
+
+--B6_inst16 is DC_graph:inst10|inst16
+--operation mode is normal
+
+B6_inst16 = X5 # !B9L1 # !B1L3 # !X2;
+
+
+--B6_inst17 is DC_graph:inst10|inst17
+--operation mode is normal
+
+B6_inst17 = X5 # !B9L1 # !B1L4 # !X2;
+
+
+--B6_inst18 is DC_graph:inst10|inst18
+--operation mode is normal
+
+B6_inst18 = X5 # !B9L1 # !B1L5 # !X2;
+
+
+--B9L2 is DC_graph:inst13|inst18~88
+--operation mode is normal
+
+B9L2 = X3 & X4 & (!ENB);
+
+
+--B5_inst1 is DC_graph:inst9|inst1
+--operation mode is normal
+
+B5_inst1 = X2 # X5 # !B9L2 # !B1L2;
+
+
+--B5_inst12 is DC_graph:inst9|inst12
+--operation mode is normal
+
+B5_inst12 = X2 # X5 # !B9L2 # !B1L3;
+
+
+--B5_inst13 is DC_graph:inst9|inst13
+--operation mode is normal
+
+B5_inst13 = X2 # X5 # !B9L2 # !B1L4;
+
+
+--B5_inst14 is DC_graph:inst9|inst14
+--operation mode is normal
+
+B5_inst14 = X2 # X5 # !B9L2 # !B1L5;
+
+
+--B5_inst15 is DC_graph:inst9|inst15
+--operation mode is normal
+
+B5_inst15 = X5 # !B9L2 # !B1L2 # !X2;
+
+
+--B5_inst16 is DC_graph:inst9|inst16
+--operation mode is normal
+
+B5_inst16 = X5 # !B9L2 # !B1L3 # !X2;
+
+
+--B5_inst17 is DC_graph:inst9|inst17
+--operation mode is normal
+
+B5_inst17 = X5 # !B9L2 # !B1L4 # !X2;
+
+
+--B5_inst18 is DC_graph:inst9|inst18
+--operation mode is normal
+
+B5_inst18 = X5 # !B9L2 # !B1L5 # !X2;
+
+
+--B2_inst1 is DC_graph:inst2|inst1
+--operation mode is normal
+
+B2_inst1 = X2 # !B9L1 # !X5 # !B1L2;
+
+
+--B2_inst12 is DC_graph:inst2|inst12
+--operation mode is normal
+
+B2_inst12 = X2 # !B9L1 # !B1L3 # !X5;
+
+
+--B2_inst13 is DC_graph:inst2|inst13
+--operation mode is normal
+
+B2_inst13 = X2 # !B9L1 # !B1L4 # !X5;
+
+
+--B2_inst14 is DC_graph:inst2|inst14
+--operation mode is normal
+
+B2_inst14 = X2 # !B9L1 # !B1L5 # !X5;
+
+
+--B2_inst15 is DC_graph:inst2|inst15
+--operation mode is normal
+
+B2_inst15 = !B9L1 # !X5 # !B1L2 # !X2;
+
+
+--B2_inst16 is DC_graph:inst2|inst16
+--operation mode is normal
+
+B2_inst16 = !B9L1 # !B1L3 # !X5 # !X2;
+
+
+--B2_inst17 is DC_graph:inst2|inst17
+--operation mode is normal
+
+B2_inst17 = !B9L1 # !B1L4 # !X5 # !X2;
+
+
+--B2_inst18 is DC_graph:inst2|inst18
+--operation mode is normal
+
+B2_inst18 = !B9L1 # !B1L5 # !X5 # !X2;
+
+
+--B1_inst1 is DC_graph:inst1|inst1
+--operation mode is normal
+
+B1_inst1 = X2 # !B9L2 # !X5 # !B1L2;
+
+
+--B1_inst12 is DC_graph:inst1|inst12
+--operation mode is normal
+
+B1_inst12 = X2 # !B9L2 # !B1L3 # !X5;
+
+
+--B1_inst13 is DC_graph:inst1|inst13
+--operation mode is normal
+
+B1_inst13 = X2 # !B9L2 # !B1L4 # !X5;
+
+
+--B1_inst14 is DC_graph:inst1|inst14
+--operation mode is normal
+
+B1_inst14 = X2 # !B9L2 # !B1L5 # !X5;
+
+
+--B1_inst15 is DC_graph:inst1|inst15
+--operation mode is normal
+
+B1_inst15 = !B9L2 # !X5 # !B1L2 # !X2;
+
+
+--B1_inst16 is DC_graph:inst1|inst16
+--operation mode is normal
+
+B1_inst16 = !B9L2 # !B1L3 # !X5 # !X2;
+
+
+--B1_inst17 is DC_graph:inst1|inst17
+--operation mode is normal
+
+B1_inst17 = !B9L2 # !B1L4 # !X5 # !X2;
+
+
+--B1_inst18 is DC_graph:inst1|inst18
+--operation mode is normal
+
+B1_inst18 = !B9L2 # !B1L5 # !X5 # !X2;
+
+
+--B8_inst1 is DC_graph:inst12|inst1
+--operation mode is normal
+
+B8_inst1 = B8L2 # X1 # X0 # X2;
+
+
+--B8L2 is DC_graph:inst12|inst1~11
+--operation mode is normal
+
+B8L2 = X5 # X4 # X3 # ENB;
+
+
+--B8_inst12 is DC_graph:inst12|inst12
+--operation mode is normal
+
+B8_inst12 = B8L4 # X3 # ENB # X2;
+
+
+--B8L4 is DC_graph:inst12|inst12~11
+--operation mode is normal
+
+B8L4 = X1 # X5 # X4 # !X0;
+
+
+--B8_inst13 is DC_graph:inst12|inst13
+--operation mode is normal
+
+B8_inst13 = B8L6 # X3 # ENB # X2;
+
+
+--B8L6 is DC_graph:inst12|inst13~11
+--operation mode is normal
+
+B8L6 = X0 # X5 # X4 # !X1;
+
+
+--B8_inst14 is DC_graph:inst12|inst14
+--operation mode is normal
+
+B8_inst14 = B8L8 # X3 # ENB # X2;
+
+
+--B8L8 is DC_graph:inst12|inst14~11
+--operation mode is normal
+
+B8L8 = X5 # X4 # !X0 # !X1;
+
+
+--B8_inst15 is DC_graph:inst12|inst15
+--operation mode is normal
+
+B8_inst15 = B8L2 # X1 # X0 # !X2;
+
+
+--B8_inst16 is DC_graph:inst12|inst16
+--operation mode is normal
+
+B8_inst16 = B8L4 # X3 # ENB # !X2;
+
+
+--B8_inst17 is DC_graph:inst12|inst17
+--operation mode is normal
+
+B8_inst17 = B8L6 # X3 # ENB # !X2;
+
+
+--B8_inst18 is DC_graph:inst12|inst18
+--operation mode is normal
+
+B8_inst18 = B8L8 # X3 # ENB # !X2;
+
+
+--B7_inst1 is DC_graph:inst11|inst1
+--operation mode is normal
+
+B7_inst1 = B7L2 # X1 # X0 # X2;
+
+
+--B7L2 is DC_graph:inst11|inst1~11
+--operation mode is normal
+
+B7L2 = ENB # X5 # X4 # !X3;
+
+
+--B7_inst12 is DC_graph:inst11|inst12
+--operation mode is normal
+
+B7_inst12 = B7L4 # X5 # X4 # X2;
+
+
+--B7L4 is DC_graph:inst11|inst12~11
+--operation mode is normal
+
+B7L4 = ENB # X1 # !X0 # !X3;
+
+
+--B7_inst13 is DC_graph:inst11|inst13
+--operation mode is normal
+
+B7_inst13 = B7L6 # X5 # X4 # X2;
+
+
+--B7L6 is DC_graph:inst11|inst13~11
+--operation mode is normal
+
+B7L6 = ENB # X0 # !X1 # !X3;
+
+
+--B7_inst14 is DC_graph:inst11|inst14
+--operation mode is normal
+
+B7_inst14 = B7L8 # X5 # X4 # X2;
+
+
+--B7L8 is DC_graph:inst11|inst14~11
+--operation mode is normal
+
+B7L8 = ENB # !X0 # !X1 # !X3;
+
+
+--B7_inst15 is DC_graph:inst11|inst15
+--operation mode is normal
+
+B7_inst15 = B7L2 # X1 # X0 # !X2;
+
+
+--B7_inst16 is DC_graph:inst11|inst16
+--operation mode is normal
+
+B7_inst16 = B7L4 # X5 # X4 # !X2;
+
+
+--B7_inst17 is DC_graph:inst11|inst17
+--operation mode is normal
+
+B7_inst17 = B7L6 # X5 # X4 # !X2;
+
+
+--B7_inst18 is DC_graph:inst11|inst18
+--operation mode is normal
+
+B7_inst18 = B7L8 # X5 # X4 # !X2;
+
+
+--B4_inst1 is DC_graph:inst4|inst1
+--operation mode is normal
+
+B4_inst1 = B4L2 # X1 # X0 # X2;
+
+
+--B4L2 is DC_graph:inst4|inst1~11
+--operation mode is normal
+
+B4L2 = X4 # X3 # ENB # !X5;
+
+
+--B4_inst12 is DC_graph:inst4|inst12
+--operation mode is normal
+
+B4_inst12 = B4L4 # X3 # ENB # X2;
+
+
+--B4L4 is DC_graph:inst4|inst12~11
+--operation mode is normal
+
+B4L4 = X4 # X1 # !X0 # !X5;
+
+
+--B4_inst13 is DC_graph:inst4|inst13
+--operation mode is normal
+
+B4_inst13 = B4L6 # X3 # ENB # X2;
+
+
+--B4L6 is DC_graph:inst4|inst13~11
+--operation mode is normal
+
+B4L6 = X4 # X0 # !X1 # !X5;
+
+
+--B4_inst14 is DC_graph:inst4|inst14
+--operation mode is normal
+
+B4_inst14 = B4L8 # X3 # ENB # X2;
+
+
+--B4L8 is DC_graph:inst4|inst14~11
+--operation mode is normal
+
+B4L8 = X4 # !X0 # !X1 # !X5;
+
+
+--B4_inst15 is DC_graph:inst4|inst15
+--operation mode is normal
+
+B4_inst15 = B4L2 # X1 # X0 # !X2;
+
+
+--B4_inst16 is DC_graph:inst4|inst16
+--operation mode is normal
+
+B4_inst16 = B4L4 # X3 # ENB # !X2;
+
+
+--B4_inst17 is DC_graph:inst4|inst17
+--operation mode is normal
+
+B4_inst17 = B4L6 # X3 # ENB # !X2;
+
+
+--B4_inst18 is DC_graph:inst4|inst18
+--operation mode is normal
+
+B4_inst18 = B4L8 # X3 # ENB # !X2;
+
+
+--B3_inst1 is DC_graph:inst3|inst1
+--operation mode is normal
+
+B3_inst1 = B3L2 # X1 # X0 # X2;
+
+
+--B3L2 is DC_graph:inst3|inst1~11
+--operation mode is normal
+
+B3L2 = X4 # ENB # !X3 # !X5;
+
+
+--B3_inst12 is DC_graph:inst3|inst12
+--operation mode is normal
+
+B3_inst12 = B3L2 # X1 # X2 # !X0;
+
+
+--B3_inst13 is DC_graph:inst3|inst13
+--operation mode is normal
+
+B3_inst13 = B3L2 # X0 # X2 # !X1;
+
+
+--B3_inst14 is DC_graph:inst3|inst14
+--operation mode is normal
+
+B3_inst14 = B3L2 # X2 # !X0 # !X1;
+
+
+--B3_inst15 is DC_graph:inst3|inst15
+--operation mode is normal
+
+B3_inst15 = B3L2 # X1 # X0 # !X2;
+
+
+--B3_inst16 is DC_graph:inst3|inst16
+--operation mode is normal
+
+B3_inst16 = B3L2 # X1 # !X2 # !X0;
+
+
+--B3_inst17 is DC_graph:inst3|inst17
+--operation mode is normal
+
+B3_inst17 = B3L2 # X0 # !X2 # !X1;
+
+
+--B3_inst18 is DC_graph:inst3|inst18
+--operation mode is normal
+
+B3_inst18 = B3L2 # !X2 # !X0 # !X1;
+
+
+--X2 is X2
+--operation mode is input
+
+X2 = INPUT();
+
+
+--X0 is X0
+--operation mode is input
+
+X0 = INPUT();
+
+
+--X1 is X1
+--operation mode is input
+
+X1 = INPUT();
+
+
+--ENB is ENB
+--operation mode is input
+
+ENB = INPUT();
+
+
+--X3 is X3
+--operation mode is input
+
+X3 = INPUT();
+
+
+--X4 is X4
+--operation mode is input
+
+X4 = INPUT();
+
+
+--X5 is X5
+--operation mode is input
+
+X5 = INPUT();
+
+
+--Q0 is Q0
+--operation mode is output
+
+Q0 = OUTPUT(B8_inst1);
+
+
+--Q1 is Q1
+--operation mode is output
+
+Q1 = OUTPUT(B8_inst12);
+
+
+--Q2 is Q2
+--operation mode is output
+
+Q2 = OUTPUT(B8_inst13);
+
+
+--Q3 is Q3
+--operation mode is output
+
+Q3 = OUTPUT(B8_inst14);
+
+
+--Q4 is Q4
+--operation mode is output
+
+Q4 = OUTPUT(B8_inst15);
+
+
+--Q5 is Q5
+--operation mode is output
+
+Q5 = OUTPUT(B8_inst16);
+
+
+--Q6 is Q6
+--operation mode is output
+
+Q6 = OUTPUT(B8_inst17);
+
+
+--Q7 is Q7
+--operation mode is output
+
+Q7 = OUTPUT(B8_inst18);
+
+
+--Q8 is Q8
+--operation mode is output
+
+Q8 = OUTPUT(B7_inst1);
+
+
+--Q9 is Q9
+--operation mode is output
+
+Q9 = OUTPUT(B7_inst12);
+
+
+--Q10 is Q10
+--operation mode is output
+
+Q10 = OUTPUT(B7_inst13);
+
+
+--Q11 is Q11
+--operation mode is output
+
+Q11 = OUTPUT(B7_inst14);
+
+
+--Q12 is Q12
+--operation mode is output
+
+Q12 = OUTPUT(B7_inst15);
+
+
+--Q13 is Q13
+--operation mode is output
+
+Q13 = OUTPUT(B7_inst16);
+
+
+--Q14 is Q14
+--operation mode is output
+
+Q14 = OUTPUT(B7_inst17);
+
+
+--Q15 is Q15
+--operation mode is output
+
+Q15 = OUTPUT(B7_inst18);
+
+
+--Q16 is Q16
+--operation mode is output
+
+Q16 = OUTPUT(B6_inst1);
+
+
+--Q17 is Q17
+--operation mode is output
+
+Q17 = OUTPUT(B6_inst12);
+
+
+--Q18 is Q18
+--operation mode is output
+
+Q18 = OUTPUT(B6_inst13);
+
+
+--Q19 is Q19
+--operation mode is output
+
+Q19 = OUTPUT(B6_inst14);
+
+
+--Q20 is Q20
+--operation mode is output
+
+Q20 = OUTPUT(B6_inst15);
+
+
+--Q21 is Q21
+--operation mode is output
+
+Q21 = OUTPUT(B6_inst16);
+
+
+--Q22 is Q22
+--operation mode is output
+
+Q22 = OUTPUT(B6_inst17);
+
+
+--Q23 is Q23
+--operation mode is output
+
+Q23 = OUTPUT(B6_inst18);
+
+
+--Q24 is Q24
+--operation mode is output
+
+Q24 = OUTPUT(B5_inst1);
+
+
+--Q25 is Q25
+--operation mode is output
+
+Q25 = OUTPUT(B5_inst12);
+
+
+--Q26 is Q26
+--operation mode is output
+
+Q26 = OUTPUT(B5_inst13);
+
+
+--Q27 is Q27
+--operation mode is output
+
+Q27 = OUTPUT(B5_inst14);
+
+
+--Q28 is Q28
+--operation mode is output
+
+Q28 = OUTPUT(B5_inst15);
+
+
+--Q29 is Q29
+--operation mode is output
+
+Q29 = OUTPUT(B5_inst16);
+
+
+--Q30 is Q30
+--operation mode is output
+
+Q30 = OUTPUT(B5_inst17);
+
+
+--Q31 is Q31
+--operation mode is output
+
+Q31 = OUTPUT(B5_inst18);
+
+
+--Q32 is Q32
+--operation mode is output
+
+Q32 = OUTPUT(B4_inst1);
+
+
+--Q33 is Q33
+--operation mode is output
+
+Q33 = OUTPUT(B4_inst12);
+
+
+--Q34 is Q34
+--operation mode is output
+
+Q34 = OUTPUT(B4_inst13);
+
+
+--Q35 is Q35
+--operation mode is output
+
+Q35 = OUTPUT(B4_inst14);
+
+
+--Q36 is Q36
+--operation mode is output
+
+Q36 = OUTPUT(B4_inst15);
+
+
+--Q37 is Q37
+--operation mode is output
+
+Q37 = OUTPUT(B4_inst16);
+
+
+--Q38 is Q38
+--operation mode is output
+
+Q38 = OUTPUT(B4_inst17);
+
+
+--Q39 is Q39
+--operation mode is output
+
+Q39 = OUTPUT(B4_inst18);
+
+
+--Q40 is Q40
+--operation mode is output
+
+Q40 = OUTPUT(B3_inst1);
+
+
+--Q41 is Q41
+--operation mode is output
+
+Q41 = OUTPUT(B3_inst12);
+
+
+--Q42 is Q42
+--operation mode is output
+
+Q42 = OUTPUT(B3_inst13);
+
+
+--Q43 is Q43
+--operation mode is output
+
+Q43 = OUTPUT(B3_inst14);
+
+
+--Q44 is Q44
+--operation mode is output
+
+Q44 = OUTPUT(B3_inst15);
+
+
+--Q45 is Q45
+--operation mode is output
+
+Q45 = OUTPUT(B3_inst16);
+
+
+--Q46 is Q46
+--operation mode is output
+
+Q46 = OUTPUT(B3_inst17);
+
+
+--Q47 is Q47
+--operation mode is output
+
+Q47 = OUTPUT(B3_inst18);
+
+
+--Q48 is Q48
+--operation mode is output
+
+Q48 = OUTPUT(B2_inst1);
+
+
+--Q49 is Q49
+--operation mode is output
+
+Q49 = OUTPUT(B2_inst12);
+
+
+--Q50 is Q50
+--operation mode is output
+
+Q50 = OUTPUT(B2_inst13);
+
+
+--Q51 is Q51
+--operation mode is output
+
+Q51 = OUTPUT(B2_inst14);
+
+
+--Q52 is Q52
+--operation mode is output
+
+Q52 = OUTPUT(B2_inst15);
+
+
+--Q53 is Q53
+--operation mode is output
+
+Q53 = OUTPUT(B2_inst16);
+
+
+--Q54 is Q54
+--operation mode is output
+
+Q54 = OUTPUT(B2_inst17);
+
+
+--Q55 is Q55
+--operation mode is output
+
+Q55 = OUTPUT(B2_inst18);
+
+
+--Q56 is Q56
+--operation mode is output
+
+Q56 = OUTPUT(B1_inst1);
+
+
+--Q57 is Q57
+--operation mode is output
+
+Q57 = OUTPUT(B1_inst12);
+
+
+--Q58 is Q58
+--operation mode is output
+
+Q58 = OUTPUT(B1_inst13);
+
+
+--Q59 is Q59
+--operation mode is output
+
+Q59 = OUTPUT(B1_inst14);
+
+
+--Q60 is Q60
+--operation mode is output
+
+Q60 = OUTPUT(B1_inst15);
+
+
+--Q61 is Q61
+--operation mode is output
+
+Q61 = OUTPUT(B1_inst16);
+
+
+--Q62 is Q62
+--operation mode is output
+
+Q62 = OUTPUT(B1_inst17);
+
+
+--Q63 is Q63
+--operation mode is output
+
+Q63 = OUTPUT(B1_inst18);
+
+

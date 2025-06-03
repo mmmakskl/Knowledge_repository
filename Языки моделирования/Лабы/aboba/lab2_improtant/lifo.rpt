@@ -1,0 +1,1296 @@
+Project Information                                 z:\lab2_improtant\lifo.rpt
+
+MAX+plus II Compiler Report File
+Version 9.01 07/30/98
+Compiled: 03/17/19 13:25:40
+
+Copyright (C) 1988-1998 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input   Output   Bidir         Shareable
+POF       Device          Pins    Pins     Pins     LCs  Expanders  % Utilized
+
+lifo      EPM7096LC68-7    11       10       0      77      65          80 %
+
+User Pins:                 11       10       0  
+
+
+
+Project Information                                 z:\lab2_improtant\lifo.rpt
+
+** PROJECT COMPILATION MESSAGES **
+
+Warning: GLOBAL primitive on node 'RD' feeds logic -- non-global signal usage may result
+
+
+Project Information                                 z:\lab2_improtant\lifo.rpt
+
+** AUTO GLOBAL SIGNALS **
+
+
+
+INFO: Signal 'RD' chosen for auto global Clock
+
+
+Project Information                                 z:\lab2_improtant\lifo.rpt
+
+** FILE HIERARCHY **
+
+
+
+|lpm_counter:8|
+|registerfile:34|
+|registerfile:34|lpm_decode:6|
+|registerfile:34|lpm_decode:6|altshift:external_latency_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator7|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator7|comptree:comparator|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator7|comptree:comparator|cmpchain:cmp_end|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator7|altshift:aeb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator7|altshift:agb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator6|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator6|comptree:comparator|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator6|comptree:comparator|cmpchain:cmp_end|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator6|altshift:aeb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator6|altshift:agb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator5|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator5|comptree:comparator|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator5|comptree:comparator|cmpchain:cmp_end|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator5|altshift:aeb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator5|altshift:agb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator4|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator4|comptree:comparator|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator4|comptree:comparator|cmpchain:cmp_end|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator4|altshift:aeb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator4|altshift:agb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator3|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator3|comptree:comparator|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator3|comptree:comparator|cmpchain:cmp_end|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator3|altshift:aeb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator3|altshift:agb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator2|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator2|comptree:comparator|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator2|comptree:comparator|cmpchain:cmp_end|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator2|altshift:aeb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator2|altshift:agb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator1|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator1|comptree:comparator|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator1|comptree:comparator|cmpchain:cmp_end|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator1|altshift:aeb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator1|altshift:agb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator0|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator0|comptree:comparator|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator0|comptree:comparator|cmpchain:cmp_end|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator0|altshift:aeb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_compare:comparator0|altshift:agb_ext_lat_ffs|
+|registerfile:34|lpm_decode:6|lpm_constant:230|
+|registerfile:34|lpm_decode:6|lpm_constant:236|
+|registerfile:34|lpm_decode:6|lpm_constant:242|
+|registerfile:34|lpm_decode:6|lpm_constant:248|
+|registerfile:34|lpm_decode:6|lpm_constant:254|
+|registerfile:34|lpm_decode:6|lpm_constant:260|
+|registerfile:34|lpm_decode:6|lpm_constant:266|
+|registerfile:34|lpm_decode:6|lpm_constant:272|
+|registerfile:34|dtrigger8x:7|
+|registerfile:34|dtrigger8x:18|
+|registerfile:34|dtrigger8x:8|
+|registerfile:34|dtrigger8x:14|
+|registerfile:34|dtrigger8x:13|
+|registerfile:34|dtrigger8x:12|
+|registerfile:34|dtrigger8x:11|
+|registerfile:34|dtrigger8x:10|
+|registerfile:34|dtrigger8x:9|
+|registerfile:34|lpm_mux:19|
+|registerfile:34|lpm_mux:19|bypassff:sel_latency_ff0|
+|registerfile:34|lpm_mux:19|altshift:external_latency_ffs|
+|registerfile:34|lpm_mux:19|muxlut:135|
+|registerfile:34|lpm_mux:19|muxlut:135|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:135|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:135|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:156|
+|registerfile:34|lpm_mux:19|muxlut:156|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:156|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:156|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:177|
+|registerfile:34|lpm_mux:19|muxlut:177|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:177|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:177|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:198|
+|registerfile:34|lpm_mux:19|muxlut:198|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:198|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:198|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:219|
+|registerfile:34|lpm_mux:19|muxlut:219|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:219|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:219|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:240|
+|registerfile:34|lpm_mux:19|muxlut:240|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:240|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:240|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:261|
+|registerfile:34|lpm_mux:19|muxlut:261|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:261|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:261|muxlut:77|
+|registerfile:34|lpm_mux:19|muxlut:282|
+|registerfile:34|lpm_mux:19|muxlut:282|muxlut:43|
+|registerfile:34|lpm_mux:19|muxlut:282|muxlut:60|
+|registerfile:34|lpm_mux:19|muxlut:282|muxlut:77|
+
+
+Device-Specific Information:                        z:\lab2_improtant\lifo.rpt
+lifo
+
+***** Logic for device 'lifo' compiled without errors.
+
+
+
+
+Device: EPM7096LC68-7
+
+Device Options:
+    Turbo Bit                                    = ON
+    Security Bit                                 = OFF
+    MultiVolt I/O                              = OFF
+
+                                                  R  R        R  
+                                                  E  E        E  
+                                V                 S  S        S  
+                    R           C                 E  E  V     E  
+                    e           C                 R  R  C     R  
+              D  D  s  G  D  D  I  G  G  G     G  V  V  C  D  V  
+              I  I  e  N  I  I  N  N  N  N  R  N  E  E  I  O  E  
+              4  6  t  D  0  7  T  D  D  D  D  D  D  D  O  4  D  
+            -----------------------------------------------------_ 
+          /   9  8  7  6  5  4  3  2  1 68 67 66 65 64 63 62 61   | 
+     DI2 | 10                                                  60 | RESERVED 
+   VCCIO | 11                                                  59 | full 
+     DO5 | 12                                                  58 | GND 
+     DO6 | 13                                                  57 | DO0 
+RESERVED | 14                                                  56 | RESERVED 
+     DI1 | 15                                                  55 | RESERVED 
+     GND | 16                                                  54 | RESERVED 
+      WR | 17                                                  53 | VCCIO 
+RESERVED | 18                  EPM7096LC68-7                   52 | RESERVED 
+     DO7 | 19                                                  51 | RESERVED 
+   empty | 20                                                  50 | RESERVED 
+   VCCIO | 21                                                  49 | RESERVED 
+     DI5 | 22                                                  48 | GND 
+     DI3 | 23                                                  47 | DO1 
+RESERVED | 24                                                  46 | RESERVED 
+RESERVED | 25                                                  45 | RESERVED 
+     GND | 26                                                  44 | RESERVED 
+         |_  27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43  _| 
+           ------------------------------------------------------ 
+              R  R  R  D  V  R  R  G  V  R  R  G  R  D  R  R  V  
+              E  E  E  O  C  E  E  N  C  E  E  N  E  O  E  E  C  
+              S  S  S  3  C  S  S  D  C  S  S  D  S  2  S  S  C  
+              E  E  E     I  E  E     I  E  E     E     E  E  I  
+              R  R  R     O  R  R     N  R  R     R     R  R  O  
+              V  V  V        V  V     T  V  V     V     V  V     
+              E  E  E        E  E        E  E     E     E  E     
+              D  D  D        D  D        D  D     D     D  D     
+
+
+N.C. = Not Connected.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+
+
+Device-Specific Information:                        z:\lab2_improtant\lifo.rpt
+lifo
+
+** RESOURCE USAGE **
+
+                                                Shareable     External
+Logic Array Block     Logic Cells   I/O Pins    Expanders   Interconnect
+
+A:     LC1 - LC16     2/16( 12%)   8/ 8(100%)  16/16(100%)  19/36( 52%) 
+B:    LC17 - LC32    11/16( 68%)   6/ 8( 75%)   9/16( 56%)  18/36( 50%) 
+C:    LC33 - LC48    16/16(100%)   1/ 8( 12%)   8/16( 50%)  14/36( 38%) 
+D:    LC49 - LC64    16/16(100%)   1/ 8( 12%)   8/16( 50%)  14/36( 38%) 
+E:    LC65 - LC80    16/16(100%)   1/ 8( 12%)   8/16( 50%)  14/36( 38%) 
+F:    LC81 - LC96    16/16(100%)   3/ 8( 37%)  16/16(100%)  22/36( 61%) 
+
+
+Total dedicated input pins used:                 1/4      ( 25%)
+Total I/O pins used:                            20/48     ( 41%)
+Total logic cells used:                         77/96     ( 80%)
+Total shareable expanders used:                 65/96     ( 67%)
+Total Turbo logic cells used:                   77/96     ( 80%)
+Total shareable expanders not available (n/a):   0/96     (  0%)
+Average fan-in:                                  5.67
+Total fan-in:                                   437
+
+Total input pins required:                      11
+Total output pins required:                     10
+Total bidirectional pins required:               0
+Total logic cells required:                     77
+Total flipflops required:                       75
+Total product terms required:                  214
+Total logic cells lending parallel expanders:    0
+Total shareable expanders in database:          65
+
+Synthesized logic cells:                         0/  96   (  0%)
+
+
+
+Device-Specific Information:                        z:\lab2_improtant\lifo.rpt
+lifo
+
+** INPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+   5   (14)  (A)      INPUT               0      0   0    0    0    0    8  DI0
+  15   (29)  (B)      INPUT               0      0   0    0    0    0    8  DI1
+  10    (6)  (A)      INPUT               0      0   0    0    0    0    8  DI2
+  23   (17)  (B)      INPUT               0      0   0    0    0    0    8  DI3
+   9    (8)  (A)      INPUT               0      0   0    0    0    0    8  DI4
+  22   (19)  (B)      INPUT               0      0   0    0    0    0    8  DI5
+   8    (9)  (A)      INPUT               0      0   0    0    0    0    8  DI6
+   4   (16)  (A)      INPUT               0      0   0    0    0    0    8  DI7
+  67      -   -       INPUT  G            0      0   0    0    0    0    3  RD
+   7   (12)  (A)      INPUT               0      0   0    0    0    0    3  Reset
+  17   (27)  (B)      INPUT               0      0   0    0    0    0   67  WR
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+G = Global Source. Fan-out destinations counted here do not include destinations
+that are driven using global routing resources. Refer to the Auto Global Signals,
+Clock Signals, Clear Signals, Synchronous Load Signals, and Synchronous Clear Signals
+Sections of this Report File for information on which signals' fan-outs are used as
+Clock, Clear, Preset, Output Enable, and synchronous Load signals.
+
+
+Device-Specific Information:                        z:\lab2_improtant\lifo.rpt
+lifo
+
+** OUTPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  57     84    F         FF   +  t        8      0   0    0   11    0    0  DO0 (|registerfile:34|dtrigger8x:18|:12)
+  47     67    E         FF   +  t        8      0   0    0   11    0    0  DO1 (|registerfile:34|dtrigger8x:18|:15)
+  40     56    D         FF   +  t        8      0   0    0   11    0    0  DO2 (|registerfile:34|dtrigger8x:18|:16)
+  30     37    C         FF   +  t        8      0   0    0   11    0    0  DO3 (|registerfile:34|dtrigger8x:18|:17)
+  62     92    F         FF   +  t        8      0   0    0   11    0    0  DO4 (|registerfile:34|dtrigger8x:18|:18)
+  12      4    A         FF   +  t        8      0   0    0   11    0    0  DO5 (|registerfile:34|dtrigger8x:18|:19)
+  13      1    A         FF   +  t        8      0   0    0   11    0    0  DO6 (|registerfile:34|dtrigger8x:18|:20)
+  19     24    B         FF   +  t        8      0   0    0   11    0    0  DO7 (|registerfile:34|dtrigger8x:18|:21)
+  20     21    B     OUTPUT      t        0      0   0    0    3    0    0  empty
+  59     86    F     OUTPUT      t        0      0   0    0    3    0    0  full
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                        z:\lab2_improtant\lifo.rpt
+lifo
+
+** BURIED LOGIC **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+   -     20    B       TFFE      t        1      1   0    3    0   10   66  |LPM_COUNTER:8|dffs0
+ (22)    19    B       TFFE      t        1      1   0    3    1   10   65  |LPM_COUNTER:8|dffs1
+   -     18    B       TFFE      t        1      1   0    3    2   10   64  |LPM_COUNTER:8|dffs2
+   -     93    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:7|Q0 (|registerfile:34|dtrigger8x:7|:12)
+   -     91    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:7|Q1 (|registerfile:34|dtrigger8x:7|:15)
+   -     30    B       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:7|Q2 (|registerfile:34|dtrigger8x:7|:16)
+   -     78    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:7|Q3 (|registerfile:34|dtrigger8x:7|:17)
+   -     26    B       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:7|Q4 (|registerfile:34|dtrigger8x:7|:18)
+   -     54    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:7|Q5 (|registerfile:34|dtrigger8x:7|:19)
+   -     23    B       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:7|Q6 (|registerfile:34|dtrigger8x:7|:20)
+ (24)    48    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:7|Q7 (|registerfile:34|dtrigger8x:7|:21)
+   -     83    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:8|Q0 (|registerfile:34|dtrigger8x:8|:12)
+ (64)    94    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:8|Q1 (|registerfile:34|dtrigger8x:8|:15)
+ (52)    75    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:8|Q2 (|registerfile:34|dtrigger8x:8|:16)
+ (55)    80    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:8|Q3 (|registerfile:34|dtrigger8x:8|:17)
+   -     62    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:8|Q4 (|registerfile:34|dtrigger8x:8|:18)
+   -     55    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:8|Q5 (|registerfile:34|dtrigger8x:8|:19)
+   -     38    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:8|Q6 (|registerfile:34|dtrigger8x:8|:20)
+ (28)    41    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:8|Q7 (|registerfile:34|dtrigger8x:8|:21)
+ (65)    96    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:9|Q0 (|registerfile:34|dtrigger8x:9|:12)
+   -     95    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:9|Q1 (|registerfile:34|dtrigger8x:9|:15)
+ (50)    72    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:9|Q2 (|registerfile:34|dtrigger8x:9|:16)
+   -     79    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:9|Q3 (|registerfile:34|dtrigger8x:9|:17)
+ (45)    64    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:9|Q4 (|registerfile:34|dtrigger8x:9|:18)
+   -     63    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:9|Q5 (|registerfile:34|dtrigger8x:9|:19)
+   -     47    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:9|Q6 (|registerfile:34|dtrigger8x:9|:20)
+   -     46    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:9|Q7 (|registerfile:34|dtrigger8x:9|:21)
+ (60)    88    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:10|Q0 (|registerfile:34|dtrigger8x:10|:12)
+ (61)    89    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:10|Q1 (|registerfile:34|dtrigger8x:10|:15)
+   -     68    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:10|Q2 (|registerfile:34|dtrigger8x:10|:16)
+ (49)    69    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:10|Q3 (|registerfile:34|dtrigger8x:10|:17)
+   -     50    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:10|Q4 (|registerfile:34|dtrigger8x:10|:18)
+ (37)    51    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:10|Q5 (|registerfile:34|dtrigger8x:10|:19)
+   -     34    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:10|Q6 (|registerfile:34|dtrigger8x:10|:20)
+   -     39    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:10|Q7 (|registerfile:34|dtrigger8x:10|:21)
+ (56)    81    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:11|Q0 (|registerfile:34|dtrigger8x:11|:12)
+   -     90    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:11|Q1 (|registerfile:34|dtrigger8x:11|:15)
+   -     66    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:11|Q2 (|registerfile:34|dtrigger8x:11|:16)
+ (46)    65    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:11|Q3 (|registerfile:34|dtrigger8x:11|:17)
+ (42)    59    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:11|Q4 (|registerfile:34|dtrigger8x:11|:18)
+ (36)    49    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:11|Q5 (|registerfile:34|dtrigger8x:11|:19)
+ (32)    35    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:11|Q6 (|registerfile:34|dtrigger8x:11|:20)
+   -     36    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:11|Q7 (|registerfile:34|dtrigger8x:11|:21)
+   -     87    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:12|Q0 (|registerfile:34|dtrigger8x:12|:12)
+ (15)    29    B       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:12|Q1 (|registerfile:34|dtrigger8x:12|:15)
+ (54)    77    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:12|Q2 (|registerfile:34|dtrigger8x:12|:16)
+ (51)    73    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:12|Q3 (|registerfile:34|dtrigger8x:12|:17)
+ (41)    57    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:12|Q4 (|registerfile:34|dtrigger8x:12|:18)
+   -     58    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:12|Q5 (|registerfile:34|dtrigger8x:12|:19)
+ (25)    45    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:12|Q6 (|registerfile:34|dtrigger8x:12|:20)
+ (29)    40    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:12|Q7 (|registerfile:34|dtrigger8x:12|:21)
+   -     85    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:13|Q0 (|registerfile:34|dtrigger8x:13|:12)
+ (23)    17    B       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:13|Q1 (|registerfile:34|dtrigger8x:13|:15)
+   -     71    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:13|Q2 (|registerfile:34|dtrigger8x:13|:16)
+   -     70    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:13|Q3 (|registerfile:34|dtrigger8x:13|:17)
+ (39)    53    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:13|Q4 (|registerfile:34|dtrigger8x:13|:18)
+   -     52    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:13|Q5 (|registerfile:34|dtrigger8x:13|:19)
+ (33)    33    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:13|Q6 (|registerfile:34|dtrigger8x:13|:20)
+   -     44    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:13|Q7 (|registerfile:34|dtrigger8x:13|:21)
+   -     82    F       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:14|Q0 (|registerfile:34|dtrigger8x:14|:12)
+   -     28    B       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:14|Q1 (|registerfile:34|dtrigger8x:14|:15)
+   -     76    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:14|Q2 (|registerfile:34|dtrigger8x:14|:16)
+   -     74    E       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:14|Q3 (|registerfile:34|dtrigger8x:14|:17)
+ (44)    61    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:14|Q4 (|registerfile:34|dtrigger8x:14|:18)
+   -     60    D       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:14|Q5 (|registerfile:34|dtrigger8x:14|:19)
+ (27)    43    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:14|Q6 (|registerfile:34|dtrigger8x:14|:20)
+   -     42    C       DFFE      t        0      0   0    2    3    1    0  |registerfile:34|dtrigger8x:14|Q7 (|registerfile:34|dtrigger8x:14|:21)
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                        z:\lab2_improtant\lifo.rpt
+lifo
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'A':
+
+             Logic cells placed in LAB 'A'
+        +--- LC4 DO5
+        | +- LC1 DO6
+        | | 
+        | |   Other LABs fed by signals
+        | |   that feed LAB 'A'
+LC      | | | A B C D E F |     Logic cells that feed LAB 'A':
+
+Pin
+67   -> - - | - * - - - - | <-- RD
+LC20 -> * * | * * * * * * | <-- |LPM_COUNTER:8|dffs0
+LC19 -> * * | * * * * * * | <-- |LPM_COUNTER:8|dffs1
+LC18 -> * * | * * * * * * | <-- |LPM_COUNTER:8|dffs2
+LC54 -> * - | * - - - - - | <-- |registerfile:34|dtrigger8x:7|Q5
+LC23 -> - * | * - - - - - | <-- |registerfile:34|dtrigger8x:7|Q6
+LC55 -> * - | * - - - - - | <-- |registerfile:34|dtrigger8x:8|Q5
+LC38 -> - * | * - - - - - | <-- |registerfile:34|dtrigger8x:8|Q6
+LC63 -> * - | * - - - - - | <-- |registerfile:34|dtrigger8x:9|Q5
+LC47 -> - * | * - - - - - | <-- |registerfile:34|dtrigger8x:9|Q6
+LC51 -> * - | * - - - - - | <-- |registerfile:34|dtrigger8x:10|Q5
+LC34 -> - * | * - - - - - | <-- |registerfile:34|dtrigger8x:10|Q6
+LC49 -> * - | * - - - - - | <-- |registerfile:34|dtrigger8x:11|Q5
+LC35 -> - * | * - - - - - | <-- |registerfile:34|dtrigger8x:11|Q6
+LC58 -> * - | * - - - - - | <-- |registerfile:34|dtrigger8x:12|Q5
+LC45 -> - * | * - - - - - | <-- |registerfile:34|dtrigger8x:12|Q6
+LC52 -> * - | * - - - - - | <-- |registerfile:34|dtrigger8x:13|Q5
+LC33 -> - * | * - - - - - | <-- |registerfile:34|dtrigger8x:13|Q6
+LC60 -> * - | * - - - - - | <-- |registerfile:34|dtrigger8x:14|Q5
+LC43 -> - * | * - - - - - | <-- |registerfile:34|dtrigger8x:14|Q6
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                        z:\lab2_improtant\lifo.rpt
+lifo
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'B':
+
+                               Logic cells placed in LAB 'B'
+        +--------------------- LC24 DO7
+        | +------------------- LC21 empty
+        | | +----------------- LC20 |LPM_COUNTER:8|dffs0
+        | | | +--------------- LC19 |LPM_COUNTER:8|dffs1
+        | | | | +------------- LC18 |LPM_COUNTER:8|dffs2
+        | | | | | +----------- LC30 |registerfile:34|dtrigger8x:7|Q2
+        | | | | | | +--------- LC26 |registerfile:34|dtrigger8x:7|Q4
+        | | | | | | | +------- LC23 |registerfile:34|dtrigger8x:7|Q6
+        | | | | | | | | +----- LC29 |registerfile:34|dtrigger8x:12|Q1
+        | | | | | | | | | +--- LC17 |registerfile:34|dtrigger8x:13|Q1
+        | | | | | | | | | | +- LC28 |registerfile:34|dtrigger8x:14|Q1
+        | | | | | | | | | | | 
+        | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | |   that feed LAB 'B'
+LC      | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'B':
+LC20 -> * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs0
+LC19 -> * * - * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs1
+LC18 -> * * - - * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs2
+
+Pin
+15   -> - - - - - - - - * * * | - * - - - * | <-- DI1
+10   -> - - - - - * - - - - - | - * - - * - | <-- DI2
+9    -> - - - - - - * - - - - | - * - * - - | <-- DI4
+8    -> - - - - - - - * - - - | - * * - - - | <-- DI6
+67   -> - - * * * - - - - - - | - * - - - - | <-- RD
+7    -> - - * * * - - - - - - | - * - - - - | <-- Reset
+17   -> - - * * * * * * * * * | - * * * * * | <-- WR
+LC48 -> * - - - - - - - - - - | - * - - - - | <-- |registerfile:34|dtrigger8x:7|Q7
+LC41 -> * - - - - - - - - - - | - * - - - - | <-- |registerfile:34|dtrigger8x:8|Q7
+LC46 -> * - - - - - - - - - - | - * - - - - | <-- |registerfile:34|dtrigger8x:9|Q7
+LC39 -> * - - - - - - - - - - | - * - - - - | <-- |registerfile:34|dtrigger8x:10|Q7
+LC36 -> * - - - - - - - - - - | - * - - - - | <-- |registerfile:34|dtrigger8x:11|Q7
+LC40 -> * - - - - - - - - - - | - * - - - - | <-- |registerfile:34|dtrigger8x:12|Q7
+LC44 -> * - - - - - - - - - - | - * - - - - | <-- |registerfile:34|dtrigger8x:13|Q7
+LC42 -> * - - - - - - - - - - | - * - - - - | <-- |registerfile:34|dtrigger8x:14|Q7
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                        z:\lab2_improtant\lifo.rpt
+lifo
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'C':
+
+                                         Logic cells placed in LAB 'C'
+        +------------------------------- LC37 DO3
+        | +----------------------------- LC48 |registerfile:34|dtrigger8x:7|Q7
+        | | +--------------------------- LC38 |registerfile:34|dtrigger8x:8|Q6
+        | | | +------------------------- LC41 |registerfile:34|dtrigger8x:8|Q7
+        | | | | +----------------------- LC47 |registerfile:34|dtrigger8x:9|Q6
+        | | | | | +--------------------- LC46 |registerfile:34|dtrigger8x:9|Q7
+        | | | | | | +------------------- LC34 |registerfile:34|dtrigger8x:10|Q6
+        | | | | | | | +----------------- LC39 |registerfile:34|dtrigger8x:10|Q7
+        | | | | | | | | +--------------- LC35 |registerfile:34|dtrigger8x:11|Q6
+        | | | | | | | | | +------------- LC36 |registerfile:34|dtrigger8x:11|Q7
+        | | | | | | | | | | +----------- LC45 |registerfile:34|dtrigger8x:12|Q6
+        | | | | | | | | | | | +--------- LC40 |registerfile:34|dtrigger8x:12|Q7
+        | | | | | | | | | | | | +------- LC33 |registerfile:34|dtrigger8x:13|Q6
+        | | | | | | | | | | | | | +----- LC44 |registerfile:34|dtrigger8x:13|Q7
+        | | | | | | | | | | | | | | +--- LC43 |registerfile:34|dtrigger8x:14|Q6
+        | | | | | | | | | | | | | | | +- LC42 |registerfile:34|dtrigger8x:14|Q7
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'C'
+LC      | | | | | | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'C':
+
+Pin
+8    -> - - * - * - * - * - * - * - * - | - * * - - - | <-- DI6
+4    -> - * - * - * - * - * - * - * - * | - - * - - - | <-- DI7
+67   -> - - - - - - - - - - - - - - - - | - * - - - - | <-- RD
+17   -> - * * * * * * * * * * * * * * * | - * * * * * | <-- WR
+LC20 -> * * * * * * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs0
+LC19 -> * * * * * * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs1
+LC18 -> * * * * * * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs2
+LC78 -> * - - - - - - - - - - - - - - - | - - * - - - | <-- |registerfile:34|dtrigger8x:7|Q3
+LC80 -> * - - - - - - - - - - - - - - - | - - * - - - | <-- |registerfile:34|dtrigger8x:8|Q3
+LC79 -> * - - - - - - - - - - - - - - - | - - * - - - | <-- |registerfile:34|dtrigger8x:9|Q3
+LC69 -> * - - - - - - - - - - - - - - - | - - * - - - | <-- |registerfile:34|dtrigger8x:10|Q3
+LC65 -> * - - - - - - - - - - - - - - - | - - * - - - | <-- |registerfile:34|dtrigger8x:11|Q3
+LC73 -> * - - - - - - - - - - - - - - - | - - * - - - | <-- |registerfile:34|dtrigger8x:12|Q3
+LC70 -> * - - - - - - - - - - - - - - - | - - * - - - | <-- |registerfile:34|dtrigger8x:13|Q3
+LC74 -> * - - - - - - - - - - - - - - - | - - * - - - | <-- |registerfile:34|dtrigger8x:14|Q3
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                        z:\lab2_improtant\lifo.rpt
+lifo
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'D':
+
+                                         Logic cells placed in LAB 'D'
+        +------------------------------- LC56 DO2
+        | +----------------------------- LC54 |registerfile:34|dtrigger8x:7|Q5
+        | | +--------------------------- LC62 |registerfile:34|dtrigger8x:8|Q4
+        | | | +------------------------- LC55 |registerfile:34|dtrigger8x:8|Q5
+        | | | | +----------------------- LC64 |registerfile:34|dtrigger8x:9|Q4
+        | | | | | +--------------------- LC63 |registerfile:34|dtrigger8x:9|Q5
+        | | | | | | +------------------- LC50 |registerfile:34|dtrigger8x:10|Q4
+        | | | | | | | +----------------- LC51 |registerfile:34|dtrigger8x:10|Q5
+        | | | | | | | | +--------------- LC59 |registerfile:34|dtrigger8x:11|Q4
+        | | | | | | | | | +------------- LC49 |registerfile:34|dtrigger8x:11|Q5
+        | | | | | | | | | | +----------- LC57 |registerfile:34|dtrigger8x:12|Q4
+        | | | | | | | | | | | +--------- LC58 |registerfile:34|dtrigger8x:12|Q5
+        | | | | | | | | | | | | +------- LC53 |registerfile:34|dtrigger8x:13|Q4
+        | | | | | | | | | | | | | +----- LC52 |registerfile:34|dtrigger8x:13|Q5
+        | | | | | | | | | | | | | | +--- LC61 |registerfile:34|dtrigger8x:14|Q4
+        | | | | | | | | | | | | | | | +- LC60 |registerfile:34|dtrigger8x:14|Q5
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'D'
+LC      | | | | | | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'D':
+
+Pin
+9    -> - - * - * - * - * - * - * - * - | - * - * - - | <-- DI4
+22   -> - * - * - * - * - * - * - * - * | - - - * - - | <-- DI5
+67   -> - - - - - - - - - - - - - - - - | - * - - - - | <-- RD
+17   -> - * * * * * * * * * * * * * * * | - * * * * * | <-- WR
+LC20 -> * * * * * * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs0
+LC19 -> * * * * * * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs1
+LC18 -> * * * * * * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs2
+LC30 -> * - - - - - - - - - - - - - - - | - - - * - - | <-- |registerfile:34|dtrigger8x:7|Q2
+LC75 -> * - - - - - - - - - - - - - - - | - - - * - - | <-- |registerfile:34|dtrigger8x:8|Q2
+LC72 -> * - - - - - - - - - - - - - - - | - - - * - - | <-- |registerfile:34|dtrigger8x:9|Q2
+LC68 -> * - - - - - - - - - - - - - - - | - - - * - - | <-- |registerfile:34|dtrigger8x:10|Q2
+LC66 -> * - - - - - - - - - - - - - - - | - - - * - - | <-- |registerfile:34|dtrigger8x:11|Q2
+LC77 -> * - - - - - - - - - - - - - - - | - - - * - - | <-- |registerfile:34|dtrigger8x:12|Q2
+LC71 -> * - - - - - - - - - - - - - - - | - - - * - - | <-- |registerfile:34|dtrigger8x:13|Q2
+LC76 -> * - - - - - - - - - - - - - - - | - - - * - - | <-- |registerfile:34|dtrigger8x:14|Q2
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                        z:\lab2_improtant\lifo.rpt
+lifo
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'E':
+
+                                         Logic cells placed in LAB 'E'
+        +------------------------------- LC67 DO1
+        | +----------------------------- LC78 |registerfile:34|dtrigger8x:7|Q3
+        | | +--------------------------- LC75 |registerfile:34|dtrigger8x:8|Q2
+        | | | +------------------------- LC80 |registerfile:34|dtrigger8x:8|Q3
+        | | | | +----------------------- LC72 |registerfile:34|dtrigger8x:9|Q2
+        | | | | | +--------------------- LC79 |registerfile:34|dtrigger8x:9|Q3
+        | | | | | | +------------------- LC68 |registerfile:34|dtrigger8x:10|Q2
+        | | | | | | | +----------------- LC69 |registerfile:34|dtrigger8x:10|Q3
+        | | | | | | | | +--------------- LC66 |registerfile:34|dtrigger8x:11|Q2
+        | | | | | | | | | +------------- LC65 |registerfile:34|dtrigger8x:11|Q3
+        | | | | | | | | | | +----------- LC77 |registerfile:34|dtrigger8x:12|Q2
+        | | | | | | | | | | | +--------- LC73 |registerfile:34|dtrigger8x:12|Q3
+        | | | | | | | | | | | | +------- LC71 |registerfile:34|dtrigger8x:13|Q2
+        | | | | | | | | | | | | | +----- LC70 |registerfile:34|dtrigger8x:13|Q3
+        | | | | | | | | | | | | | | +--- LC76 |registerfile:34|dtrigger8x:14|Q2
+        | | | | | | | | | | | | | | | +- LC74 |registerfile:34|dtrigger8x:14|Q3
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'E'
+LC      | | | | | | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'E':
+
+Pin
+10   -> - - * - * - * - * - * - * - * - | - * - - * - | <-- DI2
+23   -> - * - * - * - * - * - * - * - * | - - - - * - | <-- DI3
+67   -> - - - - - - - - - - - - - - - - | - * - - - - | <-- RD
+17   -> - * * * * * * * * * * * * * * * | - * * * * * | <-- WR
+LC20 -> * * * * * * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs0
+LC19 -> * * * * * * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs1
+LC18 -> * * * * * * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs2
+LC91 -> * - - - - - - - - - - - - - - - | - - - - * - | <-- |registerfile:34|dtrigger8x:7|Q1
+LC94 -> * - - - - - - - - - - - - - - - | - - - - * - | <-- |registerfile:34|dtrigger8x:8|Q1
+LC95 -> * - - - - - - - - - - - - - - - | - - - - * - | <-- |registerfile:34|dtrigger8x:9|Q1
+LC89 -> * - - - - - - - - - - - - - - - | - - - - * - | <-- |registerfile:34|dtrigger8x:10|Q1
+LC90 -> * - - - - - - - - - - - - - - - | - - - - * - | <-- |registerfile:34|dtrigger8x:11|Q1
+LC29 -> * - - - - - - - - - - - - - - - | - - - - * - | <-- |registerfile:34|dtrigger8x:12|Q1
+LC17 -> * - - - - - - - - - - - - - - - | - - - - * - | <-- |registerfile:34|dtrigger8x:13|Q1
+LC28 -> * - - - - - - - - - - - - - - - | - - - - * - | <-- |registerfile:34|dtrigger8x:14|Q1
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                        z:\lab2_improtant\lifo.rpt
+lifo
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'F':
+
+                                         Logic cells placed in LAB 'F'
+        +------------------------------- LC84 DO0
+        | +----------------------------- LC92 DO4
+        | | +--------------------------- LC86 full
+        | | | +------------------------- LC93 |registerfile:34|dtrigger8x:7|Q0
+        | | | | +----------------------- LC91 |registerfile:34|dtrigger8x:7|Q1
+        | | | | | +--------------------- LC83 |registerfile:34|dtrigger8x:8|Q0
+        | | | | | | +------------------- LC94 |registerfile:34|dtrigger8x:8|Q1
+        | | | | | | | +----------------- LC96 |registerfile:34|dtrigger8x:9|Q0
+        | | | | | | | | +--------------- LC95 |registerfile:34|dtrigger8x:9|Q1
+        | | | | | | | | | +------------- LC88 |registerfile:34|dtrigger8x:10|Q0
+        | | | | | | | | | | +----------- LC89 |registerfile:34|dtrigger8x:10|Q1
+        | | | | | | | | | | | +--------- LC81 |registerfile:34|dtrigger8x:11|Q0
+        | | | | | | | | | | | | +------- LC90 |registerfile:34|dtrigger8x:11|Q1
+        | | | | | | | | | | | | | +----- LC87 |registerfile:34|dtrigger8x:12|Q0
+        | | | | | | | | | | | | | | +--- LC85 |registerfile:34|dtrigger8x:13|Q0
+        | | | | | | | | | | | | | | | +- LC82 |registerfile:34|dtrigger8x:14|Q0
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'F'
+LC      | | | | | | | | | | | | | | | | | A B C D E F |     Logic cells that feed LAB 'F':
+LC93 -> * - - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:7|Q0
+LC83 -> * - - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:8|Q0
+LC96 -> * - - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:9|Q0
+LC88 -> * - - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:10|Q0
+LC81 -> * - - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:11|Q0
+LC87 -> * - - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:12|Q0
+LC85 -> * - - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:13|Q0
+LC82 -> * - - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:14|Q0
+
+Pin
+5    -> - - - * - * - * - * - * - * * * | - - - - - * | <-- DI0
+15   -> - - - - * - * - * - * - * - - - | - * - - - * | <-- DI1
+67   -> - - - - - - - - - - - - - - - - | - * - - - - | <-- RD
+17   -> - - - * * * * * * * * * * * * * | - * * * * * | <-- WR
+LC20 -> * * * * * * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs0
+LC19 -> * * * * * * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs1
+LC18 -> * * * * * * * * * * * * * * * * | * * * * * * | <-- |LPM_COUNTER:8|dffs2
+LC26 -> - * - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:7|Q4
+LC62 -> - * - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:8|Q4
+LC64 -> - * - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:9|Q4
+LC50 -> - * - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:10|Q4
+LC59 -> - * - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:11|Q4
+LC57 -> - * - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:12|Q4
+LC53 -> - * - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:13|Q4
+LC61 -> - * - - - - - - - - - - - - - - | - - - - - * | <-- |registerfile:34|dtrigger8x:14|Q4
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                        z:\lab2_improtant\lifo.rpt
+lifo
+
+** EQUATIONS **
+
+DI0      : INPUT;
+DI1      : INPUT;
+DI2      : INPUT;
+DI3      : INPUT;
+DI4      : INPUT;
+DI5      : INPUT;
+DI6      : INPUT;
+DI7      : INPUT;
+RD       : INPUT;
+Reset    : INPUT;
+WR       : INPUT;
+
+-- Node name is 'DO0' = '|registerfile:34|dtrigger8x:18|Q0' 
+-- Equation name is 'DO0', type is output 
+ DO0     = DFFE( _EQ001 $  VCC, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ001 =  _X001 &  _X002 &  _X003 &  _X004 &  _X005 &  _X006 &  _X007 & 
+              _X008;
+  _X001  = EXP( _LC018 &  _LC019 & !_LC020 &  _LC085);
+  _X002  = EXP( _LC018 &  _LC019 &  _LC020 &  _LC082);
+  _X003  = EXP( _LC018 & !_LC019 &  _LC020 &  _LC087);
+  _X004  = EXP(!_LC018 &  _LC019 &  _LC020 &  _LC088);
+  _X005  = EXP( _LC018 & !_LC019 & !_LC020 &  _LC081);
+  _X006  = EXP(!_LC018 &  _LC019 & !_LC020 &  _LC096);
+  _X007  = EXP(!_LC018 & !_LC019 &  _LC020 &  _LC083);
+  _X008  = EXP(!_LC018 & !_LC019 & !_LC020 &  _LC093);
+
+-- Node name is 'DO1' = '|registerfile:34|dtrigger8x:18|Q1' 
+-- Equation name is 'DO1', type is output 
+ DO1     = DFFE( _EQ002 $  VCC, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ002 =  _X009 &  _X010 &  _X011 &  _X012 &  _X013 &  _X014 &  _X015 & 
+              _X016;
+  _X009  = EXP( _LC017 &  _LC018 &  _LC019 & !_LC020);
+  _X010  = EXP( _LC018 &  _LC019 &  _LC020 &  _LC028);
+  _X011  = EXP( _LC018 & !_LC019 &  _LC020 &  _LC029);
+  _X012  = EXP(!_LC018 &  _LC019 &  _LC020 &  _LC089);
+  _X013  = EXP( _LC018 & !_LC019 & !_LC020 &  _LC090);
+  _X014  = EXP(!_LC018 &  _LC019 & !_LC020 &  _LC095);
+  _X015  = EXP(!_LC018 & !_LC019 &  _LC020 &  _LC094);
+  _X016  = EXP(!_LC018 & !_LC019 & !_LC020 &  _LC091);
+
+-- Node name is 'DO2' = '|registerfile:34|dtrigger8x:18|Q2' 
+-- Equation name is 'DO2', type is output 
+ DO2     = DFFE( _EQ003 $  VCC, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ003 =  _X017 &  _X018 &  _X019 &  _X020 &  _X021 &  _X022 &  _X023 & 
+              _X024;
+  _X017  = EXP( _LC018 &  _LC019 & !_LC020 &  _LC071);
+  _X018  = EXP( _LC018 &  _LC019 &  _LC020 &  _LC076);
+  _X019  = EXP( _LC018 & !_LC019 &  _LC020 &  _LC077);
+  _X020  = EXP(!_LC018 &  _LC019 &  _LC020 &  _LC068);
+  _X021  = EXP( _LC018 & !_LC019 & !_LC020 &  _LC066);
+  _X022  = EXP(!_LC018 &  _LC019 & !_LC020 &  _LC072);
+  _X023  = EXP(!_LC018 & !_LC019 &  _LC020 &  _LC075);
+  _X024  = EXP(!_LC018 & !_LC019 & !_LC020 &  _LC030);
+
+-- Node name is 'DO3' = '|registerfile:34|dtrigger8x:18|Q3' 
+-- Equation name is 'DO3', type is output 
+ DO3     = DFFE( _EQ004 $  VCC, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ004 =  _X025 &  _X026 &  _X027 &  _X028 &  _X029 &  _X030 &  _X031 & 
+              _X032;
+  _X025  = EXP( _LC018 &  _LC019 & !_LC020 &  _LC070);
+  _X026  = EXP( _LC018 &  _LC019 &  _LC020 &  _LC074);
+  _X027  = EXP( _LC018 & !_LC019 &  _LC020 &  _LC073);
+  _X028  = EXP(!_LC018 &  _LC019 &  _LC020 &  _LC069);
+  _X029  = EXP( _LC018 & !_LC019 & !_LC020 &  _LC065);
+  _X030  = EXP(!_LC018 &  _LC019 & !_LC020 &  _LC079);
+  _X031  = EXP(!_LC018 & !_LC019 &  _LC020 &  _LC080);
+  _X032  = EXP(!_LC018 & !_LC019 & !_LC020 &  _LC078);
+
+-- Node name is 'DO4' = '|registerfile:34|dtrigger8x:18|Q4' 
+-- Equation name is 'DO4', type is output 
+ DO4     = DFFE( _EQ005 $  VCC, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ005 =  _X033 &  _X034 &  _X035 &  _X036 &  _X037 &  _X038 &  _X039 & 
+              _X040;
+  _X033  = EXP( _LC018 &  _LC019 & !_LC020 &  _LC053);
+  _X034  = EXP( _LC018 &  _LC019 &  _LC020 &  _LC061);
+  _X035  = EXP( _LC018 & !_LC019 &  _LC020 &  _LC057);
+  _X036  = EXP(!_LC018 &  _LC019 &  _LC020 &  _LC050);
+  _X037  = EXP( _LC018 & !_LC019 & !_LC020 &  _LC059);
+  _X038  = EXP(!_LC018 &  _LC019 & !_LC020 &  _LC064);
+  _X039  = EXP(!_LC018 & !_LC019 &  _LC020 &  _LC062);
+  _X040  = EXP(!_LC018 & !_LC019 & !_LC020 &  _LC026);
+
+-- Node name is 'DO5' = '|registerfile:34|dtrigger8x:18|Q5' 
+-- Equation name is 'DO5', type is output 
+ DO5     = DFFE( _EQ006 $  VCC, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ006 =  _X041 &  _X042 &  _X043 &  _X044 &  _X045 &  _X046 &  _X047 & 
+              _X048;
+  _X041  = EXP( _LC018 &  _LC019 & !_LC020 &  _LC052);
+  _X042  = EXP( _LC018 &  _LC019 &  _LC020 &  _LC060);
+  _X043  = EXP( _LC018 & !_LC019 &  _LC020 &  _LC058);
+  _X044  = EXP(!_LC018 &  _LC019 &  _LC020 &  _LC051);
+  _X045  = EXP( _LC018 & !_LC019 & !_LC020 &  _LC049);
+  _X046  = EXP(!_LC018 &  _LC019 & !_LC020 &  _LC063);
+  _X047  = EXP(!_LC018 & !_LC019 &  _LC020 &  _LC055);
+  _X048  = EXP(!_LC018 & !_LC019 & !_LC020 &  _LC054);
+
+-- Node name is 'DO6' = '|registerfile:34|dtrigger8x:18|Q6' 
+-- Equation name is 'DO6', type is output 
+ DO6     = DFFE( _EQ007 $  VCC, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ007 =  _X049 &  _X050 &  _X051 &  _X052 &  _X053 &  _X054 &  _X055 & 
+              _X056;
+  _X049  = EXP( _LC018 &  _LC019 & !_LC020 &  _LC033);
+  _X050  = EXP( _LC018 &  _LC019 &  _LC020 &  _LC043);
+  _X051  = EXP( _LC018 & !_LC019 &  _LC020 &  _LC045);
+  _X052  = EXP(!_LC018 &  _LC019 &  _LC020 &  _LC034);
+  _X053  = EXP( _LC018 & !_LC019 & !_LC020 &  _LC035);
+  _X054  = EXP(!_LC018 &  _LC019 & !_LC020 &  _LC047);
+  _X055  = EXP(!_LC018 & !_LC019 &  _LC020 &  _LC038);
+  _X056  = EXP(!_LC018 & !_LC019 & !_LC020 &  _LC023);
+
+-- Node name is 'DO7' = '|registerfile:34|dtrigger8x:18|Q7' 
+-- Equation name is 'DO7', type is output 
+ DO7     = DFFE( _EQ008 $  VCC, GLOBAL( RD),  VCC,  VCC,  VCC);
+  _EQ008 =  _X057 &  _X058 &  _X059 &  _X060 &  _X061 &  _X062 &  _X063 & 
+              _X064;
+  _X057  = EXP( _LC018 &  _LC019 & !_LC020 &  _LC044);
+  _X058  = EXP( _LC018 &  _LC019 &  _LC020 &  _LC042);
+  _X059  = EXP( _LC018 & !_LC019 &  _LC020 &  _LC040);
+  _X060  = EXP(!_LC018 &  _LC019 &  _LC020 &  _LC039);
+  _X061  = EXP( _LC018 & !_LC019 & !_LC020 &  _LC036);
+  _X062  = EXP(!_LC018 &  _LC019 & !_LC020 &  _LC046);
+  _X063  = EXP(!_LC018 & !_LC019 &  _LC020 &  _LC041);
+  _X064  = EXP(!_LC018 & !_LC019 & !_LC020 &  _LC048);
+
+-- Node name is 'empty' 
+-- Equation name is 'empty', location is LC021, type is output.
+ empty   = LCELL( _EQ009 $  GND);
+  _EQ009 = !_LC018 & !_LC019 & !_LC020;
+
+-- Node name is 'full' 
+-- Equation name is 'full', location is LC086, type is output.
+ full    = LCELL( _EQ010 $  GND);
+  _EQ010 =  _LC018 &  _LC019 &  _LC020;
+
+-- Node name is '|LPM_COUNTER:8|dffs0' from file "lpm_counter.tdf" line 221, column 8
+-- Equation name is '_LC020', type is buried 
+_LC020   = TFFE( VCC,  _EQ011, !Reset,  VCC,  VCC);
+  _EQ011 =  _X065;
+  _X065  = EXP(!RD & !WR);
+
+-- Node name is '|LPM_COUNTER:8|dffs1' from file "lpm_counter.tdf" line 221, column 8
+-- Equation name is '_LC019', type is buried 
+_LC019   = TFFE( _EQ012,  _EQ013, !Reset,  VCC,  VCC);
+  _EQ012 = !_LC020 &  RD
+         #  _LC020 & !RD;
+  _EQ013 =  _X065;
+  _X065  = EXP(!RD & !WR);
+
+-- Node name is '|LPM_COUNTER:8|dffs2' from file "lpm_counter.tdf" line 221, column 8
+-- Equation name is '_LC018', type is buried 
+_LC018   = TFFE( _EQ014,  _EQ015, !Reset,  VCC,  VCC);
+  _EQ014 =  _LC019 &  _LC020 & !RD
+         # !_LC019 & !_LC020 &  RD;
+  _EQ015 =  _X065;
+  _X065  = EXP(!RD & !WR);
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:12' = '|registerfile:34|dtrigger8x:7|Q0' 
+-- Equation name is '_LC093', type is buried 
+_LC093   = DFFE( DI0 $  GND,  _EQ016,  VCC,  VCC,  VCC);
+  _EQ016 = !_LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:15' = '|registerfile:34|dtrigger8x:7|Q1' 
+-- Equation name is '_LC091', type is buried 
+_LC091   = DFFE( DI1 $  GND,  _EQ017,  VCC,  VCC,  VCC);
+  _EQ017 = !_LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:16' = '|registerfile:34|dtrigger8x:7|Q2' 
+-- Equation name is '_LC030', type is buried 
+_LC030   = DFFE( DI2 $  GND,  _EQ018,  VCC,  VCC,  VCC);
+  _EQ018 = !_LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:17' = '|registerfile:34|dtrigger8x:7|Q3' 
+-- Equation name is '_LC078', type is buried 
+_LC078   = DFFE( DI3 $  GND,  _EQ019,  VCC,  VCC,  VCC);
+  _EQ019 = !_LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:18' = '|registerfile:34|dtrigger8x:7|Q4' 
+-- Equation name is '_LC026', type is buried 
+_LC026   = DFFE( DI4 $  GND,  _EQ020,  VCC,  VCC,  VCC);
+  _EQ020 = !_LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:19' = '|registerfile:34|dtrigger8x:7|Q5' 
+-- Equation name is '_LC054', type is buried 
+_LC054   = DFFE( DI5 $  GND,  _EQ021,  VCC,  VCC,  VCC);
+  _EQ021 = !_LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:20' = '|registerfile:34|dtrigger8x:7|Q6' 
+-- Equation name is '_LC023', type is buried 
+_LC023   = DFFE( DI6 $  GND,  _EQ022,  VCC,  VCC,  VCC);
+  _EQ022 = !_LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:7|:21' = '|registerfile:34|dtrigger8x:7|Q7' 
+-- Equation name is '_LC048', type is buried 
+_LC048   = DFFE( DI7 $  GND,  _EQ023,  VCC,  VCC,  VCC);
+  _EQ023 = !_LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:12' = '|registerfile:34|dtrigger8x:8|Q0' 
+-- Equation name is '_LC083', type is buried 
+_LC083   = DFFE( DI0 $  GND,  _EQ024,  VCC,  VCC,  VCC);
+  _EQ024 = !_LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:15' = '|registerfile:34|dtrigger8x:8|Q1' 
+-- Equation name is '_LC094', type is buried 
+_LC094   = DFFE( DI1 $  GND,  _EQ025,  VCC,  VCC,  VCC);
+  _EQ025 = !_LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:16' = '|registerfile:34|dtrigger8x:8|Q2' 
+-- Equation name is '_LC075', type is buried 
+_LC075   = DFFE( DI2 $  GND,  _EQ026,  VCC,  VCC,  VCC);
+  _EQ026 = !_LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:17' = '|registerfile:34|dtrigger8x:8|Q3' 
+-- Equation name is '_LC080', type is buried 
+_LC080   = DFFE( DI3 $  GND,  _EQ027,  VCC,  VCC,  VCC);
+  _EQ027 = !_LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:18' = '|registerfile:34|dtrigger8x:8|Q4' 
+-- Equation name is '_LC062', type is buried 
+_LC062   = DFFE( DI4 $  GND,  _EQ028,  VCC,  VCC,  VCC);
+  _EQ028 = !_LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:19' = '|registerfile:34|dtrigger8x:8|Q5' 
+-- Equation name is '_LC055', type is buried 
+_LC055   = DFFE( DI5 $  GND,  _EQ029,  VCC,  VCC,  VCC);
+  _EQ029 = !_LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:20' = '|registerfile:34|dtrigger8x:8|Q6' 
+-- Equation name is '_LC038', type is buried 
+_LC038   = DFFE( DI6 $  GND,  _EQ030,  VCC,  VCC,  VCC);
+  _EQ030 = !_LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:8|:21' = '|registerfile:34|dtrigger8x:8|Q7' 
+-- Equation name is '_LC041', type is buried 
+_LC041   = DFFE( DI7 $  GND,  _EQ031,  VCC,  VCC,  VCC);
+  _EQ031 = !_LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:12' = '|registerfile:34|dtrigger8x:9|Q0' 
+-- Equation name is '_LC096', type is buried 
+_LC096   = DFFE( DI0 $  GND,  _EQ032,  VCC,  VCC,  VCC);
+  _EQ032 = !_LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:15' = '|registerfile:34|dtrigger8x:9|Q1' 
+-- Equation name is '_LC095', type is buried 
+_LC095   = DFFE( DI1 $  GND,  _EQ033,  VCC,  VCC,  VCC);
+  _EQ033 = !_LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:16' = '|registerfile:34|dtrigger8x:9|Q2' 
+-- Equation name is '_LC072', type is buried 
+_LC072   = DFFE( DI2 $  GND,  _EQ034,  VCC,  VCC,  VCC);
+  _EQ034 = !_LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:17' = '|registerfile:34|dtrigger8x:9|Q3' 
+-- Equation name is '_LC079', type is buried 
+_LC079   = DFFE( DI3 $  GND,  _EQ035,  VCC,  VCC,  VCC);
+  _EQ035 = !_LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:18' = '|registerfile:34|dtrigger8x:9|Q4' 
+-- Equation name is '_LC064', type is buried 
+_LC064   = DFFE( DI4 $  GND,  _EQ036,  VCC,  VCC,  VCC);
+  _EQ036 = !_LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:19' = '|registerfile:34|dtrigger8x:9|Q5' 
+-- Equation name is '_LC063', type is buried 
+_LC063   = DFFE( DI5 $  GND,  _EQ037,  VCC,  VCC,  VCC);
+  _EQ037 = !_LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:20' = '|registerfile:34|dtrigger8x:9|Q6' 
+-- Equation name is '_LC047', type is buried 
+_LC047   = DFFE( DI6 $  GND,  _EQ038,  VCC,  VCC,  VCC);
+  _EQ038 = !_LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:9|:21' = '|registerfile:34|dtrigger8x:9|Q7' 
+-- Equation name is '_LC046', type is buried 
+_LC046   = DFFE( DI7 $  GND,  _EQ039,  VCC,  VCC,  VCC);
+  _EQ039 = !_LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:12' = '|registerfile:34|dtrigger8x:10|Q0' 
+-- Equation name is '_LC088', type is buried 
+_LC088   = DFFE( DI0 $  GND,  _EQ040,  VCC,  VCC,  VCC);
+  _EQ040 = !_LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:15' = '|registerfile:34|dtrigger8x:10|Q1' 
+-- Equation name is '_LC089', type is buried 
+_LC089   = DFFE( DI1 $  GND,  _EQ041,  VCC,  VCC,  VCC);
+  _EQ041 = !_LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:16' = '|registerfile:34|dtrigger8x:10|Q2' 
+-- Equation name is '_LC068', type is buried 
+_LC068   = DFFE( DI2 $  GND,  _EQ042,  VCC,  VCC,  VCC);
+  _EQ042 = !_LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:17' = '|registerfile:34|dtrigger8x:10|Q3' 
+-- Equation name is '_LC069', type is buried 
+_LC069   = DFFE( DI3 $  GND,  _EQ043,  VCC,  VCC,  VCC);
+  _EQ043 = !_LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:18' = '|registerfile:34|dtrigger8x:10|Q4' 
+-- Equation name is '_LC050', type is buried 
+_LC050   = DFFE( DI4 $  GND,  _EQ044,  VCC,  VCC,  VCC);
+  _EQ044 = !_LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:19' = '|registerfile:34|dtrigger8x:10|Q5' 
+-- Equation name is '_LC051', type is buried 
+_LC051   = DFFE( DI5 $  GND,  _EQ045,  VCC,  VCC,  VCC);
+  _EQ045 = !_LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:20' = '|registerfile:34|dtrigger8x:10|Q6' 
+-- Equation name is '_LC034', type is buried 
+_LC034   = DFFE( DI6 $  GND,  _EQ046,  VCC,  VCC,  VCC);
+  _EQ046 = !_LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:10|:21' = '|registerfile:34|dtrigger8x:10|Q7' 
+-- Equation name is '_LC039', type is buried 
+_LC039   = DFFE( DI7 $  GND,  _EQ047,  VCC,  VCC,  VCC);
+  _EQ047 = !_LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:12' = '|registerfile:34|dtrigger8x:11|Q0' 
+-- Equation name is '_LC081', type is buried 
+_LC081   = DFFE( DI0 $  GND,  _EQ048,  VCC,  VCC,  VCC);
+  _EQ048 =  _LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:15' = '|registerfile:34|dtrigger8x:11|Q1' 
+-- Equation name is '_LC090', type is buried 
+_LC090   = DFFE( DI1 $  GND,  _EQ049,  VCC,  VCC,  VCC);
+  _EQ049 =  _LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:16' = '|registerfile:34|dtrigger8x:11|Q2' 
+-- Equation name is '_LC066', type is buried 
+_LC066   = DFFE( DI2 $  GND,  _EQ050,  VCC,  VCC,  VCC);
+  _EQ050 =  _LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:17' = '|registerfile:34|dtrigger8x:11|Q3' 
+-- Equation name is '_LC065', type is buried 
+_LC065   = DFFE( DI3 $  GND,  _EQ051,  VCC,  VCC,  VCC);
+  _EQ051 =  _LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:18' = '|registerfile:34|dtrigger8x:11|Q4' 
+-- Equation name is '_LC059', type is buried 
+_LC059   = DFFE( DI4 $  GND,  _EQ052,  VCC,  VCC,  VCC);
+  _EQ052 =  _LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:19' = '|registerfile:34|dtrigger8x:11|Q5' 
+-- Equation name is '_LC049', type is buried 
+_LC049   = DFFE( DI5 $  GND,  _EQ053,  VCC,  VCC,  VCC);
+  _EQ053 =  _LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:20' = '|registerfile:34|dtrigger8x:11|Q6' 
+-- Equation name is '_LC035', type is buried 
+_LC035   = DFFE( DI6 $  GND,  _EQ054,  VCC,  VCC,  VCC);
+  _EQ054 =  _LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:11|:21' = '|registerfile:34|dtrigger8x:11|Q7' 
+-- Equation name is '_LC036', type is buried 
+_LC036   = DFFE( DI7 $  GND,  _EQ055,  VCC,  VCC,  VCC);
+  _EQ055 =  _LC018 & !_LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:12' = '|registerfile:34|dtrigger8x:12|Q0' 
+-- Equation name is '_LC087', type is buried 
+_LC087   = DFFE( DI0 $  GND,  _EQ056,  VCC,  VCC,  VCC);
+  _EQ056 =  _LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:15' = '|registerfile:34|dtrigger8x:12|Q1' 
+-- Equation name is '_LC029', type is buried 
+_LC029   = DFFE( DI1 $  GND,  _EQ057,  VCC,  VCC,  VCC);
+  _EQ057 =  _LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:16' = '|registerfile:34|dtrigger8x:12|Q2' 
+-- Equation name is '_LC077', type is buried 
+_LC077   = DFFE( DI2 $  GND,  _EQ058,  VCC,  VCC,  VCC);
+  _EQ058 =  _LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:17' = '|registerfile:34|dtrigger8x:12|Q3' 
+-- Equation name is '_LC073', type is buried 
+_LC073   = DFFE( DI3 $  GND,  _EQ059,  VCC,  VCC,  VCC);
+  _EQ059 =  _LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:18' = '|registerfile:34|dtrigger8x:12|Q4' 
+-- Equation name is '_LC057', type is buried 
+_LC057   = DFFE( DI4 $  GND,  _EQ060,  VCC,  VCC,  VCC);
+  _EQ060 =  _LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:19' = '|registerfile:34|dtrigger8x:12|Q5' 
+-- Equation name is '_LC058', type is buried 
+_LC058   = DFFE( DI5 $  GND,  _EQ061,  VCC,  VCC,  VCC);
+  _EQ061 =  _LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:20' = '|registerfile:34|dtrigger8x:12|Q6' 
+-- Equation name is '_LC045', type is buried 
+_LC045   = DFFE( DI6 $  GND,  _EQ062,  VCC,  VCC,  VCC);
+  _EQ062 =  _LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:12|:21' = '|registerfile:34|dtrigger8x:12|Q7' 
+-- Equation name is '_LC040', type is buried 
+_LC040   = DFFE( DI7 $  GND,  _EQ063,  VCC,  VCC,  VCC);
+  _EQ063 =  _LC018 & !_LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:12' = '|registerfile:34|dtrigger8x:13|Q0' 
+-- Equation name is '_LC085', type is buried 
+_LC085   = DFFE( DI0 $  GND,  _EQ064,  VCC,  VCC,  VCC);
+  _EQ064 =  _LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:15' = '|registerfile:34|dtrigger8x:13|Q1' 
+-- Equation name is '_LC017', type is buried 
+_LC017   = DFFE( DI1 $  GND,  _EQ065,  VCC,  VCC,  VCC);
+  _EQ065 =  _LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:16' = '|registerfile:34|dtrigger8x:13|Q2' 
+-- Equation name is '_LC071', type is buried 
+_LC071   = DFFE( DI2 $  GND,  _EQ066,  VCC,  VCC,  VCC);
+  _EQ066 =  _LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:17' = '|registerfile:34|dtrigger8x:13|Q3' 
+-- Equation name is '_LC070', type is buried 
+_LC070   = DFFE( DI3 $  GND,  _EQ067,  VCC,  VCC,  VCC);
+  _EQ067 =  _LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:18' = '|registerfile:34|dtrigger8x:13|Q4' 
+-- Equation name is '_LC053', type is buried 
+_LC053   = DFFE( DI4 $  GND,  _EQ068,  VCC,  VCC,  VCC);
+  _EQ068 =  _LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:19' = '|registerfile:34|dtrigger8x:13|Q5' 
+-- Equation name is '_LC052', type is buried 
+_LC052   = DFFE( DI5 $  GND,  _EQ069,  VCC,  VCC,  VCC);
+  _EQ069 =  _LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:20' = '|registerfile:34|dtrigger8x:13|Q6' 
+-- Equation name is '_LC033', type is buried 
+_LC033   = DFFE( DI6 $  GND,  _EQ070,  VCC,  VCC,  VCC);
+  _EQ070 =  _LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:13|:21' = '|registerfile:34|dtrigger8x:13|Q7' 
+-- Equation name is '_LC044', type is buried 
+_LC044   = DFFE( DI7 $  GND,  _EQ071,  VCC,  VCC,  VCC);
+  _EQ071 =  _LC018 &  _LC019 & !_LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:12' = '|registerfile:34|dtrigger8x:14|Q0' 
+-- Equation name is '_LC082', type is buried 
+_LC082   = DFFE( DI0 $  GND,  _EQ072,  VCC,  VCC,  VCC);
+  _EQ072 =  _LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:15' = '|registerfile:34|dtrigger8x:14|Q1' 
+-- Equation name is '_LC028', type is buried 
+_LC028   = DFFE( DI1 $  GND,  _EQ073,  VCC,  VCC,  VCC);
+  _EQ073 =  _LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:16' = '|registerfile:34|dtrigger8x:14|Q2' 
+-- Equation name is '_LC076', type is buried 
+_LC076   = DFFE( DI2 $  GND,  _EQ074,  VCC,  VCC,  VCC);
+  _EQ074 =  _LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:17' = '|registerfile:34|dtrigger8x:14|Q3' 
+-- Equation name is '_LC074', type is buried 
+_LC074   = DFFE( DI3 $  GND,  _EQ075,  VCC,  VCC,  VCC);
+  _EQ075 =  _LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:18' = '|registerfile:34|dtrigger8x:14|Q4' 
+-- Equation name is '_LC061', type is buried 
+_LC061   = DFFE( DI4 $  GND,  _EQ076,  VCC,  VCC,  VCC);
+  _EQ076 =  _LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:19' = '|registerfile:34|dtrigger8x:14|Q5' 
+-- Equation name is '_LC060', type is buried 
+_LC060   = DFFE( DI5 $  GND,  _EQ077,  VCC,  VCC,  VCC);
+  _EQ077 =  _LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:20' = '|registerfile:34|dtrigger8x:14|Q6' 
+-- Equation name is '_LC043', type is buried 
+_LC043   = DFFE( DI6 $  GND,  _EQ078,  VCC,  VCC,  VCC);
+  _EQ078 =  _LC018 &  _LC019 &  _LC020 &  WR;
+
+-- Node name is '|registerfile:34|dtrigger8x:14|:21' = '|registerfile:34|dtrigger8x:14|Q7' 
+-- Equation name is '_LC042', type is buried 
+_LC042   = DFFE( DI7 $  GND,  _EQ079,  VCC,  VCC,  VCC);
+  _EQ079 =  _LC018 &  _LC019 &  _LC020 &  WR;
+
+
+
+--     Shareable expanders that are duplicated in multiple LABs:
+--     (none)
+
+
+
+
+Project Information                                 z:\lab2_improtant\lifo.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Standard
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'MAX7000' family
+
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      PARALLEL_EXPANDERS                  = off
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SOFT_BUFFER_INSERTION               = on
+      SUBFACTOR_EXTRACTION                = on
+      TURBO_BIT                           = on
+      XOR_SYNTHESIS                       = on
+      IGNORE_SOFT_BUFFERS                 = off
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      One-Hot State Machine Encoding      = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:00
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 3,625K
